@@ -29365,5 +29365,77 @@
       "wins_a": 4,
       "wins_b": 1
     }
+  },
+  "league_records": {
+    "fastest_win": {
+      "value": 3.0,
+      "team": "Murphy's Law",
+      "detail": "def. Icy Hot \u2014 Season 5 Reg. Season"
+    },
+    "slowest_win": {
+      "value": 32.0,
+      "team": "Extinction",
+      "detail": "def. Smashed Potatoes \u2014 Season 6 Playoffs"
+    },
+    "biggest_margin": {
+      "value": 50.0,
+      "team": "Sliver Lining",
+      "detail": "def. Over Grenade 16.0 to -34.0 \u2014 Season 8 Reg. Season"
+    },
+    "most_damage_single_game": {
+      "value": 61.0,
+      "team": "Icy Hot",
+      "detail": "def. No Lands For You \u2014 Season 6 Reg. Season"
+    },
+    "best_season_record": {
+      "value": 0.8,
+      "team": "Fire Drilled",
+      "detail": "8-2 \u2014 Season 1"
+    },
+    "worst_season_record": {
+      "value": 0.1111111111,
+      "team": "The Doldrums",
+      "detail": "2-16 \u2014 Season 3"
+    },
+    "highest_season_power": {
+      "value": 76.3,
+      "team": "Swamp Things",
+      "detail": "Season 5 (15-5)"
+    },
+    "most_championships": {
+      "value": 2,
+      "team": "No Lands For You",
+      "detail": "Seasons 1, 5"
+    },
+    "most_total_wins": {
+      "value": 88,
+      "team": "Sliver Lining",
+      "detail": "88-54 across 8 seasons"
+    },
+    "best_alltime_winpct": {
+      "value": 72.7,
+      "team": "Mean Machine",
+      "detail": "16-6 (min. 20 games)"
+    },
+    "longest_win_streak": {
+      "value": 9,
+      "team": "Smashed Potatoes",
+      "detail": "Season 7"
+    },
+    "longest_loss_streak": {
+      "value": 12,
+      "team": "The Doldrums",
+      "detail": "Season 3"
+    },
+    "most_mvps_single_card": {
+      "value": 34,
+      "team": "No Lands For You",
+      "detail": "\"Black Vise\" \u2014 career Game MVP"
+    },
+    "most_lopsided_rivalry": {
+      "value": 12,
+      "team": "No Lands For You",
+      "detail": "17-5 all-time vs. Darwin's Doom"
+    }
   }
 }
