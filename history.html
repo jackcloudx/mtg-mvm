@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History — MTG | MVM</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .season-index-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .season-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      cursor: pointer;
+      transition: border-color 0.15s, transform 0.1s;
+    }
+    .season-card:hover {
+      border-color: var(--gold-dim);
+      transform: translateY(-2px);
+    }
+    .season-card-num {
+      font-family: var(--font-head);
+      font-size: 13px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 6px;
+    }
+    .season-card-champ {
+      font-family: var(--font-head);
+      font-size: 19px;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+    .season-card-label {
+      font-size: 11px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+    }
+    .season-card-stats {
+      display: flex;
+      gap: 20px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+    .season-card-stat-val {
+      font-family: var(--font-mono);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-primary);
+      display: block;
+    }
+    .season-card-stat-label {
+      font-size: 10px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+    .season-detail-view { display: none; }
+    .season-detail-view.active { display: block; }
+    .season-header-block {
+      background: linear-gradient(135deg, #1a1a1a 0%, #111 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      margin-bottom: 24px;
+    }
+    .season-header-block .season-num {
+      font-family: var(--font-head);
+      font-size: 14px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 8px;
+    }
+    .season-header-block .season-champ-name {
+      font-family: var(--font-head);
+      font-size: 30px;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+    .season-header-block .season-champ-label {
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+    .accordion-section {
+      margin-bottom: 14px;
+    }
+    .accordion-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      cursor: pointer;
+      transition: border-color 0.15s;
+    }
+    .accordion-header:hover { border-color: var(--gold-dim); }
+    .accordion-header.expanded { border-color: var(--gold-dim); border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+    .accordion-title {
+      font-family: var(--font-head);
+      font-size: 15px;
+      color: var(--text-primary);
+    }
+    .accordion-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .accordion-icon {
+      color: var(--text-muted);
+      transition: transform 0.2s;
+      font-size: 14px;
+    }
+    .accordion-header.expanded .accordion-icon { transform: rotate(180deg); }
+    .accordion-body {
+      display: none;
+      border: 1px solid var(--gold-dim);
+      border-top: none;
+      border-bottom-left-radius: var(--radius);
+      border-bottom-right-radius: var(--radius);
+      padding: 18px;
+      background: #161616;
+    }
+    .accordion-body.expanded { display: block; }
+    .playoff-game-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 7px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 13px;
+    }
+    .playoff-game-row:last-child { border-bottom: none; }
+    .playoff-game-row .pgr-teams { color: var(--text-primary); }
+    .playoff-game-row .pgr-score { font-family: var(--font-mono); color: var(--gold); }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="site-logo">MTG | MVM <span>The League</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#games">Game Log</a>
+      <a href="index.html#teams">Teams</a>
+      <a href="index.html#playoffs">Playoffs</a>
+      <a href="history.html" class="active">History</a>
+      <a href="admin.html" style="color:var(--text-muted)">Admin</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- SEASON INDEX -->
+  <div id="index-view">
+    <div class="section-header" style="margin-bottom:20px">
+      <span class="section-title" style="font-size:16px;color:var(--text-secondary)">League History — Seasons 1 through 8</span>
+    </div>
+    <div class="season-index-grid" id="season-index-grid">
+      <div style="color:var(--text-muted)">Loading...</div>
+    </div>
+  </div>
+
+  <!-- SEASON DETAIL -->
+  <div id="detail-view" class="season-detail-view">
+    <button class="back-btn" onclick="backToIndex()">← All Seasons</button>
+    <div id="season-detail-content"></div>
+  </div>
+
+</div>
+
+<script>
+let historyData = null;
+
+async function init() {
+  const res = await fetch('data/history.json');
+  historyData = await res.json();
+  renderIndex();
+}
+
+function renderIndex() {
+  const container = document.getElementById('season-index-grid');
+  const seasons = Object.values(historyData.seasons).sort((a,b) => b.season - a.season);
+  container.innerHTML = seasons.map(s => {
+    const champStanding = s.standings.find(t => t.is_champion);
+    const totalGames = s.games.length;
+    const regGames = s.games.filter(g => g.match_type === 'Regular Season').length;
+    return `<div class="season-card" onclick="showSeason(${s.season})">
+      <div class="season-card-num">Season ${s.season}</div>
+      <div class="season-card-champ">${s.champion || 'Unknown'}${champStanding && champStanding.seed ? ` <span style="font-size:13px;color:var(--text-muted);font-weight:normal">#${champStanding.seed} seed</span>` : ''}</div>
+      <div class="season-card-label">League Champion${champStanding ? ` · ${champStanding.w}-${champStanding.l}` : ''}</div>
+      <div class="season-card-stats">
+        <div>
+          <span class="season-card-stat-val">${s.team_count}</span>
+          <span class="season-card-stat-label">Teams</span>
+        </div>
+        <div>
+          <span class="season-card-stat-val">${regGames}</span>
+          <span class="season-card-stat-label">Games</span>
+        </div>
+        <div>
+          <span class="season-card-stat-val">${champStanding ? champStanding.win_pct ? (champStanding.win_pct*100).toFixed(0)+'%' : '—' : '—'}</span>
+          <span class="season-card-stat-label">Champ Win%</span>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function showSeason(seasonNum) {
+  const season = historyData.seasons[seasonNum];
+  if (!season) return;
+  document.getElementById('index-view').style.display = 'none';
+  document.getElementById('detail-view').classList.add('active');
+
+  // Sort standings by win%, group by division if available
+  const hasDivisions = season.standings.some(t => t.division && t.division !== 'None' && t.division !== 'null');
+  const standings = [...season.standings].sort((a,b) => (b.win_pct||0) - (a.win_pct||0));
+
+  let standingsRows = '';
+  if (hasDivisions) {
+    const divGroups = {};
+    standings.forEach(t => {
+      const div = t.division || 'Other';
+      if (!divGroups[div]) divGroups[div] = [];
+      divGroups[div].push(t);
+    });
+    Object.entries(divGroups).forEach(([div, teams]) => {
+      standingsRows += `<tr><td colspan="9" style="padding:10px 12px 4px;font-size:11px;color:var(--gold-dim);text-transform:uppercase;letter-spacing:0.1em;border-bottom:1px solid var(--border)">${div}</td></tr>`;
+      teams.forEach(t => {
+        standingsRows += `<tr>
+          <td class="team-rank num">${t.seed ?? '—'}</td>
+          <td><a href="team-history.html?team=${encodeURIComponent(t.team)}" style="color:var(--text-primary)">${t.team}</a>${t.is_champion ? ' 👑' : ''}</td>
+          <td class="num">${t.gp ?? '—'}</td>
+          <td class="num">${t.w ?? '—'}</td>
+          <td class="num">${t.l ?? '—'}</td>
+          <td class="num">${t.win_pct != null ? (t.win_pct*100).toFixed(1)+'%' : '—'}</td>
+          <td class="num"><span class="power-score">${t.power_score ?? '—'}</span></td>
+          <td class="num" style="color:var(--text-muted)">${t.udpi != null ? t.udpi.toFixed(3) : '—'}</td>
+          <td style="font-size:12px;color:var(--text-secondary)">${t.team_mvp ? t.team_mvp + (t.team_mvp_count>1?' ('+t.team_mvp_count+'x)':'') : '—'}</td>
+        </tr>`;
+      });
+    });
+  } else {
+    standingsRows = standings.map(t => `<tr>
+      <td class="team-rank num">${t.seed ?? '—'}</td>
+      <td><a href="team-history.html?team=${encodeURIComponent(t.team)}" style="color:var(--text-primary)">${t.team}</a>${t.is_champion ? ' 👑' : ''}</td>
+      <td class="num">${t.gp ?? '—'}</td>
+      <td class="num">${t.w ?? '—'}</td>
+      <td class="num">${t.l ?? '—'}</td>
+      <td class="num">${t.win_pct != null ? (t.win_pct*100).toFixed(1)+'%' : '—'}</td>
+      <td class="num"><span class="power-score">${t.power_score ?? '—'}</span></td>
+      <td class="num" style="color:var(--text-muted)">${t.udpi != null ? t.udpi.toFixed(3) : '—'}</td>
+      <td style="font-size:12px;color:var(--text-secondary)">${t.team_mvp ? t.team_mvp + (t.team_mvp_count>1?' ('+t.team_mvp_count+'x)':'') : '—'}</td>
+    </tr>`).join('');
+  }
+
+  // Playoff series grouped by round
+  const poSeries = season.playoff_series || [];
+  const seriesByRound = {};
+  poSeries.forEach(s => {
+    const roundKey = `Round ${s.round}${s.division && s.division !== 'None' ? ' · ' + s.division : ''}`;
+    if (!seriesByRound[roundKey]) seriesByRound[roundKey] = [];
+    seriesByRound[roundKey].push(s);
+  });
+
+  let playoffRows = '';
+  if (Object.keys(seriesByRound).length === 0) {
+    playoffRows = '<div style="color:var(--text-muted);font-size:13px">No playoff series data recorded.</div>';
+  } else {
+    Object.entries(seriesByRound).forEach(([roundLabel, seriesList]) => {
+      playoffRows += `<div style="margin-bottom:20px">
+        <div style="font-size:11px;color:var(--gold-dim);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px;padding-bottom:4px;border-bottom:1px solid var(--border)">${roundLabel}</div>`;
+      seriesList.forEach(s => {
+        const winner = s.series_winner;
+        const loser = s.series_loser;
+        const result = s.series_result;
+        // Expandable games detail
+        const gamesHtml = s.games.map(g => {
+          const scoreStr = (g.winner_score != null && g.loser_score != null)
+            ? `${g.winner_score} – ${g.loser_score}` : 'N/A';
+          const mvpStr = g.mvp ? ` · ${g.mvp}` : '';
+          const turnsStr = g.turns ? ` · ${g.turns} turns` : '';
+          return `<div style="font-size:12px;color:var(--text-muted);padding:3px 0 3px 12px;border-left:2px solid var(--border)">
+            Gm ${g.game}: ${g.winner} def. ${g.loser} ${scoreStr}${turnsStr}${mvpStr}
+          </div>`;
+        }).join('');
+        const seriesId = `series-${Math.random().toString(36).slice(2)}`;
+        playoffRows += `
+          <div style="margin-bottom:10px">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;cursor:pointer" onclick="document.getElementById('${seriesId}').style.display=document.getElementById('${seriesId}').style.display==='none'?'block':'none'">
+              <span style="font-size:14px;font-weight:500">
+                <span style="color:var(--text-primary)">${winner}</span>
+                <span style="color:var(--gold);font-family:var(--font-mono);margin:0 8px">${result}</span>
+                <span style="color:var(--text-muted)">${loser}</span>
+              </span>
+              <span style="font-size:11px;color:var(--text-muted)">${s.games.length} games ▾</span>
+            </div>
+            <div id="${seriesId}" style="display:none;padding:4px 0 8px">${gamesHtml}</div>
+          </div>`;
+      });
+      playoffRows += `</div>`;
+    });
+  }
+
+  // Regular season game log
+  const regGames = [...season.games]
+    .filter(g => g.match_type === 'Regular Season')
+    .sort((a,b) => (a.week||0) - (b.week||0));
+  const regGameRows = regGames.map(g => {
+    const scoreStr = (g.winner_score != null && g.loser_score != null)
+      ? `${g.winner_score} – ${g.loser_score}`
+      : 'N/A';
+    const mvpStr = g.mvp ? `<span style="color:var(--text-muted);margin-left:10px;font-size:11px">${g.mvp}</span>` : '';
+    const divStr = g.division ? `<span style="color:var(--text-muted);font-size:11px">${g.division}</span>` : '';
+    return `<div class="playoff-game-row">
+      <span class="pgr-teams">Wk ${g.week ?? '?'} · ${g.winner} def. ${g.loser} ${divStr}${mvpStr}</span>
+      <span class="pgr-score">${scoreStr}</span>
+    </div>`;
+  }).join('');
+
+  const champStanding2 = standings.find(t => t.is_champion);
+
+  const html = `
+    <div class="season-header-block">
+      <div class="season-num">Season ${season.season}</div>
+      <div class="season-champ-name">${season.champion || 'Unknown'}${champStanding2 && champStanding2.seed ? ` <span style="font-size:18px;color:var(--text-muted);font-weight:normal">#${champStanding2.seed} seed</span>` : ''}</div>
+      <div class="season-champ-label">League Champion · ${champStanding2 ? champStanding2.w+'-'+champStanding2.l+' · ' : ''}${season.team_count} teams competed</div>
+    </div>
+
+    ${buildPreviewHtml(season)}
+
+    ${buildRankChartHtml(season)}
+
+    <div class="accordion-section">
+      <div class="accordion-header expanded" onclick="toggleAccordion(this)">
+        <span class="accordion-title">Final Standings</span>
+        <span class="accordion-meta">${standings.length} teams<span class="accordion-icon">▾</span></span>
+      </div>
+      <div class="accordion-body expanded">
+        <div style="overflow-x:auto">
+          <table class="standings-table">
+            <thead>
+              <tr>
+                <th class="num">Seed</th><th>Team</th><th class="num">GP</th><th class="num">W</th>
+                <th class="num">L</th><th class="num">WIN%</th><th class="num">PWR</th><th class="num">U-DPI</th><th>Team MVP</th>
+              </tr>
+            </thead>
+            <tbody>${standingsRows}</tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-section">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <span class="accordion-title">Regular Season Game Log</span>
+        <span class="accordion-meta">${regGames.length} games<span class="accordion-icon">▾</span></span>
+      </div>
+      <div class="accordion-body" style="max-height:400px;overflow-y:auto">
+        ${regGameRows || '<div style="color:var(--text-muted);font-size:13px">No game log data.</div>'}
+      </div>
+    </div>
+
+    <div class="accordion-section">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <span class="accordion-title">Playoff Results</span>
+        <span class="accordion-meta">${poSeries.length} series<span class="accordion-icon">▾</span></span>
+      </div>
+      <div class="accordion-body">
+        ${playoffRows}
+      </div>
+    </div>
+
+    ${buildPostSeasonHtml(season)}
+  `;
+  document.getElementById('season-detail-content').innerHTML = html;
+}
+
+function buildRankChartHtml(season) {
+  const wr = season.weekly_ranks;
+  if (!wr || Object.keys(wr).length === 0) return '';
+
+  const teams = Object.keys(wr);
+  const allWeeks = new Set();
+  teams.forEach(t => {
+    Object.keys(wr[t].weekly_rank || {}).forEach(w => allWeeks.add(parseInt(w)));
+  });
+  const weeks = [...allWeeks].sort((a,b) => a-b);
+  if (weeks.length === 0) return '';
+
+  const maxRank = teams.length;
+  const W = 760, H = 280, padL = 36, padR = 140, padT = 16, padB = 30;
+  const plotW = W - padL - padR, plotH = H - padT - padB;
+
+  const xScale = (week) => padL + ((week - weeks[0]) / (weeks[weeks.length-1] - weeks[0] || 1)) * plotW;
+  const yScale = (rank) => padT + ((rank - 1) / (maxRank - 1 || 1)) * plotH;
+
+  const palette = ['#c9a84c','#7aa6c0','#a87ac9','#c97a9e','#7ac09e','#c0975a','#8a8ac0','#c0c07a','#c07a7a','#7ac0c0','#a89ec9','#c9a87a','#9ec97a','#c97ac0','#7a9ec9','#c9c97a'];
+
+  let paths = '';
+  let legend = '';
+  teams.forEach((team, idx) => {
+    const color = palette[idx % palette.length];
+    const rankData = wr[team].weekly_rank || {};
+    const points = weeks.filter(w => rankData[w] != null).map(w => `${xScale(w)},${yScale(rankData[w])}`);
+    if (points.length === 0) return;
+    paths += `<polyline points="${points.join(' ')}" fill="none" stroke="${color}" stroke-width="2" opacity="0.85" />`;
+    legend += `<div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-secondary);padding:2px 0">
+      <span style="width:10px;height:10px;border-radius:2px;background:${color};flex-shrink:0"></span>
+      <span>${team}</span>
+    </div>`;
+  });
+
+  let yLabels = '';
+  for (let r = 1; r <= maxRank; r += Math.max(1, Math.floor(maxRank/8))) {
+    yLabels += `<text x="${padL-8}" y="${yScale(r)+4}" text-anchor="end" font-size="10" fill="#666">${r}</text>`;
+  }
+  let xLabels = '';
+  weeks.forEach(w => {
+    if (w % 4 === 1 || w === weeks[weeks.length-1]) {
+      xLabels += `<text x="${xScale(w)}" y="${H-padB+18}" text-anchor="middle" font-size="10" fill="#666">W${w}</text>`;
+    }
+  });
+
+  return `
+    <div class="accordion-section">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <span class="accordion-title">Standings Over Time</span>
+        <span class="accordion-meta">${weeks.length} weeks tracked<span class="accordion-icon">▾</span></span>
+      </div>
+      <div class="accordion-body">
+        <div style="display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap">
+          <svg width="${W}" height="${H}" style="flex-shrink:0">
+            <line x1="${padL}" y1="${padT}" x2="${padL}" y2="${H-padB}" stroke="#333" />
+            <line x1="${padL}" y1="${H-padB}" x2="${W-padR}" y2="${H-padB}" stroke="#333" />
+            ${yLabels}
+            ${xLabels}
+            ${paths}
+          </svg>
+          <div style="flex:1;min-width:140px;max-height:${H}px;overflow-y:auto">${legend}</div>
+        </div>
+        <div style="color:var(--text-muted);font-size:11px;margin-top:10px">Rank 1 = best record at that point in the season. Source: weekly standings log.</div>
+      </div>
+    </div>`;
+}
+
+function buildPreviewHtml(season) {
+  const narr = season.narrative;
+  if (!narr || !narr.preview) return '';
+  return `
+    <div class="accordion-section">
+      <div class="accordion-header expanded" onclick="toggleAccordion(this)">
+        <span class="accordion-title">Season Preview</span>
+        <span class="accordion-icon" style="margin-left:auto">▾</span>
+      </div>
+      <div class="accordion-body expanded">
+        <p style="color:var(--text-secondary);font-size:14px;line-height:1.8">${narr.preview}</p>
+      </div>
+    </div>`;
+}
+
+function buildPostSeasonHtml(season) {
+  const narr = season.narrative;
+  if (!narr || !narr.tiers || narr.tiers.length === 0) return `
+    <div class="accordion-section">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <span class="accordion-title">Post-Season Recap</span>
+        <span class="accordion-meta">Coming soon<span class="accordion-icon">▾</span></span>
+      </div>
+      <div class="accordion-body">
+        <div style="color:var(--text-muted);font-size:13px">Post-season writeups will appear here.</div>
+      </div>
+    </div>`;
+
+  const totalTeams = narr.tiers.reduce((a,t) => a + t.teams.length, 0);
+  let html = `
+    <div class="accordion-section">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <span class="accordion-title">Post-Season Recap</span>
+        <span class="accordion-meta">${narr.tiers.length} tiers · ${totalTeams} teams<span class="accordion-icon">▾</span></span>
+      </div>
+      <div class="accordion-body">`;
+
+  narr.tiers.forEach(tier => {
+    html += `<div style="margin-bottom:24px">
+      <div style="font-family:var(--font-head);font-size:12px;color:var(--gold-dim);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:12px;padding-bottom:6px;border-bottom:1px solid var(--border)">${tier.tier_name}</div>`;
+    tier.teams.forEach(t => {
+      html += `<div style="margin-bottom:18px">
+        <div style="font-weight:600;font-size:14px;color:var(--text-primary);margin-bottom:5px">${t.team}</div>
+        <div style="font-size:13px;color:var(--text-secondary);line-height:1.8">${t.writeup}</div>
+      </div>`;
+    });
+    html += `</div>`;
+  });
+
+  html += `</div></div>`;
+  return html;
+}
+
+function toggleAccordion(headerEl) {
+  headerEl.classList.toggle('expanded');
+  headerEl.nextElementSibling.classList.toggle('expanded');
+}
+
+function backToIndex() {
+  document.getElementById('index-view').style.display = 'block';
+  document.getElementById('detail-view').classList.remove('active');
+}
+
+document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>

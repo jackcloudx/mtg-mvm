@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team History — MTG | MVM</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .th-header {
+      background: linear-gradient(135deg, #1a1a1a 0%, #111 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      margin-bottom: 24px;
+    }
+    .th-name { font-family: var(--font-head); font-size: 30px; color: var(--gold); margin-bottom: 6px; }
+    .th-sub { color: var(--text-secondary); font-size: 14px; margin-bottom: 18px; }
+    .th-stats-row { display: flex; gap: 32px; flex-wrap: wrap; }
+    .th-stat { text-align: left; }
+    .th-stat-val { display: block; font-size: 24px; font-weight: 700; font-family: var(--font-mono); color: var(--text-primary); }
+    .th-stat-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+    .notable-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 24px; }
+    .notable-card {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 16px 18px;
+    }
+    .notable-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+    .notable-val { font-size: 18px; font-weight: 700; color: var(--gold); font-family: var(--font-mono); margin-bottom: 4px; }
+    .notable-detail { font-size: 12px; color: var(--text-secondary); }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="site-logo">MTG | MVM <span>The League</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#games">Game Log</a>
+      <a href="index.html#teams">Teams</a>
+      <a href="index.html#playoffs">Playoffs</a>
+      <a href="history.html">History</a>
+      <a href="leaderboard.html">All-Time</a>
+      <a href="admin.html" style="color:var(--text-muted)">Admin</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <button class="back-btn" onclick="window.location.href='leaderboard.html'">← All-Time Leaderboard</button>
+  <div id="content">Loading...</div>
+</div>
+
+<script>
+async function init() {
+  const params = new URLSearchParams(window.location.search);
+  const teamName = params.get('team');
+  if (!teamName) {
+    document.getElementById('content').innerHTML = '<p style="color:var(--text-muted)">No team specified.</p>';
+    return;
+  }
+
+  const res = await fetch('data/history.json');
+  const history = await res.json();
+  const team = history.all_time_teams[teamName];
+
+  if (!team) {
+    document.getElementById('content').innerHTML = `<p style="color:var(--text-muted)">No data found for "${teamName}".</p>`;
+    return;
+  }
+
+  const champText = team.championships > 0
+    ? `${team.championships}x League Champion (Season${team.championship_seasons.length > 1 ? 's' : ''} ${team.championship_seasons.join(', ')})`
+    : 'No championships';
+
+  const seasonRows = team.season_records.map(s => {
+    return `<tr>
+      <td><a href="history.html">Season ${s.season}</a>${s.is_champion ? ' 👑' : ''}</td>
+      <td class="num">${s.w}</td>
+      <td class="num">${s.l}</td>
+      <td class="num">${s.win_pct != null ? (s.win_pct*100).toFixed(1)+'%' : '—'}</td>
+      <td class="num"><span class="power-score">${s.power_score.toFixed(1)}</span></td>
+      <td class="num" style="color:var(--text-muted)">${s.udpi != null ? s.udpi.toFixed(3) : '—'}</td>
+    </tr>`;
+  }).join('');
+
+  const html = `
+    <div class="th-header">
+      <div class="th-name">${team.team}</div>
+      <div class="th-sub">${champText} · Competed in ${team.seasons_played.length} season${team.seasons_played.length>1?'s':''} (S${team.seasons_played.join(', S')})</div>
+      <div class="th-stats-row">
+        <div class="th-stat">
+          <span class="th-stat-val">${team.total_w}-${team.total_l}</span>
+          <span class="th-stat-label">All-Time Record</span>
+        </div>
+        <div class="th-stat">
+          <span class="th-stat-val">${(team.win_pct*100).toFixed(1)}%</span>
+          <span class="th-stat-label">Win %</span>
+        </div>
+        <div class="th-stat">
+          <span class="th-stat-val">${team.championships}</span>
+          <span class="th-stat-label">Championships</span>
+        </div>
+        <div class="th-stat">
+          <span class="th-stat-val" style="color:var(--gold)">${team.best_power_score.toFixed(1)}</span>
+          <span class="th-stat-label">Best Power Score</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-header"><span class="section-title">Notable Stats</span></div>
+    <div class="notable-grid">
+      <div class="notable-card">
+        <div class="notable-label">Fastest Win</div>
+        <div class="notable-val">${team.fastest_win_turns != null ? team.fastest_win_turns + ' turns' : '—'}</div>
+        <div class="notable-detail">${team.fastest_win_detail || 'No data'}</div>
+      </div>
+      <div class="notable-card">
+        <div class="notable-label">Biggest Margin of Victory</div>
+        <div class="notable-val">${team.biggest_margin != null ? '+' + team.biggest_margin : '—'}</div>
+        <div class="notable-detail">${team.biggest_margin_detail || 'No data'}</div>
+      </div>
+    </div>
+
+    <div class="section-header"><span class="section-title">Season-by-Season</span></div>
+    <div style="overflow-x:auto;margin-bottom:24px">
+      <table class="standings-table">
+        <thead>
+          <tr><th>Season</th><th class="num">W</th><th class="num">L</th><th class="num">Win%</th><th class="num">Power Score</th><th class="num">U-DPI</th></tr>
+        </thead>
+        <tbody>${seasonRows}</tbody>
+      </table>
+    </div>
+  `;
+  document.getElementById('content').innerHTML = html;
+}
+
+document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MTG | MVM The League</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="site-logo">MTG | MVM <span>The League</span></div>
+    <nav>
+      <a href="#" data-page="home" class="active" onclick="navigate('home');return false;">Home</a>
+      <a href="#" data-page="games" onclick="navigate('games');return false;">Game Log</a>
+      <a href="#" data-page="teams" onclick="navigate('teams');return false;">Teams</a>
+      <!-- Playoffs tab hidden until Season 9 regular season concludes -->
+      <!-- <a href="#" data-page="playoffs" onclick="navigate('playoffs');return false;">Playoffs</a> -->
+      <a href="history.html">History</a>
+      <a href="leaderboard.html">All-Time</a>
+      <a href="admin.html" style="color:var(--text-muted)">Admin</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HOME PAGE -->
+<div id="page-home" class="page active">
+  <div class="container">
+
+    <!-- Season Banner -->
+    <div class="season-banner">
+      <h1>Season 9</h1>
+      <div class="tagline">Ten full years. Four new teams. One crown.</div>
+      <div class="season-stats">
+        <div class="season-stat-item">
+          <span class="season-stat-val" id="stat-games">0</span>
+          <span class="season-stat-label">Games Played</span>
+        </div>
+        <div class="season-stat-item">
+          <span class="season-stat-val" id="stat-teams">14</span>
+          <span class="season-stat-label">Teams</span>
+        </div>
+        <div class="season-stat-item">
+          <span class="season-stat-val">—</span>
+          <span class="season-stat-label">Leader</span>
+        </div>
+        <div class="season-stat-item">
+          <span class="season-stat-val">2026</span>
+          <span class="season-stat-label">Season</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <!-- LEFT: Standings + Game Log -->
+      <div>
+        <!-- Standings -->
+        <div class="section-header">
+          <span class="section-title">Standings</span>
+          <a href="#" class="section-link" onclick="navigate('games');return false;">Full log →</a>
+        </div>
+        <div style="overflow-x:auto;margin-bottom:32px">
+          <table class="standings-table">
+            <thead>
+              <tr>
+                <th class="num">#</th>
+                <th>Team</th>
+                <th class="num">GP</th>
+                <th class="num">W</th>
+                <th class="num">L</th>
+                <th class="num">WIN%</th>
+                <th class="num">GB</th>
+                <th class="num">STK</th>
+                <th class="num">+/-</th>
+                <th class="num">PWR</th>
+              </tr>
+            </thead>
+            <tbody id="standings-tbody">
+              <tr><td colspan="10" style="text-align:center;padding:32px;color:var(--text-muted)">Loading...</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Latest Results -->
+        <div class="section-header">
+          <span class="section-title">Latest Results</span>
+          <a href="#" class="section-link" onclick="navigate('games');return false;">All games →</a>
+        </div>
+        <div class="results-feed" id="results-feed">
+          <div style="color:var(--text-muted);font-size:13px;padding:12px 0">Loading...</div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Power Rankings -->
+      <div>
+        <div class="section-header">
+          <span class="section-title">Power Rankings</span>
+        </div>
+        <div class="power-list" id="power-rankings-list">
+          <div style="color:var(--text-muted);font-size:13px;padding:12px">Loading...</div>
+        </div>
+
+        <div class="section-header" style="margin-top:28px">
+          <span class="section-title">This Week's Matchups</span>
+        </div>
+        <div id="upcoming-week" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:4px 14px">
+          <div style="color:var(--text-muted);font-size:13px;padding:8px 0">Loading...</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- GAME LOG PAGE -->
+<div id="page-games" class="page">
+  <div class="container">
+    <div class="section-header" style="margin-bottom:20px">
+      <span class="section-title" style="font-size:16px;color:var(--text-secondary)">Season 9 — Game Log</span>
+    </div>
+    <div class="game-filters" id="game-filters">
+      <button class="filter-btn active" onclick="filterGames(null, this)">All Teams</button>
+      <!-- Team filters populated by JS -->
+    </div>
+    <div class="game-log-list" id="game-log-list">
+      <div style="color:var(--text-muted);font-size:13px">Loading...</div>
+    </div>
+  </div>
+</div>
+
+<!-- TEAMS PAGE -->
+<div id="page-teams" class="page">
+  <div class="container">
+    <div id="teams-grid-view">
+      <div class="section-header" style="margin-bottom:20px">
+        <span class="section-title" style="font-size:16px;color:var(--text-secondary)">Season 9 — Teams</span>
+      </div>
+      <div class="teams-grid" id="teams-grid">
+        <div style="color:var(--text-muted)">Loading...</div>
+      </div>
+    </div>
+    <div id="team-detail-view" style="display:none"></div>
+  </div>
+</div>
+
+<!-- PLAYOFFS PAGE -->
+<div id="page-playoffs" class="page">
+  <div class="container">
+    <div style="text-align:center;padding:80px 20px">
+      <div style="font-family:var(--font-head);font-size:24px;color:var(--text-secondary);margin-bottom:12px">Playoffs</div>
+      <div style="color:var(--text-muted);font-size:15px">The Season 9 playoff bracket will appear here when the regular season concludes.</div>
+    </div>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+<script>
+  // Populate team filter buttons after data loads
+  function populateFilters() {
+    if (!seasonData) return;
+    const container = document.getElementById('game-filters');
+    seasonData.teams.forEach(t => {
+      const btn = document.createElement('button');
+      btn.className = 'filter-btn';
+      btn.textContent = t.shortName;
+      btn.onclick = function() { filterGames(t.id, this); };
+      container.appendChild(btn);
+    });
+  }
+
+  function filterGames(teamId, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderGameLog(teamId);
+  }
+
+  // Hook into init
+  const origInit = window.init;
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(populateFilters, 300);
+  });
+</script>
+</body>
+</html>

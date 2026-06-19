@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c ' *)",
+      "Bash(cp ~/Downloads/history.html ~/Desktop/mtg-mvm/history.html)",
+      "Bash(cp ~/Downloads/history.json ~/Desktop/mtg-mvm/data/history.json)"
+    ]
+  }
+}

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin — MTG | MVM</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="site-logo">MTG | MVM <span>Admin Panel</span></div>
+    <nav>
+      <a href="index.html">← Back to Site</a>
+    </nav>
+  </div>
+</header>
+
+<div class="admin-wrap">
+  <div class="admin-header">
+    <h1>League Admin</h1>
+    <p>Enter game results, update rosters, and manage Season 9 data.</p>
+    <div id="server-status" style="margin-top:10px;font-size:13px;padding:8px 12px;border-radius:6px;display:inline-block"></div>
+  </div>
+
+  <div class="admin-tabs">
+    <button class="admin-tab active" onclick="switchTab('game-entry', this)">Log Game</button>
+    <button class="admin-tab" onclick="switchTab('roster-edit', this)">Roster</button>
+    <button class="admin-tab" onclick="switchTab('data-view', this)">View Data</button>
+  </div>
+
+  <!-- GAME ENTRY -->
+  <div class="admin-panel active" id="panel-game-entry">
+
+    <div id="upcoming-matchups" style="margin-bottom:24px">
+      <label style="margin-bottom:10px">Upcoming Matchups — click one to log a result</label>
+      <div id="matchup-list" style="display:flex;flex-direction:column;gap:6px;max-height:280px;overflow-y:auto"></div>
+    </div>
+
+    <hr class="form-divider">
+
+    <div id="selected-matchup-banner" style="display:none;background:var(--bg-card);border:1px solid var(--gold-dim);border-radius:var(--radius);padding:10px 14px;margin-bottom:18px;font-size:13px;color:var(--text-secondary)"></div>
+
+    <div class="form-group">
+      <label>Week Number</label>
+      <input type="number" id="game-week" placeholder="1" min="1">
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Winner</label>
+        <select id="game-winner"></select>
+      </div>
+      <div class="form-group">
+        <label>Loser</label>
+        <select id="game-loser"></select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Winner Score (life remaining)</label>
+        <input type="number" id="game-winner-score" placeholder="e.g. 14">
+      </div>
+      <div class="form-group">
+        <label>Loser Score (life remaining)</label>
+        <input type="number" id="game-loser-score" placeholder="e.g. -3">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Turns</label>
+        <input type="number" id="game-turns" placeholder="e.g. 8" min="1">
+      </div>
+      <div class="form-group">
+        <label>Game MVP Card</label>
+        <input type="text" id="game-mvp" placeholder="e.g. Crystalline Sliver">
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Game Notes / Commentary</label>
+      <textarea id="game-notes" placeholder="Write your post-game narrative here. What happened? Key turning points? Notable draws?"></textarea>
+    </div>
+    <button class="btn-primary" onclick="submitGame()">Save Game Result</button>
+    <div class="success-msg" id="game-success">✓ Game saved and written to file.</div>
+    <div class="success-msg" id="game-error" style="background:#2a1a1a;border-color:#c0392b;color:#d47a7a">✗ Could not reach local server. Is it running?</div>
+  </div>
+
+  <!-- ROSTER EDIT -->
+  <div class="admin-panel" id="panel-roster-edit">
+    <div class="form-group">
+      <label>Select Team</label>
+      <select id="roster-team-select" onchange="loadRosterForEdit()"></select>
+    </div>
+    <div class="form-group">
+      <label>Roster (one card per line, duplicates allowed)</label>
+      <textarea id="roster-cards" style="min-height:300px;font-family:var(--font-mono);font-size:13px" placeholder="Lightning Bolt&#10;Lightning Bolt&#10;Mountain&#10;..."></textarea>
+    </div>
+    <button class="btn-primary" onclick="saveRoster()">Save Roster</button>
+    <div class="success-msg" id="roster-success">✓ Roster saved and written to file.</div>
+  </div>
+
+  <!-- DATA VIEW -->
+  <div class="admin-panel" id="panel-data-view">
+    <p style="color:var(--text-muted);font-size:13px;margin-bottom:16px">
+      Live view of current season9.json. This is what's on disk.
+    </p>
+    <textarea id="data-raw" style="min-height:400px;font-family:var(--font-mono);font-size:12px" readonly></textarea>
+    <button class="btn-primary" style="margin-top:12px" onclick="copyData()">Copy to Clipboard</button>
+    <div class="success-msg" id="copy-success">✓ Copied to clipboard.</div>
+  </div>
+
+</div>
+
+<script>
+const API = 'http://localhost:3001';
+let seasonData = null;
+
+async function loadData() {
+  try {
+    const res = await fetch(`${API}/data`);
+    seasonData = await res.json();
+    setStatus(true);
+  } catch (e) {
+    setStatus(false);
+    // Fall back to static file for reading
+    const res = await fetch('data/season9.json');
+    seasonData = await res.json();
+  }
+  populateTeamSelects();
+  renderUpcomingMatchups();
+  renderDataView();
+}
+
+function setStatus(online) {
+  const el = document.getElementById('server-status');
+  if (online) {
+    el.style.background = '#1a2a1a';
+    el.style.border = '1px solid #27ae60';
+    el.style.color = '#7ac07a';
+    el.textContent = '● Server connected — changes save directly to file';
+  } else {
+    el.style.background = '#2a1a1a';
+    el.style.border = '1px solid #c0392b';
+    el.style.color = '#d47a7a';
+    el.textContent = '● Server offline — run: node server.js in Terminal';
+  }
+}
+
+async function persist() {
+  try {
+    const res = await fetch(`${API}/save`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(seasonData)
+    });
+    if (!res.ok) throw new Error();
+    renderDataView();
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+function populateTeamSelects() {
+  ['game-winner', 'game-loser', 'roster-team-select'].forEach(id => {
+    const sel = document.getElementById(id);
+    if (!sel) return;
+    sel.innerHTML = seasonData.teams.map(t =>
+      `<option value="${t.id}">${t.name}</option>`
+    ).join('');
+  });
+}
+
+let selectedScheduleId = null;
+
+function teamName(id) {
+  const t = seasonData.teams.find(x => x.id === id);
+  return t ? t.name : id;
+}
+
+function renderUpcomingMatchups() {
+  const container = document.getElementById('matchup-list');
+  if (!container || !seasonData.schedule) return;
+  const unplayed = seasonData.schedule.filter(g => !g.played).sort((a,b) => a.week - b.week);
+  if (unplayed.length === 0) {
+    container.innerHTML = '<div style="color:var(--text-muted);font-size:13px;padding:8px">All scheduled games have been played. Season complete!</div>';
+    return;
+  }
+  // Show next 12 unplayed matchups
+  container.innerHTML = unplayed.slice(0, 12).map(g => `
+    <div onclick="selectMatchup('${g.id}')" style="display:flex;justify-content:space-between;align-items:center;background:var(--bg-card);border:1px solid var(--border);border-radius:6px;padding:8px 12px;cursor:pointer;font-size:13px;transition:border-color 0.15s" onmouseover="this.style.borderColor='var(--gold-dim)'" onmouseout="this.style.borderColor='var(--border)'">
+      <span>${teamName(g.home_id)} <span style="color:var(--text-muted)">vs</span> ${teamName(g.away_id)}</span>
+      <span style="color:var(--text-muted);font-size:11px">Week ${g.week}</span>
+    </div>
+  `).join('');
+  if (unplayed.length > 12) {
+    container.innerHTML += `<div style="color:var(--text-muted);font-size:12px;padding:6px 4px">+ ${unplayed.length - 12} more scheduled</div>`;
+  }
+}
+
+function selectMatchup(scheduleId) {
+  const match = seasonData.schedule.find(g => g.id === scheduleId);
+  if (!match) return;
+  selectedScheduleId = scheduleId;
+  document.getElementById('game-week').value = match.week;
+  document.getElementById('game-winner').value = match.home_id;
+  document.getElementById('game-loser').value = match.away_id;
+  const banner = document.getElementById('selected-matchup-banner');
+  banner.style.display = 'block';
+  banner.innerHTML = `Logging: <strong style="color:var(--text-primary)">${teamName(match.home_id)} vs ${teamName(match.away_id)}</strong> — Week ${match.week}. Set the Winner/Loser dropdowns below to match the actual result (home/away shown for reference only).`;
+}
+
+function loadRosterForEdit() {
+  const teamId = document.getElementById('roster-team-select').value;
+  const team = seasonData.teams.find(t => t.id === teamId);
+  if (team) document.getElementById('roster-cards').value = team.roster.join('\n');
+}
+
+async function saveRoster() {
+  const teamId = document.getElementById('roster-team-select').value;
+  const team = seasonData.teams.find(t => t.id === teamId);
+  if (!team) return;
+  const lines = document.getElementById('roster-cards').value.split('\n');
+  team.roster = lines.map(l => l.trim()).filter(l => l.length > 0);
+  const ok = await persist();
+  if (ok) showSuccess('roster-success');
+}
+
+async function submitGame() {
+  const week = parseInt(document.getElementById('game-week').value);
+  const winnerId = document.getElementById('game-winner').value;
+  const loserId = document.getElementById('game-loser').value;
+  const winnerScore = parseInt(document.getElementById('game-winner-score').value);
+  const loserScore = parseInt(document.getElementById('game-loser-score').value);
+  const turns = parseInt(document.getElementById('game-turns').value);
+  const mvp = document.getElementById('game-mvp').value.trim();
+  const notes = document.getElementById('game-notes').value.trim();
+
+  if (!week || !winnerId || !loserId || isNaN(winnerScore) || isNaN(loserScore) || !turns) {
+    alert('Please fill in all required fields (Week, Teams, Scores, Turns).');
+    return;
+  }
+  if (winnerId === loserId) {
+    alert('Winner and Loser cannot be the same team.');
+    return;
+  }
+
+  if (!seasonData.games) seasonData.games = [];
+  seasonData.games.push({
+    id: `g${Date.now()}`,
+    week, winner_id: winnerId, loser_id: loserId,
+    winner_score: winnerScore, loser_score: loserScore,
+    turns, mvp, notes
+  });
+
+  // Mark the matched schedule entry as played, if one was selected
+  if (selectedScheduleId && seasonData.schedule) {
+    const sched = seasonData.schedule.find(g => g.id === selectedScheduleId);
+    if (sched) {
+      sched.played = true;
+      sched.winner_id = winnerId;
+      sched.loser_id = loserId;
+      sched.winner_score = winnerScore;
+      sched.loser_score = loserScore;
+      sched.turns = turns;
+      sched.mvp = mvp;
+      sched.notes = notes;
+    }
+  }
+
+  const ok = await persist();
+  if (ok) {
+    showSuccess('game-success');
+    document.getElementById('game-week').value = '';
+    document.getElementById('game-winner-score').value = '';
+    document.getElementById('game-loser-score').value = '';
+    document.getElementById('game-turns').value = '';
+    document.getElementById('game-mvp').value = '';
+    document.getElementById('game-notes').value = '';
+    selectedScheduleId = null;
+    document.getElementById('selected-matchup-banner').style.display = 'none';
+    renderUpcomingMatchups();
+  } else {
+    showSuccess('game-error');
+  }
+}
+
+function renderDataView() {
+  const el = document.getElementById('data-raw');
+  if (el && seasonData) el.value = JSON.stringify(seasonData, null, 2);
+}
+
+function copyData() {
+  const el = document.getElementById('data-raw');
+  navigator.clipboard.writeText(el.value).then(() => showSuccess('copy-success'));
+}
+
+function showSuccess(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.style.display = 'block';
+  setTimeout(() => { el.style.display = 'none'; }, 3000);
+}
+
+function switchTab(panelId, btn) {
+  document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.admin-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('panel-' + panelId).classList.add('active');
+  if (panelId === 'roster-edit') loadRosterForEdit();
+  if (panelId === 'data-view') renderDataView();
+}
+
+document.addEventListener('DOMContentLoaded', loadData);
+</script>
+</body>
+</html>
