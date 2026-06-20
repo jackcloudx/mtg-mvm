@@ -151,7 +151,7 @@
       <a href="index.html">Home</a>
       <a href="index.html#games">Game Log</a>
       <a href="index.html#teams">Teams</a>
-      <a href="index.html#playoffs">Playoffs</a>
+      <!-- Playoffs tab hidden until Season 9 regular season concludes -->
       <a href="history.html" class="active">History</a>
       <a href="admin.html" style="color:var(--text-muted)">Admin</a>
     </nav>
@@ -162,6 +162,15 @@
 
   <!-- SEASON INDEX -->
   <div id="index-view">
+
+    <!-- LEAGUE RECORDS HALL OF FAME -->
+    <div class="section-header" style="margin-bottom:14px">
+      <span class="section-title" style="font-size:16px;color:var(--text-secondary)">League Records — Hall of Fame</span>
+    </div>
+    <div id="hall-of-fame-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-bottom:36px">
+      <div style="color:var(--text-muted);grid-column:1/-1">Loading...</div>
+    </div>
+
     <div class="section-header" style="margin-bottom:20px">
       <span class="section-title" style="font-size:16px;color:var(--text-secondary)">League History — Seasons 1 through 8</span>
     </div>
@@ -185,6 +194,38 @@ async function init() {
   const res = await fetch('data/history.json');
   historyData = await res.json();
   renderIndex();
+  renderHallOfFame();
+}
+
+function renderHallOfFame() {
+  const container = document.getElementById('hall-of-fame-grid');
+  const r = historyData.league_records;
+  if (!r) { container.innerHTML = ''; return; }
+
+  const cards = [
+    { label: 'Fastest Win', value: r.fastest_win.value + ' turns', team: r.fastest_win.team, detail: r.fastest_win.detail },
+    { label: 'Slowest Win', value: r.slowest_win.value + ' turns', team: r.slowest_win.team, detail: r.slowest_win.detail },
+    { label: 'Largest Margin', value: '+' + r.biggest_margin.value, team: r.biggest_margin.team, detail: r.biggest_margin.detail },
+    { label: 'Most Damage, Single Game', value: r.most_damage_single_game.value, team: r.most_damage_single_game.team, detail: r.most_damage_single_game.detail },
+    { label: 'Best Season Record', value: (r.best_season_record.value*100).toFixed(1)+'%', team: r.best_season_record.team, detail: r.best_season_record.detail },
+    { label: 'Worst Season Record', value: (r.worst_season_record.value*100).toFixed(1)+'%', team: r.worst_season_record.team, detail: r.worst_season_record.detail },
+    { label: 'Highest Single-Season Power', value: r.highest_season_power.value, team: r.highest_season_power.team, detail: r.highest_season_power.detail },
+    { label: 'Most Championships', value: r.most_championships.value + 'x', team: r.most_championships.team, detail: r.most_championships.detail },
+    { label: 'Most All-Time Wins', value: r.most_total_wins.value, team: r.most_total_wins.team, detail: r.most_total_wins.detail },
+    { label: 'Best All-Time Win%', value: r.best_alltime_winpct.value+'%', team: r.best_alltime_winpct.team, detail: r.best_alltime_winpct.detail },
+    { label: 'Longest Win Streak', value: r.longest_win_streak.value + ' games', team: r.longest_win_streak.team, detail: r.longest_win_streak.detail },
+    { label: 'Longest Losing Streak', value: r.longest_loss_streak.value + ' games', team: r.longest_loss_streak.team, detail: r.longest_loss_streak.detail },
+    { label: 'Most Career MVPs (1 card)', value: r.most_mvps_single_card.value + 'x', team: r.most_mvps_single_card.team, detail: r.most_mvps_single_card.detail },
+    { label: 'Most Lopsided Rivalry', value: r.most_lopsided_rivalry.value + ' game gap', team: r.most_lopsided_rivalry.team, detail: r.most_lopsided_rivalry.detail },
+  ];
+
+  container.innerHTML = cards.map(c => `
+    <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px">
+      <div style="font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:6px">${c.label}</div>
+      <div style="font-size:20px;font-weight:700;color:var(--gold);font-family:var(--font-mono);margin-bottom:4px">${c.value}</div>
+      <div style="font-size:12px;color:var(--text-primary);font-weight:600">${c.team}</div>
+      <div style="font-size:11px;color:var(--text-muted);margin-top:2px">${c.detail}</div>
+    </div>`).join('');
 }
 
 function renderIndex() {

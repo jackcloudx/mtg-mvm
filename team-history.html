@@ -38,7 +38,7 @@
       <a href="index.html">Home</a>
       <a href="index.html#games">Game Log</a>
       <a href="index.html#teams">Teams</a>
-      <a href="index.html#playoffs">Playoffs</a>
+      <!-- Playoffs tab hidden until Season 9 regular season concludes -->
       <a href="history.html">History</a>
       <a href="leaderboard.html">All-Time</a>
       <a href="admin.html" style="color:var(--text-muted)">Admin</a>
@@ -114,6 +114,7 @@ async function init() {
         <div class="notable-label">Fastest Win</div>
         <div class="notable-val">${team.fastest_win_turns != null ? team.fastest_win_turns + ' turns' : '—'}</div>
         <div class="notable-detail">${team.fastest_win_detail || 'No data'}</div>
+        ${team.fastest_win_count > 1 ? `<div class="notable-detail" style="color:var(--text-muted);margin-top:4px">Achieved ${team.fastest_win_count}x</div>` : ''}
       </div>
       <div class="notable-card">
         <div class="notable-label">Biggest Margin of Victory</div>
