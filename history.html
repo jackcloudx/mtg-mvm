@@ -72,17 +72,7 @@
     .report-card-row .rc-val { color: var(--text-secondary); text-align: right; max-width: 65%; }
     .report-card-writeup { font-size: 12px; color: var(--text-secondary); line-height: 1.6; margin-top: 8px; }
 
-    .adv-bucket-tabs { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 14px; }
-    .adv-bucket-tab { background: var(--bg); border: 1px solid var(--border); color: var(--text-muted); padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 12px; font-family: var(--font-head); }
-    .adv-bucket-tab.active { border-color: var(--gold-dim); color: var(--gold); background: var(--bg-card); }
-    .adv-stat-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-    .adv-stat-table th { text-align: right; color: var(--text-muted); font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; padding: 8px 10px; border-bottom: 1px solid var(--border); cursor: pointer; white-space: nowrap; }
-    .adv-stat-table th:first-child { text-align: left; }
-    .adv-stat-table th:hover { color: var(--text-secondary); }
-    .adv-stat-table td { padding: 8px 10px; border-bottom: 1px solid var(--border); text-align: right; color: var(--text-secondary); }
-    .adv-stat-table td:first-child { text-align: left; color: var(--text-primary); font-weight: 500; }
-    .adv-stat-table tr:hover td { background: rgba(255,255,255,0.02); }
-    .adv-na { color: var(--text-muted); font-size: 11px; }
+    .at-toggle { display: flex; gap: 4px; margin-bottom: 18px; }
     .at-toggle button { background: var(--bg-card); border: 1px solid var(--border); color: var(--text-secondary); padding: 7px 16px; border-radius: var(--radius); cursor: pointer; font-size: 13px; }
     .at-toggle button.active { border-color: var(--gold-dim); color: var(--gold); }
     .at-table-wrap { overflow-x: auto; }
@@ -322,8 +312,6 @@ function showSeason(seasonNum) {
 
     ${buildReportCardsHtml(season)}
 
-    ${buildAdvancedStatsHtml(season)}
-
     <div class="accordion-section">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <span class="accordion-title">Regular Season Game Log</span>
@@ -343,7 +331,6 @@ function showSeason(seasonNum) {
     ${buildPostSeasonHtml(season)}
   `;
   detail.innerHTML = html;
-  initAdvancedStats(seasonNum);
 }
 
 function backToIndex() {
@@ -467,171 +454,7 @@ function toggleAccordion(headerEl) {
   headerEl.nextElementSibling.classList.toggle('expanded');
 }
 
-function buildAdvancedStatsHtml(season) {
-  const adv = season.advanced_stats;
-  if (!adv || Object.keys(adv).length === 0) return '';
-
-  const teams = season.standings.map(s => s.team).filter(t => adv[t]);
-  const f = (v, dec=2) => v != null ? Number(v).toFixed(dec) : '<span class="adv-na">—</span>';
-
-  const BUCKETS = {
-    'Damage Profile': {
-      available: true,
-      note: 'All seasons',
-      cols: [
-        { key: 'damage_pm', label: 'Dmg +/-', dec: 0 },
-        { key: 'dgt', label: 'DG/Turn' },
-        { key: 'dtt', label: 'DT/Turn' },
-        { key: 'ddt', label: 'DD/Turn' },
-        { key: 'dgg', label: 'DG/Game' },
-        { key: 'dtg', label: 'DT/Game' },
-        { key: 'ddg', label: 'DD/Game' },
-      ]
-    },
-    'Life Margin': {
-      available: true,
-      note: 'All seasons',
-      cols: [
-        { key: 'win_life_delta', label: 'Avg Margin-W' },
-        { key: 'lose_life_delta', label: 'Avg Margin-L' },
-      ]
-    },
-    'Pace': {
-      available: true,
-      note: 'All seasons',
-      cols: [
-        { key: 'turn_w', label: 'Turns-W' },
-        { key: 'turn_l', label: 'Turns-L' },
-        { key: 'turns_per_game', label: 'Turns/Game' },
-        { key: 'turn_delta', label: 'W/L Delta' },
-      ]
-    },
-    'Board State': {
-      available: season.season >= 4,
-      note: 'Seasons 4–8',
-      cols: [
-        { key: 'mana_w', label: 'Mana-W' },
-        { key: 'mana_l', label: 'Mana-L' },
-        { key: 'mana_delta', label: 'Mana Δ' },
-        { key: 'opp_mana_w', label: 'OppMana-W' },
-        { key: 'opp_mana_l', label: 'OppMana-L' },
-        { key: 'opp_mana_delta', label: 'OppMana Δ' },
-        { key: 'hand_w', label: 'Hand-W' },
-        { key: 'hand_l', label: 'Hand-L' },
-        { key: 'hand_delta', label: 'Hand Δ' },
-        { key: 'opp_hand_w', label: 'OppHand-W' },
-        { key: 'opp_hand_l', label: 'OppHand-L' },
-        { key: 'opp_hand_delta', label: 'OppHand Δ' },
-      ]
-    },
-    'Deployment Efficiency': {
-      available: season.season >= 6,
-      note: 'Seasons 6–8',
-      cols: [
-        { key: 'deploy_w', label: 'Deploy-W' },
-        { key: 'deploy_l', label: 'Deploy-L' },
-        { key: 'deploy_delta', label: 'Deploy Δ' },
-        { key: 'deploy_per_mana_w', label: 'Dply/Mana-W' },
-        { key: 'deploy_per_mana_l', label: 'Dply/Mana-L' },
-        { key: 'deploy_per_mana_delta', label: 'Dply/Mana Δ' },
-      ]
-    },
-  };
-
-  const bucketNames = Object.keys(BUCKETS);
-  const sectionId = `adv-${season.season}`;
-
-  // Build one table per bucket
-  const tablesHtml = bucketNames.map(name => {
-    const bucket = BUCKETS[name];
-    const tableId = `adv-tbl-${season.season}-${name.replace(/\s+/g,'_')}`;
-    if (!bucket.available) {
-      return `<div id="${tableId}" class="adv-bucket-view" style="display:none">
-        <p style="color:var(--text-muted);font-size:13px;padding:12px 0">${name} data not available for Season ${season.season}. Tracking began ${bucket.note.toLowerCase()}.</p>
-      </div>`;
-    }
-    const sortFnName = `advSort_${season.season}_${name.replace(/\s+/g,'_')}`;
-    let sortState = { field: bucket.cols[0].key, dir: -1 };
-
-    const buildTable = (sortField, sortDir) => {
-      const sorted = [...teams].sort((a, b) => {
-        const av = adv[a]?.[sortField], bv = adv[b]?.[sortField];
-        if (av == null && bv == null) return 0;
-        if (av == null) return 1;
-        if (bv == null) return -1;
-        return sortDir * (av - bv);
-      });
-      const thead = `<tr><th style="text-align:left">Team</th>${bucket.cols.map(c =>
-        `<th onclick="advSortTable('${tableId}','${c.key}',${c.dec||2})">${c.label}</th>`
-      ).join('')}</tr>`;
-      const tbody = sorted.map(team => {
-        const row = adv[team] || {};
-        return `<tr><td>${team}</td>${bucket.cols.map(c =>
-          `<td>${f(row[c.key], c.dec ?? 2)}</td>`
-        ).join('')}</tr>`;
-      }).join('');
-      return `<thead>${thead}</thead><tbody>${tbody}</tbody>`;
-    };
-
-    return `<div id="${tableId}" class="adv-bucket-view" style="display:none">
-      <div style="overflow-x:auto"><table class="adv-stat-table" id="${tableId}-table">
-        ${buildTable(bucket.cols[0].key, -1)}
-      </table></div>
-    </div>`;
-  }).join('');
-
-  return `
-    <div class="accordion-section">
-      <div class="accordion-header" onclick="toggleAccordion(this)">
-        <span class="accordion-title">Advanced Stats</span>
-        <span class="accordion-meta">5 buckets · ${teams.length} teams<span class="accordion-icon">▾</span></span>
-      </div>
-      <div class="accordion-body">
-        <div class="adv-bucket-tabs" id="${sectionId}-tabs">
-          ${bucketNames.map((name, i) => `<button class="adv-bucket-tab${i===0?' active':''}" onclick="switchAdvBucket('${sectionId}','${name.replace(/\s+/g,'_')}',this)">${name}</button>`).join('')}
-        </div>
-        ${tablesHtml}
-      </div>
-    </div>`;
-}
-
-function switchAdvBucket(sectionId, bucketKey, btn) {
-  const tabsEl = document.getElementById(sectionId + '-tabs');
-  tabsEl.querySelectorAll('.adv-bucket-tab').forEach(t => t.classList.remove('active'));
-  btn.classList.add('active');
-  const seasonNum = sectionId.split('-')[1];
-  ['Damage_Profile','Life_Margin','Pace','Board_State','Deployment_Efficiency'].forEach(b => {
-    const el = document.getElementById(`adv-tbl-${seasonNum}-${b}`);
-    if (el) el.style.display = b === bucketKey ? 'block' : 'none';
-  });
-}
-
-function advSortTable(tableId, field, dec) {
-  const tableEl = document.getElementById(tableId + '-table');
-  if (!tableEl) return;
-  const rows = Array.from(tableEl.querySelectorAll('tbody tr'));
-  const colIndex = Array.from(tableEl.querySelectorAll('thead th')).findIndex(th => th.onclick && th.onclick.toString().includes(`'${field}'`));
-  if (colIndex < 0) return;
-  let dir = tableEl.dataset.sortDir === field + 'asc' ? -1 : 1;
-  tableEl.dataset.sortDir = field + (dir === 1 ? 'asc' : 'desc');
-  rows.sort((a, b) => {
-    const av = parseFloat(a.cells[colIndex]?.textContent);
-    const bv = parseFloat(b.cells[colIndex]?.textContent);
-    if (isNaN(av) && isNaN(bv)) return 0;
-    if (isNaN(av)) return 1;
-    if (isNaN(bv)) return -1;
-    return dir * (av - bv);
-  });
-  const tbody = tableEl.querySelector('tbody');
-  rows.forEach(r => tbody.appendChild(r));
-}
-
-// Show first bucket on page load for each advanced stats section
-function initAdvancedStats(seasonNum) {
-  const firstBucket = 'Damage_Profile';
-  const el = document.getElementById(`adv-tbl-${seasonNum}-${firstBucket}`);
-  if (el) el.style.display = 'block';
-}
+function setAtMode(mode) {
   atMode = mode;
   document.getElementById('at-toggle-franchise').classList.toggle('active', mode === 'franchise');
   document.getElementById('at-toggle-season').classList.toggle('active', mode === 'season');
