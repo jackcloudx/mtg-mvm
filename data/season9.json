@@ -2,7 +2,19 @@
   "season": 9,
   "year": 2026,
   "tagline": "Ten full years. Four new teams. One crown.",
-  "games": [],
+  "games": [
+    {
+      "id": "g1782219335627",
+      "week": 1,
+      "winner_id": "darwins-doom",
+      "loser_id": "the-emerald-army",
+      "winner_score": 17,
+      "loser_score": 0,
+      "turns": 8,
+      "mvp": "Verdant Force",
+      "notes": "Darwin's Doom (DD) -- damn! The OG green team came out swinging, with Call of the Wild + Worldly Tutor leading to a fifth-turn Verdant Force. The mega monster swung the balance of the game as saproling tokens poured onto the battlefield and Emerald Army had little to stop him. 2x Yavimaya Ants dealt a handful of damage as well. Great first win of the season for Darwin!\n\nThe Emerald Army (TEA) -- honestly I loved their opening hand w/ Pendelhaven, Heart of Yavimaya, Forest, Llanowar Elves, Ice Storm + Wyluli Wolf. They sat on 2x Overrun and Kaysa that would really have broken things open for them quickly had they drawn another land. Encouraging despite the defeat."
+    }
+  ],
   "teams": [
     {
       "id": "trick-or-treat",
@@ -446,7 +458,7 @@
         "Red"
       ],
       "identity": "All-goblin chaos. Unrecognizable after a trip to the build-a-goblin factory.",
-      "oneliner": "Wild, reckless, overpowering \u2014 now with custom cards from C&T.",
+      "oneliner": "Wild, reckless, overpowering — now with custom cards from C&T.",
       "roster": [
         "Blood Moon",
         "Blood Moon",
@@ -522,7 +534,7 @@
         "Green"
       ],
       "identity": "Season 7 champs. Truly horrifying new free agents added.",
-      "oneliner": "Added some truly horrifying free agents and now wants to play them\u2026again.",
+      "oneliner": "Added some truly horrifying free agents and now wants to play them…again.",
       "roster": [
         "Acidic Sliver",
         "City of Brass",
@@ -1028,7 +1040,7 @@
         "TBD"
       ],
       "identity": "Roster and identity to be finalized before Season 9 kickoff.",
-      "oneliner": "New entrant \u2014 details coming soon.",
+      "oneliner": "New entrant — details coming soon.",
       "roster": []
     },
     {
@@ -1039,7 +1051,7 @@
         "TBD"
       ],
       "identity": "Roster and identity to be finalized before Season 9 kickoff.",
-      "oneliner": "New entrant \u2014 details coming soon.",
+      "oneliner": "New entrant — details coming soon.",
       "roster": []
     }
   ],
@@ -1077,14 +1089,14 @@
       "week": 1,
       "home_id": "darwins-doom",
       "away_id": "the-emerald-army",
-      "played": false,
-      "winner_id": null,
-      "loser_id": null,
-      "winner_score": null,
-      "loser_score": null,
-      "turns": null,
-      "mvp": null,
-      "notes": null
+      "played": true,
+      "winner_id": "darwins-doom",
+      "loser_id": "the-emerald-army",
+      "winner_score": 17,
+      "loser_score": 0,
+      "turns": 8,
+      "mvp": "Verdant Force",
+      "notes": "Darwin's Doom (DD) -- damn! The OG green team came out swinging, with Call of the Wild + Worldly Tutor leading to a fifth-turn Verdant Force. The mega monster swung the balance of the game as saproling tokens poured onto the battlefield and Emerald Army had little to stop him. Great first win of the season for Darwin!\n\nThe Emerald Army (TEA) -- honestly I loved their opening hand w/ Pendelhaven, Heart of Yavimaya, Forest, Llanowar Elves, Ice Storm + Wyluli Wolf. They sat on 2x Overrun and Kaysa that would really have broken things open for them quickly had they drawn another land. Encouraging despite the defeat."
     },
     {
       "id": "sched-w1-swamp-things-holy-war",

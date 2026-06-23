@@ -80,7 +80,8 @@
       <label>Game Notes / Commentary</label>
       <textarea id="game-notes" placeholder="Write your post-game narrative here. What happened? Key turning points? Notable draws?"></textarea>
     </div>
-    <button class="btn-primary" onclick="submitGame()">Save Game Result</button>
+    <button class="btn-primary" id="submit-btn" onclick="submitGame()">Save Game Result</button>
+    <button id="cancel-edit-btn" onclick="cancelEdit()" style="display:none;margin-left:8px;background:none;border:1px solid var(--border);color:var(--text-muted);padding:8px 18px;border-radius:var(--radius);cursor:pointer">Cancel</button>
     <div class="success-msg" id="game-success">✓ Game saved and written to file.</div>
     <div class="success-msg" id="game-error" style="background:#2a1a1a;border-color:#c0392b;color:#d47a7a">✗ Could not reach local server. Is it running?</div>
   </div>
@@ -109,6 +110,13 @@
     <div class="success-msg" id="copy-success">✓ Copied to clipboard.</div>
   </div>
 
+
+    <div style="margin-top:32px">
+      <div style="font-family:var(--font-head);font-size:13px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px">Logged Games</div>
+      <div id="logged-games-list" style="display:flex;flex-direction:column;gap:8px">
+        <div style="color:var(--text-muted);font-size:13px">No games logged yet.</div>
+      </div>
+    </div>
 </div>
 
 <script>
@@ -128,6 +136,7 @@ async function loadData() {
   }
   populateTeamSelects();
   renderUpcomingMatchups();
+  renderLoggedGames();
   renderDataView();
 }
 
@@ -172,10 +181,68 @@ function populateTeamSelects() {
 }
 
 let selectedScheduleId = null;
+let editingGameIdx = null;
 
 function teamName(id) {
   const t = seasonData.teams.find(x => x.id === id);
   return t ? t.name : id;
+}
+
+function renderLoggedGames() {
+  const container = document.getElementById('logged-games-list');
+  if (!container) return;
+  const games = (seasonData.games || []).slice().sort((a,b) => b.week - a.week);
+  if (games.length === 0) {
+    container.innerHTML = '<div style="color:var(--text-muted);font-size:13px">No games logged yet.</div>';
+    return;
+  }
+  container.innerHTML = games.map((g, idx) => {
+    const winner = seasonData.teams.find(t => t.id === g.winner_id);
+    const loser = seasonData.teams.find(t => t.id === g.loser_id);
+    const wName = winner ? winner.name : g.winner_id;
+    const lName = loser ? loser.name : g.loser_id;
+    return `<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+        <span style="font-size:14px;font-weight:600;color:var(--text-primary)">Wk ${g.week} · <span style="color:var(--gold)">${wName}</span> def. ${lName} <span style="font-family:var(--font-mono);color:var(--text-muted);font-size:12px">${g.winner_score ?? ''}–${g.loser_score ?? ''} · ${g.turns ?? '?'} turns</span></span>
+        <button onclick="editGame(${idx})" style="background:none;border:1px solid var(--border);color:var(--text-muted);border-radius:4px;padding:3px 10px;cursor:pointer;font-size:12px">Edit</button>
+      </div>
+      ${g.mvp ? `<div style="font-size:12px;color:var(--text-secondary);margin-bottom:4px">MVP: ${g.mvp}</div>` : ''}
+      ${g.notes ? `<div style="font-size:12px;color:var(--text-muted);line-height:1.6">${g.notes}</div>` : '<div style="font-size:12px;color:var(--text-muted);font-style:italic">No notes.</div>'}
+    </div>`;
+  }).join('');
+}
+
+function editGame(idx) {
+  const games = (seasonData.games || []).slice().sort((a,b) => b.week - a.week);
+  const g = games[idx];
+  if (!g) return;
+  const origIdx = seasonData.games.indexOf(g);
+  editingGameIdx = origIdx;
+  document.getElementById('game-week').value = g.week;
+  document.getElementById('game-winner').value = g.winner_id;
+  document.getElementById('game-loser').value = g.loser_id;
+  document.getElementById('game-winner-score').value = g.winner_score ?? '';
+  document.getElementById('game-loser-score').value = g.loser_score ?? '';
+  document.getElementById('game-turns').value = g.turns ?? '';
+  document.getElementById('game-mvp').value = g.mvp ?? '';
+  document.getElementById('game-notes').value = g.notes ?? '';
+  document.getElementById('submit-btn').textContent = 'Update Game';
+  document.getElementById('cancel-edit-btn').style.display = 'inline-block';
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function cancelEdit() {
+  editingGameIdx = null;
+  document.getElementById('game-week').value = '';
+  document.getElementById('game-winner').value = '';
+  document.getElementById('game-loser').value = '';
+  document.getElementById('game-winner-score').value = '';
+  document.getElementById('game-loser-score').value = '';
+  document.getElementById('game-turns').value = '';
+  document.getElementById('game-mvp').value = '';
+  document.getElementById('game-notes').value = '';
+  document.getElementById('submit-btn').textContent = 'Log Game';
+  document.getElementById('cancel-edit-btn').style.display = 'none';
 }
 
 function renderUpcomingMatchups() {
@@ -227,6 +294,21 @@ async function saveRoster() {
 }
 
 async function submitGame() {
+  if (editingGameIdx !== null) {
+    const g = seasonData.games[editingGameIdx];
+    g.week = parseInt(document.getElementById('game-week').value);
+    g.winner_id = document.getElementById('game-winner').value;
+    g.loser_id = document.getElementById('game-loser').value;
+    g.winner_score = parseInt(document.getElementById('game-winner-score').value);
+    g.loser_score = parseInt(document.getElementById('game-loser-score').value);
+    g.turns = parseInt(document.getElementById('game-turns').value);
+    g.mvp = document.getElementById('game-mvp').value.trim();
+    g.notes = document.getElementById('game-notes').value.trim();
+    await fetch('http://localhost:3001/save', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(seasonData)});
+    cancelEdit();
+    renderLoggedGames();
+    return;
+  }
   const week = parseInt(document.getElementById('game-week').value);
   const winnerId = document.getElementById('game-winner').value;
   const loserId = document.getElementById('game-loser').value;
