@@ -132,7 +132,49 @@ async function init() {
       </table>
     </div>
   `;
-  document.getElementById('content').innerHTML = html;
+  // Build waiver log for this team across all seasons
+  const teamWaivers = [];
+  Object.entries(history.seasons).forEach(([sNum, season]) => {
+    const waivers = (season.waivers || []).filter(w => w.team === teamName);
+    waivers.forEach(w => teamWaivers.push({...w, season: parseInt(sNum)}));
+  });
+  teamWaivers.sort((a,b) => a.season - b.season || a.week - b.week);
+
+  let waiverHtml = '';
+  if (teamWaivers.length > 0) {
+    const bySeason = {};
+    teamWaivers.forEach(w => {
+      if (!bySeason[w.season]) bySeason[w.season] = [];
+      bySeason[w.season].push(w);
+    });
+    const seasonBlocks = Object.entries(bySeason).map(([sNum, waivers]) => {
+      const rows = waivers.map(w => `
+        <div style="display:grid;grid-template-columns:60px 1fr 1fr;gap:8px;align-items:center;padding:7px 0;border-bottom:1px solid var(--border);font-size:13px">
+          <span style="color:var(--text-muted)">Wk ${w.week}</span>
+          <span><span style="color:var(--red)">− ${w.card_out}</span></span>
+          <span><span style="color:var(--green)">+ ${w.card_in}</span></span>
+        </div>`).join('');
+      return `
+        <div style="margin-bottom:20px">
+          <div style="font-size:11px;color:var(--gold-dim);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px;padding-bottom:4px;border-bottom:1px solid var(--border)">Season ${sNum} · ${waivers.length} transaction${waivers.length>1?'s':''}</div>
+          ${rows}
+        </div>`;
+    }).join('');
+
+    waiverHtml = `
+      <div class="section-header" style="margin-top:8px"><span class="section-title">Roster Changes</span></div>
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:16px 20px;margin-bottom:24px">
+        <div style="display:grid;grid-template-columns:60px 1fr 1fr;gap:8px;padding-bottom:6px;margin-bottom:4px;border-bottom:2px solid var(--border)">
+          <span style="font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em">Week</span>
+          <span style="font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em">Card Out</span>
+          <span style="font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em">Card In</span>
+        </div>
+        ${seasonBlocks}
+        <div style="font-size:11px;color:var(--text-muted);margin-top:8px">${teamWaivers.length} total transactions across ${Object.keys(bySeason).length} season${Object.keys(bySeason).length>1?'s':''}</div>
+      </div>`;
+  }
+
+  document.getElementById('content').innerHTML = html + waiverHtml;
 }
 
 document.addEventListener('DOMContentLoaded', init);
