@@ -28,6 +28,7 @@
     <button class="admin-tab active" onclick="switchTab('game-entry', this)">Log Game</button>
     <button class="admin-tab" onclick="switchTab('roster-edit', this)">Roster</button>
     <button class="admin-tab" onclick="switchTab('data-view', this)">View Data</button>
+    <button class="admin-tab" onclick="switchTab('waivers', this)">Waivers</button>
   </div>
 
   <!-- GAME ENTRY -->
@@ -101,6 +102,40 @@
   </div>
 
   <!-- DATA VIEW -->
+  <div class="admin-panel" id="panel-waivers">
+    <div style="margin-bottom:20px">
+      <div style="font-family:var(--font-head);font-size:13px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:14px">Log a Roster Change</div>
+      <div class="form-row">
+        <label>Team</label>
+        <select id="waiver-team" onchange="populateWaiverCards()"></select>
+      </div>
+      <div class="form-row">
+        <label>Week</label>
+        <input type="number" id="waiver-week" min="1" max="30" placeholder="e.g. 4">
+      </div>
+      <div class="form-row">
+        <label>Card Out</label>
+        <select id="waiver-card-out"></select>
+      </div>
+      <div class="form-row">
+        <label>Card In</label>
+        <input type="text" id="waiver-card-in" placeholder="e.g. Survival of the Fittest">
+      </div>
+      <div class="form-row">
+        <label>Notes</label>
+        <textarea id="waiver-notes" placeholder="Optional — why was this change made?" style="min-height:80px"></textarea>
+      </div>
+      <button class="btn-primary" onclick="submitWaiver()">Log Waiver</button>
+      <div class="success-msg" id="waiver-success">✓ Waiver logged.</div>
+    </div>
+    <div>
+      <div style="font-family:var(--font-head);font-size:13px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px">Season 9 Waiver Log</div>
+      <div id="waiver-log-list" style="display:flex;flex-direction:column;gap:8px">
+        <div style="color:var(--text-muted);font-size:13px">No waivers logged yet.</div>
+      </div>
+    </div>
+  </div>
+
   <div class="admin-panel" id="panel-data-view">
     <p style="color:var(--text-muted);font-size:13px;margin-bottom:16px">
       Live view of current season9.json. This is what's on disk.
@@ -137,6 +172,12 @@ async function loadData() {
   populateTeamSelects();
   renderUpcomingMatchups();
   renderLoggedGames();
+  renderWaiverLog();
+  const waiverTeamSelect = document.getElementById('waiver-team');
+  if (waiverTeamSelect) {
+    waiverTeamSelect.innerHTML = seasonData.teams.map(t => `<option value="${t.id}">${t.name}</option>`).join('');
+    populateWaiverCards();
+  }
   renderDataView();
 }
 
@@ -186,6 +227,73 @@ let editingGameIdx = null;
 function teamName(id) {
   const t = seasonData.teams.find(x => x.id === id);
   return t ? t.name : id;
+}
+
+function populateWaiverCards() {
+  const teamId = document.getElementById('waiver-team').value;
+  const team = seasonData.teams.find(t => t.id === teamId);
+  const select = document.getElementById('waiver-card-out');
+  if (!team || !team.roster) { select.innerHTML = ''; return; }
+  const unique = [...new Set(team.roster)].sort();
+  select.innerHTML = unique.map(c => `<option value="${c}">${c}</option>`).join('');
+}
+
+async function submitWaiver() {
+  const teamId = document.getElementById('waiver-team').value;
+  const week = parseInt(document.getElementById('waiver-week').value);
+  const cardOut = document.getElementById('waiver-card-out').value;
+  const cardIn = document.getElementById('waiver-card-in').value.trim();
+  const notes = document.getElementById('waiver-notes').value.trim();
+
+  if (!teamId || !week || !cardOut || !cardIn) {
+    alert('Please fill in Team, Week, Card Out and Card In.');
+    return;
+  }
+
+  if (!seasonData.waivers) seasonData.waivers = [];
+  seasonData.waivers.push({ team_id: teamId, week, card_out: cardOut, card_in: cardIn, notes, timestamp: new Date().toISOString() });
+
+  const team = seasonData.teams.find(t => t.id === teamId);
+  if (team && team.roster) {
+    const idx = team.roster.indexOf(cardOut);
+    if (idx !== -1) team.roster.splice(idx, 1);
+    team.roster.push(cardIn);
+    team.roster.sort();
+  }
+
+  await fetch('http://localhost:3001/save', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(seasonData) });
+
+  document.getElementById('waiver-week').value = '';
+  document.getElementById('waiver-card-in').value = '';
+  document.getElementById('waiver-notes').value = '';
+  populateWaiverCards();
+  renderWaiverLog();
+
+  const msg = document.getElementById('waiver-success');
+  msg.style.display = 'block';
+  setTimeout(() => msg.style.display = 'none', 3000);
+}
+
+function renderWaiverLog() {
+  const container = document.getElementById('waiver-log-list');
+  if (!container) return;
+  const waivers = (seasonData.waivers || []).slice().sort((a,b) => b.week - a.week);
+  if (waivers.length === 0) {
+    container.innerHTML = '<div style="color:var(--text-muted);font-size:13px">No waivers logged yet.</div>';
+    return;
+  }
+  container.innerHTML = waivers.map(w => {
+    const team = seasonData.teams.find(t => t.id === w.team_id);
+    const tName = team ? team.name : w.team_id;
+    return `<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:12px 16px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+        <span style="font-size:14px;font-weight:600;color:var(--text-primary)">Wk ${w.week} · ${tName}</span>
+        <span style="font-size:11px;color:var(--text-muted)">${w.timestamp ? new Date(w.timestamp).toLocaleDateString() : ''}</span>
+      </div>
+      <div style="font-size:13px;color:var(--text-secondary)"><span style="color:var(--red)">− ${w.card_out}</span> → <span style="color:var(--green)">+ ${w.card_in}</span></div>
+      ${w.notes ? `<div style="font-size:12px;color:var(--text-muted);margin-top:4px">${w.notes}</div>` : ''}
+    </div>`;
+  }).join('');
 }
 
 function renderLoggedGames() {
