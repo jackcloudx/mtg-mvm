@@ -24,6 +24,42 @@
   --shadow: 0 2px 12px rgba(0,0,0,0.4);
 }
 
+[data-theme="light"] {
+  --bg: #f5f0e8;
+  --bg-card: #ede7d9;
+  --bg-card-hover: #e5ddd0;
+  --border: #cfc5b0;
+  --border-accent: #b8ad9a;
+  --text-primary: #2a2218;
+  --text-secondary: #5a4f3e;
+  --text-muted: #8a7d6a;
+  --gold: #8a6820;
+  --gold-dim: #c9a84c;
+  --red: #9b2335;
+  --green: #1e7a45;
+  --blue-accent: #1a5f8a;
+  --white-accent: #2a2218;
+  --shadow: 0 2px 12px rgba(0,0,0,0.15);
+  --header-bg: #ede7d9;
+  --accordion-body-bg: #ede7d9;
+  --chart-axis: #b8ad9a;
+  --chart-label: #8a7d6a;
+}
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border-accent);
+  color: var(--text-muted);
+  border-radius: 20px;
+  padding: 4px 12px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: var(--font-body);
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.theme-toggle:hover { border-color: var(--gold); color: var(--gold); }
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
@@ -40,7 +76,7 @@ a:hover { color: var(--white-accent); }
 
 /* ---- HEADER ---- */
 .site-header {
-  background: #111;
+  background: var(--header-bg);
   border-bottom: 1px solid var(--border);
   padding: 0 24px;
   position: sticky;
@@ -268,7 +304,7 @@ nav a:hover, nav a.active {
 
 /* ---- SEASON BANNER ---- */
 .season-banner {
-  background: linear-gradient(135deg, #1a1a1a 0%, #111 100%);
+  background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg) 100%);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 28px 32px;
@@ -576,7 +612,7 @@ input:focus, select:focus, textarea:focus {
   border-color: var(--gold-dim);
 }
 textarea { min-height: 120px; resize: vertical; }
-select option { background: #1a1a1a; }
+select option { background: var(--bg-card); }
 .btn-primary {
   background: var(--gold-dim);
   border: 1px solid var(--gold);

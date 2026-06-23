@@ -3,7 +3,11 @@
     "allow": [
       "Bash(python3 -c ' *)",
       "Bash(cp ~/Downloads/history.html ~/Desktop/mtg-mvm/history.html)",
-      "Bash(cp ~/Downloads/history.json ~/Desktop/mtg-mvm/data/history.json)"
+      "Bash(cp ~/Downloads/history.json ~/Desktop/mtg-mvm/data/history.json)",
+      "Bash(cp /mnt/user-data/outputs/mtg-mvm/index.html ~/Desktop/mtg-mvm/index.html)",
+      "Bash(cp /mnt/user-data/outputs/mtg-mvm/history.html ~/Desktop/mtg-mvm/history.html)",
+      "Bash(cp /mnt/user-data/outputs/mtg-mvm/js/theme.js ~/Desktop/mtg-mvm/js/theme.js)",
+      "Bash(ls /mnt/user-data/outputs/mtg-mvm/ 2>/dev/null || echo \"Directory not found\")"
     ]
   }
 }
