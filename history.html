@@ -16,10 +16,10 @@
     .hist-view { display: none; }
     .hist-view.active { display: block; }
 
-    .seasons-layout { display: grid; grid-template-columns: 1fr 280px; gap: 24px; align-items: start; }
+    .seasons-layout { display: grid; grid-template-columns: 1fr 320px; gap: 24px; align-items: start; }
     @media (max-width: 900px) { .seasons-layout { grid-template-columns: 1fr; } }
 
-    .season-index-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+    .season-index-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
     .season-card {
       background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
       padding: 18px; cursor: pointer; transition: border-color 0.15s, transform 0.1s;
@@ -42,12 +42,12 @@
     .adv-stat-table td:first-child { text-align: left; color: var(--text-primary); font-weight: 500; }
     .adv-stat-table tr:hover td { background: rgba(255,255,255,0.02); }
     .hof-rail { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; position: sticky; top: 76px; }
-    .hof-rail-title { font-family: var(--font-head); font-size: 13px; color: var(--gold); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
-    .hof-item { margin-bottom: 14px; }
-    .hof-item:last-child { margin-bottom: 0; }
-    .hof-label { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 3px; }
-    .hof-value { font-size: 14px; font-weight: 700; color: var(--gold); font-family: var(--font-mono); }
-    .hof-detail { font-size: 11px; color: var(--text-secondary); }
+    .hof-rail-title { font-family: var(--font-head); font-size: 11px; color: var(--gold); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .hof-item { display: grid; grid-template-columns: 120px 40px 1fr; align-items: baseline; gap: 0 12px; padding: 5px 0; border-bottom: 1px solid var(--border); }
+    .hof-item:last-child { border-bottom: none; }
+    .hof-label { font-size: 9px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 3px; }
+    .hof-value { font-size: 12px; font-weight: 700; color: var(--gold); font-family: var(--font-mono); }
+    .hof-detail { font-size: 10px; color: var(--text-secondary); }
 
     .season-detail-view { display: none; }
     .season-detail-view.active { display: block; }
@@ -142,9 +142,24 @@
   <div id="histview-alltime" class="hist-view">
     <p style="color:var(--text-muted);font-size:13px;margin-bottom:6px">Every team that has ever competed in The League, Seasons 1–8. Click a column header to sort. Click a team name for their full history.</p>
     <p style="color:var(--text-muted);font-size:11px;margin-bottom:16px" id="at-footnote"></p>
-    <div class="at-toggle">
-      <button id="at-toggle-franchise" class="active" onclick="setAtMode('franchise')">By Franchise</button>
-      <button id="at-toggle-season" onclick="setAtMode('season')">By Season</button>
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:18px">
+      <div class="at-toggle">
+        <button id="at-toggle-franchise" class="active" onclick="setAtMode('franchise')">By Franchise</button>
+        <button id="at-toggle-season" onclick="setAtMode('season')">By Season</button>
+      </div>
+      <div class="at-toggle">
+        <button id="at-toggle-basic" class="active" onclick="setAtStats('basic')">Basic</button>
+        <button id="at-toggle-advanced" onclick="setAtStats('advanced')">Advanced</button>
+      </div>
+    </div>
+    <div id="at-adv-buckets" style="display:none;margin-bottom:14px">
+      <div class="adv-bucket-tabs" id="at-adv-tabs">
+        <button class="adv-bucket-tab active" onclick="setAtAdvBucket('Damage_Profile',this)">Damage Profile</button>
+        <button class="adv-bucket-tab" onclick="setAtAdvBucket('Life_Margin',this)">Life Margin</button>
+        <button class="adv-bucket-tab" onclick="setAtAdvBucket('Pace',this)">Pace</button>
+        <button class="adv-bucket-tab" onclick="setAtAdvBucket('Board_State',this)">Board State</button>
+        <button class="adv-bucket-tab" onclick="setAtAdvBucket('Deployment_Efficiency',this)">Deployment Efficiency</button>
+      </div>
     </div>
     <div class="at-table-wrap">
       <table class="at-table" id="at-table">
@@ -196,11 +211,11 @@ function renderHallOfFameRail() {
     { label: 'Top Rivalry Gap', value: r.most_lopsided_rivalry.value + 'g', team: r.most_lopsided_rivalry.team },
   ];
   container.innerHTML = items.map(i => `
-    <div class="hof-item">
-      <div class="hof-label">${i.label}</div>
-      <div class="hof-value">${i.value}</div>
-      <div class="hof-detail">${i.team}</div>
-    </div>`).join('');
+  <div class="hof-item">
+    <span class="hof-label">${i.label}</span>
+    <span class="hof-value">${i.value}</span>
+    <span class="hof-detail">${i.team}</span>
+  </div>`).join('');
 }
 
 function renderIndex() {
@@ -538,6 +553,24 @@ function toggleAccordion(headerEl) {
   headerEl.nextElementSibling.classList.toggle('expanded');
 }
 
+let atStatsMode = 'basic';
+let atAdvBucket = 'Damage_Profile';
+
+function setAtStats(mode) {
+  atStatsMode = mode;
+  document.getElementById('at-toggle-basic').classList.toggle('active', mode === 'basic');
+  document.getElementById('at-toggle-advanced').classList.toggle('active', mode === 'advanced');
+  document.getElementById('at-adv-buckets').style.display = mode === 'advanced' ? 'block' : 'none';
+  renderAllTime();
+}
+
+function setAtAdvBucket(bucket, btn) {
+  atAdvBucket = bucket;
+  document.querySelectorAll('#at-adv-tabs .adv-bucket-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  renderAllTime();
+}
+
 function setAtMode(mode) {
   atMode = mode;
   document.getElementById('at-toggle-franchise').classList.toggle('active', mode === 'franchise');
@@ -548,7 +581,22 @@ function setAtMode(mode) {
 }
 
 function atSortBy(field) {
-  if (atSortField === field) atSortDir *= -1; else { atSortField = field; atSortDir = -1; }
+  if (atStatsMode === 'advanced') {
+    if (atAdvSortField === field) atAdvSortDir *= -1;
+    else { atAdvSortField = field; atAdvSortDir = field === 'team' ? 1 : -1; }
+  } else {
+    if (atSortField === field) atSortDir *= -1;
+    else { atSortField = field; atSortDir = field === 'team' ? 1 : -1; }
+  }
+  renderAllTime();
+}
+
+let atAdvSortField = null;
+let atAdvSortDir = -1;
+
+function atSortByAdv(field, dec) {
+  if (atAdvSortField === field) atAdvSortDir *= -1;
+  else { atAdvSortField = field; atAdvSortDir = -1; }
   renderAllTime();
 }
 
@@ -557,70 +605,144 @@ function renderAllTime() {
   const tbody = document.getElementById('at-tbody');
   const footnote = document.getElementById('at-footnote');
 
+  const BUCKETS = {
+    'Damage_Profile': { label: 'Damage Profile', cols: [
+      {key:'damage_pm',label:'Dmg +/-',dec:0},{key:'dgt',label:'DG/Turn'},
+      {key:'dtt',label:'DT/Turn'},{key:'ddt',label:'DD/Turn'},
+      {key:'dgg',label:'DG/Game'},{key:'dtg',label:'DT/Game'},{key:'ddg',label:'DD/Game'}] },
+    'Life_Margin': { label: 'Life Margin', cols: [
+      {key:'win_life_delta',label:'Avg Margin-W'},{key:'lose_life_delta',label:'Avg Margin-L'}] },
+    'Pace': { label: 'Pace', cols: [
+      {key:'turn_w',label:'Turns-W'},{key:'turn_l',label:'Turns-L'},
+      {key:'turns_per_game',label:'Turns/Game'},{key:'turn_delta',label:'W/L Delta'}] },
+    'Board_State': { label: 'Board State', cols: [
+      {key:'mana_w',label:'Mana-W'},{key:'mana_l',label:'Mana-L'},{key:'mana_delta',label:'Mana Δ'},
+      {key:'opp_mana_w',label:'OppMana-W'},{key:'opp_mana_l',label:'OppMana-L'},
+      {key:'hand_w',label:'Hand-W'},{key:'hand_l',label:'Hand-L'},{key:'hand_delta',label:'Hand Δ'},
+      {key:'opp_hand_w',label:'OppHand-W'},{key:'opp_hand_l',label:'OppHand-L'}] },
+    'Deployment_Efficiency': { label: 'Deployment Efficiency', cols: [
+      {key:'deploy_w',label:'Deploy-W'},{key:'deploy_l',label:'Deploy-L'},{key:'deploy_delta',label:'Deploy Δ'},
+      {key:'deploy_per_mana_w',label:'Dply/Mana-W'},{key:'deploy_per_mana_l',label:'Dply/Mana-L'},
+      {key:'deploy_per_mana_delta',label:'Dply/Mana Δ'}] },
+  };
+
+  const f = (v, dec=2) => v != null ? Number(v).toFixed(dec) : '<span style="color:var(--text-muted)">—</span>';
+  const bucket = BUCKETS[atAdvBucket];
+
   if (atMode === 'franchise') {
-    footnote.textContent = '* Avg Power Score for teams with only 1 season played is shown for reference but excluded from top rankings (2-season minimum to qualify).';
-    thead.innerHTML = `<tr>
-      <th onclick="atSortBy('team')">Team</th>
-      <th class="num" onclick="atSortBy('seasons_count')">Seasons</th>
-      <th class="num" onclick="atSortBy('total_w')">W</th>
-      <th class="num" onclick="atSortBy('total_l')">L</th>
-      <th class="num" onclick="atSortBy('win_pct')">Win%</th>
-      <th class="num" onclick="atSortBy('championships')">Titles</th>
-      <th class="num" onclick="atSortBy('avg_power_score')">Avg PWR</th>
-    </tr>`;
+    footnote.textContent = atStatsMode === 'basic'
+      ? '* Avg Power Score for teams with only 1 season played is shown for reference but excluded from top rankings (2-season minimum to qualify).'
+      : 'Career averages across all seasons played. Mid-season name changes are treated as separate franchises.';
+
     let teams = Object.values(historyData.all_time_teams).map(t => ({...t, seasons_count: t.seasons_played.length}));
-    teams.sort((a, b) => {
-      if (atSortField === 'avg_power_score') {
-        const aQual = a.seasons_count >= 2 ? 1 : 0, bQual = b.seasons_count >= 2 ? 1 : 0;
-        if (aQual !== bQual) return bQual - aQual;
-      }
-      let av = a[atSortField], bv = b[atSortField];
-      if (typeof av === 'string') return atSortDir * av.localeCompare(bv);
-      return atSortDir * ((av||0) - (bv||0));
-    });
-    tbody.innerHTML = teams.map(t => {
-      const champBadge = t.championships > 0 ? `<span class="champ-badge">${t.championships}x 👑</span>` : '';
-      const qualified = t.seasons_count >= 2;
-      const pwrDisplay = qualified ? `<span class="power-score">${t.avg_power_score.toFixed(1)}</span>` : `<span style="color:var(--text-muted)">${t.avg_power_score.toFixed(1)}<span style="font-size:10px"> *</span></span>`;
-      return `<tr>
-        <td><a href="team-history.html?team=${encodeURIComponent(t.team)}">${t.team}</a>${champBadge}</td>
-        <td class="num">${t.seasons_count}</td>
-        <td class="num">${t.total_w}</td>
-        <td class="num">${t.total_l}</td>
-        <td class="num">${(t.win_pct*100).toFixed(1)}%</td>
-        <td class="num">${t.championships}</td>
-        <td class="num">${pwrDisplay}</td>
+
+    if (atStatsMode === 'basic') {
+      teams.sort((a,b) => { let av=a[atSortField],bv=b[atSortField]; if(typeof av==='string')return atSortDir*av.localeCompare(bv); return atSortDir*((av||0)-(bv||0)); });
+      thead.innerHTML = `<tr>
+        <th onclick="atSortBy('team')">Team</th>
+        <th class="num" onclick="atSortBy('seasons_count')">Seasons</th>
+        <th class="num" onclick="atSortBy('total_w')">W</th>
+        <th class="num" onclick="atSortBy('total_l')">L</th>
+        <th class="num" onclick="atSortBy('win_pct')">Win%</th>
+        <th class="num" onclick="atSortBy('championships')">Titles</th>
+        <th class="num" onclick="atSortBy('avg_power_score')">Avg PWR</th>
       </tr>`;
-    }).join('');
+      tbody.innerHTML = teams.map(t => {
+        const champBadge = t.championships > 0 ? `<span class="champ-badge">${t.championships}x 👑</span>` : '';
+        const qualified = t.seasons_count >= 2;
+        const pwrDisplay = qualified ? `<span class="power-score">${t.avg_power_score.toFixed(1)}</span>` : `<span style="color:var(--text-muted)">${t.avg_power_score.toFixed(1)}<span style="font-size:10px"> *</span></span>`;
+        return `<tr>
+          <td><a href="team-history.html?team=${encodeURIComponent(t.team)}">${t.team}</a>${champBadge}</td>
+          <td class="num">${t.seasons_count}</td>
+          <td class="num">${t.total_w}</td>
+          <td class="num">${t.total_l}</td>
+          <td class="num">${(t.win_pct*100).toFixed(1)}%</td>
+          <td class="num">${t.championships}</td>
+          <td class="num">${pwrDisplay}</td>
+        </tr>`;
+      }).join('');
+    } else {
+      const career = historyData.career_advanced_stats || {};
+      const advFranchiseField = atAdvSortField || bucket.cols[0].key;
+      const isStatField = bucket.cols.some(c => c.key === advFranchiseField);
+      teams.sort((a,b) => {
+        if (!isStatField) {
+          const av = a[advFranchiseField], bv = b[advFranchiseField];
+          if (typeof av === 'string') return atAdvSortDir * av.localeCompare(bv);
+          return atAdvSortDir * ((av||0) - (bv||0));
+        }
+        const av = career[a.team]?.[advFranchiseField];
+        const bv = career[b.team]?.[advFranchiseField];
+        if(av==null&&bv==null)return 0; if(av==null)return 1; if(bv==null)return -1;
+        return atAdvSortDir*(bv-av);
+      });
+      thead.innerHTML = `<tr><th onclick="atSortBy('team')">Team</th><th class="num" onclick="atSortBy('seasons_count')">Seasons</th>${bucket.cols.map(c=>`<th class="num" onclick="atSortByAdv('${c.key}',${c.dec??2})">${c.label}</th>`).join('')}</tr>`;
+      tbody.innerHTML = teams.map(t => {
+        const s = career[t.team] || {};
+        return `<tr>
+          <td><a href="team-history.html?team=${encodeURIComponent(t.team)}">${t.team}</a></td>
+          <td class="num">${t.seasons_count}</td>
+          ${bucket.cols.map(c=>`<td class="num">${f(s[c.key],c.dec??2)}</td>`).join('')}
+        </tr>`;
+      }).join('');
+    }
   } else {
-    footnote.textContent = 'Every individual team-season in league history. Answers: who was the most dominant single-season team ever?';
-    thead.innerHTML = `<tr>
-      <th onclick="atSortBy('team')">Team</th>
-      <th class="num" onclick="atSortBy('season')">Season</th>
-      <th class="num" onclick="atSortBy('seed')">Seed</th>
-      <th class="num" onclick="atSortBy('w')">W</th>
-      <th class="num" onclick="atSortBy('l')">L</th>
-      <th class="num" onclick="atSortBy('win_pct')">Win%</th>
-      <th class="num" onclick="atSortBy('power_score')">PWR</th>
-    </tr>`;
+    footnote.textContent = atStatsMode === 'basic'
+      ? 'Every individual team-season in league history. Answers: who was the most dominant single-season team ever?'
+      : 'Advanced stats for every team-season. Switch buckets to explore different dimensions.';
+
     let rows = [...(historyData.by_season_leaderboard || [])];
-    rows.sort((a, b) => {
-      let av = a[atSortField], bv = b[atSortField];
-      if (typeof av === 'string') return atSortDir * av.localeCompare(bv);
-      return atSortDir * ((av||0) - (bv||0));
-    });
-    tbody.innerHTML = rows.map(r => {
-      const champBadge = r.is_champion ? `<span class="champ-badge">👑</span>` : '';
-      return `<tr>
-        <td><a href="team-history.html?team=${encodeURIComponent(r.team)}">${r.team}</a>${champBadge}</td>
-        <td class="num"><a href="#" onclick="switchHistTab('seasons',document.querySelector('.hist-tab'));showSeason(${r.season});return false;" style="color:var(--text-secondary)">S${r.season}</a></td>
-        <td class="num">${r.seed ?? '—'}</td>
-        <td class="num">${r.w ?? '—'}</td>
-        <td class="num">${r.l ?? '—'}</td>
-        <td class="num">${r.win_pct != null ? (r.win_pct*100).toFixed(1)+'%' : '—'}</td>
-        <td class="num"><span class="power-score">${(r.power_score ?? 0).toFixed(1)}</span></td>
+
+    if (atStatsMode === 'basic') {
+      rows.sort((a,b) => { let av=a[atSortField],bv=b[atSortField]; if(typeof av==='string')return atSortDir*av.localeCompare(bv); return atSortDir*((av||0)-(bv||0)); });
+      thead.innerHTML = `<tr>
+        <th onclick="atSortBy('team')">Team</th>
+        <th class="num" onclick="atSortBy('season')">Season</th>
+        <th class="num" onclick="atSortBy('seed')">Seed</th>
+        <th class="num" onclick="atSortBy('w')">W</th>
+        <th class="num" onclick="atSortBy('l')">L</th>
+        <th class="num" onclick="atSortBy('win_pct')">Win%</th>
+        <th class="num" onclick="atSortBy('power_score')">PWR</th>
       </tr>`;
-    }).join('');
+      tbody.innerHTML = rows.map(r => {
+        const champBadge = r.is_champion ? `<span class="champ-badge">👑</span>` : '';
+        return `<tr>
+          <td><a href="team-history.html?team=${encodeURIComponent(r.team)}">${r.team}</a>${champBadge}</td>
+          <td class="num"><a href="#" onclick="switchHistTab('seasons',document.querySelector('.hist-tab'));showSeason(${r.season});return false;" style="color:var(--text-secondary)">S${r.season}</a></td>
+          <td class="num">${r.seed??'—'}</td>
+          <td class="num">${r.w??'—'}</td>
+          <td class="num">${r.l??'—'}</td>
+          <td class="num">${r.win_pct!=null?(r.win_pct*100).toFixed(1)+'%':'—'}</td>
+          <td class="num"><span class="power-score">${(r.power_score??0).toFixed(1)}</span></td>
+        </tr>`;
+      }).join('');
+    } else {
+      const advSeasonField = atAdvSortField || bucket.cols[0].key;
+      const isStatFieldS = bucket.cols.some(c => c.key === advSeasonField);
+      rows.sort((a,b) => {
+        if (!isStatFieldS) {
+          const av = a[advSeasonField], bv = b[advSeasonField];
+          if (typeof av === 'string') return atAdvSortDir * av.localeCompare(bv);
+          return atAdvSortDir * ((av||0) - (bv||0));
+        }
+        const as = historyData.seasons[String(a.season)]?.advanced_stats?.[a.team];
+        const bs = historyData.seasons[String(b.season)]?.advanced_stats?.[b.team];
+        const av = as?.[advSeasonField], bv = bs?.[advSeasonField];
+        if(av==null&&bv==null)return 0; if(av==null)return 1; if(bv==null)return -1;
+        return atAdvSortDir*(bv-av);
+      });
+      thead.innerHTML = `<tr><th onclick="atSortBy('team')">Team</th><th class="num" onclick="atSortBy('season')">Season</th><th class="num" onclick="atSortBy('seed')">Seed</th>${bucket.cols.map(c=>`<th class="num" onclick="atSortByAdv('${c.key}',${c.dec??2})">${c.label}</th>`).join('')}</tr>`;
+      tbody.innerHTML = rows.map(r => {
+        const s = historyData.seasons[String(r.season)]?.advanced_stats?.[r.team] || {};
+        const champBadge = r.is_champion ? `<span class="champ-badge">👑</span>` : '';
+        return `<tr>
+          <td><a href="team-history.html?team=${encodeURIComponent(r.team)}">${r.team}</a>${champBadge}</td>
+          <td class="num">S${r.season}</td>
+          <td class="num">${r.seed??'—'}</td>
+          ${bucket.cols.map(c=>`<td class="num">${f(s[c.key],c.dec??2)}</td>`).join('')}
+        </tr>`;
+      }).join('');
+    }
   }
 }
 
