@@ -201,6 +201,24 @@ function renderResultsFeed() {
       </div>
       ${g.mvp ? `<div class="result-mvp">MVP: <span>${g.mvp}</span></div>` : ''}
       ${g.notes ? `<div class="result-notes">${g.notes}</div><div class="expand-hint">Click to expand</div>` : ''}
+      ${(() => {
+        const seriesGames = seasonData.schedule.filter(s =>
+          (s.winner_id === g.winner_id && s.loser_id === g.loser_id) ||
+          (s.winner_id === g.loser_id && s.loser_id === g.winner_id) ||
+          (s.home_id === g.winner_id && s.away_id === g.loser_id) ||
+          (s.home_id === g.loser_id && s.away_id === g.winner_id)
+        );
+        const played = seriesGames.filter(s => s.played);
+        if (played.length === 0) return '';
+        const wWins = played.filter(s => s.winner_id === g.winner_id).length;
+        const lWins = played.filter(s => s.winner_id === g.loser_id).length;
+        const label = played.length === 1
+          ? (wWins === 1 ? `${winTeam.name} leads series 1-0` : `${loseTeam.name} leads series 1-0`)
+          : wWins === 2 ? `${winTeam.name} wins series 2-0`
+          : lWins === 2 ? `${loseTeam.name} wins series 2-0`
+          : 'Series tied 1-1';
+        return `<div style="font-size:10px;color:var(--gold-dim);margin-top:4px">↻ ${label}</div>`;
+      })()}
     </div>`;
   }).join('');
 }
@@ -239,11 +257,29 @@ function renderUpcomingThisWeek() {
     const h2hStr = h2h
       ? `<div style="font-size:10px;color:var(--text-muted);margin-top:1px">All-time: ${h2h.aWins}-${h2h.bWins}</div>`
       : '';
+
+    // Series record: find both scheduled games between this pair this season
+    const seriesGames = seasonData.schedule.filter(s =>
+      (s.home_id === g.home_id && s.away_id === g.away_id) ||
+      (s.home_id === g.away_id && s.away_id === g.home_id)
+    );
+    const playedSeries = seriesGames.filter(s => s.played);
+    let seriesStr = '';
+    if (playedSeries.length > 0) {
+      const homeWins = playedSeries.filter(s => s.winner_id === g.home_id).length;
+      const awayWins = playedSeries.filter(s => s.winner_id === g.away_id).length;
+      const label = playedSeries.length === 2
+        ? (homeWins === 2 ? `${home.name} leads series 2-0` : awayWins === 2 ? `${away.name} leads series 2-0` : 'Series tied 1-1')
+        : (homeWins === 1 ? `${home.name} leads series 1-0` : `${away.name} leads series 1-0`);
+      seriesStr = `<div style="font-size:10px;color:var(--gold-dim);margin-top:1px">↻ ${label}</div>`;
+    }
+
     return `<div style="padding:7px 0;border-bottom:1px solid var(--border)">
       <div style="display:flex;justify-content:space-between;font-size:13px">
         <span>${home.name} <span style="color:var(--text-muted)">vs</span> ${away.name}</span>
       </div>
       ${h2hStr}
+      ${seriesStr}
     </div>`;
   }).join('');
 }
