@@ -305,11 +305,23 @@ function showSeason(seasonNum) {
   }
 
   const regGames = [...season.games].filter(g => g.match_type === 'Regular Season').sort((a,b) => (a.week||0) - (b.week||0));
+  const commentary = season.game_commentary || [];
   const regGameRows = regGames.map(g => {
     const scoreStr = (g.winner_score != null && g.loser_score != null) ? `${g.winner_score} – ${g.loser_score}` : 'N/A';
     const mvpStr = g.mvp ? `<span style="color:var(--text-muted);margin-left:10px;font-size:11px">${g.mvp}</span>` : '';
     const divStr = g.division ? `<span style="color:var(--text-muted);font-size:11px">${g.division}</span>` : '';
-    return `<div class="playoff-game-row"><span class="pgr-teams">Wk ${g.week ?? '?'} · ${g.winner} def. ${g.loser} ${divStr}${mvpStr}</span><span class="pgr-score">${scoreStr}</span></div>`;
+    const gameNote = commentary.find(c => c.week === g.week && c.winner === g.winner && c.loser === g.loser);
+    const noteHtml = gameNote
+      ? `<div style="font-size:12px;color:var(--text-secondary);line-height:1.6;padding:6px 0 4px;border-top:1px solid var(--border);margin-top:4px">${gameNote.commentary}</div>`
+      : '';
+    const rowId = `game-${season.season}-${g.week}-${(g.winner||'').replace(/\s+/g,'-')}`;
+    return `<div style="padding:7px 0;border-bottom:1px solid var(--border)">
+      <div style="display:flex;justify-content:space-between;cursor:${gameNote?'pointer':'default'}" ${gameNote?`onclick="document.getElementById('${rowId}').style.display=document.getElementById('${rowId}').style.display==='none'?'block':'none'"`:''}>
+        <span style="font-size:13px;color:var(--text-primary)">Wk ${g.week ?? '?'} · <strong>${g.winner}</strong> def. ${g.loser} ${divStr}${mvpStr}</span>
+        <span style="font-family:var(--font-mono);color:var(--gold);font-size:13px">${scoreStr}${gameNote?' <span style="color:var(--text-muted);font-size:10px">▾</span>':''}</span>
+      </div>
+      <div id="${rowId}" style="display:none">${noteHtml}</div>
+    </div>`;
   }).join('');
 
   const html = `
