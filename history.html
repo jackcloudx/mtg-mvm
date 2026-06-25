@@ -213,12 +213,18 @@ function renderHallOfFameRail() {
   container.innerHTML = items.map((i, idx) => {
     const clickAttr = i.action ? `onclick="${i.action}"` : '';
     const dataAttr = i.link ? `data-link='${JSON.stringify(i.link).replace(/'/g, "&apos;")}'` : '';
-    const indicator = (i.action || i.link) ? `<span style="font-size:9px;color:var(--gold-dim);margin-left:4px">↗</span>` : '';
+    const indicator = (i.action || i.link) ? `<span style="font-size:9px;color:var(--gold-dim);margin-left:2px">↗</span>` : '';
     const cursor = (i.action || i.link) ? 'cursor:pointer' : '';
+    const parts = i.team ? i.team.split(' · ') : [''];
+    const teamName = parts[0];
+    const teamSub = parts[1] || '';
     return `<div class="hof-item" ${dataAttr} ${clickAttr} style="${cursor}">
       <span class="hof-label">${i.label}</span>
       <span class="hof-value">${i.value}${indicator}</span>
-      <span class="hof-detail">${i.team}</span>
+      <span class="hof-detail">
+        ${teamName}
+        ${teamSub ? `<span style="display:block;font-size:9px;color:var(--text-muted);margin-top:1px">${teamSub}</span>` : ''}
+      </span>
     </div>`;
   }).join('');
 }
@@ -375,7 +381,7 @@ function showSeason(seasonNum) {
   const regGameRows = regGames.map(g => {
     const scoreStr = (g.winner_score != null && g.loser_score != null) ? `${g.winner_score} – ${g.loser_score}` : 'N/A';
     const mvpStr = g.mvp ? `<span style="color:var(--text-muted);margin-left:10px;font-size:11px">${g.mvp}</span>` : '';
-    const divStr = g.division ? `<span style="color:var(--text-muted);font-size:11px">${g.division}</span>` : '';
+    const divStr = '';
     const gameNote = commentary.find(c => c.week === g.week && c.winner === g.winner && c.loser === g.loser);
     const noteHtml = gameNote
       ? `<div style="font-size:12px;color:var(--text-secondary);line-height:1.6;padding:6px 0 4px;border-top:1px solid var(--border);margin-top:4px">${gameNote.commentary}</div>`
@@ -384,7 +390,7 @@ function showSeason(seasonNum) {
     const noteRowId = rowId + '-note';
     return `<div id="${rowId}" style="padding:7px 0;border-bottom:1px solid var(--border)">
       <div style="display:flex;justify-content:space-between;cursor:${gameNote?'pointer':'default'}" ${gameNote?`onclick="document.getElementById('${noteRowId}').style.display=document.getElementById('${noteRowId}').style.display==='none'?'block':'none'"`:''}>
-        <span style="font-size:13px;color:var(--text-primary)">Wk ${g.week ?? '?'} · <strong>${g.winner}</strong> def. ${g.loser} ${divStr}${mvpStr}</span>
+        <span style="font-size:13px"><span style="color:var(--gold)">${g.winner}</span> <span style="color:var(--text-muted)">def.</span> <span style="color:var(--text-muted)">${g.loser}</span>${mvpStr}</span>
         <span style="font-family:var(--font-mono);color:var(--gold);font-size:13px">${scoreStr}${gameNote?' <span style="color:var(--text-muted);font-size:10px">▾</span>':''}</span>
       </div>
       <div id="${noteRowId}" style="display:none">${noteHtml}</div>
