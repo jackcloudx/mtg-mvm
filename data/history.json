@@ -10628,16 +10628,6 @@
         },
         {
           "season": 4,
-          "week": 20,
-          "game": null,
-          "match_type": "Reg. Season",
-          "winner": "No Lands For You",
-          "loser": "Darwin's Doom",
-          "commentary": "Big game with implications for both Teams.\n\nNLFY -- needs this game to keep hold of the 4-seed. They have only a 1-game lead over Crusader II and a 2-game lead over Team 10. Team 10 beat them twice already, and they've split with the Crusaders.\n\nDarwin -- has a 2-game lead over both the Fault and the Slivers, thanks to the recent loss at the hands of the revamped Thrulls (thanks Thrulls!). A win puts them 2.5 games up, with a Week 21 game against Bad Ass Fault.",
-          "verified": true
-        },
-        {
-          "season": 4,
           "week": 21,
           "game": null,
           "match_type": "Reg. Season",
@@ -10921,7 +10911,7 @@
           "division": "Premier",
           "week": 1.0,
           "winner": "Frozen Stiffs",
-          "loser": "Murphy'S Law",
+          "loser": "Murphy's Law",
           "winner_score": 20.0,
           "loser_score": 0.0,
           "winner_turns": 9.0,
@@ -10950,7 +10940,7 @@
           "match_type": "Regular Season",
           "division": "Premier",
           "week": 2.0,
-          "winner": "Murphy'S Law",
+          "winner": "Murphy's Law",
           "loser": "The Attritionists",
           "winner_score": 6.0,
           "loser_score": -4.0,
@@ -11026,7 +11016,7 @@
           "division": "Premier",
           "week": 3.0,
           "winner": "Bad Ass Fault",
-          "loser": "Murphy'S Law",
+          "loser": "Murphy's Law",
           "winner_score": 20.0,
           "loser_score": -4.0,
           "winner_turns": 10.0,
@@ -11146,7 +11136,7 @@
           "division": "Premier",
           "week": 4.0,
           "winner": "Swamp Things",
-          "loser": "Murphy'S Law",
+          "loser": "Murphy's Law",
           "winner_score": 20.0,
           "loser_score": 0.0,
           "winner_turns": 5.0,
@@ -11190,7 +11180,7 @@
           "match_type": "Regular Season",
           "division": "Premier",
           "week": 5.0,
-          "winner": "Murphy'S Law",
+          "winner": "Murphy's Law",
           "loser": "No Lands For You",
           "winner_score": 14.0,
           "loser_score": -2.0,
@@ -11265,7 +11255,7 @@
           "match_type": "Regular Season",
           "division": "Premier",
           "week": 6.0,
-          "winner": "Murphy'S Law",
+          "winner": "Murphy's Law",
           "loser": "Smashed Potatoes",
           "winner_score": 6.0,
           "loser_score": -40.0,
@@ -11386,7 +11376,7 @@
           "division": "Premier",
           "week": 7.0,
           "winner": "Sliver Lining",
-          "loser": "Murphy'S Law",
+          "loser": "Murphy's Law",
           "winner_score": 14.0,
           "loser_score": 7.0,
           "winner_turns": 5.0,
@@ -11401,7 +11391,7 @@
           "division": "Premier",
           "week": 8.0,
           "winner": "Darwin's Doom",
-          "loser": "Murphy'S Law",
+          "loser": "Murphy's Law",
           "winner_score": 20.0,
           "loser_score": -1.0,
           "winner_turns": 5.0,
@@ -11595,7 +11585,7 @@
           "match_type": "Regular Season",
           "division": "Premier",
           "week": 10.0,
-          "winner": "Murphy'S Law",
+          "winner": "Murphy's Law",
           "loser": "Icy Hot",
           "winner_score": 18.0,
           "loser_score": -4.0,
@@ -11656,7 +11646,7 @@
           "division": "Premier",
           "week": 11.0,
           "winner": "Fire Drilled",
-          "loser": "Murphy'S Law",
+          "loser": "Murphy's Law",
           "winner_score": 6.0,
           "loser_score": -1.0,
           "winner_turns": 10.0,
@@ -11836,7 +11826,7 @@
           "division": "Premier",
           "week": 13.0,
           "winner": "Sliver Lining",
-          "loser": "Murphy'S Law",
+          "loser": "Murphy's Law",
           "winner_score": 8.0,
           "loser_score": 2.0,
           "winner_turns": 6.0,
@@ -11880,7 +11870,7 @@
           "match_type": "Regular Season",
           "division": "Premier",
           "week": 14.0,
-          "winner": "Murphy'S Law",
+          "winner": "Murphy's Law",
           "loser": "Darwin's Doom",
           "winner_score": 15.0,
           "loser_score": -5.0,
@@ -11925,7 +11915,7 @@
           "match_type": "Regular Season",
           "division": "Premier",
           "week": 15.0,
-          "winner": "Murphy'S Law",
+          "winner": "Murphy's Law",
           "loser": "The Attritionists",
           "winner_score": 5.0,
           "loser_score": -2.0,
@@ -12061,7 +12051,7 @@
           "division": "Premier",
           "week": 16.0,
           "winner": "Bad Ass Fault",
-          "loser": "Murphy'S Law",
+          "loser": "Murphy's Law",
           "winner_score": 17.0,
           "loser_score": -2.0,
           "winner_turns": 11.0,
@@ -12091,7 +12081,7 @@
           "division": "Premier",
           "week": 17.0,
           "winner": "No Lands For You",
-          "loser": "Murphy'S Law",
+          "loser": "Murphy's Law",
           "winner_score": 10.0,
           "loser_score": -5.0,
           "winner_turns": 15.0,
@@ -12151,7 +12141,7 @@
           "division": "Premier",
           "week": 18.0,
           "winner": "Smashed Potatoes",
-          "loser": "Murphy'S Law",
+          "loser": "Murphy's Law",
           "winner_score": 21.0,
           "loser_score": -2.0,
           "winner_turns": 16.0,
@@ -12241,7 +12231,7 @@
           "division": "Premier",
           "week": 19.0,
           "winner": "Fire Drilled",
-          "loser": "Murphy'S Law",
+          "loser": "Murphy's Law",
           "winner_score": 16.0,
           "loser_score": -2.0,
           "winner_turns": 6.0,
@@ -12316,7 +12306,7 @@
           "division": "Premier",
           "week": 20.0,
           "winner": "Swamp Things",
-          "loser": "Murphy'S Law",
+          "loser": "Murphy's Law",
           "winner_score": 11.0,
           "loser_score": -14.0,
           "winner_turns": 5.0,
@@ -12405,7 +12395,7 @@
           "match_type": "Regular Season",
           "division": "Premier",
           "week": 21.0,
-          "winner": "Murphy'S Law",
+          "winner": "Murphy's Law",
           "loser": "Frozen Stiffs",
           "winner_score": 14.0,
           "loser_score": -4.0,
@@ -12480,7 +12470,7 @@
           "match_type": "Regular Season",
           "division": "Premier",
           "week": 22.0,
-          "winner": "Murphy'S Law",
+          "winner": "Murphy's Law",
           "loser": "Icy Hot",
           "winner_score": 17.0,
           "loser_score": -4.0,
@@ -12690,7 +12680,7 @@
           "match_type": "Playoffs",
           "division": "Premier",
           "week": 3.0,
-          "winner": "Murphy'S Law",
+          "winner": "Murphy's Law",
           "loser": "Swamp Things",
           "winner_score": 16.0,
           "loser_score": -2.0,
@@ -12750,7 +12740,7 @@
           "match_type": "Playoffs",
           "division": "Premier",
           "week": 3.0,
-          "winner": "Murphy'S Law",
+          "winner": "Murphy's Law",
           "loser": "Swamp Things",
           "winner_score": 16.0,
           "loser_score": -1.0,
@@ -12811,7 +12801,7 @@
           "division": "Premier",
           "week": 3.0,
           "winner": "Swamp Things",
-          "loser": "Murphy'S Law",
+          "loser": "Murphy's Law",
           "winner_score": 17.0,
           "loser_score": -22.0,
           "winner_turns": 6.0,
@@ -12840,7 +12830,7 @@
           "match_type": "Playoffs",
           "division": "Premier",
           "week": 3.0,
-          "winner": "Murphy'S Law",
+          "winner": "Murphy's Law",
           "loser": "Swamp Things",
           "winner_score": 13.0,
           "loser_score": -16.0,
@@ -12871,7 +12861,7 @@
           "division": "Premier",
           "week": 4.0,
           "winner": "No Lands For You",
-          "loser": "Murphy'S Law",
+          "loser": "Murphy's Law",
           "winner_score": 10.0,
           "loser_score": -1.0,
           "winner_turns": 11.0,
@@ -12900,7 +12890,7 @@
           "match_type": "Playoffs",
           "division": "Premier",
           "week": 4.0,
-          "winner": "Murphy'S Law",
+          "winner": "Murphy's Law",
           "loser": "No Lands For You",
           "winner_score": 11.0,
           "loser_score": -11.0,
@@ -12931,7 +12921,7 @@
           "division": "Premier",
           "week": 4.0,
           "winner": "No Lands For You",
-          "loser": "Murphy'S Law",
+          "loser": "Murphy's Law",
           "winner_score": 3.0,
           "loser_score": -7.0,
           "winner_turns": 11.0,
@@ -12961,7 +12951,7 @@
           "division": "Premier",
           "week": 4.0,
           "winner": "No Lands For You",
-          "loser": "Murphy'S Law",
+          "loser": "Murphy's Law",
           "winner_score": 11.0,
           "loser_score": -3.0,
           "winner_turns": 12.0,
@@ -12991,7 +12981,7 @@
           "division": "Premier",
           "week": 4.0,
           "winner": "No Lands For You",
-          "loser": "Murphy'S Law",
+          "loser": "Murphy's Law",
           "winner_score": 22.0,
           "loser_score": -2.0,
           "winner_turns": 7.0,
@@ -14506,16 +14496,6 @@
           "match_type": "Playoffs",
           "winner": "Frozen Stiffs",
           "loser": "The Attritionists",
-          "commentary": "Stiffs. Pheeww. On the brink of extermination, they elude another round of Jinxed Idol, draw a Storm Seeker and deal a game-ending 8-damage on the next draw for the Atts. Winter Orb was huge in this one, as was Mirri constantly knocking back the Att creature defense. Ugly win.\n\nAtts. Not sure if this was played correctly, but Winter Orb sapped them of momentum. Hecatomb was ready but was somewhat nullified by the Orb. Probably should've played it anyway to kill off Mirri who dealt most of the damage. Good to know for Game 3.",
-          "verified": true
-        },
-        {
-          "season": 5,
-          "week": 1,
-          "game": 3,
-          "match_type": "Playoffs",
-          "winner": "Frozen Stiffs",
-          "loser": "The Attritionists",
           "commentary": "Stiffs. Wow, another late-game victory for the Stiffs! Their formula for the Atts involved more Mirri and more Storm Seekers combined with game-MVP Orb. Most other cards for them were just noise outside of Tutor's. Two Storm Seeker's were used in this one, with one being used twice (Regrowth) and another being summoned via Demonic Tutor. Mirri wore them down the rest of the way. With this win, the Stiffs advance to the next round!!\n\nAttritionists. Well, this loss marks the end of their inaugural season. They'll be back, as there were a few good pieces that seem foundational for a deck but man do they need help. The defensive play is fine, but they're all over the place. They need to double-down on one or two resources to go after, sharpen the focus and add a bit more offense as well. Their only methods of attack are via Idol's or Hecatomb and the latter is hard to get into play. Changes to come, but a fun deck when in full swing.",
           "verified": true
         },
@@ -15796,67 +15776,7 @@
           "match_type": "Reg. Season",
           "winner": "Darwin's Doom",
           "loser": "The Attritionists",
-          "commentary": "Darwin. Big game - a win gives them a chance at evading the qualifier bracket in the playoffs. \n\nAttritionists. Doomed to the 11th seed at this point, but can take some solace in hurting Darwin's chances!",
-          "verified": true
-        },
-        {
-          "season": 5,
-          "week": 21,
-          "game": null,
-          "match_type": "Reg. Season",
-          "winner": "Darwin's Doom",
-          "loser": "The Attritionists",
           "commentary": "Doom. Win despite having only two lands all game which is HIGHLY unusual. Likely lose to any other team not named The Attritionists with that kind of meager output in the mana department. Fortunately they drew an early Sol Ring who took home MVP honors in this game. Win could be crucial for their playoff position and OH YEAH i realize they only have 17 lands in this deck...?\n\nAttritionists. Still not sure how to play with this team, though I can feel potential. Need to keep at it til the synergies start to appear. This game had options to play Jinxed Idol or a Hecatomb or a Death Pits of Rath or Bottomless Pit/The Rack. Hard to know what the goal should be each game to dictate card play..",
-          "verified": true
-        },
-        {
-          "season": 5,
-          "week": 22,
-          "game": null,
-          "match_type": "Reg. Season",
-          "winner": "Frozen Stiffs",
-          "loser": "Swamp Things",
-          "commentary": "Prediction: Things get revenge and win a rough game in which they barely outlast the stall tactics of the Stiffs.",
-          "verified": true
-        },
-        {
-          "season": 5,
-          "week": 22,
-          "game": null,
-          "match_type": "Reg. Season",
-          "winner": "Murphy's Law",
-          "loser": "Icy Hot",
-          "commentary": "Prediction: The Law take this one home as their fast creatures go unchallenged by a near-creature-less team.",
-          "verified": true
-        },
-        {
-          "season": 5,
-          "week": 22,
-          "game": null,
-          "match_type": "Reg. Season",
-          "winner": "Bad Ass Fault",
-          "loser": "The Attritionists",
-          "commentary": "Prediction: The Fault win this one in under 7 turns and nail down the #2 seed.",
-          "verified": true
-        },
-        {
-          "season": 5,
-          "week": 22,
-          "game": null,
-          "match_type": "Reg. Season",
-          "winner": "Bad Ass Fault",
-          "loser": "The Attritionists",
-          "commentary": "Fault. Destroy six lands to nullify any offense/defense from The Attritionists. That said, this game was WAY too close considering the disparity of resources. The Fault had no other means of offense, which is fine, but enabled a closer game than there should have been.\n\nAttritionists. Stayed competitive despite the loss of lands. Some C-Kill would have helped.",
-          "verified": true
-        },
-        {
-          "season": 5,
-          "week": 22,
-          "game": null,
-          "match_type": "Reg. Season",
-          "winner": "Sliver Lining",
-          "loser": "Smashed Potatoes",
-          "commentary": "Slivers. Got a great win to close out the season. The recipe was one Muscle, one Clot, one Heart and one Winged Sliver pumped by a Coat of Arms. Twenty damage hit on the 5th turn and there was nothing the Potatoes could do about it.\n\nPotatoes. Only a Wrath of God could've helped them in this game. Or, destroying the City of Brass earlier (which was responsible for all but one card on the battlefield. So much for their hopes of a top-2 seed.",
           "verified": true
         },
         {
@@ -15884,9 +15804,19 @@
           "week": 22,
           "game": null,
           "match_type": "Reg. Season",
-          "winner": "Fire Drilled",
-          "loser": "No Lands For You",
-          "commentary": "Prediction: Drillers win this game in 11-turns as they summon any/all direct damage with a small number of lands. The Black Vise strategy for NLFY fizzles and their creatures don't make it onto the battlefield in time.",
+          "winner": "Bad Ass Fault",
+          "loser": "The Attritionists",
+          "commentary": "Fault. Destroy six lands to nullify any offense/defense from The Attritionists. That said, this game was WAY too close considering the disparity of resources. The Fault had no other means of offense, which is fine, but enabled a closer game than there should have been.\n\nAttritionists. Stayed competitive despite the loss of lands. Some C-Kill would have helped.",
+          "verified": true
+        },
+        {
+          "season": 5,
+          "week": 22,
+          "game": null,
+          "match_type": "Reg. Season",
+          "winner": "Sliver Lining",
+          "loser": "Smashed Potatoes",
+          "commentary": "Slivers. Got a great win to close out the season. The recipe was one Muscle, one Clot, one Heart and one Winged Sliver pumped by a Coat of Arms. Twenty damage hit on the 5th turn and there was nothing the Potatoes could do about it.\n\nPotatoes. Only a Wrath of God could've helped them in this game. Or, destroying the City of Brass earlier (which was responsible for all but one card on the battlefield. So much for their hopes of a top-2 seed.",
           "verified": true
         },
         {
@@ -15897,16 +15827,6 @@
           "winner": "Fire Drilled",
           "loser": "No Lands For You",
           "commentary": "Drillers. WHAT A WILD AND UNCONVENTIONAL GAME!! The Drillers attack came from two Lightning Bolt's, a Shock, a Thunderbolt and a 6pt Fireball to win. Favor shifted back and forth as creatures were killed in the heat of battle on both sides even the rarely seen Two-Headed Giant of Foriys!! Great win to put FD in position to grab the 5-seed.\n\nNLFY. Man, this one just got away. They had the momentum for most of the game, but lost 1-2-3 Sengir Vampire's and a Black Knight nullifying their offense. Their M-Kill efforts were tame in this one, which gave FD some life. Tough loss that slides No Landia down into the #6-seed after dropping the tiebreaker by 4 points. Absurd.",
-          "verified": true
-        },
-        {
-          "season": 5,
-          "week": 22,
-          "game": null,
-          "match_type": "Reg. Season",
-          "winner": "Sliver Lining",
-          "loser": "Smashed Potatoes",
-          "commentary": "Prediction: Smashed Potatoes knock out the Slivers with timely C-Kill and M-Kill cards, and finish with the third seed.",
           "verified": true
         }
       ]
@@ -21452,21 +21372,11 @@
         {
           "season": 6,
           "week": 1,
-          "game": 1,
-          "match_type": "Reg. Season",
-          "winner": "Swamp Things",
-          "loser": "No Lands For You",
-          "commentary": "Things. Quickly throw a STDevil and a Hidden Horror onto the field and grind away the NLFY life total. Had two lands destroyed which kept the rest of their hand in limbo.\n\nNLFY. Only drew two mana in this game and had little hope for a W as a result. Not the best way to start their season - hopefully an anomalous outing.",
-          "verified": true
-        },
-        {
-          "season": 6,
-          "week": 1,
           "game": 2,
           "match_type": "Reg. Season",
           "winner": "Sliver Lining",
           "loser": "The Anti-Dopes",
-          "commentary": "Slivers. A game they should've won given their offensive pressure. A great deal of their own damage - maybe half - was due to their life tax on mana use. Might be something to keep an eye on.\n\nDopes. An improvement, I think, but they lacked any answer for the creature-heavy team. Illusionary Forces was fun, though! Backfire may not be a good card.",
+          "commentary": "Stormy. Win via creature base - a new tactic for them. A Ball Lightning for 12 damage, thanks to Furnace of Rath, and then a Thunderbolt w/ Fork ended things for another 12 damage. Solid.\n\nAnti. It's early :) no idea what their north star is yet but I like the construct of stealing any/everything in play - just don't have enough defense in yet. Hand full of 4-5CC cards kept them out of the game. Stasis sat there too - unsure how to use it yet.",
           "verified": true
         },
         {
@@ -21492,31 +21402,11 @@
         {
           "season": 6,
           "week": 1,
-          "game": 2,
-          "match_type": "Reg. Season",
-          "winner": "Sliver Lining",
-          "loser": "The Anti-Dopes",
-          "commentary": "Stormy. Win via creature base - a new tactic for them. A Ball Lightning for 12 damage, thanks to Furnace of Rath, and then a Thunderbolt w/ Fork ended things for another 12 damage. Solid.\n\nAnti. It's early :) no idea what their north star is yet but I like the construct of stealing any/everything in play - just don't have enough defense in yet. Hand full of 4-5CC cards kept them out of the game. Stasis sat there too - unsure how to use it yet.",
-          "verified": true
-        },
-        {
-          "season": 6,
-          "week": 1,
           "game": 3,
           "match_type": "Playoffs",
           "winner": "Swamp Things",
           "loser": "Icy Hot",
           "commentary": "Things. ...phew. This was too close for comfort, but they pulled it out thanks to a Necromancy-into-Polar Kraken. They fended off a Boomerang and then blasted the Hot the next turn. Game over. Series over. \n\nHot. Wow, closer than anyone would've thought. They were right in this one thanks to the same Control Magic duo that won Game 1. Ran out of tricks though and meet their seasons' end as a result.",
-          "verified": true
-        },
-        {
-          "season": 6,
-          "week": 1,
-          "game": 3,
-          "match_type": "Reg. Season",
-          "winner": "Glop Artists",
-          "loser": "Smashed Potatoes",
-          "commentary": "Things. Quickly throw a STDevil and a Hidden Horror onto the field and grind away the NLFY life total. Had two lands destroyed which kept the rest of their hand in limbo.\n\nNLFY. Only drew two mana in this game and had little hope for a W as a result. Not the best way to start their season - hopefully an anomalous outing.",
           "verified": true
         },
         {
@@ -21542,41 +21432,11 @@
         {
           "season": 6,
           "week": 1,
-          "game": 4,
-          "match_type": "Reg. Season",
-          "winner": "Dark N Stormy",
-          "loser": "Darwin's Doom",
-          "commentary": "Fault. Three M-Kill cards into Megrim + Hymn TT into another Megrim and Hypnotic Spector into Wheel of Fortune. Nice surgical win here.\n\n10. Would've been interesting to see what they could've done with the 4 lands plus Felwar Stone but they weren't given the chance. Will take some time to figure out how to play with this group.",
-          "verified": true
-        },
-        {
-          "season": 6,
-          "week": 1,
           "game": 5,
           "match_type": "Reg. Season",
           "winner": "Big Gloves",
           "loser": "Icy Hot",
           "commentary": "Gloves. So fun!! The synergy on this team was awesome. They played one creature all game - Shocker - and he recorded not one point of damage. Black Vise took the first load, then a second Underworld Dreams paired exceptionally well with a Winds of Change and Teferi's Puzzle Box to knock out the Artists. What a fun team.\n\nArtists. Had a tough time getting going with all the hand shuffling. Tough opponent for them because their mana manipulation didn't help much.",
-          "verified": true
-        },
-        {
-          "season": 6,
-          "week": 1,
-          "game": 5,
-          "match_type": "Reg. Season",
-          "winner": "Big Gloves",
-          "loser": "Icy Hot",
-          "commentary": "Gloves. Great win, they were in control the entire time. The progression was smooth and it was incredibly fun playing with them \ud83d\ude09\n\nHot. Looked all over the place here. The inclusion of Dracoplasm and others may have strayed too far from their core identity. Need more bounce in here!",
-          "verified": true
-        },
-        {
-          "season": 6,
-          "week": 1,
-          "game": 6,
-          "match_type": "Reg. Season",
-          "winner": "Bad Ass Fault",
-          "loser": "Team 11",
-          "commentary": "Fault. Three M-Kill cards into Megrim + Hymn TT into another Megrim and Hypnotic Spector into Wheel of Fortune. Nice surgical win here.\n\n10. Would've been interesting to see what they could've done with the 4 lands plus Felwar Stone but they weren't given the chance. Will take some time to figure out how to play with this group.",
           "verified": true
         },
         {
@@ -21692,16 +21552,6 @@
         {
           "season": 6,
           "week": 2,
-          "game": 7,
-          "match_type": "Reg. Season",
-          "winner": "Swamp Things",
-          "loser": "Big Gloves",
-          "commentary": "Hot. Sat back and waited - just like at the end of S5. Propaganda and Mana Leak helped hugely, and Maze of Ith was valuable too. Rathi came in late to clean up the rest. \n\nGlop. Lotta wheel spinning for them. Ton of mana, but no offense. They were sitting and waiting too but outside of a Storm Seeker they had no way to deal damage. We'll see if that continues to be a problem.",
-          "verified": true
-        },
-        {
-          "season": 6,
-          "week": 2,
           "game": 8,
           "match_type": "Reg. Season",
           "winner": "Smashed Potatoes",
@@ -21712,16 +21562,6 @@
         {
           "season": 6,
           "week": 2,
-          "game": 8,
-          "match_type": "Reg. Season",
-          "winner": "Smashed Potatoes",
-          "loser": "Team 11",
-          "commentary": "Potatoes. Two Aunt Esthir's and a Mishra's Factory did most of the work in this one. They didn't have to play much defense.\n\nT-11. Tried out the full suite of Icy's and Royal's in this game. They looked better, but still felt slow. Didn't have enough defense to compensate for their slow attack. Need some speedier offense.",
-          "verified": true
-        },
-        {
-          "season": 6,
-          "week": 2,
           "game": 9,
           "match_type": "Reg. Season",
           "winner": "Sliver Lining",
@@ -21732,21 +21572,11 @@
         {
           "season": 6,
           "week": 2,
-          "game": 9,
-          "match_type": "Reg. Season",
-          "winner": "Sliver Lining",
-          "loser": "Glop Artists",
-          "commentary": "Slivers. A first-turn Taiga helped put two Muscle Sliver's and a Heart Sliver in play fueling all the attack for the winner. They had even more firepower in hand, but had to take out a timely Meekstone with a Disenchant. Good win.\n\nGlop. Two mana capped them early.They deployed more cards, but couldn't get anything going - leaving a Serra Angel, Storm Seeker and a Disenchant.",
-          "verified": true
-        },
-        {
-          "season": 6,
-          "week": 2,
           "game": 10,
           "match_type": "Reg. Season",
           "winner": "No Lands For You",
           "loser": "Darwin's Doom",
-          "commentary": "NLFY. Great will over their nemesis from the Season 5 championship. They keep opposing creatures at bay with a Black Knight and a Quicksand, then completely turn the tires with a Hellfire followed by three M-Kill cards and capped off the win with a Sengir Vampire\n\nDoom. The Hellfire did them in, losing a Fyndhorn Elf and Elvish Archer and a Elvish Ranger. The Sylvan Library kept them afloat but no such defense came.",
+          "commentary": "Potatoes. Win a battle of attrition against their rival. Used a Balance to knock out opposing lands and a Sengir Vampire. FAs like Land Tax and Cleansing really hamper NLFY. They could rely on cheaper creatures much more so than NLFY could, and win as a result.\n\nNLFY. Amazing they were even able to dole out 11-damage in this one. They have real problems with the Potatoes new emphasis on land destruction, life pump and mana pump. Balance may have shifted toward the Potatoes in this match-up of Original 10 teams.",
           "verified": true
         },
         {
@@ -21756,7 +21586,7 @@
           "match_type": "Reg. Season",
           "winner": "Icy Hot",
           "loser": "Dark N Stormy",
-          "commentary": "Hot. Guts!! What a win by the Hot! They sat on only 4 mana and played only 5 cards. The two Ivory Tower's helped pave the way for Manabarbs to do it's thing. Very nice win over an undefeated Team.\n\nStormy. Threw a haymaker on the 6th turn with 20 damage thanks to a Furnace of Rath. The other option was to send a Balduvian Horde into play, but if they just drew one more Bolt on turn-7 it would have been over.",
+          "commentary": "Things. Close call here, but a very positive sign for the offseason changes made, notably Unstable Mutation. They were eliminated in lsat post-season bc of their reliance on the \"Certain Death\" combo - which was nullified in this game. The game-MVP Shadow benefited from some C-Pump to withstand a Jokulhaups and win the game.\n\nGloves. Promising game despite the loss. One more turn likely nets them the victory, as they sat on a Vise-Mine combo in play. A Underworld Dreams was about to hit the battlefield with a hand full of H-Pump when Living Death was played - forcing the board clearing Jokulhaups. Close loss.",
           "verified": true
         },
         {
@@ -21767,16 +21597,6 @@
           "winner": "Bad Ass Fault",
           "loser": "The Anti-Dopes",
           "commentary": "Stormy. Continue to beat up the Slivers following their 3-0 sweep in last seasons' playoffs. Newcomer Ball Lightning's dealt 12-damage in this one, and the rest came from direct damage. They look REAL feisty.\n\nSlivers. Good mana and a 4 Muscle Slivers (last season MVP) looked positive from the start, but they haven't quite figured out how to deal with the constant firepower of Dark'n'Stormy.",
-          "verified": true
-        },
-        {
-          "season": 6,
-          "week": 2,
-          "game": 12,
-          "match_type": "Reg. Season",
-          "winner": "Bad Ass Fault",
-          "loser": "The Anti-Dopes",
-          "commentary": "Fault. Nice sharp win. Second turn Strip Mine and Dark Ritual-Hyppy out them out in front for good. To Megrim's showed up and a late Mind Twist TOTALLY dismantled Anti-Deck.\n\nAnti. Tough loss with three lands destroyed in this one. Losing their hand to Mind Twist hurt them badly with Terri Clone's in hand and some funky stuff on the way. May need more counters to slow initial attack.",
           "verified": true
         },
         {
@@ -21976,27 +21796,7 @@
           "match_type": "Reg. Season",
           "winner": "Mist Monsters",
           "loser": "Team 11",
-          "commentary": "Doom. Solid win to take advantage of a lackluster offense in the Fault. The Sylvan Library allowed them to counteract the loss of 4 mana, as did a few Fyndhorn Elves. They should have won and they did.\n\nFault. No offense to be found even after a mid-game Wheel of Fortune. Might need another creature in here to help out pressure on opponents.",
-          "verified": true
-        },
-        {
-          "season": 6,
-          "week": 3,
-          "game": 15,
-          "match_type": "Reg. Season",
-          "winner": "Mist Monsters",
-          "loser": "Team 11",
           "commentary": "Anti. Good opponent for them, stealing and animating artifacts to gain an edge. They stole a Royal Assassin and pumped him with Unstable Mutation and then Stasis froze the board and did a bunch of damage via an untapped Mana Vault. Sat back until they animated a Helm of Obedience for the win.\n\nTeam 10. Tough loss, but he's a little more defense in this deck. They gather mana until they can go on the offensive which makes them too vulnerable. Need some D.",
-          "verified": true
-        },
-        {
-          "season": 6,
-          "week": 3,
-          "game": 16,
-          "match_type": "Reg. Season",
-          "winner": "Darwin's Doom",
-          "loser": "Bad Ass Fault",
-          "commentary": "Doom. Solid win to take advantage of a lackluster offense in the Fault. The Sylvan Library allowed them to counteract the loss of 4 mana, as did a few Fyndhorn Elves. They should have won and they did.\n\nFault. No offense to be found even after a mid-game Wheel of Fortune. Might need another creature in here to help out pressure on opponents",
           "verified": true
         },
         {
@@ -22127,16 +21927,6 @@
           "winner": "The Anti-Dopes",
           "loser": "Glop Artists",
           "commentary": "Dopes. Designed well for the Glop Artists, the Dopes were able to sit back and wait for the offense to come to them. They stole creature after creature and met very little resistance.\n\nArtists. Their only damage outside of one attacking Serra were two Storm Seeker's -- not that great of a card. There's a LOT of waiting around by this team, still. Need to think thru their roster to see what other flexibility they might have.",
-          "verified": true
-        },
-        {
-          "season": 6,
-          "week": 4,
-          "game": 19,
-          "match_type": "Reg. Season",
-          "winner": "Sliver Lining",
-          "loser": "Darwin's Doom",
-          "commentary": "Anti. Good opponent for them, stealing and animating artifacts to gain an edge. They stole a Royal Assassin and pumped him with Unstable Mutation and then Stasis froze the board and did a bunch of damage via an untapped Mana Vault. Sat back until they animated a Helm of Obedience for the win.\n\nTeam 10. Tough loss, but he's a little more defense in this deck. They gather mana until they can go on the offensive which makes them too vulnerable. Need some D.",
           "verified": true
         },
         {
@@ -22376,7 +22166,7 @@
           "match_type": "Reg. Season",
           "winner": "Glop Artists",
           "loser": "Bad Ass Fault",
-          "commentary": "Glop. Well well! They take one of the beast in the biz with in a long one - 17 turns to let Winter Orb do it's thing, buy some time, and win on the back of a Mask-Nought combo. Fun to see them win one, and to see a formula take shape. May be life in these guys yet!\n\nFault. Man oh man, they let this one slip thru their fingers. Were stuck in the mud thanks to Winter Orb, and should have used a Pillage early on to get out of it. They didn't, and were knocked out as a result. Poor play by the Commish.",
+          "commentary": "Artists. Win a make-up game in this one, and much in part to new addition Swords to Plowshares who killed off a Hyppy which wouldn't have made it impossible for the disguised Dreadnougth to attack. The Argivian Archaeologist saw some action and saved the day after the Nought was killed. Just love the Mask-Nought combo. So great.\n\nFault. Drew 3 Swamps all game despite a hand full of red M-Kill. They are a weaker club now, and it's uncertain where their offense will come from when the M-Kill isn't there.",
           "verified": true
         },
         {
@@ -23012,16 +22802,6 @@
         {
           "season": 6,
           "week": 19,
-          "game": 104,
-          "match_type": "Reg. Season",
-          "winner": "Smashed Potatoes",
-          "loser": "No Lands For You",
-          "commentary": "Potatoes. Excellent win. Fortunes turned around thanks to a Balance, then they sat on a Land Tax and were simply quicker to the next few punches than NLFY.\n\nNLFY. This one was up for grabs and their decision to clear the board post-Balance with a Disk was dicey and it didn't work out.",
-          "verified": true
-        },
-        {
-          "season": 6,
-          "week": 19,
           "game": 105,
           "match_type": "Reg. Season",
           "winner": "Mist Monsters",
@@ -23046,7 +22826,7 @@
           "match_type": "Reg. Season",
           "winner": "Dark N Stormy",
           "loser": "Sliver Lining",
-          "commentary": "Stormy. Continue to beat up the Slivers following their 3-0 sweep in last seasons' playoffs. Newcomer Ball Lightning's dealt 12-damage in this one, and the rest came from direct damage. They look REAL feisty.\n\nSlivers. Good mana and a 4 Muscle Slivers (last season MVP) looked positive from the start, but they haven't quite figured out how to deal with the constant firepower of Dark'n'Stormy.",
+          "commentary": "Stormy. Cards like Earthquake and Pyroclasm are total game-changers against the Slivers. They used both in this game and extinguished three opponents. Slivers put out a Furnace of Rath that would have ended the game a turn later. Stormy had two draws left before going down to a Muscle Sliver - the third of the game - and pulled a Ball Lightning. Nice.\n\nSlivers. Lost by the skin of their teeth. Lost 6 of 7 creatures in this game in a total card draw-down. One of the best games of the year.",
           "verified": true
         },
         {
@@ -23116,16 +22896,6 @@
           "match_type": "Reg. Season",
           "winner": "Extinction",
           "loser": "Big Gloves",
-          "commentary": "X. Excellent win that propels them out of contention for the Qualifier Playoff - their 4th in a row. They were able to deploy though to stay under a double Vise grip and drew a game changing disenchant to nullify a Howling Mine. Great win.\n\nGloves. Close loss and are now in danger if slipping into the 6-team Qualifier",
-          "verified": true
-        },
-        {
-          "season": 6,
-          "week": 21,
-          "game": 114,
-          "match_type": "Reg. Season",
-          "winner": "Extinction",
-          "loser": "Big Gloves",
           "commentary": "Gloves. So fun!! The synergy on this team was awesome. They played one creature all game - Shocker - and he recorded not one point of damage. Black Vise took the first load, then a second Underworld Dreams paired exceptionally well with a Winds of Change and Teferi's Puzzle Box to knock out the Artists. What a fun team.\n\nArtists. Had a tough time getting going with all the hand shuffling. Tough opponent for them because their mana manipulation didn't help much.",
           "verified": true
         },
@@ -23147,16 +22917,6 @@
           "winner": "Dark N Stormy",
           "loser": "Mist Monsters",
           "commentary": "Stormy. Patience paid off here. They held as many DD spells as possible for the Mask'ed Noughts and when they came, they were gone just as fast. A Meekstone slowed down their creature-led assault a bit, but it was only a matter of time.\n\nMonsters. Looked VERY one dimensional in this game. May need to drop the updated rules for Mask-Nought to give them more heft. It's proving difficult a combo to build around as we near another down season with these two at the core.",
-          "verified": true
-        },
-        {
-          "season": 6,
-          "week": 21,
-          "game": 116,
-          "match_type": "Reg. Season",
-          "winner": "Dark N Stormy",
-          "loser": "Mist Monsters",
-          "commentary": "Stormy. Win via creature base - a new tactic for them. A Ball Lightning for 12 damage, thanks to Furnace of Rath, and then a Thunderbolt w/ Fork ended things for another 12 damage. Solid.\n\nAnti. It's early :) no idea what their north star is yet but I like the construct of stealing any/everything in play - just don't have enough defense in yet. Hand full of 4-5CC cards kept them out of the game. Stasis sat there too - unsure how to use it yet.",
           "verified": true
         },
         {
@@ -32252,16 +32012,6 @@
           "winner": "Extinction",
           "loser": "Clockwork",
           "commentary": "X. A game they should've won, and did, but thanks primarily to Disenchant. They drew and used 3x of them to dispatch an early N-Disk and 2x Jade Statue. It made all the difference in enabling a Ape/Lions combo to wreak havoc.\n\nFax. Closer! Love Jade Statue and Juggernaut was fun. Had 2x Jester's Cap in hand and didn't know what to do with them. I suppose getting them out early to remove Disenchant would be the right way to play them. Could use another N-Disk in here for defense. Liked seeing a near-Urzatron on the board, too.",
-          "verified": true
-        },
-        {
-          "season": 7,
-          "week": 4,
-          "game": 32,
-          "match_type": "Reg. Season",
-          "winner": "Team 10",
-          "loser": "Fire Drilled",
-          "commentary": "X. Reminding the League that they're never to be counted out.\n- T-1 = Taiga & Kird Ape\n- T-2 = Plains, Lions & Giant Growth on Ape\n- T-3 = Plains, Lions\n- T-4 = Mountain & Giant Growth\n- T-5 = Game Over!\n\nTeam 10. Love this Team. They had a great hand but were stuck on a solo-Workshop so couldn't get anyone in play; Birds, STDs, W-Treefolk, Fellwar Stone, Winter Orb, Unholy Strength, Archers.",
           "verified": true
         },
         {
@@ -47949,22 +47699,54 @@
     "fastest_win": {
       "value": 3.0,
       "team": "Murphy's Law",
-      "detail": "def. Icy Hot \u2014 Season 5 Reg. Season"
+      "detail": "def. Icy Hot \u2014 Season 5 Reg. Season",
+      "link": {
+        "season": 5,
+        "winner": "Murphy's Law",
+        "loser": "Icy Hot",
+        "week": 22,
+        "match_type": "Reg. Season",
+        "has_commentary": true
+      }
     },
     "slowest_win": {
       "value": 32.0,
       "team": "Extinction",
-      "detail": "def. Smashed Potatoes \u2014 Season 6 Playoffs"
+      "detail": "def. Smashed Potatoes \u2014 Season 6 Playoffs",
+      "link": {
+        "season": 6,
+        "winner": "Extinction",
+        "loser": "Smashed Potatoes",
+        "week": 4.0,
+        "match_type": "Playoffs",
+        "has_commentary": true
+      }
     },
     "biggest_margin": {
       "value": 50.0,
       "team": "Sliver Lining",
-      "detail": "def. Over Grenade 16.0 to -34.0 \u2014 Season 8 Reg. Season"
+      "detail": "def. Over Grenade 16.0 to -34.0 \u2014 Season 8 Reg. Season",
+      "link": {
+        "season": 8,
+        "winner": "Sliver Lining",
+        "loser": "Over Grenade",
+        "week": 2.0,
+        "match_type": "Reg. Season",
+        "has_commentary": true
+      }
     },
     "most_damage_single_game": {
       "value": 61.0,
       "team": "Icy Hot",
-      "detail": "def. No Lands For You \u2014 Season 6 Reg. Season"
+      "detail": "def. No Lands For You \u2014 Season 6 Reg. Season",
+      "link": {
+        "season": 6,
+        "winner": "Icy Hot",
+        "loser": "No Lands For You",
+        "week": 16.0,
+        "match_type": "Reg. Season",
+        "has_commentary": true
+      }
     },
     "best_season_record": {
       "value": 0.8,

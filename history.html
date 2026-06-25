@@ -197,25 +197,91 @@ function renderHallOfFameRail() {
   const r = historyData.league_records;
   if (!r) { container.innerHTML = ''; return; }
   const items = [
-    { label: 'Fastest Win', value: r.fastest_win.value + 't', team: r.fastest_win.team },
-    { label: 'Largest Margin', value: '+' + r.biggest_margin.value, team: r.biggest_margin.team },
-    { label: 'Most Dmg, 1 Game', value: r.most_damage_single_game.value, team: r.most_damage_single_game.team },
-    { label: 'Best Season Record', value: (r.best_season_record.value*100).toFixed(0)+'%', team: r.best_season_record.team },
-    { label: 'Best Season Power', value: r.highest_season_power.value, team: r.highest_season_power.team },
-    { label: 'Most Titles', value: r.most_championships.value + 'x', team: r.most_championships.team },
-    { label: 'Most All-Time Wins', value: r.most_total_wins.value, team: r.most_total_wins.team },
-    { label: 'Best All-Time Win%', value: r.best_alltime_winpct.value+'%', team: r.best_alltime_winpct.team },
-    { label: 'Longest Win Streak', value: r.longest_win_streak.value + 'g', team: r.longest_win_streak.team },
-    { label: 'Longest Skid', value: r.longest_loss_streak.value + 'g', team: r.longest_loss_streak.team },
-    { label: 'Most Career MVPs', value: r.most_mvps_single_card.value + 'x', team: r.most_mvps_single_card.team },
-    { label: 'Top Rivalry Gap', value: r.most_lopsided_rivalry.value + 'g', team: r.most_lopsided_rivalry.team },
+    { label: 'Fastest Win', value: r.fastest_win.value + 't', team: r.fastest_win.team, link: r.fastest_win.link, action: `hofNavigate(JSON.parse(this.dataset.link||'null'), null)` },
+    { label: 'Largest Margin', value: '+' + r.biggest_margin.value, team: r.biggest_margin.team, link: r.biggest_margin.link, action: `hofNavigate(JSON.parse(this.dataset.link||'null'), null)` },
+    { label: 'Most Dmg, 1 Game', value: r.most_damage_single_game.value, team: r.most_damage_single_game.team, link: r.most_damage_single_game.link, action: `hofNavigate(JSON.parse(this.dataset.link||'null'), null)` },
+    { label: 'Best Season Record', value: (r.best_season_record.value*100).toFixed(0)+'%', team: r.best_season_record.team, action: `hofNavigate(null, 1)` },
+    { label: 'Best Season Power', value: r.highest_season_power.value, team: r.highest_season_power.team, action: `hofNavigate(null, 5)` },
+    { label: 'Most Titles', value: r.most_championships.value + 'x', team: r.most_championships.team, action: `hofNavigateTeam('No Lands For You')` },
+    { label: 'Most All-Time Wins', value: r.most_total_wins.value, team: r.most_total_wins.team, action: `hofNavigateAllTime('total_w')` },
+    { label: 'Best All-Time Win%', value: r.best_alltime_winpct.value+'%', team: r.best_alltime_winpct.team, action: `hofNavigateTeam('Mean Machine')` },
+    { label: 'Longest Win Streak', value: r.longest_win_streak.value + 'g', team: r.longest_win_streak.team, action: `hofNavigate(null, 7)` },
+    { label: 'Longest Skid', value: r.longest_loss_streak.value + 'g', team: r.longest_loss_streak.team, action: `hofNavigate(null, 3)` },
+    { label: 'Most Career MVPs', value: r.most_mvps_single_card.value + 'x', team: r.most_mvps_single_card.team, action: null },
+    { label: 'Top Rivalry Gap', value: r.most_lopsided_rivalry.value + 'g', team: r.most_lopsided_rivalry.team, action: null },
   ];
-  container.innerHTML = items.map(i => `
-  <div class="hof-item">
-    <span class="hof-label">${i.label}</span>
-    <span class="hof-value">${i.value}</span>
-    <span class="hof-detail">${i.team}</span>
-  </div>`).join('');
+  container.innerHTML = items.map((i, idx) => {
+    const clickAttr = i.action ? `onclick="${i.action}"` : '';
+    const dataAttr = i.link ? `data-link='${JSON.stringify(i.link).replace(/'/g, "&apos;")}'` : '';
+    const indicator = (i.action || i.link) ? `<span style="font-size:9px;color:var(--gold-dim);margin-left:4px">↗</span>` : '';
+    const cursor = (i.action || i.link) ? 'cursor:pointer' : '';
+    return `<div class="hof-item" ${dataAttr} ${clickAttr} style="${cursor}">
+      <span class="hof-label">${i.label}</span>
+      <span class="hof-value">${i.value}${indicator}</span>
+      <span class="hof-detail">${i.team}</span>
+    </div>`;
+  }).join('');
+}
+
+function hofNavigate(link, season) {
+  const seasonsTab = document.querySelector('.hist-tab');
+  switchHistTab('seasons', seasonsTab);
+  const targetSeason = link ? link.season : season;
+  if (!targetSeason) return;
+  showSeason(targetSeason);
+  if (link && link.week) {
+    setTimeout(() => {
+      const accordions = document.querySelectorAll('.accordion-header');
+      for (const acc of accordions) {
+        if (acc.querySelector('.accordion-title')?.textContent?.includes('Game Log')) {
+          if (!acc.classList.contains('expanded')) toggleAccordion(acc);
+          break;
+        }
+      }
+      setTimeout(() => {
+        const gameId = `game-${link.season}-${Math.round(link.week)}-${(link.winner||'').replace(/['\s]+/g,'-')}`;
+        const noteId = gameId + '-note';
+        const gameEl = document.getElementById(gameId);
+        if (gameEl) {
+          const noteEl = document.getElementById(noteId);
+          if (noteEl) noteEl.style.display = 'block';
+          setTimeout(() => {
+            gameEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            gameEl.style.transition = 'background 1.5s';
+            gameEl.style.background = 'var(--gold-dim)';
+            setTimeout(() => gameEl.style.background = '', 1800);
+          }, 500);
+        } else {
+          console.log('Game element not found:', gameId);
+        }
+      }, 400);
+    }, 300);
+  } else {
+    setTimeout(() => {
+      const accordions = document.querySelectorAll('.accordion-header');
+      for (const acc of accordions) {
+        if (acc.querySelector('.accordion-title')?.textContent?.includes('Game Log')) {
+          if (!acc.classList.contains('expanded')) toggleAccordion(acc);
+          acc.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          break;
+        }
+      }
+    }, 150);
+  }
+}
+
+function hofNavigateTeam(team) {
+  window.location.href = `team-history.html?team=${encodeURIComponent(team)}`;
+}
+
+function hofNavigateAllTime(sortField) {
+  switchHistTab('alltime', document.querySelectorAll('.hist-tab')[1]);
+  setTimeout(() => {
+    setAtMode('franchise');
+    atSortField = sortField;
+    atSortDir = -1;
+    renderAllTime();
+  }, 100);
 }
 
 function renderIndex() {
@@ -314,13 +380,14 @@ function showSeason(seasonNum) {
     const noteHtml = gameNote
       ? `<div style="font-size:12px;color:var(--text-secondary);line-height:1.6;padding:6px 0 4px;border-top:1px solid var(--border);margin-top:4px">${gameNote.commentary}</div>`
       : '';
-    const rowId = `game-${season.season}-${g.week}-${(g.winner||'').replace(/\s+/g,'-')}`;
-    return `<div style="padding:7px 0;border-bottom:1px solid var(--border)">
-      <div style="display:flex;justify-content:space-between;cursor:${gameNote?'pointer':'default'}" ${gameNote?`onclick="document.getElementById('${rowId}').style.display=document.getElementById('${rowId}').style.display==='none'?'block':'none'"`:''}>
+    const rowId = `game-${season.season}-${Math.round(g.week||0)}-${(g.winner||'').replace(/['\s]+/g,'-')}`;
+    const noteRowId = rowId + '-note';
+    return `<div id="${rowId}" style="padding:7px 0;border-bottom:1px solid var(--border)">
+      <div style="display:flex;justify-content:space-between;cursor:${gameNote?'pointer':'default'}" ${gameNote?`onclick="document.getElementById('${noteRowId}').style.display=document.getElementById('${noteRowId}').style.display==='none'?'block':'none'"`:''}>
         <span style="font-size:13px;color:var(--text-primary)">Wk ${g.week ?? '?'} · <strong>${g.winner}</strong> def. ${g.loser} ${divStr}${mvpStr}</span>
         <span style="font-family:var(--font-mono);color:var(--gold);font-size:13px">${scoreStr}${gameNote?' <span style="color:var(--text-muted);font-size:10px">▾</span>':''}</span>
       </div>
-      <div id="${rowId}" style="display:none">${noteHtml}</div>
+      <div id="${noteRowId}" style="display:none">${noteHtml}</div>
     </div>`;
   }).join('');
 
