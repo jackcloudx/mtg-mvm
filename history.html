@@ -197,18 +197,18 @@ function renderHallOfFameRail() {
   const r = historyData.league_records;
   if (!r) { container.innerHTML = ''; return; }
   const items = [
-    { label: 'Fastest Win', value: r.fastest_win.value + 't', team: r.fastest_win.team, link: r.fastest_win.link, action: `hofNavigate(JSON.parse(this.dataset.link||'null'), null)` },
-    { label: 'Largest Margin', value: '+' + r.biggest_margin.value, team: r.biggest_margin.team, link: r.biggest_margin.link, action: `hofNavigate(JSON.parse(this.dataset.link||'null'), null)` },
-    { label: 'Most Dmg, 1 Game', value: r.most_damage_single_game.value, team: r.most_damage_single_game.team, link: r.most_damage_single_game.link, action: `hofNavigate(JSON.parse(this.dataset.link||'null'), null)` },
-    { label: 'Best Season Record', value: (r.best_season_record.value*100).toFixed(0)+'%', team: r.best_season_record.team, action: `hofNavigate(null, 1)` },
-    { label: 'Best Season Power', value: r.highest_season_power.value, team: r.highest_season_power.team, action: `hofNavigate(null, 5)` },
-    { label: 'Most Titles', value: r.most_championships.value + 'x', team: r.most_championships.team, action: `hofNavigateTeam('No Lands For You')` },
-    { label: 'Most All-Time Wins', value: r.most_total_wins.value, team: r.most_total_wins.team, action: `hofNavigateAllTime('total_w')` },
-    { label: 'Best All-Time Win%', value: r.best_alltime_winpct.value+'%', team: r.best_alltime_winpct.team, action: `hofNavigateTeam('Mean Machine')` },
-    { label: 'Longest Win Streak', value: r.longest_win_streak.value + 'g', team: r.longest_win_streak.team, action: `hofNavigate(null, 7)` },
-    { label: 'Longest Skid', value: r.longest_loss_streak.value + 'g', team: r.longest_loss_streak.team, action: `hofNavigate(null, 3)` },
-    { label: 'Most Career MVPs', value: r.most_mvps_single_card.value + 'x', team: r.most_mvps_single_card.team, action: null },
-    { label: 'Top Rivalry Gap', value: r.most_lopsided_rivalry.value + 'g', team: r.most_lopsided_rivalry.team, action: null },
+    { label: 'Fastest Win', value: r.fastest_win.value + 't', team: `Murphy's Law · Season 5`, link: r.fastest_win.link, action: `hofNavigate(JSON.parse(this.dataset.link||'null'), null)` },
+    { label: 'Largest Margin', value: '+' + r.biggest_margin.value, team: `Sliver Lining · Season 8`, link: r.biggest_margin.link, action: `hofNavigate(JSON.parse(this.dataset.link||'null'), null)` },
+    { label: 'Most Dmg, 1 Game', value: r.most_damage_single_game.value, team: `Icy Hot · Season 6`, link: r.most_damage_single_game.link, action: `hofNavigate(JSON.parse(this.dataset.link||'null'), null)` },
+    { label: 'Best Season Record', value: (r.best_season_record.value*100).toFixed(0)+'%', team: `Fire Drilled · Season 1`, action: `hofNavigate(null, 1)` },
+    { label: 'Best Season Power', value: r.highest_season_power.value, team: `Swamp Things · Season 5`, action: `hofNavigate(null, 5)` },
+    { label: 'Most Titles', value: r.most_championships.value + 'x', team: `No Lands For You · S1, S5`, action: `hofNavigateTeam('No Lands For You')` },
+    { label: 'Most All-Time Wins', value: r.most_total_wins.value, team: `Sliver Lining · All-Time`, action: `hofNavigateAllTime('total_w')` },
+    { label: 'Best All-Time Win%', value: r.best_alltime_winpct.value+'%', team: `Mean Machine · All-Time`, action: `hofNavigateTeam('Mean Machine')` },
+    { label: 'Longest Win Streak', value: r.longest_win_streak.value + 'g', team: `Smashed Potatoes · Season 7`, action: `hofNavigate(null, 7)` },
+    { label: 'Longest Skid', value: r.longest_loss_streak.value + 'g', team: `The Doldrums · Season 3`, action: `hofNavigate(null, 3)` },
+    { label: 'Most Career MVPs', value: r.most_mvps_single_card.value + 'x', team: `Black Vise · No Lands For You`, action: null },
+    { label: 'Top Rivalry Gap', value: r.most_lopsided_rivalry.value + 'g', team: `NLFY 17-5 vs Darwin's Doom`, action: null },
   ];
   container.innerHTML = items.map((i, idx) => {
     const clickAttr = i.action ? `onclick="${i.action}"` : '';
