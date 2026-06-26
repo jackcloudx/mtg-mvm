@@ -299,7 +299,7 @@ function renderIndex() {
     return `<div class="season-card" onclick="showSeason(${s.season})">
       <div class="season-card-num">Season ${s.season}</div>
       <div class="season-card-champ">${s.champion || 'Unknown'}${champStanding && champStanding.seed ? ` <span style="font-size:13px;color:var(--text-muted);font-weight:normal">#${champStanding.seed} seed</span>` : ''}</div>
-      <div class="season-card-label">League Champion${champStanding ? ` · ${champStanding.w}-${champStanding.l}` : ''}</div>
+      <div class="season-card-label">League Champion${champStanding ? ` · ${champStanding.w}-${champStanding.l}` : ''}${s.boss_fight_result ? ` · ${s.boss_fight_result.tier}` : ''}</div>
       <div class="season-card-stats">
         <div><span class="season-card-stat-val">${s.team_count}</span><span class="season-card-stat-label">Teams</span></div>
         <div><span class="season-card-stat-val">${regGames}</span><span class="season-card-stat-label">Games</span></div>
@@ -440,6 +440,7 @@ function showSeason(seasonNum) {
       <div class="accordion-body">${playoffRows}</div>
     </div>
 
+    ${buildBossFightHtml(season)}
     ${buildPostSeasonHtml(season)}
   `;
   detail.innerHTML = html;
@@ -601,6 +602,51 @@ function buildPreviewHtml(season) {
         <span class="accordion-icon" style="margin-left:auto">▾</span>
       </div>
       <div class="accordion-body expanded"><p style="color:var(--text-secondary);font-size:14px;line-height:1.8">${narr.preview}</p></div>
+    </div>`;
+}
+
+function buildBossFightHtml(season) {
+  const result = season.boss_fight_result;
+  if (!result) return '';
+  const tiers = {'Champion':'','Iron Champion':'⚔','Bronze Champion':'🥉','Silver Champion':'🥈','Gold Champion':'🥇','Legendary Champion':'👑'};
+  const icon = tiers[result.tier] || '';
+  const bossColors = {'Green Boss':'#2d7a2d','Red Boss':'#c0392b','Black Boss':'#4a4a4a','Blue Boss':'#2980b9','White Boss':'#c8b870'};
+  const gamesHtml = result.games.map(g => {
+    const champWon = g.champion_won;
+    const scoreStr = (g.winner_score != null && g.loser_score != null)
+      ? `${g.winner_score} – ${g.loser_score}` : 'N/A';
+    const bossColor = bossColors[g.boss] || 'var(--text-muted)';
+    return `<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px">
+      <span>
+        <span style="color:${champWon?'var(--gold)':'var(--text-muted)'}">
+          ${champWon ? result.champion : g.boss}
+        </span>
+        <span style="color:var(--text-muted)"> def. </span>
+        <span style="color:${champWon?'var(--text-muted)':bossColor}">
+          ${champWon ? g.boss : result.champion}
+        </span>
+      </span>
+      <span style="font-family:var(--font-mono);font-size:12px;color:${champWon?'var(--green)':'var(--red)'}">${champWon?'W':'L'} ${scoreStr}</span>
+    </div>`;
+  }).join('');
+
+  return `
+    <div class="accordion-section">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <span class="accordion-title">Boss Fight Series</span>
+        <span class="accordion-meta">${icon} ${result.tier} · ${result.wins}-${result.losses}<span class="accordion-icon">▾</span></span>
+      </div>
+      <div class="accordion-body">
+        <div style="margin-bottom:14px">
+          <div style="font-size:13px;color:var(--text-secondary);margin-bottom:4px">
+            ${result.champion} faced the Boss Fight gauntlet following their championship victory.
+          </div>
+          <div style="font-size:20px;font-weight:700;color:var(--gold)">${icon} ${result.tier}</div>
+          <div style="font-size:11px;color:var(--text-muted)">${result.wins} win${result.wins!==1?'s':''} against the Bosses</div>
+        </div>
+        ${gamesHtml}
+        <div style="font-size:11px;color:var(--text-muted);margin-top:12px">Boss Fights use modern card sets. Results do not count toward regular season or playoff records.</div>
+      </div>
     </div>`;
 }
 
