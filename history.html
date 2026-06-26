@@ -134,6 +134,10 @@
           <div class="hof-rail-title">League Records</div>
           <div id="hof-rail-content">Loading...</div>
         </div>
+        <div id="champion-legend-wrap" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;margin-top:12px">
+          <div style="font-family:var(--font-head);font-size:11px;color:var(--gold);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border)">Champion Tiers</div>
+          <div id="champion-legend"></div>
+        </div>
       </div>
     </div>
     <div id="team-detail-view" class="season-detail-view"></div>
@@ -182,6 +186,7 @@ async function init() {
   historyData = await res.json();
   renderIndex();
   renderHallOfFameRail();
+  renderChampionLegend();
   renderAllTime();
 }
 
@@ -290,6 +295,20 @@ function hofNavigateAllTime(sortField) {
   }, 100);
 }
 
+function renderChampionLegend() {
+  const container = document.getElementById('champion-legend');
+  if (!container || !historyData) return;
+  const tiers = historyData.boss_fight_tiers || {};
+  const order = [0,1,2,3,4,5];
+  const icons = {0:'🏆',1:'⚔',2:'🥉',3:'🥈',4:'🥇',5:'👑'};
+  container.innerHTML = order.map(n => `
+    <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:var(--text-muted);padding:2px 0">
+      <span>${icons[n]}</span>
+      <span style="color:var(--text-secondary)">${tiers[n] || ''}</span>
+      <span style="color:var(--text-muted)">${n === 0 ? 'No Boss Fights' : n + ' Boss Fight win' + (n > 1 ? 's' : '')}</span>
+    </div>`).join('');
+}
+
 function renderIndex() {
   const container = document.getElementById('season-index-grid');
   const seasons = Object.values(historyData.seasons).sort((a,b) => b.season - a.season);
@@ -299,7 +318,7 @@ function renderIndex() {
     return `<div class="season-card" onclick="showSeason(${s.season})">
       <div class="season-card-num">Season ${s.season}</div>
       <div class="season-card-champ">${s.champion || 'Unknown'}${champStanding && champStanding.seed ? ` <span style="font-size:13px;color:var(--text-muted);font-weight:normal">#${champStanding.seed} seed</span>` : ''}</div>
-      <div class="season-card-label">League Champion${champStanding ? ` · ${champStanding.w}-${champStanding.l}` : ''}${s.boss_fight_result ? ` · ${s.boss_fight_result.tier}` : ''}</div>
+      <div class="season-card-label">${s.boss_fight_result ? s.boss_fight_result.tier : 'League Champion'}${champStanding ? ` · ${champStanding.w}-${champStanding.l}` : ''}</div>
       <div class="season-card-stats">
         <div><span class="season-card-stat-val">${s.team_count}</span><span class="season-card-stat-label">Teams</span></div>
         <div><span class="season-card-stat-val">${regGames}</span><span class="season-card-stat-label">Games</span></div>
@@ -616,17 +635,17 @@ function buildBossFightHtml(season) {
     const scoreStr = (g.winner_score != null && g.loser_score != null)
       ? `${g.winner_score} – ${g.loser_score}` : 'N/A';
     const bossColor = bossColors[g.boss] || 'var(--text-muted)';
-    return `<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px">
-      <span>
-        <span style="color:${champWon?'var(--gold)':'var(--text-muted)'}">
-          ${champWon ? result.champion : g.boss}
+    const noteId = `boss-note-${g.game}`;
+    return `<div style="padding:8px 0;border-bottom:1px solid var(--border)">
+      <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px;${g.commentary?'cursor:pointer':''}" ${g.commentary?`onclick="const n=document.getElementById('${noteId}');n.style.display=n.style.display==='none'?'block':'none'"`:''}>
+        <span>
+          <span style="color:${champWon?'var(--gold)':'var(--text-muted)'}">${champWon?result.champion:g.boss}</span>
+          <span style="color:var(--text-muted)"> def. </span>
+          <span style="color:${champWon?'var(--text-muted)':bossColor}">${champWon?g.boss:result.champion}</span>
         </span>
-        <span style="color:var(--text-muted)"> def. </span>
-        <span style="color:${champWon?'var(--text-muted)':bossColor}">
-          ${champWon ? g.boss : result.champion}
-        </span>
-      </span>
-      <span style="font-family:var(--font-mono);font-size:12px;color:${champWon?'var(--green)':'var(--red)'}">${champWon?'W':'L'} ${scoreStr}</span>
+        <span style="font-family:var(--font-mono);font-size:12px;color:${champWon?'var(--green)':'var(--red)'}">${champWon?'W':'L'} ${scoreStr}${g.commentary?' <span style="color:var(--text-muted);font-size:10px">▾</span>':''}</span>
+      </div>
+      ${g.commentary?`<div id="${noteId}" style="display:none;font-size:12px;color:var(--text-secondary);line-height:1.6;padding:8px 0 4px;white-space:pre-line">${g.commentary}</div>`:''}
     </div>`;
   }).join('');
 

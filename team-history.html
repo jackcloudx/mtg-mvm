@@ -72,6 +72,17 @@ async function init() {
     ? `${team.championships}x League Champion (Season${team.championship_seasons.length > 1 ? 's' : ''} ${team.championship_seasons.join(', ')})`
     : 'No championships';
 
+  const archetype = history.team_archetypes && history.team_archetypes[teamName];
+  const archetypeHtml = archetype ? `
+    <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:16px 20px;margin-bottom:20px">
+      <div style="display:flex;gap:12px;align-items:baseline;flex-wrap:wrap;margin-bottom:8px">
+        <span style="font-family:var(--font-head);font-size:15px;color:var(--text-primary);font-weight:600">${archetype.archetype}</span>
+        <span style="font-size:12px;color:var(--text-muted)">${archetype.colors.join(' · ')}</span>
+      </div>
+      <div style="font-size:13px;color:var(--text-secondary);line-height:1.7;margin-bottom:10px">${archetype.flavor}</div>
+      ${archetype.key_cards && archetype.key_cards.length ? `<div style="font-size:11px;color:var(--text-muted)">Key cards: <span style="color:var(--gold)">${archetype.key_cards.join(', ')}</span></div>` : ''}
+    </div>` : '';
+
   const seasonRows = team.season_records.map(s => {
     return `<tr>
       <td><a href="history.html">Season ${s.season}</a>${s.is_champion ? ' 👑' : ''}</td>
@@ -106,7 +117,7 @@ async function init() {
         </div>
       </div>
     </div>
-
+    ${archetypeHtml}
     <div class="section-header"><span class="section-title">Notable Stats</span></div>
     <div class="notable-grid">
       <div class="notable-card">

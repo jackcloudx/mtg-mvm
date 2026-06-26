@@ -44287,7 +44287,8 @@
             "loser_score": -7.0,
             "turns": 4,
             "mvp": "Elvish Piper",
-            "champion_won": false
+            "champion_won": false,
+            "commentary": "Green Boss. Good golly miss mossy molly! Only 3x mana, but a bunch'a elves vault a 20/20 Primalcrux onto the field alongside a 7'6 Troll, Living Hive and Cavalier of Thorns in only 4-turns. Yikes.\n\nTTFs. Strong initial draw w/o any path to the Mask."
           },
           {
             "season": 8,
@@ -44301,7 +44302,8 @@
             "loser_score": -4.0,
             "turns": 4,
             "mvp": "Illusionary Mask",
-            "champion_won": true
+            "champion_won": true,
+            "commentary": "TTFs. Damn!! Initial hand was a beast, Mask, 2x Nought, Copy Artifact, Sol Ring and some lands. Turn-1 Sol Ring -> Mask, Turn-2 3x Mask, Turn-4 game over!\n\nRed Boss. Not nearly as synergistic as GREEN. May require some tinkering."
           },
           {
             "season": 8,
@@ -44315,7 +44317,8 @@
             "loser_score": null,
             "turns": null,
             "mvp": null,
-            "champion_won": false
+            "champion_won": false,
+            "commentary": "Black Boss. A couple'a bone-men deal the lion's share of the damage as Black Boss moves through TTF like a warm knife through butter.\n\nTTFs. Too much mana despite sitting on Mask + Transmute Artifact. There was nothing else to summon."
           }
         ]
       }
@@ -50632,7 +50635,8 @@
       "loser_score": -7.0,
       "turns": 4,
       "mvp": "Elvish Piper",
-      "champion_won": false
+      "champion_won": false,
+      "commentary": "Green Boss. Good golly miss mossy molly! Only 3x mana, but a bunch'a elves vault a 20/20 Primalcrux onto the field alongside a 7'6 Troll, Living Hive and Cavalier of Thorns in only 4-turns. Yikes.\n\nTTFs. Strong initial draw w/o any path to the Mask."
     },
     {
       "season": 8,
@@ -50646,7 +50650,8 @@
       "loser_score": -4.0,
       "turns": 4,
       "mvp": "Illusionary Mask",
-      "champion_won": true
+      "champion_won": true,
+      "commentary": "TTFs. Damn!! Initial hand was a beast, Mask, 2x Nought, Copy Artifact, Sol Ring and some lands. Turn-1 Sol Ring -> Mask, Turn-2 3x Mask, Turn-4 game over!\n\nRed Boss. Not nearly as synergistic as GREEN. May require some tinkering."
     },
     {
       "season": 8,
@@ -50660,7 +50665,8 @@
       "loser_score": null,
       "turns": null,
       "mvp": null,
-      "champion_won": false
+      "champion_won": false,
+      "commentary": "Black Boss. A couple'a bone-men deal the lion's share of the damage as Black Boss moves through TTF like a warm knife through butter.\n\nTTFs. Too much mana despite sitting on Mask + Transmute Artifact. There was nothing else to summon."
     }
   ]
 }
