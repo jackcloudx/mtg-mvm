@@ -54,14 +54,13 @@
     </div>
 
     <div class="two-col">
-      <!-- LEFT: Standings + Game Log -->
+      <!-- LEFT: Standings only -->
       <div>
-        <!-- Standings -->
         <div class="section-header">
           <span class="section-title">Standings</span>
           <a href="#" class="section-link" onclick="navigate('games');return false;">Full log →</a>
         </div>
-        <div style="overflow-x:auto;margin-bottom:32px">
+        <div style="overflow-x:auto;margin-bottom:28px">
           <table class="standings-table">
             <thead>
               <tr>
@@ -82,15 +81,6 @@
             </tbody>
           </table>
         </div>
-
-        <!-- Latest Results -->
-        <div class="section-header">
-          <span class="section-title">Latest Results</span>
-          <a href="#" class="section-link" onclick="navigate('games');return false;">All games →</a>
-        </div>
-        <div class="results-feed" id="results-feed">
-          <div style="color:var(--text-muted);font-size:13px;padding:12px 0">Loading...</div>
-        </div>
       </div>
 
       <!-- RIGHT: Power Rankings -->
@@ -101,8 +91,22 @@
         <div class="power-list" id="power-rankings-list">
           <div style="color:var(--text-muted);font-size:13px;padding:12px">Loading...</div>
         </div>
+      </div>
+    </div>
 
-        <div class="section-header" style="margin-top:28px">
+    <!-- Full width: Latest Results + Matchups -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;margin-top:28px">
+      <div>
+        <div class="section-header">
+          <span class="section-title">Latest Results</span>
+          <a href="#" class="section-link" onclick="navigate('games');return false;">All games →</a>
+        </div>
+        <div class="results-feed" id="results-feed">
+          <div style="color:var(--text-muted);font-size:13px;padding:12px 0">Loading...</div>
+        </div>
+      </div>
+      <div>
+        <div class="section-header">
           <span class="section-title">This Week's Matchups</span>
         </div>
         <div id="upcoming-week" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:4px 14px">
