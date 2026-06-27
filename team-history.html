@@ -15,18 +15,11 @@
     }
     .th-name { font-family: var(--font-head); font-size: 30px; color: var(--gold); margin-bottom: 6px; }
     .th-sub { color: var(--text-secondary); font-size: 14px; margin-bottom: 18px; }
-    .th-stats-row { display: flex; gap: 32px; flex-wrap: wrap; }
-    .th-stat { text-align: left; }
-    .th-stat-val { display: block; font-size: 24px; font-weight: 700; font-family: var(--font-mono); color: var(--text-primary); }
+    .th-stats-row { display: flex; gap: 32px; flex-wrap: wrap; align-items: flex-start; }
+    .th-stat { text-align: center; min-width: 60px; }
+    .th-stat-val { display: block; font-size: 24px; font-weight: 700; font-family: var(--font-mono); color: var(--text-primary); white-space: nowrap; }
+    .th-stat-val-sm { display: block; font-size: 24px; font-weight: 700; font-family: var(--font-mono); color: var(--text-primary); white-space: nowrap; letter-spacing: -0.02em; }
     .th-stat-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
-    .notable-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 24px; }
-    .notable-card {
-      background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
-      padding: 16px 18px;
-    }
-    .notable-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
-    .notable-val { font-size: 18px; font-weight: 700; color: var(--gold); font-family: var(--font-mono); margin-bottom: 4px; }
-    .notable-detail { font-size: 12px; color: var(--text-secondary); }
   </style>
 </head>
 <body>
@@ -46,7 +39,7 @@
 </header>
 
 <div class="container">
-  <button class="back-btn" onclick="window.location.href='history.html'">← Back to History</button>
+  <button class="back-btn" onclick="history.back()">← Back to History</button>
   <div id="content">Loading...</div>
 </div>
 
@@ -89,6 +82,7 @@ async function init() {
       <td class="num">${s.w}</td>
       <td class="num">${s.l}</td>
       <td class="num">${s.win_pct != null ? (s.win_pct*100).toFixed(1)+'%' : '—'}</td>
+      <td style="font-size:12px;color:var(--text-secondary)">${s.team_mvp ? s.team_mvp + (s.team_mvp_count > 1 ? ' (' + s.team_mvp_count + 'x)' : '') : '—'}</td>
       <td class="num"><span class="power-score">${s.power_score.toFixed(1)}</span></td>
       <td class="num" style="color:var(--text-muted)">${s.udpi != null ? s.udpi.toFixed(3) : '—'}</td>
     </tr>`;
@@ -97,39 +91,29 @@ async function init() {
   const html = `
     <div class="th-header">
       <div class="th-name">${team.team}</div>
-      <div class="th-sub">${champText} · Competed in ${team.seasons_played.length} season${team.seasons_played.length>1?'s':''} (S${team.seasons_played.join(', S')})</div>
+      ${archetype ? `<div style="font-size:13px;color:var(--text-muted);margin-bottom:4px">${archetype.archetype} · ${archetype.colors.join(', ')}</div>` : ''}
+      ${archetype ? `<div class="th-sub" style="font-size:13px;color:var(--text-secondary);margin-bottom:12px;line-height:1.6;max-width:600px">${archetype.flavor}</div>` : ''}
       <div class="th-stats-row">
+        <div class="th-stat">
+          <span class="th-stat-val" style="color:var(--gold)">${team.championships}</span>
+          <span class="th-stat-label">Titles</span>
+        </div>
+        <div class="th-stat">
+          <span class="th-stat-val">${team.seasons_played.length}</span>
+          <span class="th-stat-label">Seasons</span>
+        </div>
         <div class="th-stat">
           <span class="th-stat-val">${team.total_w}-${team.total_l}</span>
           <span class="th-stat-label">All-Time Record</span>
         </div>
         <div class="th-stat">
           <span class="th-stat-val">${(team.win_pct*100).toFixed(1)}%</span>
-          <span class="th-stat-label">Win %</span>
+          <span class="th-stat-label">All-Time Win %</span>
         </div>
-        <div class="th-stat">
-          <span class="th-stat-val">${team.championships}</span>
-          <span class="th-stat-label">Championships</span>
-        </div>
-        <div class="th-stat">
-          <span class="th-stat-val" style="color:var(--gold)">${team.best_power_score.toFixed(1)}</span>
-          <span class="th-stat-label">Best Power Score</span>
-        </div>
-      </div>
-    </div>
-    ${archetypeHtml}
-    <div class="section-header"><span class="section-title">Notable Stats</span></div>
-    <div class="notable-grid">
-      <div class="notable-card">
-        <div class="notable-label">Fastest Win</div>
-        <div class="notable-val">${team.fastest_win_turns != null ? team.fastest_win_turns + ' turns' : '—'}</div>
-        <div class="notable-detail">${team.fastest_win_detail || 'No data'}</div>
-        ${team.fastest_win_count > 1 ? `<div class="notable-detail" style="color:var(--text-muted);margin-top:4px">Achieved ${team.fastest_win_count}x</div>` : ''}
-      </div>
-      <div class="notable-card">
-        <div class="notable-label">Biggest Margin of Victory</div>
-        <div class="notable-val">${team.biggest_margin != null ? '+' + team.biggest_margin : '—'}</div>
-        <div class="notable-detail">${team.biggest_margin_detail || 'No data'}</div>
+        ${team.top_mvp_card ? `<div class="th-stat">
+          <span class="th-stat-val-sm">${team.top_mvp_card}</span>
+          <span class="th-stat-label">All-Time MVP${team.top_mvp_count ? ' · ' + team.top_mvp_count + 'x' : ''}</span>
+        </div>` : ''}
       </div>
     </div>
 
@@ -137,7 +121,7 @@ async function init() {
     <div style="overflow-x:auto;margin-bottom:24px">
       <table class="standings-table">
         <thead>
-          <tr><th>Season</th><th class="num">W</th><th class="num">L</th><th class="num">Win%</th><th class="num">Power Score</th><th class="num">U-DPI</th></tr>
+          <tr><th>Season</th><th class="num">W</th><th class="num">L</th><th class="num">Win%</th><th>Season MVP</th><th class="num">Power Score</th><th class="num">U-DPI</th></tr>
         </thead>
         <tbody>${seasonRows}</tbody>
       </table>

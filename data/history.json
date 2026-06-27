@@ -17,8 +17,8 @@
           "udpi": 0.1568,
           "is_champion": false,
           "power_score": 71.9,
-          "team_mvp": "Mana Flare",
-          "team_mvp_count": 3,
+          "team_mvp": "Balduvian horde",
+          "team_mvp_count": 2,
           "seed": 1
         },
         {
@@ -49,8 +49,8 @@
           "udpi": 0.0906,
           "is_champion": false,
           "power_score": 48.3,
-          "team_mvp": "Serra's Blessing",
-          "team_mvp_count": 1,
+          "team_mvp": "Armageddon",
+          "team_mvp_count": 2,
           "seed": 4
         },
         {
@@ -65,7 +65,7 @@
           "udpi": 0.1222222222,
           "is_champion": false,
           "power_score": 55.8,
-          "team_mvp": "Storm Seeker",
+          "team_mvp": "Commander Greven il-Vec",
           "team_mvp_count": 1,
           "seed": 3
         },
@@ -113,7 +113,7 @@
           "udpi": 0.06916666667,
           "is_champion": false,
           "power_score": 28.8,
-          "team_mvp": "Llanowar Elves",
+          "team_mvp": "Erratic Portal",
           "team_mvp_count": 1,
           "seed": 6
         },
@@ -145,7 +145,7 @@
           "udpi": 0.04555555556,
           "is_champion": false,
           "power_score": 12.4,
-          "team_mvp": "Soul Exchange",
+          "team_mvp": "Hecatomb",
           "team_mvp_count": 1,
           "seed": 8
         },
@@ -161,7 +161,7 @@
           "udpi": 0.019,
           "is_champion": false,
           "power_score": 0,
-          "team_mvp": "Coat of arms",
+          "team_mvp": "Coat of Arms",
           "team_mvp_count": 1,
           "seed": 10
         }
@@ -222,7 +222,7 @@
           "loser_score": 0.0,
           "winner_turns": 5.0,
           "loser_turns": 5.0,
-          "mvp": "Furnace of rath",
+          "mvp": "Mana Flare",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -402,7 +402,7 @@
           "loser_score": 0.0,
           "winner_turns": 7.0,
           "loser_turns": 8.0,
-          "mvp": "Black vise",
+          "mvp": "Black Vise",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -477,7 +477,7 @@
           "loser_score": -7.0,
           "winner_turns": 11.0,
           "loser_turns": 11.0,
-          "mvp": "Armageddon-Egg Combo",
+          "mvp": "Armageddon",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -702,7 +702,7 @@
           "loser_score": -9.0,
           "winner_turns": 8.0,
           "loser_turns": 8.0,
-          "mvp": "Land tax",
+          "mvp": "Land Tax",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -807,7 +807,7 @@
           "loser_score": -13.0,
           "winner_turns": 7.0,
           "loser_turns": 6.0,
-          "mvp": "SMASHED POTATOES",
+          "mvp": "Crusade",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -1455,7 +1455,7 @@
           "is_champion": true,
           "power_score": 57.5,
           "team_mvp": "Mana Flare",
-          "team_mvp_count": 5,
+          "team_mvp_count": 4,
           "seed": 1
         },
         {
@@ -1470,7 +1470,7 @@
           "udpi": 0.08993055556,
           "is_champion": false,
           "power_score": 41.3,
-          "team_mvp": "Titania's Song",
+          "team_mvp": "Wrath of God",
           "team_mvp_count": 2,
           "seed": 2
         },
@@ -1486,8 +1486,8 @@
           "udpi": 0.1030555556,
           "is_champion": false,
           "power_score": 46.7,
-          "team_mvp": "Yavimaya Ants",
-          "team_mvp_count": 2,
+          "team_mvp": "Gaea's Touch",
+          "team_mvp_count": 1,
           "seed": 3
         },
         {
@@ -1519,7 +1519,7 @@
           "is_champion": false,
           "power_score": 31.2,
           "team_mvp": "Armageddon",
-          "team_mvp_count": 4,
+          "team_mvp_count": 3,
           "seed": 5
         },
         {
@@ -1550,7 +1550,7 @@
           "udpi": 0.07458333333,
           "is_champion": false,
           "power_score": 23.9,
-          "team_mvp": "Commander Greven il-Vec",
+          "team_mvp": "Catacomb Dragon",
           "team_mvp_count": 1,
           "seed": 7
         },
@@ -1566,8 +1566,8 @@
           "udpi": 0.05791666667,
           "is_champion": false,
           "power_score": 33.4,
-          "team_mvp": "Mind Twist",
-          "team_mvp_count": 2,
+          "team_mvp": "Underworld Dreams",
+          "team_mvp_count": 1,
           "seed": 8
         },
         {
@@ -1582,7 +1582,7 @@
           "udpi": 0.06597222222,
           "is_champion": false,
           "power_score": 27.1,
-          "team_mvp": "Entropic Specter",
+          "team_mvp": "Black VIse",
           "team_mvp_count": 1,
           "seed": 9
         },
@@ -2230,7 +2230,7 @@
           "loser_score": -1.0,
           "winner_turns": 11.0,
           "loser_turns": 10.0,
-          "mvp": "Will-O-the-Wisp",
+          "mvp": "Will-o'-the-Wisp",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -2620,7 +2620,7 @@
           "loser_score": -1.0,
           "winner_turns": 10.0,
           "loser_turns": 10.0,
-          "mvp": "Hypnotic Specter",
+          "mvp": "Mind Twist",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -2665,7 +2665,7 @@
           "loser_score": -1.0,
           "winner_turns": 6.0,
           "loser_turns": 6.0,
-          "mvp": "Storm Seeker",
+          "mvp": "Wormwood Treefolk",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -2695,7 +2695,7 @@
           "loser_score": -2.0,
           "winner_turns": 10.0,
           "loser_turns": 10.0,
-          "mvp": "Armageddon Clock",
+          "mvp": "Yavimaya Ants",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -2725,7 +2725,7 @@
           "loser_score": 0.0,
           "winner_turns": 5.0,
           "loser_turns": 4.0,
-          "mvp": "Mana Flare",
+          "mvp": "Furnace of Rath",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -3465,7 +3465,7 @@
           "is_champion": false,
           "power_score": 61.6,
           "team_mvp": "City of Brass",
-          "team_mvp_count": 6,
+          "team_mvp_count": 5,
           "seed": 1
         },
         {
@@ -3512,8 +3512,8 @@
           "udpi": 0.1113580247,
           "is_champion": false,
           "power_score": 59.4,
-          "team_mvp": "Smashed Potatoes",
-          "team_mvp_count": 4,
+          "team_mvp": "Armageddon",
+          "team_mvp_count": 3,
           "seed": 4
         },
         {
@@ -3528,7 +3528,7 @@
           "udpi": 0.08765432099,
           "is_champion": false,
           "power_score": 39.8,
-          "team_mvp": "Fyndhorn Elves",
+          "team_mvp": "Killer Bees",
           "team_mvp_count": 2,
           "seed": 5
         },
@@ -3545,7 +3545,7 @@
           "is_champion": true,
           "power_score": 30.0,
           "team_mvp": "Elvish Mystic",
-          "team_mvp_count": 3,
+          "team_mvp_count": 2,
           "seed": 6
         },
         {
@@ -3576,7 +3576,7 @@
           "udpi": 0.0637037037,
           "is_champion": false,
           "power_score": 28.1,
-          "team_mvp": "Breeding Pit",
+          "team_mvp": "Bad Moon",
           "team_mvp_count": 2,
           "seed": 8
         },
@@ -3699,7 +3699,7 @@
           "loser_score": -4.0,
           "winner_turns": 8.0,
           "loser_turns": 7.0,
-          "mvp": "Smashed Potatoes",
+          "mvp": "Crusade",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -3729,7 +3729,7 @@
           "loser_score": -27.0,
           "winner_turns": 12.0,
           "loser_turns": 11.0,
-          "mvp": "FoR/Mana Flare",
+          "mvp": "Mana Flare",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -3774,7 +3774,7 @@
           "loser_score": -2.0,
           "winner_turns": 10.0,
           "loser_turns": 9.0,
-          "mvp": "Smashed Potatoes",
+          "mvp": "Crusade",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -4599,7 +4599,7 @@
           "loser_score": -3.0,
           "winner_turns": 9.0,
           "loser_turns": 8.0,
-          "mvp": "Smashed Potatoes",
+          "mvp": "Crusade",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -4974,7 +4974,7 @@
           "loser_score": -1.0,
           "winner_turns": 6.0,
           "loser_turns": 6.0,
-          "mvp": "Acidic Sliver",
+          "mvp": "City of Brass",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -5004,7 +5004,7 @@
           "loser_score": 0.0,
           "winner_turns": 13.0,
           "loser_turns": 12.0,
-          "mvp": "Carnophage",
+          "mvp": "Necromancy",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -5019,7 +5019,7 @@
           "loser_score": -23.0,
           "winner_turns": 6.0,
           "loser_turns": 6.0,
-          "mvp": "Channel",
+          "mvp": "Nykthos, Shrine to Nyx",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -5049,7 +5049,7 @@
           "loser_score": -5.0,
           "winner_turns": 6.0,
           "loser_turns": 5.0,
-          "mvp": "Smashed Potatoes",
+          "mvp": "Crusade",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -5064,7 +5064,7 @@
           "loser_score": -1.0,
           "winner_turns": 7.0,
           "loser_turns": 7.0,
-          "mvp": "Elvish Archers",
+          "mvp": "Force of Nature",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -5169,7 +5169,7 @@
           "loser_score": -15.0,
           "winner_turns": 5.0,
           "loser_turns": 5.0,
-          "mvp": "Khalni Hydra",
+          "mvp": "Primalcrux",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -5199,7 +5199,7 @@
           "loser_score": -6.0,
           "winner_turns": 8.0,
           "loser_turns": 7.0,
-          "mvp": "Elvish Mystic",
+          "mvp": "Silklash Spider",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -5990,8 +5990,8 @@
           "udpi": 0.149625,
           "is_champion": false,
           "power_score": 70.2,
-          "team_mvp": "Demonic Tutor",
-          "team_mvp_count": 5,
+          "team_mvp": "Megrim",
+          "team_mvp_count": 4,
           "seed": 2
         },
         {
@@ -6039,7 +6039,7 @@
           "is_champion": true,
           "power_score": 43.6,
           "team_mvp": "Armageddon",
-          "team_mvp_count": 8,
+          "team_mvp_count": 6,
           "seed": 5
         },
         {
@@ -6086,8 +6086,8 @@
           "udpi": 0.044275,
           "is_champion": false,
           "power_score": 17.1,
-          "team_mvp": "Kormus Bell",
-          "team_mvp_count": 2,
+          "team_mvp": "Ashes to Ashes",
+          "team_mvp_count": 1,
           "seed": 8
         },
         {
@@ -6102,8 +6102,8 @@
           "udpi": 0.028125,
           "is_champion": false,
           "power_score": 8.8,
-          "team_mvp": "Ball Lightning",
-          "team_mvp_count": 3,
+          "team_mvp": "Rock Hydra",
+          "team_mvp_count": 2,
           "seed": 9
         },
         {
@@ -6510,7 +6510,7 @@
           "loser_score": -2.0,
           "winner_turns": 6.0,
           "loser_turns": 5.0,
-          "mvp": "Ernham Djinn",
+          "mvp": "Erhnam Djinn",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -6570,7 +6570,7 @@
           "loser_score": -3.0,
           "winner_turns": 15.0,
           "loser_turns": 15.0,
-          "mvp": "Nevinrryal's Disk / Demonic Hordes",
+          "mvp": "Nevinyrral's Disk",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -6615,7 +6615,7 @@
           "loser_score": -1.0,
           "winner_turns": 17.0,
           "loser_turns": 17.0,
-          "mvp": "Cyclopean Tomb / Demonic Tutor",
+          "mvp": "Cyclopean Tomb",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -6645,7 +6645,7 @@
           "loser_score": -6.0,
           "winner_turns": 11.0,
           "loser_turns": 10.0,
-          "mvp": "Ernham Djinn",
+          "mvp": "Erhnam Djinn",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -6990,7 +6990,7 @@
           "loser_score": -4.0,
           "winner_turns": 14.0,
           "loser_turns": 13.0,
-          "mvp": "Icy Manipulator / Nightmare",
+          "mvp": "Icy Manipulator",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -7020,7 +7020,7 @@
           "loser_score": 0.0,
           "winner_turns": 11.0,
           "loser_turns": 10.0,
-          "mvp": "Megrim (2x)",
+          "mvp": "Megrim",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -7245,7 +7245,7 @@
           "loser_score": -5.0,
           "winner_turns": 5.0,
           "loser_turns": 5.0,
-          "mvp": "Gaea's Touch / Yavimaya Ants",
+          "mvp": "Yavimaya Ants",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -7260,7 +7260,7 @@
           "loser_score": 0.0,
           "winner_turns": 11.0,
           "loser_turns": 10.0,
-          "mvp": "Smashed Potatoes",
+          "mvp": "Crusade",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -7425,7 +7425,7 @@
           "loser_score": 0.0,
           "winner_turns": 6.0,
           "loser_turns": 5.0,
-          "mvp": "Ernham Djinn",
+          "mvp": "Erhnam Djinn",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -7560,7 +7560,7 @@
           "loser_score": -4.0,
           "winner_turns": 12.0,
           "loser_turns": 12.0,
-          "mvp": "Rain of Tears / Stone Rain",
+          "mvp": "Stone Rain",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -7755,7 +7755,7 @@
           "loser_score": -4.0,
           "winner_turns": 7.0,
           "loser_turns": 6.0,
-          "mvp": "Smashed Potatoes",
+          "mvp": "Crusade",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -7815,7 +7815,7 @@
           "loser_score": -3.0,
           "winner_turns": 16.0,
           "loser_turns": 15.0,
-          "mvp": "Hecatomb",
+          "mvp": "Kormus Bell",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -7860,7 +7860,7 @@
           "loser_score": -2.0,
           "winner_turns": 6.0,
           "loser_turns": 6.0,
-          "mvp": "Ball Lightning",
+          "mvp": "Wheel of Fortune",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -7890,7 +7890,7 @@
           "loser_score": -3.0,
           "winner_turns": 8.0,
           "loser_turns": 7.0,
-          "mvp": "Gaea's Touch",
+          "mvp": "Yavimaya Ants",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -7905,7 +7905,7 @@
           "loser_score": -6.0,
           "winner_turns": 7.0,
           "loser_turns": 7.0,
-          "mvp": "Killer Bee's",
+          "mvp": "Yavimaya Ants",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -7965,7 +7965,7 @@
           "loser_score": -1.0,
           "winner_turns": 14.0,
           "loser_turns": 13.0,
-          "mvp": "Pox",
+          "mvp": "Megrim",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -7980,7 +7980,7 @@
           "loser_score": -4.0,
           "winner_turns": 8.0,
           "loser_turns": 8.0,
-          "mvp": "Demonic Tutor",
+          "mvp": "Megrim",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -8025,7 +8025,7 @@
           "loser_score": -9.0,
           "winner_turns": 5.0,
           "loser_turns": 5.0,
-          "mvp": "Dark Ritual",
+          "mvp": "Living Death",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -8055,7 +8055,7 @@
           "loser_score": -12.0,
           "winner_turns": 13.0,
           "loser_turns": 12.0,
-          "mvp": "Disenchant",
+          "mvp": "White Knight",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -8070,7 +8070,7 @@
           "loser_score": -3.0,
           "winner_turns": 8.0,
           "loser_turns": 7.0,
-          "mvp": "Icatian Town",
+          "mvp": "White Knight",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -8100,7 +8100,7 @@
           "loser_score": -4.0,
           "winner_turns": 10.0,
           "loser_turns": 10.0,
-          "mvp": "Cataclysm",
+          "mvp": "Armageddon",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -8115,7 +8115,7 @@
           "loser_score": 0.0,
           "winner_turns": 26.0,
           "loser_turns": 25.0,
-          "mvp": "Jokulhaups",
+          "mvp": "Demonic Tutor",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -8145,7 +8145,7 @@
           "loser_score": -1.0,
           "winner_turns": 7.0,
           "loser_turns": 6.0,
-          "mvp": "Deep Spawn",
+          "mvp": "Counterspell",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -8160,7 +8160,7 @@
           "loser_score": -8.0,
           "winner_turns": 15.0,
           "loser_turns": 15.0,
-          "mvp": "Killer Bee's",
+          "mvp": "Force of Nature",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -8190,7 +8190,7 @@
           "loser_score": -2.0,
           "winner_turns": 8.0,
           "loser_turns": 8.0,
-          "mvp": "Wheel of Fortune",
+          "mvp": "Demonic Tutor",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -8205,7 +8205,7 @@
           "loser_score": -2.0,
           "winner_turns": 11.0,
           "loser_turns": 10.0,
-          "mvp": "Serra Angel",
+          "mvp": "Armageddon",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -8280,7 +8280,7 @@
           "loser_score": -1.0,
           "winner_turns": 11.0,
           "loser_turns": 10.0,
-          "mvp": "Smashed Potatoes",
+          "mvp": "Land Tax",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -8295,7 +8295,7 @@
           "loser_score": -1.0,
           "winner_turns": 8.0,
           "loser_turns": 8.0,
-          "mvp": "Smashed Potatoes",
+          "mvp": "Land Tax",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -8325,7 +8325,7 @@
           "loser_score": -8.0,
           "winner_turns": 9.0,
           "loser_turns": 8.0,
-          "mvp": "Demonic Tutor",
+          "mvp": "Stone Rain",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -10695,8 +10695,8 @@
           "udpi": 0.19125,
           "is_champion": false,
           "power_score": 76.3,
-          "team_mvp": "Living Death",
-          "team_mvp_count": 4,
+          "team_mvp": "Buried Alive",
+          "team_mvp_count": 3,
           "seed": 2
         },
         {
@@ -10727,7 +10727,7 @@
           "udpi": 0.11585,
           "is_champion": false,
           "power_score": 55.5,
-          "team_mvp": "SMASHED POTATOES",
+          "team_mvp": "Crusade",
           "team_mvp_count": 3,
           "seed": 3
         },
@@ -10776,7 +10776,7 @@
           "is_champion": true,
           "power_score": 31.9,
           "team_mvp": "Black Vise",
-          "team_mvp_count": 8,
+          "team_mvp_count": 4,
           "seed": 6
         },
         {
@@ -10791,8 +10791,8 @@
           "udpi": 0.0564,
           "is_champion": false,
           "power_score": 24.6,
-          "team_mvp": null,
-          "team_mvp_count": 0,
+          "team_mvp": "Pandemonium",
+          "team_mvp_count": 2,
           "seed": 7
         },
         {
@@ -10807,8 +10807,8 @@
           "udpi": 0.044275,
           "is_champion": false,
           "power_score": 19.5,
-          "team_mvp": "Hurricane",
-          "team_mvp_count": 3,
+          "team_mvp": "City of Solitude",
+          "team_mvp_count": 1,
           "seed": 9
         },
         {
@@ -10824,7 +10824,7 @@
           "is_champion": false,
           "power_score": 29.1,
           "team_mvp": "Winter Orb",
-          "team_mvp_count": 5,
+          "team_mvp_count": 4,
           "seed": 8
         },
         {
@@ -10855,7 +10855,7 @@
           "udpi": 0.0156,
           "is_champion": false,
           "power_score": 0,
-          "team_mvp": "Death Pits of Rath",
+          "team_mvp": "Bottomless Pit",
           "team_mvp_count": 1,
           "seed": 11
         }
@@ -10931,7 +10931,7 @@
           "loser_score": -2.0,
           "winner_turns": 8.0,
           "loser_turns": 8.0,
-          "mvp": "SMASHED POTATOES",
+          "mvp": "Crusade",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -12071,7 +12071,7 @@
           "loser_score": -1.0,
           "winner_turns": 8.0,
           "loser_turns": 7.0,
-          "mvp": "SMASHED POTATOES",
+          "mvp": "Crusade",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -12296,7 +12296,7 @@
           "loser_score": -5.0,
           "winner_turns": 7.0,
           "loser_turns": 7.0,
-          "mvp": "SMASHED POTATOES",
+          "mvp": "Crusade",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -12536,7 +12536,7 @@
           "loser_score": 0.0,
           "winner_turns": 12.0,
           "loser_turns": 11.0,
-          "mvp": "Tranquility",
+          "mvp": "Yavimaya Ants",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -12551,7 +12551,7 @@
           "loser_score": 0.0,
           "winner_turns": 14.0,
           "loser_turns": 13.0,
-          "mvp": "Storm Seeker",
+          "mvp": "Winter Orb",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -12611,7 +12611,7 @@
           "loser_score": -3.0,
           "winner_turns": 10.0,
           "loser_turns": 10.0,
-          "mvp": "Giant Growth",
+          "mvp": "Fastbond",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -12656,7 +12656,7 @@
           "loser_score": -9.0,
           "winner_turns": 10.0,
           "loser_turns": 10.0,
-          "mvp": "Granite Gargoyle",
+          "mvp": "Fork",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -12671,7 +12671,7 @@
           "loser_score": -2.0,
           "winner_turns": 17.0,
           "loser_turns": 17.0,
-          "mvp": "Demonic Hordes",
+          "mvp": "Black Vise",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -12686,7 +12686,7 @@
           "loser_score": -2.0,
           "winner_turns": 8.0,
           "loser_turns": 8.0,
-          "mvp": "Balance",
+          "mvp": "Pandemonium",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -12701,7 +12701,7 @@
           "loser_score": -8.0,
           "winner_turns": 10.0,
           "loser_turns": 9.0,
-          "mvp": "Ernham Djinn",
+          "mvp": "Tranquility",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -12716,7 +12716,7 @@
           "loser_score": -3.0,
           "winner_turns": 8.0,
           "loser_turns": 7.0,
-          "mvp": "Balduvian Horde",
+          "mvp": "Fork",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -12731,7 +12731,7 @@
           "loser_score": 0.0,
           "winner_turns": 18.0,
           "loser_turns": 17.0,
-          "mvp": "Nevinyrral's Disk",
+          "mvp": "Black Vise",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -12746,7 +12746,7 @@
           "loser_score": -1.0,
           "winner_turns": 7.0,
           "loser_turns": 6.0,
-          "mvp": "VIashino Sandstalker",
+          "mvp": "Pandemonium",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -12761,7 +12761,7 @@
           "loser_score": -1.0,
           "winner_turns": 5.0,
           "loser_turns": 5.0,
-          "mvp": "Fyndhorn Elder",
+          "mvp": "Tranquility",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -12851,7 +12851,7 @@
           "loser_score": -6.0,
           "winner_turns": 19.0,
           "loser_turns": 18.0,
-          "mvp": "Spitting Earth",
+          "mvp": "Furnace of Rath",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -12866,7 +12866,7 @@
           "loser_score": -1.0,
           "winner_turns": 11.0,
           "loser_turns": 10.0,
-          "mvp": "Sengir Vampire",
+          "mvp": "Black Vise",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -12881,7 +12881,7 @@
           "loser_score": 0.0,
           "winner_turns": 15.0,
           "loser_turns": 14.0,
-          "mvp": "Hurricane",
+          "mvp": "Sylvan Library",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -12911,7 +12911,7 @@
           "loser_score": -3.0,
           "winner_turns": 12.0,
           "loser_turns": 12.0,
-          "mvp": "Hurricane",
+          "mvp": "Sylvan Library",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -12926,7 +12926,7 @@
           "loser_score": -7.0,
           "winner_turns": 11.0,
           "loser_turns": 11.0,
-          "mvp": "Demonic Hordes",
+          "mvp": "Black Vise",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -12941,7 +12941,7 @@
           "loser_score": -3.0,
           "winner_turns": 11.0,
           "loser_turns": 11.0,
-          "mvp": "Shivan Dragon",
+          "mvp": "Furnace of Rath",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -12956,7 +12956,7 @@
           "loser_score": -3.0,
           "winner_turns": 12.0,
           "loser_turns": 12.0,
-          "mvp": "Icy Manipulator",
+          "mvp": "Black Vise",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -13001,7 +13001,7 @@
           "loser_score": -4.0,
           "winner_turns": 9.0,
           "loser_turns": 8.0,
-          "mvp": "Force of Nature",
+          "mvp": "Sylvan Library",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -13031,7 +13031,7 @@
           "loser_score": -3.0,
           "winner_turns": 15.0,
           "loser_turns": 14.0,
-          "mvp": "Terror",
+          "mvp": "Black Vise",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -13046,7 +13046,7 @@
           "loser_score": -6.0,
           "winner_turns": 9.0,
           "loser_turns": 8.0,
-          "mvp": "City of Solitude",
+          "mvp": "Hurricane",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -13076,7 +13076,7 @@
           "loser_score": -2.0,
           "winner_turns": 6.0,
           "loser_turns": 5.0,
-          "mvp": "Aluren",
+          "mvp": "Hurricane",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -13091,7 +13091,7 @@
           "loser_score": 0.0,
           "winner_turns": 18.0,
           "loser_turns": 17.0,
-          "mvp": "Royal Assassin",
+          "mvp": "Black Vise",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -15848,8 +15848,8 @@
           "udpi": 0.15855,
           "is_champion": false,
           "power_score": 61.1,
-          "team_mvp": "City of Brass",
-          "team_mvp_count": 3,
+          "team_mvp": "Coat of Arms",
+          "team_mvp_count": 2,
           "seed": 2
         },
         {
@@ -15864,8 +15864,8 @@
           "udpi": 0.128625,
           "is_champion": true,
           "power_score": 62.4,
-          "team_mvp": "Armageddon",
-          "team_mvp_count": 5,
+          "team_mvp": "Balance",
+          "team_mvp_count": 3,
           "seed": 1
         },
         {
@@ -15897,7 +15897,7 @@
           "is_champion": false,
           "power_score": 46.4,
           "team_mvp": "Black Vise",
-          "team_mvp_count": 5,
+          "team_mvp_count": 3,
           "seed": 3
         },
         {
@@ -15912,7 +15912,7 @@
           "udpi": 0.074,
           "is_champion": false,
           "power_score": 28.5,
-          "team_mvp": "Megrim",
+          "team_mvp": "Rukh Egg",
           "team_mvp_count": 2,
           "seed": 6
         },
@@ -15992,8 +15992,8 @@
           "udpi": 0.0139,
           "is_champion": false,
           "power_score": 0,
-          "team_mvp": "Control Magic",
-          "team_mvp_count": 2,
+          "team_mvp": "Propaganda",
+          "team_mvp_count": 1,
           "seed": 12
         },
         {
@@ -16008,12 +16008,12 @@
           "udpi": 0,
           "is_champion": false,
           "power_score": 0.0,
-          "team_mvp": "Erhnam Djinn",
+          "team_mvp": "Giant Growth",
           "team_mvp_count": 2,
           "seed": 5
         },
         {
-          "team": "Mist Monsters",
+          "team": "Trick or Treat Freaks",
           "division": "West",
           "gp": 20,
           "w": 7,
@@ -16024,8 +16024,8 @@
           "udpi": 0,
           "is_champion": false,
           "power_score": 0.0,
-          "team_mvp": "Maze of Ith",
-          "team_mvp_count": 2,
+          "team_mvp": "Illusionary Mask",
+          "team_mvp_count": 1,
           "seed": 11
         }
       ],
@@ -16244,7 +16244,7 @@
           "match_type": "Regular Season",
           "division": "Non-Divisional",
           "week": 3.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Team 11",
           "winner_score": 20.0,
           "loser_score": -3.0,
@@ -16724,7 +16724,7 @@
           "match_type": "Regular Season",
           "division": "West",
           "week": 9.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Smashed Potatoes",
           "winner_score": 21.0,
           "loser_score": -5.0,
@@ -16829,7 +16829,7 @@
           "match_type": "Regular Season",
           "division": "West",
           "week": 10.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Darwin's Doom",
           "winner_score": 4.0,
           "loser_score": -3.0,
@@ -16920,7 +16920,7 @@
           "division": "West",
           "week": 11.0,
           "winner": "Big Gloves",
-          "loser": "Mist Monsters",
+          "loser": "Trick or Treat Freaks",
           "winner_score": 13.0,
           "loser_score": 0.0,
           "winner_turns": 6.0,
@@ -16995,7 +16995,7 @@
           "division": "West",
           "week": 12.0,
           "winner": "Darwin's Doom",
-          "loser": "Mist Monsters",
+          "loser": "Trick or Treat Freaks",
           "winner_score": 20.0,
           "loser_score": -2.0,
           "winner_turns": 6.0,
@@ -17015,7 +17015,7 @@
           "loser_score": -1.0,
           "winner_turns": 8.0,
           "loser_turns": 7.0,
-          "mvp": "Entropic Spector",
+          "mvp": "Entropic Specter",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -17085,7 +17085,7 @@
           "division": "West",
           "week": 13.0,
           "winner": "Smashed Potatoes",
-          "loser": "Mist Monsters",
+          "loser": "Trick or Treat Freaks",
           "winner_score": 28.0,
           "loser_score": -5.0,
           "winner_turns": 9.0,
@@ -17190,7 +17190,7 @@
           "division": "West",
           "week": 14.0,
           "winner": "Big Gloves",
-          "loser": "Mist Monsters",
+          "loser": "Trick or Treat Freaks",
           "winner_score": 12.0,
           "loser_score": 0.0,
           "winner_turns": 11.0,
@@ -17265,7 +17265,7 @@
           "division": "West",
           "week": 15.0,
           "winner": "Smashed Potatoes",
-          "loser": "Mist Monsters",
+          "loser": "Trick or Treat Freaks",
           "winner_score": 23.0,
           "loser_score": 0.0,
           "winner_turns": 7.0,
@@ -17369,7 +17369,7 @@
           "match_type": "Regular Season",
           "division": "West",
           "week": 16.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Darwin's Doom",
           "winner_score": 12.0,
           "loser_score": 0.0,
@@ -17460,7 +17460,7 @@
           "division": "West",
           "week": 17.0,
           "winner": "Big Gloves",
-          "loser": "Mist Monsters",
+          "loser": "Trick or Treat Freaks",
           "winner_score": 15.0,
           "loser_score": -3.0,
           "winner_turns": 5.0,
@@ -17519,7 +17519,7 @@
           "match_type": "Regular Season",
           "division": "Non-Divisional",
           "week": 18.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Icy Hot",
           "winner_score": 20.0,
           "loser_score": 0.0,
@@ -17594,7 +17594,7 @@
           "match_type": "Regular Season",
           "division": "Non-Divisional",
           "week": 19.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Swamp Things",
           "winner_score": 12.0,
           "loser_score": -11.0,
@@ -17685,7 +17685,7 @@
           "division": "Non-Divisional",
           "week": 20.0,
           "winner": "No Lands For You",
-          "loser": "Mist Monsters",
+          "loser": "Trick or Treat Freaks",
           "winner_score": 15.0,
           "loser_score": -2.0,
           "winner_turns": 11.0,
@@ -17720,7 +17720,7 @@
           "loser_score": -2.0,
           "winner_turns": 9.0,
           "loser_turns": 9.0,
-          "mvp": "SMASHED POTATOES",
+          "mvp": "Crusade",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -17760,7 +17760,7 @@
           "division": "Non-Divisional",
           "week": 21.0,
           "winner": "Dark N Stormy",
-          "loser": "Mist Monsters",
+          "loser": "Trick or Treat Freaks",
           "winner_score": 20.0,
           "loser_score": -2.0,
           "winner_turns": 21.0,
@@ -17849,13 +17849,13 @@
           "match_type": "Playoffs",
           "division": "Qualifer",
           "week": 1.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Team 11",
           "winner_score": 14.0,
           "loser_score": -3.0,
           "winner_turns": 20.0,
           "loser_turns": 20.0,
-          "mvp": "Maze of Ith",
+          "mvp": "Relic Barrier",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -17870,7 +17870,7 @@
           "loser_score": -6.0,
           "winner_turns": 13.0,
           "loser_turns": 13.0,
-          "mvp": "Dark Ritual",
+          "mvp": "Counterspell",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -17879,7 +17879,7 @@
           "match_type": "Playoffs",
           "division": "Qualifer",
           "week": 1.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Team 11",
           "winner_score": 20.0,
           "loser_score": -5.0,
@@ -17909,13 +17909,13 @@
           "match_type": "Playoffs",
           "division": "Qualifer",
           "week": 2.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Big Gloves",
           "winner_score": 13.0,
           "loser_score": -2.0,
           "winner_turns": 6.0,
           "loser_turns": 6.0,
-          "mvp": "Unstable Mutation",
+          "mvp": "Relic Barrier",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -17940,12 +17940,12 @@
           "division": "Qualifer",
           "week": 2.0,
           "winner": "Big Gloves",
-          "loser": "Mist Monsters",
+          "loser": "Trick or Treat Freaks",
           "winner_score": 19.0,
           "loser_score": -2.0,
           "winner_turns": 5.0,
           "loser_turns": 6.0,
-          "mvp": "Black Vise",
+          "mvp": "Underworld Dreams",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -17960,7 +17960,7 @@
           "loser_score": -3.0,
           "winner_turns": 7.0,
           "loser_turns": 6.0,
-          "mvp": "Necromancy",
+          "mvp": "Tormod's Crypt",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -17970,7 +17970,7 @@
           "division": "Qualifer",
           "week": 2.0,
           "winner": "Big Gloves",
-          "loser": "Mist Monsters",
+          "loser": "Trick or Treat Freaks",
           "winner_score": 14.0,
           "loser_score": 0.0,
           "winner_turns": 9.0,
@@ -17990,7 +17990,7 @@
           "loser_score": -16.0,
           "winner_turns": 9.0,
           "loser_turns": 9.0,
-          "mvp": "Living Death",
+          "mvp": "Tormod's Crypt",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -17999,13 +17999,13 @@
           "match_type": "Playoffs",
           "division": "Qualifer",
           "week": 2.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Big Gloves",
           "winner_score": 11.0,
           "loser_score": -15.0,
           "winner_turns": 9.0,
           "loser_turns": 8.0,
-          "mvp": "Mana Vortex",
+          "mvp": "Relic Barrier",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -18029,7 +18029,7 @@
           "match_type": "Playoffs",
           "division": "Qualifer",
           "week": 2.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Big Gloves",
           "winner_score": 8.0,
           "loser_score": -25.0,
@@ -18059,13 +18059,13 @@
           "match_type": "Playoffs",
           "division": "Premier",
           "week": 3.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Smashed Potatoes",
           "winner_score": 1.0,
           "loser_score": -1.0,
           "winner_turns": 15.0,
           "loser_turns": 15.0,
-          "mvp": "Unstable Mutation",
+          "mvp": "Drafna's Restoration",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -18080,7 +18080,7 @@
           "loser_score": -10.0,
           "winner_turns": 8.0,
           "loser_turns": 8.0,
-          "mvp": "Megrim",
+          "mvp": "Mind Twist",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -18095,7 +18095,7 @@
           "loser_score": 0.0,
           "winner_turns": 9.0,
           "loser_turns": 9.0,
-          "mvp": "Cataclysm",
+          "mvp": "Kudzu",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -18110,7 +18110,7 @@
           "loser_score": -2.0,
           "winner_turns": 5.0,
           "loser_turns": 4.0,
-          "mvp": "Black Vise",
+          "mvp": "Sengir Vampire",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -18125,7 +18125,7 @@
           "loser_score": -9.0,
           "winner_turns": 7.0,
           "loser_turns": 6.0,
-          "mvp": "City of Brass",
+          "mvp": "Winged Sliver",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -18135,12 +18135,12 @@
           "division": "Premier",
           "week": 3.0,
           "winner": "Smashed Potatoes",
-          "loser": "Mist Monsters",
+          "loser": "Trick or Treat Freaks",
           "winner_score": 29.0,
           "loser_score": -4.0,
           "winner_turns": 8.0,
           "loser_turns": 8.0,
-          "mvp": "Land Tax",
+          "mvp": "Armageddon",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -18155,7 +18155,7 @@
           "loser_score": -12.0,
           "winner_turns": 13.0,
           "loser_turns": 12.0,
-          "mvp": "Fireball",
+          "mvp": "Balduvian Horde",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -18180,12 +18180,12 @@
           "division": "Premier",
           "week": 3.0,
           "winner": "Smashed Potatoes",
-          "loser": "Mist Monsters",
+          "loser": "Trick or Treat Freaks",
           "winner_score": 20.0,
           "loser_score": -5.0,
           "winner_turns": 7.0,
           "loser_turns": 6.0,
-          "mvp": "SMASHED POTATOES",
+          "mvp": "Armageddon",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -18215,7 +18215,7 @@
           "loser_score": -5.0,
           "winner_turns": 16.0,
           "loser_turns": 15.0,
-          "mvp": "Worldly Tutor",
+          "mvp": "Kudzu",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -18230,7 +18230,7 @@
           "loser_score": -7.0,
           "winner_turns": 8.0,
           "loser_turns": 8.0,
-          "mvp": "Sinkhole",
+          "mvp": "Sengir Vampire",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -18239,7 +18239,7 @@
           "match_type": "Playoffs",
           "division": "Premier",
           "week": 3.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Smashed Potatoes",
           "winner_score": 11.0,
           "loser_score": -4.0,
@@ -18285,7 +18285,7 @@
           "division": "Premier",
           "week": 3.0,
           "winner": "Smashed Potatoes",
-          "loser": "Mist Monsters",
+          "loser": "Trick or Treat Freaks",
           "winner_score": 28.0,
           "loser_score": -1.0,
           "winner_turns": 9.0,
@@ -18320,7 +18320,7 @@
           "loser_score": -7.0,
           "winner_turns": 9.0,
           "loser_turns": 9.0,
-          "mvp": "Erhnam Djinn",
+          "mvp": "Birds of Paradise",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -18335,7 +18335,7 @@
           "loser_score": 0.0,
           "winner_turns": 13.0,
           "loser_turns": 13.0,
-          "mvp": "Nevinyrral's Disk",
+          "mvp": "Black Vise",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -18350,7 +18350,7 @@
           "loser_score": -4.0,
           "winner_turns": 8.0,
           "loser_turns": 7.0,
-          "mvp": "Armageddon",
+          "mvp": "Land Tax",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -18365,7 +18365,7 @@
           "loser_score": -3.0,
           "winner_turns": 17.0,
           "loser_turns": 17.0,
-          "mvp": "Cyclopean Tomb",
+          "mvp": "Black Vise",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -18380,7 +18380,7 @@
           "loser_score": -1.0,
           "winner_turns": 12.0,
           "loser_turns": 11.0,
-          "mvp": "Nevinyrral's Disk",
+          "mvp": "Black Vise",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -18410,7 +18410,7 @@
           "loser_score": -9.0,
           "winner_turns": 10.0,
           "loser_turns": 10.0,
-          "mvp": "Balance",
+          "mvp": "Land Tax",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -18425,7 +18425,7 @@
           "loser_score": -3.0,
           "winner_turns": 8.0,
           "loser_turns": 8.0,
-          "mvp": "Disenchant",
+          "mvp": "Gemstone Mine",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -18440,7 +18440,7 @@
           "loser_score": -1.0,
           "winner_turns": 11.0,
           "loser_turns": 10.0,
-          "mvp": "Armageddon",
+          "mvp": "Land Tax",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -18500,7 +18500,7 @@
           "loser_score": -1.0,
           "winner_turns": 14.0,
           "loser_turns": 13.0,
-          "mvp": "Land Tax",
+          "mvp": "Zuran Orb",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -18515,7 +18515,7 @@
           "loser_score": 0.0,
           "winner_turns": 17.0,
           "loser_turns": 16.0,
-          "mvp": "Armageddon",
+          "mvp": "Zuran Orb",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -18530,7 +18530,7 @@
           "loser_score": -1.0,
           "winner_turns": 5.0,
           "loser_turns": 5.0,
-          "mvp": "SMASHED POTATOES",
+          "mvp": "Zuran Orb",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -19561,7 +19561,7 @@
             "20": 8
           }
         },
-        "Mist Monsters": {
+        "Trick or Treat Freaks": {
           "division": "West",
           "weekly_rank": {
             "1": 10,
@@ -22978,7 +22978,7 @@
           "udpi": 1.807207,
           "is_champion": false,
           "power_score": 0.0,
-          "team_mvp": "Mana Leak",
+          "team_mvp": "Jade Statue",
           "team_mvp_count": 1,
           "seed": 14
         },
@@ -22994,7 +22994,7 @@
           "udpi": 0.153,
           "is_champion": false,
           "power_score": 70.8,
-          "team_mvp": "Disenchant",
+          "team_mvp": "Erhnam Djinn",
           "team_mvp_count": 4,
           "seed": 1
         },
@@ -23011,7 +23011,7 @@
           "is_champion": true,
           "power_score": 61.1,
           "team_mvp": "Disenchant",
-          "team_mvp_count": 6,
+          "team_mvp_count": 4,
           "seed": 2
         },
         {
@@ -23063,7 +23063,7 @@
           "seed": 5
         },
         {
-          "team": "Mist Monsters",
+          "team": "Trick or Treat Freaks",
           "division": "West",
           "gp": 20,
           "w": 12,
@@ -23075,7 +23075,7 @@
           "is_champion": false,
           "power_score": 40.2,
           "team_mvp": "Illusionary Mask",
-          "team_mvp_count": 6,
+          "team_mvp_count": 5,
           "seed": 6
         },
         {
@@ -23107,7 +23107,7 @@
           "is_champion": false,
           "power_score": 33.5,
           "team_mvp": "Black Vise",
-          "team_mvp_count": 5,
+          "team_mvp_count": 3,
           "seed": 8
         },
         {
@@ -23123,7 +23123,7 @@
           "is_champion": false,
           "power_score": 44.5,
           "team_mvp": "Black Vise",
-          "team_mvp_count": 5,
+          "team_mvp_count": 4,
           "seed": 9
         },
         {
@@ -23155,7 +23155,7 @@
           "is_champion": false,
           "power_score": 20.7,
           "team_mvp": "Meekstone",
-          "team_mvp_count": 3,
+          "team_mvp_count": 2,
           "seed": 11
         },
         {
@@ -23186,8 +23186,8 @@
           "udpi": 0.042875,
           "is_champion": false,
           "power_score": 14.7,
-          "team_mvp": "Power Surge",
-          "team_mvp_count": 5,
+          "team_mvp": "Mana Flare",
+          "team_mvp_count": 2,
           "seed": 13
         },
         {
@@ -23202,8 +23202,8 @@
           "udpi": 0.029625,
           "is_champion": false,
           "power_score": 2.7,
-          "team_mvp": "Underworld Dreams",
-          "team_mvp_count": 3,
+          "team_mvp": "Demonic Tutor",
+          "team_mvp_count": 1,
           "seed": 15
         },
         {
@@ -23334,7 +23334,7 @@
           "division": "Non-Divisional",
           "week": 1.0,
           "winner": "Team 10",
-          "loser": "Mist Monsters",
+          "loser": "Trick or Treat Freaks",
           "winner_score": 24.0,
           "loser_score": -3.0,
           "winner_turns": 7.0,
@@ -23438,7 +23438,7 @@
           "match_type": "Regular Season",
           "division": "Non-Divisional",
           "week": 2.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Extinction",
           "winner_score": 11.0,
           "loser_score": -16.0,
@@ -23543,7 +23543,7 @@
           "match_type": "Regular Season",
           "division": "Non-Divisional",
           "week": 3.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Dark N Stormy",
           "winner_score": 4.0,
           "loser_score": -2.0,
@@ -23648,7 +23648,7 @@
           "match_type": "Regular Season",
           "division": "Non-Divisional",
           "week": 4.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "YCBI",
           "winner_score": 3.0,
           "loser_score": 0.0,
@@ -23813,13 +23813,13 @@
           "match_type": "Regular Season",
           "division": "Non-Divisional",
           "week": 5.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Thrull Frottle",
           "winner_score": 9.0,
           "loser_score": -23.0,
           "winner_turns": 7.0,
           "loser_turns": 7.0,
-          "mvp": "Illusrionary Mask",
+          "mvp": "Illusionary Mask",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -23834,7 +23834,7 @@
           "loser_score": -2.0,
           "winner_turns": 12.0,
           "loser_turns": 11.0,
-          "mvp": "SMASHED POTATOES",
+          "mvp": "Crusade",
           "winner_damage": null,
           "loser_damage": null,
           "score_incomplete": false
@@ -23904,7 +23904,7 @@
           "division": "Non-Divisional",
           "week": 6.0,
           "winner": "Darwin's Doom",
-          "loser": "Mist Monsters",
+          "loser": "Trick or Treat Freaks",
           "winner_score": 20.0,
           "loser_score": 0.0,
           "winner_turns": 8.0,
@@ -24009,7 +24009,7 @@
           "division": "Non-Divisional",
           "week": 7.0,
           "winner": "Peak-a-Boom",
-          "loser": "Mist Monsters",
+          "loser": "Trick or Treat Freaks",
           "winner_score": 20.0,
           "loser_score": -6.0,
           "winner_turns": 9.0,
@@ -24068,7 +24068,7 @@
           "match_type": "Regular Season",
           "division": "Non-Divisional",
           "week": 8.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Bad Ass Fault",
           "winner_score": 20.0,
           "loser_score": -2.0,
@@ -24188,7 +24188,7 @@
           "match_type": "Regular Season",
           "division": "Non-Divisional",
           "week": 9.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Big Gloves",
           "winner_score": 11.0,
           "loser_score": 0.0,
@@ -24383,7 +24383,7 @@
           "match_type": "Regular Season",
           "division": "Non-Divisional",
           "week": 10.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Smashed Potatoes",
           "winner_score": 28.0,
           "loser_score": -17.0,
@@ -24488,7 +24488,7 @@
           "match_type": "Regular Season",
           "division": "Non-Divisional",
           "week": 11.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Swamp Things",
           "winner_score": 14.0,
           "loser_score": 0.0,
@@ -24569,7 +24569,7 @@
           "loser_score": -2.0,
           "winner_turns": 12.0,
           "loser_turns": 12.0,
-          "mvp": "Entropic Spector",
+          "mvp": "Entropic Specter",
           "winner_damage": 22.0,
           "loser_damage": 12.0,
           "score_incomplete": false
@@ -24638,7 +24638,7 @@
           "match_type": "Regular Season",
           "division": "Non-Divisional",
           "week": 12.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Sliver Lining",
           "winner_score": 4.0,
           "loser_score": -4.0,
@@ -24714,7 +24714,7 @@
           "division": "West",
           "week": 13.0,
           "winner": "Fire Drilled",
-          "loser": "Mist Monsters",
+          "loser": "Trick or Treat Freaks",
           "winner_score": 9.0,
           "loser_score": -1.0,
           "winner_turns": 12.0,
@@ -24848,7 +24848,7 @@
           "match_type": "Regular Season",
           "division": "West",
           "week": 14.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "No Lands For You",
           "winner_score": 20.0,
           "loser_score": -4.0,
@@ -24983,7 +24983,7 @@
           "match_type": "Regular Season",
           "division": "West",
           "week": 15.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Clockwork",
           "winner_score": 15.0,
           "loser_score": -2.0,
@@ -25059,7 +25059,7 @@
           "division": "West",
           "week": 16.0,
           "winner": "Clockwork",
-          "loser": "Mist Monsters",
+          "loser": "Trick or Treat Freaks",
           "winner_score": 16.0,
           "loser_score": -1.0,
           "winner_turns": 8.0,
@@ -25223,7 +25223,7 @@
           "match_type": "Regular Season",
           "division": "West",
           "week": 17.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "No Lands For You",
           "winner_score": 5.0,
           "loser_score": -2.0,
@@ -25329,7 +25329,7 @@
           "division": "West",
           "week": 18.0,
           "winner": "Fire Drilled",
-          "loser": "Mist Monsters",
+          "loser": "Trick or Treat Freaks",
           "winner_score": 10.0,
           "loser_score": -1.0,
           "winner_turns": 10.0,
@@ -25434,7 +25434,7 @@
           "division": "West",
           "week": 19.0,
           "winner": "Fire Drilled",
-          "loser": "Mist Monsters",
+          "loser": "Trick or Treat Freaks",
           "winner_score": 1.0,
           "loser_score": 0.0,
           "winner_turns": 21.0,
@@ -25569,7 +25569,7 @@
           "division": "West",
           "week": 20.0,
           "winner": "No Lands For You",
-          "loser": "Mist Monsters",
+          "loser": "Trick or Treat Freaks",
           "winner_score": 21.0,
           "loser_score": 0.0,
           "winner_turns": 8.0,
@@ -25664,7 +25664,7 @@
           "loser_score": 0.0,
           "winner_turns": 10.0,
           "loser_turns": 9.0,
-          "mvp": "Power Surge",
+          "mvp": "Sol Ring",
           "winner_damage": 20.0,
           "loser_damage": 2.0,
           "score_incomplete": false
@@ -25739,7 +25739,7 @@
           "loser_score": -4.0,
           "winner_turns": 6.0,
           "loser_turns": 6.0,
-          "mvp": "Dark Ritual",
+          "mvp": "Entropic Specter",
           "winner_damage": 24.0,
           "loser_damage": 10.0,
           "score_incomplete": false
@@ -25769,7 +25769,7 @@
           "loser_score": -5.0,
           "winner_turns": 5.0,
           "loser_turns": 5.0,
-          "mvp": "Teferi's Puzzle Box",
+          "mvp": "Entropic Specter",
           "winner_damage": 25.0,
           "loser_damage": 1.0,
           "score_incomplete": false
@@ -25829,7 +25829,7 @@
           "loser_score": 0.0,
           "winner_turns": 9.0,
           "loser_turns": 9.0,
-          "mvp": "Sol Ring",
+          "mvp": "Castle",
           "winner_damage": 20.0,
           "loser_damage": 7.0,
           "score_incomplete": false
@@ -25853,13 +25853,13 @@
           "match_type": "Playoffs",
           "division": null,
           "week": 3.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Big Gloves",
           "winner_score": 15.0,
           "loser_score": -4.0,
           "winner_turns": 6.0,
           "loser_turns": 5.0,
-          "mvp": "Transmute Artifact",
+          "mvp": "Scroll Rack",
           "winner_damage": 24.0,
           "loser_damage": 5.0,
           "score_incomplete": false
@@ -25874,7 +25874,7 @@
           "loser_score": -6.0,
           "winner_turns": 7.0,
           "loser_turns": 6.0,
-          "mvp": "Fyndhorn Elves",
+          "mvp": "Hurricane",
           "winner_damage": 26.0,
           "loser_damage": 0.0,
           "score_incomplete": false
@@ -25904,7 +25904,7 @@
           "loser_score": -7.0,
           "winner_turns": 6.0,
           "loser_turns": 5.0,
-          "mvp": "Lim Dul's Vault",
+          "mvp": "Lim-Dul's Vault",
           "winner_damage": 27.0,
           "loser_damage": 7.0,
           "score_incomplete": false
@@ -25913,7 +25913,7 @@
           "match_type": "Playoffs",
           "division": null,
           "week": 3.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Big Gloves",
           "winner_score": 16.0,
           "loser_score": -1.0,
@@ -25934,7 +25934,7 @@
           "loser_score": -5.0,
           "winner_turns": 14.0,
           "loser_turns": 13.0,
-          "mvp": "Pacifism",
+          "mvp": "Archangel",
           "winner_damage": 25.0,
           "loser_damage": 19.0,
           "score_incomplete": false
@@ -25949,7 +25949,7 @@
           "loser_score": -6.0,
           "winner_turns": 11.0,
           "loser_turns": 10.0,
-          "mvp": "Shatter",
+          "mvp": "Wheel of Fortune",
           "winner_damage": 26.0,
           "loser_damage": 3.0,
           "score_incomplete": false
@@ -25964,7 +25964,7 @@
           "loser_score": -1.0,
           "winner_turns": 6.0,
           "loser_turns": 6.0,
-          "mvp": "Demonic Tutor",
+          "mvp": "Lim-Dul's Vault",
           "winner_damage": 21.0,
           "loser_damage": 4.0,
           "score_incomplete": false
@@ -25974,7 +25974,7 @@
           "division": null,
           "week": 3.0,
           "winner": "Big Gloves",
-          "loser": "Mist Monsters",
+          "loser": "Trick or Treat Freaks",
           "winner_score": 11.0,
           "loser_score": -1.0,
           "winner_turns": 8.0,
@@ -25994,7 +25994,7 @@
           "loser_score": -1.0,
           "winner_turns": 8.0,
           "loser_turns": 7.0,
-          "mvp": "Sylvan Library",
+          "mvp": "Hurricane",
           "winner_damage": 21.0,
           "loser_damage": 10.0,
           "score_incomplete": false
@@ -26009,7 +26009,7 @@
           "loser_score": -2.0,
           "winner_turns": 6.0,
           "loser_turns": 5.0,
-          "mvp": "Black Vise",
+          "mvp": "Cyclopean Tomb",
           "winner_damage": 22.0,
           "loser_damage": 3.0,
           "score_incomplete": false
@@ -26033,7 +26033,7 @@
           "match_type": "Playoffs",
           "division": null,
           "week": 3.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Big Gloves",
           "winner_score": 13.0,
           "loser_score": -4.0,
@@ -26054,7 +26054,7 @@
           "loser_score": -8.0,
           "winner_turns": 9.0,
           "loser_turns": 8.0,
-          "mvp": "Disenchant",
+          "mvp": "Archangel",
           "winner_damage": 28.0,
           "loser_damage": 6.0,
           "score_incomplete": false
@@ -26084,7 +26084,7 @@
           "loser_score": -9.0,
           "winner_turns": 7.0,
           "loser_turns": 7.0,
-          "mvp": "Recurring Nightmare",
+          "mvp": "Lim-Dul's Vault",
           "winner_damage": 29.0,
           "loser_damage": 12.0,
           "score_incomplete": false
@@ -26093,7 +26093,7 @@
           "match_type": "Playoffs",
           "division": null,
           "week": 3.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Big Gloves",
           "winner_score": 20.0,
           "loser_score": -12.0,
@@ -26114,7 +26114,7 @@
           "loser_score": -3.0,
           "winner_turns": 13.0,
           "loser_turns": 13.0,
-          "mvp": "Counterspell",
+          "mvp": "Archangel",
           "winner_damage": 23.0,
           "loser_damage": 7.0,
           "score_incomplete": false
@@ -26129,7 +26129,7 @@
           "loser_score": -2.0,
           "winner_turns": 8.0,
           "loser_turns": 7.0,
-          "mvp": "Icequake",
+          "mvp": "Cyclopean Tomb",
           "winner_damage": 22.0,
           "loser_damage": 10.0,
           "score_incomplete": false
@@ -26219,7 +26219,7 @@
           "loser_score": -3.0,
           "winner_turns": 7.0,
           "loser_turns": 7.0,
-          "mvp": "Archangel",
+          "mvp": "Meekstone",
           "winner_damage": 23.0,
           "loser_damage": 7.0,
           "score_incomplete": false
@@ -26249,7 +26249,7 @@
           "loser_score": -4.0,
           "winner_turns": 6.0,
           "loser_turns": 5.0,
-          "mvp": "White Knight",
+          "mvp": "Land Tax",
           "winner_damage": 24.0,
           "loser_damage": -3.0,
           "score_incomplete": false
@@ -26258,13 +26258,13 @@
           "match_type": "Playoffs",
           "division": null,
           "week": 4.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Clockwork",
           "winner_score": 20.0,
           "loser_score": -4.0,
           "winner_turns": 3.0,
           "loser_turns": 3.0,
-          "mvp": "Illusionary Mask",
+          "mvp": "Control Magic",
           "winner_damage": 24.0,
           "loser_damage": 0.0,
           "score_incomplete": false
@@ -26279,7 +26279,7 @@
           "loser_score": 0.0,
           "winner_turns": 11.0,
           "loser_turns": 10.0,
-          "mvp": "Soraya, Falconer",
+          "mvp": "Meekstone",
           "winner_damage": 20.0,
           "loser_damage": 0.0,
           "score_incomplete": false
@@ -26294,7 +26294,7 @@
           "loser_score": -1.0,
           "winner_turns": 5.0,
           "loser_turns": 5.0,
-          "mvp": "Taiga",
+          "mvp": "Muscle Sliver",
           "winner_damage": 21.0,
           "loser_damage": 12.0,
           "score_incomplete": false
@@ -26318,13 +26318,13 @@
           "match_type": "Playoffs",
           "division": null,
           "week": 4.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Clockwork",
           "winner_score": 20.0,
           "loser_score": -10.0,
           "winner_turns": 6.0,
           "loser_turns": 5.0,
-          "mvp": "Phyrexian Dreadnought",
+          "mvp": "Control Magic",
           "winner_damage": 30.0,
           "loser_damage": 0.0,
           "score_incomplete": false
@@ -26339,7 +26339,7 @@
           "loser_score": -1.0,
           "winner_turns": 14.0,
           "loser_turns": 13.0,
-          "mvp": "Hurricane",
+          "mvp": "Taiga",
           "winner_damage": 21.0,
           "loser_damage": 12.0,
           "score_incomplete": false
@@ -26354,7 +26354,7 @@
           "loser_score": 0.0,
           "winner_turns": 5.0,
           "loser_turns": 4.0,
-          "mvp": "Karplusan Forest",
+          "mvp": "Muscle Sliver",
           "winner_damage": 20.0,
           "loser_damage": 3.0,
           "score_incomplete": false
@@ -26379,7 +26379,7 @@
           "division": null,
           "week": 4.0,
           "winner": "Clockwork",
-          "loser": "Mist Monsters",
+          "loser": "Trick or Treat Freaks",
           "winner_score": 12.0,
           "loser_score": 0.0,
           "winner_turns": 13.0,
@@ -26399,7 +26399,7 @@
           "loser_score": 0.0,
           "winner_turns": 7.0,
           "loser_turns": 6.0,
-          "mvp": "Wrath of God",
+          "mvp": "Taiga",
           "winner_damage": 20.0,
           "loser_damage": 8.0,
           "score_incomplete": false
@@ -26429,7 +26429,7 @@
           "loser_score": null,
           "winner_turns": null,
           "loser_turns": null,
-          "mvp": null,
+          "mvp": "Land Tax",
           "winner_damage": 20.0,
           "loser_damage": 20.0,
           "score_incomplete": true
@@ -26438,13 +26438,13 @@
           "match_type": "Playoffs",
           "division": null,
           "week": 4.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Clockwork",
           "winner_score": 2.0,
           "loser_score": 0.0,
           "winner_turns": 16.0,
           "loser_turns": 16.0,
-          "mvp": "Maze of Ith",
+          "mvp": "Control Magic",
           "winner_damage": 20.0,
           "loser_damage": 18.0,
           "score_incomplete": false
@@ -26459,7 +26459,7 @@
           "loser_score": 0.0,
           "winner_turns": 14.0,
           "loser_turns": 13.0,
-          "mvp": "Cataclysm",
+          "mvp": "Taiga",
           "winner_damage": 20.0,
           "loser_damage": 9.0,
           "score_incomplete": false
@@ -26489,7 +26489,7 @@
           "loser_score": null,
           "winner_turns": null,
           "loser_turns": null,
-          "mvp": null,
+          "mvp": "Land Tax",
           "winner_damage": 20.0,
           "loser_damage": 20.0,
           "score_incomplete": true
@@ -26498,7 +26498,7 @@
           "match_type": "Playoffs",
           "division": null,
           "week": 4.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Clockwork",
           "winner_score": 19.0,
           "loser_score": -10.0,
@@ -26543,13 +26543,13 @@
           "match_type": "Playoffs",
           "division": null,
           "week": 5.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Extinction",
           "winner_score": 18.0,
           "loser_score": -4.0,
           "winner_turns": 13.0,
           "loser_turns": 13.0,
-          "mvp": "Maze of Ith",
+          "mvp": "Teferi's Puzzle Box",
           "winner_damage": 24.0,
           "loser_damage": 2.0,
           "score_incomplete": false
@@ -26564,7 +26564,7 @@
           "loser_score": -9.0,
           "winner_turns": 7.0,
           "loser_turns": 6.0,
-          "mvp": "Muscle Sliver",
+          "mvp": "Disenchant",
           "winner_damage": 31.0,
           "loser_damage": 6.0,
           "score_incomplete": false
@@ -26573,13 +26573,13 @@
           "match_type": "Playoffs",
           "division": null,
           "week": 5.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Extinction",
           "winner_score": 9.0,
           "loser_score": -10.0,
           "winner_turns": 11.0,
           "loser_turns": 10.0,
-          "mvp": "Resurrection",
+          "mvp": "Teferi's Puzzle Box",
           "winner_damage": 30.0,
           "loser_damage": 11.0,
           "score_incomplete": false
@@ -26594,7 +26594,7 @@
           "loser_score": -1.0,
           "winner_turns": 24.0,
           "loser_turns": 24.0,
-          "mvp": "Sliver Queen",
+          "mvp": "Disenchant",
           "winner_damage": 49.0,
           "loser_damage": 10.0,
           "score_incomplete": false
@@ -26603,13 +26603,13 @@
           "match_type": "Playoffs",
           "division": null,
           "week": 5.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Extinction",
           "winner_score": 3.0,
           "loser_score": -11.0,
           "winner_turns": 19.0,
           "loser_turns": 19.0,
-          "mvp": "Scroll Rack",
+          "mvp": "Teferi's Puzzle Box",
           "winner_damage": 31.0,
           "loser_damage": 17.0,
           "score_incomplete": false
@@ -26634,12 +26634,12 @@
           "division": null,
           "week": 5.0,
           "winner": "Extinction",
-          "loser": "Mist Monsters",
+          "loser": "Trick or Treat Freaks",
           "winner_score": 20.0,
           "loser_score": -9.0,
           "winner_turns": 15.0,
           "loser_turns": 15.0,
-          "mvp": "Cataclysm",
+          "mvp": "Disenchant",
           "winner_damage": 29.0,
           "loser_damage": 0.0,
           "score_incomplete": false
@@ -26664,7 +26664,7 @@
           "division": null,
           "week": 5.0,
           "winner": "Extinction",
-          "loser": "Mist Monsters",
+          "loser": "Trick or Treat Freaks",
           "winner_score": 20.0,
           "loser_score": -1.0,
           "winner_turns": 15.0,
@@ -26678,7 +26678,7 @@
           "match_type": "Playoffs",
           "division": null,
           "week": 5.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Extinction",
           "winner_score": 14.0,
           "loser_score": -1.0,
@@ -26694,12 +26694,12 @@
           "division": null,
           "week": 6.0,
           "winner": "Sliver Lining",
-          "loser": "Mist Monsters",
+          "loser": "Trick or Treat Freaks",
           "winner_score": 20.0,
           "loser_score": 0.0,
           "winner_turns": 5.0,
           "loser_turns": 4.0,
-          "mvp": "Crystalline Sliver",
+          "mvp": "City of Brass",
           "winner_damage": 20.0,
           "loser_damage": 3.0,
           "score_incomplete": false
@@ -26709,12 +26709,12 @@
           "division": null,
           "week": 6.0,
           "winner": "Sliver Lining",
-          "loser": "Mist Monsters",
+          "loser": "Trick or Treat Freaks",
           "winner_score": 15.0,
           "loser_score": -17.0,
           "winner_turns": 4.0,
           "loser_turns": 4.0,
-          "mvp": "Muscle Sliver",
+          "mvp": "City of Brass",
           "winner_damage": 37.0,
           "loser_damage": 5.0,
           "score_incomplete": false
@@ -26723,13 +26723,13 @@
           "match_type": "Playoffs",
           "division": null,
           "week": 6.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Sliver Lining",
           "winner_score": 8.0,
           "loser_score": -3.0,
           "winner_turns": 7.0,
           "loser_turns": 7.0,
-          "mvp": "Control Magic",
+          "mvp": "Illusionary Mask",
           "winner_damage": 23.0,
           "loser_damage": 24.0,
           "score_incomplete": false
@@ -26739,12 +26739,12 @@
           "division": null,
           "week": 6.0,
           "winner": "Sliver Lining",
-          "loser": "Mist Monsters",
+          "loser": "Trick or Treat Freaks",
           "winner_score": 11.0,
           "loser_score": -3.0,
           "winner_turns": 8.0,
           "loser_turns": 8.0,
-          "mvp": "Swords to Plowshares",
+          "mvp": "City of Brass",
           "winner_damage": 35.0,
           "loser_damage": 9.0,
           "score_incomplete": false
@@ -26753,7 +26753,7 @@
           "match_type": "Playoffs",
           "division": null,
           "week": 6.0,
-          "winner": "Mist Monsters",
+          "winner": "Trick or Treat Freaks",
           "loser": "Sliver Lining",
           "winner_score": 4.0,
           "loser_score": -17.0,
@@ -26769,7 +26769,7 @@
           "division": null,
           "week": 6.0,
           "winner": "Sliver Lining",
-          "loser": "Mist Monsters",
+          "loser": "Trick or Treat Freaks",
           "winner_score": 19.0,
           "loser_score": -9.0,
           "winner_turns": 6.0,
@@ -27939,30 +27939,6 @@
             "20": 3
           }
         },
-        "Mist Monsters": {
-          "division": "West",
-          "weekly_rank": {
-            "1": 15,
-            "2": 10,
-            "3": 7,
-            "4": 5,
-            "5": 4,
-            "6": 5,
-            "7": 5,
-            "8": 5,
-            "9": 5,
-            "10": 2,
-            "11": 2,
-            "13": 3,
-            "14": 2,
-            "15": 2,
-            "16": 2,
-            "17": 4,
-            "18": 4,
-            "19": 4,
-            "20": 5
-          }
-        },
         "Darwin's Doom": {
           "division": "South",
           "weekly_rank": {
@@ -28249,6 +28225,30 @@
             "18": 6,
             "19": 5,
             "20": 4
+          }
+        },
+        "Trick or Treat Freaks": {
+          "division": "West",
+          "weekly_rank": {
+            "1": 15,
+            "2": 10,
+            "3": 7,
+            "4": 5,
+            "5": 4,
+            "6": 5,
+            "7": 5,
+            "8": 5,
+            "9": 5,
+            "10": 2,
+            "11": 2,
+            "13": 3,
+            "14": 2,
+            "15": 2,
+            "16": 2,
+            "17": 4,
+            "18": 4,
+            "19": 4,
+            "20": 5
           }
         }
       },
@@ -33674,7 +33674,7 @@
           "is_champion": false,
           "power_score": 61.7,
           "team_mvp": "Cyclopean Tomb",
-          "team_mvp_count": 6,
+          "team_mvp_count": 3,
           "seed": 1
         },
         {
@@ -33690,7 +33690,7 @@
           "is_champion": false,
           "power_score": 62.4,
           "team_mvp": "Goblin Recruiter",
-          "team_mvp_count": 5,
+          "team_mvp_count": 6,
           "seed": 2
         },
         {
@@ -33721,8 +33721,8 @@
           "udpi": null,
           "is_champion": true,
           "power_score": 58.0,
-          "team_mvp": "Counterspell",
-          "team_mvp_count": 4,
+          "team_mvp": "Illusionary Mask",
+          "team_mvp_count": 3,
           "seed": 4
         },
         {
@@ -33738,7 +33738,7 @@
           "is_champion": false,
           "power_score": 46.8,
           "team_mvp": "Lord of Atlantis",
-          "team_mvp_count": 6,
+          "team_mvp_count": 5,
           "seed": 5
         },
         {
@@ -33754,7 +33754,7 @@
           "is_champion": false,
           "power_score": 47.2,
           "team_mvp": "Bad Moon",
-          "team_mvp_count": 3,
+          "team_mvp_count": 4,
           "seed": 6
         },
         {
@@ -33770,7 +33770,7 @@
           "is_champion": false,
           "power_score": 36.5,
           "team_mvp": "Survival of the Fittest",
-          "team_mvp_count": 3,
+          "team_mvp_count": 4,
           "seed": 7
         },
         {
@@ -33833,7 +33833,7 @@
           "udpi": 0.05820247934,
           "is_champion": false,
           "power_score": 22.9,
-          "team_mvp": "Sylvan Library",
+          "team_mvp": "Yavimaya Ants",
           "team_mvp_count": 2,
           "seed": 11
         },
@@ -33849,8 +33849,8 @@
           "udpi": null,
           "is_champion": false,
           "power_score": 27.3,
-          "team_mvp": "Smashed Potatoes",
-          "team_mvp_count": 2,
+          "team_mvp": "Armageddon",
+          "team_mvp_count": 1,
           "seed": 12
         },
         {
@@ -33913,7 +33913,7 @@
           "udpi": 0.02675619835,
           "is_champion": false,
           "power_score": 1.6,
-          "team_mvp": "Soraya the Facloner",
+          "team_mvp": "Soraya the Falconer",
           "team_mvp_count": 1,
           "seed": 16
         }
@@ -34064,7 +34064,7 @@
           "loser_score": -8.0,
           "winner_turns": 8.0,
           "loser_turns": 7.0,
-          "mvp": "Disenchant",
+          "mvp": "Coat of Arms",
           "winner_damage": 28.0,
           "loser_damage": 6.0,
           "score_incomplete": false
@@ -34109,7 +34109,7 @@
           "loser_score": -3.0,
           "winner_turns": 5.0,
           "loser_turns": 4.0,
-          "mvp": "Lord of Atlantis",
+          "mvp": "Vodalian Knights",
           "winner_damage": 23.0,
           "loser_damage": 4.0,
           "score_incomplete": false
@@ -34229,7 +34229,7 @@
           "loser_score": 0.0,
           "winner_turns": 5.0,
           "loser_turns": 5.0,
-          "mvp": "Sol Ring",
+          "mvp": "Island",
           "winner_damage": 20.0,
           "loser_damage": 5.0,
           "score_incomplete": false
@@ -34424,7 +34424,7 @@
           "loser_score": -5.0,
           "winner_turns": 8.0,
           "loser_turns": 7.0,
-          "mvp": "Soraya the Facloner",
+          "mvp": "Soraya the Falconer",
           "winner_damage": 25.0,
           "loser_damage": 12.0,
           "score_incomplete": false
@@ -35309,7 +35309,7 @@
           "loser_score": -1.0,
           "winner_turns": 11.0,
           "loser_turns": 10.0,
-          "mvp": "Smashed Potatoes",
+          "mvp": "Crusade",
           "winner_damage": 21.0,
           "loser_damage": 5.0,
           "score_incomplete": false
@@ -35474,7 +35474,7 @@
           "loser_score": -1.0,
           "winner_turns": 6.0,
           "loser_turns": 6.0,
-          "mvp": "Wil-o-the-Wisp",
+          "mvp": "Will-o'-the-Wisp",
           "winner_damage": 21.0,
           "loser_damage": 7.0,
           "score_incomplete": false
@@ -35609,7 +35609,7 @@
           "loser_score": -8.0,
           "winner_turns": 9.0,
           "loser_turns": 8.0,
-          "mvp": "Survival of the fittest",
+          "mvp": "Survival of the Fittest",
           "winner_damage": 28.0,
           "loser_damage": 5.0,
           "score_incomplete": false
@@ -35894,7 +35894,7 @@
           "loser_score": -1.0,
           "winner_turns": 10.0,
           "loser_turns": 10.0,
-          "mvp": "Two-headed Giant of Foriys",
+          "mvp": "Two-Headed Giant of Foriys",
           "winner_damage": 21.0,
           "loser_damage": 14.0,
           "score_incomplete": false
@@ -35924,7 +35924,7 @@
           "loser_score": -7.0,
           "winner_turns": 10.0,
           "loser_turns": 9.0,
-          "mvp": "Goblin recruiter",
+          "mvp": "Goblin Recruiter",
           "winner_damage": 27.0,
           "loser_damage": 11.0,
           "score_incomplete": false
@@ -35969,7 +35969,7 @@
           "loser_score": -8.0,
           "winner_turns": 7.0,
           "loser_turns": 6.0,
-          "mvp": "Bad moon",
+          "mvp": "Bad Moon",
           "winner_damage": 28.0,
           "loser_damage": 4.0,
           "score_incomplete": false
@@ -36044,7 +36044,7 @@
           "loser_score": -7.0,
           "winner_turns": 15.0,
           "loser_turns": 15.0,
-          "mvp": "Maze of ith",
+          "mvp": "Maze of Ith",
           "winner_damage": 27.0,
           "loser_damage": 0.0,
           "score_incomplete": false
@@ -36059,7 +36059,7 @@
           "loser_score": -1.0,
           "winner_turns": 12.0,
           "loser_turns": 11.0,
-          "mvp": "Winter orb",
+          "mvp": "Winter Orb",
           "winner_damage": 21.0,
           "loser_damage": 0.0,
           "score_incomplete": false
@@ -36074,7 +36074,7 @@
           "loser_score": -4.0,
           "winner_turns": 6.0,
           "loser_turns": 5.0,
-          "mvp": "Mask-Nought",
+          "mvp": "Illusionary Mask",
           "winner_damage": 24.0,
           "loser_damage": 18.0,
           "score_incomplete": false
@@ -36134,7 +36134,7 @@
           "loser_score": 0.0,
           "winner_turns": 6.0,
           "loser_turns": 5.0,
-          "mvp": "Goblin balloon brigade",
+          "mvp": "Goblin Balloon Brigade",
           "winner_damage": 20.0,
           "loser_damage": 3.0,
           "score_incomplete": false
@@ -36209,7 +36209,7 @@
           "loser_score": 0.0,
           "winner_turns": 9.0,
           "loser_turns": 9.0,
-          "mvp": "earthquake",
+          "mvp": "Earthquake",
           "winner_damage": 20.0,
           "loser_damage": 13.0,
           "score_incomplete": false
@@ -36239,7 +36239,7 @@
           "loser_score": -8.0,
           "winner_turns": 6.0,
           "loser_turns": 6.0,
-          "mvp": "Blood moon",
+          "mvp": "Blood Moon",
           "winner_damage": 28.0,
           "loser_damage": 11.0,
           "score_incomplete": false
@@ -36344,7 +36344,7 @@
           "loser_score": -4.0,
           "winner_turns": 7.0,
           "loser_turns": 6.0,
-          "mvp": "ball lightning",
+          "mvp": "Ball Lightning",
           "winner_damage": 24.0,
           "loser_damage": 0.0,
           "score_incomplete": false
@@ -36434,7 +36434,7 @@
           "loser_score": -9.0,
           "winner_turns": 9.0,
           "loser_turns": 9.0,
-          "mvp": "Illusionary mask",
+          "mvp": "Illusionary Mask",
           "winner_damage": 29.0,
           "loser_damage": 5.0,
           "score_incomplete": false
@@ -36569,7 +36569,7 @@
           "loser_score": -4.0,
           "winner_turns": 6.0,
           "loser_turns": 5.0,
-          "mvp": "Black Vise",
+          "mvp": "Cyclopean Tomb",
           "winner_damage": 24.0,
           "loser_damage": 0.0,
           "score_incomplete": false
@@ -36584,7 +36584,7 @@
           "loser_score": -5.0,
           "winner_turns": 7.0,
           "loser_turns": 7.0,
-          "mvp": "Lightning Bolt",
+          "mvp": "Chain Lightning",
           "winner_damage": 25.0,
           "loser_damage": 10.0,
           "score_incomplete": false
@@ -36599,7 +36599,7 @@
           "loser_score": -2.0,
           "winner_turns": 6.0,
           "loser_turns": 5.0,
-          "mvp": null,
+          "mvp": "Taiga",
           "winner_damage": 22.0,
           "loser_damage": 12.0,
           "score_incomplete": false
@@ -36614,7 +36614,7 @@
           "loser_score": -2.0,
           "winner_turns": 12.0,
           "loser_turns": 11.0,
-          "mvp": "Disenchant",
+          "mvp": "Cataclysm",
           "winner_damage": 22.0,
           "loser_damage": 10.0,
           "score_incomplete": false
@@ -36629,7 +36629,7 @@
           "loser_score": -1.0,
           "winner_turns": 7.0,
           "loser_turns": 6.0,
-          "mvp": "Mystical Tutor",
+          "mvp": "Scroll Rack",
           "winner_damage": 21.0,
           "loser_damage": 2.0,
           "score_incomplete": false
@@ -36644,7 +36644,7 @@
           "loser_score": -8.0,
           "winner_turns": 25.0,
           "loser_turns": 24.0,
-          "mvp": "Maze of Ith",
+          "mvp": "Energy Flux",
           "winner_damage": 28.0,
           "loser_damage": 17.0,
           "score_incomplete": false
@@ -36659,7 +36659,7 @@
           "loser_score": -6.0,
           "winner_turns": 17.0,
           "loser_turns": 17.0,
-          "mvp": "Swords to Plowshares",
+          "mvp": "Crusade",
           "winner_damage": 26.0,
           "loser_damage": 11.0,
           "score_incomplete": false
@@ -36674,7 +36674,7 @@
           "loser_score": -10.0,
           "winner_turns": 5.0,
           "loser_turns": 5.0,
-          "mvp": "Dark Ritual",
+          "mvp": "Nicol Bolas",
           "winner_damage": 30.0,
           "loser_damage": 19.0,
           "score_incomplete": false
@@ -36689,7 +36689,7 @@
           "loser_score": -7.0,
           "winner_turns": 10.0,
           "loser_turns": 9.0,
-          "mvp": "Nevinyrral's Disk",
+          "mvp": "Cyclopean Tomb",
           "winner_damage": 27.0,
           "loser_damage": 11.0,
           "score_incomplete": false
@@ -36704,7 +36704,7 @@
           "loser_score": -8.0,
           "winner_turns": 6.0,
           "loser_turns": 6.0,
-          "mvp": "Wheel of Fortune",
+          "mvp": "Chain Lightning",
           "winner_damage": 28.0,
           "loser_damage": 16.0,
           "score_incomplete": false
@@ -36719,7 +36719,7 @@
           "loser_score": -6.0,
           "winner_turns": 5.0,
           "loser_turns": 4.0,
-          "mvp": "Muscle Sliver",
+          "mvp": "Taiga",
           "winner_damage": 26.0,
           "loser_damage": 3.0,
           "score_incomplete": false
@@ -36734,7 +36734,7 @@
           "loser_score": -2.0,
           "winner_turns": 5.0,
           "loser_turns": 5.0,
-          "mvp": "Ball Lightning",
+          "mvp": "Fork",
           "winner_damage": 22.0,
           "loser_damage": 0.0,
           "score_incomplete": false
@@ -36749,7 +36749,7 @@
           "loser_score": -4.0,
           "winner_turns": 8.0,
           "loser_turns": 8.0,
-          "mvp": "Strip Mine",
+          "mvp": "Shocker",
           "winner_damage": 24.0,
           "loser_damage": 0.0,
           "score_incomplete": false
@@ -36764,7 +36764,7 @@
           "loser_score": -5.0,
           "winner_turns": 10.0,
           "loser_turns": 9.0,
-          "mvp": "Psychic Venom",
+          "mvp": "Energy Flux",
           "winner_damage": 25.0,
           "loser_damage": 0.0,
           "score_incomplete": false
@@ -36779,7 +36779,7 @@
           "loser_score": -16.0,
           "winner_turns": 6.0,
           "loser_turns": 6.0,
-          "mvp": "Smashed Potatoes",
+          "mvp": "Crusade",
           "winner_damage": 36.0,
           "loser_damage": 1.0,
           "score_incomplete": false
@@ -36839,7 +36839,7 @@
           "loser_score": 0.0,
           "winner_turns": 7.0,
           "loser_turns": 6.0,
-          "mvp": "Woolly Spider",
+          "mvp": "Sylvan Library",
           "winner_damage": 20.0,
           "loser_damage": 2.0,
           "score_incomplete": false
@@ -36899,7 +36899,7 @@
           "loser_score": -6.0,
           "winner_turns": 9.0,
           "loser_turns": 8.0,
-          "mvp": null,
+          "mvp": "Crusade",
           "winner_damage": 26.0,
           "loser_damage": 7.0,
           "score_incomplete": false
@@ -36914,7 +36914,7 @@
           "loser_score": -8.0,
           "winner_turns": 6.0,
           "loser_turns": 5.0,
-          "mvp": "Necromancy",
+          "mvp": "Nicol Bolas",
           "winner_damage": 28.0,
           "loser_damage": 12.0,
           "score_incomplete": false
@@ -36944,7 +36944,7 @@
           "loser_score": 0.0,
           "winner_turns": 8.0,
           "loser_turns": 7.0,
-          "mvp": "Fireball",
+          "mvp": "Fork",
           "winner_damage": 20.0,
           "loser_damage": 11.0,
           "score_incomplete": false
@@ -36959,7 +36959,7 @@
           "loser_score": -6.0,
           "winner_turns": 11.0,
           "loser_turns": 11.0,
-          "mvp": "Counterspell",
+          "mvp": "Scroll Rack",
           "winner_damage": 26.0,
           "loser_damage": 12.0,
           "score_incomplete": false
@@ -37034,7 +37034,7 @@
           "loser_score": -2.0,
           "winner_turns": 10.0,
           "loser_turns": 10.0,
-          "mvp": "Lightning Bolt",
+          "mvp": "Pyroclasm",
           "winner_damage": 22.0,
           "loser_damage": 6.0,
           "score_incomplete": false
@@ -37049,7 +37049,7 @@
           "loser_score": -14.0,
           "winner_turns": 9.0,
           "loser_turns": 8.0,
-          "mvp": "Muscle Sliver",
+          "mvp": "Coat of Arms",
           "winner_damage": 34.0,
           "loser_damage": 3.0,
           "score_incomplete": false
@@ -37064,7 +37064,7 @@
           "loser_score": 14.0,
           "winner_turns": 6.0,
           "loser_turns": 5.0,
-          "mvp": "Transmute Artifact",
+          "mvp": "Phyrexian Dreadnought",
           "winner_damage": 6.0,
           "loser_damage": 0.0,
           "score_incomplete": false
@@ -37079,7 +37079,7 @@
           "loser_score": -7.0,
           "winner_turns": 7.0,
           "loser_turns": 6.0,
-          "mvp": "Lord of Atlantis",
+          "mvp": "Vodalian Knights",
           "winner_damage": 27.0,
           "loser_damage": 0.0,
           "score_incomplete": false
@@ -37094,7 +37094,7 @@
           "loser_score": 0.0,
           "winner_turns": 9.0,
           "loser_turns": 8.0,
-          "mvp": "Cyclopean Tomb",
+          "mvp": "Strip Mine",
           "winner_damage": 20.0,
           "loser_damage": 10.0,
           "score_incomplete": false
@@ -37109,7 +37109,7 @@
           "loser_score": 0.0,
           "winner_turns": 7.0,
           "loser_turns": 6.0,
-          "mvp": "City of Brass",
+          "mvp": "Coat of Arms",
           "winner_damage": 20.0,
           "loser_damage": 4.0,
           "score_incomplete": false
@@ -37124,7 +37124,7 @@
           "loser_score": -16.0,
           "winner_turns": 10.0,
           "loser_turns": 9.0,
-          "mvp": "Counterspell",
+          "mvp": "Phyrexian Dreadnought",
           "winner_damage": 36.0,
           "loser_damage": 12.0,
           "score_incomplete": false
@@ -37139,7 +37139,7 @@
           "loser_score": -5.0,
           "winner_turns": 8.0,
           "loser_turns": 7.0,
-          "mvp": "Tidal Warrior",
+          "mvp": "Vodalian Knights",
           "winner_damage": 25.0,
           "loser_damage": 1.0,
           "score_incomplete": false
@@ -37184,7 +37184,7 @@
           "loser_score": -16.0,
           "winner_turns": 10.0,
           "loser_turns": 9.0,
-          "mvp": "Transmute Artifact",
+          "mvp": "Phyrexian Dreadnought",
           "winner_damage": 36.0,
           "loser_damage": 0.0,
           "score_incomplete": false
@@ -37199,7 +37199,7 @@
           "loser_score": -5.0,
           "winner_turns": 17.0,
           "loser_turns": 17.0,
-          "mvp": "Voldalian Knights",
+          "mvp": "Vodalian Knights",
           "winner_damage": 25.0,
           "loser_damage": 10.0,
           "score_incomplete": false
@@ -37214,7 +37214,7 @@
           "loser_score": 0.0,
           "winner_turns": 12.0,
           "loser_turns": 12.0,
-          "mvp": "Cyclopean Tomb",
+          "mvp": "Strip Mine",
           "winner_damage": 20.0,
           "loser_damage": 15.0,
           "score_incomplete": false
@@ -37229,7 +37229,7 @@
           "loser_score": -3.0,
           "winner_turns": 4.0,
           "loser_turns": 4.0,
-          "mvp": "Mask-Nought",
+          "mvp": "Phyrexian Dreadnought",
           "winner_damage": 23.0,
           "loser_damage": 0.0,
           "score_incomplete": false
@@ -37259,7 +37259,7 @@
           "loser_score": -1.0,
           "winner_turns": 6.0,
           "loser_turns": 5.0,
-          "mvp": "Black Vise",
+          "mvp": "Dark Ritual",
           "winner_damage": 21.0,
           "loser_damage": 1.0,
           "score_incomplete": false
@@ -37274,7 +37274,7 @@
           "loser_score": -16.0,
           "winner_turns": 6.0,
           "loser_turns": 5.0,
-          "mvp": "Scroll Rack",
+          "mvp": "Island",
           "winner_damage": 36.0,
           "loser_damage": 4.0,
           "score_incomplete": false
@@ -37289,7 +37289,7 @@
           "loser_score": -1.0,
           "winner_turns": 6.0,
           "loser_turns": 5.0,
-          "mvp": "Black Vise",
+          "mvp": "Dark Ritual",
           "winner_damage": 21.0,
           "loser_damage": 9.0,
           "score_incomplete": false
@@ -37304,7 +37304,7 @@
           "loser_score": -8.0,
           "winner_turns": 5.0,
           "loser_turns": 4.0,
-          "mvp": "Scroll Rack",
+          "mvp": "Island",
           "winner_damage": 28.0,
           "loser_damage": 6.0,
           "score_incomplete": false
@@ -37319,7 +37319,7 @@
           "loser_score": 0.0,
           "winner_turns": 12.0,
           "loser_turns": 12.0,
-          "mvp": "Demonic Hordes",
+          "mvp": "Dark Ritual",
           "winner_damage": 20.0,
           "loser_damage": 13.0,
           "score_incomplete": false
@@ -37334,7 +37334,7 @@
           "loser_score": -1.0,
           "winner_turns": 5.0,
           "loser_turns": 4.0,
-          "mvp": "Vodalian Mage",
+          "mvp": "Seasinger",
           "winner_damage": 21.0,
           "loser_damage": 0.0,
           "score_incomplete": false
@@ -37364,7 +37364,7 @@
           "loser_score": 0.0,
           "winner_turns": 8.0,
           "loser_turns": 7.0,
-          "mvp": "Force Spike",
+          "mvp": "Seasinger",
           "winner_damage": 20.0,
           "loser_damage": 0.0,
           "score_incomplete": false
@@ -37394,7 +37394,7 @@
           "loser_score": -4.0,
           "winner_turns": 9.0,
           "loser_turns": 9.0,
-          "mvp": "Control Magic",
+          "mvp": "Island",
           "winner_damage": 24.0,
           "loser_damage": 12.0,
           "score_incomplete": false
@@ -37424,7 +37424,7 @@
           "loser_score": -4.0,
           "winner_turns": 6.0,
           "loser_turns": 5.0,
-          "mvp": "Mask-Nought",
+          "mvp": "Sol Ring",
           "winner_damage": 24.0,
           "loser_damage": 18.0,
           "score_incomplete": false
@@ -37439,7 +37439,7 @@
           "loser_score": 0.0,
           "winner_turns": 5.0,
           "loser_turns": 5.0,
-          "mvp": "Black Vise",
+          "mvp": "Sinkhole",
           "winner_damage": 20.0,
           "loser_damage": 1.0,
           "score_incomplete": false
@@ -37454,7 +37454,7 @@
           "loser_score": -9.0,
           "winner_turns": 6.0,
           "loser_turns": 5.0,
-          "mvp": "Mask-Nought",
+          "mvp": "Sol Ring",
           "winner_damage": 29.0,
           "loser_damage": 3.0,
           "score_incomplete": false
@@ -37469,7 +37469,7 @@
           "loser_score": 0.0,
           "winner_turns": 8.0,
           "loser_turns": 8.0,
-          "mvp": "Black Vise",
+          "mvp": "Sinkhole",
           "winner_damage": 20.0,
           "loser_damage": 14.0,
           "score_incomplete": false
@@ -37499,7 +37499,7 @@
           "loser_score": -3.0,
           "winner_turns": 5.0,
           "loser_turns": 5.0,
-          "mvp": null,
+          "mvp": "Sol Ring",
           "winner_damage": 23.0,
           "loser_damage": 2.0,
           "score_incomplete": false
@@ -44353,7 +44353,9 @@
           "win_pct": 0.8,
           "power_score": 71.9,
           "is_champion": false,
-          "udpi": 0.1568
+          "udpi": 0.1568,
+          "team_mvp": "Balduvian horde",
+          "team_mvp_count": 2
         },
         {
           "season": 2,
@@ -44362,7 +44364,9 @@
           "win_pct": 0.6666666667,
           "power_score": 57.5,
           "is_champion": true,
-          "udpi": 0.1244444444
+          "udpi": 0.1244444444,
+          "team_mvp": "Mana Flare",
+          "team_mvp_count": 4
         },
         {
           "season": 3,
@@ -44371,7 +44375,9 @@
           "win_pct": 0.6111111111,
           "power_score": 49.7,
           "is_champion": false,
-          "udpi": 0.1130555556
+          "udpi": 0.1130555556,
+          "team_mvp": "Disintegrate",
+          "team_mvp_count": 2
         },
         {
           "season": 4,
@@ -44380,7 +44386,9 @@
           "win_pct": 0.25,
           "power_score": 8.8,
           "is_champion": false,
-          "udpi": 0.028125
+          "udpi": 0.028125,
+          "team_mvp": "Rock Hydra",
+          "team_mvp_count": 2
         },
         {
           "season": 5,
@@ -44389,7 +44397,9 @@
           "win_pct": 0.5,
           "power_score": 32.2,
           "is_champion": false,
-          "udpi": 0.08375
+          "udpi": 0.08375,
+          "team_mvp": "Mana Flare",
+          "team_mvp_count": 4
         },
         {
           "season": 7,
@@ -44398,7 +44408,9 @@
           "win_pct": 0.35,
           "power_score": 14.7,
           "is_champion": false,
-          "udpi": 0.042875
+          "udpi": 0.042875,
+          "team_mvp": "Mana Flare",
+          "team_mvp_count": 2
         }
       ],
       "fastest_win_turns": 5.0,
@@ -44406,7 +44418,9 @@
       "biggest_margin": 43.0,
       "biggest_margin_detail": "Season 3 Reg. Season, def. The Doldrums 16.0 to -27.0",
       "fastest_win_count": 5,
-      "avg_power_score": 39.1
+      "avg_power_score": 39.1,
+      "top_mvp_card": "Mana Flare",
+      "top_mvp_count": 13
     },
     "No Lands For You": {
       "team": "No Lands For You",
@@ -44439,7 +44453,9 @@
           "win_pct": 0.7,
           "power_score": 64.6,
           "is_champion": true,
-          "udpi": 0.1288
+          "udpi": 0.1288,
+          "team_mvp": "Black Vise",
+          "team_mvp_count": 2
         },
         {
           "season": 2,
@@ -44448,7 +44464,9 @@
           "win_pct": 0.4166666667,
           "power_score": 27.1,
           "is_champion": false,
-          "udpi": 0.06597222222
+          "udpi": 0.06597222222,
+          "team_mvp": "Black VIse",
+          "team_mvp_count": 1
         },
         {
           "season": 3,
@@ -44457,7 +44475,9 @@
           "win_pct": 0.6111111111,
           "power_score": 58.1,
           "is_champion": false,
-          "udpi": 0.1032098765
+          "udpi": 0.1032098765,
+          "team_mvp": "Black Vise",
+          "team_mvp_count": 6
         },
         {
           "season": 4,
@@ -44466,7 +44486,9 @@
           "win_pct": 0.65,
           "power_score": 52.2,
           "is_champion": false,
-          "udpi": 0.1131
+          "udpi": 0.1131,
+          "team_mvp": "Demonic Hordes",
+          "team_mvp_count": 3
         },
         {
           "season": 5,
@@ -44475,7 +44497,9 @@
           "win_pct": 0.5,
           "power_score": 31.9,
           "is_champion": true,
-          "udpi": 0.07375
+          "udpi": 0.07375,
+          "team_mvp": "Black Vise",
+          "team_mvp_count": 4
         },
         {
           "season": 6,
@@ -44484,7 +44508,9 @@
           "win_pct": 0.65,
           "power_score": 46.4,
           "is_champion": false,
-          "udpi": 0.0845
+          "udpi": 0.0845,
+          "team_mvp": "Black Vise",
+          "team_mvp_count": 3
         },
         {
           "season": 7,
@@ -44493,7 +44519,9 @@
           "win_pct": 0.55,
           "power_score": 44.5,
           "is_champion": false,
-          "udpi": 0.0847
+          "udpi": 0.0847,
+          "team_mvp": "Black Vise",
+          "team_mvp_count": 4
         },
         {
           "season": 8,
@@ -44502,7 +44530,9 @@
           "win_pct": 0.7272727273,
           "power_score": 61.7,
           "is_champion": false,
-          "udpi": 0.1348760331
+          "udpi": 0.1348760331,
+          "team_mvp": "Cyclopean Tomb",
+          "team_mvp_count": 3
         }
       ],
       "fastest_win_turns": 5.0,
@@ -44510,7 +44540,9 @@
       "biggest_margin": 33.0,
       "biggest_margin_detail": "Season 7 Reg. Season, def. Big Gloves 27.0 to -6.0",
       "fastest_win_count": 9,
-      "avg_power_score": 48.3
+      "avg_power_score": 48.3,
+      "top_mvp_card": "Black Vise",
+      "top_mvp_count": 22
     },
     "Smashed Potatoes": {
       "team": "Smashed Potatoes",
@@ -44542,7 +44574,9 @@
           "win_pct": 0.6,
           "power_score": 48.3,
           "is_champion": false,
-          "udpi": 0.0906
+          "udpi": 0.0906,
+          "team_mvp": "Armageddon",
+          "team_mvp_count": 2
         },
         {
           "season": 2,
@@ -44551,7 +44585,9 @@
           "win_pct": 0.5,
           "power_score": 31.2,
           "is_champion": false,
-          "udpi": 0.07625
+          "udpi": 0.07625,
+          "team_mvp": "Armageddon",
+          "team_mvp_count": 3
         },
         {
           "season": 3,
@@ -44560,7 +44596,9 @@
           "win_pct": 0.6111111111,
           "power_score": 59.4,
           "is_champion": false,
-          "udpi": 0.1113580247
+          "udpi": 0.1113580247,
+          "team_mvp": "Armageddon",
+          "team_mvp_count": 3
         },
         {
           "season": 4,
@@ -44569,7 +44607,9 @@
           "win_pct": 0.55,
           "power_score": 43.6,
           "is_champion": true,
-          "udpi": 0.087175
+          "udpi": 0.087175,
+          "team_mvp": "Armageddon",
+          "team_mvp_count": 6
         },
         {
           "season": 5,
@@ -44578,7 +44618,9 @@
           "win_pct": 0.7,
           "power_score": 55.5,
           "is_champion": false,
-          "udpi": 0.11585
+          "udpi": 0.11585,
+          "team_mvp": "Crusade",
+          "team_mvp_count": 3
         },
         {
           "season": 6,
@@ -44587,7 +44629,9 @@
           "win_pct": 0.75,
           "power_score": 62.4,
           "is_champion": true,
-          "udpi": 0.128625
+          "udpi": 0.128625,
+          "team_mvp": "Balance",
+          "team_mvp_count": 3
         },
         {
           "season": 7,
@@ -44596,7 +44640,9 @@
           "win_pct": 0.7,
           "power_score": 46.7,
           "is_champion": false,
-          "udpi": 0.11515
+          "udpi": 0.11515,
+          "team_mvp": "Armageddon",
+          "team_mvp_count": 5
         }
       ],
       "fastest_win_turns": 5.0,
@@ -44604,7 +44650,9 @@
       "biggest_margin": 41.0,
       "biggest_margin_detail": "Season 3 Reg. Season, def. Swamp Things 31.0 to -10.0",
       "fastest_win_count": 1,
-      "avg_power_score": 49.6
+      "avg_power_score": 49.6,
+      "top_mvp_card": "Armageddon",
+      "top_mvp_count": 22
     },
     "Team 10": {
       "team": "Team 10",
@@ -44631,7 +44679,9 @@
           "win_pct": 0.6666666667,
           "power_score": 55.8,
           "is_champion": false,
-          "udpi": 0.1222222222
+          "udpi": 0.1222222222,
+          "team_mvp": "Commander Greven il-Vec",
+          "team_mvp_count": 1
         },
         {
           "season": 2,
@@ -44640,7 +44690,9 @@
           "win_pct": 0.5,
           "power_score": 23.9,
           "is_champion": false,
-          "udpi": 0.07458333333
+          "udpi": 0.07458333333,
+          "team_mvp": "Catacomb Dragon",
+          "team_mvp_count": 1
         },
         {
           "season": 4,
@@ -44649,7 +44701,9 @@
           "win_pct": 0.5,
           "power_score": 33.9,
           "is_champion": false,
-          "udpi": 0.06975
+          "udpi": 0.06975,
+          "team_mvp": "Carnophage",
+          "team_mvp_count": 2
         },
         {
           "season": 7,
@@ -44658,7 +44712,9 @@
           "win_pct": 0.55,
           "power_score": 33.5,
           "is_champion": false,
-          "udpi": 0.0847
+          "udpi": 0.0847,
+          "team_mvp": "Black Vise",
+          "team_mvp_count": 3
         },
         {
           "season": 8,
@@ -44667,7 +44723,9 @@
           "win_pct": 0.4545454545,
           "power_score": 36.0,
           "is_champion": false,
-          "udpi": 0.08223140496
+          "udpi": 0.08223140496,
+          "team_mvp": "Yawgmoth Demon",
+          "team_mvp_count": 3
         }
       ],
       "fastest_win_turns": 4.0,
@@ -44675,7 +44733,9 @@
       "biggest_margin": 29.0,
       "biggest_margin_detail": "Season 4 Reg. Season, def. Thrull Frottle 28.0 to -1.0",
       "fastest_win_count": 2,
-      "avg_power_score": 36.6
+      "avg_power_score": 36.6,
+      "top_mvp_card": "Yawgmoth Demon",
+      "top_mvp_count": 5
     },
     "Black & Blueses": {
       "team": "Black & Blueses",
@@ -44699,7 +44759,9 @@
           "win_pct": 0.4,
           "power_score": 13.7,
           "is_champion": false,
-          "udpi": 0.0392
+          "udpi": 0.0392,
+          "team_mvp": "Hypnotic Specter",
+          "team_mvp_count": 1
         },
         {
           "season": 2,
@@ -44708,7 +44770,9 @@
           "win_pct": 0.5,
           "power_score": 33.4,
           "is_champion": false,
-          "udpi": 0.05791666667
+          "udpi": 0.05791666667,
+          "team_mvp": "Underworld Dreams",
+          "team_mvp_count": 1
         }
       ],
       "fastest_win_turns": 8.0,
@@ -44716,7 +44780,9 @@
       "biggest_margin": 24.0,
       "biggest_margin_detail": "Season 2 Reg. Season, def. Smashed Potatoes 20.0 to -4.0",
       "fastest_win_count": 1,
-      "avg_power_score": 23.5
+      "avg_power_score": 23.5,
+      "top_mvp_card": "Hypnotic Specter",
+      "top_mvp_count": 1
     },
     "Dead Heads": {
       "team": "Dead Heads",
@@ -44740,7 +44806,9 @@
           "win_pct": 0.5,
           "power_score": 43.0,
           "is_champion": false,
-          "udpi": 0.095
+          "udpi": 0.095,
+          "team_mvp": "Goblin Bomb",
+          "team_mvp_count": 1
         },
         {
           "season": 2,
@@ -44749,7 +44817,9 @@
           "win_pct": 0.3333333333,
           "power_score": 23.3,
           "is_champion": false,
-          "udpi": 0.04944444444
+          "udpi": 0.04944444444,
+          "team_mvp": "Illusionary Mask",
+          "team_mvp_count": 2
         }
       ],
       "fastest_win_turns": 5.0,
@@ -44757,7 +44827,9 @@
       "biggest_margin": 27.0,
       "biggest_margin_detail": "Season 1 Reg. Season, def. Extinction 20.0 to -7.0",
       "fastest_win_count": 1,
-      "avg_power_score": 33.1
+      "avg_power_score": 33.1,
+      "top_mvp_card": "Demonic Tutor",
+      "top_mvp_count": 2
     },
     "Extinction": {
       "team": "Extinction",
@@ -44785,7 +44857,9 @@
           "win_pct": 0.5,
           "power_score": 28.8,
           "is_champion": false,
-          "udpi": 0.06916666667
+          "udpi": 0.06916666667,
+          "team_mvp": "Erratic Portal",
+          "team_mvp_count": 1
         },
         {
           "season": 2,
@@ -44794,7 +44868,9 @@
           "win_pct": 0.5833333333,
           "power_score": 41.3,
           "is_champion": false,
-          "udpi": 0.08993055556
+          "udpi": 0.08993055556,
+          "team_mvp": "Wrath of God",
+          "team_mvp_count": 2
         },
         {
           "season": 4,
@@ -44803,7 +44879,9 @@
           "win_pct": 0.25,
           "power_score": 7.1,
           "is_champion": false,
-          "udpi": 0.035625
+          "udpi": 0.035625,
+          "team_mvp": "Deadly Insect",
+          "team_mvp_count": 2
         },
         {
           "season": 6,
@@ -44812,7 +44890,9 @@
           "win_pct": 0.55,
           "power_score": 0,
           "is_champion": false,
-          "udpi": 0
+          "udpi": 0,
+          "team_mvp": "Giant Growth",
+          "team_mvp_count": 2
         },
         {
           "season": 7,
@@ -44821,7 +44901,9 @@
           "win_pct": 0.75,
           "power_score": 70.8,
           "is_champion": false,
-          "udpi": 0.153
+          "udpi": 0.153,
+          "team_mvp": "Erhnam Djinn",
+          "team_mvp_count": 4
         },
         {
           "season": 8,
@@ -44830,7 +44912,9 @@
           "win_pct": 0.5454545455,
           "power_score": 36.5,
           "is_champion": false,
-          "udpi": 0.08553719008
+          "udpi": 0.08553719008,
+          "team_mvp": "Survival of the Fittest",
+          "team_mvp_count": 4
         }
       ],
       "fastest_win_turns": 5.0,
@@ -44838,7 +44922,9 @@
       "biggest_margin": 32.0,
       "biggest_margin_detail": "Season 7 Reg. Season, def. Fire Drilled 20.0 to -12.0",
       "fastest_win_count": 2,
-      "avg_power_score": 30.8
+      "avg_power_score": 30.8,
+      "top_mvp_card": "Wrath of God",
+      "top_mvp_count": 7
     },
     "Darwin's Doom": {
       "team": "Darwin's Doom",
@@ -44868,7 +44954,9 @@
           "win_pct": 0.3,
           "power_score": 14.2,
           "is_champion": false,
-          "udpi": 0.0306
+          "udpi": 0.0306,
+          "team_mvp": "Fallow Wurm",
+          "team_mvp_count": 2
         },
         {
           "season": 2,
@@ -44877,7 +44965,9 @@
           "win_pct": 0.5833333333,
           "power_score": 46.7,
           "is_champion": false,
-          "udpi": 0.1030555556
+          "udpi": 0.1030555556,
+          "team_mvp": "Gaea's Touch",
+          "team_mvp_count": 1
         },
         {
           "season": 3,
@@ -44886,7 +44976,9 @@
           "win_pct": 0.5555555556,
           "power_score": 39.8,
           "is_champion": false,
-          "udpi": 0.08765432099
+          "udpi": 0.08765432099,
+          "team_mvp": "Killer Bees",
+          "team_mvp_count": 2
         },
         {
           "season": 4,
@@ -44895,7 +44987,9 @@
           "win_pct": 0.75,
           "power_score": 65.0,
           "is_champion": false,
-          "udpi": 0.14625
+          "udpi": 0.14625,
+          "team_mvp": "Yavimaya Ants",
+          "team_mvp_count": 4
         },
         {
           "season": 5,
@@ -44904,7 +44998,9 @@
           "win_pct": 0.35,
           "power_score": 19.5,
           "is_champion": false,
-          "udpi": 0.044275
+          "udpi": 0.044275,
+          "team_mvp": "City of Solitude",
+          "team_mvp_count": 1
         },
         {
           "season": 6,
@@ -44913,7 +45009,9 @@
           "win_pct": 0.45,
           "power_score": 33.8,
           "is_champion": false,
-          "udpi": 0.071325
+          "udpi": 0.071325,
+          "team_mvp": "Crumble",
+          "team_mvp_count": 2
         },
         {
           "season": 7,
@@ -44922,7 +45020,9 @@
           "win_pct": 0.6,
           "power_score": 49.2,
           "is_champion": false,
-          "udpi": 0.1059
+          "udpi": 0.1059,
+          "team_mvp": "Force of Nature",
+          "team_mvp_count": 3
         },
         {
           "season": 8,
@@ -44931,7 +45031,9 @@
           "win_pct": 0.4090909091,
           "power_score": 22.9,
           "is_champion": false,
-          "udpi": 0.05820247934
+          "udpi": 0.05820247934,
+          "team_mvp": "Yavimaya Ants",
+          "team_mvp_count": 2
         }
       ],
       "fastest_win_turns": 4.0,
@@ -44939,7 +45041,9 @@
       "biggest_margin": 31.0,
       "biggest_margin_detail": "Season 3 Reg. Season, def. El Kamino 20.0 to -11.0",
       "fastest_win_count": 2,
-      "avg_power_score": 36.4
+      "avg_power_score": 36.4,
+      "top_mvp_card": "Yavimaya Ants",
+      "top_mvp_count": 10
     },
     "Thrull Frottle": {
       "team": "Thrull Frottle",
@@ -44966,7 +45070,9 @@
           "win_pct": 0.3333333333,
           "power_score": 12.4,
           "is_champion": false,
-          "udpi": 0.04555555556
+          "udpi": 0.04555555556,
+          "team_mvp": "Hecatomb",
+          "team_mvp_count": 1
         },
         {
           "season": 2,
@@ -44975,7 +45081,9 @@
           "win_pct": 0.5,
           "power_score": 38.5,
           "is_champion": false,
-          "udpi": 0.0575
+          "udpi": 0.0575,
+          "team_mvp": "Hecatomb",
+          "team_mvp_count": 2
         },
         {
           "season": 3,
@@ -44984,7 +45092,9 @@
           "win_pct": 0.4444444444,
           "power_score": 28.1,
           "is_champion": false,
-          "udpi": 0.0637037037
+          "udpi": 0.0637037037,
+          "team_mvp": "Bad Moon",
+          "team_mvp_count": 2
         },
         {
           "season": 4,
@@ -44993,7 +45103,9 @@
           "win_pct": 0.35,
           "power_score": 17.1,
           "is_champion": false,
-          "udpi": 0.044275
+          "udpi": 0.044275,
+          "team_mvp": "Ashes to Ashes",
+          "team_mvp_count": 1
         },
         {
           "season": 7,
@@ -45002,7 +45114,9 @@
           "win_pct": 0.25,
           "power_score": 4.8,
           "is_champion": false,
-          "udpi": 0.027625
+          "udpi": 0.027625,
+          "team_mvp": "Hecatomb",
+          "team_mvp_count": 2
         }
       ],
       "fastest_win_turns": 5.0,
@@ -45010,7 +45124,9 @@
       "biggest_margin": 28.0,
       "biggest_margin_detail": "Season 3 Reg. Season, def. Swamp Things 19.0 to -9.0",
       "fastest_win_count": 1,
-      "avg_power_score": 20.2
+      "avg_power_score": 20.2,
+      "top_mvp_card": "Hecatomb",
+      "top_mvp_count": 6
     },
     "Sliver Lining": {
       "team": "Sliver Lining",
@@ -45042,7 +45158,9 @@
           "win_pct": 0.2,
           "power_score": 0,
           "is_champion": false,
-          "udpi": 0.019
+          "udpi": 0.019,
+          "team_mvp": "Coat of Arms",
+          "team_mvp_count": 1
         },
         {
           "season": 2,
@@ -45051,7 +45169,9 @@
           "win_pct": 0.3333333333,
           "power_score": 18.4,
           "is_champion": false,
-          "udpi": 0.04027777778
+          "udpi": 0.04027777778,
+          "team_mvp": "Winged Sliver",
+          "team_mvp_count": 2
         },
         {
           "season": 3,
@@ -45060,7 +45180,9 @@
           "win_pct": 0.7222222222,
           "power_score": 61.6,
           "is_champion": false,
-          "udpi": 0.1488580247
+          "udpi": 0.1488580247,
+          "team_mvp": "City of Brass",
+          "team_mvp_count": 5
         },
         {
           "season": 4,
@@ -45069,7 +45191,9 @@
           "win_pct": 0.7,
           "power_score": 56.9,
           "is_champion": false,
-          "udpi": 0.14175
+          "udpi": 0.14175,
+          "team_mvp": "Coat of Arms",
+          "team_mvp_count": 6
         },
         {
           "season": 5,
@@ -45078,7 +45202,9 @@
           "win_pct": 0.6,
           "power_score": 49.8,
           "is_champion": false,
-          "udpi": 0.1122
+          "udpi": 0.1122,
+          "team_mvp": "Muscle Sliver",
+          "team_mvp_count": 3
         },
         {
           "season": 6,
@@ -45087,7 +45213,9 @@
           "win_pct": 0.7,
           "power_score": 61.1,
           "is_champion": false,
-          "udpi": 0.15855
+          "udpi": 0.15855,
+          "team_mvp": "Coat of Arms",
+          "team_mvp_count": 2
         },
         {
           "season": 7,
@@ -45096,7 +45224,9 @@
           "win_pct": 0.7,
           "power_score": 61.1,
           "is_champion": true,
-          "udpi": 0.1393
+          "udpi": 0.1393,
+          "team_mvp": "Disenchant",
+          "team_mvp_count": 4
         },
         {
           "season": 8,
@@ -45105,7 +45235,9 @@
           "win_pct": 0.6818181818,
           "power_score": 66.4,
           "is_champion": false,
-          "udpi": 0.1667355372
+          "udpi": 0.1667355372,
+          "team_mvp": "Disenchant",
+          "team_mvp_count": 4
         }
       ],
       "fastest_win_turns": 4.0,
@@ -45113,7 +45245,9 @@
       "biggest_margin": 50.0,
       "biggest_margin_detail": "Season 8 Reg. Season, def. Over Grenade 16.0 to -34.0",
       "fastest_win_count": 3,
-      "avg_power_score": 46.9
+      "avg_power_score": 46.9,
+      "top_mvp_card": "Coat of Arms",
+      "top_mvp_count": 14
     },
     "Mystery Flavor": {
       "team": "Mystery Flavor",
@@ -45136,7 +45270,9 @@
           "win_pct": 0.5833333333,
           "power_score": 41.8,
           "is_champion": false,
-          "udpi": 0.08361111111
+          "udpi": 0.08361111111,
+          "team_mvp": "Serra Angel",
+          "team_mvp_count": 2
         }
       ],
       "fastest_win_turns": 9.0,
@@ -45144,7 +45280,9 @@
       "biggest_margin": 43.0,
       "biggest_margin_detail": "Season 2 Reg. Season, def. Thrull Frottle 35.0 to -8.0",
       "fastest_win_count": 2,
-      "avg_power_score": 41.8
+      "avg_power_score": 41.8,
+      "top_mvp_card": "Serra Angel",
+      "top_mvp_count": 2
     },
     "Boss Fight": {
       "team": "Boss Fight",
@@ -45169,7 +45307,9 @@
           "win_pct": 0.5,
           "power_score": 30.0,
           "is_champion": true,
-          "udpi": 0.06666666667
+          "udpi": 0.06666666667,
+          "team_mvp": "Elvish Mystic",
+          "team_mvp_count": 2
         }
       ],
       "fastest_win_turns": 5.0,
@@ -45177,7 +45317,9 @@
       "biggest_margin": 34.0,
       "biggest_margin_detail": "Season 3 Reg. Season, def. Darwin's Doom 20.0 to -14.0",
       "fastest_win_count": 1,
-      "avg_power_score": 30.0
+      "avg_power_score": 30.0,
+      "top_mvp_card": "Elvish Mystic",
+      "top_mvp_count": 2
     },
     "Swamp Things": {
       "team": "Swamp Things",
@@ -45205,7 +45347,9 @@
           "win_pct": 0.5,
           "power_score": 33.8,
           "is_champion": false,
-          "udpi": 0.06361111111
+          "udpi": 0.06361111111,
+          "team_mvp": "Buried Alive",
+          "team_mvp_count": 2
         },
         {
           "season": 4,
@@ -45214,7 +45358,9 @@
           "win_pct": 0.5,
           "power_score": 36.2,
           "is_champion": false,
-          "udpi": 0.07525
+          "udpi": 0.07525,
+          "team_mvp": "Buried Alive",
+          "team_mvp_count": 4
         },
         {
           "season": 5,
@@ -45223,7 +45369,9 @@
           "win_pct": 0.75,
           "power_score": 76.3,
           "is_champion": false,
-          "udpi": 0.19125
+          "udpi": 0.19125,
+          "team_mvp": "Buried Alive",
+          "team_mvp_count": 3
         },
         {
           "season": 6,
@@ -45232,7 +45380,9 @@
           "win_pct": 0.4,
           "power_score": 19.9,
           "is_champion": false,
-          "udpi": 0.054
+          "udpi": 0.054,
+          "team_mvp": "Hidden Horror",
+          "team_mvp_count": 2
         },
         {
           "season": 7,
@@ -45241,7 +45391,9 @@
           "win_pct": 0.55,
           "power_score": 46.4,
           "is_champion": false,
-          "udpi": 0.087725
+          "udpi": 0.087725,
+          "team_mvp": "Necromancy",
+          "team_mvp_count": 4
         },
         {
           "season": 8,
@@ -45250,7 +45402,9 @@
           "win_pct": 0.4545454545,
           "power_score": 24.5,
           "is_champion": false,
-          "udpi": 0.06363636364
+          "udpi": 0.06363636364,
+          "team_mvp": "Lim Dul's Vault",
+          "team_mvp_count": 2
         }
       ],
       "fastest_win_turns": 5.0,
@@ -45258,7 +45412,9 @@
       "biggest_margin": 44.0,
       "biggest_margin_detail": "Season 4 Reg. Season, def. Team 10 40.0 to -4.0",
       "fastest_win_count": 12,
-      "avg_power_score": 39.5
+      "avg_power_score": 39.5,
+      "top_mvp_card": "Buried Alive",
+      "top_mvp_count": 11
     },
     "El Kamino": {
       "team": "El Kamino",
@@ -45281,7 +45437,9 @@
           "win_pct": 0.3333333333,
           "power_score": 16.3,
           "is_champion": false,
-          "udpi": 0.03944444444
+          "udpi": 0.03944444444,
+          "team_mvp": "Demonic Tutor",
+          "team_mvp_count": 2
         }
       ],
       "fastest_win_turns": 6.0,
@@ -45289,7 +45447,9 @@
       "biggest_margin": 30.0,
       "biggest_margin_detail": "Season 3 Reg. Season, def. The Doldrums 19.0 to -11.0",
       "fastest_win_count": 1,
-      "avg_power_score": 16.3
+      "avg_power_score": 16.3,
+      "top_mvp_card": "Demonic Tutor",
+      "top_mvp_count": 2
     },
     "The Doldrums": {
       "team": "The Doldrums",
@@ -45313,7 +45473,9 @@
           "win_pct": 0.1111111111,
           "power_score": 0,
           "is_champion": false,
-          "udpi": 6.172839506e-05
+          "udpi": 6.172839506e-05,
+          "team_mvp": "Wrath of God",
+          "team_mvp_count": 2
         },
         {
           "season": 4,
@@ -45322,7 +45484,9 @@
           "win_pct": 0.25,
           "power_score": 0,
           "is_champion": false,
-          "udpi": 0.016125
+          "udpi": 0.016125,
+          "team_mvp": "Evacuation",
+          "team_mvp_count": 2
         }
       ],
       "fastest_win_turns": 10.0,
@@ -45330,7 +45494,9 @@
       "biggest_margin": 28.0,
       "biggest_margin_detail": "Season 4 Reg. Season, def. Fire Drilled 17.0 to -11.0",
       "fastest_win_count": 1,
-      "avg_power_score": 0.0
+      "avg_power_score": 0.0,
+      "top_mvp_card": "Evacuation",
+      "top_mvp_count": 2
     },
     "Bad Ass Fault": {
       "team": "Bad Ass Fault",
@@ -45357,7 +45523,9 @@
           "win_pct": 0.75,
           "power_score": 70.2,
           "is_champion": false,
-          "udpi": 0.149625
+          "udpi": 0.149625,
+          "team_mvp": "Megrim",
+          "team_mvp_count": 4
         },
         {
           "season": 5,
@@ -45366,7 +45534,9 @@
           "win_pct": 0.8,
           "power_score": 68.9,
           "is_champion": false,
-          "udpi": 0.152
+          "udpi": 0.152,
+          "team_mvp": "Rukh Egg",
+          "team_mvp_count": 5
         },
         {
           "season": 6,
@@ -45375,7 +45545,9 @@
           "win_pct": 0.5,
           "power_score": 28.5,
           "is_champion": false,
-          "udpi": 0.074
+          "udpi": 0.074,
+          "team_mvp": "Rukh Egg",
+          "team_mvp_count": 2
         },
         {
           "season": 7,
@@ -45384,7 +45556,9 @@
           "win_pct": 0.4,
           "power_score": 22.6,
           "is_champion": false,
-          "udpi": 0.0516
+          "udpi": 0.0516,
+          "team_mvp": "Mind Twist",
+          "team_mvp_count": 2
         },
         {
           "season": 8,
@@ -45393,7 +45567,9 @@
           "win_pct": 0.3181818182,
           "power_score": 7.7,
           "is_champion": false,
-          "udpi": 0.04020661157
+          "udpi": 0.04020661157,
+          "team_mvp": "Bottomless Pit",
+          "team_mvp_count": 3
         }
       ],
       "fastest_win_turns": 4.0,
@@ -45401,7 +45577,9 @@
       "biggest_margin": 46.0,
       "biggest_margin_detail": "Season 4 Playoffs, def. Swamp Things 20.0 to -26.0",
       "fastest_win_count": 2,
-      "avg_power_score": 39.6
+      "avg_power_score": 39.6,
+      "top_mvp_card": "Megrim",
+      "top_mvp_count": 11
     },
     "Murphy's Law": {
       "team": "Murphy's Law",
@@ -45424,7 +45602,9 @@
           "win_pct": 0.4,
           "power_score": 24.6,
           "is_champion": false,
-          "udpi": 0.0564
+          "udpi": 0.0564,
+          "team_mvp": "Pandemonium",
+          "team_mvp_count": 2
         }
       ],
       "fastest_win_turns": 3.0,
@@ -45432,7 +45612,9 @@
       "biggest_margin": 46.0,
       "biggest_margin_detail": "Season 5 Reg. Season, def. Smashed Potatoes 6.0 to -40.0",
       "fastest_win_count": 1,
-      "avg_power_score": 24.6
+      "avg_power_score": 24.6,
+      "top_mvp_card": "Pandemonium",
+      "top_mvp_count": 2
     },
     "Frozen Stiffs": {
       "team": "Frozen Stiffs",
@@ -45455,7 +45637,9 @@
           "win_pct": 0.4,
           "power_score": 29.1,
           "is_champion": false,
-          "udpi": 0.0434
+          "udpi": 0.0434,
+          "team_mvp": "Winter Orb",
+          "team_mvp_count": 4
         }
       ],
       "fastest_win_turns": 8.0,
@@ -45463,7 +45647,9 @@
       "biggest_margin": 30.0,
       "biggest_margin_detail": "Season 5 Reg. Season, def. Bad Ass Fault 20.0 to -10.0",
       "fastest_win_count": 2,
-      "avg_power_score": 29.1
+      "avg_power_score": 29.1,
+      "top_mvp_card": "Winter Orb",
+      "top_mvp_count": 4
     },
     "Icy Hot": {
       "team": "Icy Hot",
@@ -45487,7 +45673,9 @@
           "win_pct": 0.35,
           "power_score": 9.9,
           "is_champion": false,
-          "udpi": 0.040075
+          "udpi": 0.040075,
+          "team_mvp": "Dream Tides",
+          "team_mvp_count": 2
         },
         {
           "season": 6,
@@ -45496,7 +45684,9 @@
           "win_pct": 0.2,
           "power_score": 0,
           "is_champion": false,
-          "udpi": 0.0139
+          "udpi": 0.0139,
+          "team_mvp": "Propaganda",
+          "team_mvp_count": 1
         }
       ],
       "fastest_win_turns": 7.0,
@@ -45504,7 +45694,9 @@
       "biggest_margin": 67.0,
       "biggest_margin_detail": "Season 6 Reg. Season, def. No Lands For You 61.0 to -6.0",
       "fastest_win_count": 2,
-      "avg_power_score": 5.0
+      "avg_power_score": 5.0,
+      "top_mvp_card": "Manabarbs",
+      "top_mvp_count": 3
     },
     "The Attritionists": {
       "team": "The Attritionists",
@@ -45528,7 +45720,9 @@
           "win_pct": 0.15,
           "power_score": 0,
           "is_champion": false,
-          "udpi": 0.0156
+          "udpi": 0.0156,
+          "team_mvp": "Bottomless Pit",
+          "team_mvp_count": 1
         },
         {
           "season": 8,
@@ -45537,7 +45731,9 @@
           "win_pct": 0.5454545455,
           "power_score": 47.2,
           "is_champion": false,
-          "udpi": 0.09049586777
+          "udpi": 0.09049586777,
+          "team_mvp": "Bad Moon",
+          "team_mvp_count": 4
         }
       ],
       "fastest_win_turns": 5.0,
@@ -45545,7 +45741,9 @@
       "biggest_margin": 27.0,
       "biggest_margin_detail": "Season 8 Reg. Season, def. Swamp Things 16.0 to -11.0",
       "fastest_win_count": 2,
-      "avg_power_score": 23.6
+      "avg_power_score": 23.6,
+      "top_mvp_card": "Bad Moon",
+      "top_mvp_count": 4
     },
     "Dark N Stormy": {
       "team": "Dark N Stormy",
@@ -45570,7 +45768,9 @@
           "win_pct": 0.6,
           "power_score": 50.9,
           "is_champion": false,
-          "udpi": 0.1146
+          "udpi": 0.1146,
+          "team_mvp": "Ball Lightning",
+          "team_mvp_count": 7
         },
         {
           "season": 7,
@@ -45579,7 +45779,9 @@
           "win_pct": 0.45,
           "power_score": 28.0,
           "is_champion": false,
-          "udpi": 0.06795
+          "udpi": 0.06795,
+          "team_mvp": "Ball Lightning",
+          "team_mvp_count": 2
         },
         {
           "season": 8,
@@ -45588,7 +45790,9 @@
           "win_pct": 0.5,
           "power_score": 28.1,
           "is_champion": false,
-          "udpi": 0.09068181818
+          "udpi": 0.09068181818,
+          "team_mvp": "Furnace of Rath",
+          "team_mvp_count": 5
         }
       ],
       "fastest_win_turns": 3.0,
@@ -45596,7 +45800,9 @@
       "biggest_margin": 30.0,
       "biggest_margin_detail": "Season 8 Reg. Season, def. YCBI 20.0 to -10.0",
       "fastest_win_count": 1,
-      "avg_power_score": 35.7
+      "avg_power_score": 35.7,
+      "top_mvp_card": "Ball Lightning",
+      "top_mvp_count": 10
     },
     "Big Gloves": {
       "team": "Big Gloves",
@@ -45620,7 +45826,9 @@
           "win_pct": 0.45,
           "power_score": 33.9,
           "is_champion": false,
-          "udpi": 0.073125
+          "udpi": 0.073125,
+          "team_mvp": "Howling Mine",
+          "team_mvp_count": 3
         },
         {
           "season": 7,
@@ -45629,7 +45837,9 @@
           "win_pct": 0.25,
           "power_score": 2.7,
           "is_champion": false,
-          "udpi": 0.029625
+          "udpi": 0.029625,
+          "team_mvp": "Demonic Tutor",
+          "team_mvp_count": 1
         }
       ],
       "fastest_win_turns": 5.0,
@@ -45637,7 +45847,9 @@
       "biggest_margin": 25.0,
       "biggest_margin_detail": "Season 7 Playoffs, def. Bad Ass Fault 19.0 to -6.0",
       "fastest_win_count": 3,
-      "avg_power_score": 18.3
+      "avg_power_score": 18.3,
+      "top_mvp_card": "Howling Mine",
+      "top_mvp_count": 3
     },
     "Team 11": {
       "team": "Team 11",
@@ -45660,7 +45872,9 @@
           "win_pct": 0.4,
           "power_score": 22.8,
           "is_champion": false,
-          "udpi": 0.0478
+          "udpi": 0.0478,
+          "team_mvp": "Titania's Song",
+          "team_mvp_count": 2
         }
       ],
       "fastest_win_turns": 6.0,
@@ -45668,48 +45882,9 @@
       "biggest_margin": 25.0,
       "biggest_margin_detail": "Season 6 Reg. Season, def. Darwin's Doom 18.0 to -7.0",
       "fastest_win_count": 2,
-      "avg_power_score": 22.8
-    },
-    "Mist Monsters": {
-      "team": "Mist Monsters",
-      "seasons_played": [
-        6,
-        7
-      ],
-      "total_w": 19,
-      "total_l": 21,
-      "total_gp": 40,
-      "win_pct": 0.475,
-      "championships": 0,
-      "championship_seasons": [],
-      "best_power_score": 40.2,
-      "best_power_season": 7,
-      "season_records": [
-        {
-          "season": 6,
-          "w": 7,
-          "l": 13,
-          "win_pct": 0.35,
-          "power_score": 0,
-          "is_champion": false,
-          "udpi": 0
-        },
-        {
-          "season": 7,
-          "w": 12,
-          "l": 8,
-          "win_pct": 0.6,
-          "power_score": 40.2,
-          "is_champion": false,
-          "udpi": 0.1053
-        }
-      ],
-      "fastest_win_turns": 3.0,
-      "fastest_win_detail": "Season 7 Playoffs, def. Clockwork 20.0 to -4.0",
-      "biggest_margin": 45.0,
-      "biggest_margin_detail": "Season 7 Reg. Season, def. Smashed Potatoes 28.0 to -17.0",
-      "fastest_win_count": 1,
-      "avg_power_score": 20.1
+      "avg_power_score": 22.8,
+      "top_mvp_card": "Titania's Song",
+      "top_mvp_count": 2
     },
     "Peak-a-Boom": {
       "team": "Peak-a-Boom",
@@ -45732,7 +45907,9 @@
           "win_pct": 0.3,
           "power_score": 0,
           "is_champion": false,
-          "udpi": 1.807207
+          "udpi": 1.807207,
+          "team_mvp": "Jade Statue",
+          "team_mvp_count": 1
         }
       ],
       "fastest_win_turns": 8.0,
@@ -45740,7 +45917,9 @@
       "biggest_margin": 26.0,
       "biggest_margin_detail": "Season 7 Reg. Season, def. Mist Monsters 20.0 to -6.0",
       "fastest_win_count": 2,
-      "avg_power_score": 0.0
+      "avg_power_score": 0.0,
+      "top_mvp_card": "Jade Statue",
+      "top_mvp_count": 1
     },
     "YCBI": {
       "team": "YCBI",
@@ -45764,7 +45943,9 @@
           "win_pct": 0.4,
           "power_score": 20.7,
           "is_champion": false,
-          "udpi": 0.0558
+          "udpi": 0.0558,
+          "team_mvp": "Meekstone",
+          "team_mvp_count": 2
         },
         {
           "season": 8,
@@ -45773,7 +45954,9 @@
           "win_pct": 0.2272727273,
           "power_score": 1.6,
           "is_champion": false,
-          "udpi": 0.02675619835
+          "udpi": 0.02675619835,
+          "team_mvp": "Soraya the Falconer",
+          "team_mvp_count": 1
         }
       ],
       "fastest_win_turns": 7.0,
@@ -45781,7 +45964,9 @@
       "biggest_margin": 23.0,
       "biggest_margin_detail": "Season 7 Reg. Season, def. Clockwork 20.0 to -3.0",
       "fastest_win_count": 1,
-      "avg_power_score": 11.2
+      "avg_power_score": 11.2,
+      "top_mvp_card": "Meekstone",
+      "top_mvp_count": 3
     },
     "Mean Machine": {
       "team": "Mean Machine",
@@ -45804,7 +45989,9 @@
           "win_pct": 0.7272727273,
           "power_score": 62.4,
           "is_champion": false,
-          "udpi": 0.1510743802
+          "udpi": 0.1510743802,
+          "team_mvp": "Goblin Recruiter",
+          "team_mvp_count": 6
         }
       ],
       "fastest_win_turns": 6.0,
@@ -45812,17 +45999,21 @@
       "biggest_margin": 24.0,
       "biggest_margin_detail": "Season 8 Reg. Season, def. Clockwork 6.0 to -18.0",
       "fastest_win_count": 6,
-      "avg_power_score": 62.4
+      "avg_power_score": 62.4,
+      "top_mvp_card": "Goblin Recruiter",
+      "top_mvp_count": 6
     },
     "Trick or Treat Freaks": {
       "team": "Trick or Treat Freaks",
       "seasons_played": [
+        6,
+        7,
         8
       ],
-      "total_w": 15,
-      "total_l": 7,
-      "total_gp": 22,
-      "win_pct": 0.6818,
+      "total_w": 34,
+      "total_l": 28,
+      "total_gp": 62,
+      "win_pct": 0.548,
       "championships": 1,
       "championship_seasons": [
         8
@@ -45831,13 +46022,37 @@
       "best_power_season": 8,
       "season_records": [
         {
+          "season": 6,
+          "w": 7,
+          "l": 13,
+          "win_pct": 0.35,
+          "power_score": 0,
+          "is_champion": false,
+          "udpi": 0,
+          "team_mvp": "Illusionary Mask",
+          "team_mvp_count": 1
+        },
+        {
+          "season": 7,
+          "w": 12,
+          "l": 8,
+          "win_pct": 0.6,
+          "power_score": 40.2,
+          "is_champion": false,
+          "udpi": 0.1053,
+          "team_mvp": "Illusionary Mask",
+          "team_mvp_count": 5
+        },
+        {
           "season": 8,
           "w": 15,
           "l": 7,
           "win_pct": 0.6818181818,
           "power_score": 58.0,
           "is_champion": true,
-          "udpi": null
+          "udpi": null,
+          "team_mvp": "Illusionary Mask",
+          "team_mvp_count": 3
         }
       ],
       "fastest_win_turns": 4.0,
@@ -45845,7 +46060,9 @@
       "biggest_margin": 36.0,
       "biggest_margin_detail": "Season 8 Playoffs, def. Swamp Things 20.0 to -16.0",
       "fastest_win_count": 4,
-      "avg_power_score": 58.0
+      "avg_power_score": 58.0,
+      "top_mvp_card": "Illusionary Mask",
+      "top_mvp_count": 9
     },
     "Folk Music": {
       "team": "Folk Music",
@@ -45868,7 +46085,9 @@
           "win_pct": 0.6363636364,
           "power_score": 46.8,
           "is_champion": false,
-          "udpi": 0.1151239669
+          "udpi": 0.1151239669,
+          "team_mvp": "Lord of Atlantis",
+          "team_mvp_count": 5
         }
       ],
       "fastest_win_turns": 5.0,
@@ -45876,69 +46095,9 @@
       "biggest_margin": 28.0,
       "biggest_margin_detail": "Season 8 Playoffs, def. Trick or Treat Freaks 20.0 to -8.0",
       "fastest_win_count": 4,
-      "avg_power_score": 46.8
-    },
-    "Smashed Circus": {
-      "team": "Smashed Circus",
-      "seasons_played": [
-        8
-      ],
-      "total_w": 9,
-      "total_l": 13,
-      "total_gp": 22,
-      "win_pct": 0.4091,
-      "championships": 0,
-      "championship_seasons": [],
-      "best_power_score": 27.3,
-      "best_power_season": 8,
-      "season_records": [
-        {
-          "season": 8,
-          "w": 9,
-          "l": 13,
-          "win_pct": 0.4090909091,
-          "power_score": 27.3,
-          "is_champion": false,
-          "udpi": null
-        }
-      ],
-      "fastest_win_turns": 6.0,
-      "fastest_win_detail": "Season 8 Reg. Season, def. The Attritionists 4.0 to -7.0",
-      "biggest_margin": 35.0,
-      "biggest_margin_detail": "Season 8 Playoffs, def. The Attritionists 19.0 to -16.0",
-      "fastest_win_count": 3,
-      "avg_power_score": 27.3
-    },
-    "Over Grenade": {
-      "team": "Over Grenade",
-      "seasons_played": [
-        8
-      ],
-      "total_w": 7,
-      "total_l": 15,
-      "total_gp": 22,
-      "win_pct": 0.3182,
-      "championships": 0,
-      "championship_seasons": [],
-      "best_power_score": 11.4,
-      "best_power_season": 8,
-      "season_records": [
-        {
-          "season": 8,
-          "w": 7,
-          "l": 15,
-          "win_pct": 0.3181818182,
-          "power_score": 11.4,
-          "is_champion": false,
-          "udpi": null
-        }
-      ],
-      "fastest_win_turns": 6.0,
-      "fastest_win_detail": "Season 8 Reg. Season, def. YCBI 17.0 to -12.0",
-      "biggest_margin": 29.0,
-      "biggest_margin_detail": "Season 8 Reg. Season, def. YCBI 17.0 to -12.0",
-      "fastest_win_count": 2,
-      "avg_power_score": 11.4
+      "avg_power_score": 46.8,
+      "top_mvp_card": "Lord of Atlantis",
+      "top_mvp_count": 5
     },
     "Clockwork": {
       "team": "Clockwork",
@@ -45962,7 +46121,9 @@
           "win_pct": 0.6,
           "power_score": 55.8,
           "is_champion": false,
-          "udpi": 0.1068
+          "udpi": 0.1068,
+          "team_mvp": "Flowstone Sculpture",
+          "team_mvp_count": 3
         },
         {
           "season": 8,
@@ -45971,7 +46132,9 @@
           "win_pct": 0.3636363636,
           "power_score": 21.3,
           "is_champion": false,
-          "udpi": 0.05421487603
+          "udpi": 0.05421487603,
+          "team_mvp": "Nevinyrral's Disk",
+          "team_mvp_count": 2
         }
       ],
       "fastest_win_turns": 5.0,
@@ -45979,7 +46142,9 @@
       "biggest_margin": 35.0,
       "biggest_margin_detail": "Season 7 Reg. Season, def. Darwin's Doom 28.0 to -7.0",
       "fastest_win_count": 2,
-      "avg_power_score": 38.5
+      "avg_power_score": 38.5,
+      "top_mvp_card": "Flowstone Sculpture",
+      "top_mvp_count": 3
     }
   },
   "head_to_head": {
@@ -46247,9 +46412,9 @@
       "wins_a": 3,
       "wins_b": 4
     },
-    "Fire Drilled|Mist Monsters": {
+    "Fire Drilled|Trick or Treat Freaks": {
       "team_a": "Fire Drilled",
-      "team_b": "Mist Monsters",
+      "team_b": "Trick or Treat Freaks",
       "wins_a": 3,
       "wins_b": 0
     },
@@ -46373,57 +46538,51 @@
       "wins_a": 1,
       "wins_b": 1
     },
-    "Mist Monsters|Smashed Potatoes": {
-      "team_a": "Mist Monsters",
+    "Trick or Treat Freaks|Smashed Potatoes": {
+      "team_a": "Trick or Treat Freaks",
       "team_b": "Smashed Potatoes",
       "wins_a": 4,
       "wins_b": 5
     },
-    "Mist Monsters|No Lands For You": {
-      "team_a": "Mist Monsters",
+    "Trick or Treat Freaks|No Lands For You": {
+      "team_a": "Trick or Treat Freaks",
       "team_b": "No Lands For You",
       "wins_a": 2,
       "wins_b": 2
     },
-    "Mist Monsters|Team 11": {
-      "team_a": "Mist Monsters",
+    "Trick or Treat Freaks|Team 11": {
+      "team_a": "Trick or Treat Freaks",
       "team_b": "Team 11",
       "wins_a": 3,
       "wins_b": 0
     },
-    "Mist Monsters|Team 10": {
-      "team_a": "Mist Monsters",
+    "Trick or Treat Freaks|Team 10": {
+      "team_a": "Trick or Treat Freaks",
       "team_b": "Team 10",
       "wins_a": 0,
       "wins_b": 1
     },
-    "Mist Monsters|Swamp Things": {
-      "team_a": "Mist Monsters",
+    "Trick or Treat Freaks|Swamp Things": {
+      "team_a": "Trick or Treat Freaks",
       "team_b": "Swamp Things",
       "wins_a": 2,
       "wins_b": 0
     },
-    "Mist Monsters|Sliver Lining": {
-      "team_a": "Mist Monsters",
+    "Trick or Treat Freaks|Sliver Lining": {
+      "team_a": "Trick or Treat Freaks",
       "team_b": "Sliver Lining",
       "wins_a": 3,
       "wins_b": 4
     },
-    "Mist Monsters|Peak-a-Boom": {
-      "team_a": "Mist Monsters",
+    "Trick or Treat Freaks|Peak-a-Boom": {
+      "team_a": "Trick or Treat Freaks",
       "team_b": "Peak-a-Boom",
       "wins_a": 0,
       "wins_b": 1
     },
-    "Mist Monsters|Thrull Frottle": {
-      "team_a": "Mist Monsters",
+    "Trick or Treat Freaks|Thrull Frottle": {
+      "team_a": "Trick or Treat Freaks",
       "team_b": "Thrull Frottle",
-      "wins_a": 1,
-      "wins_b": 0
-    },
-    "Mist Monsters|YCBI": {
-      "team_a": "Mist Monsters",
-      "team_b": "YCBI",
       "wins_a": 1,
       "wins_b": 0
     },
@@ -46565,9 +46724,9 @@
       "wins_a": 0,
       "wins_b": 1
     },
-    "Big Gloves|Mist Monsters": {
+    "Big Gloves|Trick or Treat Freaks": {
       "team_a": "Big Gloves",
-      "team_b": "Mist Monsters",
+      "team_b": "Trick or Treat Freaks",
       "wins_a": 6,
       "wins_b": 8
     },
@@ -46886,8 +47045,8 @@
     "Bad Ass Fault|Trick or Treat Freaks": {
       "team_a": "Bad Ass Fault",
       "team_b": "Trick or Treat Freaks",
-      "wins_a": 3,
-      "wins_b": 4
+      "wins_a": 0,
+      "wins_b": 1
     },
     "Bad Ass Fault|Team 11": {
       "team_a": "Bad Ass Fault",
@@ -46906,12 +47065,6 @@
       "team_b": "Team 10",
       "wins_a": 6,
       "wins_b": 2
-    },
-    "Bad Ass Fault|Mist Monsters": {
-      "team_a": "Bad Ass Fault",
-      "team_b": "Mist Monsters",
-      "wins_a": 0,
-      "wins_b": 1
     },
     "Bad Ass Fault|Glop Artists": {
       "team_a": "Bad Ass Fault",
@@ -47084,8 +47237,8 @@
     "Clockwork|Trick or Treat Freaks": {
       "team_a": "Clockwork",
       "team_b": "Trick or Treat Freaks",
-      "wins_a": 0,
-      "wins_b": 2
+      "wins_a": 2,
+      "wins_b": 5
     },
     "Clockwork|Fire Drilled": {
       "team_a": "Clockwork",
@@ -47098,12 +47251,6 @@
       "team_b": "Team 10",
       "wins_a": 0,
       "wins_b": 3
-    },
-    "Clockwork|Mist Monsters": {
-      "team_a": "Clockwork",
-      "team_b": "Mist Monsters",
-      "wins_a": 2,
-      "wins_b": 5
     },
     "Clockwork|Swamp Things": {
       "team_a": "Clockwork",
@@ -47183,9 +47330,9 @@
       "wins_a": 1,
       "wins_b": 3
     },
-    "Icy Hot|Mist Monsters": {
+    "Icy Hot|Trick or Treat Freaks": {
       "team_a": "Icy Hot",
-      "team_b": "Mist Monsters",
+      "team_b": "Trick or Treat Freaks",
       "wins_a": 0,
       "wins_b": 1
     },
@@ -47234,7 +47381,7 @@
     "Dark N Stormy|Trick or Treat Freaks": {
       "team_a": "Dark N Stormy",
       "team_b": "Trick or Treat Freaks",
-      "wins_a": 0,
+      "wins_a": 1,
       "wins_b": 1
     },
     "Dark N Stormy|Team 11": {
@@ -47253,12 +47400,6 @@
       "team_a": "Dark N Stormy",
       "team_b": "Team 10",
       "wins_a": 3,
-      "wins_b": 1
-    },
-    "Dark N Stormy|Mist Monsters": {
-      "team_a": "Dark N Stormy",
-      "team_b": "Mist Monsters",
-      "wins_a": 1,
       "wins_b": 1
     },
     "Dark N Stormy|Glop Artists": {
@@ -47384,8 +47525,8 @@
     "Darwin's Doom|Trick or Treat Freaks": {
       "team_a": "Darwin's Doom",
       "team_b": "Trick or Treat Freaks",
-      "wins_a": 1,
-      "wins_b": 0
+      "wins_a": 2,
+      "wins_b": 2
     },
     "Darwin's Doom|Team 11": {
       "team_a": "Darwin's Doom",
@@ -47410,12 +47551,6 @@
       "team_b": "El Kamino",
       "wins_a": 1,
       "wins_b": 1
-    },
-    "Darwin's Doom|Mist Monsters": {
-      "team_a": "Darwin's Doom",
-      "team_b": "Mist Monsters",
-      "wins_a": 2,
-      "wins_b": 2
     },
     "Darwin's Doom|Dead Heads": {
       "team_a": "Darwin's Doom",
@@ -47588,8 +47723,8 @@
     "Extinction|Trick or Treat Freaks": {
       "team_a": "Extinction",
       "team_b": "Trick or Treat Freaks",
-      "wins_a": 0,
-      "wins_b": 1
+      "wins_a": 2,
+      "wins_b": 5
     },
     "Extinction|Team 11": {
       "team_a": "Extinction",
@@ -47608,12 +47743,6 @@
       "team_b": "Team 10",
       "wins_a": 4,
       "wins_b": 3
-    },
-    "Extinction|Mist Monsters": {
-      "team_a": "Extinction",
-      "team_b": "Mist Monsters",
-      "wins_a": 2,
-      "wins_b": 5
     },
     "Extinction|Swamp Things": {
       "team_a": "Extinction",
@@ -48558,7 +48687,7 @@
       "seed": 5
     },
     {
-      "team": "Mist Monsters",
+      "team": "Trick or Treat Freaks",
       "season": 6,
       "w": 7,
       "l": 13,
@@ -48635,7 +48764,7 @@
       "seed": 5
     },
     {
-      "team": "Mist Monsters",
+      "team": "Trick or Treat Freaks",
       "season": 7,
       "w": 12,
       "l": 8,
@@ -48866,17 +48995,6 @@
       "seed": 11
     },
     {
-      "team": "Smashed Circus",
-      "season": 8,
-      "w": 9,
-      "l": 13,
-      "gp": 22,
-      "win_pct": 0.4090909091,
-      "power_score": 27.3,
-      "is_champion": false,
-      "seed": 12
-    },
-    {
       "team": "Clockwork",
       "season": 8,
       "w": 8,
@@ -48897,17 +49015,6 @@
       "power_score": 7.7,
       "is_champion": false,
       "seed": 14
-    },
-    {
-      "team": "Over Grenade",
-      "season": 8,
-      "w": 7,
-      "l": 15,
-      "gp": 22,
-      "win_pct": 0.3181818182,
-      "power_score": 11.4,
-      "is_champion": false,
-      "seed": 15
     },
     {
       "team": "YCBI",
@@ -49119,7 +49226,7 @@
       "win_life_delta": 14.49,
       "lose_life_delta": -15.59,
       "turn_w": 10.83,
-      "turn_l": 11.27,
+      "turn_l": 11.28,
       "turns_per_game": 10.65,
       "turn_delta": -0.45,
       "mana_w": 4.66,
@@ -49161,7 +49268,7 @@
       "hand_w": 2.64,
       "hand_l": 3.31,
       "hand_delta": -0.67,
-      "opp_hand_w": 4.05,
+      "opp_hand_w": 4.06,
       "opp_hand_l": 2.83,
       "deploy_w": 7.17,
       "deploy_l": 6.35,
@@ -49228,7 +49335,7 @@
       "deploy_w": 6.82,
       "deploy_l": 7.03,
       "deploy_delta": -0.21,
-      "deploy_per_mana_w": 1.67,
+      "deploy_per_mana_w": 1.68,
       "deploy_per_mana_l": 1.92,
       "deploy_per_mana_delta": -0.24
     },
@@ -49571,7 +49678,7 @@
       "deploy_delta": 1.25,
       "deploy_per_mana_w": 1.92,
       "deploy_per_mana_l": 1.85,
-      "deploy_per_mana_delta": 0.06
+      "deploy_per_mana_delta": 0.07
     },
     "Big Gloves": {
       "damage_pm": -96.5,
@@ -49696,37 +49803,6 @@
       "deploy_per_mana_w": null,
       "deploy_per_mana_l": null,
       "deploy_per_mana_delta": null
-    },
-    "Mist Monsters": {
-      "damage_pm": 69.0,
-      "dgt": 1.52,
-      "dtt": 1.47,
-      "ddt": 0.05,
-      "dgg": 14.35,
-      "dtg": 14.02,
-      "ddg": 0.33,
-      "win_life_delta": 18.25,
-      "lose_life_delta": -18.31,
-      "turn_w": 10.0,
-      "turn_l": 9.38,
-      "turns_per_game": 9.55,
-      "turn_delta": 0.63,
-      "mana_w": 5.46,
-      "mana_l": 4.38,
-      "mana_delta": 1.08,
-      "opp_mana_w": 4.38,
-      "opp_mana_l": 5.62,
-      "hand_w": 4.08,
-      "hand_l": 4.62,
-      "hand_delta": -0.54,
-      "opp_hand_w": 4.04,
-      "opp_hand_l": 2.62,
-      "deploy_w": 8.62,
-      "deploy_l": 8.69,
-      "deploy_delta": -0.06,
-      "deploy_per_mana_w": 1.66,
-      "deploy_per_mana_l": 1.74,
-      "deploy_per_mana_delta": -0.08
     },
     "Glop Artists": {
       "damage_pm": -47.0,
@@ -50612,6 +50688,146 @@
         "Armor Thrull"
       ],
       "active": false
+    },
+    "The Doldrums": {
+      "colors": [
+        "Blue",
+        "White"
+      ],
+      "archetype": "Mill / Counter Control",
+      "flavor": "Counter first, second and third, then mill away once their initial strike has been sapped. The League's first mono-blue experiment in the making \u2014 resource denial through patience, counters, and Dreadnoughts waiting in the wings.",
+      "key_cards": [
+        "Millstone",
+        "Phyrexian Dreadnought",
+        "Counterspell",
+        "Helm of Obedience"
+      ],
+      "active": false
+    },
+    "Team 10": {
+      "colors": [
+        "Black"
+      ],
+      "archetype": "Demon / Value Control",
+      "flavor": "Get Yawgmoth Demon into play. Everything else exists to support that singular, terrifying ambition. Black Vise punishes full hands, Winter Orb slows the world down, and when the Demon arrives, the game changes permanently.",
+      "key_cards": [
+        "Yawgmoth Demon",
+        "Black Vise",
+        "Winter Orb"
+      ],
+      "active": false
+    },
+    "Black & Blueses": {
+      "colors": [
+        "Black",
+        "Blue"
+      ],
+      "archetype": "Resource Depletion",
+      "flavor": "Hand, library, creatures, spells \u2014 everything goes. Slow the game to a crawl, eliminate the opponent's library card by card, and punish them for discarding anything. B&B wants a drain of a game, and will counter and kill anything that seeks to stop them.",
+      "key_cards": [
+        "Hypnotic Specter",
+        "Underworld Dreams",
+        "Grindstone",
+        "Helm of Obedience",
+        "Stasis"
+      ],
+      "active": false
+    },
+    "Dead Heads": {
+      "colors": [
+        "Black",
+        "Red"
+      ],
+      "archetype": "Goblin / Skeleton Tribal",
+      "flavor": "Goblins and skeletons make for an awful nice Halloween scare. A battlefield full of them guarantees a spooky cocktail of unrestrained mayhem.",
+      "key_cards": [
+        "Goblin Recruiter",
+        "Goblin Bomb",
+        "Goblins of the Flarg",
+        "Hidden Horror",
+        "Kjeldoran Dead"
+      ],
+      "active": false
+    },
+    "El Kamino": {
+      "colors": [
+        "Blue"
+      ],
+      "archetype": "Clone Combo",
+      "flavor": "Summon creatures, mask their identities, clone them, then hit the attack button. An army of clones is fine. An army of clones of the single largest creature in the game? Maybe bring your rabbit's foot.",
+      "key_cards": [
+        "Phyrexian Dreadnought",
+        "Illusionary Mask",
+        "Megrim",
+        "Shocker",
+        "Wheel of Fortune"
+      ],
+      "active": false
+    },
+    "Mystery Flavor": {
+      "colors": [
+        "Blue",
+        "White"
+      ],
+      "archetype": "Good Stuff / No Core Objective",
+      "flavor": "One thing is for certain \u2014 there is absolutely no core objective for this group of old favorites. Similar to Team 10, the Flavors are a mish-mosh of great cards sitting idly by on the sidelines. Kind of like how a fruit cake is made, which begs the question: does anyone even like fruit cake?",
+      "key_cards": [
+        "Serra Angel",
+        "Clone",
+        "Millstone"
+      ],
+      "active": false
+    },
+    "Team 11": {
+      "colors": [
+        "Black",
+        "Green"
+      ],
+      "archetype": "Yawgmoth Demon Engine",
+      "flavor": "Full disclosure \u2014 we'd like to get Yawgmoth Demon in play. Is he here? Yawggy? The entire roster is built around him and belle-to-be Titania's Song. A real grab bag of cards that could've been good, but were not.",
+      "key_cards": [
+        "Yawgmoth Demon",
+        "Titania's Song",
+        "Mana Vault",
+        "Priest of Yawgmoth",
+        "Su-Chi",
+        "Tetravus"
+      ],
+      "active": false
+    },
+    "Green Boss": {
+      "colors": [
+        "Green"
+      ],
+      "archetype": "Boss Fight \u2014 Big Green",
+      "flavor": "The biggest, most ridiculous group of green creatures imaginable. Forget lions, tigers and bears \u2014 you've got way bigger problems. This team is unfair, and we know it. An apology is probably owed to everyone who's faced it.",
+      "key_cards": [
+        "Khalni Hydra",
+        "Primalcrux",
+        "Worldspine Worm",
+        "Primeval Titan",
+        "Primordial Hydra",
+        "Elderscale Worm"
+      ],
+      "active": true
+    },
+    "Red Boss": {
+      "colors": [
+        "Red"
+      ],
+      "archetype": "Boss Fight \u2014 Red Aggro",
+      "flavor": "Dragons, goblins, and everything that burns. Modern red at its most unhinged \u2014 faster, bigger, and more relentless than anything the original card pool could produce. May require some tinkering.",
+      "key_cards": [],
+      "active": true
+    },
+    "Black Boss": {
+      "colors": [
+        "Black"
+      ],
+      "archetype": "Boss Fight \u2014 Black Control",
+      "flavor": "Undead zombies, vampires, nightmarish beasts and demons. Modern black creatures that make the League's discard strategies look quaint. Bone-men dealing the lion's share of damage, moving through opponents like a warm knife through butter.",
+      "key_cards": [],
+      "active": true
     }
   },
   "boss_fight_tiers": {

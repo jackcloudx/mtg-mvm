@@ -158,7 +158,7 @@ function renderPowerRankings() {
   const container = document.getElementById('power-rankings-list');
   if (!container) return;
   const standings = computeStandings();
-  const top8 = standings.slice(0, 8);
+  const top8 = standings.slice(0, 16);
   if (top8.every(t => t.gp === 0)) {
     container.innerHTML = `<div style="color:var(--text-muted);font-size:13px;padding:12px">Power rankings will appear after games are played.</div>`;
     return;
