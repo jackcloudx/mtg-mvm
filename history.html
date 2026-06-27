@@ -318,7 +318,7 @@ function renderIndex() {
     return `<div class="season-card" onclick="showSeason(${s.season})">
       <div class="season-card-num">Season ${s.season}</div>
       <div class="season-card-champ">${s.champion || 'Unknown'}${champStanding && champStanding.seed ? ` <span style="font-size:13px;color:var(--text-muted);font-weight:normal">#${champStanding.seed} seed</span>` : ''}</div>
-      <div class="season-card-label">${s.boss_fight_result ? s.boss_fight_result.tier : 'League Champion'}${champStanding ? ` · ${champStanding.w}-${champStanding.l}` : ''}</div>
+      <div class="season-card-label">${s.boss_fight_result ? (({'Iron Champion':'⚔','Bronze Champion':'🥉','Silver Champion':'🥈','Gold Champion':'🥇','Legendary Champion':'👑'})[s.boss_fight_result.tier]||'') + ' ' + s.boss_fight_result.tier : 'League Champion'}${champStanding ? ` · ${champStanding.w}-${champStanding.l}` : ''}</div>
       <div class="season-card-stats">
         <div><span class="season-card-stat-val">${s.team_count}</span><span class="season-card-stat-label">Teams</span></div>
         <div><span class="season-card-stat-val">${regGames}</span><span class="season-card-stat-label">Games</span></div>

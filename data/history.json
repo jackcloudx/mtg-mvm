@@ -46145,6 +46145,64 @@
       "avg_power_score": 38.5,
       "top_mvp_card": "Flowstone Sculpture",
       "top_mvp_count": 3
+    },
+    "The Circus": {
+      "team": "The Circus",
+      "seasons_played": [
+        8
+      ],
+      "total_w": 3,
+      "total_l": 6,
+      "total_gp": 9,
+      "win_pct": 0.333,
+      "championships": 0,
+      "championship_seasons": [],
+      "best_power_score": 0,
+      "avg_power_score": 0,
+      "season_records": [
+        {
+          "season": 8,
+          "w": 3,
+          "l": 6,
+          "win_pct": 0.333,
+          "power_score": 0,
+          "is_champion": false,
+          "udpi": null,
+          "team_mvp": "Fallow Wurm",
+          "team_mvp_count": 1
+        }
+      ],
+      "top_mvp_card": "Fallow Wurm",
+      "top_mvp_count": 1
+    },
+    "Overdrawn": {
+      "team": "Overdrawn",
+      "seasons_played": [
+        8
+      ],
+      "total_w": 4,
+      "total_l": 11,
+      "total_gp": 15,
+      "win_pct": 0.267,
+      "championships": 0,
+      "championship_seasons": [],
+      "best_power_score": 0,
+      "avg_power_score": 0,
+      "season_records": [
+        {
+          "season": 8,
+          "w": 4,
+          "l": 11,
+          "win_pct": 0.267,
+          "power_score": 0,
+          "is_champion": false,
+          "udpi": null,
+          "team_mvp": "Arcane Denial",
+          "team_mvp_count": 3
+        }
+      ],
+      "top_mvp_card": "Arcane Denial",
+      "top_mvp_count": 3
     }
   },
   "head_to_head": {
