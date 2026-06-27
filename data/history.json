@@ -33654,7 +33654,41 @@
           "commentary": "Boom. No contest, pu activate 3x 4/4 artifacts with the Song.\n\nFrottle. One mana, tough hand. This team is terrible. There's a little too much sacrificing required of their creature base. It leaves the roster unbalanced.",
           "verified": true
         }
-      ]
+      ],
+      "boss_fight_result": {
+        "champion": "Sliver Lining",
+        "wins": 1,
+        "losses": 1,
+        "tier": "Iron Champion",
+        "games": [
+          {
+            "game": 1,
+            "boss": "Green Boss",
+            "champion": "Sliver Lining",
+            "winner": "Sliver Lining",
+            "loser": "Green Boss",
+            "winner_score": 17.0,
+            "loser_score": -5.0,
+            "turns": 6,
+            "mvp": "Swords to Plowshares",
+            "champion_won": true,
+            "commentary": "Sliver Lining def. Green Boss in 6 turns \u2014 a dominant performance by the Season 7 champions."
+          },
+          {
+            "game": 2,
+            "boss": "Green Boss",
+            "champion": "Sliver Lining",
+            "winner": "Green Boss",
+            "loser": "Sliver Lining",
+            "winner_score": null,
+            "loser_score": null,
+            "turns": null,
+            "mvp": null,
+            "champion_won": false,
+            "commentary": null
+          }
+        ]
+      }
     },
     "8": {
       "season": 8,
@@ -50953,6 +50987,20 @@
         "Skithiryx, the Blight Dragon"
       ],
       "active": true
+    },
+    "The Circus": {
+      "colors": [
+        "Red",
+        "Green"
+      ],
+      "archetype": "Land Destruction / Speed",
+      "flavor": "A mixed bag of solid red and green cards built for M-Kill and speed \u2014 and an excuse to throw Kudzu out there. Ill-conceived from the start, the gameplay was excruciating. It's honestly a shock they lasted 9 games.",
+      "key_cards": [
+        "Kudzu",
+        "Thermokarst",
+        "Fallow Wurm"
+      ],
+      "active": false
     }
   },
   "boss_fight_tiers": {
