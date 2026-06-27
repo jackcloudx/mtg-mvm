@@ -46203,6 +46203,57 @@
       ],
       "top_mvp_card": "Arcane Denial",
       "top_mvp_count": 3
+    },
+    "Green Boss": {
+      "team": "Green Boss",
+      "seasons_played": [
+        7
+      ],
+      "total_w": 2,
+      "total_l": 1,
+      "total_gp": 3,
+      "win_pct": 0.667,
+      "championships": 0,
+      "championship_seasons": [],
+      "best_power_score": 0,
+      "avg_power_score": 0,
+      "season_records": [],
+      "top_mvp_card": "Elvish Piper",
+      "top_mvp_count": 1
+    },
+    "Red Boss": {
+      "team": "Red Boss",
+      "seasons_played": [
+        8
+      ],
+      "total_w": 0,
+      "total_l": 1,
+      "total_gp": 1,
+      "win_pct": 0.0,
+      "championships": 0,
+      "championship_seasons": [],
+      "best_power_score": 0,
+      "avg_power_score": 0,
+      "season_records": [],
+      "top_mvp_card": "Illusionary Mask",
+      "top_mvp_count": 1
+    },
+    "Black Boss": {
+      "team": "Black Boss",
+      "seasons_played": [
+        8
+      ],
+      "total_w": 1,
+      "total_l": 0,
+      "total_gp": 1,
+      "win_pct": 1.0,
+      "championships": 0,
+      "championship_seasons": [],
+      "best_power_score": 0,
+      "avg_power_score": 0,
+      "season_records": [],
+      "top_mvp_card": null,
+      "top_mvp_count": 0
     }
   },
   "head_to_head": {
@@ -50857,15 +50908,16 @@
       "colors": [
         "Green"
       ],
-      "archetype": "Boss Fight \u2014 Big Green",
-      "flavor": "The biggest, most ridiculous group of green creatures imaginable. Forget lions, tigers and bears \u2014 you've got way bigger problems. This team is unfair, and we know it. An apology is probably owed to everyone who's faced it.",
+      "archetype": "Mana Ramp / Big Green",
+      "flavor": "The mana engine runs so hot that Apex Altisaur and Worldspine Wurm don't feel unreasonable. Elvish Piper skips the mana cost entirely, just in case. You know what, I probably owe each of you an apology. This team is unfair.",
       "key_cards": [
-        "Khalni Hydra",
-        "Primalcrux",
-        "Worldspine Worm",
-        "Primeval Titan",
-        "Primordial Hydra",
-        "Elderscale Worm"
+        "Elvish Mystic",
+        "Priest of Titania",
+        "Nykthos, Shrine to Nyx",
+        "Apex Altisaur",
+        "Worldspine Wurm",
+        "Elvish Piper",
+        "Khalni Hydra"
       ],
       "active": true
     },
@@ -50873,18 +50925,33 @@
       "colors": [
         "Red"
       ],
-      "archetype": "Boss Fight \u2014 Red Aggro",
-      "flavor": "Dragons, goblins, and everything that burns. Modern red at its most unhinged \u2014 faster, bigger, and more relentless than anything the original card pool could produce. May require some tinkering.",
-      "key_cards": [],
+      "archetype": "Dragon / Goblin Aggro",
+      "flavor": "Dragonspeaker Shaman and Seething Song make dragons land ahead of schedule, Lathliss spawns more dragons when they do, and Muxus dumps the entire Goblin roster onto the table in one shot. Etali and Kiki-Jiki are there to make sure things were already out of hand before you realized it.",
+      "key_cards": [
+        "Dragonspeaker Shaman",
+        "Seething Song",
+        "Lathliss, Dragon Queen",
+        "Muxus, Goblin Grandee",
+        "Etali, Primal Storm",
+        "Kiki-Jiki, Mirror Breaker"
+      ],
       "active": true
     },
     "Black Boss": {
       "colors": [
         "Black"
       ],
-      "archetype": "Boss Fight \u2014 Black Control",
-      "flavor": "Undead zombies, vampires, nightmarish beasts and demons. Modern black creatures that make the League's discard strategies look quaint. Bone-men dealing the lion's share of damage, moving through opponents like a warm knife through butter.",
-      "key_cards": [],
+      "archetype": "Tribal Swarm / Big Black",
+      "flavor": "Death Baron and Lord of the Accursed buff the zombie horde while Vampire Nocturnus lords over the vampires and Cabal Coffers bankrolls the whole operation. Sheoldred, Phyrexian Obliterator, and Skithiryx show up when the deck wants to stop playing games.",
+      "key_cards": [
+        "Death Baron",
+        "Lord of the Accursed",
+        "Vampire Nocturnus",
+        "Cabal Coffers",
+        "Sheoldred, the Apocalypse",
+        "Phyrexian Obliterator",
+        "Skithiryx, the Blight Dragon"
+      ],
       "active": true
     }
   },
