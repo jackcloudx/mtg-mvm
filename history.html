@@ -183,11 +183,11 @@
     </div>
     <div id="at-adv-buckets" style="display:none;margin-bottom:14px">
       <div class="adv-bucket-tabs" id="at-adv-tabs">
-        <button class="adv-bucket-tab active" onclick="setAtAdvBucket('Damage_Profile',this)">Damage Profile</button>
-        <button class="adv-bucket-tab" onclick="setAtAdvBucket('Life_Margin',this)">Life Margin</button>
+        <button class="adv-bucket-tab active" onclick="setAtAdvBucket('Margins',this)">Margins</button>
         <button class="adv-bucket-tab" onclick="setAtAdvBucket('Pace',this)">Pace</button>
-        <button class="adv-bucket-tab" onclick="setAtAdvBucket('Board_State',this)">Board State</button>
-        <button class="adv-bucket-tab" onclick="setAtAdvBucket('Deployment_Efficiency',this)">Deployment Efficiency</button>
+        <button class="adv-bucket-tab" onclick="setAtAdvBucket('Damage_Efficiency',this)">Damage Efficiency</button>
+        <button class="adv-bucket-tab" onclick="setAtAdvBucket('Deployment',this)">Deployment</button>
+        <button class="adv-bucket-tab" onclick="setAtAdvBucket('Resources',this)">Resources</button>
       </div>
     </div>
     <div class="at-table-wrap">
@@ -214,6 +214,8 @@ async function init() {
   renderChampionLegend();
   renderAllTime();
   renderTeamsTab();
+  const initHash = (window.location.hash || '').replace('#','');
+  if (initHash) histNavigate(initHash, false);
 }
 
 function renderTeamsTab() {
@@ -257,6 +259,7 @@ function renderTeamsTab() {
 }
 
 function switchHistTab(view, btn) {
+  window.history.pushState({hash: view}, '', '#' + view);
   document.querySelectorAll('.hist-tab').forEach(t => t.classList.remove('active'));
   document.querySelectorAll('.hist-view').forEach(v => v.classList.remove('active'));
   btn.classList.add('active');
@@ -394,6 +397,7 @@ function renderIndex() {
 }
 
 function showSeason(seasonNum) {
+  window.history.pushState({hash: 'season-' + seasonNum}, '', '#season-' + seasonNum);
   const season = historyData.seasons[seasonNum];
   if (!season) return;
   document.getElementById('index-view').style.display = 'none';
@@ -596,7 +600,7 @@ function advSortTable(tableId, field) {
 }
 
 function initAdvancedStats(seasonNum) {
-  const el = document.getElementById('adv-tbl-' + seasonNum + '-Damage_Profile');
+  const el = document.getElementById('adv-tbl-' + seasonNum + '-Margins');
   if (el) el.style.display = 'block';
 }
 
@@ -1066,7 +1070,7 @@ function toggleAccordion(headerEl) {
 }
 
 let atStatsMode = 'basic';
-let atAdvBucket = 'Damage_Profile';
+let atAdvBucket = 'Margins';
 
 function setAtStats(mode) {
   atStatsMode = mode;
@@ -1255,6 +1259,26 @@ function renderAllTime() {
     }
   }
 }
+
+function histNavigate(hash, pushState = true) {
+  if (pushState) window.history.pushState({hash}, '', hash ? '#' + hash : window.location.pathname);
+  const parts = (hash || '').split('-');
+  if (!hash || hash === 'seasons') {
+    switchHistTab('seasons', document.querySelector('.hist-tab'));
+  } else if (hash === 'alltime') {
+    switchHistTab('alltime', document.querySelectorAll('.hist-tab')[1]);
+  } else if (hash === 'teams') {
+    switchHistTab('teams', document.querySelectorAll('.hist-tab')[2]);
+  } else if (hash.startsWith('season-')) {
+    const num = parseInt(hash.replace('season-',''));
+    if (!isNaN(num)) showSeason(num);
+  }
+}
+
+window.addEventListener('popstate', (e) => {
+  const hash = (window.location.hash || '').replace('#','');
+  histNavigate(hash, false);
+});
 
 document.addEventListener('DOMContentLoaded', init);
 </script>
