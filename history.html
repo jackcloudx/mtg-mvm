@@ -125,7 +125,7 @@
 
   <div class="hist-tabs">
     <button class="hist-tab active" onclick="switchHistTab('seasons', this)">Seasons</button>
-    <button class="hist-tab" onclick="switchHistTab('alltime', this)">All-Time</button>
+    <button class="hist-tab" onclick="switchHistTab('alltime', this)">Statistics</button>
     <button class="hist-tab" onclick="switchHistTab('teams', this)">Teams</button>
   </div>
 
@@ -140,13 +140,16 @@
             <div style="color:var(--text-muted)">Loading...</div>
           </div>
         </div>
-        <div class="hof-rail" id="hof-rail">
-          <div class="hof-rail-title">League Records</div>
-          <div id="hof-rail-content">Loading...</div>
-        </div>
-        <div id="champion-legend-wrap" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;margin-top:12px">
-          <div style="font-family:var(--font-head);font-size:11px;color:var(--gold);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border)">Champion Tiers</div>
-          <div id="champion-legend"></div>
+        <div>
+          <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;margin-bottom:12px">
+            <div style="font-family:var(--font-head);font-size:11px;color:var(--gold);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border)">Champion Tiers</div>
+            <div style="font-size:11px;color:var(--text-muted);margin-bottom:10px">Awarded to League Champions who defeat Boss Fight decks after winning the title.</div>
+            <div id="champion-legend"></div>
+          </div>
+          <div class="hof-rail" id="hof-rail">
+            <div class="hof-rail-title">League Records</div>
+            <div id="hof-rail-content">Loading...</div>
+          </div>
         </div>
       </div>
     </div>
@@ -155,15 +158,15 @@
 
   <div id="histview-teams" class="hist-view">
     <div style="margin-bottom:32px">
-      <div style="font-family:var(--font-head);font-size:12px;color:var(--gold);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid var(--border)">Active — Season 9</div>
+      <div style="font-size:10px;color:var(--gold);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px">Active — Season 9</div>
       <div class="team-tiles-grid" id="teams-active-grid"></div>
     </div>
     <div style="margin-bottom:32px">
-      <div style="font-family:var(--font-head);font-size:12px;color:var(--red);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid var(--border)">Boss Fights</div>
+      <div style="font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px">Boss Fights</div>
       <div class="team-tiles-grid" id="teams-boss-grid"></div>
     </div>
     <div>
-      <div style="font-family:var(--font-head);font-size:12px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid var(--border)">Retired</div>
+      <div style="font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px">Retired</div>
       <div class="team-tiles-grid" id="teams-retired-grid"></div>
     </div>
   </div>
@@ -232,10 +235,11 @@ function renderTeamsTab() {
     return `<a class="team-tile" href="team-history.html?team=${encodeURIComponent(teamName)}" style="${isBoss ? 'border-color:var(--red)' : ''}">
       <div class="team-tile-name" style="${isBoss ? 'color:var(--red)' : ''}">${teamName}${titles > 0 ? ' 👑' : ''}</div>
       <div class="team-tile-archetype">${arch.archetype || ''}</div>
+      ${arch.flavor ? `<div style="font-size:11px;color:var(--text-secondary);line-height:1.5;margin-bottom:8px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden">${arch.flavor}</div>` : ''}
       <div class="team-tile-colors">${(arch.colors||[]).map(c => `<span class="team-tile-color">${c}</span>`).join('')}</div>
       <div class="team-tile-stats">
         <span><span class="team-tile-stat-val">${record}</span> All-Time</span>
-        ${seasons ? `<span><span class="team-tile-stat-val">${seasons}</span> Season${seasons>1?'s':''}</span>` : ''}
+        <span style="font-size:10px;color:var(--text-muted)">${at.seasons_played && at.seasons_played.length ? 'S' + at.seasons_played.join(', S') : '—'}</span>
         ${titles > 0 ? `<span><span class="team-tile-stat-val">${titles}</span> Title${titles>1?'s':''}</span>` : ''}
       </div>
     </a>`;
@@ -368,14 +372,15 @@ function renderChampionLegend() {
   const container = document.getElementById('champion-legend');
   if (!container || !historyData) return;
   const tiers = historyData.boss_fight_tiers || {};
-  const order = [0,1,2,3,4,5];
-  const icons = {0:'🏆',1:'⚔',2:'🥉',3:'🥈',4:'🥇',5:'👑'};
-  container.innerHTML = order.map(n => `
-    <div style="display:flex;align-items:center;gap:8px;font-size:11px;color:var(--text-muted);padding:2px 0">
-      <span>${icons[n]}</span>
-      <span style="color:var(--text-secondary)">${tiers[n] || ''}</span>
-      <span style="color:var(--text-muted)">${n === 0 ? 'No Boss Fights' : n + ' Boss Fight win' + (n > 1 ? 's' : '')}</span>
-    </div>`).join('');
+  container.innerHTML = `
+    <div style="font-size:11px;color:var(--text-muted);margin-bottom:8px;line-height:1.6">Awarded to League Champions who defeat Boss Fight decks after winning the title. Each Boss Fight victory advances the tier.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px 12px">
+      ${[0,1,2,3,4,5].map(n => `
+        <div style="display:flex;justify-content:space-between;align-items:baseline;font-size:11px;padding:2px 0;border-bottom:1px solid var(--border)">
+          <span style="color:var(--text-secondary)">${tiers[n] || ''}</span>
+          <span style="color:var(--text-muted);font-size:10px">${n === 0 ? 'title only' : n === 1 ? 'I Boss win' : `${['','I','II','III','IV','V'][n]} Boss wins`}</span>
+        </div>`).join('')}
+    </div>`;
 }
 
 function renderIndex() {
@@ -387,7 +392,7 @@ function renderIndex() {
     return `<div class="season-card" onclick="showSeason(${s.season})">
       <div class="season-card-num">Season ${s.season}</div>
       <div class="season-card-champ">${s.champion || 'Unknown'}${champStanding && champStanding.seed ? ` <span style="font-size:13px;color:var(--text-muted);font-weight:normal">#${champStanding.seed} seed</span>` : ''}</div>
-      <div class="season-card-label">${s.boss_fight_result ? (({'Iron Champion':'⚔','Bronze Champion':'🥉','Silver Champion':'🥈','Gold Champion':'🥇','Legendary Champion':'👑'})[s.boss_fight_result.tier]||'🏆') + ' ' + s.boss_fight_result.tier : '🏆 League Champion'}${champStanding ? ` · ${champStanding.w}-${champStanding.l}` : ''}</div>
+      <div class="season-card-label">${s.boss_fight_result ? s.boss_fight_result.tier : '🏆 League Champion'}${champStanding ? ` · ${champStanding.w}-${champStanding.l}` : ''}</div>
       <div class="season-card-stats">
         <div><span class="season-card-stat-val">${s.team_count}</span><span class="season-card-stat-label">Teams</span></div>
         <div><span class="season-card-stat-val">${regGames}</span><span class="season-card-stat-label">Games</span></div>
@@ -542,21 +547,21 @@ function buildAdvancedStatsHtml(season) {
   const f = (v, dec=2) => v != null ? Number(v).toFixed(dec) : '<span style="color:var(--text-muted)">—</span>';
   const BUCKETS = {
     'Margins': { available: true, cols: [
-      {key:'win_life_delta',label:'Margin-W'},{key:'lose_life_delta',label:'Margin-L'},
-      {key:'dgg',label:'DG/Game'},{key:'dtg',label:'DT/Game'},{key:'ddg',label:'DD/Game'}] },
+      {key:'win_life_delta',label:'Margin-W',g:1},{key:'lose_life_delta',label:'Margin-L',g:1},
+      {key:'dgg',label:'DG/Game',g:2},{key:'dtg',label:'DT/Game',g:2},{key:'ddg',label:'DD/Game',g:2}] },
     'Pace': { available: true, cols: [
-      {key:'turn_w',label:'Turns-W'},{key:'turn_l',label:'Turns-L'},{key:'turn_delta',label:'Turn Δ'},
-      {key:'win_pct_short',label:'Win% Short',pct:true},{key:'win_pct_mid',label:'Win% Mid',pct:true},{key:'win_pct_long',label:'Win% Long',pct:true}] },
+      {key:'turn_w',label:'Turns-W',g:1},{key:'turn_l',label:'Turns-L',g:1},{key:'turn_delta',label:'Turn Δ',g:1},
+      {key:'win_pct_short',label:'Win% Short',pct:true,g:2},{key:'win_pct_mid',label:'Win% Mid',pct:true,g:2},{key:'win_pct_long',label:'Win% Long',pct:true,g:2}] },
     'Damage Efficiency': { available: season.season >= 4, note: 'Seasons 4+', cols: [
-      {key:'dgt',label:'DG/Turn'},{key:'dtt',label:'DT/Turn'},{key:'ddt',label:'DD/Turn'},
-      {key:'damage_per_card_w',label:'Dmg/Card-W'},{key:'damage_per_card_l',label:'Dmg/Card-L'},{key:'damage_per_card_delta',label:'Dmg/Card Δ'},
-      {key:'cards_per_damage',label:'Cards/Dmg',dec:3}] },
+      {key:'dgt',label:'DG/Turn',g:1},{key:'dtt',label:'DT/Turn',g:1},{key:'ddt',label:'DD/Turn',g:1},
+      {key:'damage_per_card_w',label:'Dmg/Card-W',g:2},{key:'damage_per_card_l',label:'Dmg/Card-L',g:2},{key:'damage_per_card_delta',label:'Dmg/Card Δ',g:2},
+      {key:'cards_per_damage',label:'Cards/Dmg',dec:3,g:3}] },
     'Deployment': { available: season.season >= 6, note: 'Seasons 6+', cols: [
-      {key:'deploy_w',label:'Deploy-W'},{key:'deploy_l',label:'Deploy-L'},{key:'deploy_delta',label:'Deploy Δ'},
-      {key:'deploy_per_mana_w',label:'Dply/Mana-W'},{key:'deploy_per_mana_l',label:'Dply/Mana-L'},{key:'deploy_per_mana_delta',label:'Dply/Mana Δ'}] },
+      {key:'deploy_w',label:'Deploy-W',g:1},{key:'deploy_l',label:'Deploy-L',g:1},{key:'deploy_delta',label:'Deploy Δ',g:1},
+      {key:'deploy_per_mana_w',label:'Dply/Mana-W',g:2},{key:'deploy_per_mana_l',label:'Dply/Mana-L',g:2},{key:'deploy_per_mana_delta',label:'Dply/Mana Δ',g:2}] },
     'Resources': { available: season.season >= 4, note: 'Seasons 4+', cols: [
-      {key:'mana_delta',label:'Mana Δ'},{key:'hand_delta',label:'Hand Δ'},
-      {key:'opp_mana_delta',label:'OppMana Δ'},{key:'opp_hand_delta',label:'OppHand Δ'}] },
+      {key:'mana_delta',label:'Mana Δ',g:1},{key:'hand_delta',label:'Hand Δ',g:2},
+      {key:'opp_mana_delta',label:'OppMana Δ',g:3},{key:'opp_hand_delta',label:'OppHand Δ',g:4}] },
   };
   const bucketNames = Object.keys(BUCKETS);
   const sectionId = 'adv-' + season.season;
@@ -565,8 +570,19 @@ function buildAdvancedStatsHtml(season) {
     const tableId = 'adv-tbl-' + season.season + '-' + name.replace(/\s+/g,'_');
     if (!bucket.available) return '<div id="' + tableId + '" class="adv-bucket-view" style="display:none"><p style="color:var(--text-muted);font-size:13px;padding:12px 0">' + name + ' data not available for Season ' + season.season + '. Tracking began ' + (bucket.note||'') + '.</p></div>';
     const buildTable = () => {
-      const thead = '<tr><th style="text-align:left">Team</th>' + bucket.cols.map(c => '<th onclick="advSortTable(\'' + tableId + '\',\'' + c.key + '\')">' + c.label + '</th>').join('') + '</tr>';
-      const tbody = [...teams].map(team => { const row = adv[team]||{}; return '<tr><td>' + team + '</td>' + bucket.cols.map(c => '<td>' + (c.pct ? (row[c.key]!=null ? (row[c.key]*100).toFixed(0)+'%' : '—') : f(row[c.key], c.dec??2)) + '</td>').join('') + '</tr>'; }).join('');
+      const cols = bucket.cols;
+      const thead = '<tr><th style="text-align:left">Team</th>' + cols.map((c, ci) => {
+        const bl = ci > 0 && cols[ci-1].g !== c.g ? 'border-left:2px solid var(--border);' : '';
+        return `<th style="${bl}" onclick="advSortTable('${tableId}','${c.key}')">${c.label}</th>`;
+      }).join('') + '</tr>';
+      const tbody = [...teams].map(team => {
+        const row = adv[team]||{};
+        return '<tr><td>' + team + '</td>' + cols.map((c, ci) => {
+          const bl = ci > 0 && cols[ci-1].g !== c.g ? 'border-left:2px solid var(--border);' : '';
+          const val = c.pct ? (row[c.key]!=null ? (row[c.key]*100).toFixed(0)+'%' : '—') : f(row[c.key], c.dec??2);
+          return `<td style="${bl}">${val}</td>`;
+        }).join('') + '</tr>';
+      }).join('');
       return '<thead>' + thead + '</thead><tbody>' + tbody + '</tbody>';
     };
     return '<div id="' + tableId + '" class="adv-bucket-view" style="display:none"><div style="overflow-x:auto"><table class="adv-stat-table" id="' + tableId + '-table">' + buildTable() + '</table></div></div>';
@@ -722,8 +738,7 @@ function buildPreviewHtml(season) {
 function buildBossFightHtml(season) {
   const result = season.boss_fight_result;
   if (!result) return '';
-  const tiers = {'Champion':'','Iron Champion':'⚔','Bronze Champion':'🥉','Silver Champion':'🥈','Gold Champion':'🥇','Legendary Champion':'👑'};
-  const icon = tiers[result.tier] || '';
+  const icon = '';
   const bossColors = {'Green Boss':'#2d7a2d','Red Boss':'#c0392b','Black Boss':'#4a4a4a','Blue Boss':'#2980b9','White Boss':'#c8b870'};
   const gamesHtml = result.games.map(g => {
     const champWon = g.champion_won;
@@ -755,7 +770,7 @@ function buildBossFightHtml(season) {
           <div style="font-size:13px;color:var(--text-secondary);margin-bottom:4px">
             ${result.champion} faced the Boss Fight gauntlet following their championship victory.
           </div>
-          <div style="font-size:20px;font-weight:700;color:var(--gold)">${icon} ${result.tier}</div>
+          <div style="font-size:18px;font-weight:700;color:var(--gold)">${result.tier}</div>
           <div style="font-size:11px;color:var(--text-muted)">${result.wins} win${result.wins!==1?'s':''} against the Bosses</div>
         </div>
         ${gamesHtml}

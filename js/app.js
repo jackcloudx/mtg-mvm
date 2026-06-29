@@ -158,7 +158,7 @@ function renderPowerRankings() {
   const container = document.getElementById('power-rankings-list');
   if (!container) return;
   const standings = computeStandings();
-  const top8 = standings.slice(0, 16);
+  const top8 = standings.slice(0, 5);
   if (top8.every(t => t.gp === 0)) {
     container.innerHTML = `<div style="color:var(--text-muted);font-size:13px;padding:12px">Power rankings will appear after games are played.</div>`;
     return;
@@ -424,7 +424,67 @@ window.navigate = navigate;
 window.showTeam = showTeam;
 window.backToTeams = backToTeams;
 window.renderGameLog = renderGameLog;
+
+function renderSchedule(filterTeamId = null) {
+  const container = document.getElementById('game-log-list');
+  if (!container) return;
+  const schedule = seasonData.schedule || [];
+  const teams = seasonData.teams || [];
+  const findTeam = id => teams.find(t => t.id === id);
+
+  let upcoming = schedule
+    .filter(g => !g.played)
+    .filter(g => !filterTeamId || g.home_id === filterTeamId || g.away_id === filterTeamId)
+    .sort((a, b) => a.week - b.week);
+
+  if (!upcoming.length) {
+    container.innerHTML = `<div class="empty-state"><p style="color:var(--text-muted);padding:24px 0">No upcoming games.</p></div>`;
+    return;
+  }
+
+  let currentWeek = null;
+  container.innerHTML = upcoming.map(g => {
+    const home = findTeam(g.home_id);
+    const away = findTeam(g.away_id);
+    if (!home || !away) return '';
+    let weekHeader = '';
+    if (g.week !== currentWeek) {
+      currentWeek = g.week;
+      weekHeader = `<div style="font-size:11px;color:var(--gold);text-transform:uppercase;letter-spacing:0.08em;padding:10px 0 4px;border-top:1px solid var(--border);margin-top:4px">Week ${g.week}</div>`;
+    }
+    return `${weekHeader}<div class="game-log-item" style="cursor:default">
+      <div class="game-log-header">
+        <span class="game-log-matchup">${home.name} vs ${away.name}</span>
+        <span style="font-size:11px;color:var(--text-muted)">Week ${g.week}</span>
+      </div>
+    </div>`;
+  }).join('');
+}
+window.renderSchedule = renderSchedule;
 window.saveData = saveData;
 window.seasonData = seasonData;
+
+function switchGameLogTab(tab) {
+  const resultsBtn = document.getElementById('log-tab-results');
+  const scheduleBtn = document.getElementById('log-tab-schedule');
+  if (tab === 'results') {
+    resultsBtn.style.background = 'var(--gold)';
+    resultsBtn.style.color = 'var(--bg)';
+    resultsBtn.style.borderColor = 'var(--gold)';
+    scheduleBtn.style.background = 'transparent';
+    scheduleBtn.style.color = 'var(--text-muted)';
+    scheduleBtn.style.borderColor = 'var(--border)';
+    renderGameLog();
+  } else {
+    scheduleBtn.style.background = 'var(--gold)';
+    scheduleBtn.style.color = 'var(--bg)';
+    scheduleBtn.style.borderColor = 'var(--gold)';
+    resultsBtn.style.background = 'transparent';
+    resultsBtn.style.color = 'var(--text-muted)';
+    resultsBtn.style.borderColor = 'var(--border)';
+    renderSchedule();
+  }
+}
+window.switchGameLogTab = switchGameLogTab;
 
 document.addEventListener('DOMContentLoaded', init);

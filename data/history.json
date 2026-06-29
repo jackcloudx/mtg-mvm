@@ -34849,7 +34849,7 @@
         "champion": "Sliver Lining",
         "wins": 1,
         "losses": 1,
-        "tier": "Iron Champion",
+        "tier": "Level I Champion",
         "games": [
           {
             "game": 1,
@@ -45854,7 +45854,7 @@
         "champion": "Trick or Treat Freaks",
         "wins": 1,
         "losses": 2,
-        "tier": "Iron Champion",
+        "tier": "Level I Champion",
         "games": [
           {
             "season": 8,
@@ -52901,11 +52901,11 @@
   },
   "boss_fight_tiers": {
     "0": "Champion",
-    "1": "Iron Champion",
-    "2": "Bronze Champion",
-    "3": "Silver Champion",
-    "4": "Gold Champion",
-    "5": "Legendary Champion"
+    "1": "Level I Champion",
+    "2": "Level II Champion",
+    "3": "Level III Champion",
+    "4": "Level IV Champion",
+    "5": "Level V Champion"
   },
   "boss_fights": [
     {

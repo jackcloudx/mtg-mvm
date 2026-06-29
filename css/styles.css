@@ -179,6 +179,19 @@ nav a:hover, nav a.active {
 }
 .standings-table tr:hover td { background: var(--bg-card); }
 .standings-table tr:last-child td { border-bottom: none; }
+
+/* Zebra striping for all data tables */
+.standings-table tbody tr:nth-child(even),
+.adv-stat-table tbody tr:nth-child(even),
+.at-table tbody tr:nth-child(even) { background: rgba(0,0,0,0.015); }
+
+[data-theme="dark"] .standings-table tbody tr:nth-child(even),
+[data-theme="dark"] .adv-stat-table tbody tr:nth-child(even),
+[data-theme="dark"] .at-table tbody tr:nth-child(even) { background: rgba(255,255,255,0.015); }
+
+.standings-table tbody tr:hover,
+.adv-stat-table tbody tr:hover,
+.at-table tbody tr:hover { background: rgba(184,151,42,0.08); }
 .team-rank {
   color: var(--text-muted);
   font-size: 13px;
