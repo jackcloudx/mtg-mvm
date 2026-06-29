@@ -13,6 +13,17 @@
       "turns": 8,
       "mvp": "Verdant Force",
       "notes": "Darwin's Doom (DD) -- damn! The OG green team came out swinging, with Call of the Wild + Worldly Tutor leading to a fifth-turn Verdant Force. The mega monster swung the balance of the game as saproling tokens poured onto the battlefield and Emerald Army had little to stop him. 2x Yavimaya Ants dealt a handful of damage as well. Great first win of the season for Darwin!\n\nThe Emerald Army (TEA) -- honestly I loved their opening hand w/ Pendelhaven, Heart of Yavimaya, Forest, Llanowar Elves, Ice Storm + Wyluli Wolf. They sat on 2x Overrun and Kaysa that would really have broken things open for them quickly had they drawn another land. Encouraging despite the defeat."
+    },
+    {
+      "id": "g1782581038582",
+      "week": 1,
+      "winner_id": "swamp-things",
+      "loser_id": "holy-war",
+      "winner_score": 20,
+      "loser_score": -2,
+      "turns": 5,
+      "mvp": "Buried Alive",
+      "notes": "Things -- smoked 'em! A turn-3 Buried Alive won them the game, stocking the graveyard with Spirit of the Night and 2x Volcanic Dragon, they drew the other half of the combo the following turn with Living Death resurrecting all three baddies and flipping a Rukh Egg into a Rukh in the process. The black and red build looked nice out there! Game 1 victory in the books!\n\nHoly War -- went defensive-first to buy them some time w/ Meekstone and Kismet hitting the field early, but not early enough. In related news, the Meekstone/Kismet combination is incredibly annoying and may need to be removed from contention. Control themes are just brutal."
     }
   ],
   "teams": [
@@ -1103,14 +1114,14 @@
       "week": 1,
       "home_id": "swamp-things",
       "away_id": "holy-war",
-      "played": false,
-      "winner_id": null,
-      "loser_id": null,
-      "winner_score": null,
-      "loser_score": null,
-      "turns": null,
-      "mvp": null,
-      "notes": null
+      "played": true,
+      "winner_id": "swamp-things",
+      "loser_id": "holy-war",
+      "winner_score": 20,
+      "loser_score": -2,
+      "turns": 5,
+      "mvp": "Buried Alive",
+      "notes": "Things -- smoked 'em! A turn-3 Buried Alive won them the game, stocking the graveyard with Spirit of the Night and 2x Volcanic Dragon, they drew the other half of the combo the following turn with Living Death resurrecting all three baddies and flipping a Rukh Egg into a Rukh in the process. The black and red build looked nice out there! Game 1 victory in the books!\n\nHoly War -- went defensive-first to buy them some time w/ Meekstone and Kismet hitting the field early, but not early enough. In related news, the Meekstone/Kismet combination is incredibly annoying and may need to be removed from contention. Control themes are just brutal."
     },
     {
       "id": "sched-w1-hand-grenade-demolition-derby",

@@ -517,14 +517,8 @@ function showSeason(seasonNum) {
       <div class="accordion-body" style="max-height:400px;overflow-y:auto">${regGameRows || '<div style="color:var(--text-muted);font-size:13px">No game log data.</div>'}</div>
     </div>
 
-    <div class="accordion-section">
-      <div class="accordion-header" onclick="toggleAccordion(this)">
-        <span class="accordion-title">Playoff Results</span>
-        <span class="accordion-meta">${poSeries.length} series<span class="accordion-icon">▾</span></span>
-      </div>
-      <div class="accordion-body">${playoffRows}</div>
-    </div>
-
+    ${buildPlayoffBracketHtml(season)}
+    ${buildPlayoffGameLogHtml(season)}
     ${buildBossFightHtml(season)}
     ${buildPostSeasonHtml(season)}
   `;
@@ -543,24 +537,22 @@ function buildAdvancedStatsHtml(season) {
   const teams = season.standings.map(s => s.team).filter(t => adv[t]);
   const f = (v, dec=2) => v != null ? Number(v).toFixed(dec) : '<span style="color:var(--text-muted)">—</span>';
   const BUCKETS = {
-    'Damage Profile': { available: true, cols: [
-      {key:'damage_pm',label:'Dmg +/-',dec:0},{key:'dgt',label:'DG/Turn'},
-      {key:'dtt',label:'DT/Turn'},{key:'ddt',label:'DD/Turn'},
+    'Margins': { available: true, cols: [
+      {key:'win_life_delta',label:'Margin-W'},{key:'lose_life_delta',label:'Margin-L'},
       {key:'dgg',label:'DG/Game'},{key:'dtg',label:'DT/Game'},{key:'ddg',label:'DD/Game'}] },
-    'Life Margin': { available: true, cols: [
-      {key:'win_life_delta',label:'Avg Margin-W'},{key:'lose_life_delta',label:'Avg Margin-L'}] },
     'Pace': { available: true, cols: [
-      {key:'turn_w',label:'Turns-W'},{key:'turn_l',label:'Turns-L'},
-      {key:'turns_per_game',label:'Turns/Game'},{key:'turn_delta',label:'W/L Delta'}] },
-    'Board State': { available: season.season >= 4, note: 'Seasons 4-8', cols: [
-      {key:'mana_w',label:'Mana-W'},{key:'mana_l',label:'Mana-L'},{key:'mana_delta',label:'Mana Δ'},
-      {key:'opp_mana_w',label:'OppMana-W'},{key:'opp_mana_l',label:'OppMana-L'},
-      {key:'hand_w',label:'Hand-W'},{key:'hand_l',label:'Hand-L'},{key:'hand_delta',label:'Hand Δ'},
-      {key:'opp_hand_w',label:'OppHand-W'},{key:'opp_hand_l',label:'OppHand-L'}] },
-    'Deployment Efficiency': { available: season.season >= 6, note: 'Seasons 6-8', cols: [
+      {key:'turn_w',label:'Turns-W'},{key:'turn_l',label:'Turns-L'},{key:'turn_delta',label:'Turn Δ'},
+      {key:'win_pct_short',label:'Win% Short',pct:true},{key:'win_pct_mid',label:'Win% Mid',pct:true},{key:'win_pct_long',label:'Win% Long',pct:true}] },
+    'Damage Efficiency': { available: season.season >= 4, note: 'Seasons 4+', cols: [
+      {key:'dgt',label:'DG/Turn'},{key:'dtt',label:'DT/Turn'},{key:'ddt',label:'DD/Turn'},
+      {key:'damage_per_card_w',label:'Dmg/Card-W'},{key:'damage_per_card_l',label:'Dmg/Card-L'},{key:'damage_per_card_delta',label:'Dmg/Card Δ'},
+      {key:'cards_per_damage',label:'Cards/Dmg',dec:3}] },
+    'Deployment': { available: season.season >= 6, note: 'Seasons 6+', cols: [
       {key:'deploy_w',label:'Deploy-W'},{key:'deploy_l',label:'Deploy-L'},{key:'deploy_delta',label:'Deploy Δ'},
-      {key:'deploy_per_mana_w',label:'Dply/Mana-W'},{key:'deploy_per_mana_l',label:'Dply/Mana-L'},
-      {key:'deploy_per_mana_delta',label:'Dply/Mana Δ'}] },
+      {key:'deploy_per_mana_w',label:'Dply/Mana-W'},{key:'deploy_per_mana_l',label:'Dply/Mana-L'},{key:'deploy_per_mana_delta',label:'Dply/Mana Δ'}] },
+    'Resources': { available: season.season >= 4, note: 'Seasons 4+', cols: [
+      {key:'mana_delta',label:'Mana Δ'},{key:'hand_delta',label:'Hand Δ'},
+      {key:'opp_mana_delta',label:'OppMana Δ'},{key:'opp_hand_delta',label:'OppHand Δ'}] },
   };
   const bucketNames = Object.keys(BUCKETS);
   const sectionId = 'adv-' + season.season;
@@ -570,7 +562,7 @@ function buildAdvancedStatsHtml(season) {
     if (!bucket.available) return '<div id="' + tableId + '" class="adv-bucket-view" style="display:none"><p style="color:var(--text-muted);font-size:13px;padding:12px 0">' + name + ' data not available for Season ' + season.season + '. Tracking began ' + (bucket.note||'') + '.</p></div>';
     const buildTable = () => {
       const thead = '<tr><th style="text-align:left">Team</th>' + bucket.cols.map(c => '<th onclick="advSortTable(\'' + tableId + '\',\'' + c.key + '\')">' + c.label + '</th>').join('') + '</tr>';
-      const tbody = [...teams].map(team => { const row = adv[team]||{}; return '<tr><td>' + team + '</td>' + bucket.cols.map(c => '<td>' + f(row[c.key], c.dec??2) + '</td>').join('') + '</tr>'; }).join('');
+      const tbody = [...teams].map(team => { const row = adv[team]||{}; return '<tr><td>' + team + '</td>' + bucket.cols.map(c => '<td>' + (c.pct ? (row[c.key]!=null ? (row[c.key]*100).toFixed(0)+'%' : '—') : f(row[c.key], c.dec??2)) + '</td>').join('') + '</tr>'; }).join('');
       return '<thead>' + thead + '</thead><tbody>' + tbody + '</tbody>';
     };
     return '<div id="' + tableId + '" class="adv-bucket-view" style="display:none"><div style="overflow-x:auto"><table class="adv-stat-table" id="' + tableId + '-table">' + buildTable() + '</table></div></div>';
@@ -583,7 +575,7 @@ function switchAdvBucket(sectionId, bucketKey, btn) {
   tabsEl.querySelectorAll('.adv-bucket-tab').forEach(t => t.classList.remove('active'));
   btn.classList.add('active');
   const seasonNum = sectionId.split('-')[1];
-  ['Damage_Profile','Life_Margin','Pace','Board_State','Deployment_Efficiency'].forEach(b => {
+  ['Margins','Pace','Damage_Efficiency','Deployment','Resources'].forEach(b => {
     const el = document.getElementById('adv-tbl-' + seasonNum + '-' + b);
     if (el) el.style.display = b === bucketKey ? 'block' : 'none';
   });
@@ -633,46 +625,79 @@ function buildReportCardsHtml(season) {
 function buildRankChartHtml(season) {
   const wr = season.weekly_ranks;
   if (!wr || Object.keys(wr).length === 0) return '';
+
   const teams = Object.keys(wr);
-  const allWeeks = new Set();
-  teams.forEach(t => Object.keys(wr[t].weekly_rank || {}).forEach(w => allWeeks.add(parseInt(w))));
-  const weeks = [...allWeeks].sort((a,b) => a-b);
-  if (weeks.length === 0) return '';
+  const allWeeks = [...new Set(teams.flatMap(t => Object.keys(wr[t].weekly_rank || {}).map(Number)))].sort((a,b)=>a-b);
+  if (allWeeks.length === 0) return '';
+
+  const W = 920, H = 340;
+  const PAD_L = 28, PAD_R = 12, PAD_T = 12, PAD_B = 28;
+  const chartW = W - PAD_L - PAD_R;
+  const chartH = H - PAD_T - PAD_B;
   const maxRank = teams.length;
-  const W = 760, H = 280, padL = 36, padR = 140, padT = 16, padB = 30;
-  const plotW = W - padL - padR, plotH = H - padT - padB;
-  const xScale = (w) => padL + ((w - weeks[0]) / (weeks[weeks.length-1] - weeks[0] || 1)) * plotW;
-  const yScale = (r) => padT + ((r - 1) / (maxRank - 1 || 1)) * plotH;
-  const palette = ['#c9a84c','#7aa6c0','#a87ac9','#c97a9e','#7ac09e','#c0975a','#8a8ac0','#c0c07a','#c07a7a','#7ac0c0','#a89ec9','#c9a87a','#9ec97a','#c97ac0','#7a9ec9','#c9c97a'];
-  let paths = '', legend = '';
-  teams.forEach((team, idx) => {
-    const color = palette[idx % palette.length];
-    const rankData = wr[team].weekly_rank || {};
-    const points = weeks.filter(w => rankData[w] != null).map(w => `${xScale(w)},${yScale(rankData[w])}`);
-    if (points.length === 0) return;
-    paths += `<polyline points="${points.join(' ')}" fill="none" stroke="${color}" stroke-width="2" opacity="0.85" />`;
-    legend += `<div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-secondary);padding:2px 0"><span style="width:10px;height:10px;border-radius:2px;background:${color};flex-shrink:0"></span><span>${team}</span></div>`;
-  });
-  let yLabels = '';
-  for (let r = 1; r <= maxRank; r += Math.max(1, Math.floor(maxRank/8))) yLabels += `<text x="${padL-8}" y="${yScale(r)+4}" text-anchor="end" font-size="10" fill="#666">${r}</text>`;
-  let xLabels = '';
-  weeks.forEach(w => { if (w % 4 === 1 || w === weeks[weeks.length-1]) xLabels += `<text x="${xScale(w)}" y="${H-padB+18}" text-anchor="middle" font-size="10" fill="#666">W${w}</text>`; });
+
+  const xScale = w => PAD_L + ((w - allWeeks[0]) / (allWeeks[allWeeks.length-1] - allWeeks[0] || 1)) * chartW;
+  const yScale = r => PAD_T + ((r - 1) / (maxRank - 1)) * chartH;
+
+  const BASE_COLORS = ['#c0392b','#e67e22','#f1c40f','#27ae60','#2980b9','#ff1493','#8e44ad','#1a1a1a'];
+  const PALETTE = [
+    ...BASE_COLORS.map(color => ({color, dash:'none', w:2})),
+    ...BASE_COLORS.map(color => ({color, dash:'4,3', w:2})),
+  ];
+
+  const gridLines = [];
+  for (let r = 1; r <= maxRank; r++) {
+    const y = yScale(r);
+    gridLines.push(`<line x1="${PAD_L}" y1="${y}" x2="${W-PAD_R}" y2="${y}" stroke="var(--border)" stroke-width="${r % 4 === 0 ? 1 : 0.5}"/>`);
+  }
+
+  const xLabels = allWeeks.filter(w => w === allWeeks[0] || w === allWeeks[allWeeks.length-1] || w % 4 === 0).map(w =>
+    `<text x="${xScale(w)}" y="${H-8}" text-anchor="middle" font-size="10" fill="var(--text-muted)">W${w}</text>`
+  );
+
+  const yScaleFlipped = r => PAD_T + ((maxRank - r) / (maxRank - 1)) * chartH;
+
+  const yLabels = [];
+  for (let r = 1; r <= maxRank; r++) {
+    yLabels.push(`<text x="${PAD_L-5}" y="${yScaleFlipped(r)+4}" text-anchor="end" font-size="9" fill="var(--text-muted)">${r}</text>`);
+  }
+
+  const polylines = teams.map((team, i) => {
+    const ranks = wr[team].weekly_rank || {};
+    const p = i % PALETTE.length;
+    const pts = allWeeks.filter(w => ranks[w] != null).map(w => `${xScale(w)},${yScaleFlipped(ranks[w])}`).join(' ');
+    if (!pts) return '';
+    return `<polyline points="${pts}" fill="none" stroke="${PALETTE[p].color}" stroke-width="${PALETTE[p].w}" stroke-dasharray="${PALETTE[p].dash}" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>`;
+  }).join('');
+
+  const legendHtml = `<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:5px 16px;margin-top:10px;padding-top:8px;border-top:1px solid var(--border)">
+    ${teams.map((team, i) => {
+      const p = i % PALETTE.length;
+      const dashStyle = PALETTE[p].dash === 'none' ? `background:${PALETTE[p].color};height:2px;width:20px`
+        : PALETTE[p].dash === '2,3' ? `border-top:2.5px dotted ${PALETTE[p].color};height:0;width:20px;margin-top:5px`
+        : `border-top:2px dashed ${PALETTE[p].color};height:0;width:20px;margin-top:5px`;
+      return `<div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-secondary);min-width:0">
+        <span style="${dashStyle};flex-shrink:0;display:inline-block"></span>
+        <span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${team}</span>
+      </div>`;
+    }).join('')}
+  </div>`;
+
   return `
     <div class="accordion-section">
       <div class="accordion-header" onclick="toggleAccordion(this)">
         <span class="accordion-title">Standings Over Time</span>
-        <span class="accordion-meta">${weeks.length} weeks tracked<span class="accordion-icon">▾</span></span>
+        <span class="accordion-meta">${allWeeks.length} weeks tracked<span class="accordion-icon">▾</span></span>
       </div>
       <div class="accordion-body">
-        <div style="display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap">
-          <svg width="${W}" height="${H}" style="flex-shrink:0">
-            <line x1="${padL}" y1="${padT}" x2="${padL}" y2="${H-padB}" stroke="#333" />
-            <line x1="${padL}" y1="${H-padB}" x2="${W-padR}" y2="${H-padB}" stroke="#333" />
-            ${yLabels}${xLabels}${paths}
-          </svg>
-          <div style="flex:1;min-width:140px;max-height:${H}px;overflow-y:auto">${legend}</div>
-        </div>
-        <div style="color:var(--text-muted);font-size:11px;margin-top:10px">Rank 1 = best record at that point in the season. Source: weekly standings log.</div>
+        <svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;display:block">
+          ${gridLines.join('')}
+          ${polylines}
+          ${xLabels.join('')}
+          ${yLabels.join('')}
+        </svg>
+        ${legendHtml}
+        <div style="font-size:10px;color:var(--text-muted);margin-top:6px">Rank 1 = best record. Rank ${maxRank} = last place. Source: weekly standings log.</div>
       </div>
     </div>`;
 }
@@ -732,6 +757,277 @@ function buildBossFightHtml(season) {
         ${gamesHtml}
         <div style="font-size:11px;color:var(--text-muted);margin-top:12px">Boss Fights use modern card sets. Results do not count toward regular season or playoff records.</div>
       </div>
+    </div>`;
+}
+
+function showBracketDetail(id, event) {
+  const panel = document.getElementById(id);
+  if (!panel) return;
+  document.querySelectorAll('[id^="svgbr-"]').forEach(p => {
+    if (p.id !== id) { p.style.display = 'none'; p.style.pointerEvents = 'none'; }
+  });
+  if (panel.style.display === 'block') {
+    panel.style.display = 'none';
+    panel.style.pointerEvents = 'none';
+    return;
+  }
+  const container = panel.parentElement;
+  const containerRect = container.getBoundingClientRect();
+  const px = event.clientX - containerRect.left + container.scrollLeft;
+  const py = event.clientY - containerRect.top + container.scrollTop;
+  panel.style.left = Math.min(px + 10, containerRect.width - 280) + 'px';
+  panel.style.top = (py + 10) + 'px';
+  panel.style.display = 'block';
+  panel.style.pointerEvents = 'auto';
+}
+
+function buildPlayoffBracketHtml(season) {
+  const series = season.playoff_series;
+  if (!series || series.length === 0) return '';
+
+  const BOSS_DIVS = ['Fight','Boss'];
+  const CARD_W = 200, CARD_H = 48, COL_GAP = 60, ROW_GAP = 12;
+
+  function buildBracketSVG(bracketSeries, title, titleColor) {
+    const byRound = {};
+    bracketSeries.forEach(s => {
+      const r = Math.round(s.round);
+      if (!byRound[r]) byRound[r] = [];
+      byRound[r].push(s);
+    });
+    const rounds = Object.keys(byRound).map(Number).sort((a,b)=>a-b);
+    if (!rounds.length) return '';
+
+    const firstRound = rounds[0];
+    const firstCount = byRound[firstRound].length;
+    const slotH = CARD_H + ROW_GAP;
+    const totalH = firstCount * slotH - ROW_GAP;
+
+    const seriesPos = {};
+    byRound[firstRound].forEach((s, i) => {
+      seriesPos[`${firstRound}-${i}`] = { y: i * slotH, s };
+    });
+
+    rounds.slice(1).forEach(r => {
+      byRound[r].forEach((s, i) => {
+        const prevRound = rounds[rounds.indexOf(r) - 1];
+        const prevCount = byRound[prevRound].length;
+        const perGroup = prevCount / byRound[r].length;
+        const start = Math.floor(i * perGroup);
+        const end = Math.min(Math.ceil((i + 1) * perGroup) - 1, prevCount - 1);
+        const y1 = seriesPos[`${prevRound}-${start}`]?.y ?? 0;
+        const y2 = seriesPos[`${prevRound}-${end}`]?.y ?? y1;
+        seriesPos[`${r}-${i}`] = { y: (y1 + y2) / 2, s };
+      });
+    });
+
+    const numCols = rounds.length;
+    const svgW = numCols * (CARD_W + COL_GAP) - COL_GAP + 2;
+    const svgH = totalH + CARD_H + 4;
+    const headerH = title ? 22 : 0;
+
+    const colX = (colIdx) => colIdx * (CARD_W + COL_GAP) + 1;
+
+    const getRoundLabel = (r, allRounds) => {
+      const idx = allRounds.indexOf(r);
+      const total = allRounds.length;
+      if (idx === total - 1) return 'Championship';
+      if (idx === total - 2 && byRound[r].length === 1) return 'Semifinals';
+      if (idx === 0 && total > 2) return 'Round 1';
+      return `Round ${idx + 1}`;
+    };
+
+    let svgContent = '';
+
+    if (title) {
+      svgContent += `<text x="2" y="15" font-size="10" font-weight="600" fill="${titleColor}" font-family="var(--font-head)" letter-spacing="1" text-transform="uppercase">${title.toUpperCase()}</text>`;
+    }
+
+    const offsetY = headerH + 2;
+
+    if (rounds.length > 1 || bracketSeries.length > 1) {
+      rounds.forEach((r, colIdx) => {
+        const label = getRoundLabel(r, rounds);
+        const isFinal = colIdx === rounds.length - 1;
+        svgContent += `<text x="${colX(colIdx) + CARD_W/2}" y="${offsetY - 6}" text-anchor="middle" font-size="9" fill="${isFinal ? '#b8972a' : 'var(--text-muted)'}" letter-spacing="0.8">${label.toUpperCase()}</text>`;
+      });
+    }
+
+    rounds.slice(1).forEach((r, idx) => {
+      const colIdx = idx + 1;
+      const prevRound = rounds[idx];
+      const prevCount = byRound[prevRound].length;
+      const curCount = byRound[r].length;
+      const perGroup = prevCount / curCount;
+      const x1 = colX(colIdx - 1) + CARD_W;
+      const x2 = colX(colIdx);
+      const midX = x1 + (x2 - x1) / 2;
+
+      byRound[r].forEach((s, i) => {
+        const start = Math.floor(i * perGroup);
+        const end = Math.min(Math.ceil((i + 1) * perGroup) - 1, prevCount - 1);
+        const curY = (seriesPos[`${r}-${i}`]?.y ?? 0) + offsetY + CARD_H / 2;
+
+        for (let j = start; j <= end; j++) {
+          const prevY = (seriesPos[`${prevRound}-${j}`]?.y ?? 0) + offsetY + CARD_H / 2;
+          svgContent += `<polyline points="${x1},${prevY} ${midX},${prevY} ${midX},${curY} ${x2},${curY}" fill="none" stroke="var(--border)" stroke-width="1"/>`;
+        }
+      });
+    });
+
+    rounds.forEach((r, colIdx) => {
+      const isFinalRound = colIdx === rounds.length - 1;
+      byRound[r].forEach((s, i) => {
+        const x = colX(colIdx);
+        const y = (seriesPos[`${r}-${i}`]?.y ?? 0) + offsetY;
+        const borderColor = isFinalRound ? '#b8972a' : 'var(--border)';
+        const winnerColor = isFinalRound ? '#b8972a' : 'var(--text-primary)';
+        const noteId = `svgbr-${season.season}-${(s.series_winner||'').replace(/\W+/g,'')}-${(s.series_loser||'').replace(/\W+/g,'')}`;
+
+        svgContent += `<rect x="${x}" y="${y}" width="${CARD_W}" height="${CARD_H}" rx="4" fill="var(--bg-card)" stroke="${borderColor}" stroke-width="1"/>`;
+        svgContent += `<text x="${x+8}" y="${y+16}" font-size="11" font-weight="600" fill="${winnerColor}" font-family="var(--font-body)">${truncate(s.series_winner, 24)}</text>`;
+        svgContent += `<text x="${x+CARD_W-6}" y="${y+16}" text-anchor="end" font-size="10" fill="#b8972a" font-family="var(--font-mono)">${s.series_result}</text>`;
+        svgContent += `<text x="${x+8}" y="${y+32}" font-size="10" fill="var(--text-muted)" font-family="var(--font-body)">def. ${truncate(s.series_loser, 24)}</text>`;
+        svgContent += `<rect x="${x}" y="${y}" width="${CARD_W}" height="${CARD_H}" rx="4" fill="transparent" stroke="none" style="cursor:pointer" onclick="showBracketDetail('${noteId}', event)"/>`;
+      });
+    });
+
+    return `<svg viewBox="0 0 ${svgW} ${svgH + headerH}" style="width:100%;height:auto;display:block;overflow:visible" font-family="var(--font-body)">${svgContent}</svg>`;
+  }
+
+  function truncate(str, n) {
+    if (!str) return '';
+    return str.length > n ? str.slice(0, n-1) + '…' : str;
+  }
+
+  const playoffSeries = series.filter(s => !BOSS_DIVS.includes(s.division));
+
+  const divisions = [...new Set(playoffSeries.map(s => s.division).filter(d => d))];
+  const hasDivisions = divisions.some(d => d === 'North' || d === 'South' || d === 'East' || d === 'West');
+
+  const detailPanels = playoffSeries.map((s, idx) => {
+    const r = Math.round(s.round);
+    const sameRound = playoffSeries.filter(x => Math.round(x.round) === r);
+    const i = sameRound.indexOf(s);
+    const noteId = `svgbr-${season.season}-${(s.series_winner||'').replace(/\W+/g,'')}-${(s.series_loser||'').replace(/\W+/g,'')}`;
+    const gamesHtml = (s.games||[]).map(g => {
+      const score = (g.winner_score != null && g.loser_score != null) ? ` ${g.winner_score}–${g.loser_score}` : '';
+      const turns = g.turns ? ` · ${g.turns}t` : '';
+      const mvp = g.mvp ? ` · ${g.mvp}` : '';
+      return `<div style="font-size:11px;color:var(--text-secondary);padding:2px 0">Gm ${g.game}: <strong>${g.winner}</strong>${score}${turns}${mvp}</div>`;
+    }).join('');
+    return `<div id="${noteId}" style="display:none;position:absolute;background:var(--bg-card);border:1px solid var(--gold-dim);border-radius:var(--radius);padding:10px 14px;z-index:10;min-width:240px;box-shadow:0 4px 12px rgba(0,0,0,0.15)">
+      <div style="display:flex;justify-content:space-between;margin-bottom:6px">
+        <strong style="font-size:12px;color:var(--gold)">${s.series_winner}</strong>
+        <span style="font-family:var(--font-mono);font-size:11px;color:var(--gold)">${s.series_result}</span>
+      </div>
+      <div style="font-size:11px;color:var(--text-muted);margin-bottom:8px">def. ${s.series_loser}</div>
+      ${gamesHtml}
+      <div style="font-size:10px;color:var(--text-muted);margin-top:6px;cursor:pointer" onclick="document.getElementById('${noteId}').style.display='none'">✕ close</div>
+    </div>`;
+  }).join('');
+
+  let bracketHtml = '';
+
+  if (hasDivisions) {
+    ['North','South','East','West'].filter(d => divisions.includes(d)).forEach(div => {
+      const divSeries = playoffSeries.filter(s => s.division === div);
+      bracketHtml += `<div style="margin-bottom:20px">${buildBracketSVG(divSeries, div, 'var(--text-muted)')}</div>`;
+    });
+    const champSeries = playoffSeries.filter(s => s.division === 'Finals');
+    if (champSeries.length) {
+      bracketHtml += `<div style="max-width:${CARD_W + 40}px">${buildBracketSVG(champSeries, 'Championship', '#b8972a')}</div>`;
+    }
+  } else {
+    bracketHtml = buildBracketSVG(playoffSeries, null, '#b8972a');
+  }
+
+  return `
+    <div class="accordion-section">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <span class="accordion-title">Playoff Bracket</span>
+        <span class="accordion-meta">${playoffSeries.length} series<span class="accordion-icon">▾</span></span>
+      </div>
+      <div class="accordion-body">
+        <div style="position:relative">
+          ${bracketHtml}
+          <div id="bracket-panels-${season.season}" style="position:absolute;top:0;left:0;pointer-events:none;width:100%">${detailPanels}</div>
+        </div>
+        <div style="font-size:11px;color:var(--text-muted);margin-top:8px">Click any series card to expand game results.</div>
+      </div>
+    </div>`;
+}
+
+function buildPlayoffGameLogHtml(season) {
+  const series = season.playoff_series;
+  if (!series || series.length === 0) return '';
+
+  const commentary = season.game_commentary || [];
+  const commLookup = {};
+  const commUsed = {};
+  commentary.forEach(c => {
+    if (c.match_type && c.match_type.toLowerCase().includes('playoff')) {
+      const key = `${c.winner}|${c.loser}`;
+      if (!commLookup[key]) commLookup[key] = [];
+      commLookup[key].push(c.commentary);
+    }
+  });
+
+  const allGames = [];
+  series.forEach(s => {
+    if (s.division === 'Fight' || s.division === 'Boss') return;
+    (s.games || []).forEach(g => {
+      allGames.push({
+        round: Math.round(s.round),
+        division: s.division,
+        series_result: s.series_result,
+        ...g
+      });
+    });
+  });
+
+  allGames.sort((a, b) => a.round - b.round || (a.game || 0) - (b.game || 0));
+
+  let currentRound = null;
+  const rowsHtml = allGames.map(g => {
+    const noteKey = `${g.winner}|${g.loser}`;
+    const commArr = commLookup[noteKey];
+    const commIdx = commUsed[noteKey] || 0;
+    const comm = commArr && commArr[commIdx] ? commArr[commIdx] : null;
+    commUsed[noteKey] = commIdx + 1;
+    const scoreStr = (g.winner_score != null && g.loser_score != null)
+      ? `${g.winner_score} – ${g.loser_score}` : '—';
+    const mvpStr = g.mvp ? `<span style="font-size:11px;color:var(--text-muted);margin-left:8px">${g.mvp}</span>` : '';
+    const turnsStr = g.turns ? `<span style="font-size:11px;color:var(--text-muted);margin-left:6px">${g.turns}t</span>` : '';
+    const noteId = `pgl-${season.season}-r${g.round}-g${g.game}-${(g.winner||'').replace(/\W+/g,'')}`;
+    const divLabel = g.division && !['Finals','Premier'].includes(g.division)
+      ? `<span style="font-size:10px;color:var(--text-muted);margin-right:6px">${g.division}</span>` : '';
+
+    let header = '';
+    if (g.round !== currentRound) {
+      currentRound = g.round;
+      const roundName = g.round === Math.max(...allGames.map(x=>x.round))
+        ? 'Championship' : `Round ${g.round}`;
+      header = `<div style="font-size:10px;color:var(--gold);text-transform:uppercase;letter-spacing:0.1em;padding:10px 0 4px;border-top:1px solid var(--border);margin-top:4px">${roundName}</div>`;
+    }
+
+    return `${header}<div style="padding:6px 0;border-bottom:1px solid var(--border)">
+      <div style="display:flex;justify-content:space-between;align-items:center;${comm?'cursor:pointer':''}" ${comm?`onclick="const n=document.getElementById('${noteId}');n.style.display=n.style.display==='none'?'block':'none'"`:''}>
+        <span style="font-size:13px">${divLabel}<span style="color:var(--gold)">${g.winner}</span> <span style="color:var(--text-muted)">def.</span> <span style="color:var(--text-muted)">${g.loser}</span>${mvpStr}${turnsStr}</span>
+        <span style="font-family:var(--font-mono);font-size:12px;color:var(--gold)">${scoreStr}${comm?' <span style="color:var(--text-muted);font-size:10px">▾</span>':''}</span>
+      </div>
+      ${comm?`<div id="${noteId}" style="display:none;font-size:12px;color:var(--text-secondary);line-height:1.6;padding:8px 0 4px;white-space:pre-line">${comm}</div>`:''}
+    </div>`;
+  }).join('');
+
+  const totalGames = allGames.length;
+  return `
+    <div class="accordion-section">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <span class="accordion-title">Playoff Game Log</span>
+        <span class="accordion-meta">${totalGames} games<span class="accordion-icon">▾</span></span>
+      </div>
+      <div class="accordion-body">${rowsHtml}</div>
     </div>`;
 }
 
@@ -822,24 +1118,22 @@ function renderAllTime() {
   const footnote = document.getElementById('at-footnote');
 
   const BUCKETS = {
-    'Damage_Profile': { label: 'Damage Profile', cols: [
-      {key:'damage_pm',label:'Dmg +/-',dec:0},{key:'dgt',label:'DG/Turn'},
-      {key:'dtt',label:'DT/Turn'},{key:'ddt',label:'DD/Turn'},
+    'Margins': { label: 'Margins', cols: [
+      {key:'win_life_delta',label:'Margin-W'},{key:'lose_life_delta',label:'Margin-L'},
       {key:'dgg',label:'DG/Game'},{key:'dtg',label:'DT/Game'},{key:'ddg',label:'DD/Game'}] },
-    'Life_Margin': { label: 'Life Margin', cols: [
-      {key:'win_life_delta',label:'Avg Margin-W'},{key:'lose_life_delta',label:'Avg Margin-L'}] },
     'Pace': { label: 'Pace', cols: [
-      {key:'turn_w',label:'Turns-W'},{key:'turn_l',label:'Turns-L'},
-      {key:'turns_per_game',label:'Turns/Game'},{key:'turn_delta',label:'W/L Delta'}] },
-    'Board_State': { label: 'Board State', cols: [
-      {key:'mana_w',label:'Mana-W'},{key:'mana_l',label:'Mana-L'},{key:'mana_delta',label:'Mana Δ'},
-      {key:'opp_mana_w',label:'OppMana-W'},{key:'opp_mana_l',label:'OppMana-L'},
-      {key:'hand_w',label:'Hand-W'},{key:'hand_l',label:'Hand-L'},{key:'hand_delta',label:'Hand Δ'},
-      {key:'opp_hand_w',label:'OppHand-W'},{key:'opp_hand_l',label:'OppHand-L'}] },
-    'Deployment_Efficiency': { label: 'Deployment Efficiency', cols: [
+      {key:'turn_w',label:'Turns-W'},{key:'turn_l',label:'Turns-L'},{key:'turn_delta',label:'Turn Δ'},
+      {key:'win_pct_short',label:'Win% Short',pct:true},{key:'win_pct_mid',label:'Win% Mid',pct:true},{key:'win_pct_long',label:'Win% Long',pct:true}] },
+    'Damage_Efficiency': { label: 'Damage Efficiency', cols: [
+      {key:'dgt',label:'DG/Turn'},{key:'dtt',label:'DT/Turn'},{key:'ddt',label:'DD/Turn'},
+      {key:'damage_per_card_w',label:'Dmg/Card-W'},{key:'damage_per_card_l',label:'Dmg/Card-L'},{key:'damage_per_card_delta',label:'Dmg/Card Δ'},
+      {key:'cards_per_damage',label:'Cards/Dmg',dec:3}] },
+    'Deployment': { label: 'Deployment', cols: [
       {key:'deploy_w',label:'Deploy-W'},{key:'deploy_l',label:'Deploy-L'},{key:'deploy_delta',label:'Deploy Δ'},
-      {key:'deploy_per_mana_w',label:'Dply/Mana-W'},{key:'deploy_per_mana_l',label:'Dply/Mana-L'},
-      {key:'deploy_per_mana_delta',label:'Dply/Mana Δ'}] },
+      {key:'deploy_per_mana_w',label:'Dply/Mana-W'},{key:'deploy_per_mana_l',label:'Dply/Mana-L'},{key:'deploy_per_mana_delta',label:'Dply/Mana Δ'}] },
+    'Resources': { label: 'Resources', cols: [
+      {key:'mana_delta',label:'Mana Δ'},{key:'hand_delta',label:'Hand Δ'},
+      {key:'opp_mana_delta',label:'OppMana Δ'},{key:'opp_hand_delta',label:'OppHand Δ'}] },
   };
 
   const f = (v, dec=2) => v != null ? Number(v).toFixed(dec) : '<span style="color:var(--text-muted)">—</span>';
