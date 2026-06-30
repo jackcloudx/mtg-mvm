@@ -268,15 +268,15 @@ function renderUpcomingThisWeek() {
   }
   const nextWeek = Math.min(...unplayed.map(g => g.week));
   const weekGames = unplayed.filter(g => g.week === nextWeek);
+  const standings = computeStandings();
+  const standingsRanked = [...standings].sort((a,b) => b.winPct - a.winPct || b.diff - a.diff);
+  const rankMap = {};
+  standingsRanked.forEach((t, i) => { rankMap[t.id] = i + 1; });
   container.innerHTML = weekGames.map(g => {
     const home = seasonData.teams.find(t => t.id === g.home_id);
     const away = seasonData.teams.find(t => t.id === g.away_id);
     if (!home || !away) return '';
     const h2h = getHeadToHead(home.name, away.name);
-    const h2hStr = h2h
-      ? `<div style="font-size:10px;color:var(--text-muted);margin-top:1px">All-time: ${h2h.aWins}-${h2h.bWins}</div>`
-      : '';
-
     // Series record: find both scheduled games between this pair this season
     const seriesGames = seasonData.schedule.filter(s =>
       (s.home_id === g.home_id && s.away_id === g.away_id) ||
@@ -293,11 +293,17 @@ function renderUpcomingThisWeek() {
       seriesStr = `<div style="font-size:10px;color:var(--gold-dim);margin-top:1px">↻ ${label}</div>`;
     }
 
+    const homeRank = rankMap[home.id] ? `#${rankMap[home.id]}` : '—';
+    const awayRank = rankMap[away.id] ? `#${rankMap[away.id]}` : '—';
+    const allTimeStr = h2h ? `<span style="font-size:11px;color:var(--text-muted)">All-time: ${h2h.aWins}-${h2h.bWins}</span>` : '';
+
     return `<div style="padding:7px 0;border-bottom:1px solid var(--border)">
-      <div style="display:flex;justify-content:space-between;font-size:13px">
-        <span>${home.name} <span style="color:var(--text-muted)">vs</span> ${away.name}</span>
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;font-size:13px">
+        <span>${home.name} <span style="color:var(--text-muted)">vs</span> ${away.name}
+          <div style="font-size:10px;color:var(--text-muted);margin-top:2px">${homeRank} vs ${awayRank}</div>
+        </span>
+        ${allTimeStr}
       </div>
-      ${h2hStr}
       ${seriesStr}
     </div>`;
   }).join('');
