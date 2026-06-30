@@ -24,6 +24,28 @@
       "turns": 5,
       "mvp": "Buried Alive",
       "notes": "Things -- smoked 'em! A turn-3 Buried Alive won them the game, stocking the graveyard with Spirit of the Night and 2x Volcanic Dragon, they drew the other half of the combo the following turn with Living Death resurrecting all three baddies and flipping a Rukh Egg into a Rukh in the process. The black and red build looked nice out there! Game 1 victory in the books!\n\nHoly War -- went defensive-first to buy them some time w/ Meekstone and Kismet hitting the field early, but not early enough. In related news, the Meekstone/Kismet combination is incredibly annoying and may need to be removed from contention. Control themes are just brutal."
+    },
+    {
+      "id": "g1782785003372",
+      "week": 1,
+      "winner_id": "bone-dry",
+      "loser_id": "dark-n-stormy",
+      "winner_score": 6,
+      "loser_score": -8,
+      "turns": 7,
+      "mvp": "The Rack",
+      "notes": "Bone Dry. Look at these guys! Win their first ever League contest in, dare I say it, thrilling fashion! There’s a great nostalgic vibe to this crew, watching revised Bad Moon, Will-O-The-Wisp, Demonic Tutor, Mind Twist, a Hyppy and a Dark Ritual do their thing, damn! The Dry heave 2x The Rack + hand discard to crushDnS, and in part thanks to the Furnace of Rath in play. What a great start to their inaugural season. \n\nDnS. Damn, may have misplayed the Furnace of Rath and likely deployed the DD too fast. Tough call, as it felt like Bone Dry would wipe out their hand in any instant."
+    },
+    {
+      "id": "g1782786583179",
+      "week": 1,
+      "winner_id": "clockwork",
+      "loser_id": "mean-machine",
+      "winner_score": 8,
+      "loser_score": -12,
+      "turns": 10,
+      "mvp": "Tetravus",
+      "notes": "Clockwork. Annnnnnd they're back. Clinks and clanks, they deployed 9 artifacts to secure the win. Tetravus played the lead role attacking unimpeded from the air. Triskelion neutralized a Goblin King along the way - that was key. They sat back, withstood an early assault, and countered strong. \n\nMean Machine. Tough loss, dispatched a Goblin Recruiter early and misplayed it (i think?). They could have grabbed a few Goblin King for safety, maybe another Balloon Brigade also just to restock the barracks with fighters. Instead, they ran out of gas and sputtered. Quick aside - Goblin Charbelcher is very fun and chaotic. There's also too many high CMC creatures in this deck."
     }
   ],
   "teams": [
@@ -1142,28 +1164,28 @@
       "week": 1,
       "home_id": "dark-n-stormy",
       "away_id": "bone-dry",
-      "played": false,
-      "winner_id": null,
-      "loser_id": null,
-      "winner_score": null,
-      "loser_score": null,
-      "turns": null,
-      "mvp": null,
-      "notes": null
+      "played": true,
+      "winner_id": "bone-dry",
+      "loser_id": "dark-n-stormy",
+      "winner_score": 6,
+      "loser_score": -8,
+      "turns": 7,
+      "mvp": "The Rack",
+      "notes": "Bone Dry. Look at these guys! Win their first ever League contest in, dare I say it, thrilling fashion! There’s a great nostalgic vibe to this crew, watching revised Bad Moon, Will-O-The-Wisp, Demonic Tutor, Mind Twist, a Hyppy and a Dark Ritual do their thing, damn! The Dry heave 2x The Rack + hand discard to crushDnS, and in part thanks to the Furnace of Rath in play. What a great start to their inaugural season. \n\nDnS. Damn, may have misplayed the Furnace of Rath and likely deployed the DD too fast. Tough call, as it felt like Bone Dry would wipe out their hand in any instant."
     },
     {
       "id": "sched-w1-mean-machine-clockwork",
       "week": 1,
       "home_id": "mean-machine",
       "away_id": "clockwork",
-      "played": false,
-      "winner_id": null,
-      "loser_id": null,
-      "winner_score": null,
-      "loser_score": null,
-      "turns": null,
-      "mvp": null,
-      "notes": null
+      "played": true,
+      "winner_id": "clockwork",
+      "loser_id": "mean-machine",
+      "winner_score": 8,
+      "loser_score": -12,
+      "turns": 10,
+      "mvp": "Tetravus",
+      "notes": "Clockwork. Annnnnnd they're back. Clinks and clanks, they deployed 9 artifacts to secure the win. Tetravus played the lead role attacking unimpeded from the air. Triskelion neutralized a Goblin King along the way - that was key. They sat back, withstood an early assault, and countered strong. \n\nMean Machine. Tough loss, dispatched a Goblin Recruiter early and misplayed it (i think?). They could have grabbed a few Goblin King for safety, maybe another Balloon Brigade also just to restock the barracks with fighters. Instead, they ran out of gas and sputtered. Tommy will not be happy!"
     },
     {
       "id": "sched-w1-sliver-lining-folk-music",

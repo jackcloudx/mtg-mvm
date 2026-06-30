@@ -158,18 +158,37 @@ function renderPowerRankings() {
   const container = document.getElementById('power-rankings-list');
   if (!container) return;
   const standings = computeStandings();
-  const top8 = standings.slice(0, 5);
-  if (top8.every(t => t.gp === 0)) {
-    container.innerHTML = `<div style="color:var(--text-muted);font-size:13px;padding:12px">Power rankings will appear after games are played.</div>`;
+  if (standings.every(t => t.gp === 0)) {
+    container.innerHTML = `<div style="color:var(--text-muted);font-size:13px;padding:12px">Risers & fallers will appear after games are played.</div>`;
     return;
   }
-  container.innerHTML = top8.map((t, i) => {
-    const rank = i + 1;
+  const standingsRanked = [...standings].sort((a,b) => b.winPct - a.winPct || b.diff - a.diff);
+  const standingsRankMap = {};
+  standingsRanked.forEach((t, i) => { standingsRankMap[t.id] = i + 1; });
+
+  const powerRanked = [...standings].sort((a,b) => b.powerScore - a.powerScore);
+  const diverged = powerRanked.map((t, i) => {
+    const powerRank = i + 1;
+    const standingsRank = standingsRankMap[t.id];
+    return { ...t, powerRank, standingsRank, delta: standingsRank - powerRank };
+  }).filter(t => t.delta !== 0)
+    .sort((a, b) => Math.abs(b.delta) - Math.abs(a.delta))
+    .slice(0, 5);
+
+  if (diverged.length === 0) {
+    container.innerHTML = `<div style="color:var(--text-muted);font-size:13px;padding:12px">Power rankings match the standings — no risers or fallers this week.</div>`;
+    return;
+  }
+
+  container.innerHTML = diverged.map(t => {
+    const rising = t.delta > 0;
+    const arrow = rising ? '▲' : '▼';
+    const color = rising ? 'var(--green)' : 'var(--red)';
     return `<div class="power-item">
-      <span class="power-rank ${rank <= 3 ? 'top3' : ''}">${rank}</span>
+      <span class="power-rank ${Math.abs(t.delta) >= 3 ? 'top3' : ''}">${t.powerRank}</span>
       <span class="power-name">${t.name}</span>
       <span class="power-val">${(t.powerScore * 100).toFixed(1)}</span>
-      <span class="power-delta same">—</span>
+      <span class="power-delta" style="color:${color};font-weight:600">${arrow} ${Math.abs(t.delta)}</span>
     </div>`;
   }).join('');
 }
@@ -488,3 +507,11 @@ function switchGameLogTab(tab) {
 window.switchGameLogTab = switchGameLogTab;
 
 document.addEventListener('DOMContentLoaded', init);
+
+// Honor deep-link hash on load
+if (location.hash) {
+  const pageId = location.hash.slice(1);
+  if (document.getElementById('page-' + pageId)) {
+    navigate(pageId);
+  }
+}

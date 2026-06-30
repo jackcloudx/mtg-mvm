@@ -15,14 +15,14 @@
     .hist-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
     .hist-view { display: none; }
     .hist-view.active { display: block; }
-    .team-tiles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
-    .team-tile { display: block; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; text-decoration: none; transition: border-color 0.15s; }
+    .team-tiles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; align-items: stretch; }
+    .team-tile { display: flex; flex-direction: column; height: 100%; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; text-decoration: none; transition: border-color 0.15s; }
     .team-tile:hover { border-color: var(--gold); }
     .team-tile-name { font-family: var(--font-head); font-size: 14px; color: var(--gold); margin-bottom: 4px; }
-    .team-tile-archetype { font-size: 11px; color: var(--text-secondary); margin-bottom: 6px; }
-    .team-tile-colors { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 8px; }
-    .team-tile-color { font-size: 10px; color: var(--text-muted); background: var(--bg); border: 1px solid var(--border); border-radius: 3px; padding: 1px 5px; }
-    .team-tile-stats { font-size: 10px; color: var(--text-muted); display: flex; flex-direction: column; gap: 2px; }
+    .team-tile-archetype { font-size: 11px; color: var(--text-secondary); margin-bottom: 10px; }
+    .team-tile-colors { display: flex; gap: 4px; flex-wrap: wrap; margin-top: auto; margin-bottom: 8px; padding-top: 8px; border-top: 1px solid var(--border); }
+    .team-tile-color { font-size: 9px; color: var(--text-muted); background: transparent; border: none; padding: 0; }
+    .team-tile-stats { font-size: 10px; color: var(--text-muted); display: flex; flex-direction: column; gap: 2px; opacity: 0.75; }
     .team-tile-stat-val { font-family: var(--font-mono); color: var(--text-primary); font-size: 11px; }
 
     .seasons-layout { display: grid; grid-template-columns: 1fr 320px; gap: 24px; align-items: start; }
@@ -44,7 +44,7 @@
     .adv-bucket-tabs { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 14px; }
     .adv-bucket-tab { background: var(--bg); border: 1px solid var(--border); color: var(--text-muted); padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 12px; }
     .adv-bucket-tab.active { border-color: var(--gold-dim); color: var(--gold); background: var(--bg-card); }
-    .adv-stat-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .adv-stat-table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 13px; }
     .adv-stat-table th { text-align: right; color: var(--text-muted); font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; padding: 8px 10px; border-bottom: 1px solid var(--border); cursor: pointer; white-space: nowrap; }
     .adv-stat-table th:first-child { text-align: left; }
     .adv-stat-table td { padding: 8px 10px; border-bottom: 1px solid var(--border); text-align: right; color: var(--text-secondary); }
@@ -143,7 +143,6 @@
         <div>
           <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;margin-bottom:12px">
             <div style="font-family:var(--font-head);font-size:11px;color:var(--gold);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border)">Champion Tiers</div>
-            <div style="font-size:11px;color:var(--text-muted);margin-bottom:10px">Awarded to League Champions who defeat Boss Fight decks after winning the title.</div>
             <div id="champion-legend"></div>
           </div>
           <div class="hof-rail" id="hof-rail">
@@ -157,17 +156,8 @@
   </div>
 
   <div id="histview-teams" class="hist-view">
-    <div style="margin-bottom:32px">
-      <div style="font-size:10px;color:var(--gold);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px">Active — Season 9</div>
-      <div class="team-tiles-grid" id="teams-active-grid"></div>
-    </div>
-    <div style="margin-bottom:32px">
-      <div style="font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px">Boss Fights</div>
-      <div class="team-tiles-grid" id="teams-boss-grid"></div>
-    </div>
     <div>
-      <div style="font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px">Retired</div>
-      <div class="team-tiles-grid" id="teams-retired-grid"></div>
+      <div class="team-tiles-grid" id="teams-all-grid"></div>
     </div>
   </div>
 
@@ -232,10 +222,15 @@ function renderTeamsTab() {
     const record = at.total_w != null ? `${at.total_w}-${at.total_l}` : '—';
     const titles = at.championships || 0;
     const isBoss = BOSS.includes(teamName);
+    const statusLabel = isBoss ? 'Boss' : (arch.active ? 'S9' : 'Retired');
+    const statusColor = isBoss ? 'var(--red)' : (arch.active ? 'var(--gold)' : 'var(--text-muted)');
     return `<a class="team-tile" href="team-history.html?team=${encodeURIComponent(teamName)}" style="${isBoss ? 'border-color:var(--red)' : ''}">
-      <div class="team-tile-name" style="${isBoss ? 'color:var(--red)' : ''}">${teamName}${titles > 0 ? ' 👑' : ''}</div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px">
+        <div class="team-tile-name" style="${isBoss ? 'color:var(--red)' : ''};margin-bottom:0">${teamName}${titles > 0 ? ' 👑' : ''}</div>
+        <span style="font-size:9px;color:${statusColor};text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;margin-left:8px">${statusLabel}</span>
+      </div>
       <div class="team-tile-archetype">${arch.archetype || ''}</div>
-      ${arch.flavor ? `<div style="font-size:11px;color:var(--text-secondary);line-height:1.5;margin-bottom:8px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden">${arch.flavor}</div>` : ''}
+      ${arch.flavor ? `<div style="font-size:11px;color:var(--text-secondary);line-height:1.5;margin-bottom:8px;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden">${arch.flavor}</div>` : ''}
       <div class="team-tile-colors">${(arch.colors||[]).map(c => `<span class="team-tile-color">${c}</span>`).join('')}</div>
       <div class="team-tile-stats">
         <span><span class="team-tile-stat-val">${record}</span> All-Time</span>
@@ -245,21 +240,10 @@ function renderTeamsTab() {
     </a>`;
   };
 
-  const active = Object.entries(archetypes)
-    .filter(([t, a]) => a.active && !BOSS.includes(t))
+  const allTeams = Object.entries(archetypes)
+    .map(([t, a]) => [t, a, BOSS.includes(t) ? 'boss' : (a.active ? 'active' : 'retired')])
     .sort((a, b) => a[0].localeCompare(b[0]));
-
-  const retired = Object.entries(archetypes)
-    .filter(([t, a]) => !a.active && !BOSS.includes(t))
-    .sort((a, b) => a[0].localeCompare(b[0]));
-
-  const boss = Object.entries(archetypes)
-    .filter(([t]) => BOSS.includes(t))
-    .sort((a, b) => a[0].localeCompare(b[0]));
-
-  document.getElementById('teams-active-grid').innerHTML = active.map(([t, a]) => buildTile(t, a)).join('');
-  document.getElementById('teams-retired-grid').innerHTML = retired.map(([t, a]) => buildTile(t, a)).join('');
-  document.getElementById('teams-boss-grid').innerHTML = boss.map(([t, a]) => buildTile(t, a)).join('');
+  document.getElementById('teams-all-grid').innerHTML = allTeams.map(([t, a]) => buildTile(t, a)).join('');
 }
 
 function switchHistTab(view, btn) {
@@ -373,12 +357,12 @@ function renderChampionLegend() {
   if (!container || !historyData) return;
   const tiers = historyData.boss_fight_tiers || {};
   container.innerHTML = `
-    <div style="font-size:11px;color:var(--text-muted);margin-bottom:8px;line-height:1.6">Awarded to League Champions who defeat Boss Fight decks after winning the title. Each Boss Fight victory advances the tier.</div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px 12px">
+    <div style="font-size:11px;color:var(--text-muted);margin-bottom:10px;line-height:1.6">Each Boss Fight win after the title advances the tier.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;grid-auto-flow:column;grid-template-rows:repeat(3,auto);gap:4px 16px">
       ${[0,1,2,3,4,5].map(n => `
-        <div style="display:flex;justify-content:space-between;align-items:baseline;font-size:11px;padding:2px 0;border-bottom:1px solid var(--border)">
-          <span style="color:var(--text-secondary)">${tiers[n] || ''}</span>
-          <span style="color:var(--text-muted);font-size:10px">${n === 0 ? 'title only' : n === 1 ? 'I Boss win' : `${['','I','II','III','IV','V'][n]} Boss wins`}</span>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:11px;padding:3px 0;border-bottom:1px solid var(--border)">
+          <span style="color:var(--text-secondary);white-space:nowrap">${tiers[n] || ''}</span>
+          <span style="color:var(--text-muted);font-size:10px;white-space:nowrap">${n === 0 ? 'title only' : `${n} win${n>1?'s':''}`}</span>
         </div>`).join('')}
     </div>`;
 }
@@ -472,6 +456,7 @@ function showSeason(seasonNum) {
 
   const regGames = [...season.games].filter(g => g.match_type === 'Regular Season').sort((a,b) => (a.week||0) - (b.week||0));
   const commentary = season.game_commentary || [];
+  let regCurrentWeek = null;
   const regGameRows = regGames.map(g => {
     const scoreStr = (g.winner_score != null && g.loser_score != null) ? `${g.winner_score} – ${g.loser_score}` : 'N/A';
     const mvpStr = g.mvp ? `<span style="color:var(--text-muted);margin-left:10px;font-size:11px">${g.mvp}</span>` : '';
@@ -482,7 +467,12 @@ function showSeason(seasonNum) {
       : '';
     const rowId = `game-${season.season}-${Math.round(g.week||0)}-${(g.winner||'').replace(/['\s]+/g,'-')}`;
     const noteRowId = rowId + '-note';
-    return `<div id="${rowId}" style="padding:7px 0;border-bottom:1px solid var(--border)">
+    let weekHeader = '';
+    if (g.week !== regCurrentWeek) {
+      regCurrentWeek = g.week;
+      weekHeader = `<div style="font-size:10px;color:var(--gold);text-transform:uppercase;letter-spacing:0.1em;padding:10px 0 4px;border-top:1px solid var(--border);margin-top:4px">Week ${g.week}</div>`;
+    }
+    return `${weekHeader}<div id="${rowId}" style="padding:7px 0;border-bottom:1px solid var(--border)">
       <div style="display:flex;justify-content:space-between;cursor:${gameNote?'pointer':'default'}" ${gameNote?`onclick="document.getElementById('${noteRowId}').style.display=document.getElementById('${noteRowId}').style.display==='none'?'block':'none'"`:''}>
         <span style="font-size:13px"><span style="color:var(--gold)">${g.winner}</span> <span style="color:var(--text-muted)">def.</span> <span style="color:var(--text-muted)">${g.loser}</span>${mvpStr}</span>
         <span style="font-family:var(--font-mono);color:var(--gold);font-size:13px">${scoreStr}${gameNote?' <span style="color:var(--text-muted);font-size:10px">▾</span>':''}</span>
@@ -572,13 +562,13 @@ function buildAdvancedStatsHtml(season) {
     const buildTable = () => {
       const cols = bucket.cols;
       const thead = '<tr><th style="text-align:left">Team</th>' + cols.map((c, ci) => {
-        const bl = ci > 0 && cols[ci-1].g !== c.g ? 'border-left:2px solid var(--border);' : '';
+        const bl = 'border-left:2px solid red;';
         return `<th style="${bl}" onclick="advSortTable('${tableId}','${c.key}')">${c.label}</th>`;
       }).join('') + '</tr>';
       const tbody = [...teams].map(team => {
         const row = adv[team]||{};
         return '<tr><td>' + team + '</td>' + cols.map((c, ci) => {
-          const bl = ci > 0 && cols[ci-1].g !== c.g ? 'border-left:2px solid var(--border);' : '';
+          const bl = 'border-left:2px solid red;';
           const val = c.pct ? (row[c.key]!=null ? (row[c.key]*100).toFixed(0)+'%' : '—') : f(row[c.key], c.dec??2);
           return `<td style="${bl}">${val}</td>`;
         }).join('') + '</tr>';
@@ -942,7 +932,8 @@ function buildPlayoffBracketHtml(season) {
       </div>
       <div style="font-size:11px;color:var(--text-muted);margin-bottom:8px">def. ${s.series_loser}</div>
       ${gamesHtml}
-      <div style="font-size:10px;color:var(--text-muted);margin-top:6px;cursor:pointer" onclick="document.getElementById('${noteId}').style.display='none'">✕ close</div>
+      <div style="font-size:10px;color:var(--gold);margin-top:4px;cursor:pointer" onclick="scrollToPlayoffGame('${season.season}','${(s.series_winner||'').replace(/\W+/g,'')}','${(s.series_loser||'').replace(/\W+/g,'')}')">Learn More →</div>
+      <div style="font-size:10px;color:var(--text-muted);margin-top:4px;cursor:pointer" onclick="document.getElementById('${noteId}').style.display='none'">✕ close</div>
     </div>`;
   }).join('');
 
@@ -1000,6 +991,8 @@ function buildPlayoffGameLogHtml(season) {
         round: Math.round(s.round),
         division: s.division,
         series_result: s.series_result,
+        series_winner: s.series_winner,
+        series_loser: s.series_loser,
         ...g
       });
     });
@@ -1007,35 +1000,55 @@ function buildPlayoffGameLogHtml(season) {
 
   allGames.sort((a, b) => a.round - b.round || (a.game || 0) - (b.game || 0));
 
-  let currentRound = null;
-  const rowsHtml = allGames.map(g => {
-    const noteKey = `${g.winner}|${g.loser}`;
-    const commArr = commLookup[noteKey];
-    const commIdx = commUsed[noteKey] || 0;
-    const comm = commArr && commArr[commIdx] ? commArr[commIdx] : null;
-    commUsed[noteKey] = commIdx + 1;
-    const scoreStr = (g.winner_score != null && g.loser_score != null)
-      ? `${g.winner_score} – ${g.loser_score}` : '—';
-    const mvpStr = g.mvp ? `<span style="font-size:11px;color:var(--text-muted);margin-left:8px">${g.mvp}</span>` : '';
-    const turnsStr = g.turns ? `<span style="font-size:11px;color:var(--text-muted);margin-left:6px">${g.turns}t</span>` : '';
-    const noteId = `pgl-${season.season}-r${g.round}-g${g.game}-${(g.winner||'').replace(/\W+/g,'')}`;
-    const divLabel = g.division && !['Finals','Premier'].includes(g.division)
-      ? `<span style="font-size:10px;color:var(--text-muted);margin-right:6px">${g.division}</span>` : '';
+  // Group games by series
+  const seriesList = [];
+  const seriesMap = {};
+  allGames.forEach(g => {
+    const key = `${g.round}|${g.series_winner}|${g.series_loser}`;
+    if (!seriesMap[key]) {
+      seriesMap[key] = { round: g.round, division: g.division, series_winner: g.series_winner, series_loser: g.series_loser, series_result: g.series_result, games: [] };
+      seriesList.push(seriesMap[key]);
+    }
+    seriesMap[key].games.push(g);
+  });
 
-    let header = '';
-    if (g.round !== currentRound) {
-      currentRound = g.round;
-      const roundName = g.round === Math.max(...allGames.map(x=>x.round))
-        ? 'Championship' : `Round ${g.round}`;
-      header = `<div style="font-size:10px;color:var(--gold);text-transform:uppercase;letter-spacing:0.1em;padding:10px 0 4px;border-top:1px solid var(--border);margin-top:4px">${roundName}</div>`;
+  const maxRound = Math.max(...allGames.map(x => x.round));
+  let currentRound = null;
+  const rowsHtml = seriesList.map(s => {
+    const seriesAnchorId = `pgl-series-${season.season}-${(s.series_winner||'').replace(/\W+/g,'')}-${(s.series_loser||'').replace(/\W+/g,'')}`;
+    const divLabel = s.division && !['Finals','Premier'].includes(s.division);
+
+    let roundHeader = '';
+    if (s.round !== currentRound) {
+      currentRound = s.round;
+      const roundName = s.round === maxRound ? 'Championship' : `Round ${s.round}`;
+      roundHeader = `<div style="font-size:10px;color:var(--gold);text-transform:uppercase;letter-spacing:0.1em;padding:10px 0 4px;border-top:1px solid var(--border);margin-top:4px">${roundName}</div>`;
     }
 
-    return `${header}<div style="padding:6px 0;border-bottom:1px solid var(--border)">
-      <div style="display:flex;justify-content:space-between;align-items:center;${comm?'cursor:pointer':''}" ${comm?`onclick="const n=document.getElementById('${noteId}');n.style.display=n.style.display==='none'?'block':'none'"`:''}>
-        <span style="font-size:13px">${divLabel}<span style="color:var(--gold)">${g.winner}</span> <span style="color:var(--text-muted)">def.</span> <span style="color:var(--text-muted)">${g.loser}</span>${mvpStr}${turnsStr}</span>
-        <span style="font-family:var(--font-mono);font-size:12px;color:var(--gold)">${scoreStr}${comm?' <span style="color:var(--text-muted);font-size:10px">▾</span>':''}</span>
+    const gamesHtml = s.games.map(g => {
+      const noteKey = `${g.winner}|${g.loser}`;
+      const commArr = commLookup[noteKey];
+      const commIdx = commUsed[noteKey] || 0;
+      const comm = commArr && commArr[commIdx] ? commArr[commIdx] : null;
+      commUsed[noteKey] = commIdx + 1;
+      const scoreStr = (g.winner_score != null && g.loser_score != null) ? `${g.winner_score} – ${g.loser_score}` : '—';
+      const mvpStr = g.mvp ? `<span style="font-size:11px;color:var(--text-muted);margin-left:8px">${g.mvp}</span>` : '';
+      const turnsStr = g.turns ? `<span style="font-size:11px;color:var(--text-muted);margin-left:6px">${g.turns}t</span>` : '';
+      const noteId = `pgl-${season.season}-r${g.round}-g${g.game}-${(g.winner||'').replace(/\W+/g,'')}`;
+      return `<div style="padding:5px 0;border-bottom:1px solid var(--border)">
+        <div style="display:flex;justify-content:space-between;align-items:center;${comm?'cursor:pointer':''}" ${comm?`onclick="const n=document.getElementById('${noteId}');n.style.display=n.style.display==='none'?'block':'none'"`:''}>
+          <span style="font-size:13px"><span style="color:var(--text-muted);font-size:11px;margin-right:6px">Gm ${g.game}</span><span style="color:var(--gold)">${g.winner}</span> <span style="color:var(--text-muted)">def.</span> <span style="color:var(--text-muted)">${g.loser}</span>${mvpStr}${turnsStr}</span>
+          <span style="font-family:var(--font-mono);font-size:12px;color:var(--gold)">${scoreStr}${comm?' <span style="color:var(--text-muted);font-size:10px">▾</span>':''}</span>
+        </div>
+        ${comm?`<div id="${noteId}" style="display:none;font-size:12px;color:var(--text-secondary);line-height:1.6;padding:8px 0 4px;white-space:pre-line">${comm}</div>`:''}
+      </div>`;
+    }).join('');
+
+    return `${roundHeader}<div id="${seriesAnchorId}" style="margin-top:10px">
+      <div style="font-size:11px;color:var(--text-muted);padding:2px 0 4px">
+        <strong style="color:var(--gold-dim)">${s.series_winner}</strong> def. ${s.series_loser}${divLabel?' · '+s.division:''} <span style="font-family:var(--font-mono);color:var(--gold-dim)">${s.series_result}</span>
       </div>
-      ${comm?`<div id="${noteId}" style="display:none;font-size:12px;color:var(--text-secondary);line-height:1.6;padding:8px 0 4px;white-space:pre-line">${comm}</div>`:''}
+      ${gamesHtml}
     </div>`;
   }).join('');
 
@@ -1077,6 +1090,18 @@ function buildPostSeasonHtml(season) {
   });
   html += `</div></div>`;
   return html;
+}
+
+function scrollToPlayoffGame(seasonNum, winner, loser) {
+  const targetId = `pgl-series-${seasonNum}-${winner}-${loser}`;
+  const el = document.getElementById(targetId);
+  if (!el) return;
+  const section = el.closest('.accordion-section');
+  const body = section?.querySelector('.accordion-body');
+  if (body && !body.classList.contains('expanded')) {
+    section.querySelector('.accordion-header').click();
+  }
+  setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'center' }), 150);
 }
 
 function toggleAccordion(headerEl) {
