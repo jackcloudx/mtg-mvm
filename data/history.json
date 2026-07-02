@@ -39978,10 +39978,10 @@
               "game": 3,
               "winner": "Black Boss",
               "loser": "Trick or Treat Freaks",
-              "winner_score": null,
-              "loser_score": null,
-              "turns": null,
-              "mvp": null
+              "winner_score": 20,
+              "loser_score": -2,
+              "turns": 5,
+              "mvp": "Death-Priest of Myrkul"
             }
           ]
         }
@@ -45894,12 +45894,18 @@
             "champion": "Trick or Treat Freaks",
             "winner": "Black Boss",
             "loser": "Trick or Treat Freaks",
-            "winner_score": null,
-            "loser_score": null,
-            "turns": null,
-            "mvp": null,
+            "winner_score": 20,
+            "loser_score": -2,
+            "turns": 5,
+            "mvp": "Death-Priest of Myrkul",
             "champion_won": false,
-            "commentary": "Black Boss. A couple'a bone-men deal the lion's share of the damage as Black Boss moves through TTF like a warm knife through butter.\n\nTTFs. Too much mana despite sitting on Mask + Transmute Artifact. There was nothing else to summon."
+            "commentary": "Black Boss. A couple'a bone-men deal the lion's share of the damage as Black Boss moves through TTF like a warm knife through butter.\n\nTTFs. Too much mana despite sitting on Mask + Transmute Artifact. There was nothing else to summon.",
+            "mana_w": 4,
+            "mana_l": 4,
+            "hand_w": 3,
+            "hand_l": 5,
+            "deploy_w": 5,
+            "deploy_l": 2
           }
         ]
       }
@@ -47835,6 +47841,19 @@
       "season_records": [],
       "top_mvp_card": null,
       "top_mvp_count": 0
+    },
+    "Womperzoo": {
+      "team": "Womperzoo",
+      "seasons_played": [
+        9
+      ],
+      "total_w": 0,
+      "total_l": 0,
+      "total_gp": 0,
+      "win_pct": 0,
+      "championships": 0,
+      "championship_seasons": [],
+      "season_records": []
     }
   },
   "head_to_head": {
@@ -52528,7 +52547,7 @@
         "Grave Pact",
         "Sengir Autocrat"
       ],
-      "active": true
+      "active": false
     },
     "Hand Grenade": {
       "colors": [
@@ -52560,19 +52579,19 @@
     },
     "Extinction": {
       "colors": [
-        "White",
         "Green",
-        "Red"
+        "White"
       ],
       "archetype": "Midrange Control",
-      "flavor": "Kird Ape and Lhurgoyf arrive early and hit hard; Dense Foliage makes them immune to targeted removal. If things get complicated, Wrath of God or Cataclysm reminds everyone who's actually in charge.",
+      "flavor": "Lhurgoyf arrives early and hits hard, Survival of the Fittest finds whatever the board needs, and Wrath of God or Cataclysm resets everything when things get complicated.",
       "key_cards": [
-        "Kird Ape",
         "Lhurgoyf",
-        "Dense Foliage",
-        "Wrath of God"
+        "Survival of the Fittest",
+        "Wrath of God",
+        "Cataclysm",
+        "Dense Foliage"
       ],
-      "active": false
+      "active": true
     },
     "Smashed Potatoes": {
       "colors": [
@@ -52658,14 +52677,16 @@
       "colors": [
         "Black"
       ],
-      "archetype": "Swarm / Attrition",
-      "flavor": "Bad Moon and Breeding Pit generate a constant stream of black bodies, and Grave Pact means every sacrifice takes something with it. The deck doesn't win so much as outlast everything else.",
+      "archetype": "Sacrifice / Attrition",
+      "flavor": "Bad Moon pumps the horde, Breeding Pit and Sengir Autocrat keep the bodies coming, and Grave Pact means every sacrifice takes something with it. Fallen Angel closes it out.",
       "key_cards": [
+        "Grave Pact",
+        "Fallen Angel",
         "Bad Moon",
         "Breeding Pit",
-        "Grave Pact"
+        "Sengir Autocrat"
       ],
-      "active": false
+      "active": true
     },
     "Big Gloves": {
       "colors": [
@@ -52897,6 +52918,22 @@
         "Fallow Wurm"
       ],
       "active": false
+    },
+    "Womperzoo": {
+      "colors": [
+        "Red",
+        "Green"
+      ],
+      "archetype": "Zoo Aggro",
+      "flavor": "A childhood classic, lovingly reconstructed so Mike can keep winning. Kird Ape and Llanowar Elves open fast, Erhnam Djinn and Shivan Dragon close it out. You had to be there. Actually, you didn't.",
+      "key_cards": [
+        "Kird Ape",
+        "Shivan Dragon",
+        "Erhnam Djinn",
+        "Stormbind",
+        "Lightning Bolt"
+      ],
+      "active": true
     }
   },
   "boss_fight_tiers": {
@@ -52946,12 +52983,18 @@
       "champion": "Trick or Treat Freaks",
       "winner": "Black Boss",
       "loser": "Trick or Treat Freaks",
-      "winner_score": null,
-      "loser_score": null,
-      "turns": null,
-      "mvp": null,
+      "winner_score": 20,
+      "loser_score": -2,
+      "turns": 5,
+      "mvp": "Death-Priest of Myrkul",
       "champion_won": false,
-      "commentary": "Black Boss. A couple'a bone-men deal the lion's share of the damage as Black Boss moves through TTF like a warm knife through butter.\n\nTTFs. Too much mana despite sitting on Mask + Transmute Artifact. There was nothing else to summon."
+      "commentary": "Black Boss. A couple'a bone-men deal the lion's share of the damage as Black Boss moves through TTF like a warm knife through butter.\n\nTTFs. Too much mana despite sitting on Mask + Transmute Artifact. There was nothing else to summon.",
+      "mana_w": 4,
+      "mana_l": 4,
+      "hand_w": 3,
+      "hand_l": 5,
+      "deploy_w": 5,
+      "deploy_l": 2
     }
   ]
 }

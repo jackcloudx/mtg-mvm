@@ -848,9 +848,9 @@
       ]
     },
     {
-      "id": "demolition-derby",
-      "name": "Demolition Derby",
-      "shortName": "Derby",
+      "id": "extinction",
+      "name": "Extinction",
+      "shortName": "EXT",
       "colors": [
         "White",
         "Black",
@@ -1066,9 +1066,9 @@
       ]
     },
     {
-      "id": "team-15",
-      "name": "Team 15",
-      "shortName": "T15",
+      "id": "the-attritionists",
+      "name": "The Attritionists",
+      "shortName": "ATT",
       "colors": [
         "TBD"
       ],
@@ -1077,9 +1077,9 @@
       "roster": []
     },
     {
-      "id": "team-16",
-      "name": "Team 16",
-      "shortName": "T16",
+      "id": "womperzoo",
+      "name": "Womperzoo",
+      "shortName": "WZO",
       "colors": [
         "TBD"
       ],
@@ -1090,10 +1090,10 @@
   ],
   "schedule": [
     {
-      "id": "sched-w1-trick-or-treat-team-16",
+      "id": "sched-w1-trick-or-treat-womperzoo",
       "week": 1,
       "home_id": "trick-or-treat",
-      "away_id": "team-16",
+      "away_id": "womperzoo",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -1104,10 +1104,10 @@
       "notes": null
     },
     {
-      "id": "sched-w1-no-lands-for-you-team-15",
+      "id": "sched-w1-no-lands-for-you-the-attritionists",
       "week": 1,
       "home_id": "no-lands-for-you",
-      "away_id": "team-15",
+      "away_id": "the-attritionists",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -1146,10 +1146,10 @@
       "notes": "Things -- smoked 'em! A turn-3 Buried Alive won them the game, stocking the graveyard with Spirit of the Night and 2x Volcanic Dragon, they drew the other half of the combo the following turn with Living Death resurrecting all three baddies and flipping a Rukh Egg into a Rukh in the process. The black and red build looked nice out there! Game 1 victory in the books!\n\nHoly War -- went defensive-first to buy them some time w/ Meekstone and Kismet hitting the field early, but not early enough. In related news, the Meekstone/Kismet combination is incredibly annoying and may need to be removed from contention. Control themes are just brutal."
     },
     {
-      "id": "sched-w1-hand-grenade-demolition-derby",
+      "id": "sched-w1-hand-grenade-extinction",
       "week": 1,
       "home_id": "hand-grenade",
-      "away_id": "demolition-derby",
+      "away_id": "extinction",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -1202,10 +1202,10 @@
       "notes": null
     },
     {
-      "id": "sched-w2-trick-or-treat-team-15",
+      "id": "sched-w2-trick-or-treat-the-attritionists",
       "week": 2,
       "home_id": "trick-or-treat",
-      "away_id": "team-15",
+      "away_id": "the-attritionists",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -1216,9 +1216,9 @@
       "notes": null
     },
     {
-      "id": "sched-w2-team-16-the-emerald-army",
+      "id": "sched-w2-womperzoo-the-emerald-army",
       "week": 2,
-      "home_id": "team-16",
+      "home_id": "womperzoo",
       "away_id": "the-emerald-army",
       "played": false,
       "winner_id": null,
@@ -1244,10 +1244,10 @@
       "notes": null
     },
     {
-      "id": "sched-w2-darwins-doom-demolition-derby",
+      "id": "sched-w2-darwins-doom-extinction",
       "week": 2,
       "home_id": "darwins-doom",
-      "away_id": "demolition-derby",
+      "away_id": "extinction",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -1328,9 +1328,9 @@
       "notes": null
     },
     {
-      "id": "sched-w3-team-15-holy-war",
+      "id": "sched-w3-the-attritionists-holy-war",
       "week": 3,
-      "home_id": "team-15",
+      "home_id": "the-attritionists",
       "away_id": "holy-war",
       "played": false,
       "winner_id": null,
@@ -1342,10 +1342,10 @@
       "notes": null
     },
     {
-      "id": "sched-w3-team-16-demolition-derby",
+      "id": "sched-w3-womperzoo-extinction",
       "week": 3,
-      "home_id": "team-16",
-      "away_id": "demolition-derby",
+      "home_id": "womperzoo",
+      "away_id": "extinction",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -1440,10 +1440,10 @@
       "notes": null
     },
     {
-      "id": "sched-w4-the-emerald-army-demolition-derby",
+      "id": "sched-w4-the-emerald-army-extinction",
       "week": 4,
       "home_id": "the-emerald-army",
-      "away_id": "demolition-derby",
+      "away_id": "extinction",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -1454,9 +1454,9 @@
       "notes": null
     },
     {
-      "id": "sched-w4-team-15-bone-dry",
+      "id": "sched-w4-the-attritionists-bone-dry",
       "week": 4,
-      "home_id": "team-15",
+      "home_id": "the-attritionists",
       "away_id": "bone-dry",
       "played": false,
       "winner_id": null,
@@ -1468,9 +1468,9 @@
       "notes": null
     },
     {
-      "id": "sched-w4-team-16-clockwork",
+      "id": "sched-w4-womperzoo-clockwork",
       "week": 4,
-      "home_id": "team-16",
+      "home_id": "womperzoo",
       "away_id": "clockwork",
       "played": false,
       "winner_id": null,
@@ -1538,10 +1538,10 @@
       "notes": null
     },
     {
-      "id": "sched-w5-trick-or-treat-demolition-derby",
+      "id": "sched-w5-trick-or-treat-extinction",
       "week": 5,
       "home_id": "trick-or-treat",
-      "away_id": "demolition-derby",
+      "away_id": "extinction",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -1580,9 +1580,9 @@
       "notes": null
     },
     {
-      "id": "sched-w5-team-15-folk-music",
+      "id": "sched-w5-the-attritionists-folk-music",
       "week": 5,
-      "home_id": "team-15",
+      "home_id": "the-attritionists",
       "away_id": "folk-music",
       "played": false,
       "winner_id": null,
@@ -1594,9 +1594,9 @@
       "notes": null
     },
     {
-      "id": "sched-w5-team-16-sliver-lining",
+      "id": "sched-w5-womperzoo-sliver-lining",
       "week": 5,
-      "home_id": "team-16",
+      "home_id": "womperzoo",
       "away_id": "sliver-lining",
       "played": false,
       "winner_id": null,
@@ -1664,9 +1664,9 @@
       "notes": null
     },
     {
-      "id": "sched-w6-demolition-derby-clockwork",
+      "id": "sched-w6-extinction-clockwork",
       "week": 6,
-      "home_id": "demolition-derby",
+      "home_id": "extinction",
       "away_id": "clockwork",
       "played": false,
       "winner_id": null,
@@ -1706,9 +1706,9 @@
       "notes": null
     },
     {
-      "id": "sched-w6-team-15-mean-machine",
+      "id": "sched-w6-the-attritionists-mean-machine",
       "week": 6,
-      "home_id": "team-15",
+      "home_id": "the-attritionists",
       "away_id": "mean-machine",
       "played": false,
       "winner_id": null,
@@ -1720,9 +1720,9 @@
       "notes": null
     },
     {
-      "id": "sched-w6-team-16-dark-n-stormy",
+      "id": "sched-w6-womperzoo-dark-n-stormy",
       "week": 6,
-      "home_id": "team-16",
+      "home_id": "womperzoo",
       "away_id": "dark-n-stormy",
       "played": false,
       "winner_id": null,
@@ -1790,9 +1790,9 @@
       "notes": null
     },
     {
-      "id": "sched-w7-demolition-derby-sliver-lining",
+      "id": "sched-w7-extinction-sliver-lining",
       "week": 7,
-      "home_id": "demolition-derby",
+      "home_id": "extinction",
       "away_id": "sliver-lining",
       "played": false,
       "winner_id": null,
@@ -1832,9 +1832,9 @@
       "notes": null
     },
     {
-      "id": "sched-w7-team-15-hand-grenade",
+      "id": "sched-w7-the-attritionists-hand-grenade",
       "week": 7,
-      "home_id": "team-15",
+      "home_id": "the-attritionists",
       "away_id": "hand-grenade",
       "played": false,
       "winner_id": null,
@@ -1846,9 +1846,9 @@
       "notes": null
     },
     {
-      "id": "sched-w7-team-16-swamp-things",
+      "id": "sched-w7-womperzoo-swamp-things",
       "week": 7,
-      "home_id": "team-16",
+      "home_id": "womperzoo",
       "away_id": "swamp-things",
       "played": false,
       "winner_id": null,
@@ -1916,9 +1916,9 @@
       "notes": null
     },
     {
-      "id": "sched-w8-demolition-derby-dark-n-stormy",
+      "id": "sched-w8-extinction-dark-n-stormy",
       "week": 8,
-      "home_id": "demolition-derby",
+      "home_id": "extinction",
       "away_id": "dark-n-stormy",
       "played": false,
       "winner_id": null,
@@ -1958,9 +1958,9 @@
       "notes": null
     },
     {
-      "id": "sched-w8-team-15-darwins-doom",
+      "id": "sched-w8-the-attritionists-darwins-doom",
       "week": 8,
-      "home_id": "team-15",
+      "home_id": "the-attritionists",
       "away_id": "darwins-doom",
       "played": false,
       "winner_id": null,
@@ -1972,9 +1972,9 @@
       "notes": null
     },
     {
-      "id": "sched-w8-team-16-no-lands-for-you",
+      "id": "sched-w8-womperzoo-no-lands-for-you",
       "week": 8,
-      "home_id": "team-16",
+      "home_id": "womperzoo",
       "away_id": "no-lands-for-you",
       "played": false,
       "winner_id": null,
@@ -2042,9 +2042,9 @@
       "notes": null
     },
     {
-      "id": "sched-w9-demolition-derby-swamp-things",
+      "id": "sched-w9-extinction-swamp-things",
       "week": 9,
-      "home_id": "demolition-derby",
+      "home_id": "extinction",
       "away_id": "swamp-things",
       "played": false,
       "winner_id": null,
@@ -2084,10 +2084,10 @@
       "notes": null
     },
     {
-      "id": "sched-w9-team-15-team-16",
+      "id": "sched-w9-the-attritionists-womperzoo",
       "week": 9,
-      "home_id": "team-15",
-      "away_id": "team-16",
+      "home_id": "the-attritionists",
+      "away_id": "womperzoo",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -2168,9 +2168,9 @@
       "notes": null
     },
     {
-      "id": "sched-w10-demolition-derby-no-lands-for-you",
+      "id": "sched-w10-extinction-no-lands-for-you",
       "week": 10,
-      "home_id": "demolition-derby",
+      "home_id": "extinction",
       "away_id": "no-lands-for-you",
       "played": false,
       "winner_id": null,
@@ -2182,10 +2182,10 @@
       "notes": null
     },
     {
-      "id": "sched-w10-holy-war-team-16",
+      "id": "sched-w10-holy-war-womperzoo",
       "week": 10,
       "home_id": "holy-war",
-      "away_id": "team-16",
+      "away_id": "womperzoo",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -2196,10 +2196,10 @@
       "notes": null
     },
     {
-      "id": "sched-w10-the-emerald-army-team-15",
+      "id": "sched-w10-the-emerald-army-the-attritionists",
       "week": 10,
       "home_id": "the-emerald-army",
-      "away_id": "team-15",
+      "away_id": "the-attritionists",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -2280,10 +2280,10 @@
       "notes": null
     },
     {
-      "id": "sched-w11-bone-dry-team-16",
+      "id": "sched-w11-bone-dry-womperzoo",
       "week": 11,
       "home_id": "bone-dry",
-      "away_id": "team-16",
+      "away_id": "womperzoo",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -2294,10 +2294,10 @@
       "notes": null
     },
     {
-      "id": "sched-w11-demolition-derby-team-15",
+      "id": "sched-w11-extinction-the-attritionists",
       "week": 11,
-      "home_id": "demolition-derby",
-      "away_id": "team-15",
+      "home_id": "extinction",
+      "away_id": "the-attritionists",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -2378,10 +2378,10 @@
       "notes": null
     },
     {
-      "id": "sched-w12-folk-music-team-16",
+      "id": "sched-w12-folk-music-womperzoo",
       "week": 12,
       "home_id": "folk-music",
-      "away_id": "team-16",
+      "away_id": "womperzoo",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -2392,10 +2392,10 @@
       "notes": null
     },
     {
-      "id": "sched-w12-clockwork-team-15",
+      "id": "sched-w12-clockwork-the-attritionists",
       "week": 12,
       "home_id": "clockwork",
-      "away_id": "team-15",
+      "away_id": "the-attritionists",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -2420,9 +2420,9 @@
       "notes": null
     },
     {
-      "id": "sched-w12-demolition-derby-holy-war",
+      "id": "sched-w12-extinction-holy-war",
       "week": 12,
-      "home_id": "demolition-derby",
+      "home_id": "extinction",
       "away_id": "holy-war",
       "played": false,
       "winner_id": null,
@@ -2476,10 +2476,10 @@
       "notes": null
     },
     {
-      "id": "sched-w13-mean-machine-team-16",
+      "id": "sched-w13-mean-machine-womperzoo",
       "week": 13,
       "home_id": "mean-machine",
-      "away_id": "team-16",
+      "away_id": "womperzoo",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -2490,10 +2490,10 @@
       "notes": null
     },
     {
-      "id": "sched-w13-sliver-lining-team-15",
+      "id": "sched-w13-sliver-lining-the-attritionists",
       "week": 13,
       "home_id": "sliver-lining",
-      "away_id": "team-15",
+      "away_id": "the-attritionists",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -2532,10 +2532,10 @@
       "notes": null
     },
     {
-      "id": "sched-w13-bone-dry-demolition-derby",
+      "id": "sched-w13-bone-dry-extinction",
       "week": 13,
       "home_id": "bone-dry",
-      "away_id": "demolition-derby",
+      "away_id": "extinction",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -2574,10 +2574,10 @@
       "notes": null
     },
     {
-      "id": "sched-w14-hand-grenade-team-16",
+      "id": "sched-w14-hand-grenade-womperzoo",
       "week": 14,
       "home_id": "hand-grenade",
-      "away_id": "team-16",
+      "away_id": "womperzoo",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -2588,10 +2588,10 @@
       "notes": null
     },
     {
-      "id": "sched-w14-dark-n-stormy-team-15",
+      "id": "sched-w14-dark-n-stormy-the-attritionists",
       "week": 14,
       "home_id": "dark-n-stormy",
-      "away_id": "team-15",
+      "away_id": "the-attritionists",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -2630,10 +2630,10 @@
       "notes": null
     },
     {
-      "id": "sched-w14-folk-music-demolition-derby",
+      "id": "sched-w14-folk-music-extinction",
       "week": 14,
       "home_id": "folk-music",
-      "away_id": "demolition-derby",
+      "away_id": "extinction",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -2672,10 +2672,10 @@
       "notes": null
     },
     {
-      "id": "sched-w15-darwins-doom-team-16",
+      "id": "sched-w15-darwins-doom-womperzoo",
       "week": 15,
       "home_id": "darwins-doom",
-      "away_id": "team-16",
+      "away_id": "womperzoo",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -2686,10 +2686,10 @@
       "notes": null
     },
     {
-      "id": "sched-w15-swamp-things-team-15",
+      "id": "sched-w15-swamp-things-the-attritionists",
       "week": 15,
       "home_id": "swamp-things",
-      "away_id": "team-15",
+      "away_id": "the-attritionists",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -2728,10 +2728,10 @@
       "notes": null
     },
     {
-      "id": "sched-w15-mean-machine-demolition-derby",
+      "id": "sched-w15-mean-machine-extinction",
       "week": 15,
       "home_id": "mean-machine",
-      "away_id": "demolition-derby",
+      "away_id": "extinction",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -2770,9 +2770,9 @@
       "notes": null
     },
     {
-      "id": "sched-w16-team-16-trick-or-treat",
+      "id": "sched-w16-womperzoo-trick-or-treat",
       "week": 16,
-      "home_id": "team-16",
+      "home_id": "womperzoo",
       "away_id": "trick-or-treat",
       "played": false,
       "winner_id": null,
@@ -2784,9 +2784,9 @@
       "notes": null
     },
     {
-      "id": "sched-w16-team-15-no-lands-for-you",
+      "id": "sched-w16-the-attritionists-no-lands-for-you",
       "week": 16,
-      "home_id": "team-15",
+      "home_id": "the-attritionists",
       "away_id": "no-lands-for-you",
       "played": false,
       "winner_id": null,
@@ -2826,9 +2826,9 @@
       "notes": null
     },
     {
-      "id": "sched-w16-demolition-derby-hand-grenade",
+      "id": "sched-w16-extinction-hand-grenade",
       "week": 16,
-      "home_id": "demolition-derby",
+      "home_id": "extinction",
       "away_id": "hand-grenade",
       "played": false,
       "winner_id": null,
@@ -2882,9 +2882,9 @@
       "notes": null
     },
     {
-      "id": "sched-w17-team-15-trick-or-treat",
+      "id": "sched-w17-the-attritionists-trick-or-treat",
       "week": 17,
-      "home_id": "team-15",
+      "home_id": "the-attritionists",
       "away_id": "trick-or-treat",
       "played": false,
       "winner_id": null,
@@ -2896,10 +2896,10 @@
       "notes": null
     },
     {
-      "id": "sched-w17-the-emerald-army-team-16",
+      "id": "sched-w17-the-emerald-army-womperzoo",
       "week": 17,
       "home_id": "the-emerald-army",
-      "away_id": "team-16",
+      "away_id": "womperzoo",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -2924,9 +2924,9 @@
       "notes": null
     },
     {
-      "id": "sched-w17-demolition-derby-darwins-doom",
+      "id": "sched-w17-extinction-darwins-doom",
       "week": 17,
-      "home_id": "demolition-derby",
+      "home_id": "extinction",
       "away_id": "darwins-doom",
       "played": false,
       "winner_id": null,
@@ -3008,10 +3008,10 @@
       "notes": null
     },
     {
-      "id": "sched-w18-holy-war-team-15",
+      "id": "sched-w18-holy-war-the-attritionists",
       "week": 18,
       "home_id": "holy-war",
-      "away_id": "team-15",
+      "away_id": "the-attritionists",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -3022,10 +3022,10 @@
       "notes": null
     },
     {
-      "id": "sched-w18-demolition-derby-team-16",
+      "id": "sched-w18-extinction-womperzoo",
       "week": 18,
-      "home_id": "demolition-derby",
-      "away_id": "team-16",
+      "home_id": "extinction",
+      "away_id": "womperzoo",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -3120,9 +3120,9 @@
       "notes": null
     },
     {
-      "id": "sched-w19-demolition-derby-the-emerald-army",
+      "id": "sched-w19-extinction-the-emerald-army",
       "week": 19,
-      "home_id": "demolition-derby",
+      "home_id": "extinction",
       "away_id": "the-emerald-army",
       "played": false,
       "winner_id": null,
@@ -3134,10 +3134,10 @@
       "notes": null
     },
     {
-      "id": "sched-w19-bone-dry-team-15",
+      "id": "sched-w19-bone-dry-the-attritionists",
       "week": 19,
       "home_id": "bone-dry",
-      "away_id": "team-15",
+      "away_id": "the-attritionists",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -3148,10 +3148,10 @@
       "notes": null
     },
     {
-      "id": "sched-w19-clockwork-team-16",
+      "id": "sched-w19-clockwork-womperzoo",
       "week": 19,
       "home_id": "clockwork",
-      "away_id": "team-16",
+      "away_id": "womperzoo",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -3218,9 +3218,9 @@
       "notes": null
     },
     {
-      "id": "sched-w20-demolition-derby-trick-or-treat",
+      "id": "sched-w20-extinction-trick-or-treat",
       "week": 20,
-      "home_id": "demolition-derby",
+      "home_id": "extinction",
       "away_id": "trick-or-treat",
       "played": false,
       "winner_id": null,
@@ -3260,10 +3260,10 @@
       "notes": null
     },
     {
-      "id": "sched-w20-folk-music-team-15",
+      "id": "sched-w20-folk-music-the-attritionists",
       "week": 20,
       "home_id": "folk-music",
-      "away_id": "team-15",
+      "away_id": "the-attritionists",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -3274,10 +3274,10 @@
       "notes": null
     },
     {
-      "id": "sched-w20-sliver-lining-team-16",
+      "id": "sched-w20-sliver-lining-womperzoo",
       "week": 20,
       "home_id": "sliver-lining",
-      "away_id": "team-16",
+      "away_id": "womperzoo",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -3344,10 +3344,10 @@
       "notes": null
     },
     {
-      "id": "sched-w21-clockwork-demolition-derby",
+      "id": "sched-w21-clockwork-extinction",
       "week": 21,
       "home_id": "clockwork",
-      "away_id": "demolition-derby",
+      "away_id": "extinction",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -3386,10 +3386,10 @@
       "notes": null
     },
     {
-      "id": "sched-w21-mean-machine-team-15",
+      "id": "sched-w21-mean-machine-the-attritionists",
       "week": 21,
       "home_id": "mean-machine",
-      "away_id": "team-15",
+      "away_id": "the-attritionists",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -3400,10 +3400,10 @@
       "notes": null
     },
     {
-      "id": "sched-w21-dark-n-stormy-team-16",
+      "id": "sched-w21-dark-n-stormy-womperzoo",
       "week": 21,
       "home_id": "dark-n-stormy",
-      "away_id": "team-16",
+      "away_id": "womperzoo",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -3470,10 +3470,10 @@
       "notes": null
     },
     {
-      "id": "sched-w22-sliver-lining-demolition-derby",
+      "id": "sched-w22-sliver-lining-extinction",
       "week": 22,
       "home_id": "sliver-lining",
-      "away_id": "demolition-derby",
+      "away_id": "extinction",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -3512,10 +3512,10 @@
       "notes": null
     },
     {
-      "id": "sched-w22-hand-grenade-team-15",
+      "id": "sched-w22-hand-grenade-the-attritionists",
       "week": 22,
       "home_id": "hand-grenade",
-      "away_id": "team-15",
+      "away_id": "the-attritionists",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -3526,10 +3526,10 @@
       "notes": null
     },
     {
-      "id": "sched-w22-swamp-things-team-16",
+      "id": "sched-w22-swamp-things-womperzoo",
       "week": 22,
       "home_id": "swamp-things",
-      "away_id": "team-16",
+      "away_id": "womperzoo",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -3596,10 +3596,10 @@
       "notes": null
     },
     {
-      "id": "sched-w23-dark-n-stormy-demolition-derby",
+      "id": "sched-w23-dark-n-stormy-extinction",
       "week": 23,
       "home_id": "dark-n-stormy",
-      "away_id": "demolition-derby",
+      "away_id": "extinction",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -3638,10 +3638,10 @@
       "notes": null
     },
     {
-      "id": "sched-w23-darwins-doom-team-15",
+      "id": "sched-w23-darwins-doom-the-attritionists",
       "week": 23,
       "home_id": "darwins-doom",
-      "away_id": "team-15",
+      "away_id": "the-attritionists",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -3652,10 +3652,10 @@
       "notes": null
     },
     {
-      "id": "sched-w23-no-lands-for-you-team-16",
+      "id": "sched-w23-no-lands-for-you-womperzoo",
       "week": 23,
       "home_id": "no-lands-for-you",
-      "away_id": "team-16",
+      "away_id": "womperzoo",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -3722,10 +3722,10 @@
       "notes": null
     },
     {
-      "id": "sched-w24-swamp-things-demolition-derby",
+      "id": "sched-w24-swamp-things-extinction",
       "week": 24,
       "home_id": "swamp-things",
-      "away_id": "demolition-derby",
+      "away_id": "extinction",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -3764,10 +3764,10 @@
       "notes": null
     },
     {
-      "id": "sched-w24-team-16-team-15",
+      "id": "sched-w24-womperzoo-the-attritionists",
       "week": 24,
-      "home_id": "team-16",
-      "away_id": "team-15",
+      "home_id": "womperzoo",
+      "away_id": "the-attritionists",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -3848,10 +3848,10 @@
       "notes": null
     },
     {
-      "id": "sched-w25-no-lands-for-you-demolition-derby",
+      "id": "sched-w25-no-lands-for-you-extinction",
       "week": 25,
       "home_id": "no-lands-for-you",
-      "away_id": "demolition-derby",
+      "away_id": "extinction",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -3862,9 +3862,9 @@
       "notes": null
     },
     {
-      "id": "sched-w25-team-16-holy-war",
+      "id": "sched-w25-womperzoo-holy-war",
       "week": 25,
-      "home_id": "team-16",
+      "home_id": "womperzoo",
       "away_id": "holy-war",
       "played": false,
       "winner_id": null,
@@ -3876,9 +3876,9 @@
       "notes": null
     },
     {
-      "id": "sched-w25-team-15-the-emerald-army",
+      "id": "sched-w25-the-attritionists-the-emerald-army",
       "week": 25,
-      "home_id": "team-15",
+      "home_id": "the-attritionists",
       "away_id": "the-emerald-army",
       "played": false,
       "winner_id": null,
@@ -3960,9 +3960,9 @@
       "notes": null
     },
     {
-      "id": "sched-w26-team-16-bone-dry",
+      "id": "sched-w26-womperzoo-bone-dry",
       "week": 26,
-      "home_id": "team-16",
+      "home_id": "womperzoo",
       "away_id": "bone-dry",
       "played": false,
       "winner_id": null,
@@ -3974,10 +3974,10 @@
       "notes": null
     },
     {
-      "id": "sched-w26-team-15-demolition-derby",
+      "id": "sched-w26-the-attritionists-extinction",
       "week": 26,
-      "home_id": "team-15",
-      "away_id": "demolition-derby",
+      "home_id": "the-attritionists",
+      "away_id": "extinction",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -4058,9 +4058,9 @@
       "notes": null
     },
     {
-      "id": "sched-w27-team-16-folk-music",
+      "id": "sched-w27-womperzoo-folk-music",
       "week": 27,
-      "home_id": "team-16",
+      "home_id": "womperzoo",
       "away_id": "folk-music",
       "played": false,
       "winner_id": null,
@@ -4072,9 +4072,9 @@
       "notes": null
     },
     {
-      "id": "sched-w27-team-15-clockwork",
+      "id": "sched-w27-the-attritionists-clockwork",
       "week": 27,
-      "home_id": "team-15",
+      "home_id": "the-attritionists",
       "away_id": "clockwork",
       "played": false,
       "winner_id": null,
@@ -4100,10 +4100,10 @@
       "notes": null
     },
     {
-      "id": "sched-w27-holy-war-demolition-derby",
+      "id": "sched-w27-holy-war-extinction",
       "week": 27,
       "home_id": "holy-war",
-      "away_id": "demolition-derby",
+      "away_id": "extinction",
       "played": false,
       "winner_id": null,
       "loser_id": null,
@@ -4156,9 +4156,9 @@
       "notes": null
     },
     {
-      "id": "sched-w28-team-16-mean-machine",
+      "id": "sched-w28-womperzoo-mean-machine",
       "week": 28,
-      "home_id": "team-16",
+      "home_id": "womperzoo",
       "away_id": "mean-machine",
       "played": false,
       "winner_id": null,
@@ -4170,9 +4170,9 @@
       "notes": null
     },
     {
-      "id": "sched-w28-team-15-sliver-lining",
+      "id": "sched-w28-the-attritionists-sliver-lining",
       "week": 28,
-      "home_id": "team-15",
+      "home_id": "the-attritionists",
       "away_id": "sliver-lining",
       "played": false,
       "winner_id": null,
@@ -4212,9 +4212,9 @@
       "notes": null
     },
     {
-      "id": "sched-w28-demolition-derby-bone-dry",
+      "id": "sched-w28-extinction-bone-dry",
       "week": 28,
-      "home_id": "demolition-derby",
+      "home_id": "extinction",
       "away_id": "bone-dry",
       "played": false,
       "winner_id": null,
@@ -4254,9 +4254,9 @@
       "notes": null
     },
     {
-      "id": "sched-w29-team-16-hand-grenade",
+      "id": "sched-w29-womperzoo-hand-grenade",
       "week": 29,
-      "home_id": "team-16",
+      "home_id": "womperzoo",
       "away_id": "hand-grenade",
       "played": false,
       "winner_id": null,
@@ -4268,9 +4268,9 @@
       "notes": null
     },
     {
-      "id": "sched-w29-team-15-dark-n-stormy",
+      "id": "sched-w29-the-attritionists-dark-n-stormy",
       "week": 29,
-      "home_id": "team-15",
+      "home_id": "the-attritionists",
       "away_id": "dark-n-stormy",
       "played": false,
       "winner_id": null,
@@ -4310,9 +4310,9 @@
       "notes": null
     },
     {
-      "id": "sched-w29-demolition-derby-folk-music",
+      "id": "sched-w29-extinction-folk-music",
       "week": 29,
-      "home_id": "demolition-derby",
+      "home_id": "extinction",
       "away_id": "folk-music",
       "played": false,
       "winner_id": null,
@@ -4352,9 +4352,9 @@
       "notes": null
     },
     {
-      "id": "sched-w30-team-16-darwins-doom",
+      "id": "sched-w30-womperzoo-darwins-doom",
       "week": 30,
-      "home_id": "team-16",
+      "home_id": "womperzoo",
       "away_id": "darwins-doom",
       "played": false,
       "winner_id": null,
@@ -4366,9 +4366,9 @@
       "notes": null
     },
     {
-      "id": "sched-w30-team-15-swamp-things",
+      "id": "sched-w30-the-attritionists-swamp-things",
       "week": 30,
-      "home_id": "team-15",
+      "home_id": "the-attritionists",
       "away_id": "swamp-things",
       "played": false,
       "winner_id": null,
@@ -4408,9 +4408,9 @@
       "notes": null
     },
     {
-      "id": "sched-w30-demolition-derby-mean-machine",
+      "id": "sched-w30-extinction-mean-machine",
       "week": 30,
-      "home_id": "demolition-derby",
+      "home_id": "extinction",
       "away_id": "mean-machine",
       "played": false,
       "winner_id": null,

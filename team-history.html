@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <style>
     .th-header {
-      background: linear-gradient(135deg, #1a1a1a 0%, #111 100%);
+      background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg) 100%);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 28px 32px;
@@ -76,23 +76,159 @@ async function init() {
       ${archetype.key_cards && archetype.key_cards.length ? `<div style="font-size:11px;color:var(--text-muted)">Key cards: <span style="color:var(--gold)">${archetype.key_cards.join(', ')}</span></div>` : ''}
     </div>` : '';
 
-  const seasonRows = team.season_records.map(s => {
-    return `<tr>
-      <td><a href="history.html">Season ${s.season}</a>${s.is_champion ? ' 👑' : ''}</td>
-      <td class="num">${s.w}</td>
-      <td class="num">${s.l}</td>
-      <td class="num">${s.win_pct != null ? (s.win_pct*100).toFixed(1)+'%' : '—'}</td>
-      <td style="font-size:12px;color:var(--text-secondary)">${s.team_mvp ? s.team_mvp + (s.team_mvp_count > 1 ? ' (' + s.team_mvp_count + 'x)' : '') : '—'}</td>
-      <td class="num"><span class="power-score">${s.power_score.toFixed(1)}</span></td>
-      <td class="num" style="color:var(--text-muted)">${s.udpi != null ? s.udpi.toFixed(3) : '—'}</td>
-    </tr>`;
-  }).join('');
+  const BOSS_TEAMS = ['Green Boss', 'Red Boss', 'Black Boss', 'Blue Boss', 'White Boss'];
+  const isBossTeam = BOSS_TEAMS.includes(teamName);
 
-  const html = `
-    <div class="th-header">
-      <div class="th-name">${team.team}</div>
-      ${archetype ? `<div style="font-size:13px;color:var(--text-muted);margin-bottom:4px">${archetype.archetype} · ${archetype.colors.join(', ')}</div>` : ''}
-      ${archetype ? `<div class="th-sub" style="font-size:13px;color:var(--text-secondary);margin-bottom:12px;line-height:1.6;max-width:600px">${archetype.flavor}</div>` : ''}
+  let headerStats = '';
+  let mainContent = '';
+
+  if (isBossTeam) {
+    const structuredGames = (history.boss_fights || [])
+      .filter(g => g.boss === teamName)
+      .map(g => ({
+        season: g.season, match_type: g.match_type, game: g.game,
+        winner: g.winner, loser: g.loser, winner_score: g.winner_score,
+        loser_score: g.loser_score, turns: g.turns, mvp: g.mvp,
+        commentary: g.commentary || '', champion: g.champion,
+        bossWon: g.winner === teamName, source: 'boss_fights'
+      }));
+
+    const historicalGames = [];
+    if (teamName === 'Green Boss') {
+      Object.entries(history.seasons).forEach(([sNum, season]) => {
+        (season.games || []).forEach(g => {
+          if (g.winner === 'Boss Fight' || g.loser === 'Boss Fight') {
+            historicalGames.push({
+              season: parseInt(sNum), match_type: g.match_type, game: g.game,
+              winner: g.winner === 'Boss Fight' ? teamName : g.winner,
+              loser: g.loser === 'Boss Fight' ? teamName : g.loser,
+              winner_score: g.winner_score, loser_score: g.loser_score,
+              turns: g.turns, mvp: g.mvp, commentary: '', champion: null,
+              bossWon: g.winner === 'Boss Fight', source: 'historical'
+            });
+          }
+        });
+        (season.playoff_series || []).forEach(s => {
+          (s.games || []).forEach(g => {
+            if (g.winner === 'Boss Fight' || g.loser === 'Boss Fight') {
+              historicalGames.push({
+                season: parseInt(sNum), match_type: 'Playoffs', game: g.game,
+                winner: g.winner === 'Boss Fight' ? teamName : g.winner,
+                loser: g.loser === 'Boss Fight' ? teamName : g.loser,
+                winner_score: g.winner_score, loser_score: g.loser_score,
+                turns: g.turns, mvp: g.mvp, commentary: '', champion: null,
+                bossWon: g.winner === 'Boss Fight', source: 'historical'
+              });
+            }
+          });
+        });
+      });
+    }
+
+    const buildGameRow = (g) => {
+      const opponent = g.bossWon ? g.loser : g.winner;
+      const scoreStr = (g.winner_score != null && g.loser_score != null) ? `${g.winner_score} – ${g.loser_score}` : '—';
+      const noteId = `boss-game-s${g.season}-${g.game}-${(opponent||'').replace(/\W+/g,'')}`;
+      return `<div style="padding:5px 0;border-bottom:1px solid var(--border)">
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px;${g.commentary?'cursor:pointer':''}" ${g.commentary?`onclick="const n=document.getElementById('${noteId}');n.style.display=n.style.display==='none'?'block':'none'"`:''}>
+          <span>
+            <span style="color:var(--gold)">${g.bossWon ? teamName : opponent}</span>
+            <span style="color:var(--text-muted)"> def. </span>
+            <span style="color:var(--text-secondary)">${g.bossWon ? opponent : teamName}</span>
+            ${g.turns?`<span style="color:var(--text-muted);font-size:11px;margin-left:8px">${g.turns}t</span>`:''}
+            ${g.mvp?`<span style="color:var(--text-muted);font-size:11px;margin-left:8px">${g.mvp}</span>`:''}
+          </span>
+          <span style="font-family:var(--font-mono);font-size:12px;color:${g.bossWon?'var(--green)':'var(--red)'}">${g.bossWon?'W':'L'} ${scoreStr}${g.commentary?' <span style="color:var(--text-muted);font-size:10px">▾</span>':''}</span>
+        </div>
+        ${g.commentary?`<div id="${noteId}" style="display:none;font-size:12px;color:var(--text-secondary);line-height:1.6;padding:8px 0 4px;white-space:pre-line">${g.commentary}</div>`:''}
+      </div>`;
+    };
+
+    const allGames = [...historicalGames, ...structuredGames];
+    const w = allGames.filter(g => g.bossWon).length;
+    const l = allGames.filter(g => !g.bossWon).length;
+    const winPct = allGames.length ? ((w / allGames.length) * 100).toFixed(1) + '%' : '—';
+
+    headerStats = `
+      <div class="th-stats-row">
+        <div class="th-stat"><span class="th-stat-val">${w}</span><span class="th-stat-label">Wins</span></div>
+        <div class="th-stat"><span class="th-stat-val">${l}</span><span class="th-stat-label">Losses</span></div>
+        <div class="th-stat"><span class="th-stat-val">${w}-${l}</span><span class="th-stat-label">All-Time Record</span></div>
+        <div class="th-stat"><span class="th-stat-val">${winPct}</span><span class="th-stat-label">Win %</span></div>
+      </div>`;
+
+    if (teamName === 'Green Boss') {
+      const s3Games = historicalGames.filter(g => g.season === 3);
+      const s3Regular = s3Games.filter(g => !g.match_type.toLowerCase().includes('playoff'));
+      const s3Playoff = s3Games.filter(g => g.match_type.toLowerCase().includes('playoff'));
+      const s3W = s3Games.filter(g => g.bossWon).length;
+      const s3L = s3Games.filter(g => !g.bossWon).length;
+
+      const bossCapacityGames = [
+        ...historicalGames.filter(g => g.season === 7),
+        ...structuredGames
+      ].sort((a, b) => b.season - a.season || a.game - b.game);
+      const bossCapacityW = bossCapacityGames.filter(g => g.bossWon).length;
+      const bossCapacityL = bossCapacityGames.filter(g => !g.bossWon).length;
+
+      const bossCapacityBySeason = {};
+      bossCapacityGames.forEach(g => {
+        if (!bossCapacityBySeason[g.season]) bossCapacityBySeason[g.season] = [];
+        bossCapacityBySeason[g.season].push(g);
+      });
+      const bossCapacityHtml = Object.entries(bossCapacityBySeason)
+        .sort(([a], [b]) => b - a)
+        .map(([sNum, games]) => {
+          const sW = games.filter(g => g.bossWon).length;
+          const sL = games.filter(g => !g.bossWon).length;
+          return `<div style="margin-top:10px">
+            <div style="font-size:10px;color:var(--gold);text-transform:uppercase;letter-spacing:0.1em;padding:6px 0 4px;border-top:1px solid var(--border)">Season ${sNum} · ${sW}-${sL}</div>
+            ${games.map(buildGameRow).join('')}
+          </div>`;
+        }).join('');
+
+      mainContent = `
+        <div class="section-header"><span class="section-title">Boss Fight Record</span><span style="font-size:11px;color:var(--text-muted)">${bossCapacityW}-${bossCapacityL}</span></div>
+        <div style="margin-bottom:28px">${bossCapacityHtml || '<div style="color:var(--text-muted);font-size:13px">No boss fight games recorded yet.</div>'}</div>
+        <div class="section-header"><span class="section-title">Season 3 — Regular Season & Playoffs</span><span style="font-size:11px;color:var(--text-muted)">${s3W}-${s3L}</span></div>
+        <div style="margin-bottom:24px">
+          ${s3Playoff.length ? `<div style="font-size:10px;color:var(--gold);text-transform:uppercase;letter-spacing:0.1em;padding:6px 0 4px;border-top:1px solid var(--border)">Playoffs</div>${s3Playoff.map(buildGameRow).join('')}` : ''}
+          ${s3Regular.length ? `<div style="font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;padding:10px 0 4px;border-top:1px solid var(--border);margin-top:8px">Regular Season</div>${s3Regular.map(buildGameRow).join('')}` : ''}
+        </div>
+      `;
+    } else {
+      const bossCapacityBySeason = {};
+      structuredGames.forEach(g => {
+        if (!bossCapacityBySeason[g.season]) bossCapacityBySeason[g.season] = [];
+        bossCapacityBySeason[g.season].push(g);
+      });
+      const gamesHtml = Object.entries(bossCapacityBySeason).map(([sNum, games]) => {
+        const sW = games.filter(g => g.bossWon).length;
+        const sL = games.filter(g => !g.bossWon).length;
+        return `<div style="margin-top:10px">
+          <div style="font-size:10px;color:var(--gold);text-transform:uppercase;letter-spacing:0.1em;padding:6px 0 4px;border-top:1px solid var(--border)">Season ${sNum} · ${sW}-${sL}</div>
+          ${games.map(buildGameRow).join('')}
+        </div>`;
+      }).join('');
+      mainContent = `
+        <div class="section-header"><span class="section-title">Boss Fight Record</span></div>
+        <div style="margin-bottom:24px">${gamesHtml || '<div style="color:var(--text-muted);font-size:13px">No games recorded yet.</div>'}</div>`;
+    }
+
+  } else {
+    const seasonRows = team.season_records.map(s => {
+      return `<tr>
+        <td><a href="history.html">Season ${s.season}</a>${s.is_champion ? ' 👑' : ''}</td>
+        <td class="num">${s.w}</td>
+        <td class="num">${s.l}</td>
+        <td class="num">${s.win_pct != null ? (s.win_pct*100).toFixed(1)+'%' : '—'}</td>
+        <td style="font-size:12px;color:var(--text-secondary)">${s.team_mvp ? s.team_mvp + (s.team_mvp_count > 1 ? ' (' + s.team_mvp_count + 'x)' : '') : '—'}</td>
+        <td class="num"><span class="power-score">${s.power_score.toFixed(1)}</span></td>
+        <td class="num" style="color:var(--text-muted)">${s.udpi != null ? s.udpi.toFixed(3) : '—'}</td>
+      </tr>`;
+    }).join('');
+
+    headerStats = `
       <div class="th-stats-row">
         <div class="th-stat">
           <span class="th-stat-val" style="color:var(--gold)">${team.championships}</span>
@@ -114,18 +250,28 @@ async function init() {
           <span class="th-stat-val-sm">${team.top_mvp_card}</span>
           <span class="th-stat-label">All-Time MVP${team.top_mvp_count ? ' · ' + team.top_mvp_count + 'x' : ''}</span>
         </div>` : ''}
-      </div>
-    </div>
+      </div>`;
 
-    <div class="section-header"><span class="section-title">Season-by-Season</span></div>
-    <div style="overflow-x:auto;margin-bottom:24px">
-      <table class="standings-table">
-        <thead>
-          <tr><th>Season</th><th class="num">W</th><th class="num">L</th><th class="num">Win%</th><th>Season MVP</th><th class="num">Power Score</th><th class="num">U-DPI</th></tr>
-        </thead>
-        <tbody>${seasonRows}</tbody>
-      </table>
+    mainContent = `
+      <div class="section-header"><span class="section-title">Season-by-Season</span></div>
+      <div style="overflow-x:auto;margin-bottom:24px">
+        <table class="standings-table">
+          <thead>
+            <tr><th>Season</th><th class="num">W</th><th class="num">L</th><th class="num">Win%</th><th>Season MVP</th><th class="num">Power Score</th><th class="num">U-DPI</th></tr>
+          </thead>
+          <tbody>${seasonRows}</tbody>
+        </table>
+      </div>`;
+  }
+
+  const html = `
+    <div class="th-header">
+      <div class="th-name">${team.team}</div>
+      ${archetype ? `<div style="font-size:13px;color:var(--text-muted);margin-bottom:4px">${archetype.archetype} · ${archetype.colors.join(', ')}</div>` : ''}
+      ${archetype ? `<div class="th-sub" style="font-size:13px;color:var(--text-secondary);margin-bottom:12px;line-height:1.6;max-width:600px">${archetype.flavor}</div>` : ''}
+      ${headerStats}
     </div>
+    ${mainContent}
   `;
   // Build waiver log for this team across all seasons
   const teamWaivers = [];

@@ -562,13 +562,13 @@ function buildAdvancedStatsHtml(season) {
     const buildTable = () => {
       const cols = bucket.cols;
       const thead = '<tr><th style="text-align:left">Team</th>' + cols.map((c, ci) => {
-        const bl = 'border-left:2px solid red;';
+        const bl = ci > 0 && cols[ci-1].g !== c.g ? 'border-left:2px solid var(--border-accent);padding-left:14px;' : '';
         return `<th style="${bl}" onclick="advSortTable('${tableId}','${c.key}')">${c.label}</th>`;
       }).join('') + '</tr>';
       const tbody = [...teams].map(team => {
         const row = adv[team]||{};
         return '<tr><td>' + team + '</td>' + cols.map((c, ci) => {
-          const bl = 'border-left:2px solid red;';
+          const bl = ci > 0 && cols[ci-1].g !== c.g ? 'border-left:2px solid var(--border-accent);padding-left:14px;' : '';
           const val = c.pct ? (row[c.key]!=null ? (row[c.key]*100).toFixed(0)+'%' : '—') : f(row[c.key], c.dec??2);
           return `<td style="${bl}">${val}</td>`;
         }).join('') + '</tr>';
@@ -1204,7 +1204,8 @@ function renderAllTime() {
       tbody.innerHTML = teams.map(t => {
         const champBadge = t.championships > 0 ? `<span class="champ-badge">${t.championships}x 👑</span>` : '';
         const qualified = t.seasons_count >= 2;
-        const pwrDisplay = qualified ? `<span class="power-score">${t.avg_power_score.toFixed(1)}</span>` : `<span style="color:var(--text-muted)">${t.avg_power_score.toFixed(1)}<span style="font-size:10px"> *</span></span>`;
+        const avgPwr = t.avg_power_score ?? 0;
+        const pwrDisplay = qualified ? `<span class="power-score">${avgPwr.toFixed(1)}</span>` : `<span style="color:var(--text-muted)">${avgPwr.toFixed(1)}<span style="font-size:10px"> *</span></span>`;
         return `<tr>
           <td><a href="team-history.html?team=${encodeURIComponent(t.team)}">${t.team}</a>${champBadge}</td>
           <td class="num">${t.seasons_count}</td>
