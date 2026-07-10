@@ -3723,7 +3723,7 @@
           "pts": 4,
           "win_pct": 0.1111111111,
           "gb": 11,
-          "udpi": 0.00006172839506,
+          "udpi": 6.172839506e-05,
           "is_champion": false,
           "power_score": 0,
           "team_mvp": "Wrath of God",
@@ -19444,11 +19444,11 @@
             "tier_name": "Mid-Season Moves",
             "teams": [
               {
-                "team": "The Anti-Dopes → Mist Monsters",
+                "team": "The Anti-Dopes \u2192 Mist Monsters",
                 "writeup": "The Anti-Dopes, built to mirror the opponent with copy spells, sat at 1-5 before being entirely replaced by the Mist Monsters. For the first time in League History, a Team was entirely replaced partway through the season. The Mist Monsters stepped in to give the Mask-Nought combo the focused support it always needed, finishing 6-8 the rest of the way and making a strong run in the playoffs."
               },
               {
-                "team": "Glop Artists → Extinction",
+                "team": "Glop Artists \u2192 Extinction",
                 "writeup": "The Glop Artists were 2-5 at Week 8 before being overhauled. Red was added to the original green and white roster as was a zoo of low-cost creatures. Extinction went 9-4 the rest of the way, including a 7-game win streak to close out the season. A stunning turnaround from a team that had been 15-23 all-time."
               }
             ]
@@ -23366,7 +23366,7 @@
           "match_type": "Reg. Season",
           "winner": "Big Gloves",
           "loser": "Darwin's Doom",
-          "commentary": "Gloves. A WILD finish! The game was over, the final count we reverting taken until an error had been detected. Teferi's Puzzle Box occurs 2x when there are two in play - a big learning. As a result, a desperation move by the Gloves to use a Wheel of Fortune ends up winning the game by drawing a Dark Ritual and a Puzzle Box. They go into play to join another Box, a Howling Mine and a U-Dreams. The Wheel caused 7-damage, then the two Box and Mine caused another 13-damage. That's 20-damage in one turn!!!! This is precisely why this deck was built 👍\n\nDarwin. Have the victory ripped out from under them in devastating fashion. What a finish.",
+          "commentary": "Gloves. A WILD finish! The game was over, the final count we reverting taken until an error had been detected. Teferi's Puzzle Box occurs 2x when there are two in play - a big learning. As a result, a desperation move by the Gloves to use a Wheel of Fortune ends up winning the game by drawing a Dark Ritual and a Puzzle Box. They go into play to join another Box, a Howling Mine and a U-Dreams. The Wheel caused 7-damage, then the two Box and Mine caused another 13-damage. That's 20-damage in one turn!!!! This is precisely why this deck was built \ud83d\udc4d\n\nDarwin. Have the victory ripped out from under them in devastating fashion. What a finish.",
           "verified": true
         },
         {
@@ -33251,7 +33251,7 @@
           "match_type": "Playoffs",
           "winner": "Mist Monsters",
           "loser": "Clockwork",
-          "commentary": "Monsters. An incredibly rare 3-turn win thanks the ideal draw of one mana, a Sol Ring, 2x Nought and a turn-1 Mask. Two turns later yielded 24 damage.\n\nFax. Lose an impossible game. Not worried about it 🤪",
+          "commentary": "Monsters. An incredibly rare 3-turn win thanks the ideal draw of one mana, a Sol Ring, 2x Nought and a turn-1 Mask. Two turns later yielded 24 damage.\n\nFax. Lose an impossible game. Not worried about it \ud83e\udd2a",
           "verified": true
         },
         {
@@ -33561,7 +33561,7 @@
           "match_type": "Playoffs",
           "winner": "Mist Monsters",
           "loser": "Extinction",
-          "commentary": "Monsters. Win a bruiser to take a 3-0 series lead. Pretty impressive win, holding on for the first ~10 turns as twin Kird Ape ran amok. They were easily down double-digit points before their draw engine started bearing fruit. Scroll Rack is almost unfair and, yet, perfectly complementary to this roster - using mill abilities to seek out their dynamic duo in Mask-Nought. This game was no different. They somehow survived an apocalypse 3x; 2x Wrath of God and a Cataclysm. \n\nX. If only they had a little more early firepower they could have taken this one. The early Ape duo is fine, but it shouldn’t be counted upon to win a game outright. No way. They needed the next level of offensive depth in the form of a Djinn or something else. That seems to be the story here time and time again, though. That said, their defense was spectacular. To avoid a sweep, they’re going to need a Djinn in the first 3-4 turns, I suspect.",
+          "commentary": "Monsters. Win a bruiser to take a 3-0 series lead. Pretty impressive win, holding on for the first ~10 turns as twin Kird Ape ran amok. They were easily down double-digit points before their draw engine started bearing fruit. Scroll Rack is almost unfair and, yet, perfectly complementary to this roster - using mill abilities to seek out their dynamic duo in Mask-Nought. This game was no different. They somehow survived an apocalypse 3x; 2x Wrath of God and a Cataclysm. \n\nX. If only they had a little more early firepower they could have taken this one. The early Ape duo is fine, but it shouldn\u2019t be counted upon to win a game outright. No way. They needed the next level of offensive depth in the form of a Djinn or something else. That seems to be the story here time and time again, though. That said, their defense was spectacular. To avoid a sweep, they\u2019re going to need a Djinn in the first 3-4 turns, I suspect.",
           "verified": true
         },
         {
@@ -33581,7 +33581,7 @@
           "match_type": "Playoffs",
           "winner": "Extinction",
           "loser": "Mist Monsters",
-          "commentary": "Extinction. Oh yeah! They stay alive with big time victory featuring 3x Lhurgoyf. They benefited from a mid-game Cataclysm that wiped out 2x Maze of Ith and 3x Islands. The Nought’s were coming, too, and a turn before saw one of them Disenchanted. Good drawing by X. The finishing move came with the aforementioned Cataclysm when a Angelic Renewal enabled the second Lhurgoyf to stay on the  ‘field. Buckets!\n\nMonsters. A lot of drilling with no oil.",
+          "commentary": "Extinction. Oh yeah! They stay alive with big time victory featuring 3x Lhurgoyf. They benefited from a mid-game Cataclysm that wiped out 2x Maze of Ith and 3x Islands. The Nought\u2019s were coming, too, and a turn before saw one of them Disenchanted. Good drawing by X. The finishing move came with the aforementioned Cataclysm when a Angelic Renewal enabled the second Lhurgoyf to stay on the  \u2018field. Buckets!\n\nMonsters. A lot of drilling with no oil.",
           "verified": true
         },
         {
@@ -33841,7 +33841,7 @@
           "match_type": "Playoffs",
           "winner": "Boss Fight",
           "loser": "Sliver Lining",
-          "commentary": "Boss. Destructive in this one to get the W! Elves, Insects and Wurms galore to deal a 31-damage in the final turn. Hornet Queen is an awesome card, and I was on the fence about it early on. I also really enjoyed pairing Living Hive with the Queen. Kindercatch has fantastic artwork. Worldspine Wurm even made it out - much in thanks to the Priest of Titania and the Llanowar Elves. \n\nSlivers. No chance they win a game like this one. Just far too much firepower on the other side of the battlefield. Even a Coat of Arms wouldn’t have helped...it would’ve aided the Boss!!!!!",
+          "commentary": "Boss. Destructive in this one to get the W! Elves, Insects and Wurms galore to deal a 31-damage in the final turn. Hornet Queen is an awesome card, and I was on the fence about it early on. I also really enjoyed pairing Living Hive with the Queen. Kindercatch has fantastic artwork. Worldspine Wurm even made it out - much in thanks to the Priest of Titania and the Llanowar Elves. \n\nSlivers. No chance they win a game like this one. Just far too much firepower on the other side of the battlefield. Even a Coat of Arms wouldn\u2019t have helped...it would\u2019ve aided the Boss!!!!!",
           "verified": true
         },
         {
@@ -34862,7 +34862,7 @@
             "turns": 6,
             "mvp": "Swords to Plowshares",
             "champion_won": true,
-            "commentary": "Sliver Lining def. Green Boss in 6 turns — a dominant performance by the Season 7 champions."
+            "commentary": "Sliver Lining def. Green Boss in 6 turns \u2014 a dominant performance by the Season 7 champions."
           },
           {
             "game": 2,
@@ -39162,11 +39162,11 @@
             "tier_name": "Mid-Season Mergers",
             "teams": [
               {
-                "team": "Smashed Potatoes + The Circus → Smashed Circus",
+                "team": "Smashed Potatoes + The Circus \u2192 Smashed Circus",
                 "writeup": "Two teams merged mid-season to form Smashed Circus, combining their rosters and combining their records going forward. The merged outfit finished 9-13 overall, reflecting a season of adjustment as the two philosophies were integrated."
               },
               {
-                "team": "Overdrawn + Hand Grenade → Over Grenade",
+                "team": "Overdrawn + Hand Grenade \u2192 Over Grenade",
                 "writeup": "Overdrawn and Hand Grenade merged mid-season to form Over Grenade. The combined squad finished 7-15, as the pairing of Underworld Dreams with the artifact lock strategy showed flashes but couldn't find consistent footing."
               }
             ]
@@ -40441,11 +40441,11 @@
         },
         {
           "team": "Over Grenade",
-          "theme": "…..damn it……",
+          "theme": "\u2026..damn it\u2026\u2026",
           "record": "7-15",
           "mvp": "Arcane Denial (?)",
           "statmuse": "3-4 as Hand Grenade (4-11 as Overdrawn)",
-          "writeup": "Overdrawn's premise was simple — shuffle hands until you land the deadly combo and deal damage with Underworld Dreams. They stumbled to a 4-11 record prompting a total shift in construction back to Trick or Treat and Hand Grenade."
+          "writeup": "Overdrawn's premise was simple \u2014 shuffle hands until you land the deadly combo and deal damage with Underworld Dreams. They stumbled to a 4-11 record prompting a total shift in construction back to Trick or Treat and Hand Grenade."
         },
         {
           "team": "Clockwork",
@@ -40481,11 +40481,11 @@
         },
         {
           "team": "Team 10",
-          "theme": "So… are they good?",
+          "theme": "So\u2026 are they good?",
           "record": "10-12",
           "mvp": "'Ol Yawggy!",
           "statmuse": "Led the league in Deploy-W (9.40)",
-          "writeup": "Team 10 is a fascinating squad, controlling more games than their record suggests — finishing them was the hard part. Not known for intense speed, the team led the league in Deploy-W. The bright spot was tempo control — few teams dictated pace as well."
+          "writeup": "Team 10 is a fascinating squad, controlling more games than their record suggests \u2014 finishing them was the hard part. Not known for intense speed, the team led the league in Deploy-W. The bright spot was tempo control \u2014 few teams dictated pace as well."
         },
         {
           "team": "Dark N Stormy",
@@ -40493,7 +40493,7 @@
           "record": "11-11",
           "mvp": "Furnace of Rath (4x)",
           "statmuse": "Owner of the fastest win (3-turns vs Things) and the slowest (23-turns vs Sliver Lining)",
-          "writeup": "Ah, Dark N Stormy. You bring the nostalgia in droves, old friend! Dark N Stormy's record states the obvious — they either win or they lose and do one or the other roughly 50% of the time."
+          "writeup": "Ah, Dark N Stormy. You bring the nostalgia in droves, old friend! Dark N Stormy's record states the obvious \u2014 they either win or they lose and do one or the other roughly 50% of the time."
         },
         {
           "team": "Extinction",
@@ -40541,7 +40541,7 @@
           "record": "16-6",
           "mvp": "Goblin Recruiter (6x)",
           "statmuse": "9-2; record in 2H of the season",
-          "writeup": "Mean Machine!! The all-reds spent the season doing exactly what they said they would do — and daring opponents to stop it. The identity was never clearer than Goblin Recruiter, who won six Game MVPs."
+          "writeup": "Mean Machine!! The all-reds spent the season doing exactly what they said they would do \u2014 and daring opponents to stop it. The identity was never clearer than Goblin Recruiter, who won six Game MVPs."
         },
         {
           "team": "No Lands For You",
@@ -40549,7 +40549,7 @@
           "record": "16-6",
           "mvp": "Cyclopean Tomb (3x)",
           "statmuse": "DTT 1.10",
-          "writeup": "No Landia, you dog, you!!! The defending stalwart claimed their first ever #1 overall seed behind a stout 1.10 Damage Taken per Turn — comfortably the league's best defensive mark of the season."
+          "writeup": "No Landia, you dog, you!!! The defending stalwart claimed their first ever #1 overall seed behind a stout 1.10 Damage Taken per Turn \u2014 comfortably the league's best defensive mark of the season."
         }
       ],
       "advanced_stats": {
@@ -43766,7 +43766,7 @@
           "match_type": "Playoffs",
           "winner": "Smashed Circus",
           "loser": "The Attritionists",
-          "commentary": "Potatoes. Man, what a drag-em-out victory this was.. 17 grueling turns of tokens battling tokens. The first strike abilities on Order of Leitbur + White Knight made a huge difference in this game. So did Kjeldoran Outpost, but removing Fallen Angel from the game was huge.\n\nAtts. Man, the sac engine was in full effect and was super fun. They sac’ed a lot of lands early which crushed them later on in the deployment department. Grave Pact, where were you!?! Also, against almost anyone else the Jinxed Idol plays a huge role, but the Potatoes were pumping out tokens faster than the Atts - so nullified.",
+          "commentary": "Potatoes. Man, what a drag-em-out victory this was.. 17 grueling turns of tokens battling tokens. The first strike abilities on Order of Leitbur + White Knight made a huge difference in this game. So did Kjeldoran Outpost, but removing Fallen Angel from the game was huge.\n\nAtts. Man, the sac engine was in full effect and was super fun. They sac\u2019ed a lot of lands early which crushed them later on in the deployment department. Grave Pact, where were you!?! Also, against almost anyone else the Jinxed Idol plays a huge role, but the Potatoes were pumping out tokens faster than the Atts - so nullified.",
           "verified": true
         },
         {
@@ -43776,7 +43776,7 @@
           "match_type": "Playoffs",
           "winner": "Trick or Treat Freaks",
           "loser": "Bad Ass Fault",
-          "commentary": "TTFs. Well, this team inches nearer to “mainstay” status with another win - this time skirting an early Hymn to Tourach to pull Transmute Artifact -> Mask-Nought combo. Really fun when it works.\n\nBAF. Right there, maybe need to focus mostly on H-Kill against this opponent (vs M-Kill).",
+          "commentary": "TTFs. Well, this team inches nearer to \u201cmainstay\u201d status with another win - this time skirting an early Hymn to Tourach to pull Transmute Artifact -> Mask-Nought combo. Really fun when it works.\n\nBAF. Right there, maybe need to focus mostly on H-Kill against this opponent (vs M-Kill).",
           "verified": true
         },
         {
@@ -43786,7 +43786,7 @@
           "match_type": "Playoffs",
           "winner": "Over Grenade",
           "loser": "Mean Machine",
-          "commentary": "Hand Grenade. So this is the best recent example of what this team should be — 2x Badlands, 1x Mountain + 1x City of Brass send a late U-Dreams, Teferi’s Puzzle Box and Winds of Change onto the field for a big chunk of damage - then 2x Lightning Bolt do some more. Pretty good!\n\nMean Machine. Looked slow and clunky here - took awhile to get Gauntlet of Might out and then they couldn’t use it (?). Goblin Recruiter feels like the only unlock for this team — I’d rather be sending goblins out every single turn for mass chaos.",
+          "commentary": "Hand Grenade. So this is the best recent example of what this team should be \u2014 2x Badlands, 1x Mountain + 1x City of Brass send a late U-Dreams, Teferi\u2019s Puzzle Box and Winds of Change onto the field for a big chunk of damage - then 2x Lightning Bolt do some more. Pretty good!\n\nMean Machine. Looked slow and clunky here - took awhile to get Gauntlet of Might out and then they couldn\u2019t use it (?). Goblin Recruiter feels like the only unlock for this team \u2014 I\u2019d rather be sending goblins out every single turn for mass chaos.",
           "verified": true
         },
         {
@@ -43806,7 +43806,7 @@
           "match_type": "Playoffs",
           "winner": "Sliver Lining",
           "loser": "Darwin's Doom",
-          "commentary": "Sliver. Largely unchallenged in this game,as most of the damage against them was done by their own 3x City of Brass!! \n\nDoom. Something to be learned from in this game, as they hit a fork in the road early; destroy lands w/ Kudzu or gain draw advantage with Sylvan Library. It feels like this group wants to do the latter, and that Kudzu would pair better in the Emerald Army deck construct where there’s a surplus of mana. Doom should have 4x Worldly Tutor + 4x Sylvan Library at a minimum, maybe with some life gain to offset additional draws.",
+          "commentary": "Sliver. Largely unchallenged in this game,as most of the damage against them was done by their own 3x City of Brass!! \n\nDoom. Something to be learned from in this game, as they hit a fork in the road early; destroy lands w/ Kudzu or gain draw advantage with Sylvan Library. It feels like this group wants to do the latter, and that Kudzu would pair better in the Emerald Army deck construct where there\u2019s a surplus of mana. Doom should have 4x Worldly Tutor + 4x Sylvan Library at a minimum, maybe with some life gain to offset additional draws.",
           "verified": true
         },
         {
@@ -43816,7 +43816,7 @@
           "match_type": "Regular Season",
           "winner": "Mean Machine",
           "loser": "Dark N Stormy",
-          "commentary": "Machine. So fun! Used the Goblin Recruiter to pull every able bodied Goblin to the top of the library. Kind of a wild move that paid off. Most of the horde was dispatched w/ flamethrowers but they hung in there for the W.\n\nDnS. Not often this team gets out-deployed but they used up everything weapon in the arsenal to kill off as many Goblins as possible. Just didn't  have enough C-Defense to hang in there. Found they would've benefited from more Two-Headed Giants in this one.",
+          "commentary": "Machine. So fun! Used the Goblin Recruiter to pull every able bodied Goblin to the top of the library. Kind of a wild move that paid off. Most of the horde was dispatched w/ flamethrowers but they hung in there for the W.\n\nDnS. Not often this team gets out-deployed but they used up everything weapon in the arsenal to kill off as many Goblins as possible. Just didn't\u00a0 have enough C-Defense to hang in there. Found they would've benefited from more Two-Headed Giants in this one.",
           "verified": true
         },
         {
@@ -43826,7 +43826,7 @@
           "match_type": "Playoffs",
           "winner": "Swamp Things",
           "loser": "Team 10",
-          "commentary": "Things. The Things were left for dead, let’s be honest, and, yet, drew the only card in the entire deck that could have won them the game. There was, exactly, a 4.44% chance of this happening - we calculated it after the game - what a victory for the Swamp Things to claim a 1-0 lead in the series.\n\nT-10. Dumbfounded! Cannot believe it, had this one wrapped up like a Xmas present and were just plain unlucky, having all but locked out the Things thanks to Winter Orb + 2x Ankh of Mishra + a beefed up Stone-throwing Devils. Ridiculous!!!!",
+          "commentary": "Things. The Things were left for dead, let\u2019s be honest, and, yet, drew the only card in the entire deck that could have won them the game. There was, exactly, a 4.44% chance of this happening - we calculated it after the game - what a victory for the Swamp Things to claim a 1-0 lead in the series.\n\nT-10. Dumbfounded! Cannot believe it, had this one wrapped up like a Xmas present and were just plain unlucky, having all but locked out the Things thanks to Winter Orb + 2x Ankh of Mishra + a beefed up Stone-throwing Devils. Ridiculous!!!!",
           "verified": true
         },
         {
@@ -43846,7 +43846,7 @@
           "match_type": "Playoffs",
           "winner": "No Lands For You",
           "loser": "YCBI",
-          "commentary": "NLFY. Textbook win. Turn-1 Black Vise, turn-2 Demonic Tutor for Cyclopean Tomb, turn-3 Dark Ritual -> Tomb, controlled the board.\n\nYCBI. Only drew 2x lands in this game, can’t do that and win against NLFY.",
+          "commentary": "NLFY. Textbook win. Turn-1 Black Vise, turn-2 Demonic Tutor for Cyclopean Tomb, turn-3 Dark Ritual -> Tomb, controlled the board.\n\nYCBI. Only drew 2x lands in this game, can\u2019t do that and win against NLFY.",
           "verified": true
         },
         {
@@ -43856,7 +43856,7 @@
           "match_type": "Playoffs",
           "winner": "Folk Music",
           "loser": "Clockwork",
-          "commentary": "Music. Maze of Ith is such a good card, nullifying Su-Chi and giving the Music makers time to assemble an army. There was some land manipulation here too, with 2x Psychic Venom and a Phantasmal Terrain completely f’ing with the opponent.\n\nFav. Psychic Venom completely screwed up their gameplay. They were gushing with mana thanks to 2x Mana Vault, but were getting dinged handsomely every single turn. Tough sledding!",
+          "commentary": "Music. Maze of Ith is such a good card, nullifying Su-Chi and giving the Music makers time to assemble an army. There was some land manipulation here too, with 2x Psychic Venom and a Phantasmal Terrain completely f\u2019ing with the opponent.\n\nFav. Psychic Venom completely screwed up their gameplay. They were gushing with mana thanks to 2x Mana Vault, but were getting dinged handsomely every single turn. Tough sledding!",
           "verified": true
         },
         {
@@ -43866,7 +43866,7 @@
           "match_type": "Playoffs",
           "winner": "Team 10",
           "loser": "Swamp Things",
-          "commentary": "Team 10. Damn they looked good here, 2x Black Vise, Relic Barrier + Winter Orb, Mishra’s Factory — helped that Things had no mana synergy, all black hand with no swamp producers.\n\nThings. Reminded me why we’re thinking about removing red from the equation - losing due to mana synergy stinks.",
+          "commentary": "Team 10. Damn they looked good here, 2x Black Vise, Relic Barrier + Winter Orb, Mishra\u2019s Factory \u2014 helped that Things had no mana synergy, all black hand with no swamp producers.\n\nThings. Reminded me why we\u2019re thinking about removing red from the equation - losing due to mana synergy stinks.",
           "verified": true
         },
         {
@@ -43876,7 +43876,7 @@
           "match_type": "Playoffs",
           "winner": "Dark N Stormy",
           "loser": "Extinction",
-          "commentary": "DnS. Goddamn!!!! In 5-turns, the mono-reds throw some SMOKE in what is one of their defining games of the season! A whopping 7x cards deployed for 22x damage. Extremely fun, tie the series.\n\nX. Nothing going in this game thanks to mana mismatch. Makes me wonder how much better they’d be with more multi-mana producers.",
+          "commentary": "DnS. Goddamn!!!! In 5-turns, the mono-reds throw some SMOKE in what is one of their defining games of the season! A whopping 7x cards deployed for 22x damage. Extremely fun, tie the series.\n\nX. Nothing going in this game thanks to mana mismatch. Makes me wonder how much better they\u2019d be with more multi-mana producers.",
           "verified": true
         },
         {
@@ -43886,7 +43886,7 @@
           "match_type": "Playoffs",
           "winner": "Bad Ass Fault",
           "loser": "Trick or Treat Freaks",
-          "commentary": "BAF. Very nice control game from Fault. They destroyed 3-lands early, then slowly chipped away with 2x Abyssal Specter + 1x Megrim.\n\nTTFs. So funny, they lost the 3x lands though they easily could’ve won with an I-Mask, 2x Copy Artifact and a Transmute Artifact in-hand. If they don’t lose mana early they probably win this game.",
+          "commentary": "BAF. Very nice control game from Fault. They destroyed 3-lands early, then slowly chipped away with 2x Abyssal Specter + 1x Megrim.\n\nTTFs. So funny, they lost the 3x lands though they easily could\u2019ve won with an I-Mask, 2x Copy Artifact and a Transmute Artifact in-hand. If they don\u2019t lose mana early they probably win this game.",
           "verified": true
         },
         {
@@ -43896,7 +43896,7 @@
           "match_type": "Playoffs",
           "winner": "No Lands For You",
           "loser": "YCBI",
-          "commentary": "NLFY. Turn-6 N-Disk wipes the board clean of a possible YCBI “lock” with Meekstone + Castle. They sat on a Wall of Swords also, so nullifying any Sengir or Demonic Horde attacks. After the board wipe, it was smooth sailing via 2x Order and 1x Sengir.\n\nYCBI. Had some early momentum but couldn’t rebound after the board clear.",
+          "commentary": "NLFY. Turn-6 N-Disk wipes the board clean of a possible YCBI \u201clock\u201d with Meekstone + Castle. They sat on a Wall of Swords also, so nullifying any Sengir or Demonic Horde attacks. After the board wipe, it was smooth sailing via 2x Order and 1x Sengir.\n\nYCBI. Had some early momentum but couldn\u2019t rebound after the board clear.",
           "verified": true
         },
         {
@@ -43906,7 +43906,7 @@
           "match_type": "Regular Season",
           "winner": "Darwin's Doom",
           "loser": "YCBI",
-          "commentary": "DD. Awesome finale to see Y-Ants come out w/ Overrun to power two Elvish Rangers to victory. The Gaea's Touch was critical too in putting it all together. Very fun onslaught to end the game.\n\nYCBI. Were a little stuck on mana in this game, packed away with only three 1/1 Falcons for most of the game.",
+          "commentary": "DD. Awesome finale to see Y-Ants come out w/ Overrun to power two Elvish Rangers to victory. The Gaea's Touch was critical too in putting it all together. Very fun onslaught to end the game.\n\nYCBI. Were a little stuck on mana in this game, packed\u00a0away with only three 1/1 Falcons for most of the game.",
           "verified": true
         },
         {
@@ -43936,7 +43936,7 @@
           "match_type": "Playoffs",
           "winner": "Extinction",
           "loser": "Dark N Stormy",
-          "commentary": "X. Real gusty win, and the kind you need to pull out to go on a big run. They had a subtle lead mid-game and cleared the deck w/ a Cataclsym. They basically won the restart thanks to Survival of the Fittest and the speed it generated beside additional mana.\n\nDnS. Felt like a game they should’ve won. Didn’t quite slip thru their fingers but in my extremely fatigued state I am thinking I missed a play in there somewhere.",
+          "commentary": "X. Real gusty win, and the kind you need to pull out to go on a big run. They had a subtle lead mid-game and cleared the deck w/ a Cataclsym. They basically won the restart thanks to Survival of the Fittest and the speed it generated beside additional mana.\n\nDnS. Felt like a game they should\u2019ve won. Didn\u2019t quite slip thru their fingers but in my extremely fatigued state I am thinking I missed a play in there somewhere.",
           "verified": true
         },
         {
@@ -43946,7 +43946,7 @@
           "match_type": "Playoffs",
           "winner": "Bad Ass Fault",
           "loser": "Trick or Treat Freaks",
-          "commentary": "BAF. Holy Pulito!!!!! The Fault drop a Shocker -> Megrim -> Megrim for 30x damage in two turns. Gadzooks, we’ve got a series!\n\nTTFs. Ut oh! They had all their combo cards early but the Shocker forced a re-draw and, I mean goddamn, that was it!",
+          "commentary": "BAF. Holy Pulito!!!!! The Fault drop a Shocker -> Megrim -> Megrim for 30x damage in two turns. Gadzooks, we\u2019ve got a series!\n\nTTFs. Ut oh! They had all their combo cards early but the Shocker forced a re-draw and, I mean goddamn, that was it!",
           "verified": true
         },
         {
@@ -43986,7 +43986,7 @@
           "match_type": "Playoffs",
           "winner": "Darwin's Doom",
           "loser": "Sliver Lining",
-          "commentary": "Doom. Awesome game for DD — Sylvan Library enables mana ramp and an eventual Force of Nature to completely decimate the Sliver horde! They force a Game 5 finale in the process, extremely fun.\n\nSliver. Got humbled here, recognizing they could get outgunned against big beefy types if the game goes on long enough - and this one did!",
+          "commentary": "Doom. Awesome game for DD \u2014 Sylvan Library enables mana ramp and an eventual Force of Nature to completely decimate the Sliver horde! They force a Game 5 finale in the process, extremely fun.\n\nSliver. Got humbled here, recognizing they could get outgunned against big beefy types if the game goes on long enough - and this one did!",
           "verified": true
         },
         {
@@ -43996,7 +43996,7 @@
           "match_type": "Playoffs",
           "winner": "Swamp Things",
           "loser": "Team 10",
-          "commentary": "Things. The first team to advance into the Quarterfinals, the Swamp Things have done it! A 13/13 Nicol Bolas graced the ‘field thanks to 2x Volcanic Island and 2x Unstable Mutation, and Team 10 had no answers for the winged hell raiser! Let’s go Things!\n\nTeam 10. I wrote before the game, “This is a potential loser leaves town match” and, lo and behold, this may be the end of Team 10 for a while. They played 7x cards and couldn’t gain advantage.. a Winter Orb was countered early which could have changed things. Here’s to looking at you, 10!",
+          "commentary": "Things. The first team to advance into the Quarterfinals, the Swamp Things have done it! A 13/13 Nicol Bolas graced the \u2018field thanks to 2x Volcanic Island and 2x Unstable Mutation, and Team 10 had no answers for the winged hell raiser! Let\u2019s go Things!\n\nTeam 10. I wrote before the game, \u201cThis is a potential loser leaves town match\u201d and, lo and behold, this may be the end of Team 10 for a while. They played 7x cards and couldn\u2019t gain advantage.. a Winter Orb was countered early which could have changed things. Here\u2019s to looking at you, 10!",
           "verified": true
         },
         {
@@ -44016,7 +44016,7 @@
           "match_type": "Regular Season",
           "winner": "Sliver Lining",
           "loser": "No Lands For You",
-          "commentary": "Sliver. Lookout, the Slivers are out to defend their title! NLFY sat like ducks as the Slivers shrugged at Cyclopean Tomb’s wizardry en route to 7x beasts hitting the battlefield for a reckoning. T-5 saw 12x damage done thanks to a Heart Sliver, and then another 15x damage came a turn later. Three dual lands were drawn which is SICK.\n\nNLFY. Worked real hard (8-deployed) for little return. An early Dark Ritual+Demonic Tutor pulled out the Tomb, which was a strong move but it wasn’t enough to fend off the horde. In hindsight, this group should always look for the Nevinyrral’s Disk agains the Slivers. Only way to truly protect themselves from an onslaught.",
+          "commentary": "Sliver. Lookout, the Slivers are out to defend their title! NLFY sat like ducks as the Slivers shrugged at Cyclopean Tomb\u2019s wizardry en route to 7x beasts hitting the battlefield for a reckoning. T-5 saw 12x damage done thanks to a Heart Sliver, and then another 15x damage came a turn later. Three dual lands were drawn which is SICK.\n\nNLFY. Worked real hard (8-deployed) for little return. An early Dark Ritual+Demonic Tutor pulled out the Tomb, which was a strong move but it wasn\u2019t enough to fend off the horde. In hindsight, this group should always look for the Nevinyrral\u2019s Disk agains the Slivers. Only way to truly protect themselves from an onslaught.",
           "verified": true
         },
         {
@@ -44036,7 +44036,7 @@
           "match_type": "Regular Season",
           "winner": "The Attritionists",
           "loser": "Folk Music",
-          "commentary": "Attritionists. So fun!! The early Hidden Horror set the table nicely for offense, and then the next-turn Jinxed Idol-Sengir Aristocrat was beautiful. Grave Pact was drawn at one point and just pairs so nicely with Idol - those two could make music together! \n\nFolk Music. There’s something fun in here, really enjoyed seeing the revised Lord of Atlantis hit the ‘field. Gonna be fun to figure out how to play with them.",
+          "commentary": "Attritionists. So fun!! The early Hidden Horror set the table nicely for offense, and then the next-turn Jinxed Idol-Sengir Aristocrat was beautiful. Grave Pact was drawn at one point and just pairs so nicely with Idol - those two could make music together! \n\nFolk Music. There\u2019s something fun in here, really enjoyed seeing the revised Lord of Atlantis hit the \u2018field. Gonna be fun to figure out how to play with them.",
           "verified": true
         },
         {
@@ -44046,7 +44046,7 @@
           "match_type": "Playoffs",
           "winner": "Sliver Lining",
           "loser": "Darwin's Doom",
-          "commentary": "Living. Incredible win and true to form, they put 6x Slivers out there w/ 2x Queen + Coat of Arms in-hand ready to accelerate into “woefully uncomfortable” territory! W/ the W, they advance to the 2nd Round in a “loser goes home” matchup with Darwin. Great win! Their march to defend their title continues!\n\nDoom. Honestly a great effort by Doom. Fog plays a HUGE role, as does Ants. Otherwise, little slow and clunky!! Some good bones in here to work with but it’s not yet clear how it all comes together. That said, took 2 games off the defending champ and took the finale down to the wire.",
+          "commentary": "Living. Incredible win and true to form, they put 6x Slivers out there w/ 2x Queen + Coat of Arms in-hand ready to accelerate into \u201cwoefully uncomfortable\u201d territory! W/ the W, they advance to the 2nd Round in a \u201closer goes home\u201d matchup with Darwin. Great win! Their march to defend their title continues!\n\nDoom. Honestly a great effort by Doom. Fog plays a HUGE role, as does Ants. Otherwise, little slow and clunky!! Some good bones in here to work with but it\u2019s not yet clear how it all comes together. That said, took 2 games off the defending champ and took the finale down to the wire.",
           "verified": true
         },
         {
@@ -44056,7 +44056,7 @@
           "match_type": "Playoffs",
           "winner": "Trick or Treat Freaks",
           "loser": "Bad Ass Fault",
-          "commentary": "TTFs. When the combo hits, lookout! Scroll Rack turn-2 enables swift searching for the deadly 3-mana combo. A Transmute Artifact brought another ‘Nought out for good measure. What’s great about this team is the low-CMC of the roster, they could deploy quickly on only a few lands with cards in the 1-2 CMC range. Really hard to keep up when they draw so well from the start.\n\nBAF. Tough way to go out, getting pummeled due to mana inconsistencies. They drew 11x cards in this game, one was a Mountain, one artifact and the rest black cards. That’s fixable, if we’re up for it.",
+          "commentary": "TTFs. When the combo hits, lookout! Scroll Rack turn-2 enables swift searching for the deadly 3-mana combo. A Transmute Artifact brought another \u2018Nought out for good measure. What\u2019s great about this team is the low-CMC of the roster, they could deploy quickly on only a few lands with cards in the 1-2 CMC range. Really hard to keep up when they draw so well from the start.\n\nBAF. Tough way to go out, getting pummeled due to mana inconsistencies. They drew 11x cards in this game, one was a Mountain, one artifact and the rest black cards. That\u2019s fixable, if we\u2019re up for it.",
           "verified": true
         },
         {
@@ -44066,7 +44066,7 @@
           "match_type": "Playoffs",
           "winner": "Dark N Stormy",
           "loser": "Extinction",
-          "commentary": "DnS. Oh baby, it’s getting Dark n Stormy out there! The smoke-makers throw 7x DD cards into play for an absolute hell storm, closing the doors on ‘Ol X in only 5-turns. What a win, and a favorable matchup at that.\n\nX. Tough matchup, start out somewhat slow (?) and Drew several dead cards in-hand (2x Wrath, Cataclsym) against a creature-less opponent - only one in the league built this way! Tough luck, but a solid season for X as they finally find themselves in rallying around Survival of the Fittest. See ya, X!",
+          "commentary": "DnS. Oh baby, it\u2019s getting Dark n Stormy out there! The smoke-makers throw 7x DD cards into play for an absolute hell storm, closing the doors on \u2018Ol X in only 5-turns. What a win, and a favorable matchup at that.\n\nX. Tough matchup, start out somewhat slow (?) and Drew several dead cards in-hand (2x Wrath, Cataclsym) against a creature-less opponent - only one in the league built this way! Tough luck, but a solid season for X as they finally find themselves in rallying around Survival of the Fittest. See ya, X!",
           "verified": true
         },
         {
@@ -44076,7 +44076,7 @@
           "match_type": "Regular Season",
           "winner": "Bad Ass Fault",
           "loser": "Smashed Circus",
-          "commentary": "Fault. Slow out the gate w/ mana issues but 2x Megrim + Mind Twist was good for 12-damage to shut the Circus down. Not a single creature made it out for them which is pretty odd but this time it didn’t matter.\n\nCircus. Looked atrocious in this game, but didn’t have much of a chance to play anything (2-deploys) so this ends up being an “incomplete.”",
+          "commentary": "Fault. Slow out the gate w/ mana issues but 2x Megrim + Mind Twist was good for 12-damage to shut the Circus down. Not a single creature made it out for them which is pretty odd but this time it didn\u2019t matter.\n\nCircus. Looked atrocious in this game, but didn\u2019t have much of a chance to play anything (2-deploys) so this ends up being an \u201cincomplete.\u201d",
           "verified": true
         },
         {
@@ -44096,7 +44096,7 @@
           "match_type": "Regular Season",
           "winner": "Team 10",
           "loser": "Clockwork",
-          "commentary": "Team 10. Welcome back, Team 10!!! They’re down 14-1 on the 10th turn, summon ‘Ol Yawggy and immediately storm back to take the victory! Yawggy, Mishra’s Factory and Mirri, Cat Warrior go on to do 18-damage on the next two turns. HELL of a comeback. \n\nFacts. Well they left the W right on the table. A TON of mana (Sol Ring, Lotus Petal, double-Urzatron and more), but lost Colossus of Sardia and 2x Su-Chi. Probably misplayed the Sardia.",
+          "commentary": "Team 10. Welcome back, Team 10!!! They\u2019re down 14-1 on the 10th turn, summon \u2018Ol Yawggy and immediately storm back to take the victory! Yawggy, Mishra\u2019s Factory and Mirri, Cat Warrior go on to do 18-damage on the next two turns. HELL of a comeback. \n\nFacts. Well they left the W right on the table. A TON of mana (Sol Ring, Lotus Petal, double-Urzatron and more), but lost Colossus of Sardia and 2x Su-Chi. Probably misplayed the Sardia.",
           "verified": true
         },
         {
@@ -44146,7 +44146,7 @@
           "match_type": "Playoffs",
           "winner": "Folk Music",
           "loser": "Smashed Circus",
-          "commentary": "Music. Tidal Warrior goddamn! Barely knew this card was in the deck and, yet, it enables 2x Vodalian Knight and Seasinger to steal Serra Angel for the victory. Sweet win.\n\nPotatoes. It’s official, the land destruction / land tax strategy is completely gone after this playoffs. Enough already.",
+          "commentary": "Music. Tidal Warrior goddamn! Barely knew this card was in the deck and, yet, it enables 2x Vodalian Knight and Seasinger to steal Serra Angel for the victory. Sweet win.\n\nPotatoes. It\u2019s official, the land destruction / land tax strategy is completely gone after this playoffs. Enough already.",
           "verified": true
         },
         {
@@ -44166,7 +44166,7 @@
           "match_type": "Playoffs",
           "winner": "Trick or Treat Freaks",
           "loser": "Swamp Things",
-          "commentary": "TTFs. Wild finish here, facing a hefty opposing graveyard, they draw'n'play Scroll Rack on turn-8, then Transmute it for Mask into 2x Nought. A turn prior they countered a Living Death. \n\nThings. Were one turn from winning this game, opting to play a second Hidden Horror instead of keeping mana open for Counterspell defense - oh well! The Counterspell could've been used on the Transmute and potentially saved the game. Right there!",
+          "commentary": "TTFs. Wild finish here, facing a hefty opposing graveyard, they draw'n'play Scroll Rack on turn-8, then Transmute it for Mask into 2x Nought. A turn prior they countered a Living Death.\u00a0\n\nThings. Were one turn from winning this game, opting to play a second Hidden Horror instead of keeping mana open for Counterspell defense - oh well! The Counterspell could've been used on the Transmute and potentially saved the game. Right there!",
           "verified": true
         },
         {
@@ -44186,7 +44186,7 @@
           "match_type": "Playoffs",
           "winner": "Sliver Lining",
           "loser": "Over Grenade",
-          "commentary": "Slivers. This team man.. They deal 35x on the final turn to close out the series in a “sweep, sweep, sweep”!! Really marched through Hand Grenade unopposed for the most part, far too fast and.. compounding? They didn’t face opposing swarm and they didn’t have to deal with resources depletion. Easy ride in Round 2.\n\nHand Grenade. Howling Mine really has to be a one-sided benefit - they powered Sliver ramp and still couldn’t get their 2x U-Dreams out into play. Problem is, that unraveling strategy is real slow. They’re essentially pushing for a lock without much defense. Hmmm….",
+          "commentary": "Slivers. This team man.. They deal 35x on the final turn to close out the series in a \u201csweep, sweep, sweep\u201d!! Really marched through Hand Grenade unopposed for the most part, far too fast and.. compounding? They didn\u2019t face opposing swarm and they didn\u2019t have to deal with resources depletion. Easy ride in Round 2.\n\nHand Grenade. Howling Mine really has to be a one-sided benefit - they powered Sliver ramp and still couldn\u2019t get their 2x U-Dreams out into play. Problem is, that unraveling strategy is real slow. They\u2019re essentially pushing for a lock without much defense. Hmmm\u2026.",
           "verified": true
         },
         {
@@ -44196,7 +44196,7 @@
           "match_type": "Playoffs",
           "winner": "No Lands For You",
           "loser": "Dark N Stormy",
-          "commentary": "NLFY. Textbook — destroy 5x lands en route to an easy victory, take a 3-2 series lead.\n\nDNS. What can we say, it was “no lands for them”",
+          "commentary": "NLFY. Textbook \u2014 destroy 5x lands en route to an easy victory, take a 3-2 series lead.\n\nDNS. What can we say, it was \u201cno lands for them\u201d",
           "verified": true
         },
         {
@@ -44206,7 +44206,7 @@
           "match_type": "Regular Season",
           "winner": "Mean Machine",
           "loser": "No Lands For You",
-          "commentary": "Machine. It’s a win streak!! 2x early Goblin Grenade were pretty devastating then later on 2x Bolt and the Balloon Brigade pretty much did the trick. Fun squad so far. Wonder how they could be amplified with artifacts. A Coat of Arms or two would be nice.\n\nNLFY. A t-1 Black Vise, a mid-game Vampire, then 2x Black Knight and it still wasn’t enough. Honestly I’m still scratching my head.. were they too slow? Lacking defense? What? I’m honestly not sure.",
+          "commentary": "Machine. It\u2019s a win streak!! 2x early Goblin Grenade were pretty devastating then later on 2x Bolt and the Balloon Brigade pretty much did the trick. Fun squad so far. Wonder how they could be amplified with artifacts. A Coat of Arms or two would be nice.\n\nNLFY. A t-1 Black Vise, a mid-game Vampire, then 2x Black Knight and it still wasn\u2019t enough. Honestly I\u2019m still scratching my head.. were they too slow? Lacking defense? What? I\u2019m honestly not sure.",
           "verified": true
         },
         {
@@ -44216,7 +44216,7 @@
           "match_type": "Regular Season",
           "winner": "Sliver Lining",
           "loser": "Over Grenade",
-          "commentary": "Sliver. Boy did they draw well in this game.. 2x Disenchant + 1x Sword to Plowshare to handle 3x Noughts? Wow, fortuitous I’d say!! The multiple dual lands out at one time is just so sexy 😆 \n\nOverdrawn. “They need more creatures” was what i left thinking this game. They can’t just sit there and wait. Maybe some walls do the trick?",
+          "commentary": "Sliver. Boy did they draw well in this game.. 2x Disenchant + 1x Sword to Plowshare to handle 3x Noughts? Wow, fortuitous I\u2019d say!! The multiple dual lands out at one time is just so sexy \ud83d\ude06 \n\nOverdrawn. \u201cThey need more creatures\u201d was what i left thinking this game. They can\u2019t just sit there and wait. Maybe some walls do the trick?",
           "verified": true
         },
         {
@@ -44226,7 +44226,7 @@
           "match_type": "Regular Season",
           "winner": "Darwin's Doom",
           "loser": "Extinction",
-          "commentary": "Doom. Make it two in a row! Doom get the W thanks to Sylvan Library, picking and choosing their way to mana and Y-Ants to put the pressure on. A late Hurricane sealed the win. Can’t tell if they won this won or Extinction lost it?\n\nExtinction. Not much spice in this one. Had 2x Birds of Paradise and tutor’ed their way to a Djinn but they were pretty lackluster on offense. Come to think of it.. neither team really threw much firepower into the ring this time which is strange considering they’re both “creature” outfits.",
+          "commentary": "Doom. Make it two in a row! Doom get the W thanks to Sylvan Library, picking and choosing their way to mana and Y-Ants to put the pressure on. A late Hurricane sealed the win. Can\u2019t tell if they won this won or Extinction lost it?\n\nExtinction. Not much spice in this one. Had 2x Birds of Paradise and tutor\u2019ed their way to a Djinn but they were pretty lackluster on offense. Come to think of it.. neither team really threw much firepower into the ring this time which is strange considering they\u2019re both \u201ccreature\u201d outfits.",
           "verified": true
         },
         {
@@ -44266,7 +44266,7 @@
           "match_type": "Regular Season",
           "winner": "Bad Ass Fault",
           "loser": "Team 10",
-          "commentary": "Fault. Bottomless Pit!!! Wow what an addition - saved them from a Black Vise and paired so wonderfully with The Rack and Megrim. Just a terrifying trio and makes me wonder if there should be even more H-Kill in this deck vs maybe M-Kill. For the first time in a while, Fault looked great.\n\nT-10. The Ankh-Vise-Orb combo is deadly but they slowed down in this game partly because of mana shortage. There was also a big miss w/ Yawggy getting discarded right after mana producers but otherwise they were ineffective on offense early on and then got caught in the Bottomless Pit buzzsaw. Team might want Hyppy’s too?",
+          "commentary": "Fault. Bottomless Pit!!! Wow what an addition - saved them from a Black Vise and paired so wonderfully with The Rack and Megrim. Just a terrifying trio and makes me wonder if there should be even more H-Kill in this deck vs maybe M-Kill. For the first time in a while, Fault looked great.\n\nT-10. The Ankh-Vise-Orb combo is deadly but they slowed down in this game partly because of mana shortage. There was also a big miss w/ Yawggy getting discarded right after mana producers but otherwise they were ineffective on offense early on and then got caught in the Bottomless Pit buzzsaw. Team might want Hyppy\u2019s too?",
           "verified": true
         },
         {
@@ -44296,7 +44296,7 @@
           "match_type": "Playoffs",
           "winner": "No Lands For You",
           "loser": "Sliver Lining",
-          "commentary": "NLFY. This is textbook stuff from NLFY, sending 2x Vise + 3x land destruction cards to pulverize Slivers. Game1, all blacks.\n\nSlivers. This is the “worst case” outcome for the Slivers, rendered useless by NLFYs imposing defenses.",
+          "commentary": "NLFY. This is textbook stuff from NLFY, sending 2x Vise + 3x land destruction cards to pulverize Slivers. Game1, all blacks.\n\nSlivers. This is the \u201cworst case\u201d outcome for the Slivers, rendered useless by NLFYs imposing defenses.",
           "verified": true
         },
         {
@@ -44316,7 +44316,7 @@
           "match_type": "Playoffs",
           "winner": "Folk Music",
           "loser": "Trick or Treat Freaks",
-          "commentary": "Music. Nice win to stay in this thing. Vodalian Mage prevented a Control Magic that would’ve changed the game - sitting on 2x Dandan.\n\nTTFs. Probably win this game without Vodalian Mage.",
+          "commentary": "Music. Nice win to stay in this thing. Vodalian Mage prevented a Control Magic that would\u2019ve changed the game - sitting on 2x Dandan.\n\nTTFs. Probably win this game without Vodalian Mage.",
           "verified": true
         },
         {
@@ -44336,7 +44336,7 @@
           "match_type": "Playoffs",
           "winner": "No Lands For You",
           "loser": "Sliver Lining",
-          "commentary": "NLFY. Man, what a game by the O-10 All-Blacks! Turn-1 Dark Ritual for Sinkhole + Black Vise gave them the early advantage. By turn-6, Slivers were already in a 20-5 hole! More defense came later on with 1x Icequake + 2x Terror and the threat of a Nevinyrral’s Disk. Huge, methodical win to advance to the finals!\n\nSlivers. Tough way to go out, they were completely handled in this game, locked out with minimal lands for the first chunk of the game.",
+          "commentary": "NLFY. Man, what a game by the O-10 All-Blacks! Turn-1 Dark Ritual for Sinkhole + Black Vise gave them the early advantage. By turn-6, Slivers were already in a 20-5 hole! More defense came later on with 1x Icequake + 2x Terror and the threat of a Nevinyrral\u2019s Disk. Huge, methodical win to advance to the finals!\n\nSlivers. Tough way to go out, they were completely handled in this game, locked out with minimal lands for the first chunk of the game.",
           "verified": true
         },
         {
@@ -44356,7 +44356,7 @@
           "match_type": "Playoffs",
           "winner": "Trick or Treat Freaks",
           "loser": "Folk Music",
-          "commentary": "TTFs. Oh baby! What a series, win the first two, then drop 3-straight only to tie it up and win Game 7 in historic fashion on a mere 4-turns. They drew real well from the start with a Nought + Copy Artifact + Mask - game winner in the opening hand, drew the second land on turn-2 and the path to victory was cleared. Hell of a way to stamp their first season in The League, heading to the ‘ship.\n\nFolk Music. Valiant effort and no shame going down to arguably the most ferocious combination in the league. They put their stamp on things in what is only their first season as a club. The Music were rhythmic, deafening and mesmerizing at once it seemed. Well done, Folks.",
+          "commentary": "TTFs. Oh baby! What a series, win the first two, then drop 3-straight only to tie it up and win Game 7 in historic fashion on a mere 4-turns. They drew real well from the start with a Nought + Copy Artifact + Mask - game winner in the opening hand, drew the second land on turn-2 and the path to victory was cleared. Hell of a way to stamp their first season in The League, heading to the \u2018ship.\n\nFolk Music. Valiant effort and no shame going down to arguably the most ferocious combination in the league. They put their stamp on things in what is only their first season as a club. The Music were rhythmic, deafening and mesmerizing at once it seemed. Well done, Folks.",
           "verified": true
         },
         {
@@ -44376,7 +44376,7 @@
           "match_type": "Regular Season",
           "winner": "Sliver Lining",
           "loser": "Dark N Stormy",
-          "commentary": "Sliver. WOW by the skin of their mangled teeth they win this one. It was a Winged Sliver that took any C-Defense off the table for DnS - and they were sitting on ample D; Balduvian Horde, Two-Headed G + 2x Wall of Earth. The box score makes this appear lopsided but in reality a last-turn Coat of Arms totally distorted things w/ a whopping 23-damage to claim the W.\n\nDnS. Possibly made a critical mistake using two Bolt on C-Defense instead of DD. They were stuck w/ only 3x mana yet the 3x Howling Mine supplied them w/ ample firepower to make hay. Tough L.",
+          "commentary": "Sliver. WOW by the skin of their mangled teeth they win this one. It was a Winged Sliver that took any C-Defense off the table for DnS - and they were sitting on ample D; Balduvian Horde, Two-Headed G + 2x Wall of Earth. The box score makes this appear lopsided but in reality a last-turn Coat of Arms totally distorted things w/ a whopping 23-damage to claim\u00a0the W.\n\nDnS. Possibly made a critical mistake using two Bolt on C-Defense instead of DD. They were stuck w/ only 3x mana yet the 3x Howling Mine supplied them w/ ample firepower to make hay. Tough L.",
           "verified": true
         },
         {
@@ -44386,7 +44386,7 @@
           "match_type": "Regular Season",
           "winner": "Trick or Treat Freaks",
           "loser": "Folk Music",
-          "commentary": "Freaks. Commanding victory w/ a turn-2 Serendib Efreet with a Clone to follow and finally a Control Magic-Dardan. Game over, everyone! Looked solid.\n\nMusic. No mana stunted any activity whatsoever. They’re calling this a mulligan victory for their opponents in blue.",
+          "commentary": "Freaks. Commanding victory w/ a turn-2 Serendib Efreet with a Clone to follow and finally a Control Magic-Dardan. Game over, everyone! Looked solid.\n\nMusic. No mana stunted any activity whatsoever. They\u2019re calling this a mulligan victory for their opponents in blue.",
           "verified": true
         },
         {
@@ -44406,7 +44406,7 @@
           "match_type": "Regular Season",
           "winner": "Team 10",
           "loser": "The Attritionists",
-          "commentary": "Team 10. Really interesting game, but they held in there and some really useful cards to win the game. Unholy Strength turned a Wormwood Treefolk into a devastating 6/5 force. Winter Orb also held the opponent back, especially the Hecatomb.\n\nAnts Marching. Had some early momentum with Hidden Horror and a Hecatomb, but were stunted by the Winter Orb and never really recovered. Colten, “Some really bad players, and kind of didn’t deal any damage to Team 10 which made Team 10 win the game.”",
+          "commentary": "Team 10. Really interesting game, but they held in there and some really useful cards to win the game. Unholy Strength turned a Wormwood Treefolk into a devastating 6/5 force. Winter Orb also held the opponent back, especially the Hecatomb.\n\nAnts Marching. Had some early momentum with Hidden Horror and a Hecatomb, but were stunted by the Winter Orb and never really recovered. Colten, \u201cSome really bad players, and kind of didn\u2019t deal any damage to Team 10 which made Team 10 win the game.\u201d",
           "verified": true
         },
         {
@@ -44426,7 +44426,7 @@
           "match_type": "Playoffs",
           "winner": "No Lands For You",
           "loser": "Trick or Treat Freaks",
-          "commentary": "NLFY. Destroy 3x lands en route to easy victory. The ramp of early destruction -> 4x Knight was smooth albeit uncontested. \n\nTTFs. Sat on the winning combo w/ Mask + Copy Artifact + Transmute Artifact but couldn’t get there fast enough.",
+          "commentary": "NLFY. Destroy 3x lands en route to easy victory. The ramp of early destruction -> 4x Knight was smooth albeit uncontested. \n\nTTFs. Sat on the winning combo w/ Mask + Copy Artifact + Transmute Artifact but couldn\u2019t get there fast enough.",
           "verified": true
         },
         {
@@ -44456,7 +44456,7 @@
           "match_type": "Regular Season",
           "winner": "Sliver Lining",
           "loser": "Mean Machine",
-          "commentary": "Slivers. Throwing 4x dual-lands and a City of Brass meant they could summon anything in their bag, and they did! Two Sliver Queen waltzed onto the battlefield unobstructed after 2x Metallic, a Muscle and a Crystalline did some early damage to win the battle of the unbeatens; #1 & #2 in Week 3. \n\nMachine. It’s possible the Machine could’ve mounted an offensive w/o the Queen. There’s still work to do with this squad but the potential is there, it feels like!",
+          "commentary": "Slivers. Throwing 4x dual-lands and a City of Brass meant they could summon anything in their bag, and they did! Two Sliver Queen waltzed onto the battlefield unobstructed after 2x Metallic, a Muscle and a Crystalline did some early damage to win the battle of the unbeatens; #1 & #2 in Week 3. \n\nMachine. It\u2019s possible the Machine could\u2019ve mounted an offensive w/o the Queen. There\u2019s still work to do with this squad but the potential is there, it feels like!",
           "verified": true
         },
         {
@@ -44466,7 +44466,7 @@
           "match_type": "Regular Season",
           "winner": "No Lands For You",
           "loser": "Extinction",
-          "commentary": "NLFY. Take the W thanks to 2x Dark Ritual and 3x M-Kill cards. One of the Dark Ritual put a 7/7 Entropic Specter on the battlefield and he went on the offensive completely unguarded. NLFY looked real good in this one. Colten comments; “No Lands killed X because X only played 2 cards and NLFY 3x lands yet still won it with Entropic Specter.\n\nX. Had no juice in this one after they lost their initial swath of lands - they just couldn’t play anything and sat idly by as a result. Colten comments; “X had a tough game, did not hang in there at all, had no juice just like Dad said, but they gave it all they got.” Tommy comments; “X couldn’t play anything, ran out of cards to play with no lands and lost by 15 pts. They tried their best to play the game.. they tried but they just couldn’t do it.”",
+          "commentary": "NLFY. Take the W thanks to 2x Dark Ritual and 3x M-Kill cards. One of the Dark Ritual put a 7/7 Entropic Specter on the battlefield and he went on the offensive completely unguarded. NLFY looked real good in this one. Colten comments; \u201cNo Lands killed X because X only played 2 cards and NLFY 3x lands yet still won it with Entropic Specter.\n\nX. Had no juice in this one after they lost their initial swath of lands - they just couldn\u2019t play anything and sat idly by as a result. Colten comments; \u201cX had a tough game, did not hang in there at all, had no juice just like Dad said, but they gave it all they got.\u201d Tommy comments; \u201cX couldn\u2019t play anything, ran out of cards to play with no lands and lost by 15 pts. They tried their best to play the game.. they tried but they just couldn\u2019t do it.\u201d",
           "verified": true
         },
         {
@@ -44476,7 +44476,7 @@
           "match_type": "Regular Season",
           "winner": "Over Grenade",
           "loser": "YCBI",
-          "commentary": "Overdrawn. It’s a wild team.. they sat somewhat idly waiting for the right combination of cards, used some counters to protect the Mask-Nought combo and it was game over. It’d be interesting if there was a benefit to cycling cards like this somehow. Maybe they need Wisp’s in there too? Hard to say.\n\nYCBI. Pecked away to move within striking distance and were close to putting an Archangel into play as well. They’re solid.",
+          "commentary": "Overdrawn. It\u2019s a wild team.. they sat somewhat idly waiting for the right combination of cards, used some counters to protect the Mask-Nought combo and it was game over. It\u2019d be interesting if there was a benefit to cycling cards like this somehow. Maybe they need Wisp\u2019s in there too? Hard to say.\n\nYCBI. Pecked away to move within striking distance and were close to putting an Archangel into play as well. They\u2019re solid.",
           "verified": true
         },
         {
@@ -44496,7 +44496,7 @@
           "match_type": "Regular Season",
           "winner": "Folk Music",
           "loser": "Clockwork",
-          "commentary": "Folk. Wow, they look good in this game! Dandan + Tidal Warrior is a great combo, then the Lord of Atlantis w/ the C-Pump… yeah baby! Energy Flux is a death knell for Facts Machine - like, not many cards out there in the league that are as formidable. Sweet victory and naked lap here.\n\nFax. Looked a little slow and clunky but would’ve been a slightly different story if they didn’t have 4x mana locked up to Energy Flux each turn. Not dead yet I don’t think.",
+          "commentary": "Folk. Wow, they look good in this game! Dandan + Tidal Warrior is a great combo, then the Lord of Atlantis w/ the C-Pump\u2026 yeah baby! Energy Flux is a death knell for Facts Machine - like, not many cards out there in the league that are as formidable. Sweet victory and naked lap here.\n\nFax. Looked a little slow and clunky but would\u2019ve been a slightly different story if they didn\u2019t have 4x mana locked up to Energy Flux each turn. Not dead yet I don\u2019t think.",
           "verified": true
         },
         {
@@ -44536,7 +44536,7 @@
           "match_type": "Playoffs",
           "winner": "Green Boss",
           "loser": "Trick or Treat Freaks",
-          "commentary": "Green Boss. Good golly miss mossy molly! Only 3x mana, but a bunch’a elves vault a 20/20 Primalcrux onto the field alongside a 7’6 Troll, Living Hive and Cavalier of Thorns in only 4-turns. Yikes.\n\nTTFs. Strong initial draw w/o any path to the Mask.",
+          "commentary": "Green Boss. Good golly miss mossy molly! Only 3x mana, but a bunch\u2019a elves vault a 20/20 Primalcrux onto the field alongside a 7\u20196 Troll, Living Hive and Cavalier of Thorns in only 4-turns. Yikes.\n\nTTFs. Strong initial draw w/o any path to the Mask.",
           "verified": true
         },
         {
@@ -44556,7 +44556,7 @@
           "match_type": "Playoffs",
           "winner": "Black Boss",
           "loser": "Trick or Treat Freaks",
-          "commentary": "Black Boss. A couple’a bone-men deal the lion’s share of the damage as Black Boss moves through TTF like a warm knife through butter.\n\nTTFs. Too much mana despite sitting on Mask + Transmute Artifact. There was nothing else to summon.",
+          "commentary": "Black Boss. A couple\u2019a bone-men deal the lion\u2019s share of the damage as Black Boss moves through TTF like a warm knife through butter.\n\nTTFs. Too much mana despite sitting on Mask + Transmute Artifact. There was nothing else to summon.",
           "verified": true
         },
         {
@@ -44566,7 +44566,7 @@
           "match_type": "Regular Season",
           "winner": "Mean Machine",
           "loser": "Extinction",
-          "commentary": "Machine. Easy win due to land trouble at X HQ, but instructive on how many MM games may go.. Goblin Recruiter pulls out a host of Goblin King + Raging Goblin. If that’s the case, what else would you want around them to preserve the move? This is precisely how they won this game though, again, it was largely uncontested. \n\nX. Struggle with mana deployment though sat on three board clearers that would’ve been essential to defending the Goblin horde. Next time!",
+          "commentary": "Machine. Easy win due to land trouble at X HQ, but instructive on how many MM games may go.. Goblin Recruiter pulls out a host of Goblin King + Raging Goblin. If that\u2019s the case, what else would you want around them to preserve the move? This is precisely how they won this game though, again, it was largely uncontested. \n\nX. Struggle with mana deployment though sat on three board clearers that would\u2019ve been essential to defending the Goblin horde. Next time!",
           "verified": true
         },
         {
@@ -44586,7 +44586,7 @@
           "match_type": "Regular Season",
           "winner": "No Lands For You",
           "loser": "Dark N Stormy",
-          "commentary": "NLFY. Solid win, exercised total control over DnS mana resources with a combination of 3x M-Kill cards, 1x Domenic Hordes and 1x Cyclopean Tomb. Once all DnS defenses had been dispatched via 2x recently added Terror - the Hordes could lob 5x damage grenades at will while Black Vise chipped away. Also worth underlining the 16x cards deployed in this one - damn! Pretty solid.\n\nDnS. Drew a ton of mana but couldn't make use of it early on with an odd start of cards; Giant, Fork, Pyroclasm, Manabarbs, Pyrokinesis. They just didn't draw enough L-Kill in this game.",
+          "commentary": "NLFY. Solid win, exercised total control over DnS mana resources with a combination of 3x M-Kill cards, 1x Domenic Hordes and 1x Cyclopean Tomb. Once all DnS defenses had been dispatched via 2x recently added Terror - the Hordes could lob 5x damage grenades at will while Black Vise chipped away. Also worth underlining the 16x cards deployed in this one - damn! Pretty solid.\n\nDnS. Drew a ton of mana but couldn't make use of it early on with an odd start of cards; Giant, Fork, Pyroclasm, Manabarbs, Pyrokinesis. They just didn't draw enough\u00a0L-Kill in this game.",
           "verified": true
         },
         {
@@ -44596,7 +44596,7 @@
           "match_type": "Regular Season",
           "winner": "Darwin's Doom",
           "loser": "Over Grenade",
-          "commentary": "Doom. AWESOME win by the Doom! They came out the gate real strong in a way very unique to their team; Turn-2 saw 8x mana on the board thanks to 3x Forest, 1x Gaea's Touch, Sol Ring, Llanowar Elves. Real cool - used it to put a Ants on the board who proceeded to do 15x damage. One game-winning Hurricane was countered, but a fortuitous draw via Teferi's Puzzle Box brought another which was huge considering they were staring down the barrel of a 10/4 Tresserhorner!\n\nOverdrawn. Looked way better than in the past; Lord of Tresserhorn is a wonderful fit in many ways, Counterspell made a huge difference and Transmute Artifact would've brought out a 'Nought on the next turn. Synergies running wild, very fun.",
+          "commentary": "Doom. AWESOME win by the Doom! They came out the gate real strong in a way very unique to their team; Turn-2 saw 8x mana on the board thanks to 3x Forest, 1x Gaea's Touch, Sol Ring, Llanowar Elves. Real cool - used it to put a Ants on the board who proceeded to do 15x damage. One game-winning Hurricane was countered, but a fortuitous\u00a0draw via Teferi's Puzzle Box brought another which was huge considering they were staring down the barrel of a 10/4 Tresserhorner!\n\nOverdrawn. Looked way better than in the past; Lord of Tresserhorn is a wonderful fit in many ways, Counterspell made a huge difference and Transmute Artifact would've brought out a 'Nought on the next turn. Synergies running wild, very fun.",
           "verified": true
         },
         {
@@ -44626,7 +44626,7 @@
           "match_type": "Regular Season",
           "winner": "Trick or Treat Freaks",
           "loser": "Smashed Circus",
-          "commentary": "Freaks. Skate by in this one thanks to an incompetent opponent. They're not quite right yet (Maze of Ith?) but there's good bones in here to work with - not to mention they're the only remaining undefeated team!!! \n\nCircus. Think we need to start over here.. maybe Smashed Potatoes comes back? This squad ain't it.",
+          "commentary": "Freaks. Skate by in this one thanks to an incompetent opponent. They're not quite right yet (Maze of Ith?) but there's good bones in here to work with - not to mention they're the only remaining undefeated team!!!\u00a0\n\nCircus. Think we need to start over here.. maybe Smashed Potatoes comes back? This squad ain't it.",
           "verified": true
         },
         {
@@ -44656,7 +44656,7 @@
           "match_type": "Regular Season",
           "winner": "Sliver Lining",
           "loser": "Darwin's Doom",
-          "commentary": "Sliver. Turn-1 Worldly Tutor brought in a Muscle Sliver to give an immediate edge / speed to the 2x Winged Sliver in hand. The Gemstone Mine, however, is what unlocked the flying foes! A late Coat of Arms unleashed hell with a 24x damage turn for a demonstrative victory.\n\nDoom. Looked a bit slow here with a 1x land draw in the initial hand. Tough luck, though they were close to unleashing the Sylvan Library - Call of the Wild combo.",
+          "commentary": "Sliver. Turn-1 Worldly Tutor brought in a Muscle Sliver to give an immediate edge / speed to the 2x Winged Sliver in hand. The Gemstone Mine, however, is what unlocked the flying foes! A late Coat of Arms unleashed\u00a0hell with a 24x damage turn for a demonstrative victory.\n\nDoom. Looked a bit slow here with a 1x land draw in the initial hand. Tough luck, though they were close to unleashing the Sylvan Library - Call of the Wild combo.",
           "verified": true
         },
         {
@@ -44666,7 +44666,7 @@
           "match_type": "Regular Season",
           "winner": "No Lands For You",
           "loser": "Over Grenade",
-          "commentary": "NLFY. Really balanced victory killing 2x lands and discarding 4x cards w/ Hymn to Tourach. They sat on 2x Black Vise and then finished the job with 2x Sengir Vampire. Really nicely done.\n\nOverdrawn. This game had me thinking they’re more of a fun wild card / wrench team than a consistent threat maybe. If they get the right combination of cards it’s over. This game wasn’t it but it was still fun.",
+          "commentary": "NLFY. Really balanced victory killing 2x lands and discarding 4x cards w/ Hymn to Tourach. They sat on 2x Black Vise and then finished the job with 2x Sengir Vampire. Really nicely done.\n\nOverdrawn. This game had me thinking they\u2019re more of a fun wild card / wrench team than a consistent threat maybe. If they get the right combination of cards it\u2019s over. This game wasn\u2019t it but it was still fun.",
           "verified": true
         },
         {
@@ -44676,7 +44676,7 @@
           "match_type": "Regular Season",
           "winner": "Swamp Things",
           "loser": "Folk Music",
-          "commentary": "Things. “Favorite team.. they had a very great pile of cards to draw from and Folk Music couldn’t hold onto the lead because of certain cards like Thundermare and Unstable Mutation. \n\nMusic. “Couldn’t hold onto the lead, had some tough card draws because they kept drawing lands - not helpful!”",
+          "commentary": "Things. \u201cFavorite team.. they had a very great pile of cards to draw from and Folk Music couldn\u2019t hold onto the lead because of certain cards like Thundermare and Unstable Mutation. \n\nMusic. \u201cCouldn\u2019t hold onto the lead, had some tough card draws because they kept drawing lands - not helpful!\u201d",
           "verified": true
         },
         {
@@ -44686,7 +44686,7 @@
           "match_type": "Regular Season",
           "winner": "Team 10",
           "loser": "Smashed Circus",
-          "commentary": "Team 10. Nail biter! They were left for dead, having emptied the entire bag - Winter Orb, 2x Ankh of Mishra, Black Vise, 2x Felwar Stone, 2x Birds - to lock The Circus and put some pressure on, but it wasn’t until ‘Ol Yawggy hit the battlefield did the tables turn! Very fun game, really didn’t see them taking this one. The collection of artifacts truly locked out the opponent and bought them time to find Yawggy and let him do his thing. Mirri was also critical chipping away with Forestwalk.\n\nThe Circus. This is the kind of game a good team puts away. They used precious resources on cards like Granite Gargoyles and Lava Hounds and just didn’t get much in return. Fallow Wurm on t-3 was pretty critical and gave them a huge lead. Needed a mid-game strategy that just wasn’t there.",
+          "commentary": "Team 10. Nail biter! They were left for dead, having emptied the entire bag - Winter Orb, 2x Ankh of Mishra, Black Vise, 2x Felwar Stone, 2x Birds - to lock The Circus and put some pressure on, but it wasn\u2019t until \u2018Ol Yawggy hit the battlefield did the tables turn! Very fun game, really didn\u2019t see them taking this one. The collection of artifacts truly locked out the opponent and bought them time to find Yawggy and let him do his thing. Mirri was also critical chipping away with Forestwalk.\n\nThe Circus. This is the kind of game a good team puts away. They used precious resources on cards like Granite Gargoyles and Lava Hounds and just didn\u2019t get much in return. Fallow Wurm on t-3 was pretty critical and gave them a huge lead. Needed a mid-game strategy that just wasn\u2019t there.",
           "verified": true
         },
         {
@@ -44696,7 +44696,7 @@
           "match_type": "Regular Season",
           "winner": "Clockwork",
           "loser": "The Attritionists",
-          "commentary": "Machine. There ya go, Facts!! Urzatron + Mana Vault brought the rain. A Nevinyrral’s Disk cleared some future creature sacrifices for Ants, paving the way for a comeback victory. Huge win for them to snap a 5-game losing streak. Xanthic Statue is a nice foil for Grave Pact.\n\nAnts. Still looked really good. Haven’t quite figured out how to leverage Grave Pact but it’s clear the synergies are there and the roster works real well. Really enjoying seeing these cards in action.",
+          "commentary": "Machine. There ya go, Facts!! Urzatron + Mana Vault brought the rain. A Nevinyrral\u2019s Disk cleared some future creature sacrifices for Ants, paving the way for a comeback victory. Huge win for them to snap a 5-game losing streak. Xanthic Statue is a nice foil for Grave Pact.\n\nAnts. Still looked really good. Haven\u2019t quite figured out how to leverage Grave Pact but it\u2019s clear the synergies are there and the roster works real well. Really enjoying seeing these cards in action.",
           "verified": true
         },
         {
@@ -44706,7 +44706,7 @@
           "match_type": "Regular Season",
           "winner": "Bad Ass Fault",
           "loser": "Trick or Treat Freaks",
-          "commentary": "Fault. Game of the Year! This was back-and-forth battle of tactics with the Fault’s Bottomless Pit-The Rack combo proving delightfully disastrous for the Freaks. Wow, what a fabulous secondary win condition for this squad. \n\nFreaks. The inclusion of Serendib Djinn was as advertised - great and ruining at the same time! They were MIGHTY close to ripping off a 6th W in a row, but it was not to be. One thing to mention - the Field of Dreams-Grindstone combo was awesome, discarding a Megrim and another Bottomless Pit to give them more time to pull it out.",
+          "commentary": "Fault. Game of the Year! This was back-and-forth battle of tactics with the Fault\u2019s Bottomless Pit-The Rack combo proving delightfully disastrous for the Freaks. Wow, what a fabulous secondary win condition for this squad. \n\nFreaks. The inclusion of Serendib Djinn was as advertised - great and ruining at the same time! They were MIGHTY close to ripping off a 6th W in a row, but it was not to be. One thing to mention - the Field of Dreams-Grindstone combo was awesome, discarding a Megrim and another Bottomless Pit to give them more time to pull it out.",
           "verified": true
         },
         {
@@ -44726,7 +44726,7 @@
           "match_type": "Regular Season",
           "winner": "Over Grenade",
           "loser": "Dark N Stormy",
-          "commentary": "Overdrawn. Hell yeah! Another GOY candidate.. the hopeless combo-mantic finally pulled one off with 1x life left in the tank! On turn-7, they countered a games winning Pyrokinesis, took 2x damage then fired off a Transmute Artifact for 3x more damage, bringing their life total down to 1, for the Mask-Nought combo. Game over!\n\nDnS. Riiiiiiight there! Damn! 5x DD spells, a Ball Lightning and an effective Manabarbs nearly did it. Good fight, DnS.",
+          "commentary": "Overdrawn. Hell yeah! Another GOY candidate.. the hopeless combo-mantic finally pulled one off with 1x life left in the tank! On turn-7, they countered a games\u00a0winning Pyrokinesis, took 2x damage then fired off a Transmute Artifact for 3x more damage, bringing their life total down to 1, for the Mask-Nought combo. Game over!\n\nDnS. Riiiiiiight there! Damn! 5x DD spells, a Ball Lightning and an effective Manabarbs nearly did it. Good fight, DnS.",
           "verified": true
         },
         {
@@ -44736,7 +44736,7 @@
           "match_type": "Regular Season",
           "winner": "No Lands For You",
           "loser": "YCBI",
-          "commentary": "NLFY. A very, very nice win for the old horse. They had 2x Vise on the field quickly, killed off 2x lands, applied pressure w/ Black Knight & Hyppy, then Hellfire came in for the kill - knocking out 3x YCBIs. \n\nYCBI. Started out behind w/ the Sinkhole and 2x Vise, battled back to mount a defense w/ Wall of Swords (so good), Soraya and a Falcon, but Hellfire cleaned their clocks!",
+          "commentary": "NLFY. A very, very nice win for the old horse. They had 2x Vise on the field quickly, killed off 2x lands, applied pressure w/ Black Knight & Hyppy, then Hellfire came in for the kill - knocking out 3x YCBIs.\u00a0\n\nYCBI. Started out behind w/ the Sinkhole and 2x Vise, battled back to mount a defense w/ Wall of Swords (so good), Soraya and a Falcon, but Hellfire cleaned their clocks!",
           "verified": true
         },
         {
@@ -44746,7 +44746,7 @@
           "match_type": "Regular Season",
           "winner": "Folk Music",
           "loser": "Bad Ass Fault",
-          "commentary": "Music. Hat tip to Psychic Venom dispatched on 3x lands to completely immobilize the Fault. They could afford to sit back and wait for attackers to put more pressure on because Fault couldn’t summon anything.\n\nFault. Interesting loss here, as it basically shined a light on the trade-off of Psychic Venom damage w/ value added by cards deployed - and it wasn’t in their favor! Would probably love to run this one back!",
+          "commentary": "Music. Hat tip to Psychic Venom dispatched on 3x lands to completely immobilize the Fault. They could afford to sit back and wait for attackers to put more pressure on because Fault couldn\u2019t summon anything.\n\nFault. Interesting loss here, as it basically shined a light on the trade-off of Psychic Venom damage w/ value added by cards deployed - and it wasn\u2019t in their favor! Would probably love to run this one back!",
           "verified": true
         },
         {
@@ -44756,7 +44756,7 @@
           "match_type": "Regular Season",
           "winner": "Trick or Treat Freaks",
           "loser": "The Attritionists",
-          "commentary": "Freaks. Demonstrative victory, namely the 2x Maze of Ith and a critical Control Magic-for-Hidden Horror!! Keeping a good deal of pressure on the head of the league.\n\nAnts. Didn’t have any enchantment support despite a bevy of creatures - the Control Magic totally changed the game.",
+          "commentary": "Freaks. Demonstrative victory, namely the 2x Maze of Ith and a critical Control Magic-for-Hidden Horror!! Keeping a good deal of pressure on the head of the league.\n\nAnts. Didn\u2019t have any enchantment support despite a bevy of creatures - the Control Magic totally changed the game.",
           "verified": true
         },
         {
@@ -44766,7 +44766,7 @@
           "match_type": "Regular Season",
           "winner": "Smashed Circus",
           "loser": "Clockwork",
-          "commentary": "Circus. Win the battle of the basement in part due to Fastbond who enabled quick deploy of 2x Fire Sprites and 1x Gargoyle to build a small lead before Juggernaut hit the table. No real wizardry in this one, just kept hitting with “Flying” creatures that Fax couldn’t defend.\n\nFacts Machine. Looked real slow in this one despite having a Mana Vault in play. The Mishra’s Workshop can’t be used for mana as it comes into play and the Scorched Ruins also knocks out mana when it comes into play. Quicksand also felt non-essential in this game. Maybe there are better lands out there for this outfit?",
+          "commentary": "Circus. Win the battle of the basement in part due to Fastbond who enabled quick deploy of 2x Fire Sprites and 1x Gargoyle to build a small lead before Juggernaut hit the table. No real wizardry in this one, just kept hitting with \u201cFlying\u201d creatures that Fax couldn\u2019t defend.\n\nFacts Machine. Looked real slow in this one despite having a Mana Vault in play. The Mishra\u2019s Workshop can\u2019t be used for mana as it comes into play and the Scorched Ruins also knocks out mana when it comes into play. Quicksand also felt non-essential in this game. Maybe there are better lands out there for this outfit?",
           "verified": true
         },
         {
@@ -44776,7 +44776,7 @@
           "match_type": "Regular Season",
           "winner": "Darwin's Doom",
           "loser": "Mean Machine",
-          "commentary": "Doom. Really cool to see the alternate win con take hold here! Force of Nature & Verdant Force in the initial hand.. that’s THE way for the Doom to pulverize the goblin outfit. Very fun!\n\nMachine. Drew a ton of mana, 1x Goblin, 2x Mogg Infestation and a Goblin Warren.. nothing they could do really.",
+          "commentary": "Doom. Really cool to see the alternate win con take hold here! Force of Nature & Verdant Force in the initial hand.. that\u2019s THE way for the Doom to pulverize the goblin outfit. Very fun!\n\nMachine. Drew a ton of mana, 1x Goblin, 2x Mogg Infestation and a Goblin Warren.. nothing they could do really.",
           "verified": true
         },
         {
@@ -44786,7 +44786,7 @@
           "match_type": "Regular Season",
           "winner": "Dark N Stormy",
           "loser": "Over Grenade",
-          "commentary": "DnS. Sweet victory ✌️ they use 3x DD, then a Furnace of Rath + Giant to pummel whatever was left of Overdrawn. Easy one!\n\nOverdrawn. Totally stifled here w/ no mana. Bummer, they had a fun hand and would’ve been competitive in this one.",
+          "commentary": "DnS. Sweet victory \u270c\ufe0f they use 3x DD, then a Furnace of Rath + Giant to pummel whatever was left of Overdrawn. Easy one!\n\nOverdrawn. Totally stifled here w/ no mana. Bummer, they had a fun hand and would\u2019ve been competitive in this one.",
           "verified": true
         },
         {
@@ -44796,7 +44796,7 @@
           "match_type": "Regular Season",
           "winner": "YCBI",
           "loser": "No Lands For You",
-          "commentary": "YCBI. Lost 3x lands and 3x Falcon but it didn’t matter, they were able to deploy 10x cards in this one and the airborne attack stunted any defense NLFY could muster.\n\nNLFY. 5-game win streak is over!! Tough one, used 2x Strip Mine early that end up keeping them from being able to play Sengir Vampire. Not sure it would have mattered, however. Also want to point out that Hymn to Tourach doesn’t make any sense in this deck. It’s nostalgic and romantic, but doesn’t make sense with Black Vise out there.",
+          "commentary": "YCBI. Lost 3x lands and 3x Falcon but it didn\u2019t matter, they were able to deploy 10x cards in this one and the airborne attack stunted any defense NLFY could muster.\n\nNLFY. 5-game win streak is over!! Tough one, used 2x Strip Mine early that end up keeping them from being able to play Sengir Vampire. Not sure it would have mattered, however. Also want to point out that Hymn to Tourach doesn\u2019t make any sense in this deck. It\u2019s nostalgic and romantic, but doesn\u2019t make sense with Black Vise out there.",
           "verified": true
         },
         {
@@ -44806,7 +44806,7 @@
           "match_type": "Regular Season",
           "winner": "Extinction",
           "loser": "Sliver Lining",
-          "commentary": "X. Holy shit Survival of the Fittest! Discarded a Carnassid early for a Lhurgoyf that ended up a 11/12 after 1x Wrath of God and 1x Cataclysm. The Slivers fall right into Xs trap, but they still needed to draw well - and without Survival of the Fittest they don’t win this game. They’re just sitting around hoping to pull the big guy. So fun!\n\nSlivers. Only their 2nd loss of the season! They were stocked and ready for this one but, as mentioned, X is a tough draw for them preying on the horde of slivers.",
+          "commentary": "X. Holy shit Survival of the Fittest! Discarded a Carnassid early for a Lhurgoyf that ended up a 11/12 after 1x Wrath of God and 1x Cataclysm. The Slivers fall right into Xs trap, but they still needed to draw well - and without Survival of the Fittest they don\u2019t win this game. They\u2019re just sitting around hoping to pull the big guy. So fun!\n\nSlivers. Only their 2nd loss of the season! They were stocked and ready for this one but, as mentioned, X is a tough draw for them preying on the horde of slivers.",
           "verified": true
         },
         {
@@ -44816,7 +44816,7 @@
           "match_type": "Regular Season",
           "winner": "Folk Music",
           "loser": "Clockwork",
-          "commentary": "Music. Well, they drew the absolute Kyrptonite for Facts Machine; Energy Flux! It put pressure on them to deploy mana to protect Mana Vault + Su-Chi instead of summoning more defenses. That was the end! And wow, Lord of Atlantis is a Merfolk (!) and is an absolute beast with a single Phantasmal Terrain in play - my lawd!\n\nFacts. Look terrible! Need to spruce these guys up before they’re expelled to Shed #3!!!",
+          "commentary": "Music. Well, they drew the absolute Kyrptonite for Facts Machine; Energy Flux! It put pressure on them to deploy mana to protect Mana Vault + Su-Chi instead of summoning more defenses. That was the end! And wow, Lord of Atlantis is a Merfolk (!) and is an absolute beast with a single Phantasmal Terrain in play - my lawd!\n\nFacts. Look terrible! Need to spruce these guys up before they\u2019re expelled to Shed #3!!!",
           "verified": true
         },
         {
@@ -44876,7 +44876,7 @@
           "match_type": "Regular Season",
           "winner": "Dark N Stormy",
           "loser": "Sliver Lining",
-          "commentary": "DnS. Game of the Year!!!!! Stormy wins on the very last draw of the longest game to-date; 23 turns! They needed a 3-damage bolt and they got one! Chain Lightning for the win! An incredible game, with both sides going stride for stride on offense-defense. This is a beautiful match-up of contrasting styles - they are somewhat perfect foils for one another. Sliver trotted out a horde of hordes and saw nearly 10x baddies destroyed throughout the game. DnS was sweating too, as they drew 3x consecutive Mountain in what seemed like a certain L. What a great game, a reminder on why you play!!! DnS improves to 6-5 and the Slivers drop only their third game of the season.\n\nSlivers. Goddamn, what a finale. Can’t help but applaud their opponent in this one even though it means their first losing streak in what seems like eons. An early Disenchant -> Furnace of Rath tilted things in their favor but DnS had a reaction to every action. Wow.",
+          "commentary": "DnS. Game of the Year!!!!! Stormy wins on the very last draw of the longest game to-date; 23 turns! They needed a 3-damage bolt and they got one! Chain Lightning for the win! An incredible game, with both sides going stride for stride on offense-defense. This is a beautiful match-up of contrasting styles - they are somewhat perfect foils for one another. Sliver trotted out a horde of hordes and saw nearly 10x baddies destroyed throughout the game. DnS was sweating too, as they drew 3x consecutive Mountain in what seemed like a certain L. What a great game, a reminder on why you play!!! DnS improves to 6-5 and the Slivers drop only their third game of the season.\n\nSlivers. Goddamn, what a finale. Can\u2019t help but applaud their opponent in this one even though it means their first losing streak in what seems like eons. An early Disenchant -> Furnace of Rath tilted things in their favor but DnS had a reaction to every action. Wow.",
           "verified": true
         },
         {
@@ -44886,7 +44886,7 @@
           "match_type": "Regular Season",
           "winner": "Extinction",
           "loser": "YCBI",
-          "commentary": "X. Maybe a \"must win\" game that the X took home thanks to new entrant; Survival of the Fittest. This card is insane for creature draw and pairs so wonderfully with the rest of this roster. It was used 3x to pull 2x Lhurgoyf and a Birds of Paradise out to gain advantage. Wrath of God were exchanged by both teams, giving way to a fortuitous draw late for an 11/12 Lhurgoyf to join the fray. Game over. X looking like they have more of an identity now.. super fun.\n\nYCBI. Had the early edge with an early Counterspell on Lhurgoyf and 3x Falcon pecking away, then a Serra Angel, but a WoG wiped 'em all out. They never recovered after that.",
+          "commentary": "X. Maybe a \"must win\" game that the X took home thanks to new entrant; Survival of the Fittest. This card is insane for creature draw and pairs so wonderfully with the rest of this roster. It was used 3x to pull 2x Lhurgoyf and a Birds of Paradise out to gain advantage. Wrath of God were exchanged by both teams, giving way to a fortuitous draw late for an 11/12 Lhurgoyf to join the fray. Game over. X looking like they have more of an identity\u00a0now.. super fun.\n\nYCBI. Had the early edge with an early Counterspell on Lhurgoyf and 3x Falcon pecking away, then a Serra Angel, but a WoG wiped 'em all out. They never recovered after that.",
           "verified": true
         },
         {
@@ -44896,7 +44896,7 @@
           "match_type": "Regular Season",
           "winner": "Folk Music",
           "loser": "Bad Ass Fault",
-          "commentary": "Music. Felt in control the entire game and win by a healthy margin - their third in a row! The Music deployed quickly to reduce hand size thus nullifying risk against the Megrim combos - Fault was chock'full of 'em too. An early Counterspell takes MVP for dispatching Megrim early. \n\nFault. Drop third in a row. Just felt like they were missing something in this game - maybe a wall? Something to help them defend against low-MCC creature attacks. Something to noodle on...",
+          "commentary": "Music. Felt in control the entire game and win by a healthy margin - their third in a row! The Music deployed quickly to reduce hand size thus nullifying risk against the Megrim combos - Fault was chock'full of 'em too. An early Counterspell takes MVP for dispatching Megrim early.\u00a0\n\nFault. Drop third in a row. Just felt like they were missing something in this game - maybe a wall? Something to help them defend against low-MCC creature attacks. Something to noodle on...",
           "verified": true
         },
         {
@@ -44916,7 +44916,7 @@
           "match_type": "Regular Season",
           "winner": "Clockwork",
           "loser": "Smashed Circus",
-          "commentary": "Facts. Snap a 3-game losing streak!! Surplus of mana had them somewhat actionless for most of the game. A late Nevinyrral's Disk cleared 8x creatures - 4x apiece - and paved the way for Clockwork Avian & Xanthic Statue to grab the W.\n\nCircus. Totally lackluster performance, this team stinks and has no synergy. Can't even summon Harvest Wurm...",
+          "commentary": "Facts. Snap a 3-game losing streak!! Surplus of mana had them somewhat\u00a0actionless for most of the game. A late Nevinyrral's Disk cleared 8x creatures - 4x apiece - and paved the way for Clockwork Avian & Xanthic Statue to grab the W.\n\nCircus. Totally lackluster performance, this team stinks and has no synergy. Can't even summon Harvest Wurm...",
           "verified": true
         },
         {
@@ -44926,7 +44926,7 @@
           "match_type": "Regular Season",
           "winner": "Swamp Things",
           "loser": "Team 10",
-          "commentary": "Things. Make it 5 in a row! The Things won this handily with a turn-1 Dark Ritual -> Hidden Horror followed by Buried Alive and a Necromancy -> Spirit of the Night to cap things off. Team 10 had some minor defense as it clung to a Yawggy in-hand - one of the only creatures in the league that can stand toe-to-toe with Spirit of the Night. \n\nTeam 10. Wasn't their game - Things were a turn or two too fast and 10 just isn't built to ramp up quickly.",
+          "commentary": "Things. Make it 5 in a row! The Things won this handily with a turn-1 Dark Ritual -> Hidden Horror followed by Buried Alive and a Necromancy -> Spirit of the Night to cap things off. Team 10 had some minor defense as it clung to a Yawggy in-hand - one of the only creatures in the league that can stand toe-to-toe with Spirit of the Night.\u00a0\n\nTeam 10. Wasn't their game - Things were a turn or two too fast and 10 just isn't built to ramp up quickly.",
           "verified": true
         },
         {
@@ -44946,7 +44946,7 @@
           "match_type": "Regular Season",
           "winner": "Sliver Lining",
           "loser": "YCBI",
-          "commentary": "Sliver. Started w/ 3x dual lands which is just.. i mean.. cmon... beautiful stuff. They raced out to a battlefield advantage as YCBI tried getting their control ducks in a row but were just too fast. \n\nYCBI. Major blunder on my part, throwing Stasis out there instead of Serra Angel for more defense and then, of course, drew Wrath of God the next turn - but it was too late.",
+          "commentary": "Sliver. Started w/ 3x dual lands which is just.. i mean.. cmon... beautiful stuff. They raced out to a battlefield advantage as YCBI tried getting their control ducks\u00a0in a row but were just too fast.\u00a0\n\nYCBI. Major blunder on my part, throwing Stasis out there instead of Serra Angel for more defense and then, of course, drew Wrath of God the next turn - but it was too late.",
           "verified": true
         },
         {
@@ -44966,7 +44966,7 @@
           "match_type": "Regular Season",
           "winner": "Over Grenade",
           "loser": "Darwin's Doom",
-          "commentary": "Overdrawn. Fucking awesome game. ODs game plan with Scroll Rack and another Lord of Tresserhorn (3x now) worked wonders. They used two critical Arcane Denial as well - the latter saving the game when it took out 1x Overdrawn that would’ve pumped 3x 1/1 Cat tokens and 1x Y-Ants to the tune of 20-damage! Next turn 2x Lord of T drop 20-damage back, game over! OD is back!\n\nDoom. Okay, this a great L right here.. their strategy works. Fyndhorn Elves + Gaea’s Touch let a Waiting in the Weeds activate 5x 1/1s and the 2x Sylvan Library enabled insane card draw advantage, like Overrun ready to lay waste on the ensuing turn. It was interesting to take damage from the Library to move faster - the Fastbond also hastened deployment in this game, putting 3x Forest into play early on - trading that for 3-damage is an easy yes, I found. Great loss for the Doom here.",
+          "commentary": "Overdrawn. Fucking awesome game. ODs game plan with Scroll Rack and another Lord of Tresserhorn (3x now) worked wonders. They used two critical Arcane Denial as well - the latter saving the game when it took out 1x Overdrawn that would\u2019ve pumped 3x 1/1 Cat tokens and 1x Y-Ants to the tune of 20-damage! Next turn 2x Lord of T drop 20-damage back, game over! OD is back!\n\nDoom. Okay, this a great L right here.. their strategy works. Fyndhorn Elves + Gaea\u2019s Touch let a Waiting in the Weeds activate 5x 1/1s and the 2x Sylvan Library enabled insane card draw advantage, like Overrun ready to lay waste on the ensuing turn. It was interesting to take damage from the Library to move faster - the Fastbond also hastened deployment in this game, putting 3x Forest into play early on - trading that for 3-damage is an easy yes, I found. Great loss for the Doom here.",
           "verified": true
         },
         {
@@ -44976,7 +44976,7 @@
           "match_type": "Regular Season",
           "winner": "Folk Music",
           "loser": "Swamp Things",
-          "commentary": "Music. Make it 5-in-a-row. Phantasmal Terrain shining in this one - turning 1x Swamp & 1x Sulfurous Springs into Forests - disabling the Things from summoning Living Death and basically ending the game. Merfolk swarmed the 'field and it was over quickly.\n\nThings. And the 5-game streak is over!! Losing both Swamps pretty much nullified anything they wanted to do. Tough loss here.",
+          "commentary": "Music. Make it 5-in-a-row. Phantasmal Terrain shining in this one - turning 1x Swamp & 1x Sulfurous Springs into Forests - disabling the Things from summoning Living Death and basically ending the game. Merfolk swarmed the 'field and it was over quickly.\n\nThings. And the 5-game streak is over!! Losing both Swamps pretty much nullified\u00a0anything they wanted to do. Tough loss here.",
           "verified": true
         },
         {
@@ -44996,7 +44996,7 @@
           "match_type": "Regular Season",
           "winner": "The Attritionists",
           "loser": "Clockwork",
-          "commentary": "Atts. Kind of a wild win here.. The Atts deploy 9x cards on ONE MANA! Four creatures make it out, as does 2x Bad Moon to put quick, sizable pressure on Facts Machine. The second Bad Moon takes MVP as it forced Su-Chi, Wall of Spears and Phyrexian War Beast to block and die on attack against 2x Carnophage.\n\nFacts Machine. Urzatron was out yet sat on a hand full of lands. Not great, but it gave me a chance to see War Beast and Wall of Spears in action. The wlal is solid but still not sure about the War Beast.",
+          "commentary": "Atts. Kind of a wild win here.. The Atts deploy 9x cards on ONE MANA! Four creatures\u00a0make it out, as does 2x Bad Moon to put quick, sizable pressure on Facts Machine. The second Bad Moon takes MVP as it forced Su-Chi, Wall of Spears and Phyrexian War Beast to block and die on attack against 2x Carnophage.\n\nFacts Machine. Urzatron was out yet sat on a hand full of lands. Not great, but it gave me a chance to see War Beast and Wall of Spears in action. The wlal is solid but still not sure about the War Beast.",
           "verified": true
         },
         {
@@ -45006,7 +45006,7 @@
           "match_type": "Regular Season",
           "winner": "Trick or Treat Freaks",
           "loser": "Bad Ass Fault",
-          "commentary": "Freaks. Win the battle of the losing streaks, snapping a two-game slide thanks to 3x Flying Men and a critical Counterspell to dispatch an early Megrim. \n\nBAF. Tough loss, they win this handily if the Megrim isn't countered.",
+          "commentary": "Freaks. Win the battle of the losing streaks, snapping a two-game slide thanks to 3x Flying Men and a critical Counterspell to dispatch an early Megrim.\u00a0\n\nBAF. Tough loss, they win this handily if the Megrim isn't countered.",
           "verified": true
         },
         {
@@ -45026,7 +45026,7 @@
           "match_type": "Regular Season",
           "winner": "Sliver Lining",
           "loser": "Over Grenade",
-          "commentary": "Slivers. Jesus H. Christ, these Slivers, man.. Took out a T-4 Dreadnought via Transmute Artifact then threw 7x Slivers down to chip away, with a Coat of Arms joining on T-7 for a MASSIVE 38x damage to claim the dub. Goddamn.\n\nOverdrawn. I mean, they have this game WRAPPED UP if not for the fortuitous Swords to Plowshares. Of course, Slivers had another one in-hand as well. Tough loss here for a team searching for some momentum at now 3-8.",
+          "commentary": "Slivers. Jesus H. Christ, these Slivers, man.. Took out a T-4 Dreadnought via Transmute Artifact then threw 7x Slivers down to chip away, with a Coat of Arms joining on T-7 for a MASSIVE 38x damage to claim the dub. Goddamn.\n\nOverdrawn. I mean, they have this game WRAPPED UP if not for the fortuitous\u00a0Swords to Plowshares. Of course, Slivers had another one in-hand as well. Tough loss here for a team searching for some momentum at now 3-8.",
           "verified": true
         },
         {
@@ -45036,7 +45036,7 @@
           "match_type": "Regular Season",
           "winner": "Extinction",
           "loser": "Darwin's Doom",
-          "commentary": "X. Looked real good in this one - just the 3x mana for most of the game, but a Sol Ring enabled them to put 2x Rukh Egg, a Lhurgoyf into play beside an early Ape, then a late Cataclsym wiped out DDs whole situation. Fourth win in a row for X!\n\nDoom. Good mana base but didn’t have any early creatures to summon for offense / defense. They sort of sat by with a Force of Nature, 2x Call of the Wild and a Hurricane in hand with nowhere to go.",
+          "commentary": "X. Looked real good in this one - just the 3x mana for most of the game, but a Sol Ring enabled them to put 2x Rukh Egg, a Lhurgoyf into play beside an early Ape, then a late Cataclsym wiped out DDs whole situation. Fourth win in a row for X!\n\nDoom. Good mana base but didn\u2019t have any early creatures to summon for offense / defense. They sort of sat by with a Force of Nature, 2x Call of the Wild and a Hurricane in hand with nowhere to go.",
           "verified": true
         },
         {
@@ -45046,7 +45046,7 @@
           "match_type": "Regular Season",
           "winner": "Dark N Stormy",
           "loser": "YCBI",
-          "commentary": "DnS. Damn son! By turn-4, Stormy had a Two-headed Giant and a Furnace of Rath on the field - with three quick smoke makers in hand - to the tune of 8x damage, then another 22x damage the next turn. Furnace of Rath + DD spells really shining here. Also sat on a Manabarbs in hand that would’ve chipped away all game at what is a slow squad in YCBI.\n\nYCBI. Had one mana and nothing else, total mulligan for them, but it wasn’t looking good!!!",
+          "commentary": "DnS. Damn son! By turn-4, Stormy had a Two-headed Giant and a Furnace of Rath on the field - with three quick smoke makers in hand - to the tune of 8x damage, then another 22x damage the next turn. Furnace of Rath + DD spells really shining here. Also sat on a Manabarbs in hand that would\u2019ve chipped away all game at what is a slow squad in YCBI.\n\nYCBI. Had one mana and nothing else, total mulligan for them, but it wasn\u2019t looking good!!!",
           "verified": true
         },
         {
@@ -45056,7 +45056,7 @@
           "match_type": "Regular Season",
           "winner": "Folk Music",
           "loser": "Trick or Treat Freaks",
-          "commentary": "Music. Run away with is one after turning Maze of Ith into an Island, though Lord of Atlantis’ Islandwalk ability was perhaps the bigger game changer - kind of a tough draw for the Freaks.\n\nFreaks. What can they do against Islandwalk? Brutal.",
+          "commentary": "Music. Run away with is one after turning Maze of Ith into an Island, though Lord of Atlantis\u2019 Islandwalk ability was perhaps the bigger game changer - kind of a tough draw for the Freaks.\n\nFreaks. What can they do against Islandwalk? Brutal.",
           "verified": true
         },
         {
@@ -45076,7 +45076,7 @@
           "match_type": "Regular Season",
           "winner": "Team 10",
           "loser": "The Attritionists",
-          "commentary": "T-10. Lucky victory with only 3x lands. Drawing Yawgmoth Demon w/ several artifacts in play made all the difference. Me and Dad can't believe it! \n\nThe Atts. They had a close game, probably the second MVP in Necropotence, says Colten - a very powerful card. Had the early lead but lost several creatures in battle against 2x Elvish Archers + 'Ol Yawggy.",
+          "commentary": "T-10. Lucky victory with only 3x lands. Drawing Yawgmoth Demon w/ several artifacts in play made all the difference. Me and Dad can't believe\u00a0it!\u00a0\n\nThe Atts. They had a close game, probably the second MVP in Necropotence, says Colten - a very powerful card. Had the early lead but lost several creatures in battle against 2x Elvish Archers + 'Ol Yawggy.",
           "verified": true
         },
         {
@@ -45096,7 +45096,7 @@
           "match_type": "Regular Season",
           "winner": "Mean Machine",
           "loser": "Sliver Lining",
-          "commentary": "Machine. Oh baby, it's working! They out-speed the #1 seed with 4x Goblin, including a Recruiter to tutor 4x Goblin King - only two made it out and that was enough to grab the W.\n\nSliver. Not often they get outgunned like this! Couldn't play some mountains or the 2x Coat of Arms in-hand given the Mountainwalk + gang abilities of their opponent. Fun dynamic between these two.",
+          "commentary": "Machine. Oh baby, it's working! They out-speed the #1 seed with 4x Goblin, including a Recruiter to tutor 4x Goblin King - only two made it out and that was enough to grab the W.\n\nSliver. Not often they get outgunned like this! Couldn't play some mountains or the 2x Coat of Arms in-hand given the Mountainwalk + gang abilities\u00a0of their opponent. Fun dynamic between these two.",
           "verified": true
         },
         {
@@ -45136,7 +45136,7 @@
           "match_type": "Regular Season",
           "winner": "Smashed Circus",
           "loser": "Folk Music",
-          "commentary": "Potatoes. Back at it here, the Potatoes seemed to be in control the entire game w/ a Crusade<>Kjeldoran Outpost in play and a Land Tax as a fallback control element. Tundra Wolves did most of the work, but it was Crusade that truly enabled the victory.\n\nMusic. Ends a 5-game win streak. Never got going in this one really. The Merfolk they summoned were powerless without their team captain. A Seasinger could’ve turned things around in their favor early, but it wouldn’t have mattered much in the longer term.",
+          "commentary": "Potatoes. Back at it here, the Potatoes seemed to be in control the entire game w/ a Crusade<>Kjeldoran Outpost in play and a Land Tax as a fallback control element. Tundra Wolves did most of the work, but it was Crusade that truly enabled the victory.\n\nMusic. Ends a 5-game win streak. Never got going in this one really. The Merfolk they summoned were powerless without their team captain. A Seasinger could\u2019ve turned things around in their favor early, but it wouldn\u2019t have mattered much in the longer term.",
           "verified": true
         },
         {
@@ -45156,7 +45156,7 @@
           "match_type": "Regular Season",
           "winner": "Team 10",
           "loser": "Bad Ass Fault",
-          "commentary": "Team 10. They were lucky that BAF had mostly all lands and barely any fighters - especially with Winter Orb (MVP) in play. The Black Vise + Winter Orb combo was effective and BAF didn’t really stand a chance.\n\nBAF. Sixth loss in a row! Had too many lands and barely any fighters which gave Team 10 a chance to win with Winter Orb + Black Vise in play. Couldn’t fight, and didn’t last long as a result!",
+          "commentary": "Team 10. They were lucky that BAF had mostly all lands and barely any fighters - especially with Winter Orb (MVP) in play. The Black Vise + Winter Orb combo was effective and BAF didn\u2019t really stand a chance.\n\nBAF. Sixth loss in a row! Had too many lands and barely any fighters which gave Team 10 a chance to win with Winter Orb + Black Vise in play. Couldn\u2019t fight, and didn\u2019t last long as a result!",
           "verified": true
         },
         {
@@ -45166,7 +45166,7 @@
           "match_type": "Regular Season",
           "winner": "Trick or Treat Freaks",
           "loser": "Clockwork",
-          "commentary": "Freaks. Really fun game for them actually, controlled the whole thing nearly start-to-finish. Most of their damage was via a stolen Juggernaut w/ Unstable Mutation. They countered a potentially game-changing Xanthic Statue and Field of Dreams added a really fun element - they mill’ed several times to keep mana from being drawn. Flying also played a role in this game.\n\nMachine. Real tough loss, felt like they were right there for much of the game - kept drawing baddies to throw out there but couldn’t get a foothold. Nevinyrral’s Disk was huge in wiping the board, paving the way for Xanthic Statue but it was countered - changed the entire game.",
+          "commentary": "Freaks. Really fun game for them actually, controlled the whole thing nearly start-to-finish. Most of their damage was via a stolen Juggernaut w/ Unstable Mutation. They countered a potentially game-changing Xanthic Statue and Field of Dreams added a really fun element - they mill\u2019ed several times to keep mana from being drawn. Flying also played a role in this game.\n\nMachine. Real tough loss, felt like they were right there for much of the game - kept drawing baddies to throw out there but couldn\u2019t get a foothold. Nevinyrral\u2019s Disk was huge in wiping the board, paving the way for Xanthic Statue but it was countered - changed the entire game.",
           "verified": true
         },
         {
@@ -45176,7 +45176,7 @@
           "match_type": "Regular Season",
           "winner": "Mean Machine",
           "loser": "YCBI",
-          "commentary": "Machine. The Goblin Recruiter.. dude just puts his fist up and the swarm assembles. He helps bring 2x King onto the battlefield - in addition to 1x King already in-hand - and completely demolish the YCBI defenses. They finished this in style too, using a Goblin Grenade + Fork to deal the finishing blow. Great win.\n\nYCBI. Continue to struggle here, losing a game they should’ve lost frankly, and yet with a bit more mana could’ve made this more interesting. They should’ve had ~4 mana on 14 cards but had only three, and I think that hurt them considerably.",
+          "commentary": "Machine. The Goblin Recruiter.. dude just puts his fist up and the swarm assembles. He helps bring 2x King onto the battlefield - in addition to 1x King already in-hand - and completely demolish the YCBI defenses. They finished this in style too, using a Goblin Grenade + Fork to deal the finishing blow. Great win.\n\nYCBI. Continue to struggle here, losing a game they should\u2019ve lost frankly, and yet with a bit more mana could\u2019ve made this more interesting. They should\u2019ve had ~4 mana on 14 cards but had only three, and I think that hurt them considerably.",
           "verified": true
         },
         {
@@ -45186,7 +45186,7 @@
           "match_type": "Regular Season",
           "winner": "Extinction",
           "loser": "Dark N Stormy",
-          "commentary": "X. This deck is so fun and the recent inclusion of Survival of the Fittest continues to make waves. They are happy to lose creatures - keen on it at times - to power the insatiable Lhurgoyf. The synergy was on in this game and when it’s against DnS, man, they’ll take all the direct-damage-killing-creatures action they can get. MVP was tough to pin down, but probably Angelic Renewal on a Wrath of God saving Birds of Paradise to summon the third and final Lhurgoyf to bring home the dub.\n\nDnS. Fall right into Xs hands unfortunately - probably not the first time I’ve written that either. Still, had the game winning combo in-hand to start w/ 2x Furnace of Rath and several bolts. Didn’t get there because of a Disenchant but the W was in sight.",
+          "commentary": "X. This deck is so fun and the recent inclusion of Survival of the Fittest continues to make waves. They are happy to lose creatures - keen on it at times - to power the insatiable Lhurgoyf. The synergy was on in this game and when it\u2019s against DnS, man, they\u2019ll take all the direct-damage-killing-creatures action they can get. MVP was tough to pin down, but probably Angelic Renewal on a Wrath of God saving Birds of Paradise to summon the third and final Lhurgoyf to bring home the dub.\n\nDnS. Fall right into Xs hands unfortunately - probably not the first time I\u2019ve written that either. Still, had the game winning combo in-hand to start w/ 2x Furnace of Rath and several bolts. Didn\u2019t get there because of a Disenchant but the W was in sight.",
           "verified": true
         },
         {
@@ -45196,7 +45196,7 @@
           "match_type": "Regular Season",
           "winner": "Sliver Lining",
           "loser": "Darwin's Doom",
-          "commentary": "Sliver. They had so many great guys - the lands helped them, so many defenders, Dad said “Hurricane could’ve killed all the Sliver Lining defenders” but after drawing five cards the Doom didn’t find it which gave Sliver Lining the win. Having 5x Sliver out there w/ Coat of Arms on 5-turns for a whopping 35-damage on the final turn is absurd.\n\nDoom. I mean, ridiculous. They barely had time to get set up and it was over. The Worldly Tutor <> Call of the Wild is fun - but slow. They don’t really have any early defense against a weenie team like this - used to put a Woolly Spider out there but no longer. Interesting development.",
+          "commentary": "Sliver. They had so many great guys - the lands helped them, so many defenders, Dad said \u201cHurricane could\u2019ve killed all the Sliver Lining defenders\u201d but after drawing five cards the Doom didn\u2019t find it which gave Sliver Lining the win. Having 5x Sliver out there w/ Coat of Arms on 5-turns for a whopping 35-damage on the final turn is absurd.\n\nDoom. I mean, ridiculous. They barely had time to get set up and it was over. The Worldly Tutor <> Call of the Wild is fun - but slow. They don\u2019t really have any early defense against a weenie team like this - used to put a Woolly Spider out there but no longer. Interesting development.",
           "verified": true
         },
         {
@@ -45206,7 +45206,7 @@
           "match_type": "Regular Season",
           "winner": "No Lands For You",
           "loser": "Over Grenade",
-          "commentary": "NLFY. Destroy the first four lands played totally disabling Overdrawn. If not the fortuitous string of M-Kill cards, OD would’ve been able to throw a Mask-Tresserhorn combo into play and likely won the game. NLFY marches on in sole possession of first place!\n\nOD. This team is super fun and would likely have won the game if not for a ridiculous string of M-Kill cards. Unlucky, I say!!",
+          "commentary": "NLFY. Destroy the first four lands played totally disabling Overdrawn. If not the fortuitous string of M-Kill cards, OD would\u2019ve been able to throw a Mask-Tresserhorn combo into play and likely won the game. NLFY marches on in sole possession of first place!\n\nOD. This team is super fun and would likely have won the game if not for a ridiculous string of M-Kill cards. Unlucky, I say!!",
           "verified": true
         },
         {
@@ -45226,7 +45226,7 @@
           "match_type": "Regular Season",
           "winner": "Bad Ass Fault",
           "loser": "Smashed Circus",
-          "commentary": "Fault. Benefitted from a slow start for the Potatoes, but otherwise put on a clinic of control by destroying lands and discarding cards. Bottomless Pit ended up winning this game w/ The Rack which is a win condition I didn’t plan on much. No creature offense really, and 2x Megrim were disenchanted along the way. So it was a longer, slower game but there was enough M-Kill to keep a Land Tax at bay while the two discard engines reduced Potatoes’ moves to rubble.\n\nPotatoes. Land Tax is annoying AF 😆 but never got going here because of the aforementioned forces at work.",
+          "commentary": "Fault. Benefitted from a slow start for the Potatoes, but otherwise put on a clinic of control by destroying lands and discarding cards. Bottomless Pit ended up winning this game w/ The Rack which is a win condition I didn\u2019t plan on much. No creature offense really, and 2x Megrim were disenchanted along the way. So it was a longer, slower game but there was enough M-Kill to keep a Land Tax at bay while the two discard engines reduced Potatoes\u2019 moves to rubble.\n\nPotatoes. Land Tax is annoying AF \ud83d\ude06 but never got going here because of the aforementioned forces at work.",
           "verified": true
         },
         {
@@ -45236,7 +45236,7 @@
           "match_type": "Regular Season",
           "winner": "Swamp Things",
           "loser": "Trick or Treat Freaks",
-          "commentary": "Things. It’s an interesting win here, because they drew 3x fewer lands yet were able to deploy twice as many cards (12 v 6). They parlayed a Lim Dul’s Vault into Demonic Tutor into Living Death into Spirit of the Night w/ 2x Unstable Mutation. They’re almost never out of it if they have some draw cards.\n\nFreaks. Had nothing going in this game on either side of the ball.. two counters were nullified by a Counterspell then simply paying the mana tax for Mana Leak. Kind of a “nothing doing” game.",
+          "commentary": "Things. It\u2019s an interesting win here, because they drew 3x fewer lands yet were able to deploy twice as many cards (12 v 6). They parlayed a Lim Dul\u2019s Vault into Demonic Tutor into Living Death into Spirit of the Night w/ 2x Unstable Mutation. They\u2019re almost never out of it if they have some draw cards.\n\nFreaks. Had nothing going in this game on either side of the ball.. two counters were nullified by a Counterspell then simply paying the mana tax for Mana Leak. Kind of a \u201cnothing doing\u201d game.",
           "verified": true
         },
         {
@@ -45256,7 +45256,7 @@
           "match_type": "Regular Season",
           "winner": "Mean Machine",
           "loser": "Dark N Stormy",
-          "commentary": "Machine. What a banger! They threw the literal gauntlet down in what was a calculated risk - they would win next turn thanks to a Fireball in-hand and essentially gambled that 20 remaining life would be enough in case DnS threw some heat their way. All 3x goblins went down on the ensuing turn, but they walked out w/ a flare dealing 20x damage on the final turn for the W.\n\nDnS. I mean this was RIGHT there for them. Gauntlet of Might -> Furnace of Rath had HAYMAKERS flying in from all directions. They win next turn if Mean Machine doesn’t counterpunch. What a fun game of mono-red enemies!",
+          "commentary": "Machine. What a banger! They threw the literal gauntlet down in what was a calculated risk - they would win next turn thanks to a Fireball in-hand and essentially gambled that 20 remaining life would be enough in case DnS threw some heat their way. All 3x goblins went down on the ensuing turn, but they walked out w/ a flare dealing 20x damage on the final turn for the W.\n\nDnS. I mean this was RIGHT there for them. Gauntlet of Might -> Furnace of Rath had HAYMAKERS flying in from all directions. They win next turn if Mean Machine doesn\u2019t counterpunch. What a fun game of mono-red enemies!",
           "verified": true
         },
         {
@@ -45266,7 +45266,7 @@
           "match_type": "Regular Season",
           "winner": "Darwin's Doom",
           "loser": "YCBI",
-          "commentary": "Doom. First time I’ve seen Verdant Force in play - not to mention 2x of them!!! The Worldly Tutor -> Call of the Wild is very fun. There was a 1/1 Sapling token + Overrun win condition on the way until Wrath of God hit. Cool to see this in action, and a needed win for the Doom!\n\nYCBI. Falter yet again despite wiping out a Verdant Force + 5x Sapling tokens. No real offense beyond the 1/1 peckers and yet had a 5/5 Angel in hand.",
+          "commentary": "Doom. First time I\u2019ve seen Verdant Force in play - not to mention 2x of them!!! The Worldly Tutor -> Call of the Wild is very fun. There was a 1/1 Sapling token + Overrun win condition on the way until Wrath of God hit. Cool to see this in action, and a needed win for the Doom!\n\nYCBI. Falter yet again despite wiping out a Verdant Force + 5x Sapling tokens. No real offense beyond the 1/1 peckers and yet had a 5/5 Angel in hand.",
           "verified": true
         },
         {
@@ -45276,7 +45276,7 @@
           "match_type": "Regular Season",
           "winner": "Extinction",
           "loser": "Over Grenade",
-          "commentary": "X. One of their best games of the season. OD shuffled hands several times and it didn’t seem to matter - good mana gave way to 2x Kird Ape, 2x Lightning Elemental and a River Boa to win the old fashioned way. They were fairly untested - not much defense or offense from OD, but maybe it wouldn’t have mattered. X wins easy.\n\nOD. This is the “bust” version of this squad.. draw, draw some more, shuffle, shuffle again and.. nothing. Finally swung a Nought toward the end but it was far too late and was countered via Disenchant immediately. Not a great game for OD.",
+          "commentary": "X. One of their best games of the season. OD shuffled hands several times and it didn\u2019t seem to matter - good mana gave way to 2x Kird Ape, 2x Lightning Elemental and a River Boa to win the old fashioned way. They were fairly untested - not much defense or offense from OD, but maybe it wouldn\u2019t have mattered. X wins easy.\n\nOD. This is the \u201cbust\u201d version of this squad.. draw, draw some more, shuffle, shuffle again and.. nothing. Finally swung a Nought toward the end but it was far too late and was countered via Disenchant immediately. Not a great game for OD.",
           "verified": true
         },
         {
@@ -45286,7 +45286,7 @@
           "match_type": "Regular Season",
           "winner": "No Lands For You",
           "loser": "Sliver Lining",
-          "commentary": "NLFY. What a clinic - their sixth in a row! The #1 seed vs #2 seed, and they just stifled every single sliver  (eh?) of momentum. They took out 6x lands, relied on 2x Black Vise for much of the early rounds damage, then squashed a mid-game attack by 2x Muscle Sliver via N-Disk, then put ‘em away with Time Bomb late game. Just masterful stuff by NLFY.\n\nSliver. How do you win a game when 6x lands are destroyed? They had the mix - 2x Muscle, 2x Heart, Talon, Sliver Queen & a Coat of Arms - but could never get going thanks to ridiculous defensive moves by the All Blacks. They’ll want another run at NLFY this season!",
+          "commentary": "NLFY. What a clinic - their sixth in a row! The #1 seed vs #2 seed, and they just stifled every single sliver  (eh?) of momentum. They took out 6x lands, relied on 2x Black Vise for much of the early rounds damage, then squashed a mid-game attack by 2x Muscle Sliver via N-Disk, then put \u2018em away with Time Bomb late game. Just masterful stuff by NLFY.\n\nSliver. How do you win a game when 6x lands are destroyed? They had the mix - 2x Muscle, 2x Heart, Talon, Sliver Queen & a Coat of Arms - but could never get going thanks to ridiculous defensive moves by the All Blacks. They\u2019ll want another run at NLFY this season!",
           "verified": true
         },
         {
@@ -45296,7 +45296,7 @@
           "match_type": "Regular Season",
           "winner": "Folk Music",
           "loser": "Team 10",
-          "commentary": "Folk. I mean, 2x Island and they completely own the game. Tidal Warrior takes MVP honors, enabling the Merfolk of the Pearl Trident + Lord of Atlantis to attack unencumbered. Once the Lord came out it was over. Dandan was also great - 4/1 for 2x Island is quite a deal. They cruise into 2nd place with this victory.\n\nTeam 10. Tough sledding here, they put ‘Ol Yawggy out to play but he was countered immediately. It still may not have changed the game too much give Folk’s lead. They raced out early, too, with what I’ve found to be a sneaky good combo; Elvish Archers + Unholy Strength. A 4/2 w/ first strike for 3-mana.. not bad at all.",
+          "commentary": "Folk. I mean, 2x Island and they completely own the game. Tidal Warrior takes MVP honors, enabling the Merfolk of the Pearl Trident + Lord of Atlantis to attack unencumbered. Once the Lord came out it was over. Dandan was also great - 4/1 for 2x Island is quite a deal. They cruise into 2nd place with this victory.\n\nTeam 10. Tough sledding here, they put \u2018Ol Yawggy out to play but he was countered immediately. It still may not have changed the game too much give Folk\u2019s lead. They raced out early, too, with what I\u2019ve found to be a sneaky good combo; Elvish Archers + Unholy Strength. A 4/2 w/ first strike for 3-mana.. not bad at all.",
           "verified": true
         },
         {
@@ -45306,7 +45306,7 @@
           "match_type": "Regular Season",
           "winner": "Dark N Stormy",
           "loser": "Swamp Things",
-          "commentary": "DnS. Ridiculous and historic victory in only 3-turns. Here’s how they did it:\n\n1st turn: Mountain + Sol Ring\n2nd turn: Mountain + Furnace of Rath\n3rd turn: Mountain + Ball Lightning + Pyrokinesis for 20x damage\n\nSwamp Things. Opening hand had their deadly combo - would likely win 3-turns later.",
+          "commentary": "DnS. Ridiculous and historic victory in only 3-turns. Here\u2019s how they did it:\n\n1st turn: Mountain + Sol Ring\n2nd turn: Mountain + Furnace of Rath\n3rd turn: Mountain + Ball Lightning + Pyrokinesis for 20x damage\n\nSwamp Things. Opening hand had their deadly combo - would likely win 3-turns later.",
           "verified": true
         },
         {
@@ -45316,7 +45316,7 @@
           "match_type": "Regular Season",
           "winner": "Sliver Lining",
           "loser": "Smashed Circus",
-          "commentary": "Lining. I mean, what is anyone supposed to do against 4x dual lands and City of Brass with slivers and Coat of Arms? Nothing, that’s what. Total beat down.\n\nPotatoes. Looked sluggish and woefully unprepared to handle the speed from Slivers.",
+          "commentary": "Lining. I mean, what is anyone supposed to do against 4x dual lands and City of Brass with slivers and Coat of Arms? Nothing, that\u2019s what. Total beat down.\n\nPotatoes. Looked sluggish and woefully unprepared to handle the speed from Slivers.",
           "verified": true
         },
         {
@@ -45346,7 +45346,7 @@
           "match_type": "Regular Season",
           "winner": "Darwin's Doom",
           "loser": "Team 10",
-          "commentary": "Doom. Beautiful beautiful stuff in this game. Synergies galore w/ Worldly Tutor -> Verdant Force via Call of the Wild. Then, Waiting in the Weeds for 8x Cat tokens in addition to the 5x Sapling’s already in play. I’ve never seen this strategy play out before and it was stampeding in this one. So so fun!\n\nTeam 10. Looked sluggish, though had 3x Vise in play that would’ve wrecked just about any other team unable to deploy like Darwin.",
+          "commentary": "Doom. Beautiful beautiful stuff in this game. Synergies galore w/ Worldly Tutor -> Verdant Force via Call of the Wild. Then, Waiting in the Weeds for 8x Cat tokens in addition to the 5x Sapling\u2019s already in play. I\u2019ve never seen this strategy play out before and it was stampeding in this one. So so fun!\n\nTeam 10. Looked sluggish, though had 3x Vise in play that would\u2019ve wrecked just about any other team unable to deploy like Darwin.",
           "verified": true
         },
         {
@@ -45356,7 +45356,7 @@
           "match_type": "Regular Season",
           "winner": "Trick or Treat Freaks",
           "loser": "Mean Machine",
-          "commentary": "Freaks. Had a great game all because of Propaganda - it held Mean Machine back because they didn’t have enough mana to attack. Propaganda gave them the win, and it gave them lots of cards too, which had Mean Machine lost. Equilibrium didn’t play much of a role, though Control Magic stole a critical Goblin King mid-game as well - further turning the tide.\n\nMean Machine. Had the early lead thanks to Ball Lightning, though lost themselves after stacking an entire horde of Goblins via Goblin Recruiter - they never drew another land and were stuck bc of Propaganda.",
+          "commentary": "Freaks. Had a great game all because of Propaganda - it held Mean Machine back because they didn\u2019t have enough mana to attack. Propaganda gave them the win, and it gave them lots of cards too, which had Mean Machine lost. Equilibrium didn\u2019t play much of a role, though Control Magic stole a critical Goblin King mid-game as well - further turning the tide.\n\nMean Machine. Had the early lead thanks to Ball Lightning, though lost themselves after stacking an entire horde of Goblins via Goblin Recruiter - they never drew another land and were stuck bc of Propaganda.",
           "verified": true
         },
         {
@@ -45366,7 +45366,7 @@
           "match_type": "Regular Season",
           "winner": "The Attritionists",
           "loser": "No Lands For You",
-          "commentary": "Attritionists. BIGGEST WIN OF THE YEAR, taking down the #1 seed in style! 2x Bad Moon w/ pumped Carnophage and other creatures kicked up the pace and I don’t remember any other details!\n\nNLFY. The 7-game win streak is over! What a run, and to go down to a fellow mono-black squad. They retain a 1-game lead in the standings.",
+          "commentary": "Attritionists. BIGGEST WIN OF THE YEAR, taking down the #1 seed in style! 2x Bad Moon w/ pumped Carnophage and other creatures kicked up the pace and I don\u2019t remember any other details!\n\nNLFY. The 7-game win streak is over! What a run, and to go down to a fellow mono-black squad. They retain a 1-game lead in the standings.",
           "verified": true
         },
         {
@@ -45376,7 +45376,7 @@
           "match_type": "Regular Season",
           "winner": "Dark N Stormy",
           "loser": "Bad Ass Fault",
-          "commentary": "DnS. Came down to the last card, needed any card to deal 2 or more damage for less than 4 CMC and they got it - Ball Lightning!!! Unreal and super fun. \n\nBad Ass Fault. Crawled back into the game thanks to 2x Bottomless Pit and shined a light on the need for The Rack in this game. It was interesting to see so much discard, they didn’t use much M-Kill.",
+          "commentary": "DnS. Came down to the last card, needed any card to deal 2 or more damage for less than 4 CMC and they got it - Ball Lightning!!! Unreal and super fun. \n\nBad Ass Fault. Crawled back into the game thanks to 2x Bottomless Pit and shined a light on the need for The Rack in this game. It was interesting to see so much discard, they didn\u2019t use much M-Kill.",
           "verified": true
         },
         {
@@ -45396,7 +45396,7 @@
           "match_type": "Regular Season",
           "winner": "Clockwork",
           "loser": "Over Grenade",
-          "commentary": "Machine. Wow! Lotus Petal plays a huge role - drew 3x to start and quickly got a Triskelion in play. Sol Ring enables Su-Chi, Mindless Automaton and Tetravus to get out there and lay mechanical waste to newly revised Hand Grenade - fun game and they were MUCH faster!\n\nGrenade. Well, it was fun to see direct damage + U-Dreams, their opponent was just too fast. Without the Lotus Petals this likely goes to Grenade. Fun!",
+          "commentary": "Machine. Wow! Lotus Petal plays a huge role - drew 3x to start and quickly got a Triskelion in play. Sol Ring enables Su-Chi, Mindless Automaton and Tetravus to get out there and lay mechanical waste to newly revised Hand Grenade - fun game and they were MUCH faster!\n\nGrenade. Well, it was fun to see direct damage + U-Dreams, their opponent was just too fast. Without\u00a0the\u00a0Lotus Petals this likely goes to Grenade. Fun!",
           "verified": true
         },
         {
@@ -45406,7 +45406,7 @@
           "match_type": "Regular Season",
           "winner": "Folk Music",
           "loser": "Darwin's Doom",
-          "commentary": "Music. Just a smooth operator with a single Tidal Warrior + Lord of Atlantis doing all the damage. They couldn’t be blocked with a Phantasmal Terrain out there- really a lesson to the other weenie decks that landwalk abilities are wildly underrated. Their fourth win in a row has them tied for 1st place w/ NLFY!\n\nDoom. Close to a mulligan game with no real momentum whatsoever. It was interesting that they had two lands-turned-to-islands, a Fyndhorn Elves and Gaea’s Touch and couldn’t really get anywhere. A Kaysa, 2x Call of the Wild, Overrun, Y-Ants… more high-CMC cards than I would’ve expected. Would they be better off trading some of the high-CMCs for low? Maybe.",
+          "commentary": "Music. Just a smooth operator with a single Tidal Warrior + Lord of Atlantis doing all the damage. They couldn\u2019t be blocked with a Phantasmal Terrain out there- really a lesson to the other weenie decks that landwalk abilities are wildly underrated. Their fourth win in a row has them tied for 1st place w/ NLFY!\n\nDoom. Close to a mulligan game with no real momentum whatsoever. It was interesting that they had two lands-turned-to-islands, a Fyndhorn Elves and Gaea\u2019s Touch and couldn\u2019t really get anywhere. A Kaysa, 2x Call of the Wild, Overrun, Y-Ants\u2026 more high-CMC cards than I would\u2019ve expected. Would they be better off trading some of the high-CMCs for low? Maybe.",
           "verified": true
         },
         {
@@ -45416,7 +45416,7 @@
           "match_type": "Regular Season",
           "winner": "Mean Machine",
           "loser": "Team 10",
-          "commentary": "Machine. Win on only 2x lands in play which not many teams can do. Colten, “Kind of a lucky game, but Team 10 had great cards like Winter Orb-Black Vise-Ankh of Mishra in play.. so just a lucky game for Mean Machine.”\n\nTeam 10. As Colten rightfully mentioned above, they had their soft-lock in play and were cruising along roughly 2-turns from winning. They had lots of lands and, at the end, I thought Worldly Tutor could swing the game with Birds of Paradise which ended up giving MM the game.”",
+          "commentary": "Machine. Win on only 2x lands in play which not many teams can do. Colten, \u201cKind of a lucky game, but Team 10 had great cards like Winter Orb-Black Vise-Ankh of Mishra in play.. so just a lucky game for Mean Machine.\u201d\n\nTeam 10. As Colten rightfully mentioned above, they had their soft-lock in play and were cruising along roughly 2-turns from winning. They had lots of lands and, at the end, I thought Worldly Tutor could swing the game with Birds of Paradise which ended up giving MM the game.\u201d",
           "verified": true
         },
         {
@@ -45426,7 +45426,7 @@
           "match_type": "Regular Season",
           "winner": "Trick or Treat Freaks",
           "loser": "Extinction",
-          "commentary": "TTFs. First game looks mighty good. An insane starting hand w/ Sol Ring, Dreadnought and then drawing Mask on turn-1. They also had a key Counterspell to fizzle a Disenchant. There’s something about the artifact + blue that’s easy on the eyes, too.\n\nX. I mean, nobody sticking around w/ that battlefield. Unlucky.",
+          "commentary": "TTFs. First game looks mighty good. An insane starting hand w/ Sol Ring, Dreadnought and then drawing Mask on turn-1. They also had a key Counterspell to fizzle a Disenchant. There\u2019s something about the artifact + blue that\u2019s easy on the eyes, too.\n\nX. I mean, nobody sticking around w/ that battlefield. Unlucky.",
           "verified": true
         },
         {
@@ -45466,7 +45466,7 @@
           "match_type": "Regular Season",
           "winner": "Over Grenade",
           "loser": "Smashed Circus",
-          "commentary": "Grenade. Ended a 4-game losing streak!! Super important game - their second as a new unit - showcased the power of excessive draw power + Underworld Dreams. Looked like a real team. Colten’s note, “They got a lucky play in the middle of the game where they put U-Dreams out and made a lot of players in his hand go right into the game and attack. We also brought Two-headed Giant of Foriys which was critical. But Teferi’s Puzzle Box came out twice which made the Potatoes draw six cards - TWICE - and gave Hand Grenade the win, a great win, and a big upset.”\n\nPotatoes. Had this game won with a busy battlefield - 1x White Knight, 1x Kjeldoran Home Guard, 2x Knight tokens, 1x Tundra Wolves - but couldn’t make any ground because of the Giant.",
+          "commentary": "Grenade. Ended a 4-game losing streak!! Super important game - their second as a new unit - showcased the power of excessive draw power + Underworld Dreams. Looked like a real team. Colten\u2019s note, \u201cThey got a lucky play in the middle of the game where they put U-Dreams out and made a lot of players in his hand go right into the game and attack. We also brought Two-headed Giant of Foriys which was critical. But Teferi\u2019s Puzzle Box came out twice which made the Potatoes draw six cards - TWICE - and gave Hand Grenade the win, a great win, and a big upset.\u201d\n\nPotatoes. Had this game won with a busy battlefield - 1x White Knight, 1x Kjeldoran Home Guard, 2x Knight tokens, 1x Tundra Wolves - but couldn\u2019t make any ground because of the Giant.",
           "verified": true
         },
         {
@@ -45476,7 +45476,7 @@
           "match_type": "Regular Season",
           "winner": "Clockwork",
           "loser": "Darwin's Doom",
-          "commentary": "Machine. Fairly unopposed in this game. Threw 2x Juggernaut, 1x Tetravus onto the field and attacked at-will! Now two wins in a row for Facts Machine! Lotus Petal helping out in what seems like game after game. Good addition.\n\nDoom. Tough initial hand w/ cards they couldn’t use (Force of Nature, Verdant Force) and only 1-mana. They were playing from very far behind from the get go.",
+          "commentary": "Machine. Fairly unopposed in this game. Threw 2x Juggernaut, 1x Tetravus onto the field and attacked at-will! Now two wins in a row for Facts Machine! Lotus Petal helping out in what seems like game after game. Good addition.\n\nDoom. Tough initial hand w/ cards they couldn\u2019t use (Force of Nature, Verdant Force) and only 1-mana. They were playing from very far behind from the get go.",
           "verified": true
         },
         {
@@ -45486,7 +45486,7 @@
           "match_type": "Regular Season",
           "winner": "Mean Machine",
           "loser": "Folk Music",
-          "commentary": "Machine. Colten, “MM had a game-winner against #2 seed Folk Music. Folk Music just had so many lands that it gave MM a great chance of getting Goblin King out, and they also killed Seasinger + Lord of Atlantis which gave MM the win.” Tight game, battle of two top seeds (#2 v #5) and an early Goblin Recruiter secured 3x Goblin King to be drawn-and-played. Some timely direct damage took care of 2x Lord of Atlantis and a troubling Seasinger.\n\nMusic. Colten, “Had way too many lands, hung down to 1-card and MM got so many great players and had a great game and had Folk Music lost in the music!”",
+          "commentary": "Machine. Colten, \u201cMM had a game-winner against #2 seed Folk Music. Folk Music just had so many lands that it gave MM a great chance of getting Goblin King out, and they also killed Seasinger + Lord of Atlantis which gave MM the win.\u201d Tight game, battle of two top seeds (#2 v #5) and an early Goblin Recruiter secured 3x Goblin King to be drawn-and-played. Some timely direct damage took care of 2x Lord of Atlantis and a troubling Seasinger.\n\nMusic. Colten, \u201cHad way too many lands, hung down to 1-card and MM got so many great players and had a great game and had Folk Music lost in the music!\u201d",
           "verified": true
         },
         {
@@ -45496,7 +45496,7 @@
           "match_type": "Regular Season",
           "winner": "Extinction",
           "loser": "Team 10",
-          "commentary": "X. Make it four-in-a-row! Slow-rolling game, but were able to outlast a Orb-Vice-Ankh combo thanks to Survival of the Fittest and Wrath of God. Lhurgoyf did the rest!\n\nTeam 10. That’s now four losses in a row. More and more I am disliking the control style of play. It’s just not as fun to lock someone up w/ neither side able to play anything. It’s torturous!",
+          "commentary": "X. Make it four-in-a-row! Slow-rolling game, but were able to outlast a Orb-Vice-Ankh combo thanks to Survival of the Fittest and Wrath of God. Lhurgoyf did the rest!\n\nTeam 10. That\u2019s now four losses in a row. More and more I am disliking the control style of play. It\u2019s just not as fun to lock someone up w/ neither side able to play anything. It\u2019s torturous!",
           "verified": true
         },
         {
@@ -45506,7 +45506,7 @@
           "match_type": "Regular Season",
           "winner": "No Lands For You",
           "loser": "Trick or Treat Freaks",
-          "commentary": "NLFY. I mean, clockwork? Kill 2x lands, destroy a Serendib Efreet, put a Sengir and Hyppy out there. Game over!\n\nTreat Freaks. Had the first turn Sol Ring -> Mask combo in hand, but never drew the ‘Nought.",
+          "commentary": "NLFY. I mean, clockwork? Kill 2x lands, destroy a Serendib Efreet, put a Sengir and Hyppy out there. Game over!\n\nTreat Freaks. Had the first turn Sol Ring -> Mask combo in hand, but never drew the \u2018Nought.",
           "verified": true
         },
         {
@@ -45516,7 +45516,7 @@
           "match_type": "Regular Season",
           "winner": "The Attritionists",
           "loser": "Sliver Lining",
-          "commentary": "Attritionists. Yeahhhhh baby, showing they belong with THE top dog of the past few seasons. In a way, they were built to annoy the F out of the Slivers and did just that in this game. \n\nSlivers. Drew a lot of mana, leaving them light on the creature offensive. They couldn’t outlast the sac engine of the Atts, tough game.",
+          "commentary": "Attritionists. Yeahhhhh baby, showing they belong with THE top dog of the past few seasons. In a way, they were built to annoy the F out of the Slivers and did just that in this game. \n\nSlivers. Drew a lot of mana, leaving them light on the creature offensive. They couldn\u2019t outlast the sac engine of the Atts, tough game.",
           "verified": true
         },
         {
@@ -45526,7 +45526,7 @@
           "match_type": "Regular Season",
           "winner": "Bad Ass Fault",
           "loser": "YCBI",
-          "commentary": "BAF. Pretty sweet, chip away with The Rack - card dealt the lion’s share of damage in this game - and ended things with a wonderfully timely Pox, knocking YCBI life to 1, then forcing a discard for 2x more damage with Megrim. Ya love to see it!\n\nYCBI. Didn’t have much in this game but stuck around and put light pressure on to make the Fault uncomfortable.",
+          "commentary": "BAF. Pretty sweet, chip away with The Rack - card dealt the lion\u2019s share of damage in this game - and ended things with a wonderfully timely Pox, knocking YCBI life to 1, then forcing a discard for 2x more damage with Megrim. Ya love to see it!\n\nYCBI. Didn\u2019t have much in this game but stuck around and put light pressure on to make the Fault uncomfortable.",
           "verified": true
         },
         {
@@ -45536,7 +45536,7 @@
           "match_type": "Regular Season",
           "winner": "Swamp Things",
           "loser": "Over Grenade",
-          "commentary": "Things. Break a 4-game losing streak - big one. Had a Kraken out on turn-3 via Buried Alive, game over two turns later as a second Necromancy sent a Spirit of the Night out onto the ‘field as well.\n\nGrenade. This is the Mr. Hyde-side of Grenade, where they sit there shuffling hand after hand with nothing to show for it.",
+          "commentary": "Things. Break a 4-game losing streak - big one. Had a Kraken out on turn-3 via Buried Alive, game over two turns later as a second Necromancy sent a Spirit of the Night out onto the \u2018field as well.\n\nGrenade. This is the Mr. Hyde-side of Grenade, where they sit there shuffling hand after hand with nothing to show for it.",
           "verified": true
         },
         {
@@ -45546,7 +45546,7 @@
           "match_type": "Regular Season",
           "winner": "Smashed Circus",
           "loser": "Darwin's Doom",
-          "commentary": "Potatoes. Armageddon puts Darwin on its heels, inflecting 8x damage per turn. A Crusade was key also, pumping Wolves and Order of Leitbur to take ‘em home.\n\nDoom. Win this game without the big guy in play. First time I’d seen Pendelhaven out there - beautiful art in the card! Also further reinforced that Waiting in the Weeds should be reduced for more Elves most likely.",
+          "commentary": "Potatoes. Armageddon puts Darwin on its heels, inflecting 8x damage per turn. A Crusade was key also, pumping Wolves and Order of Leitbur to take \u2018em home.\n\nDoom. Win this game without the big guy in play. First time I\u2019d seen Pendelhaven out there - beautiful art in the card! Also further reinforced that Waiting in the Weeds should be reduced for more Elves most likely.",
           "verified": true
         },
         {
@@ -45556,7 +45556,7 @@
           "match_type": "Regular Season",
           "winner": "Mean Machine",
           "loser": "Clockwork",
-          "commentary": "MM. Damn Blood Moon! Totally covered his costs by completely nullifying Facts Machine mana base. A Recruiter pulled in the march of the Kings, and that was that! Mean Machine slides into 2nd place with the W.\n\nFacts Machine. Would’ve been able to trade haymakers with the goblin horde had it not been for Blood Moon. Instead, they pretty much put one foot in front of the other - especially when Goblin King came out and Mountainwalk took over. Pretty rad combo.",
+          "commentary": "MM. Damn Blood Moon! Totally covered his costs by completely nullifying Facts Machine mana base. A Recruiter pulled in the march of the Kings, and that was that! Mean Machine slides into 2nd place with the W.\n\nFacts Machine. Would\u2019ve been able to trade haymakers with the goblin horde had it not been for Blood Moon. Instead, they pretty much put one foot in front of the other - especially when Goblin King came out and Mountainwalk took over. Pretty rad combo.",
           "verified": true
         },
         {
@@ -45566,7 +45566,7 @@
           "match_type": "Regular Season",
           "winner": "Trick or Treat Freaks",
           "loser": "Dark N Stormy",
-          "commentary": "TT. So this is the first game after another swap of cards (3x Serendib Efreet <> Mystical Tutor, Mana Drain) and though it didn’t play a distinct role in the game, you could see the clarity with which Trick or Treat Freaks operated. They used a turn-1 Tutor to grab Transmute Artifact - an insurance play should they come upon a Millstone or Scroll Rack. The shuffle produced an Illusionary Mask a few turns later, and it was over before it really started. It’ll be interesting to see if tutoring like hell works - or if it ends up failing in the gameplay category. \n\nDnS. 4x Bolts and a Ball Lightning. Had they drawn another Mountain earlier they could’ve summoned their 2nd Ball Lightning and possibly won the game. This is just about as fast as they can go - bringing TTFs down to 2-life in only five turns. Tough loss.",
+          "commentary": "TT. So this is the first game after another swap of cards (3x Serendib Efreet <> Mystical Tutor, Mana Drain) and though it didn\u2019t play a distinct role in the game, you could see the clarity with which Trick or Treat Freaks operated. They used a turn-1 Tutor to grab Transmute Artifact - an insurance play should they come upon a Millstone or Scroll Rack. The shuffle produced an Illusionary Mask a few turns later, and it was over before it really started. It\u2019ll be interesting to see if tutoring like hell works - or if it ends up failing in the gameplay category. \n\nDnS. 4x Bolts and a Ball Lightning. Had they drawn another Mountain earlier they could\u2019ve summoned their 2nd Ball Lightning and possibly won the game. This is just about as fast as they can go - bringing TTFs down to 2-life in only five turns. Tough loss.",
           "verified": true
         },
         {
@@ -45576,7 +45576,7 @@
           "match_type": "Regular Season",
           "winner": "The Attritionists",
           "loser": "YCBI",
-          "commentary": "Atts. Sure, YCBI did absolutely nothing in this game, but there’s still something to be said about the Atts deploying 6x cards on only 3x lands. I even felt like they should have had more creatures in this game, and when Kormus Bell arrived I didn’t feel great about it. There’s something vulnerable about all lands being creatures, especially when playing a team that has even one Wrath of God.\n\nYCBI. Stink fest, drew 8 lands on 14 cards.",
+          "commentary": "Atts. Sure, YCBI did absolutely nothing in this game, but there\u2019s still something to be said about the Atts deploying 6x cards on only 3x lands. I even felt like they should have had more creatures in this game, and when Kormus Bell arrived I didn\u2019t feel great about it. There\u2019s something vulnerable about all lands being creatures, especially when playing a team that has even one Wrath of God.\n\nYCBI. Stink fest, drew 8 lands on 14 cards.",
           "verified": true
         },
         {
@@ -45596,7 +45596,7 @@
           "match_type": "Regular Season",
           "winner": "Darwin's Doom",
           "loser": "Swamp Things",
-          "commentary": "Doom. Big shift in strategy ahead of this game - replace the Call of the Wild <> Sylvan Library <> Big Boys for land destruction cards (Thermokarst, Ice Shield, Kudzu) and lower CMC creatures (eg Elvish Ranger). Killed off 2x lands in this one, win handily and break a 4-game losing streak in the process! I think there’s something sustainable to build on with this M-Kill strategy that leans elf/tribal.\n\nThings. Didn’t have much jump in this one, namely bc of the mana loss.",
+          "commentary": "Doom. Big shift in strategy ahead of this game - replace the Call of the Wild <> Sylvan Library <> Big Boys for land destruction cards (Thermokarst, Ice Shield, Kudzu) and lower CMC creatures (eg Elvish Ranger). Killed off 2x lands in this one, win handily and break a 4-game losing streak in the process! I think there\u2019s something sustainable to build on with this M-Kill strategy that leans elf/tribal.\n\nThings. Didn\u2019t have much jump in this one, namely bc of the mana loss.",
           "verified": true
         },
         {
@@ -45606,7 +45606,7 @@
           "match_type": "Regular Season",
           "winner": "Clockwork",
           "loser": "Extinction",
-          "commentary": "Facts Machine. Urzatron kick-starts some offense for the Machine, tossing a Triskelion, Su-Chi and 2x Mishra’s Factory out to attack unencumbered.\n\nX. Stuck on three lands generating W/R w/ a hand full of green cards!",
+          "commentary": "Facts Machine. Urzatron kick-starts some offense for the Machine, tossing a Triskelion, Su-Chi and 2x Mishra\u2019s Factory out to attack unencumbered.\n\nX. Stuck on three lands generating W/R w/ a hand full of green cards!",
           "verified": true
         },
         {
@@ -45616,7 +45616,7 @@
           "match_type": "Regular Season",
           "winner": "No Lands For You",
           "loser": "Folk Music",
-          "commentary": "NLFY. Wow, first time I’ve seen a game like this— Cyclopean Tomb gets ahead of the opposing mana ramp and completely disables any card deployment by the Music. NLFY marched ahead a second thought, powered by Black Knight, Hypnotic Specter, 2x Vampire. Pretty cool win.\n\nMusic. Had their first land destroyed by Strip Mine and once they fell behind Cyclopean Tomb it was over. Wild!",
+          "commentary": "NLFY. Wow, first time I\u2019ve seen a game like this\u2014 Cyclopean Tomb gets ahead of the opposing mana ramp and completely disables any card deployment by the Music. NLFY marched ahead a second thought, powered by Black Knight, Hypnotic Specter, 2x Vampire. Pretty cool win.\n\nMusic. Had their first land destroyed by Strip Mine and once they fell behind Cyclopean Tomb it was over. Wild!",
           "verified": true
         },
         {
@@ -45626,7 +45626,7 @@
           "match_type": "Regular Season",
           "winner": "Team 10",
           "loser": "Dark N Stormy",
-          "commentary": "T-10. Well, well, just as they’re on the brink of deprecation they pull out a rare 4-turn win! And against the fireworks display that is Dark’n Stormy! Wow! Their opening hand was super fun.. a Swamp -> Sol Ring -> Felwar Stone -> Black Vise. Next turn, Ankh of Mishra. 3x Mishra Factory took the baton from there and that was that! A Furnace of Rath sped things up a bit ;)\n\nDnS. May not have played this correctly, using a Chain Lightning + Incinerate early instead of waiting to pair w/ Fork and/or Furnace of Rath. They win on the next turn too, ironically.",
+          "commentary": "T-10. Well, well, just as they\u2019re on the brink of deprecation they pull out a rare 4-turn win! And against the fireworks display that is Dark\u2019n Stormy! Wow! Their opening hand was super fun.. a Swamp -> Sol Ring -> Felwar Stone -> Black Vise. Next turn, Ankh of Mishra. 3x Mishra Factory took the baton from there and that was that! A Furnace of Rath sped things up a bit ;)\n\nDnS. May not have played this correctly, using a Chain Lightning + Incinerate early instead of waiting to pair w/ Fork and/or Furnace of Rath. They win on the next turn too, ironically.",
           "verified": true
         },
         {
@@ -45646,7 +45646,7 @@
           "match_type": "Regular Season",
           "winner": "Darwin's Doom",
           "loser": "Bad Ass Fault",
-          "commentary": "Doom. Survived losing a handful of lands namely due to their Elf power — 2x Fyndhorn in play with more in-hand meant they could withstand BAFs initial attack. Pretty well balanced for this type of opponent.\n\nBAF. Feeling out of sorts a bit here, didn’t have much in the way of creature defense to handle the Yavimaya Ants.",
+          "commentary": "Doom. Survived losing a handful of lands namely due to their Elf power \u2014 2x Fyndhorn in play with more in-hand meant they could withstand BAFs initial attack. Pretty well balanced for this type of opponent.\n\nBAF. Feeling out of sorts a bit here, didn\u2019t have much in the way of creature defense to handle the Yavimaya Ants.",
           "verified": true
         },
         {
@@ -45656,7 +45656,7 @@
           "match_type": "Regular Season",
           "winner": "Mean Machine",
           "loser": "Swamp Things",
-          "commentary": "Mean Machine. Well, this team continues to steamroll. Super fun to see Blood Moon move the needle, pairing nicely with Goblin King to attack unimpeded against the Things. There’s not really any other dimension to this team which could cause problems down the road, but for now they just kind of swarm and do their thing.\n\nThings. Too slow for the squad despite having a 1-turn Hidden Horror w/ 2-turn Unstable Mutation.",
+          "commentary": "Mean Machine. Well, this team continues to steamroll. Super fun to see Blood Moon move the needle, pairing nicely with Goblin King to attack unimpeded against the Things. There\u2019s not really any other dimension to this team which could cause problems down the road, but for now they just kind of swarm and do their thing.\n\nThings. Too slow for the squad despite having a 1-turn Hidden Horror w/ 2-turn Unstable Mutation.",
           "verified": true
         },
         {
@@ -45666,7 +45666,7 @@
           "match_type": "Regular Season",
           "winner": "Smashed Circus",
           "loser": "Extinction",
-          "commentary": "Potatoes. WILD game, highlighted Potatoes’ ability to go small and control late. Land Tax won them the game, what after a Cataclysm left them w/ a Tundra Wolves facing off with a double-digit Lhurgoyf, they effectively sacrificed the Wolves and played Balance next turn to kill off the big guy. Huge play, used Land Tax again later with Armageddon nullifying X attack. Wild game.\n\nX. Have a funny situation where something like Lightning Elemental & there other big green guy have almost no utility in a game like this. Elementals will get killed by 1/1 Wolves w/ first strike and the big guy costs too much mana. Wonder if they need a killer - like Royal Assassin - to clear the way.",
+          "commentary": "Potatoes. WILD game, highlighted Potatoes\u2019 ability to go small and control late. Land Tax won them the game, what after a Cataclysm left them w/ a Tundra Wolves facing off with a double-digit Lhurgoyf, they effectively sacrificed the Wolves and played Balance next turn to kill off the big guy. Huge play, used Land Tax again later with Armageddon nullifying X attack. Wild game.\n\nX. Have a funny situation where something like Lightning Elemental & there other big green guy have almost no utility in a game like this. Elementals will get killed by 1/1 Wolves w/ first strike and the big guy costs too much mana. Wonder if they need a killer - like Royal Assassin - to clear the way.",
           "verified": true
         },
         {
@@ -45686,7 +45686,7 @@
           "match_type": "Regular Season",
           "winner": "Sliver Lining",
           "loser": "Team 10",
-          "commentary": "Slivers. Is this the turnaround they’ve been looking for?! They started out in the hole - down to 8-life before they inflicted a point of damage - thanks to 2x Black Vise and a Winter Orb. But this squad is capable of deploying w/ the best of them and, hey, they kept drawing lands en route to 2x Muscle Sliver, 1x Metallic Sliver and 1x Heart Sliver.\n\nTeam 10. Had an angle early on the 2x Vise w/ a Stone-throwing Devil, Elvish Archer + Unholy Strength in hand but the Swamp never came! One thing I find challenging with this group is they want to win on Black Vise — and so does NLFY.. it might be more fun to see a different win-con surface.",
+          "commentary": "Slivers. Is this the turnaround they\u2019ve been looking for?! They started out in the hole - down to 8-life before they inflicted a point of damage - thanks to 2x Black Vise and a Winter Orb. But this squad is capable of deploying w/ the best of them and, hey, they kept drawing lands en route to 2x Muscle Sliver, 1x Metallic Sliver and 1x Heart Sliver.\n\nTeam 10. Had an angle early on the 2x Vise w/ a Stone-throwing Devil, Elvish Archer + Unholy Strength in hand but the Swamp never came! One thing I find challenging with this group is they want to win on Black Vise \u2014 and so does NLFY.. it might be more fun to see a different win-con surface.",
           "verified": true
         },
         {
@@ -45706,7 +45706,7 @@
           "match_type": "Regular Season",
           "winner": "Mean Machine",
           "loser": "Bad Ass Fault",
-          "commentary": "Machine. Win streak extends to 5 as they put pressure on #1-NLFY, now up a game in the win column! Sluggish start for both sides, gained an edge simply on drawing two more lands. Of note; it feels like Gauntlet of Might at 4 CMC is a LOT to summon and, come to think of it, I’m not sure I’ve ever seen it hit the battlefield! Also, it deserves to be in a Fire Drilled type construction, right?\n\nBAF. Drew only 1x land, not going to beat anyone in that situation.",
+          "commentary": "Machine. Win streak extends to 5 as they put pressure on #1-NLFY, now up a game in the win column! Sluggish start for both sides, gained an edge simply on drawing two more lands. Of note; it feels like Gauntlet of Might at 4 CMC is a LOT to summon and, come to think of it, I\u2019m not sure I\u2019ve ever seen it hit the battlefield! Also, it deserves to be in a Fire Drilled type construction, right?\n\nBAF. Drew only 1x land, not going to beat anyone in that situation.",
           "verified": true
         },
         {
@@ -45726,7 +45726,7 @@
           "match_type": "Regular Season",
           "winner": "No Lands For You",
           "loser": "Smashed Circus",
-          "commentary": "NLFY. Strong win, held the advantage pretty much the entire game. Cyclopean Tomb was demonstrative, flipping 4x lands into Swamps, while Black Vise, Black Knight do the lion’s share of the work.\n\nPotatoes. Critical mistake in this game was casting White Knight instead of playing Balance. They also should’ve wiped all mana w/ Armageddon and leaned on Land Tax - big risk, but could’ve worked.",
+          "commentary": "NLFY. Strong win, held the advantage pretty much the entire game. Cyclopean Tomb was demonstrative, flipping 4x lands into Swamps, while Black Vise, Black Knight do the lion\u2019s share of the work.\n\nPotatoes. Critical mistake in this game was casting White Knight instead of playing Balance. They also should\u2019ve wiped all mana w/ Armageddon and leaned on Land Tax - big risk, but could\u2019ve worked.",
           "verified": true
         },
         {
@@ -45736,7 +45736,7 @@
           "match_type": "Regular Season",
           "winner": "Clockwork",
           "loser": "Dark N Stormy",
-          "commentary": "Facts Machine. Wow!! Turn-1 Urza’s Mine + Lotus Pedal -> 2x Mana Vault -> Triskelion. That is some SHIT RIGHT THERE! Sure, he was killed two turns later, but the Urzatron formed and pushed a Tetravus + Xanthic Statue onto the field for the unimpeded W. What, a, win.\n\nDnS. Interesting cards drawn in this game; 5 lands, 2x Furnace of Rath, Manabarbs and some DD. Makes me feel like you can really only play Manabarbs and/or Furnace of Rath if you’re stocked with fireworks - it’s hard to play one of them just to sit there.",
+          "commentary": "Facts Machine. Wow!! Turn-1 Urza\u2019s Mine + Lotus Pedal -> 2x Mana Vault -> Triskelion. That is some SHIT RIGHT THERE! Sure, he was killed two turns later, but the Urzatron formed and pushed a Tetravus + Xanthic Statue onto the field for the unimpeded W. What, a, win.\n\nDnS. Interesting cards drawn in this game; 5 lands, 2x Furnace of Rath, Manabarbs and some DD. Makes me feel like you can really only play Manabarbs and/or Furnace of Rath if you\u2019re stocked with fireworks - it\u2019s hard to play one of them just to sit there.",
           "verified": true
         },
         {
@@ -45756,7 +45756,7 @@
           "match_type": "Regular Season",
           "winner": "YCBI",
           "loser": "Team 10",
-          "commentary": "YCBI. Somewhat untouched in this game thanks to early deployment - they got out from under a Black Vise and chipped away with 2x Peckers, then a Serra Angel later on. Nothing fancy, just marched to victory.\n\nTeam 10. Looked clunky and slow in this game. Got the Orb-Vise-Relic Barrier combo out there but by then it was a bit too late. The Elvish Archers and Stone-throwing Devils didn’t do much and couldn’t defend the fliers.",
+          "commentary": "YCBI. Somewhat untouched in this game thanks to early deployment - they got out from under a Black Vise and chipped away with 2x Peckers, then a Serra Angel later on. Nothing fancy, just marched to victory.\n\nTeam 10. Looked clunky and slow in this game. Got the Orb-Vise-Relic Barrier combo out there but by then it was a bit too late. The Elvish Archers and Stone-throwing Devils didn\u2019t do much and couldn\u2019t defend the fliers.",
           "verified": true
         },
         {
@@ -45766,7 +45766,7 @@
           "match_type": "Regular Season",
           "winner": "Trick or Treat Freaks",
           "loser": "Over Grenade",
-          "commentary": "TTFs. Alright, lots happening in this game. First of all, the TTFs just making straight up music out there! Field of Dreams to watch the deck, grab a Mask, use Copy Artifact on a Nought, then a Transmute Artifact on a Millstone just for extra effect. I mean goddamn, the tutoring in this deck is much refined from last season’s incessant shuffling.\n\nHand Grenade. Alright there’s something powerful in here, but the deck needs Relic Barrier & Icy Manipulator — then they can paralyze the opponent while protecting themselves and gaining draw advantage w/ Howling Mine. I think Underworld Dreams is still in here, maybe with Royal Assassin (w/ Icy), Entropic Spector (w/ Mine) and maybe Kormus Bell.",
+          "commentary": "TTFs. Alright, lots happening in this game. First of all, the TTFs just making straight up music out there! Field of Dreams to watch the deck, grab a Mask, use Copy Artifact on a Nought, then a Transmute Artifact on a Millstone just for extra effect. I mean goddamn, the tutoring in this deck is much refined from last season\u2019s incessant shuffling.\n\nHand Grenade. Alright there\u2019s something powerful in here, but the deck needs Relic Barrier & Icy Manipulator \u2014 then they can paralyze the opponent while protecting themselves and gaining draw advantage w/ Howling Mine. I think Underworld Dreams is still in here, maybe with Royal Assassin (w/ Icy), Entropic Spector (w/ Mine) and maybe Kormus Bell.",
           "verified": true
         },
         {
@@ -45776,7 +45776,7 @@
           "match_type": "Regular Season",
           "winner": "The Attritionists",
           "loser": "Mean Machine",
-          "commentary": "The Atts. Magnificent game, leveraging the strengths of MVP - Lake of the Dead - to put maximum pressure on Mean Machine. Bad Moon played an integral role in the W, accelerating damage every single turn w/ 2x Nether Shadow.\n\nMean Machine. Loved seeing the 2x Gauntlet of Might out there (!) but they only drew a single creature all game to benefit. Seems like Gauntlet of Might does not fit in this deck 🤷🏻‍♂️",
+          "commentary": "The Atts. Magnificent game, leveraging the strengths of MVP - Lake of the Dead - to put maximum pressure on Mean Machine. Bad Moon played an integral role in the W, accelerating damage every single turn w/ 2x Nether Shadow.\n\nMean Machine. Loved seeing the 2x Gauntlet of Might out there (!) but they only drew a single creature all game to benefit. Seems like Gauntlet of Might does not fit in this deck \ud83e\udd37\ud83c\udffb\u200d\u2642\ufe0f",
           "verified": true
         },
         {
@@ -45786,7 +45786,7 @@
           "match_type": "Regular Season",
           "winner": "Extinction",
           "loser": "Bad Ass Fault",
-          "commentary": "X. So, it’s becoming increasingly clear that Survival of the Fittest + Haste is huge for this team. I find that Lightning Elemental gets the nod in some situations (no creature defense) whereas Lhurgoyf gets the nod when there is creature defense. Fascinating finding, and suggests possibly that X should feature another creature or two w/ Haste.\n\nBAF. An interesting loss for them, as they drew a good deal of mana (5x lands) but had a mismatch of Mountains to predominantly Black hand. There’s probably more that can be done to help with mana creation on this team and it should be explored asap.",
+          "commentary": "X. So, it\u2019s becoming increasingly clear that Survival of the Fittest + Haste is huge for this team. I find that Lightning Elemental gets the nod in some situations (no creature defense) whereas Lhurgoyf gets the nod when there is creature defense. Fascinating finding, and suggests possibly that X should feature another creature or two w/ Haste.\n\nBAF. An interesting loss for them, as they drew a good deal of mana (5x lands) but had a mismatch of Mountains to predominantly Black hand. There\u2019s probably more that can be done to help with mana creation on this team and it should be explored asap.",
           "verified": true
         },
         {
@@ -45796,7 +45796,7 @@
           "match_type": "Regular Season",
           "winner": "Swamp Things",
           "loser": "No Lands For You",
-          "commentary": "Things. O-K Things! Drew 4x lands, had 2x destroyed and still pummeled NLFY thanks to a turn-1 Hidden Horror and Unstable Mutation soon-to-follow. They did have a full graveyard and sat on 2x Living Death so it’s not as though they were without other moves. Looked good here, nice win to close out the season.\n\nNLFY. Tough end to the season, sitting on 2x Terror yet unable to cast thanks to opposing black creatures!",
+          "commentary": "Things. O-K Things! Drew 4x lands, had 2x destroyed and still pummeled NLFY thanks to a turn-1 Hidden Horror and Unstable Mutation soon-to-follow. They did have a full graveyard and sat on 2x Living Death so it\u2019s not as though they were without other moves. Looked good here, nice win to close out the season.\n\nNLFY. Tough end to the season, sitting on 2x Terror yet unable to cast thanks to opposing black creatures!",
           "verified": true
         },
         {
@@ -45806,7 +45806,7 @@
           "match_type": "Regular Season",
           "winner": "Smashed Circus",
           "loser": "Dark N Stormy",
-          "commentary": "Potatoes. Still at it, turn the tide and totally own the pace of the game w/ multiple M-Kill cards in hand. Kjeldoran Outpost was big, too.\n\nDnS. Threw a handful of DD spells out, handled most of the early attackers with Pyroclasm + Pyrokinesis but ran out of gas. The loss of 4x lands mid-game crushed them too, after having just played a Furnace of Rath - it would’ve paved the way to a W.",
+          "commentary": "Potatoes. Still at it, turn the tide and totally own the pace of the game w/ multiple M-Kill cards in hand. Kjeldoran Outpost was big, too.\n\nDnS. Threw a handful of DD spells out, handled most of the early attackers with Pyroclasm + Pyrokinesis but ran out of gas. The loss of 4x lands mid-game crushed them too, after having just played a Furnace of Rath - it would\u2019ve paved the way to a W.",
           "verified": true
         },
         {
@@ -45816,7 +45816,7 @@
           "match_type": "Regular Season",
           "winner": "Sliver Lining",
           "loser": "Clockwork",
-          "commentary": "Sliver. On 3x lands, they deployed 6+ creatures and drew just enough defense to hold off Facts Machine (ie Xanthic Statue). Tetravus, specifically, came out on turn-2 and would’ve attacked unfettered if not for a timely Disenchant.\n\nMachine. Real close, win if Tetravus doesn’t get killed, needed another creature or two. The Hive stinks.",
+          "commentary": "Sliver. On 3x lands, they deployed 6+ creatures and drew just enough defense to hold off Facts Machine (ie Xanthic Statue). Tetravus, specifically, came out on turn-2 and would\u2019ve attacked unfettered if not for a timely Disenchant.\n\nMachine. Real close, win if Tetravus doesn\u2019t get killed, needed another creature or two. The Hive stinks.",
           "verified": true
         },
         {
@@ -45846,7 +45846,7 @@
           "match_type": "Regular Season",
           "winner": "Darwin's Doom",
           "loser": "Trick or Treat Freaks",
-          "commentary": "Doom. A FUCKING AWESOME game for the doom-squad. This team has been struggling to find it's identity all season and this current iteration is the most fun yet.. teaming Call of the Wild w/ 2x Sylvan Library + Worldly Tutor is a synergy at its finest. This game the combos pulled a Verdant Force, Force of Nature and Yavimaya Ants onto the battlefield. Two Saproling tokens were on the field, too, helped by Pendelhaven + Heart of Yavimaya. Super fun and put up 29 damage in a hurry. Lets go baby!\n\nTTFs. Total mulligan game, drew a single land in 14 cards. This team needs more Mystical Tutors. Oh well.",
+          "commentary": "Doom. A FUCKING AWESOME game for the doom-squad. This team has been struggling to find it's identity all season and this current iteration is the most fun yet.. teaming Call of the Wild w/ 2x Sylvan Library + Worldly Tutor is a synergy\u00a0at its finest. This game the combos pulled a Verdant Force, Force of Nature and Yavimaya Ants onto the battlefield. Two Saproling tokens were on the field, too, helped by Pendelhaven + Heart of Yavimaya. Super fun and put up 29 damage in a hurry. Lets go baby!\n\nTTFs. Total mulligan game, drew a single land in 14 cards. This team needs more Mystical Tutors. Oh well.",
           "verified": true
         }
       ],
@@ -46140,12 +46140,13 @@
         4,
         5,
         6,
-        7
+        7,
+        8
       ],
-      "total_w": 77,
-      "total_l": 43,
-      "total_gp": 120,
-      "win_pct": 0.6417,
+      "total_w": 83,
+      "total_l": 50,
+      "total_gp": 133,
+      "win_pct": 0.6241,
       "championships": 2,
       "championship_seasons": [
         4,
@@ -46230,6 +46231,21 @@
           "udpi": 0.11515,
           "team_mvp": "Armageddon",
           "team_mvp_count": 5
+        },
+        {
+          "season": 8,
+          "w": 6,
+          "l": 7,
+          "win_pct": 0.4615,
+          "power_score": 0,
+          "is_champion": false,
+          "udpi": null,
+          "team_mvp": "Crusade",
+          "team_mvp_count": 4,
+          "mashupLabel": "Smashed Circus",
+          "mashupRole": "second",
+          "playoff_w": 3,
+          "playoff_l": 3
         }
       ],
       "fastest_win_turns": 5,
@@ -47060,7 +47076,7 @@
           "win_pct": 0.1111111111,
           "power_score": 0,
           "is_champion": false,
-          "udpi": 0.00006172839506,
+          "udpi": 6.172839506e-05,
           "team_mvp": "Wrath of God",
           "team_mvp_count": 2
         },
@@ -47756,7 +47772,9 @@
           "is_champion": false,
           "udpi": null,
           "team_mvp": "Fallow Wurm",
-          "team_mvp_count": 1
+          "team_mvp_count": 1,
+          "mashupLabel": "Smashed Circus",
+          "mashupRole": "first"
         }
       ],
       "top_mvp_card": "Fallow Wurm",
@@ -47785,7 +47803,9 @@
           "is_champion": false,
           "udpi": null,
           "team_mvp": "Arcane Denial",
-          "team_mvp_count": 3
+          "team_mvp_count": 3,
+          "mashupLabel": "Over Grenade",
+          "mashupRole": "first"
         }
       ],
       "top_mvp_card": "Arcane Denial",
@@ -47854,6 +47874,114 @@
       "championships": 0,
       "championship_seasons": [],
       "season_records": []
+    },
+    "Hand Grenade": {
+      "team": "Hand Grenade",
+      "seasons_played": [
+        8
+      ],
+      "total_w": 3,
+      "total_l": 4,
+      "total_gp": 7,
+      "win_pct": 0.4286,
+      "championships": 0,
+      "championship_seasons": [],
+      "best_power_score": 0,
+      "avg_power_score": 0,
+      "season_records": [
+        {
+          "season": 8,
+          "w": 3,
+          "l": 4,
+          "win_pct": 0.4286,
+          "power_score": 0,
+          "is_champion": false,
+          "udpi": null,
+          "team_mvp": "Chain Lightning",
+          "team_mvp_count": 3,
+          "mashupLabel": "Over Grenade",
+          "mashupRole": "second",
+          "playoff_w": 3,
+          "playoff_l": 3
+        }
+      ],
+      "top_mvp_card": "Chain Lightning",
+      "top_mvp_count": 3
+    },
+    "Bone Dry": {
+      "team": "Bone Dry",
+      "seasons_played": [],
+      "total_w": 0,
+      "total_l": 0,
+      "total_gp": 0,
+      "win_pct": 0.0,
+      "championships": 0,
+      "championship_seasons": [],
+      "best_power_score": 0,
+      "avg_power_score": 0,
+      "season_records": [],
+      "top_mvp_card": null,
+      "top_mvp_count": 0
+    },
+    "Holy War": {
+      "team": "Holy War",
+      "seasons_played": [],
+      "total_w": 0,
+      "total_l": 0,
+      "total_gp": 0,
+      "win_pct": 0.0,
+      "championships": 0,
+      "championship_seasons": [],
+      "best_power_score": 0,
+      "avg_power_score": 0,
+      "season_records": [],
+      "top_mvp_card": null,
+      "top_mvp_count": 0
+    },
+    "The Emerald Army": {
+      "team": "The Emerald Army",
+      "seasons_played": [],
+      "total_w": 0,
+      "total_l": 0,
+      "total_gp": 0,
+      "win_pct": 0.0,
+      "championships": 0,
+      "championship_seasons": [],
+      "best_power_score": 0,
+      "avg_power_score": 0,
+      "season_records": [],
+      "top_mvp_card": null,
+      "top_mvp_count": 0
+    },
+    "Team 16": {
+      "team": "Team 16",
+      "seasons_played": [],
+      "total_w": 0,
+      "total_l": 0,
+      "total_gp": 0,
+      "win_pct": 0.0,
+      "championships": 0,
+      "championship_seasons": [],
+      "best_power_score": 0,
+      "avg_power_score": 0,
+      "season_records": [],
+      "top_mvp_card": null,
+      "top_mvp_count": 0
+    },
+    "Demolition Derby": {
+      "team": "Demolition Derby",
+      "seasons_played": [],
+      "total_w": 0,
+      "total_l": 0,
+      "total_gp": 0,
+      "win_pct": 0.0,
+      "championships": 0,
+      "championship_seasons": [],
+      "best_power_score": 0,
+      "avg_power_score": 0,
+      "season_records": [],
+      "top_mvp_card": null,
+      "top_mvp_count": 0
     }
   },
   "head_to_head": {
@@ -49590,7 +49718,7 @@
     "fastest_win": {
       "value": 3,
       "team": "Murphy's Law",
-      "detail": "def. Icy Hot — Season 5 Reg. Season",
+      "detail": "def. Icy Hot \u2014 Season 5 Reg. Season",
       "link": {
         "season": 5,
         "winner": "Murphy's Law",
@@ -49603,7 +49731,7 @@
     "slowest_win": {
       "value": 32,
       "team": "Extinction",
-      "detail": "def. Smashed Potatoes — Season 6 Playoffs",
+      "detail": "def. Smashed Potatoes \u2014 Season 6 Playoffs",
       "link": {
         "season": 6,
         "winner": "Extinction",
@@ -49616,7 +49744,7 @@
     "biggest_margin": {
       "value": 50,
       "team": "Sliver Lining",
-      "detail": "def. Over Grenade 16.0 to -34.0 — Season 8 Reg. Season",
+      "detail": "def. Over Grenade 16.0 to -34.0 \u2014 Season 8 Reg. Season",
       "link": {
         "season": 8,
         "winner": "Sliver Lining",
@@ -49629,7 +49757,7 @@
     "most_damage_single_game": {
       "value": 61,
       "team": "Icy Hot",
-      "detail": "def. No Lands For You — Season 6 Reg. Season",
+      "detail": "def. No Lands For You \u2014 Season 6 Reg. Season",
       "link": {
         "season": 6,
         "winner": "Icy Hot",
@@ -49642,12 +49770,12 @@
     "best_season_record": {
       "value": 0.8,
       "team": "Fire Drilled",
-      "detail": "8-2 — Season 1"
+      "detail": "8-2 \u2014 Season 1"
     },
     "worst_season_record": {
       "value": 0.1111111111,
       "team": "The Doldrums",
-      "detail": "2-16 — Season 3"
+      "detail": "2-16 \u2014 Season 3"
     },
     "highest_season_power": {
       "value": 76.3,
@@ -49682,7 +49810,7 @@
     "most_mvps_single_card": {
       "value": 34,
       "team": "No Lands For You",
-      "detail": "\"Black Vise\" — career Game MVP"
+      "detail": "\"Black Vise\" \u2014 career Game MVP"
     },
     "most_lopsided_rivalry": {
       "value": 12,
@@ -52414,7 +52542,7 @@
         "Red"
       ],
       "archetype": "Burn",
-      "flavor": "No creatures, no subtlety, no plan B. Ball Lightning, Fork, Lightning Bolt — just a stack of red cards pointed at your opponent's face until the number hits zero.",
+      "flavor": "No creatures, no subtlety, no plan B. Ball Lightning, Fork, Lightning Bolt \u2014 just a stack of red cards pointed at your opponent's face until the number hits zero.",
       "key_cards": [
         "Ball Lightning",
         "Fork",
@@ -52466,7 +52594,7 @@
         "White"
       ],
       "archetype": "White Weenie",
-      "flavor": "Crusade, Jihad, White Knights — a self-righteous beatdown hitting harder than it should. Meekstone and Kismet keep anything bigger politely tapped down.",
+      "flavor": "Crusade, Jihad, White Knights \u2014 a self-righteous beatdown hitting harder than it should. Meekstone and Kismet keep anything bigger politely tapped down.",
       "key_cards": [
         "Crusade",
         "Jihad",
@@ -52494,7 +52622,7 @@
         "Black"
       ],
       "archetype": "Discard / Control",
-      "flavor": "Hymn to Tourach, Mind Twist, Hypnotic Specter — the hand's gone before they knew what hit them. The Rack and Megrim spend the rest of the game making them regret every card they draw.",
+      "flavor": "Hymn to Tourach, Mind Twist, Hypnotic Specter \u2014 the hand's gone before they knew what hit them. The Rack and Megrim spend the rest of the game making them regret every card they draw.",
       "key_cards": [
         "Hymn to Tourach",
         "Mind Twist",
@@ -52536,18 +52664,17 @@
     "Demolition Derby": {
       "colors": [
         "Black",
-        "Green",
-        "White"
+        "Green"
       ],
       "archetype": "Sacrifice / Reanimator",
-      "flavor": "Survival of the Fittest fills the graveyard, Recurring Nightmare loops the best creatures back on a permanent subscription. Grave Pact forces the sacrifice.",
+      "flavor": "Survival of the Fittest sets up the engine, Lhurgoyf grows into a house, and Grave Pact makes every trade one-sided. Recurring Nightmare just keeps bringing the good stuff back.",
       "key_cards": [
-        "Survival of the Fittest",
-        "Recurring Nightmare",
+        "Lhurgoyf",
         "Grave Pact",
-        "Sengir Autocrat"
+        "Recurring Nightmare",
+        "Survival of the Fittest"
       ],
-      "active": false
+      "active": true
     },
     "Hand Grenade": {
       "colors": [
@@ -52730,10 +52857,12 @@
         "Red"
       ],
       "archetype": "Chaos / Control",
-      "flavor": "Arcane Denial handles threats while Teferi's Puzzle Box scrambles everyone's hand each turn. Wins by being slightly more comfortable with total chaos than whoever it's playing against.",
+      "flavor": "Howling Mine and Teferi's Puzzle Box force a torrent of extra draws, all in the hunt for one specific combo: Illusionary Mask locked onto Phyrexian Dreadnought. Chaos as a means to an end.",
       "key_cards": [
-        "Arcane Denial",
-        "Teferi's Puzzle Box"
+        "Howling Mine",
+        "Teferi's Puzzle Box",
+        "Illusionary Mask",
+        "Phyrexian Dreadnought"
       ],
       "active": false
     },
@@ -52783,7 +52912,7 @@
         "Blue"
       ],
       "archetype": "Resource Depletion",
-      "flavor": "Hand, library, creatures, spells — everything goes. Slow the game to a crawl, eliminate the opponent's library card by card, and punish them for discarding anything.",
+      "flavor": "Hand, library, creatures, spells \u2014 everything goes. Slow the game to a crawl, eliminate the opponent's library card by card, and punish them for discarding anything.",
       "key_cards": [
         "Hypnotic Specter",
         "Underworld Dreams",
@@ -52830,7 +52959,7 @@
         "White"
       ],
       "archetype": "Good Stuff / No Core Objective",
-      "flavor": "One thing is for certain — no core objective here. A mish-mosh of great cards sitting on the sidelines, like a fruit cake: does anyone even like fruit cake?",
+      "flavor": "One thing is for certain \u2014 no core objective here. A mish-mosh of great cards sitting on the sidelines, like a fruit cake: does anyone even like fruit cake?",
       "key_cards": [
         "Serra Angel",
         "Clone",
@@ -52844,7 +52973,7 @@
         "Green"
       ],
       "archetype": "Yawgmoth Demon Engine",
-      "flavor": "Full disclosure — we'd like Yawgmoth Demon in play. Built around him and Titania's Song. A grab bag of cards that could've been good, but weren't.",
+      "flavor": "Full disclosure \u2014 we'd like Yawgmoth Demon in play. Built around him and Titania's Song. A grab bag of cards that could've been good, but weren't.",
       "key_cards": [
         "Yawgmoth Demon",
         "Titania's Song",
@@ -52911,7 +53040,7 @@
         "Green"
       ],
       "archetype": "Land Destruction / Speed",
-      "flavor": "A mixed bag of red and green built for speed — and an excuse to throw Kudzu out there. Ill-conceived from the start; a shock they lasted 9 games.",
+      "flavor": "Kudzu and Thermokarst tear up the board while Fallow Wurm tries to close it out. Built for speed, played like a fire sale \u2014 a shock they lasted 9 games.",
       "key_cards": [
         "Kudzu",
         "Thermokarst",

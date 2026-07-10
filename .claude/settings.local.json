@@ -7,7 +7,18 @@
       "Bash(cp /mnt/user-data/outputs/mtg-mvm/index.html ~/Desktop/mtg-mvm/index.html)",
       "Bash(cp /mnt/user-data/outputs/mtg-mvm/history.html ~/Desktop/mtg-mvm/history.html)",
       "Bash(cp /mnt/user-data/outputs/mtg-mvm/js/theme.js ~/Desktop/mtg-mvm/js/theme.js)",
-      "Bash(ls /mnt/user-data/outputs/mtg-mvm/ 2>/dev/null || echo \"Directory not found\")"
+      "Bash(ls /mnt/user-data/outputs/mtg-mvm/ 2>/dev/null || echo \"Directory not found\")",
+      "Bash(npx --yes live-server --version)",
+      "Bash(live-server --port=8080 --no-browser)",
+      "Bash(chmod +x /Users/jkern/Desktop/mtg-mvm/start.sh)",
+      "Bash(awk -F: '$2 > 52375')",
+      "Bash(node -e ' *)",
+      "mcp__claude-in-chrome__navigate",
+      "mcp__claude-in-chrome__computer",
+      "mcp__claude-in-chrome__read_console_messages",
+      "Bash(node -e \"const d=require\\('./data/season9.json'\\); const bd=d.teams.find\\(t=>t.id==='bone-dry'\\); console.log\\(JSON.stringify\\(bd.rosterNotes,null,2\\)\\)\")",
+      "Bash(node -e \"const d=require\\('./data/season9.json'\\); const bd=d.teams.find\\(t=>t.id==='bone-dry'\\); console.log\\(bd.rosterNotes['Abyssal Specter|1']\\)\" /Users/jkern/Desktop/mtg-mvm/)",
+      "mcp__claude-in-chrome__read_network_requests"
     ]
   }
 }

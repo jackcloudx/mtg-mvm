@@ -22,27 +22,17 @@
     .th-stat-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
   </style>
 </head>
-<body>
+<body data-page="team-history">
 
-<header class="site-header">
-  <div class="header-inner">
-    <div class="site-logo">MTG | MVM <span>The League</span></div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="index.html#games">Game Log</a>
-      <a href="index.html#teams">Teams</a>
-      <!-- Playoffs tab hidden until Season 9 regular season concludes -->
-      <a href="history.html">History</a>
-      <a href="admin.html" style="color:var(--text-muted)">Admin</a>
-    </nav>
-  </div>
-</header>
+<div id="site-header"></div>
 
 <div class="container">
   <button class="back-btn" onclick="history.back()">← Back to History</button>
   <div id="content">Loading...</div>
 </div>
 
+<script src="js/theme.js"></script>
+<script src="js/header.js"></script>
 <script>
 async function init() {
   const params = new URLSearchParams(window.location.search);
@@ -216,17 +206,42 @@ async function init() {
     }
 
   } else {
+    // Collect mashup footnotes
+    const mashupFootnotes = [];
     const seasonRows = team.season_records.map(s => {
+      let mashupNote = '';
+      if (s.mashupLabel) {
+        const fnIndex = mashupFootnotes.length + 1;
+        const roleText = s.mashupRole === 'first'
+          ? `Pre-merge portion — played as "${s.mashupLabel}" once combined`
+          : `Joined mid-season — played as "${s.mashupLabel}" once combined`;
+        const playoffNote = (s.mashupRole === 'second' && s.playoff_w != null)
+          ? ` Includes ${s.playoff_w}-${s.playoff_l} playoff record.`
+          : '';
+        mashupFootnotes.push(`<sup>${fnIndex}</sup> ${roleText}.${playoffNote}`);
+        mashupNote = `<sup style="color:var(--gold);font-size:10px;cursor:default" title="${roleText}${playoffNote}">${fnIndex}</sup>`;
+      }
+      const playoffCell = (s.mashupRole === 'second' && s.playoff_w != null)
+        ? `<td class="num" style="font-size:12px;color:var(--text-muted)">${s.playoff_w}-${s.playoff_l}</td>`
+        : '<td class="num" style="color:var(--text-muted)">—</td>';
       return `<tr>
-        <td><a href="history.html">Season ${s.season}</a>${s.is_champion ? ' 👑' : ''}</td>
+        <td><a href="history.html">Season ${s.season}</a>${s.is_champion ? ' 👑' : ''}${mashupNote}</td>
         <td class="num">${s.w}</td>
         <td class="num">${s.l}</td>
         <td class="num">${s.win_pct != null ? (s.win_pct*100).toFixed(1)+'%' : '—'}</td>
         <td style="font-size:12px;color:var(--text-secondary)">${s.team_mvp ? s.team_mvp + (s.team_mvp_count > 1 ? ' (' + s.team_mvp_count + 'x)' : '') : '—'}</td>
         <td class="num"><span class="power-score">${s.power_score.toFixed(1)}</span></td>
         <td class="num" style="color:var(--text-muted)">${s.udpi != null ? s.udpi.toFixed(3) : '—'}</td>
+        ${playoffCell}
       </tr>`;
     }).join('');
+
+    const hasPlayoffs = team.season_records.some(s => s.mashupRole === 'second' && s.playoff_w != null);
+    const footnotesHtml = mashupFootnotes.length
+      ? `<div style="font-size:11px;color:var(--text-muted);margin-top:10px;line-height:1.8;border-top:1px solid var(--border);padding-top:10px">
+          ${mashupFootnotes.map(f => `<div>${f}</div>`).join('')}
+        </div>`
+      : '';
 
     headerStats = `
       <div class="th-stats-row">
@@ -257,10 +272,11 @@ async function init() {
       <div style="overflow-x:auto;margin-bottom:24px">
         <table class="standings-table">
           <thead>
-            <tr><th>Season</th><th class="num">W</th><th class="num">L</th><th class="num">Win%</th><th>Season MVP</th><th class="num">Power Score</th><th class="num">U-DPI</th></tr>
+            <tr><th>Season</th><th class="num">W</th><th class="num">L</th><th class="num">Win%</th><th>Season MVP</th><th class="num">Power Score</th><th class="num">U-DPI</th>${hasPlayoffs ? '<th class="num">Playoffs</th>' : ''}</tr>
           </thead>
           <tbody>${seasonRows}</tbody>
         </table>
+        ${footnotesHtml}
       </div>`;
   }
 

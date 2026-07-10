@@ -4,7 +4,10 @@
 
 let seasonData = null;
 let historyData = null;
-const API = 'http://localhost:3001';
+const API = `http://${location.hostname}:3001`;
+
+const GL_HOME = ['localhost', '127.0.0.1', '192.168.4.141'];
+const glIsLocal = () => GL_HOME.includes(location.hostname);
 
 // ---- INIT ----
 async function init() {
@@ -47,9 +50,11 @@ function renderAll() {
   renderPowerRankings();
   renderResultsFeed();
   renderUpcomingThisWeek();
+  renderThisWeekResults();
   renderSeasonStats();
-  renderTeamsGrid();
+  renderMeetTeams();
   renderGameLog();
+  glInjectButton();
 }
 
 // ---- NAVIGATION ----
@@ -60,10 +65,13 @@ function navigate(pageId) {
   if (page) page.classList.add('active');
   const navLink = document.querySelector(`nav a[data-page="${pageId}"]`);
   if (navLink) navLink.classList.add('active');
-  if (pageId === 'teams') {
-    document.getElementById('teams-grid-view').style.display = 'block';
-    document.getElementById('team-detail-view').style.display = 'none';
-  }
+}
+
+// Returns a team-history.html URL if the team has an all_time_teams entry, else null
+function teamHistoryUrl(teamName) {
+  if (!historyData || !historyData.all_time_teams) return null;
+  if (!historyData.all_time_teams[teamName]) return null;
+  return `team-history.html?team=${encodeURIComponent(teamName)}`;
 }
 
 // ---- STANDINGS ----
@@ -138,7 +146,7 @@ function renderStandings() {
     return `<tr>
       <td class="team-rank num">${t.rank}</td>
       <td class="team-name-cell">
-        <a href="#" onclick="showTeam('${t.id}');return false;">${t.name}</a>
+        ${teamHistoryUrl(t.name) ? `<a href="${teamHistoryUrl(t.name)}" class="team-history-link">${t.name}</a>` : t.name}
         <span class="team-abbr">${t.shortName}</span>
       </td>
       <td class="num">${t.gp}</td>
@@ -242,6 +250,73 @@ function renderResultsFeed() {
   }).join('');
 }
 
+// ---- THIS WEEK'S RESULTS (right rail) ----
+function renderThisWeekResults() {
+  const section  = document.getElementById('this-week-results-section');
+  const container = document.getElementById('this-week-results');
+  if (!section || !container) return;
+
+  if (!seasonData.games || seasonData.games.length === 0) {
+    section.style.display = 'none';
+    return;
+  }
+
+  const maxWeek = Math.max(...seasonData.games.map(g => g.week));
+  const weekGames = seasonData.games.filter(g => g.week === maxWeek);
+  if (weekGames.length === 0) {
+    section.style.display = 'none';
+    return;
+  }
+
+  section.style.display = 'block';
+  container.innerHTML = weekGames.map(g => {
+    const winTeam  = seasonData.teams.find(t => t.id === g.winner_id);
+    const loseTeam = seasonData.teams.find(t => t.id === g.loser_id);
+    if (!winTeam || !loseTeam) return '';
+    const secondary = [
+      g.turns ? `${g.turns}t` : '',
+      g.mvp   ? `MVP: ${g.mvp}` : '',
+    ].filter(Boolean).join(' · ');
+    return `<div style="padding:7px 0;border-bottom:1px solid var(--border)">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;font-size:13px">
+        <span>${winTeam.name} <span style="color:var(--text-muted)">vs</span> ${loseTeam.name}</span>
+        <span style="color:var(--gold);white-space:nowrap;margin-left:8px">${g.winner_score} – ${g.loser_score}</span>
+      </div>
+      ${secondary ? `<div style="font-size:10px;color:var(--text-muted);margin-top:2px">${secondary}</div>` : ''}
+    </div>`;
+  }).join('');
+}
+
+// ---- MEET THE TEAMS ----
+function renderMeetTeams() {
+  const container = document.getElementById('meet-teams-grid');
+  if (!container || !seasonData.teams) return;
+  container.innerHTML = seasonData.teams.map(t => {
+    const url = teamHistoryUrl(t.name);
+    return url
+      ? `<a href="${url}" class="meet-team-card meet-team-card-link">
+          <div class="meet-team-name">${t.name}</div>
+          <div class="meet-team-identity">${t.identity || ''}</div>
+          <div class="meet-team-oneliner">${t.oneliner || ''}</div>
+        </a>`
+      : `<div class="meet-team-card">
+          <div class="meet-team-name">${t.name}</div>
+          <div class="meet-team-identity">${t.identity || ''}</div>
+          <div class="meet-team-oneliner">${t.oneliner || ''}</div>
+        </div>`;
+  }).join('');
+}
+
+function toggleMeetTeams(btn) {
+  const grid = document.getElementById('meet-teams-grid');
+  if (!grid) return;
+  const open = grid.style.display !== 'none';
+  grid.style.display = open ? 'none' : 'grid';
+  btn.setAttribute('aria-expanded', String(!open));
+  btn.querySelector('.meet-teams-chevron').textContent = open ? '▾' : '▴';
+}
+window.toggleMeetTeams = toggleMeetTeams;
+
 // ---- UPCOMING SCHEDULE ----
 function getHeadToHead(nameA, nameB) {
   if (!historyData || !historyData.head_to_head) return null;
@@ -317,102 +392,6 @@ function renderSeasonStats() {
   if (teamsEl) teamsEl.textContent = seasonData.teams ? seasonData.teams.length : 0;
 }
 
-// ---- TEAMS ----
-function renderTeamsGrid() {
-  const container = document.getElementById('teams-grid');
-  if (!container) return;
-  const standings = computeStandings();
-  const standingMap = {};
-  standings.forEach(s => standingMap[s.id] = s);
-  container.innerHTML = seasonData.teams.map(t => {
-    const s = standingMap[t.id] || { w: 0, l: 0, gp: 0 };
-    const colorsHtml = t.colors.map(c =>
-      `<span class="color-pip color-${c.replace('/', '')}">${c}</span>`
-    ).join('');
-    return `<div class="team-card" onclick="showTeam('${t.id}')">
-      <div class="team-card-header">
-        <div class="team-card-name">${t.name}</div>
-        <div class="team-card-record">${s.w}-${s.l}</div>
-      </div>
-      <div class="team-card-identity">${t.identity}</div>
-      <div class="team-card-colors">${colorsHtml}</div>
-    </div>`;
-  }).join('');
-}
-
-function showTeam(teamId) {
-  navigate('teams');
-  const team = seasonData.teams.find(t => t.id === teamId);
-  if (!team) return;
-  const standings = computeStandings();
-  const s = standings.find(t => t.id === teamId) || { w: 0, l: 0, gp: 0, diff: 0, powerScore: 0 };
-  document.getElementById('teams-grid-view').style.display = 'none';
-  const detail = document.getElementById('team-detail-view');
-  detail.style.display = 'block';
-  const cardCounts = {};
-  team.roster.forEach(c => { cardCounts[c] = (cardCounts[c] || 0) + 1; });
-  const rosterHtml = Object.entries(cardCounts).map(([card, count]) =>
-    `<span class="roster-card-name">${count > 1 ? count + 'x ' : ''}${card}</span>`
-  ).join('');
-  const teamGames = seasonData.games
-    ? seasonData.games.filter(g => g.winner_id === teamId || g.loser_id === teamId)
-        .sort((a, b) => b.week - a.week)
-    : [];
-  const gamesHtml = teamGames.length === 0
-    ? '<div style="color:var(--text-muted);font-size:13px">No games played yet.</div>'
-    : teamGames.map(g => {
-        const isWin = g.winner_id === teamId;
-        const opp = seasonData.teams.find(t => t.id === (isWin ? g.loser_id : g.winner_id));
-        const myScore = isWin ? g.winner_score : g.loser_score;
-        const oppScore = isWin ? g.loser_score : g.winner_score;
-        return `<div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px">
-          <span>Wk ${g.week} — ${opp ? opp.name : '?'}</span>
-          <span style="color:${isWin ? 'var(--green)' : 'var(--red)'}">
-            ${isWin ? 'W' : 'L'} ${myScore} – ${oppScore}
-          </span>
-        </div>`;
-      }).join('');
-  detail.innerHTML = `
-    <button class="back-btn" onclick="backToTeams()">← All Teams</button>
-    <div class="team-detail-header">
-      <div class="team-detail-name">${team.name}</div>
-      <div class="team-detail-oneliner">${team.oneliner}</div>
-      <div class="team-stats-row">
-        <div class="team-stat">
-          <span class="team-stat-val">${s.w}-${s.l}</span>
-          <span class="team-stat-label">Record</span>
-        </div>
-        <div class="team-stat">
-          <span class="team-stat-val">${s.gp > 0 ? (s.w / s.gp * 100).toFixed(0) + '%' : '—'}</span>
-          <span class="team-stat-label">Win %</span>
-        </div>
-        <div class="team-stat">
-          <span class="team-stat-val" style="color:${s.diff >= 0 ? 'var(--green)' : 'var(--red)'}">${s.diff >= 0 ? '+' : ''}${s.diff}</span>
-          <span class="team-stat-label">Pt Diff</span>
-        </div>
-        <div class="team-stat">
-          <span class="team-stat-val" style="color:var(--gold)">${s.gp > 0 ? (s.powerScore * 100).toFixed(1) : '—'}</span>
-          <span class="team-stat-label">Power Score</span>
-        </div>
-      </div>
-    </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start">
-      <div>
-        <div class="section-header"><span class="section-title">Roster</span></div>
-        <div class="roster-grid">${rosterHtml || '<span style="color:var(--text-muted);font-size:13px">Roster pending.</span>'}</div>
-      </div>
-      <div>
-        <div class="section-header"><span class="section-title">Game Log</span></div>
-        ${gamesHtml}
-      </div>
-    </div>`;
-}
-
-function backToTeams() {
-  document.getElementById('teams-grid-view').style.display = 'block';
-  document.getElementById('team-detail-view').style.display = 'none';
-}
-
 // ---- GAME LOG ----
 function renderGameLog(filterTeamId = null) {
   const container = document.getElementById('game-log-list');
@@ -429,10 +408,16 @@ function renderGameLog(filterTeamId = null) {
     const winTeam = seasonData.teams.find(t => t.id === g.winner_id);
     const loseTeam = seasonData.teams.find(t => t.id === g.loser_id);
     if (!winTeam || !loseTeam) return '';
+    const editBtn = glIsLocal() && g.id
+      ? `<button class="gl-edit-btn" onclick="event.stopPropagation();editLogGame('${g.id}')" title="Edit game">✎</button>`
+      : '';
     return `<div class="game-log-item" onclick="this.classList.toggle('expanded')">
       <div class="game-log-header">
         <span class="game-log-matchup">${winTeam.name} vs ${loseTeam.name}</span>
-        <span class="game-log-score">${g.winner_score} – ${g.loser_score}</span>
+        <span style="display:flex;align-items:center;gap:6px">
+          <span class="game-log-score">${g.winner_score} – ${g.loser_score}</span>
+          ${editBtn}
+        </span>
       </div>
       <div class="game-log-meta">
         <span>Week ${g.week}</span>
@@ -444,11 +429,264 @@ function renderGameLog(filterTeamId = null) {
   }).join('');
 }
 
+// ---- GAME LOG INLINE FORM ----
+
+let _glEditingGameId = null;
+let _glScheduleId    = null;
+
+function glInjectButton() {
+  if (!glIsLocal()) return;
+  const area = document.getElementById('gl-log-btn-area');
+  if (!area || area.querySelector('button')) return;
+  const btn = document.createElement('button');
+  btn.id = 'gl-open-btn';
+  btn.textContent = '+ Log game';
+  btn.className = 'gl-log-btn';
+  btn.onclick = () => openLogGameForm({});
+  area.appendChild(btn);
+}
+
+function openLogGameForm(prefill = {}) {
+  const layout = document.getElementById('gl-layout');
+  const area   = document.getElementById('log-game-form-area');
+  if (!area || !layout) return;
+  // Toggle closed if already open without a specific prefill trigger
+  if (layout.classList.contains('rail-open') && !prefill.gameId && !prefill.scheduleId) {
+    closeLogGameForm();
+    return;
+  }
+  _glEditingGameId = prefill.gameId || null;
+  _glScheduleId    = prefill.scheduleId || null;
+  area.innerHTML = _glBuildFormHTML(prefill);
+  layout.classList.add('rail-open');
+}
+
+function closeLogGameForm() {
+  _glEditingGameId = null;
+  _glScheduleId    = null;
+  const layout = document.getElementById('gl-layout');
+  const area   = document.getElementById('log-game-form-area');
+  if (layout) layout.classList.remove('rail-open');
+  if (area)   area.innerHTML = '';
+}
+
+function glPrefillFromSchedule(scheduleId) {
+  const g = (seasonData.schedule || []).find(s => s.id === scheduleId);
+  if (!g) return;
+  const home = seasonData.teams.find(t => t.id === g.home_id);
+  const away = seasonData.teams.find(t => t.id === g.away_id);
+  openLogGameForm({
+    scheduleId: g.id,
+    week: g.week,
+    winnerId: g.home_id,
+    loserId: g.away_id,
+    matchupLabel: `${home ? home.name : g.home_id} vs ${away ? away.name : g.away_id}`,
+  });
+}
+
+function editLogGame(gameId) {
+  const g = (seasonData.games || []).find(x => x.id === gameId);
+  if (!g) return;
+  openLogGameForm({
+    gameId: g.id,
+    week: g.week,
+    winnerId: g.winner_id,
+    loserId: g.loser_id,
+    winnerScore: g.winner_score ?? '',
+    loserScore:  g.loser_score  ?? '',
+    winnerMana:  g.winner_mana  ?? '',
+    loserMana:   g.loser_mana   ?? '',
+    winnerHand:  g.winner_hand  ?? '',
+    loserHand:   g.loser_hand   ?? '',
+    winnerDeploy: g.winner_deploy ?? '',
+    loserDeploy:  g.loser_deploy  ?? '',
+    turns: g.turns ?? '',
+    mvp:   g.mvp   ?? '',
+    notes: g.notes ?? '',
+  });
+}
+
+function _glBuildFormHTML(p = {}) {
+  const isEdit = !!p.gameId;
+  const teams  = (seasonData && seasonData.teams) || [];
+  const v      = (k, def = '') => (p[k] != null && p[k] !== undefined) ? p[k] : def;
+
+  const teamOpts = (selectedId) => teams.map(t =>
+    `<option value="${t.id}"${t.id === selectedId ? ' selected' : ''}>${t.name}</option>`
+  ).join('');
+
+  return `
+    <div class="log-game-form">
+      <div class="log-game-form-header">
+        <span class="log-game-form-title">${isEdit ? 'Edit Game' : 'Log Game'}</span>
+        <button class="log-game-form-close" onclick="closeLogGameForm()">✕</button>
+      </div>
+      ${p.scheduleId ? `<div class="log-game-prefill-banner">
+        <strong>${p.matchupLabel || ''}</strong> — Week ${p.week || ''}. Set Winner / Loser to match the result.
+      </div>` : ''}
+      <div class="gl-form-pair">
+        <div class="form-group">
+          <label>Week</label>
+          <input type="number" id="gl-week" min="1" placeholder="1" value="${v('week')}">
+        </div>
+        <div class="form-group">
+          <label>Turns</label>
+          <input type="number" id="gl-turns" min="1" placeholder="e.g. 8" value="${v('turns')}">
+        </div>
+      </div>
+      <div class="gl-form-pair">
+        <div class="form-group">
+          <label>Winner</label>
+          <select id="gl-winner">${teamOpts(v('winnerId'))}</select>
+        </div>
+        <div class="form-group">
+          <label>Loser</label>
+          <select id="gl-loser">${teamOpts(v('loserId'))}</select>
+        </div>
+      </div>
+      <div class="gl-form-pair">
+        <div class="form-group">
+          <label>W Score</label>
+          <input type="number" id="gl-winner-score" placeholder="e.g. 14" value="${v('winnerScore')}">
+        </div>
+        <div class="form-group">
+          <label>L Score</label>
+          <input type="number" id="gl-loser-score" placeholder="e.g. -3" value="${v('loserScore')}">
+        </div>
+      </div>
+      <div class="gl-form-pair">
+        <div class="form-group">
+          <label>W Mana</label>
+          <input type="number" id="gl-winner-mana" value="${v('winnerMana')}">
+        </div>
+        <div class="form-group">
+          <label>L Mana</label>
+          <input type="number" id="gl-loser-mana" value="${v('loserMana')}">
+        </div>
+      </div>
+      <div class="gl-form-pair">
+        <div class="form-group">
+          <label>W Hand</label>
+          <input type="number" id="gl-winner-hand" value="${v('winnerHand')}">
+        </div>
+        <div class="form-group">
+          <label>L Hand</label>
+          <input type="number" id="gl-loser-hand" value="${v('loserHand')}">
+        </div>
+      </div>
+      <div class="gl-form-pair">
+        <div class="form-group">
+          <label>W Deploy</label>
+          <input type="number" id="gl-winner-deploy" value="${v('winnerDeploy')}">
+        </div>
+        <div class="form-group">
+          <label>L Deploy</label>
+          <input type="number" id="gl-loser-deploy" value="${v('loserDeploy')}">
+        </div>
+      </div>
+      <div class="gl-form-full">
+        <div class="form-group">
+          <label>MVP Card</label>
+          <input type="text" id="gl-mvp" placeholder="e.g. Crystalline Sliver" value="${v('mvp')}">
+        </div>
+      </div>
+      <div class="gl-form-full">
+        <div class="form-group">
+          <label>Notes</label>
+          <textarea id="gl-notes" placeholder="Game recap, key moments...">${v('notes')}</textarea>
+        </div>
+      </div>
+      <div class="log-game-form-actions">
+        <button class="btn-primary" onclick="submitLogGame()" style="width:auto;padding:8px 20px;font-size:13px">
+          ${isEdit ? 'Update Game' : 'Save Game'}
+        </button>
+        <button class="gl-cancel-btn" onclick="closeLogGameForm()">Cancel</button>
+      </div>
+      <div id="gl-success" class="success-msg">✓ Game saved.</div>
+      <div id="gl-error" class="success-msg" style="background:#2a1a1a;border-color:#c0392b;color:#d47a7a">✗ Could not reach server.</div>
+    </div>`;
+}
+
+function _glNum(id) { const v = parseInt((document.getElementById(id) || {}).value); return isNaN(v) ? null : v; }
+function _glStr(id) { return ((document.getElementById(id) || {}).value || '').trim(); }
+
+async function submitLogGame() {
+  const week        = _glNum('gl-week');
+  const winnerId    = _glStr('gl-winner');
+  const loserId     = _glStr('gl-loser');
+  const winnerScore = _glNum('gl-winner-score');
+  const loserScore  = _glNum('gl-loser-score');
+  const turns       = _glNum('gl-turns');
+
+  if (!week || !winnerId || !loserId || winnerScore == null || loserScore == null || !turns) {
+    alert('Please fill in all required fields: Week, Teams, Scores, Turns.');
+    return;
+  }
+  if (winnerId === loserId) {
+    alert('Winner and Loser cannot be the same team.');
+    return;
+  }
+
+  const gameData = {
+    week, winner_id: winnerId, loser_id: loserId,
+    winner_score: winnerScore, loser_score: loserScore, turns,
+    mvp:          _glStr('gl-mvp'),
+    notes:        _glStr('gl-notes'),
+    winner_mana:  _glNum('gl-winner-mana'),
+    loser_mana:   _glNum('gl-loser-mana'),
+    winner_hand:  _glNum('gl-winner-hand'),
+    loser_hand:   _glNum('gl-loser-hand'),
+    winner_deploy: _glNum('gl-winner-deploy'),
+    loser_deploy:  _glNum('gl-loser-deploy'),
+  };
+
+  if (_glEditingGameId !== null) {
+    const idx = (seasonData.games || []).findIndex(g => g.id === _glEditingGameId);
+    if (idx !== -1) Object.assign(seasonData.games[idx], gameData);
+  } else {
+    if (!seasonData.games) seasonData.games = [];
+    seasonData.games.push({ id: `g${Date.now()}`, ...gameData });
+
+    if (_glScheduleId && seasonData.schedule) {
+      const sched = seasonData.schedule.find(s => s.id === _glScheduleId);
+      if (sched) {
+        Object.assign(sched, {
+          played: true, winner_id: winnerId, loser_id: loserId,
+          winner_score: winnerScore, loser_score: loserScore,
+          turns, mvp: gameData.mvp, notes: gameData.notes,
+        });
+      }
+    }
+  }
+
+  const ok = await saveData();
+  if (ok) {
+    const successEl = document.getElementById('gl-success');
+    if (successEl) { successEl.style.display = 'block'; }
+    setTimeout(() => {
+      closeLogGameForm();
+      renderStandings();
+      renderPowerRankings();
+      renderResultsFeed();
+      renderUpcomingThisWeek();
+      renderThisWeekResults();
+      renderSeasonStats();
+      renderGameLog();
+    }, 600);
+  } else {
+    const errEl = document.getElementById('gl-error');
+    if (errEl) { errEl.style.display = 'block'; setTimeout(() => { errEl.style.display = 'none'; }, 3000); }
+  }
+}
+
 // ---- EXPOSE TO HTML ----
 window.navigate = navigate;
-window.showTeam = showTeam;
-window.backToTeams = backToTeams;
 window.renderGameLog = renderGameLog;
+window.openLogGameForm   = openLogGameForm;
+window.closeLogGameForm  = closeLogGameForm;
+window.glPrefillFromSchedule = glPrefillFromSchedule;
+window.editLogGame       = editLogGame;
+window.submitLogGame     = submitLogGame;
 
 function renderSchedule(filterTeamId = null) {
   const container = document.getElementById('game-log-list');
@@ -477,11 +715,17 @@ function renderSchedule(filterTeamId = null) {
       currentWeek = g.week;
       weekHeader = `<div style="font-size:11px;color:var(--gold);text-transform:uppercase;letter-spacing:0.08em;padding:10px 0 4px;border-top:1px solid var(--border);margin-top:4px">Week ${g.week}</div>`;
     }
-    return `${weekHeader}<div class="game-log-item" style="cursor:default">
+    const scheduleClick = glIsLocal()
+      ? `onclick="glPrefillFromSchedule('${g.id}')" title="Click to log this game"`
+      : 'style="cursor:default"';
+    const scheduleHint = glIsLocal()
+      ? `<div class="gl-schedule-hint">click to log →</div>` : '';
+    return `${weekHeader}<div class="game-log-item" ${scheduleClick}>
       <div class="game-log-header">
         <span class="game-log-matchup">${home.name} vs ${away.name}</span>
-        <span style="font-size:11px;color:var(--text-muted)">Week ${g.week}</span>
+        <span style="font-size:11px;color:var(--text-muted)">Week ${g.week}${glIsLocal() ? '' : ''}</span>
       </div>
+      ${scheduleHint}
     </div>`;
   }).join('');
 }

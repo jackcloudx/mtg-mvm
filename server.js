@@ -58,8 +58,9 @@ const server = http.createServer((req, res) => {
   res.end('Not found');
 });
 
-server.listen(PORT, () => {
+server.listen(PORT, '0.0.0.0', () => {
   console.log(`\nMTG MVM data server running on http://localhost:${PORT}`);
+  console.log(`LAN access: http://192.168.4.141:${PORT}`);
   console.log(`Watching: ${DATA_FILE}`);
   console.log(`Ready to save game data.\n`);
 });

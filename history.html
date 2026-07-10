@@ -105,21 +105,9 @@
     .champ-badge { display: inline-block; background: var(--gold-dim); color: var(--gold); font-size: 10px; padding: 1px 6px; border-radius: 8px; margin-left: 6px; font-weight: 600; }
   </style>
 </head>
-<body>
+<body data-page="history">
 
-<header class="site-header">
-  <div class="header-inner">
-    <div class="site-logo">MTG | MVM <span>The League</span></div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="index.html#games">Game Log</a>
-      <a href="index.html#teams">Teams</a>
-      <a href="history.html" class="active">History</a>
-      <a href="admin.html" style="color:var(--text-muted)">Admin</a>
-      <button class="theme-toggle" id="theme-btn" onclick="toggleTheme()">☀ Light</button>
-    </nav>
-  </div>
-</header>
+<div id="site-header"></div>
 
 <div class="container">
 
@@ -178,7 +166,7 @@
       <div class="adv-bucket-tabs" id="at-adv-tabs">
         <button class="adv-bucket-tab active" onclick="setAtAdvBucket('Margins',this)">Margins</button>
         <button class="adv-bucket-tab" onclick="setAtAdvBucket('Pace',this)">Pace</button>
-        <button class="adv-bucket-tab" onclick="setAtAdvBucket('Damage_Efficiency',this)">Damage Efficiency</button>
+        <button class="adv-bucket-tab" onclick="setAtAdvBucket('Damage Efficiency',this)">Damage Efficiency</button>
         <button class="adv-bucket-tab" onclick="setAtAdvBucket('Deployment',this)">Deployment</button>
         <button class="adv-bucket-tab" onclick="setAtAdvBucket('Resources',this)">Resources</button>
       </div>
@@ -194,6 +182,25 @@
 </div>
 
 <script>
+const ADV_STAT_BUCKETS = {
+  'Margins': { available: true, cols: [
+    {key:'win_life_delta',label:'Margin-W',g:1},{key:'lose_life_delta',label:'Margin-L',g:1},
+    {key:'dgg',label:'DG/Game',g:2},{key:'dtg',label:'DT/Game',g:2},{key:'ddg',label:'DD/Game',g:2}] },
+  'Pace': { available: true, cols: [
+    {key:'turn_w',label:'Turns-W',g:1},{key:'turn_l',label:'Turns-L',g:1},{key:'turn_delta',label:'Turn Δ',g:1},
+    {key:'win_pct_short',label:'Win% Short',pct:true,g:2},{key:'win_pct_mid',label:'Win% Mid',pct:true,g:2},{key:'win_pct_long',label:'Win% Long',pct:true,g:2}] },
+  'Damage Efficiency': { available: null, note: 'Seasons 4+', cols: [
+    {key:'dgt',label:'DG/Turn',g:1},{key:'dtt',label:'DT/Turn',g:1},{key:'ddt',label:'DD/Turn',g:1},
+    {key:'damage_per_card_w',label:'Dmg/Card-W',g:2},{key:'damage_per_card_l',label:'Dmg/Card-L',g:2},{key:'damage_per_card_delta',label:'Dmg/Card Δ',g:2},
+    {key:'cards_per_damage',label:'Cards/Dmg',dec:3,g:3}] },
+  'Deployment': { available: null, note: 'Seasons 6+', cols: [
+    {key:'deploy_w',label:'Deploy-W',g:1},{key:'deploy_l',label:'Deploy-L',g:1},{key:'deploy_delta',label:'Deploy Δ',g:1},
+    {key:'deploy_per_mana_w',label:'Dply/Mana-W',g:2},{key:'deploy_per_mana_l',label:'Dply/Mana-L',g:2},{key:'deploy_per_mana_delta',label:'Dply/Mana Δ',g:2}] },
+  'Resources': { available: null, note: 'Seasons 4+', cols: [
+    {key:'mana_delta',label:'Mana Δ',g:1},{key:'hand_delta',label:'Hand Δ',g:2},
+    {key:'opp_mana_delta',label:'OppMana Δ',g:3},{key:'opp_hand_delta',label:'OppHand Δ',g:4}] },
+};
+
 let historyData = null;
 let atMode = 'franchise';
 let atSortField = 'avg_power_score';
@@ -535,24 +542,14 @@ function buildAdvancedStatsHtml(season) {
   if (!adv || Object.keys(adv).length === 0) return '';
   const teams = season.standings.map(s => s.team).filter(t => adv[t]);
   const f = (v, dec=2) => v != null ? Number(v).toFixed(dec) : '<span style="color:var(--text-muted)">—</span>';
-  const BUCKETS = {
-    'Margins': { available: true, cols: [
-      {key:'win_life_delta',label:'Margin-W',g:1},{key:'lose_life_delta',label:'Margin-L',g:1},
-      {key:'dgg',label:'DG/Game',g:2},{key:'dtg',label:'DT/Game',g:2},{key:'ddg',label:'DD/Game',g:2}] },
-    'Pace': { available: true, cols: [
-      {key:'turn_w',label:'Turns-W',g:1},{key:'turn_l',label:'Turns-L',g:1},{key:'turn_delta',label:'Turn Δ',g:1},
-      {key:'win_pct_short',label:'Win% Short',pct:true,g:2},{key:'win_pct_mid',label:'Win% Mid',pct:true,g:2},{key:'win_pct_long',label:'Win% Long',pct:true,g:2}] },
-    'Damage Efficiency': { available: season.season >= 4, note: 'Seasons 4+', cols: [
-      {key:'dgt',label:'DG/Turn',g:1},{key:'dtt',label:'DT/Turn',g:1},{key:'ddt',label:'DD/Turn',g:1},
-      {key:'damage_per_card_w',label:'Dmg/Card-W',g:2},{key:'damage_per_card_l',label:'Dmg/Card-L',g:2},{key:'damage_per_card_delta',label:'Dmg/Card Δ',g:2},
-      {key:'cards_per_damage',label:'Cards/Dmg',dec:3,g:3}] },
-    'Deployment': { available: season.season >= 6, note: 'Seasons 6+', cols: [
-      {key:'deploy_w',label:'Deploy-W',g:1},{key:'deploy_l',label:'Deploy-L',g:1},{key:'deploy_delta',label:'Deploy Δ',g:1},
-      {key:'deploy_per_mana_w',label:'Dply/Mana-W',g:2},{key:'deploy_per_mana_l',label:'Dply/Mana-L',g:2},{key:'deploy_per_mana_delta',label:'Dply/Mana Δ',g:2}] },
-    'Resources': { available: season.season >= 4, note: 'Seasons 4+', cols: [
-      {key:'mana_delta',label:'Mana Δ',g:1},{key:'hand_delta',label:'Hand Δ',g:2},
-      {key:'opp_mana_delta',label:'OppMana Δ',g:3},{key:'opp_hand_delta',label:'OppHand Δ',g:4}] },
-  };
+  const BUCKETS = Object.fromEntries(
+    Object.entries(ADV_STAT_BUCKETS).map(([k, v]) => [k, {
+      ...v,
+      available: k === 'Damage Efficiency' || k === 'Resources' ? season.season >= 4
+                 : k === 'Deployment' ? season.season >= 6
+                 : true
+    }])
+  );
   const bucketNames = Object.keys(BUCKETS);
   const sectionId = 'adv-' + season.season;
   const tablesHtml = bucketNames.map(name => {
@@ -585,7 +582,7 @@ function switchAdvBucket(sectionId, bucketKey, btn) {
   tabsEl.querySelectorAll('.adv-bucket-tab').forEach(t => t.classList.remove('active'));
   btn.classList.add('active');
   const seasonNum = sectionId.split('-')[1];
-  ['Margins','Pace','Damage_Efficiency','Deployment','Resources'].forEach(b => {
+  Object.keys(ADV_STAT_BUCKETS).map(n => n.replace(/ /g, '_')).forEach(b => {
     const el = document.getElementById('adv-tbl-' + seasonNum + '-' + b);
     if (el) el.style.display = b === bucketKey ? 'block' : 'none';
   });
@@ -1161,27 +1158,8 @@ function renderAllTime() {
   const tbody = document.getElementById('at-tbody');
   const footnote = document.getElementById('at-footnote');
 
-  const BUCKETS = {
-    'Margins': { label: 'Margins', cols: [
-      {key:'win_life_delta',label:'Margin-W'},{key:'lose_life_delta',label:'Margin-L'},
-      {key:'dgg',label:'DG/Game'},{key:'dtg',label:'DT/Game'},{key:'ddg',label:'DD/Game'}] },
-    'Pace': { label: 'Pace', cols: [
-      {key:'turn_w',label:'Turns-W'},{key:'turn_l',label:'Turns-L'},{key:'turn_delta',label:'Turn Δ'},
-      {key:'win_pct_short',label:'Win% Short',pct:true},{key:'win_pct_mid',label:'Win% Mid',pct:true},{key:'win_pct_long',label:'Win% Long',pct:true}] },
-    'Damage_Efficiency': { label: 'Damage Efficiency', cols: [
-      {key:'dgt',label:'DG/Turn'},{key:'dtt',label:'DT/Turn'},{key:'ddt',label:'DD/Turn'},
-      {key:'damage_per_card_w',label:'Dmg/Card-W'},{key:'damage_per_card_l',label:'Dmg/Card-L'},{key:'damage_per_card_delta',label:'Dmg/Card Δ'},
-      {key:'cards_per_damage',label:'Cards/Dmg',dec:3}] },
-    'Deployment': { label: 'Deployment', cols: [
-      {key:'deploy_w',label:'Deploy-W'},{key:'deploy_l',label:'Deploy-L'},{key:'deploy_delta',label:'Deploy Δ'},
-      {key:'deploy_per_mana_w',label:'Dply/Mana-W'},{key:'deploy_per_mana_l',label:'Dply/Mana-L'},{key:'deploy_per_mana_delta',label:'Dply/Mana Δ'}] },
-    'Resources': { label: 'Resources', cols: [
-      {key:'mana_delta',label:'Mana Δ'},{key:'hand_delta',label:'Hand Δ'},
-      {key:'opp_mana_delta',label:'OppMana Δ'},{key:'opp_hand_delta',label:'OppHand Δ'}] },
-  };
-
   const f = (v, dec=2) => v != null ? Number(v).toFixed(dec) : '<span style="color:var(--text-muted)">—</span>';
-  const bucket = BUCKETS[atAdvBucket];
+  const bucket = ADV_STAT_BUCKETS[atAdvBucket];
 
   if (atMode === 'franchise') {
     footnote.textContent = atStatsMode === 'basic'
@@ -1324,6 +1302,7 @@ window.addEventListener('popstate', (e) => {
 document.addEventListener('DOMContentLoaded', init);
 </script>
 <script src="js/theme.js"></script>
-</script>
+<script src="js/header.js"></script>
+
 </body>
 </html>

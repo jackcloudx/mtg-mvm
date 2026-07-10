@@ -1,0 +1,590 @@
+// ============================================
+//   MTG | MVM — ROSTERS.JS
+// ============================================
+
+const LAND_FILTER = new Set([
+  'Plains','Island','Swamp','Mountain','Forest',
+  'Badlands','Plateau','Taiga','Tropical Island','Tundra',
+  'Underground Sea','Volcanic Island',
+  'City of Brass','Cyclopean Tomb','Desert','Ghost Town',
+  'Lake of the Dead','Maze of Ith',"Mishra's Factory","Mishra's Workshop",
+  'Strip Mine','Sulfurous Springs',"Urza's Mine","Urza's Power Plant","Urza's Tower"
+]);
+
+const HOME_ADDRESSES = ['localhost', '127.0.0.1', '192.168.4.141'];
+const isLocal = () => HOME_ADDRESSES.includes(window.location.hostname);
+
+const TXN_TYPES = ['Waive', 'Trade', 'Buy', 'Proxy', 'Create'];
+
+let _seasonData = null;
+let _landsVisible = false;
+let _currentView = 'byteam';
+let _currentTeamId = null;
+let _allFilter  = { txnType: '', proxy: '', status: '' };
+let _teamFilter = { txnType: '', proxy: '', status: '' };
+
+async function rostersInit() {
+  try {
+    const API = `http://${window.location.hostname}:3001`;
+    const res = await fetch(`${API}/data`);
+    _seasonData = await res.json();
+  } catch (e) {
+    const res = await fetch('data/season9.json');
+    _seasonData = await res.json();
+  }
+  const leagueTeams = _seasonData.teams || [];
+  if (!_currentTeamId && leagueTeams.length) {
+    _currentTeamId = leagueTeams.slice().sort((a,b) => a.name.localeCompare(b.name))[0].id;
+  }
+  renderRostersPage();
+}
+
+function renderRostersPage() {
+  const container = document.getElementById('rosters-root');
+  if (!container || !_seasonData) return;
+
+  const leagueTeams = (_seasonData.teams || []).slice().sort((a,b) => a.name.localeCompare(b.name));
+  const bossDecks = _seasonData.bossDecks || [];
+
+  container.innerHTML = `
+    <div class="roster-control-bar">
+      <div class="roster-toggle">
+        <button onclick="rosterSwitchView('byteam')" class="${_currentView==='byteam'?'active':''}">By Team</button>
+        <button onclick="rosterSwitchView('allteams')" class="${_currentView==='allteams'?'active':''}">All Teams</button>
+      </div>
+      <label class="roster-lands-label">
+        <input type="checkbox" onchange="rosterToggleLands(this.checked)" ${_landsVisible?'checked':''}>
+        Show Lands
+      </label>
+    </div>
+    ${_currentView === 'byteam' ? renderByTeamView(leagueTeams, bossDecks) : renderAllTeamsView(leagueTeams, bossDecks)}
+  `;
+}
+
+// ---- BY TEAM ----
+
+function renderByTeamView(leagueTeams, bossDecks) {
+  const allDecks = [...leagueTeams, ...bossDecks];
+  const team = allDecks.find(t => t.id === _currentTeamId) || leagueTeams[0];
+
+  const leagueBtns = leagueTeams.map(t =>
+    `<button class="roster-team-btn${t.id===_currentTeamId?' active':''}" data-team-id="${t.id}" onclick="rosterSelectTeam('${t.id}')">${t.shortName || t.name}</button>`
+  ).join('');
+
+  const bossBtns = bossDecks.map(t =>
+    `<button class="roster-team-btn boss${t.id===_currentTeamId?' active':''}" data-team-id="${t.id}" onclick="rosterSelectTeam('${t.id}')">${t.name}</button>`
+  ).join('');
+
+  return `
+    <div class="roster-switcher" id="roster-switcher">
+      <div class="roster-switcher-block">
+        <div class="roster-switcher-label">League Teams</div>
+        <div class="roster-switcher-row">${leagueBtns}</div>
+      </div>
+      ${bossDecks.length ? `
+      <div class="roster-switcher-block">
+        <div class="roster-switcher-label">Boss Decks</div>
+        <div class="roster-switcher-row">${bossBtns}</div>
+      </div>` : ''}
+    </div>
+    <div id="roster-table-section">
+      ${team ? renderTeamTable(team) : '<div class="roster-empty">No team selected.</div>'}
+    </div>
+  `;
+}
+
+function renderTeamFilterBar() {
+  const hasFilter = _teamFilter.txnType || _teamFilter.proxy || _teamFilter.status;
+  return `
+    <div class="roster-filter-bar">
+      <span class="roster-filter-label">Filter:</span>
+      <select onchange="rosterSetTeamFilter('txnType',this.value)">
+        <option value="">All TXN types</option>
+        ${TXN_TYPES.map(t => `<option value="${t}"${_teamFilter.txnType===t?' selected':''}>${t}</option>`).join('')}
+      </select>
+      <select onchange="rosterSetTeamFilter('proxy',this.value)">
+        <option value="">Proxy: any</option>
+        <option value="yes"${_teamFilter.proxy==='yes'?' selected':''}>Proxy only</option>
+        <option value="no"${_teamFilter.proxy==='no'?' selected':''}>Non-proxy only</option>
+      </select>
+      <select onchange="rosterSetTeamFilter('status',this.value)">
+        <option value="">All statuses</option>
+        <option value="pending"${_teamFilter.status==='pending'?' selected':''}>Pending (any note)</option>
+      </select>
+      ${hasFilter ? `<button class="roster-filter-clear" onclick="rosterClearTeamFilter()">Clear</button>` : ''}
+    </div>`;
+}
+
+function renderTeamTable(team) {
+  const sorted = [...(team.roster || [])].sort();
+  const notes = team.rosterNotes || {};
+  const history = team.transactionHistory || [];
+  const counts = {};
+
+  const rows = sorted.map(card => {
+    counts[card] = (counts[card] || 0);
+    const idx = counts[card]++;
+    const key = `${card}|${idx}`;
+    const note = notes[key] || {};
+    return { card, idx, key, note };
+  }).filter(r => {
+    if (!_landsVisible && LAND_FILTER.has(r.card)) return false;
+    const hasNote = !!(r.note.txnType || r.note.freeAgent || r.note.proxy);
+    if (_teamFilter.txnType && r.note.txnType !== _teamFilter.txnType) return false;
+    if (_teamFilter.proxy === 'yes' && !r.note.proxy) return false;
+    if (_teamFilter.proxy === 'no'  &&  r.note.proxy) return false;
+    if (_teamFilter.status === 'pending' && !hasNote) return false;
+    return true;
+  });
+
+  const filterBar = renderTeamFilterBar();
+  const hasFilter = _teamFilter.txnType || _teamFilter.proxy || _teamFilter.status;
+
+  const nonLandCount = (team.roster || []).filter(c => !LAND_FILTER.has(c)).length;
+  const landCount    = (team.roster || []).filter(c =>  LAND_FILTER.has(c)).length;
+  const txnHistory   = history.slice().sort((a,b) => b.season - a.season || b.week - a.week);
+
+  const addRow = isLocal() ? `
+    <tr id="add-card-row-${team.id}">
+      <td colspan="2">
+        <input type="text" id="add-card-name-${team.id}" placeholder="Card name…"
+          style="width:100%;font-size:13px;padding:5px 8px;border-radius:4px"
+          onkeydown="if(event.key==='Enter'){event.preventDefault();rosterAddCard('${team.id}');}">
+      </td>
+      <td>
+        <input type="number" id="add-card-qty-${team.id}" value="1" min="1" max="4"
+          style="width:52px;font-size:13px;padding:5px 6px;border-radius:4px">
+      </td>
+      <td colspan="${isLocal() ? 3 : 2}">
+        <button class="commit-btn" onclick="rosterAddCard('${team.id}')"
+          style="white-space:nowrap">+ Add Card</button>
+      </td>
+    </tr>` : '';
+
+  if (rows.length === 0) {
+    const msg = hasFilter
+      ? 'No cards match the current filters.'
+      : `No cards yet.`;
+    const emptyTable = isLocal() ? `
+      <div class="roster-table-wrap">
+        <table class="roster-table">
+          <thead>
+            <tr><th>Card</th><th>TXN</th><th>Qty</th><th colspan="3"></th></tr>
+          </thead>
+          <tbody>${addRow}</tbody>
+        </table>
+      </div>` : `<div class="roster-empty">${msg}</div>`;
+    return filterBar + `
+      <div class="roster-team-header">
+        <div class="roster-team-name">${team.name}</div>
+        <div class="roster-card-count">0 cards</div>
+      </div>` + emptyTable;
+  }
+
+  const tableRows    = rows.map(r => renderRow(r, team.id)).join('');
+  const shownLabel   = hasFilter ? `${rows.length} matching` : `${rows.length} shown`;
+
+  return filterBar + `
+    <div class="roster-team-header">
+      <div class="roster-team-name">${team.name}</div>
+      <div class="roster-card-count">${shownLabel} · ${nonLandCount} non-land · ${landCount} land</div>
+    </div>
+    <div class="roster-table-wrap">
+      <table class="roster-table">
+        <thead>
+          <tr>
+            <th>Card</th>
+            <th>TXN</th>
+            <th>Free Agent</th>
+            <th>Proxy</th>
+            <th>Status</th>
+            ${isLocal() ? '<th></th>' : ''}
+          </tr>
+        </thead>
+        <tbody>
+          ${tableRows}
+          ${addRow}
+        </tbody>
+      </table>
+    </div>
+    ${txnHistory.length ? `
+    <div class="txn-history-section">
+      <div class="txn-history-label">Transaction History</div>
+      ${txnHistory.map(tx => `
+        <div class="txn-row">
+          <span>S${tx.season} Wk${tx.week} &nbsp;&middot;&nbsp;
+            <span style="color:var(--red)">&#8722; ${tx.cardOut}</span>
+            &nbsp;&rarr;&nbsp;
+            <span style="color:var(--green)">+ ${tx.cardIn}</span>
+          </span>
+          <span>${tx.txnType || ''}${tx.timestamp ? ' &middot; ' + new Date(tx.timestamp).toLocaleDateString() : ''}</span>
+        </div>`).join('')}
+    </div>` : ''}
+  `;
+}
+
+function renderRow(r, teamId) {
+  const { card, key, note } = r;
+  const hasNote = !!(note.txnType || note.freeAgent || note.proxy);
+  const safeKey = key.replace(/[|'\s]/g, '-');
+
+  const txnOptions = ['', ...TXN_TYPES].map(t =>
+    `<option value="${t}"${note.txnType === t ? ' selected' : ''}>${t || '—'}</option>`
+  ).join('');
+
+  const freeAgentVal = (note.freeAgent || '').replace(/"/g, '&quot;');
+
+  return `<tr class="${hasNote ? 'has-note' : ''}" id="row-${teamId}-${safeKey}">
+    <td>${card}</td>
+    <td>
+      <select data-team="${teamId}" data-key="${key}"
+        onchange="rosterNoteUpdate(this.dataset.team,this.dataset.key,'txnType',this.value)">
+        ${txnOptions}
+      </select>
+    </td>
+    <td>
+      <input type="text"
+        data-team="${teamId}" data-key="${key}"
+        value="${freeAgentVal}" placeholder="card name…"
+        oninput="rosterNoteUpdate(this.dataset.team,this.dataset.key,'freeAgent',this.value)">
+    </td>
+    <td class="td-center">
+      <input type="checkbox"
+        data-team="${teamId}" data-key="${key}"
+        ${note.proxy ? 'checked' : ''}
+        onchange="rosterNoteUpdate(this.dataset.team,this.dataset.key,'proxy',this.checked)">
+    </td>
+    <td class="muted">${note.status || ''}${note.week ? ' Wk' + note.week : ''}</td>
+    ${isLocal() ? `
+    <td class="td-commit" id="commit-${teamId}-${safeKey}" style="white-space:nowrap">
+      ${hasNote ? `<button class="commit-btn"
+        data-team="${teamId}" data-key="${key}"
+        onclick="rosterCommit(this.dataset.team,this.dataset.key)">Commit</button>` : ''}
+      <button class="commit-btn" style="color:var(--red);border-color:var(--red);margin-left:4px"
+        data-team="${teamId}" data-key="${key}" data-card="${card.replace(/"/g,'&quot;')}"
+        onclick="rosterRemoveCard(this.dataset.team,this.dataset.key,this.dataset.card)">✕</button>
+    </td>` : ''}
+  </tr>`;
+}
+
+// ---- NOTE UPDATE (auto-save, no re-render) ----
+
+let _saveTimer = null;
+
+function rosterNoteUpdate(teamId, cardKey, field, value) {
+  const allDecks = [...(_seasonData.teams || []), ...(_seasonData.bossDecks || [])];
+  const team = allDecks.find(t => t.id === teamId);
+  if (!team) return;
+  if (!team.rosterNotes) team.rosterNotes = {};
+  if (!team.rosterNotes[cardKey]) team.rosterNotes[cardKey] = {};
+  team.rosterNotes[cardKey][field] = value;
+
+  // Surgically update row class and commit cell — no full re-render
+  const note = team.rosterNotes[cardKey];
+  const hasNote = !!(note.txnType || note.freeAgent || note.proxy);
+  const safeKey = cardKey.replace(/[|'\s]/g, '-');
+
+  const row = document.getElementById(`row-${teamId}-${safeKey}`);
+  if (row) row.className = hasNote ? 'has-note' : '';
+
+  if (isLocal()) {
+    const commitCell = document.getElementById(`commit-${teamId}-${safeKey}`);
+    if (commitCell) {
+      commitCell.innerHTML = hasNote
+        ? `<button class="commit-btn"
+            data-team="${teamId}" data-key="${cardKey.replace(/"/g, '&quot;')}"
+            onclick="rosterCommit(this.dataset.team,this.dataset.key)">Commit</button>`
+        : '';
+    }
+  }
+
+  clearTimeout(_saveTimer);
+  _saveTimer = setTimeout(saveToServer, 800);
+}
+
+async function saveToServer() {
+  if (!isLocal()) return;
+  const API = `http://${window.location.hostname}:3001`;
+  try {
+    await fetch(`${API}/save`, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(_seasonData)
+    });
+  } catch (e) {
+    console.warn('Auto-save failed:', e);
+  }
+}
+
+// ---- ALL TEAMS ----
+
+function renderAllTeamsView(leagueTeams, bossDecks) {
+  const filterBar = `
+    <div class="roster-filter-bar">
+      <span class="roster-filter-label">Filter:</span>
+      <select onchange="rosterSetFilter('txnType',this.value)">
+        <option value="">All TXN types</option>
+        ${TXN_TYPES.map(t => `<option value="${t}" ${_allFilter.txnType===t?'selected':''}>${t}</option>`).join('')}
+      </select>
+      <select onchange="rosterSetFilter('proxy',this.value)">
+        <option value="">Proxy: any</option>
+        <option value="yes" ${_allFilter.proxy==='yes'?'selected':''}>Proxy only</option>
+        <option value="no"  ${_allFilter.proxy==='no' ?'selected':''}>Non-proxy only</option>
+      </select>
+      <select onchange="rosterSetFilter('status',this.value)">
+        <option value="">All statuses</option>
+        <option value="pending" ${_allFilter.status==='pending'?'selected':''}>Pending (any note)</option>
+      </select>
+    </div>`;
+
+  const allDecks = [...leagueTeams, ...bossDecks];
+  const rows = [];
+  allDecks.forEach(team => {
+    const sorted = [...(team.roster || [])].sort();
+    const notes = team.rosterNotes || {};
+    const counts = {};
+    sorted.forEach(card => {
+      counts[card] = (counts[card] || 0);
+      const idx = counts[card]++;
+      const key = `${card}|${idx}`;
+      const note = notes[key] || {};
+      if (!_landsVisible && LAND_FILTER.has(card)) return;
+      const hasNote = note.txnType || note.freeAgent || note.proxy;
+      if (_allFilter.txnType && note.txnType !== _allFilter.txnType) return;
+      if (_allFilter.proxy === 'yes' && !note.proxy) return;
+      if (_allFilter.proxy === 'no'  &&  note.proxy) return;
+      if (_allFilter.status === 'pending' && !hasNote) return;
+      rows.push({ team, card, key, note });
+    });
+  });
+
+  if (rows.length === 0) {
+    return filterBar + '<div class="roster-empty">No cards match the current filters.</div>';
+  }
+
+  const teamCount  = new Set(rows.map(r => r.team.id)).size;
+  const tableRows  = rows.map(({ team, card, key, note }) => {
+    const hasNote = note.txnType || note.freeAgent || note.proxy;
+    return `<tr class="${hasNote ? 'has-note' : ''}">
+      <td class="muted">${team.name}</td>
+      <td>${card}</td>
+      <td>${note.txnType ? `<span class="txn-badge txn-${note.txnType}">${note.txnType}</span>` : '<span class="muted">—</span>'}</td>
+      <td>${note.freeAgent ? `<span style="color:var(--green)">${note.freeAgent}</span>` : '<span class="muted">—</span>'}</td>
+      <td>${note.proxy ? '<span class="proxy-badge">Proxy</span>' : '<span class="muted">—</span>'}</td>
+      <td class="muted">${note.status || ''}</td>
+    </tr>`;
+  }).join('');
+
+  return filterBar + `
+    <div class="roster-count">${rows.length} card${rows.length!==1?'s':''} across ${teamCount} team${teamCount!==1?'s':''}</div>
+    <div class="roster-table-wrap">
+      <table class="roster-table">
+        <thead>
+          <tr>
+            <th>Team</th>
+            <th>Card</th>
+            <th>TXN</th>
+            <th>Free Agent</th>
+            <th>Proxy</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>${tableRows}</tbody>
+      </table>
+    </div>`;
+}
+
+// ---- COMMIT ----
+
+async function rosterCommit(teamId, cardKey) {
+  if (!isLocal()) return;
+  const allDecks = [...(_seasonData.teams || []), ...(_seasonData.bossDecks || [])];
+  const team = allDecks.find(t => t.id === teamId);
+  if (!team) return;
+  const note = (team.rosterNotes || {})[cardKey];
+  if (!note) return;
+
+  const card = cardKey.split('|')[0];
+  const freeAgent = note.freeAgent || '';
+  const txnType = note.txnType || '';
+
+  const confirmMsg = freeAgent
+    ? `Commit: swap "${card}" → "${freeAgent}" (${txnType || 'no type'})?`
+    : `Commit: mark "${card}" as ${txnType || 'updated'}?`;
+  if (!confirm(confirmMsg)) return;
+
+  const API = `http://${window.location.hostname}:3001`;
+
+  if (freeAgent && freeAgent !== card) {
+    const idx = parseInt(cardKey.split('|')[1] || '0');
+    let replaced = 0;
+    for (let i = 0; i < team.roster.length; i++) {
+      if (team.roster[i] === card) {
+        if (replaced === idx) { team.roster[i] = freeAgent; break; }
+        replaced++;
+      }
+    }
+    const newNotes = {};
+    const newSorted = [...team.roster].sort();
+    const newCounts = {};
+    newSorted.forEach(c => {
+      newCounts[c] = (newCounts[c] || 0);
+      const k = `${c}|${newCounts[c]++}`;
+      newNotes[k] = team.rosterNotes[k] || {};
+    });
+    team.rosterNotes = newNotes;
+    if (!team.transactionHistory) team.transactionHistory = [];
+    team.transactionHistory.push({
+      cardOut: card, cardIn: freeAgent, week: note.week || null,
+      season: 9, txnType, timestamp: new Date().toISOString()
+    });
+  } else {
+    team.rosterNotes[cardKey] = {};
+  }
+
+  try {
+    const res = await fetch(`${API}/save`, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(_seasonData)
+    });
+    if (!res.ok) throw new Error('Save failed');
+    alert(`✓ Committed.${freeAgent ? ` Roster updated: ${card} → ${freeAgent}` : ''}`);
+    renderRostersPage();
+  } catch (e) {
+    alert('✗ Could not reach server. Is server.js running?');
+  }
+}
+
+// ---- ADD CARD ----
+
+async function rosterAddCard(teamId) {
+  if (!isLocal()) return;
+  const nameEl = document.getElementById(`add-card-name-${teamId}`);
+  const qtyEl  = document.getElementById(`add-card-qty-${teamId}`);
+  if (!nameEl) return;
+
+  const cardName = nameEl.value.trim();
+  if (!cardName) { nameEl.focus(); return; }
+  const qty = Math.max(1, parseInt(qtyEl?.value || '1', 10) || 1);
+
+  const allDecks = [...(_seasonData.teams || []), ...(_seasonData.bossDecks || [])];
+  const team = allDecks.find(t => t.id === teamId);
+  if (!team) return;
+  if (!team.roster) team.roster = [];
+
+  for (let i = 0; i < qty; i++) team.roster.push(cardName);
+
+  const API = `http://${window.location.hostname}:3001`;
+  try {
+    const res = await fetch(`${API}/save`, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(_seasonData)
+    });
+    if (!res.ok) throw new Error('Save failed');
+  } catch (e) {
+    console.warn('Add card save failed:', e);
+  }
+
+  // Re-render just the table section, keep land toggle state
+  const tableSection = document.getElementById('roster-table-section');
+  if (tableSection) tableSection.innerHTML = renderTeamTable(team);
+}
+
+// ---- REMOVE CARD ----
+
+async function rosterRemoveCard(teamId, cardKey, card) {
+  if (!isLocal()) return;
+  if (!confirm(`Remove "${card}" from roster?`)) return;
+
+  const allDecks = [...(_seasonData.teams || []), ...(_seasonData.bossDecks || [])];
+  const team = allDecks.find(t => t.id === teamId);
+  if (!team || !team.roster) return;
+
+  const idx = parseInt(cardKey.split('|')[1] || '0', 10);
+  let removed = 0;
+  for (let i = 0; i < team.roster.length; i++) {
+    if (team.roster[i] === card) {
+      if (removed === idx) { team.roster.splice(i, 1); break; }
+      removed++;
+    }
+  }
+
+  // Rebuild rosterNotes keys so indices stay consistent after removal
+  if (team.rosterNotes) {
+    const newNotes = {};
+    const newCounts = {};
+    [...team.roster].sort().forEach(c => {
+      newCounts[c] = (newCounts[c] || 0);
+      const k = `${c}|${newCounts[c]++}`;
+      if (team.rosterNotes[k]) newNotes[k] = team.rosterNotes[k];
+    });
+    team.rosterNotes = newNotes;
+  }
+
+  const API = `http://${window.location.hostname}:3001`;
+  try {
+    const res = await fetch(`${API}/save`, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(_seasonData)
+    });
+    if (!res.ok) throw new Error('Save failed');
+  } catch (e) {
+    console.warn('Remove card save failed:', e);
+  }
+
+  const tableSection = document.getElementById('roster-table-section');
+  if (tableSection) tableSection.innerHTML = renderTeamTable(team);
+}
+
+// ---- PUBLIC HANDLERS ----
+
+function rosterSwitchView(view)        { _currentView = view;      renderRostersPage(); }
+function rosterSelectTeam(id) {
+  _currentTeamId = id;
+  _teamFilter = { txnType: '', proxy: '', status: '' }; // reset filters on team switch
+  const tableSection = document.getElementById('roster-table-section');
+  const switcher     = document.getElementById('roster-switcher');
+  if (tableSection && switcher && _currentView === 'byteam') {
+    switcher.querySelectorAll('.roster-team-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.teamId === id);
+    });
+    const leagueTeams = (_seasonData.teams || []).slice().sort((a,b) => a.name.localeCompare(b.name));
+    const bossDecks   = _seasonData.bossDecks || [];
+    const allDecks    = [...leagueTeams, ...bossDecks];
+    const team        = allDecks.find(t => t.id === id) || leagueTeams[0];
+    tableSection.innerHTML = team ? renderTeamTable(team) : '<div class="roster-empty">No team selected.</div>';
+  } else {
+    renderRostersPage();
+  }
+}
+function rosterToggleLands(v) { _landsVisible = v; renderRostersPage(); }
+function rosterSetFilter(key, value)     { _allFilter[key] = value;  renderRostersPage(); }
+function rosterSetTeamFilter(key, value) {
+  _teamFilter[key] = value;
+  const tableSection = document.getElementById('roster-table-section');
+  if (tableSection && _currentView === 'byteam') {
+    const leagueTeams = (_seasonData.teams || []).slice().sort((a,b) => a.name.localeCompare(b.name));
+    const bossDecks   = _seasonData.bossDecks || [];
+    const allDecks    = [...leagueTeams, ...bossDecks];
+    const team        = allDecks.find(t => t.id === _currentTeamId) || leagueTeams[0];
+    tableSection.innerHTML = team ? renderTeamTable(team) : '<div class="roster-empty">No team selected.</div>';
+  } else {
+    renderRostersPage();
+  }
+}
+function rosterClearTeamFilter() {
+  _teamFilter = { txnType: '', proxy: '', status: '' };
+  rosterSetTeamFilter('txnType', ''); // triggers re-render
+}
+
+window.rosterSwitchView      = rosterSwitchView;
+window.rosterSelectTeam      = rosterSelectTeam;
+window.rosterToggleLands     = rosterToggleLands;
+window.rosterSetFilter       = rosterSetFilter;
+window.rosterSetTeamFilter   = rosterSetTeamFilter;
+window.rosterClearTeamFilter = rosterClearTeamFilter;
+window.rosterNoteUpdate      = rosterNoteUpdate;
+window.rosterCommit          = rosterCommit;
+window.rosterAddCard         = rosterAddCard;
+window.rosterRemoveCard      = rosterRemoveCard;
+
+document.addEventListener('DOMContentLoaded', rostersInit);

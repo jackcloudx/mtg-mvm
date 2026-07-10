@@ -6,24 +6,9 @@
   <title>MTG | MVM The League</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body data-page="index">
 
-<!-- HEADER -->
-<header class="site-header">
-  <div class="header-inner">
-    <div class="site-logo">MTG | MVM <span>The League</span></div>
-    <nav>
-      <a href="#" data-page="home" class="active" onclick="navigate('home');return false;">Home</a>
-      <a href="#" data-page="games" onclick="navigate('games');return false;">Game Log</a>
-      <a href="#" data-page="teams" onclick="navigate('teams');return false;">Teams</a>
-      <!-- Playoffs tab hidden until Season 9 regular season concludes -->
-      <!-- <a href="#" data-page="playoffs" onclick="navigate('playoffs');return false;">Playoffs</a> -->
-      <a href="history.html">History</a>
-      <a href="admin.html" style="color:var(--text-muted)">Admin</a>
-      <button class="theme-toggle" id="theme-btn" onclick="toggleTheme()">☀ Light</button>
-    </nav>
-  </div>
-</header>
+<div id="site-header"></div>
 
 <!-- HOME PAGE -->
 <div id="page-home" class="page active">
@@ -33,6 +18,7 @@
     <div class="season-banner">
       <h1>Season 9</h1>
       <div class="tagline">A decade of cardboard warfare. Six different champions. A menacing Boss Fight gauntlet to cap it all off. Season 9 inherits it all.</div>
+      <div class="season-preview">Nine seasons deep and still bleeding cardboard. Trick or Treat Freaks return chasing an unprecedented third straight finals appearance, while Bone Dry and Womperzoo walk in as the new blood — no history, no reputation, nothing to lose. Demolition Derby returns to the fold, stripped down to black and green sacrifice, and a sixteenth seat still sits open, waiting on a strategy nobody's playing yet. Same 20 life, same refusal to make this easy on anyone.</div>
       <div class="season-stats">
         <div class="season-stat-item">
           <span class="season-stat-val" id="stat-games">0</span>
@@ -83,7 +69,7 @@
         </div>
       </div>
 
-      <!-- RIGHT: Power Rankings + Matchups stacked -->
+      <!-- RIGHT: Power Rankings + Matchups + This Week's Results stacked -->
       <div style="display:flex;flex-direction:column">
         <div class="section-header">
           <span class="section-title">Risers &amp; Fallers</span>
@@ -95,19 +81,26 @@
           <span class="section-title">This Week's Matchups</span>
           <a href="#" class="section-link" onclick="navigate('games');return false;">Game Log →</a>
         </div>
-        <div id="upcoming-week" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:4px 14px">
+        <div id="upcoming-week" style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:4px 14px;margin-bottom:28px">
           <div style="color:var(--text-muted);font-size:13px;padding:8px 0">Loading...</div>
+        </div>
+        <div id="this-week-results-section" style="display:none">
+          <div class="section-header">
+            <span class="section-title">This Week's Results</span>
+            <a href="#" class="section-link" onclick="navigate('games');return false;">All games →</a>
+          </div>
+          <div class="results-feed" id="this-week-results">
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Full width: Latest Results -->
-    <div style="margin-top:28px">
-      <div class="section-header">
-        <span class="section-title">Latest Results</span>
-        <a href="#" class="section-link" onclick="navigate('games');return false;">All games →</a>
-      </div>
-      <div class="results-feed" id="results-feed">
+    <!-- Meet the Teams (collapsed) -->
+    <div class="meet-teams-section" style="margin-top:28px">
+      <button class="meet-teams-toggle" onclick="toggleMeetTeams(this)" aria-expanded="false">
+        Meet the Season 9 Teams <span class="meet-teams-chevron">▾</span>
+      </button>
+      <div class="meet-teams-grid" id="meet-teams-grid" style="display:none">
         <div style="color:var(--text-muted);font-size:13px;padding:12px 0">Loading...</div>
       </div>
     </div>
@@ -120,33 +113,24 @@
   <div class="container">
     <div class="section-header" style="margin-bottom:20px">
       <span class="section-title" style="font-size:16px;color:var(--text-secondary)">Season 9 — Game Log</span>
-      <span style="display:flex;gap:6px">
+      <span style="display:flex;gap:6px;align-items:center">
+        <span id="gl-log-btn-area"></span>
         <button id="log-tab-results" onclick="switchGameLogTab('results')" style="font-size:11px;padding:3px 10px;border-radius:4px;border:1px solid var(--gold);background:var(--gold);color:var(--bg);cursor:pointer">Results</button>
         <button id="log-tab-schedule" onclick="switchGameLogTab('schedule')" style="font-size:11px;padding:3px 10px;border-radius:4px;border:1px solid var(--border);background:transparent;color:var(--text-muted);cursor:pointer">Schedule</button>
       </span>
     </div>
-    <div class="game-filters" id="game-filters">
-      <button class="filter-btn active" onclick="filterGames(null, this)">All Teams</button>
-      <!-- Team filters populated by JS -->
-    </div>
-    <div class="game-log-list" id="game-log-list">
-      <div style="color:var(--text-muted);font-size:13px">Loading...</div>
-    </div>
-  </div>
-</div>
-
-<!-- TEAMS PAGE -->
-<div id="page-teams" class="page">
-  <div class="container">
-    <div id="teams-grid-view">
-      <div class="section-header" style="margin-bottom:20px">
-        <span class="section-title" style="font-size:16px;color:var(--text-secondary)">Season 9 — Teams</span>
+    <div id="gl-layout">
+      <div id="gl-list-col">
+        <div class="game-filters" id="game-filters">
+          <button class="filter-btn active" onclick="filterGames(null, this)">All Teams</button>
+          <!-- Team filters populated by JS -->
+        </div>
+        <div class="game-log-list" id="game-log-list">
+          <div style="color:var(--text-muted);font-size:13px">Loading...</div>
+        </div>
       </div>
-      <div class="teams-grid" id="teams-grid">
-        <div style="color:var(--text-muted)">Loading...</div>
-      </div>
+      <div id="log-game-form-area"></div>
     </div>
-    <div id="team-detail-view" style="display:none"></div>
   </div>
 </div>
 
@@ -161,6 +145,7 @@
 </div>
 
 <script src="js/theme.js"></script>
+<script src="js/header.js"></script>
 <script src="js/app.js"></script>
 <script>
   // Populate team filter buttons after data loads

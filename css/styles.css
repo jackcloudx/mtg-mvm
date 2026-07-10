@@ -274,6 +274,81 @@ nav a:hover, nav a.active {
   line-height: 1.7;
 }
 .result-card.expanded .result-notes { display: block; }
+
+/* ---- MEET THE TEAMS ---- */
+.meet-teams-section {
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+}
+.meet-teams-toggle {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.15s;
+  margin-bottom: 0;
+}
+.meet-teams-toggle:hover { color: var(--gold); }
+.meet-teams-chevron { font-size: 12px; color: var(--text-muted); }
+.meet-teams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+.meet-team-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+}
+a.meet-team-card-link {
+  display: block;
+  text-decoration: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+a.meet-team-card-link:hover {
+  border-color: var(--gold-dim);
+  background: var(--bg-hover, var(--bg-card));
+}
+a.meet-team-card-link:hover .meet-team-name {
+  color: var(--gold);
+}
+.team-history-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.team-history-link:hover {
+  color: var(--gold);
+}
+.meet-team-name {
+  font-family: var(--font-head);
+  font-size: 15px;
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+.meet-team-identity {
+  font-size: 12px;
+  color: var(--gold-dim);
+  margin-bottom: 5px;
+  font-style: italic;
+}
+.meet-team-oneliner {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
 .expand-hint {
   font-size: 11px;
   color: var(--text-muted);
@@ -332,6 +407,15 @@ nav a:hover, nav a.active {
 .season-banner .tagline {
   color: var(--text-secondary);
   font-size: 15px;
+}
+.season-preview {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.65;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  max-width: 720px;
 }
 .season-stats {
   display: flex;
@@ -657,6 +741,108 @@ select option { background: var(--bg-card); }
   border-radius: var(--radius);
   font-size: 13px;
   margin-top: 12px;
+}
+
+/* ---- GAME LOG INLINE FORM ---- */
+/* ---- GAME LOG SIDE-RAIL LAYOUT ---- */
+#gl-layout {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+#gl-list-col {
+  flex: 1;
+  min-width: 0;
+}
+#log-game-form-area {
+  width: 300px;
+  flex-shrink: 0;
+  display: none;
+}
+#gl-layout.rail-open #log-game-form-area {
+  display: block;
+}
+
+.log-game-form {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  position: sticky;
+  top: 16px;
+}
+.log-game-form-header {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px solid var(--border);
+}
+.log-game-form-title {
+  font-family: var(--font-head); font-size: 15px; color: var(--text-primary);
+}
+.log-game-form-close {
+  background: none; border: none; color: var(--text-muted);
+  font-size: 15px; cursor: pointer; padding: 3px 7px;
+  border-radius: var(--radius); line-height: 1; transition: color 0.15s;
+}
+.log-game-form-close:hover { color: var(--text-primary); }
+.log-game-prefill-banner {
+  background: rgba(184,151,42,0.08); border: 1px solid var(--gold-dim);
+  border-radius: var(--radius); padding: 7px 10px;
+  font-size: 12px; color: var(--text-secondary); margin-bottom: 14px;
+  line-height: 1.4;
+}
+
+/* Compact paired rows inside the rail */
+.gl-form-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.gl-form-pair .form-group { margin-bottom: 0; }
+.gl-form-full { margin-bottom: 8px; }
+.gl-form-full .form-group { margin-bottom: 0; }
+
+/* Tighten labels and inputs inside the rail */
+.log-game-form label {
+  font-size: 10px; letter-spacing: 0.06em; margin-bottom: 3px;
+}
+.log-game-form input,
+.log-game-form select {
+  font-size: 13px; padding: 5px 8px;
+}
+.log-game-form textarea {
+  font-size: 13px; padding: 6px 8px; min-height: 90px; resize: vertical;
+}
+
+.log-game-form-actions {
+  display: flex; gap: 8px; align-items: center; margin-top: 12px;
+}
+.gl-log-btn {
+  background: none; border: 1px solid var(--border); color: var(--text-muted);
+  padding: 3px 10px; border-radius: 4px; cursor: pointer;
+  font-size: 11px; font-family: var(--font-body); transition: all 0.15s;
+}
+.gl-log-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.gl-cancel-btn {
+  background: none; border: 1px solid var(--border); color: var(--text-muted);
+  padding: 7px 14px; border-radius: var(--radius); cursor: pointer;
+  font-size: 13px; font-family: var(--font-body); transition: all 0.15s;
+}
+.gl-cancel-btn:hover { border-color: var(--border-accent); color: var(--text-primary); }
+.gl-edit-btn {
+  background: none; border: 1px solid var(--border); color: var(--text-muted);
+  padding: 2px 7px; border-radius: 4px; cursor: pointer;
+  font-size: 11px; font-family: var(--font-body); transition: all 0.15s;
+  flex-shrink: 0;
+}
+.gl-edit-btn:hover { border-color: var(--gold-dim); color: var(--gold); }
+.gl-schedule-hint {
+  font-size: 10px; color: var(--gold-dim); margin-top: 2px;
+}
+
+@media (max-width: 900px) {
+  #gl-layout { flex-direction: column; }
+  #log-game-form-area { width: 100%; }
 }
 
 /* ---- RESPONSIVE ---- */
