@@ -68,7 +68,7 @@ function renderByTeamView(leagueTeams, bossDecks) {
   const team = allDecks.find(t => t.id === _currentTeamId) || leagueTeams[0];
 
   const leagueBtns = leagueTeams.map(t =>
-    `<button class="roster-team-btn${t.id===_currentTeamId?' active':''}" data-team-id="${t.id}" onclick="rosterSelectTeam('${t.id}')">${t.shortName || t.name}</button>`
+    `<button class="roster-team-btn${t.id===_currentTeamId?' active':''}" data-team-id="${t.id}" onclick="rosterSelectTeam('${t.id}')">${t.name}</button>`
   ).join('');
 
   const bossBtns = bossDecks.map(t =>
@@ -84,7 +84,7 @@ function renderByTeamView(leagueTeams, bossDecks) {
       ${bossDecks.length ? `
       <div class="roster-switcher-block">
         <div class="roster-switcher-label">Boss Decks</div>
-        <div class="roster-switcher-row">${bossBtns}</div>
+        <div class="roster-switcher-row boss-row">${bossBtns}</div>
       </div>` : ''}
     </div>
     <div id="roster-table-section">

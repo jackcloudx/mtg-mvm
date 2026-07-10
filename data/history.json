@@ -47953,8 +47953,8 @@
       "top_mvp_card": null,
       "top_mvp_count": 0
     },
-    "Team 16": {
-      "team": "Team 16",
+    "Demolition Derby": {
+      "team": "Demolition Derby",
       "seasons_played": [],
       "total_w": 0,
       "total_l": 0,
@@ -47968,8 +47968,8 @@
       "top_mvp_card": null,
       "top_mvp_count": 0
     },
-    "Demolition Derby": {
-      "team": "Demolition Derby",
+    "Blue Angels": {
+      "team": "Blue Angels",
       "seasons_played": [],
       "total_w": 0,
       "total_l": 0,
@@ -53061,6 +53061,20 @@
         "Erhnam Djinn",
         "Stormbind",
         "Lightning Bolt"
+      ],
+      "active": true
+    },
+    "Blue Angels": {
+      "colors": [
+        "White",
+        "Blue"
+      ],
+      "archetype": "Moat Control",
+      "flavor": "Nothing touches the ground and lives. Moat seals the earth, Land Tax keeps the engine fed, and a handful of old-school fliers do the rest.",
+      "key_cards": [
+        "Moat",
+        "Land Tax",
+        "Serendib Djinn"
       ],
       "active": true
     }

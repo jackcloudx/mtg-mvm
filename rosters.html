@@ -36,11 +36,12 @@
       font-size: 11px; color: var(--text-muted); text-transform: uppercase;
       letter-spacing: 0.08em; margin-bottom: 7px;
     }
-    .roster-switcher-row { display: flex; gap: 6px; flex-wrap: wrap; }
+    .roster-switcher-row { display: flex; flex-wrap: wrap; gap: 4px; }
     .roster-team-btn {
       background: var(--bg); border: 1px solid var(--border);
-      color: var(--text-muted); padding: 5px 12px; border-radius: 4px;
-      cursor: pointer; font-size: 12px; font-family: var(--font-body); transition: all 0.15s;
+      color: var(--text-muted); padding: 3px 9px; border-radius: 4px;
+      cursor: pointer; font-size: 11px; font-family: var(--font-body); transition: all 0.15s;
+      white-space: nowrap;
     }
     .roster-team-btn:hover:not(.active) { border-color: var(--border-accent); color: var(--text-secondary); }
     .roster-team-btn.active { border-color: var(--gold-dim); color: var(--gold); background: var(--bg-card); }
