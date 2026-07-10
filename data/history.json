@@ -53069,12 +53069,12 @@
         "White",
         "Blue"
       ],
-      "archetype": "Moat Control",
-      "flavor": "Nothing touches the ground and lives. Moat seals the earth, Land Tax keeps the engine fed, and a handful of old-school fliers do the rest.",
+      "archetype": "Djinn Aggro",
+      "flavor": "Four Serendib Djinn come in fast and heavy, fed by a manabase built to keep recovering from their own upkeep cost. Moat, Wrath of God, and Armageddon sit in reserve for whenever the race needs a reset.",
       "key_cards": [
-        "Moat",
+        "Serendib Djinn",
         "Land Tax",
-        "Serendib Djinn"
+        "Moat"
       ],
       "active": true
     }
