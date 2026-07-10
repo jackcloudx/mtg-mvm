@@ -34,7 +34,7 @@
       "loser_score": -8,
       "turns": 7,
       "mvp": "The Rack",
-      "notes": "Bone Dry. Look at these guys! Win their first ever League contest in, dare I say it, thrilling fashion! There\u2019s a great nostalgic vibe to this crew, watching revised Bad Moon, Will-O-The-Wisp, Demonic Tutor, Mind Twist, a Hyppy and a Dark Ritual do their thing, damn! The Dry heave 2x The Rack + hand discard to crushDnS, and in part thanks to the Furnace of Rath in play. What a great start to their inaugural season. \n\nDnS. Damn, may have misplayed the Furnace of Rath and likely deployed the DD too fast. Tough call, as it felt like Bone Dry would wipe out their hand in any instant."
+      "notes": "Bone Dry. Look at these guys! Win their first ever League contest in, dare I say it, thrilling fashion! There’s a great nostalgic vibe to this crew, watching revised Bad Moon, Will-O-The-Wisp, Demonic Tutor, Mind Twist, a Hyppy and a Dark Ritual do their thing, damn! The Dry heave 2x The Rack + hand discard to crushDnS, and in part thanks to the Furnace of Rath in play. What a great start to their inaugural season. \n\nDnS. Damn, may have misplayed the Furnace of Rath and likely deployed the DD too fast. Tough call, as it felt like Bone Dry would wipe out their hand in any instant."
     },
     {
       "id": "g1782786583179",
@@ -3046,7 +3046,7 @@
         "Red"
       ],
       "identity": "All-goblin chaos. Unrecognizable after a trip to the build-a-goblin factory.",
-      "oneliner": "Wild, reckless, overpowering \u2014 now with custom cards from Sir Thomas Steven Kern.",
+      "oneliner": "Wild, reckless, overpowering — now with custom cards from Sir Thomas Steven Kern.",
       "roster": [
         "Blood Moon",
         "Blood Moon",
@@ -3119,8 +3119,8 @@
           "week": null
         },
         "Blood Moon|1": {
-          "txnType": "",
-          "freeAgent": "",
+          "txnType": "Waive",
+          "freeAgent": "Chaos Orb",
           "proxy": false,
           "status": "",
           "week": null
@@ -3168,15 +3168,15 @@
           "week": null
         },
         "Goblin Bomb|0": {
-          "txnType": "",
-          "freeAgent": "",
+          "txnType": "Waive",
+          "freeAgent": "Goblin Balloon Brigade",
           "proxy": false,
           "status": "",
           "week": null
         },
         "Goblin Bombardment|0": {
-          "txnType": "",
-          "freeAgent": "",
+          "txnType": "Waive",
+          "freeAgent": "Chain Lightning",
           "proxy": true,
           "status": "",
           "week": null
@@ -3246,14 +3246,14 @@
         },
         "Goblin Nomad|0": {
           "txnType": "Waive",
-          "freeAgent": "Goblin Goliath",
+          "freeAgent": "Goblin Goliath / Shivan",
           "proxy": false,
           "status": "",
           "week": null
         },
         "Goblin Nomad|1": {
           "txnType": "Waive",
-          "freeAgent": "Goblin Goliath",
+          "freeAgent": "Goblin Goliath / Shivan",
           "proxy": false,
           "status": "",
           "week": null
@@ -3287,15 +3287,15 @@
           "week": null
         },
         "Goblin Warrens|0": {
-          "txnType": "",
-          "freeAgent": "",
+          "txnType": "Waive",
+          "freeAgent": "Chain Lightning",
           "proxy": false,
           "status": "",
           "week": null
         },
         "Goblin Wizard|0": {
-          "txnType": "",
-          "freeAgent": "",
+          "txnType": "Waive",
+          "freeAgent": "Goblins of the Flarg",
           "proxy": false,
           "status": "",
           "week": null
@@ -3322,15 +3322,15 @@
           "week": null
         },
         "Mogg Fanatic|0": {
-          "txnType": "",
-          "freeAgent": "",
+          "txnType": "Waive",
+          "freeAgent": "Goblin Balloon Brigade",
           "proxy": false,
           "status": "",
           "week": null
         },
         "Mogg Fanatic|1": {
-          "txnType": "",
-          "freeAgent": "",
+          "txnType": "Waive",
+          "freeAgent": "Goblins of the Flarg",
           "proxy": false,
           "status": "",
           "week": null
@@ -4832,8 +4832,8 @@
           "week": null
         },
         "Rocket Launcher|2": {
-          "txnType": "",
-          "freeAgent": "",
+          "txnType": "Buy",
+          "freeAgent": "Sword of the Ages",
           "proxy": false,
           "status": "",
           "week": null
@@ -5629,7 +5629,7 @@
         "White"
       ],
       "identity": "Knights, Thunder Spirits, and more knights. Mono-white aggro.",
-      "oneliner": "Self-righteous, aggressive, unapologetic \u2014 the same holy beatdown returns for another crusade.",
+      "oneliner": "Self-righteous, aggressive, unapologetic — the same holy beatdown returns for another crusade.",
       "roster": [
         "Balance",
         "Castle",
@@ -6620,7 +6620,7 @@
         "Blue"
       ],
       "identity": "Moat-locked control, closing games through the air.",
-      "oneliner": "Nothing gets off the ground against the Blue Angels \u2014 Moat seals the earth while Serendib Djinn and Ghost Ship do the work overhead.",
+      "oneliner": "Nothing gets off the ground against the Blue Angels — Moat seals the earth while Serendib Djinn and Ghost Ship do the work overhead.",
       "roster": [
         "Moat",
         "Moat",
@@ -6684,7 +6684,16 @@
         "Plains"
       ],
       "transactionHistory": [],
-      "rosterNotes": {}
+      "rosterNotes": {
+        "Jayemdae Tome|0": {
+          "freeAgent": "Air Elemental",
+          "txnType": "Waive"
+        },
+        "Land Tax|2": {
+          "freeAgent": "Mahamoti Djinn",
+          "txnType": "Waive"
+        }
+      }
     },
     {
       "id": "womperzoo",
@@ -6694,7 +6703,7 @@
         "TBD"
       ],
       "identity": "Roster and identity to be finalized before Season 9 kickoff.",
-      "oneliner": "New entrant \u2014 details coming soon.",
+      "oneliner": "New entrant — details coming soon.",
       "roster": [
         "Balduvian Horde",
         "Balduvian Horde",
@@ -7265,7 +7274,7 @@
       "loser_score": -8,
       "turns": 7,
       "mvp": "The Rack",
-      "notes": "Bone Dry. Look at these guys! Win their first ever League contest in, dare I say it, thrilling fashion! There\u2019s a great nostalgic vibe to this crew, watching revised Bad Moon, Will-O-The-Wisp, Demonic Tutor, Mind Twist, a Hyppy and a Dark Ritual do their thing, damn! The Dry heave 2x The Rack + hand discard to crushDnS, and in part thanks to the Furnace of Rath in play. What a great start to their inaugural season. \n\nDnS. Damn, may have misplayed the Furnace of Rath and likely deployed the DD too fast. Tough call, as it felt like Bone Dry would wipe out their hand in any instant."
+      "notes": "Bone Dry. Look at these guys! Win their first ever League contest in, dare I say it, thrilling fashion! There’s a great nostalgic vibe to this crew, watching revised Bad Moon, Will-O-The-Wisp, Demonic Tutor, Mind Twist, a Hyppy and a Dark Ritual do their thing, damn! The Dry heave 2x The Rack + hand discard to crushDnS, and in part thanks to the Furnace of Rath in play. What a great start to their inaugural season. \n\nDnS. Damn, may have misplayed the Furnace of Rath and likely deployed the DD too fast. Tough call, as it felt like Bone Dry would wipe out their hand in any instant."
     },
     {
       "id": "sched-w1-mean-machine-clockwork",
