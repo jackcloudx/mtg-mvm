@@ -34,7 +34,7 @@
       "loser_score": -8,
       "turns": 7,
       "mvp": "The Rack",
-      "notes": "Bone Dry. Look at these guys! Win their first ever League contest in, dare I say it, thrilling fashion! There’s a great nostalgic vibe to this crew, watching revised Bad Moon, Will-O-The-Wisp, Demonic Tutor, Mind Twist, a Hyppy and a Dark Ritual do their thing, damn! The Dry heave 2x The Rack + hand discard to crushDnS, and in part thanks to the Furnace of Rath in play. What a great start to their inaugural season. \n\nDnS. Damn, may have misplayed the Furnace of Rath and likely deployed the DD too fast. Tough call, as it felt like Bone Dry would wipe out their hand in any instant."
+      "notes": "Bone Dry. Look at these guys! Win their first ever League contest in, dare I say it, thrilling fashion! There\u2019s a great nostalgic vibe to this crew, watching revised Bad Moon, Will-O-The-Wisp, Demonic Tutor, Mind Twist, a Hyppy and a Dark Ritual do their thing, damn! The Dry heave 2x The Rack + hand discard to crushDnS, and in part thanks to the Furnace of Rath in play. What a great start to their inaugural season. \n\nDnS. Damn, may have misplayed the Furnace of Rath and likely deployed the DD too fast. Tough call, as it felt like Bone Dry would wipe out their hand in any instant."
     },
     {
       "id": "g1782786583179",
@@ -3046,7 +3046,7 @@
         "Red"
       ],
       "identity": "All-goblin chaos. Unrecognizable after a trip to the build-a-goblin factory.",
-      "oneliner": "Wild, reckless, overpowering — now with custom cards from Sir Thomas Steven Kern.",
+      "oneliner": "Wild, reckless, overpowering \u2014 now with custom cards from Sir Thomas Steven Kern.",
       "roster": [
         "Blood Moon",
         "Blood Moon",
@@ -3611,7 +3611,7 @@
       "transactionHistory": [],
       "rosterNotes": {
         "Acidic Sliver|0": {
-          "txnType": "Trade",
+          "txnType": "",
           "freeAgent": "",
           "proxy": false,
           "status": "",
@@ -5629,7 +5629,7 @@
         "White"
       ],
       "identity": "Knights, Thunder Spirits, and more knights. Mono-white aggro.",
-      "oneliner": "Self-righteous, aggressive, unapologetic — the same holy beatdown returns for another crusade.",
+      "oneliner": "Self-righteous, aggressive, unapologetic \u2014 the same holy beatdown returns for another crusade.",
       "roster": [
         "Balance",
         "Castle",
@@ -6620,7 +6620,7 @@
         "Blue"
       ],
       "identity": "Serendib Djinn aggro, Moat as the fallback.",
-      "oneliner": "Four Serendib Djinn hit hard and fast — Land Tax and Lodestone Bauble keep the lights on, Moat and a reset button are there if the race stalls.",
+      "oneliner": "Four Serendib Djinn hit hard and fast \u2014 Land Tax and Lodestone Bauble keep the lights on, Moat and a reset button are there if the race stalls.",
       "roster": [
         "Moat",
         "Moat",
@@ -6684,7 +6684,26 @@
         "Plains"
       ],
       "transactionHistory": [],
-      "rosterNotes": {}
+      "rosterNotes": {
+        "Force of Will|0": {
+          "txnType": "Buy"
+        },
+        "Force of Will|1": {
+          "txnType": "Buy"
+        },
+        "Jayemdae Tome|1": {
+          "txnType": "Waive",
+          "freeAgent": "Land Tax"
+        },
+        "Ghost Ship|0": {
+          "txnType": "Waive",
+          "freeAgent": "Unsummon"
+        },
+        "Boomerang|2": {
+          "txnType": "Waive",
+          "freeAgent": "Unsummon"
+        }
+      }
     },
     {
       "id": "womperzoo",
@@ -6694,7 +6713,7 @@
         "TBD"
       ],
       "identity": "Roster and identity to be finalized before Season 9 kickoff.",
-      "oneliner": "New entrant — details coming soon.",
+      "oneliner": "New entrant \u2014 details coming soon.",
       "roster": [
         "Balduvian Horde",
         "Balduvian Horde",
@@ -7265,7 +7284,7 @@
       "loser_score": -8,
       "turns": 7,
       "mvp": "The Rack",
-      "notes": "Bone Dry. Look at these guys! Win their first ever League contest in, dare I say it, thrilling fashion! There’s a great nostalgic vibe to this crew, watching revised Bad Moon, Will-O-The-Wisp, Demonic Tutor, Mind Twist, a Hyppy and a Dark Ritual do their thing, damn! The Dry heave 2x The Rack + hand discard to crushDnS, and in part thanks to the Furnace of Rath in play. What a great start to their inaugural season. \n\nDnS. Damn, may have misplayed the Furnace of Rath and likely deployed the DD too fast. Tough call, as it felt like Bone Dry would wipe out their hand in any instant."
+      "notes": "Bone Dry. Look at these guys! Win their first ever League contest in, dare I say it, thrilling fashion! There\u2019s a great nostalgic vibe to this crew, watching revised Bad Moon, Will-O-The-Wisp, Demonic Tutor, Mind Twist, a Hyppy and a Dark Ritual do their thing, damn! The Dry heave 2x The Rack + hand discard to crushDnS, and in part thanks to the Furnace of Rath in play. What a great start to their inaugural season. \n\nDnS. Damn, may have misplayed the Furnace of Rath and likely deployed the DD too fast. Tough call, as it felt like Bone Dry would wipe out their hand in any instant."
     },
     {
       "id": "sched-w1-mean-machine-clockwork",
@@ -12011,6 +12030,76 @@
           "week": null
         }
       }
+    },
+    {
+      "id": "blue-boss",
+      "name": "Blue Boss Fight",
+      "shortName": "Blue Boss",
+      "colors": [
+        "Blue"
+      ],
+      "roster": [
+        "Island",
+        "Island",
+        "Island",
+        "Island",
+        "Island",
+        "Island",
+        "Island",
+        "Island",
+        "Island",
+        "Island",
+        "Island",
+        "Island",
+        "Island",
+        "Island",
+        "Island",
+        "Island",
+        "Island",
+        "Island",
+        "Sol Ring",
+        "Harbor Serpent",
+        "Ancient Silver Dragon",
+        "Nezahal, Primal Tide",
+        "Iymrith, Desert Doom",
+        "Thassa, Deep-Dwelling",
+        "Charix, the Raging Isle",
+        "Spawning Kraken",
+        "Icebreaker Kraken",
+        "Djinn of Wishes",
+        "Velkhana, Iceborne Wyvern",
+        "Kirin, the Myth",
+        "Kushala Daora",
+        "Icewrought Senty",
+        "Kraken of the Dark Seas",
+        "Elder Fel-One",
+        "Vaal Hazak, Corpse Dragon",
+        "Voda Sea Scavenger",
+        "Jin-Gitaxias, Progress Tyrant",
+        "Reef Wurm"
+      ],
+      "rosterNotes": {},
+      "transactionHistory": []
+    },
+    {
+      "id": "white-boss",
+      "name": "White Boss Fight",
+      "shortName": "White Boss",
+      "colors": [
+        "White"
+      ],
+      "roster": [],
+      "rosterNotes": {},
+      "transactionHistory": []
+    },
+    {
+      "id": "artifact-boss",
+      "name": "Artifact Boss Fight",
+      "shortName": "Artifact Boss",
+      "colors": [],
+      "roster": [],
+      "rosterNotes": {},
+      "transactionHistory": []
     }
   ]
 }
