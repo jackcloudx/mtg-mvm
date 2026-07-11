@@ -20,8 +20,8 @@ let _seasonData = null;
 let _landsVisible = false;
 let _currentView = 'byteam';
 let _currentTeamId = null;
-let _allFilter  = { txnType: '', proxy: '', status: '' };
-let _teamFilter = { txnType: '', proxy: '', status: '' };
+let _allFilter  = { txnType: '', proxy: false };
+let _teamFilter = { txnType: '', proxy: false };
 
 async function rostersInit() {
   try {
@@ -94,23 +94,19 @@ function renderByTeamView(leagueTeams, bossDecks) {
 }
 
 function renderTeamFilterBar() {
-  const hasFilter = _teamFilter.txnType || _teamFilter.proxy || _teamFilter.status;
+  const hasFilter = _teamFilter.txnType || _teamFilter.proxy;
   return `
     <div class="roster-filter-bar">
       <span class="roster-filter-label">Filter:</span>
       <select onchange="rosterSetTeamFilter('txnType',this.value)">
         <option value="">All TXN types</option>
+        <option value="none"${_teamFilter.txnType==='none'?' selected':''}>Blank</option>
         ${TXN_TYPES.map(t => `<option value="${t}"${_teamFilter.txnType===t?' selected':''}>${t}</option>`).join('')}
       </select>
-      <select onchange="rosterSetTeamFilter('proxy',this.value)">
-        <option value="">Proxy: any</option>
-        <option value="yes"${_teamFilter.proxy==='yes'?' selected':''}>Proxy only</option>
-        <option value="no"${_teamFilter.proxy==='no'?' selected':''}>Non-proxy only</option>
-      </select>
-      <select onchange="rosterSetTeamFilter('status',this.value)">
-        <option value="">All statuses</option>
-        <option value="pending"${_teamFilter.status==='pending'?' selected':''}>Pending (any note)</option>
-      </select>
+      <label class="roster-lands-label" style="margin-left:4px">
+        <input type="checkbox" ${_teamFilter.proxy?'checked':''} onchange="rosterSetTeamFilter('proxy',this.checked)">
+        Proxy
+      </label>
       ${hasFilter ? `<button class="roster-filter-clear" onclick="rosterClearTeamFilter()">Clear</button>` : ''}
     </div>`;
 }
@@ -129,16 +125,14 @@ function renderTeamTable(team) {
     return { card, idx, key, note };
   }).filter(r => {
     if (!_landsVisible && LAND_FILTER.has(r.card)) return false;
-    const hasNote = !!(r.note.txnType || r.note.freeAgent || r.note.proxy);
-    if (_teamFilter.txnType && r.note.txnType !== _teamFilter.txnType) return false;
-    if (_teamFilter.proxy === 'yes' && !r.note.proxy) return false;
-    if (_teamFilter.proxy === 'no'  &&  r.note.proxy) return false;
-    if (_teamFilter.status === 'pending' && !hasNote) return false;
+    if (_teamFilter.txnType === 'none' && r.note.txnType) return false;
+    if (_teamFilter.txnType && _teamFilter.txnType !== 'none' && r.note.txnType !== _teamFilter.txnType) return false;
+    if (_teamFilter.proxy && !r.note.proxy) return false;
     return true;
   });
 
   const filterBar = renderTeamFilterBar();
-  const hasFilter = _teamFilter.txnType || _teamFilter.proxy || _teamFilter.status;
+  const hasFilter = _teamFilter.txnType || _teamFilter.proxy;
 
   const nonLandCount = (team.roster || []).filter(c => !LAND_FILTER.has(c)).length;
   const landCount    = (team.roster || []).filter(c =>  LAND_FILTER.has(c)).length;
@@ -323,17 +317,13 @@ function renderAllTeamsView(leagueTeams, bossDecks) {
       <span class="roster-filter-label">Filter:</span>
       <select onchange="rosterSetFilter('txnType',this.value)">
         <option value="">All TXN types</option>
+        <option value="none"${_allFilter.txnType==='none'?' selected':''}>Blank</option>
         ${TXN_TYPES.map(t => `<option value="${t}" ${_allFilter.txnType===t?'selected':''}>${t}</option>`).join('')}
       </select>
-      <select onchange="rosterSetFilter('proxy',this.value)">
-        <option value="">Proxy: any</option>
-        <option value="yes" ${_allFilter.proxy==='yes'?'selected':''}>Proxy only</option>
-        <option value="no"  ${_allFilter.proxy==='no' ?'selected':''}>Non-proxy only</option>
-      </select>
-      <select onchange="rosterSetFilter('status',this.value)">
-        <option value="">All statuses</option>
-        <option value="pending" ${_allFilter.status==='pending'?'selected':''}>Pending (any note)</option>
-      </select>
+      <label class="roster-lands-label" style="margin-left:4px">
+        <input type="checkbox" ${_allFilter.proxy?'checked':''} onchange="rosterSetFilter('proxy',this.checked)">
+        Proxy
+      </label>
     </div>`;
 
   const allDecks = [...leagueTeams, ...bossDecks];
@@ -348,11 +338,9 @@ function renderAllTeamsView(leagueTeams, bossDecks) {
       const key = `${card}|${idx}`;
       const note = notes[key] || {};
       if (!_landsVisible && LAND_FILTER.has(card)) return;
-      const hasNote = note.txnType || note.freeAgent || note.proxy;
-      if (_allFilter.txnType && note.txnType !== _allFilter.txnType) return;
-      if (_allFilter.proxy === 'yes' && !note.proxy) return;
-      if (_allFilter.proxy === 'no'  &&  note.proxy) return;
-      if (_allFilter.status === 'pending' && !hasNote) return;
+      if (_allFilter.txnType === 'none' && note.txnType) return;
+      if (_allFilter.txnType && _allFilter.txnType !== 'none' && note.txnType !== _allFilter.txnType) return;
+      if (_allFilter.proxy && !note.proxy) return;
       rows.push({ team, card, key, note });
     });
   });
@@ -373,7 +361,6 @@ function renderAllTeamsView(leagueTeams, bossDecks) {
       </select></td>
       <td>${note.freeAgent ? `<span style="color:var(--green)">${note.freeAgent}</span>` : '<span class="muted">—</span>'}</td>
       <td>${note.proxy ? '<span class="proxy-badge">Proxy</span>' : '<span class="muted">—</span>'}</td>
-      <td class="muted">${note.status || ''}</td>
     </tr>`;
   }).join('');
 
@@ -388,7 +375,6 @@ function renderAllTeamsView(leagueTeams, bossDecks) {
             <th>TXN</th>
             <th>Free Agent</th>
             <th>Proxy</th>
-            <th>Status</th>
           </tr>
         </thead>
         <tbody>${tableRows}</tbody>
@@ -543,7 +529,7 @@ async function rosterRemoveCard(teamId, cardKey, card) {
 function rosterSwitchView(view)        { _currentView = view;      renderRostersPage(); }
 function rosterSelectTeam(id) {
   _currentTeamId = id;
-  _teamFilter = { txnType: '', proxy: '', status: '' }; // reset filters on team switch
+  _teamFilter = { txnType: '', proxy: false }; // reset filters on team switch
   const tableSection = document.getElementById('roster-table-section');
   const switcher     = document.getElementById('roster-switcher');
   if (tableSection && switcher && _currentView === 'byteam') {
@@ -575,7 +561,7 @@ function rosterSetTeamFilter(key, value) {
   }
 }
 function rosterClearTeamFilter() {
-  _teamFilter = { txnType: '', proxy: '', status: '' };
+  _teamFilter = { txnType: '', proxy: false };
   rosterSetTeamFilter('txnType', ''); // triggers re-render
 }
 
