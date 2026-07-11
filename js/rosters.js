@@ -14,7 +14,7 @@ const LAND_FILTER = new Set([
 const HOME_ADDRESSES = ['localhost', '127.0.0.1', '192.168.4.141'];
 const isLocal = () => HOME_ADDRESSES.includes(window.location.hostname);
 
-const TXN_TYPES = ['Waive', 'Trade', 'Buy', 'Proxy', 'Create'];
+const TXN_TYPES = ['Waive', 'Trade', 'Buy', 'Create'];
 
 let _seasonData = null;
 let _landsVisible = false;
