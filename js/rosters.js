@@ -2,14 +2,7 @@
 //   MTG | MVM — ROSTERS.JS
 // ============================================
 
-const LAND_FILTER = new Set([
-  'Plains','Island','Swamp','Mountain','Forest',
-  'Badlands','Plateau','Taiga','Tropical Island','Tundra',
-  'Underground Sea','Volcanic Island',
-  'City of Brass','Cyclopean Tomb','Desert','Ghost Town',
-  'Lake of the Dead','Maze of Ith',"Mishra's Factory","Mishra's Workshop",
-  'Strip Mine','Sulfurous Springs',"Urza's Mine","Urza's Power Plant","Urza's Tower"
-]);
+let LAND_FILTER = new Set();
 
 const HOME_ADDRESSES = ['localhost', '127.0.0.1', '192.168.4.141'];
 const isLocal = () => HOME_ADDRESSES.includes(window.location.hostname);
@@ -34,6 +27,13 @@ async function rostersInit() {
   } catch (e) {
     const res = await fetch('data/season9.json');
     _seasonData = await res.json();
+  }
+  try {
+    const poolRes = await fetch('data/card-pool.json');
+    const cardPool = await poolRes.json();
+    LAND_FILTER = new Set(cardPool.filter(c => c.type_line && c.type_line.includes('Land')).map(c => c.name));
+  } catch (e) {
+    LAND_FILTER = new Set(['Plains','Island','Swamp','Mountain','Forest']);
   }
   const leagueTeams = _seasonData.teams || [];
   if (!_currentTeamId && leagueTeams.length) {
