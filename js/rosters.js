@@ -450,11 +450,6 @@ async function rosterCommit(teamId, cardKey) {
   const freeAgent = note.freeAgent || '';
   const txnType = note.txnType || '';
 
-  const confirmMsg = freeAgent
-    ? `Commit: swap "${card}" → "${freeAgent}" (${txnType || 'no type'})?`
-    : `Commit: mark "${card}" as ${txnType || 'updated'}?`;
-  if (!confirm(confirmMsg)) return;
-
   const API = `http://${window.location.hostname}:3001`;
 
   if (freeAgent && freeAgent !== card) {
@@ -490,7 +485,6 @@ async function rosterCommit(teamId, cardKey) {
       body: JSON.stringify(_seasonData)
     });
     if (!res.ok) throw new Error('Save failed');
-    alert(`✓ Committed.${freeAgent ? ` Roster updated: ${card} → ${freeAgent}` : ''}`);
     renderRostersPage();
   } catch (e) {
     alert('✗ Could not reach server. Is server.js running?');
