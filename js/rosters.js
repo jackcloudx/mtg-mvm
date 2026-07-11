@@ -396,7 +396,11 @@ function renderAllTeamsView(leagueTeams, bossDecks) {
         onchange="rosterNoteUpdate(this.dataset.team,this.dataset.key,'txnType',this.value)">
         ${['', ...TXN_TYPES].map(t => `<option value="${t}"${note.txnType === t ? ' selected' : ''}>${t || '—'}</option>`).join('')}
       </select></td>
-      <td>${note.freeAgent ? `<span style="color:var(--green)">${note.freeAgent}</span>` : '<span class="muted">—</span>'}</td>
+      <td><input type="text"
+        data-team="${team.id}" data-key="${key}"
+        value="${(note.freeAgent || '').replace(/"/g, '&quot;')}" placeholder="card name…"
+        oninput="rosterNoteUpdate(this.dataset.team,this.dataset.key,'freeAgent',this.value)">
+      </td>
       <td>${note.proxy ? '<span class="proxy-badge">Proxy</span>' : '<span class="muted">—</span>'}</td>
     </tr>`;
   }).join('');
