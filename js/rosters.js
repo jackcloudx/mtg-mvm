@@ -50,35 +50,34 @@ function renderRostersPage() {
 
   container.innerHTML = `
     <div class="roster-control-bar">
-      <div class="roster-toggle">
-        <button onclick="rosterSwitchView('byteam')" class="${_currentView==='byteam'?'active':''}">By Team</button>
-        <button onclick="rosterSwitchView('allteams')" class="${_currentView==='allteams'?'active':''}">All Teams</button>
-      </div>
       <label class="roster-lands-label">
         <input type="checkbox" onchange="rosterToggleLands(this.checked)" ${_landsVisible?'checked':''}>
         Show Lands
       </label>
     </div>
-    ${_currentView === 'byteam' ? renderByTeamView(leagueTeams, bossDecks) : renderAllTeamsView(leagueTeams, bossDecks)}
+    ${renderTeamSwitcher(leagueTeams, bossDecks)}
+    <div id="roster-content-section">
+      ${_currentView === 'byteam' ? renderByTeamView(leagueTeams, bossDecks) : renderAllTeamsView(leagueTeams, bossDecks)}
+    </div>
   `;
 }
 
-// ---- BY TEAM ----
-
-function renderByTeamView(leagueTeams, bossDecks) {
-  const allDecks = [...leagueTeams, ...bossDecks];
-  const team = allDecks.find(t => t.id === _currentTeamId) || leagueTeams[0];
+function renderTeamSwitcher(leagueTeams, bossDecks) {
+  const allTeamsBtn = `<button class="roster-team-btn${_currentView==='allteams'?' active':''}" data-team-id="__all__" onclick="rosterViewAllTeams()">All Teams</button>`;
 
   const leagueBtns = leagueTeams.map(t =>
-    `<button class="roster-team-btn${t.id===_currentTeamId?' active':''}" data-team-id="${t.id}" onclick="rosterSelectTeam('${t.id}')">${t.name}</button>`
+    `<button class="roster-team-btn${_currentView==='byteam'&&t.id===_currentTeamId?' active':''}" data-team-id="${t.id}" onclick="rosterSelectTeam('${t.id}')">${t.name}</button>`
   ).join('');
 
   const bossBtns = bossDecks.map(t =>
-    `<button class="roster-team-btn boss${t.id===_currentTeamId?' active':''}" data-team-id="${t.id}" onclick="rosterSelectTeam('${t.id}')">${t.name}</button>`
+    `<button class="roster-team-btn boss${_currentView==='byteam'&&t.id===_currentTeamId?' active':''}" data-team-id="${t.id}" onclick="rosterSelectTeam('${t.id}')">${t.name}</button>`
   ).join('');
 
   return `
     <div class="roster-switcher" id="roster-switcher">
+      <div class="roster-switcher-block">
+        <div class="roster-switcher-row">${allTeamsBtn}</div>
+      </div>
       <div class="roster-switcher-block">
         <div class="roster-switcher-label">League Teams</div>
         <div class="roster-switcher-row">${leagueBtns}</div>
@@ -88,11 +87,18 @@ function renderByTeamView(leagueTeams, bossDecks) {
         <div class="roster-switcher-label">Boss Decks</div>
         <div class="roster-switcher-row boss-row">${bossBtns}</div>
       </div>` : ''}
-    </div>
+    </div>`;
+}
+
+// ---- BY TEAM ----
+
+function renderByTeamView(leagueTeams, bossDecks) {
+  const allDecks = [...leagueTeams, ...bossDecks];
+  const team = allDecks.find(t => t.id === _currentTeamId) || leagueTeams[0];
+  return `
     <div id="roster-table-section">
       ${team ? renderTeamTable(team) : '<div class="roster-empty">No team selected.</div>'}
-    </div>
-  `;
+    </div>`;
 }
 
 function renderTeamFilterBar() {
@@ -567,21 +573,40 @@ async function rosterRemoveCard(teamId, cardKey, card) {
 
 // ---- PUBLIC HANDLERS ----
 
+function rosterViewAllTeams() {
+  _currentView = 'allteams';
+  _currentTeamId = null;
+  const switcher = document.getElementById('roster-switcher');
+  if (switcher) {
+    switcher.querySelectorAll('.roster-team-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.teamId === '__all__');
+    });
+  }
+  const content = document.getElementById('roster-content-section');
+  if (content) {
+    const leagueTeams = (_seasonData.teams || []).slice().sort((a,b) => a.name.localeCompare(b.name));
+    const bossDecks   = _seasonData.bossDecks || [];
+    content.innerHTML = renderAllTeamsView(leagueTeams, bossDecks);
+  }
+}
 function rosterSwitchView(view)        { _currentView = view;      renderRostersPage(); }
 function rosterSelectTeam(id) {
+  _currentView = 'byteam';
   _currentTeamId = id;
   _teamFilter = { txnType: '', proxy: false }; _teamSortField = null; _teamSortDir = 1; // reset on team switch
-  const tableSection = document.getElementById('roster-table-section');
-  const switcher     = document.getElementById('roster-switcher');
-  if (tableSection && switcher && _currentView === 'byteam') {
+  const switcher = document.getElementById('roster-switcher');
+  if (switcher) {
     switcher.querySelectorAll('.roster-team-btn').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.teamId === id);
     });
+  }
+  const content = document.getElementById('roster-content-section');
+  if (content) {
     const leagueTeams = (_seasonData.teams || []).slice().sort((a,b) => a.name.localeCompare(b.name));
     const bossDecks   = _seasonData.bossDecks || [];
     const allDecks    = [...leagueTeams, ...bossDecks];
     const team        = allDecks.find(t => t.id === id) || leagueTeams[0];
-    tableSection.innerHTML = team ? renderTeamTable(team) : '<div class="roster-empty">No team selected.</div>';
+    content.innerHTML = `<div id="roster-table-section">${team ? renderTeamTable(team) : '<div class="roster-empty">No team selected.</div>'}</div>`;
   } else {
     renderRostersPage();
   }
@@ -597,7 +622,7 @@ function rosterSetTeamFilter(key, value) {
     const allDecks    = [...leagueTeams, ...bossDecks];
     const team        = allDecks.find(t => t.id === _currentTeamId) || leagueTeams[0];
     tableSection.innerHTML = team ? renderTeamTable(team) : '<div class="roster-empty">No team selected.</div>';
-  } else {
+  } else if (_currentView === 'byteam') {
     renderRostersPage();
   }
 }
@@ -623,7 +648,8 @@ function rosterSetTeamSort(field) {
   }
 }
 
-window.rosterSwitchView      = rosterSwitchView;
+
+window.rosterViewAllTeams    = rosterViewAllTeams;
 window.rosterSelectTeam      = rosterSelectTeam;
 window.rosterToggleLands     = rosterToggleLands;
 window.rosterSetFilter       = rosterSetFilter;
