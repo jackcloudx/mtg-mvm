@@ -18,6 +18,7 @@ const TXN_TYPES = ['Waive', 'Trade', 'Buy', 'Create'];
 
 let _seasonData = null;
 let _landsVisible = false;
+let _landsOnly = false;
 let _currentView = 'byteam';
 let _currentTeamId = null;
 let _allFilter  = { txnType: '', proxy: false };
@@ -53,6 +54,10 @@ function renderRostersPage() {
       <label class="roster-lands-label">
         <input type="checkbox" onchange="rosterToggleLands(this.checked)" ${_landsVisible?'checked':''}>
         Show Lands
+      </label>
+      <label class="roster-lands-label">
+        <input type="checkbox" onchange="rosterToggleLandsOnly(this.checked)" ${_landsOnly?'checked':''}>
+        Only Lands
       </label>
     </div>
     ${renderTeamSwitcher(leagueTeams, bossDecks)}
@@ -133,7 +138,8 @@ function renderTeamTable(team) {
     const note = notes[key] || {};
     return { card, idx, key, note };
   }).filter(r => {
-    if (!_landsVisible && LAND_FILTER.has(r.card)) return false;
+    if (_landsOnly) { if (!LAND_FILTER.has(r.card)) return false; }
+    else if (!_landsVisible && LAND_FILTER.has(r.card)) return false;
     if (_teamFilter.txnType === 'any'  && !r.note.txnType) return false;
     if (_teamFilter.txnType === 'none' &&  r.note.txnType) return false;
     if (_teamFilter.txnType && _teamFilter.txnType !== 'any' && _teamFilter.txnType !== 'none' && r.note.txnType !== _teamFilter.txnType) return false;
@@ -363,7 +369,8 @@ function renderAllTeamsView(leagueTeams, bossDecks) {
       const idx = counts[card]++;
       const key = `${card}|${idx}`;
       const note = notes[key] || {};
-      if (!_landsVisible && LAND_FILTER.has(card)) return;
+      if (_landsOnly) { if (!LAND_FILTER.has(card)) return; }
+      else if (!_landsVisible && LAND_FILTER.has(card)) return;
       if (_allFilter.txnType === 'any'  && !note.txnType) return;
       if (_allFilter.txnType === 'none' &&  note.txnType) return;
       if (_allFilter.txnType && _allFilter.txnType !== 'any' && _allFilter.txnType !== 'none' && note.txnType !== _allFilter.txnType) return;
@@ -612,6 +619,7 @@ function rosterSelectTeam(id) {
   }
 }
 function rosterToggleLands(v) { _landsVisible = v; renderRostersPage(); }
+function rosterToggleLandsOnly(v) { _landsOnly = v; renderRostersPage(); }
 function rosterSetFilter(key, value)     { _allFilter[key] = value;  renderRostersPage(); }
 function rosterSetTeamFilter(key, value) {
   _teamFilter[key] = value;
@@ -652,6 +660,7 @@ function rosterSetTeamSort(field) {
 window.rosterViewAllTeams    = rosterViewAllTeams;
 window.rosterSelectTeam      = rosterSelectTeam;
 window.rosterToggleLands     = rosterToggleLands;
+window.rosterToggleLandsOnly = rosterToggleLandsOnly;
 window.rosterSetFilter       = rosterSetFilter;
 window.rosterSetTeamFilter   = rosterSetTeamFilter;
 window.rosterClearTeamFilter = rosterClearTeamFilter;
