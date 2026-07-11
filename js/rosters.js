@@ -22,6 +22,8 @@ let _currentView = 'byteam';
 let _currentTeamId = null;
 let _allFilter  = { txnType: '', proxy: false };
 let _teamFilter = { txnType: '', proxy: false };
+let _allSortField  = null; let _allSortDir  = 1;
+let _teamSortField = null; let _teamSortDir = 1;
 
 async function rostersInit() {
   try {
@@ -133,6 +135,21 @@ function renderTeamTable(team) {
     return true;
   });
 
+  if (_teamSortField) {
+    const f = _teamSortField, d = _teamSortDir;
+    rows.sort((a, b) => {
+      let av, bv;
+      if (f === 'card')       { av = a.card;          bv = b.card; }
+      else if (f === 'txn')   { av = a.note.txnType;  bv = b.note.txnType; }
+      else if (f === 'fa')    { av = a.note.freeAgent; bv = b.note.freeAgent; }
+      else if (f === 'proxy') { av = a.note.proxy ? 1 : 0; bv = b.note.proxy ? 1 : 0; }
+      if (av == null || av === '') return 1;
+      if (bv == null || bv === '') return -1;
+      if (typeof av === 'number') return d * (av - bv);
+      return d * String(av).localeCompare(String(bv));
+    });
+  }
+
   const filterBar = renderTeamFilterBar();
   const hasFilter = _teamFilter.txnType || _teamFilter.proxy;
 
@@ -189,11 +206,11 @@ function renderTeamTable(team) {
       <table class="roster-table">
         <thead>
           <tr>
-            <th>Card</th>
-            <th>TXN</th>
-            <th>Free Agent</th>
-            <th>Proxy</th>
-            <th>Status</th>
+            ${['card','txn','fa','proxy'].map(f => {
+              const labels = {card:'Card',txn:'TXN',fa:'Free Agent',proxy:'Proxy'};
+              const ind = _teamSortField === f ? (_teamSortDir === 1 ? ' ▲' : ' ▼') : '';
+              return `<th style="cursor:pointer;user-select:none" onclick="rosterSetTeamSort('${f}')">${labels[f]}${ind}</th>`;
+            }).join('')}
             ${isLocal() ? '<th></th>' : ''}
           </tr>
         </thead>
@@ -349,6 +366,22 @@ function renderAllTeamsView(leagueTeams, bossDecks) {
     });
   });
 
+  if (_allSortField) {
+    const f = _allSortField, d = _allSortDir;
+    rows.sort((a, b) => {
+      let av, bv;
+      if (f === 'team')       { av = a.team.name;      bv = b.team.name; }
+      else if (f === 'card')  { av = a.card;            bv = b.card; }
+      else if (f === 'txn')   { av = a.note.txnType;    bv = b.note.txnType; }
+      else if (f === 'fa')    { av = a.note.freeAgent;  bv = b.note.freeAgent; }
+      else if (f === 'proxy') { av = a.note.proxy ? 1 : 0; bv = b.note.proxy ? 1 : 0; }
+      if (av == null || av === '') return 1;
+      if (bv == null || bv === '') return -1;
+      if (typeof av === 'number') return d * (av - bv);
+      return d * String(av).localeCompare(String(bv));
+    });
+  }
+
   if (rows.length === 0) {
     return filterBar + '<div class="roster-empty">No cards match the current filters.</div>';
   }
@@ -374,11 +407,11 @@ function renderAllTeamsView(leagueTeams, bossDecks) {
       <table class="roster-table">
         <thead>
           <tr>
-            <th>Team</th>
-            <th>Card</th>
-            <th>TXN</th>
-            <th>Free Agent</th>
-            <th>Proxy</th>
+            ${['team','card','txn','fa','proxy'].map(f => {
+              const labels = {team:'Team',card:'Card',txn:'TXN',fa:'Free Agent',proxy:'Proxy'};
+              const ind = _allSortField === f ? (_allSortDir === 1 ? ' ▲' : ' ▼') : '';
+              return `<th style="cursor:pointer;user-select:none" onclick="rosterSetAllSort('${f}')">${labels[f]}${ind}</th>`;
+            }).join('')}
           </tr>
         </thead>
         <tbody>${tableRows}</tbody>
@@ -533,7 +566,7 @@ async function rosterRemoveCard(teamId, cardKey, card) {
 function rosterSwitchView(view)        { _currentView = view;      renderRostersPage(); }
 function rosterSelectTeam(id) {
   _currentTeamId = id;
-  _teamFilter = { txnType: '', proxy: false }; // reset filters on team switch
+  _teamFilter = { txnType: '', proxy: false }; _teamSortField = null; _teamSortDir = 1; // reset on team switch
   const tableSection = document.getElementById('roster-table-section');
   const switcher     = document.getElementById('roster-switcher');
   if (tableSection && switcher && _currentView === 'byteam') {
@@ -568,6 +601,23 @@ function rosterClearTeamFilter() {
   _teamFilter = { txnType: '', proxy: false };
   rosterSetTeamFilter('txnType', ''); // triggers re-render
 }
+function rosterSetAllSort(field) {
+  if (_allSortField === field) _allSortDir *= -1;
+  else { _allSortField = field; _allSortDir = 1; }
+  renderRostersPage();
+}
+function rosterSetTeamSort(field) {
+  if (_teamSortField === field) _teamSortDir *= -1;
+  else { _teamSortField = field; _teamSortDir = 1; }
+  const tableSection = document.getElementById('roster-table-section');
+  if (tableSection && _currentView === 'byteam') {
+    const leagueTeams = (_seasonData.teams || []).slice().sort((a,b) => a.name.localeCompare(b.name));
+    const bossDecks   = _seasonData.bossDecks || [];
+    const allDecks    = [...leagueTeams, ...bossDecks];
+    const team        = allDecks.find(t => t.id === _currentTeamId) || leagueTeams[0];
+    tableSection.innerHTML = team ? renderTeamTable(team) : '<div class="roster-empty">No team selected.</div>';
+  }
+}
 
 window.rosterSwitchView      = rosterSwitchView;
 window.rosterSelectTeam      = rosterSelectTeam;
@@ -575,6 +625,8 @@ window.rosterToggleLands     = rosterToggleLands;
 window.rosterSetFilter       = rosterSetFilter;
 window.rosterSetTeamFilter   = rosterSetTeamFilter;
 window.rosterClearTeamFilter = rosterClearTeamFilter;
+window.rosterSetAllSort      = rosterSetAllSort;
+window.rosterSetTeamSort     = rosterSetTeamSort;
 window.rosterNoteUpdate      = rosterNoteUpdate;
 window.rosterCommit          = rosterCommit;
 window.rosterAddCard         = rosterAddCard;
