@@ -100,6 +100,7 @@ function renderTeamFilterBar() {
       <span class="roster-filter-label">Filter:</span>
       <select onchange="rosterSetTeamFilter('txnType',this.value)">
         <option value="">All TXN types</option>
+        <option value="any"${_teamFilter.txnType==='any'?' selected':''}>Any TXN type</option>
         <option value="none"${_teamFilter.txnType==='none'?' selected':''}>Blank</option>
         ${TXN_TYPES.map(t => `<option value="${t}"${_teamFilter.txnType===t?' selected':''}>${t}</option>`).join('')}
       </select>
@@ -125,8 +126,9 @@ function renderTeamTable(team) {
     return { card, idx, key, note };
   }).filter(r => {
     if (!_landsVisible && LAND_FILTER.has(r.card)) return false;
-    if (_teamFilter.txnType === 'none' && r.note.txnType) return false;
-    if (_teamFilter.txnType && _teamFilter.txnType !== 'none' && r.note.txnType !== _teamFilter.txnType) return false;
+    if (_teamFilter.txnType === 'any'  && !r.note.txnType) return false;
+    if (_teamFilter.txnType === 'none' &&  r.note.txnType) return false;
+    if (_teamFilter.txnType && _teamFilter.txnType !== 'any' && _teamFilter.txnType !== 'none' && r.note.txnType !== _teamFilter.txnType) return false;
     if (_teamFilter.proxy && !r.note.proxy) return false;
     return true;
   });
@@ -317,6 +319,7 @@ function renderAllTeamsView(leagueTeams, bossDecks) {
       <span class="roster-filter-label">Filter:</span>
       <select onchange="rosterSetFilter('txnType',this.value)">
         <option value="">All TXN types</option>
+        <option value="any"${_allFilter.txnType==='any'?' selected':''}>Any TXN type</option>
         <option value="none"${_allFilter.txnType==='none'?' selected':''}>Blank</option>
         ${TXN_TYPES.map(t => `<option value="${t}" ${_allFilter.txnType===t?'selected':''}>${t}</option>`).join('')}
       </select>
@@ -338,8 +341,9 @@ function renderAllTeamsView(leagueTeams, bossDecks) {
       const key = `${card}|${idx}`;
       const note = notes[key] || {};
       if (!_landsVisible && LAND_FILTER.has(card)) return;
-      if (_allFilter.txnType === 'none' && note.txnType) return;
-      if (_allFilter.txnType && _allFilter.txnType !== 'none' && note.txnType !== _allFilter.txnType) return;
+      if (_allFilter.txnType === 'any'  && !note.txnType) return;
+      if (_allFilter.txnType === 'none' &&  note.txnType) return;
+      if (_allFilter.txnType && _allFilter.txnType !== 'any' && _allFilter.txnType !== 'none' && note.txnType !== _allFilter.txnType) return;
       if (_allFilter.proxy && !note.proxy) return;
       rows.push({ team, card, key, note });
     });
