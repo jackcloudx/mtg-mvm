@@ -143,6 +143,18 @@
     .roster-search-empty { color: var(--text-muted); font-size: 13px; padding: 4px 0; }
 
     .roster-filter-bar select { width: auto; font-size: 13px; padding: 6px 10px; }
+    .roster-inline-search {
+      font-size: 13px; padding: 5px 24px 5px 8px; border-radius: var(--radius);
+      border: 1px solid var(--border); background: var(--bg); color: var(--text-primary);
+      width: 150px;
+    }
+    .roster-inline-search:focus { outline: none; border-color: var(--gold-dim); }
+    .roster-inline-clear {
+      position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
+      background: none; border: none; color: var(--text-muted); cursor: pointer;
+      font-size: 12px; padding: 2px 3px; line-height: 1;
+    }
+    .roster-inline-clear:hover { color: var(--text-primary); }
     .roster-filter-clear {
       background: none; border: 1px solid var(--border); color: var(--text-muted);
       padding: 5px 10px; border-radius: var(--radius); cursor: pointer;

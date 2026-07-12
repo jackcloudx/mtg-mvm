@@ -14,8 +14,8 @@ let _landsVisible = false;
 let _landsOnly = false;
 let _currentView = 'byteam';
 let _currentTeamId = null;
-let _allFilter  = { txnType: '', proxy: false };
-let _teamFilter = { txnType: '', proxy: false };
+let _allFilter  = { txnType: '', proxy: false, cardSearch: '' };
+let _teamFilter = { txnType: '', proxy: false, cardSearch: '' };
 let _allSortField  = null; let _allSortDir  = 1;
 let _teamSortField = null; let _teamSortDir = 1;
 
@@ -94,7 +94,7 @@ function renderByTeamView(leagueTeams, bossDecks) {
 }
 
 function renderTeamFilterBar() {
-  const hasFilter = _teamFilter.txnType || _teamFilter.proxy;
+  const hasFilter = _teamFilter.txnType || _teamFilter.proxy || _teamFilter.cardSearch;
   return `
     <div class="roster-filter-bar">
       <span class="roster-filter-label">Filter:</span>
@@ -116,6 +116,12 @@ function renderTeamFilterBar() {
         <input type="checkbox" onchange="rosterToggleLandsOnly(this.checked)" ${_landsOnly?'checked':''}>
         Only Lands
       </label>
+      <div style="position:relative;display:inline-flex;align-items:center;margin-left:4px">
+        <input class="roster-inline-search" type="text" placeholder="Search cards…"
+          value="${(_teamFilter.cardSearch||'').replace(/"/g,'&quot;')}"
+          oninput="rosterTeamSearchInput(this.value)">
+        ${_teamFilter.cardSearch ? `<button class="roster-inline-clear" onclick="rosterTeamSearchClear()">✕</button>` : ''}
+      </div>
       ${hasFilter ? `<button class="roster-filter-clear" onclick="rosterClearTeamFilter()">Clear</button>` : ''}
     </div>`;
 }
@@ -139,6 +145,7 @@ function renderTeamTable(team) {
     if (_teamFilter.txnType === 'none' &&  r.note.txnType) return false;
     if (_teamFilter.txnType && _teamFilter.txnType !== 'any' && _teamFilter.txnType !== 'none' && r.note.txnType !== _teamFilter.txnType) return false;
     if (_teamFilter.proxy && !r.note.proxy) return false;
+    if (_teamFilter.cardSearch && !r.card.toLowerCase().includes(_teamFilter.cardSearch.toLowerCase())) return false;
     return true;
   });
 
@@ -158,7 +165,7 @@ function renderTeamTable(team) {
   }
 
   const filterBar = renderTeamFilterBar();
-  const hasFilter = _teamFilter.txnType || _teamFilter.proxy;
+  const hasFilter = _teamFilter.txnType || _teamFilter.proxy || _teamFilter.cardSearch;
 
   const nonLandCount = (team.roster || []).filter(c => !LAND_FILTER.has(c)).length;
   const landCount    = (team.roster || []).filter(c =>  LAND_FILTER.has(c)).length;
@@ -359,6 +366,12 @@ function renderAllTeamsView(leagueTeams, bossDecks) {
         <input type="checkbox" onchange="rosterToggleLandsOnly(this.checked)" ${_landsOnly?'checked':''}>
         Only Lands
       </label>
+      <div style="position:relative;display:inline-flex;align-items:center;margin-left:4px">
+        <input class="roster-inline-search" type="text" placeholder="Search cards…"
+          value="${(_allFilter.cardSearch||'').replace(/"/g,'&quot;')}"
+          oninput="rosterAllSearchInput(this.value)">
+        ${_allFilter.cardSearch ? `<button class="roster-inline-clear" onclick="rosterAllSearchClear()">✕</button>` : ''}
+      </div>
     </div>`;
 
   const allDecks = [...leagueTeams, ...bossDecks];
@@ -378,6 +391,7 @@ function renderAllTeamsView(leagueTeams, bossDecks) {
       if (_allFilter.txnType === 'none' &&  note.txnType) return;
       if (_allFilter.txnType && _allFilter.txnType !== 'any' && _allFilter.txnType !== 'none' && note.txnType !== _allFilter.txnType) return;
       if (_allFilter.proxy && !note.proxy) return;
+      if (_allFilter.cardSearch && !card.toLowerCase().includes(_allFilter.cardSearch.toLowerCase())) return;
       rows.push({ team, card, key, note });
     });
   });
@@ -597,7 +611,7 @@ function rosterSwitchView(view)        { _currentView = view;      renderRosters
 function rosterSelectTeam(id) {
   _currentView = 'byteam';
   _currentTeamId = id;
-  _teamFilter = { txnType: '', proxy: false }; _teamSortField = null; _teamSortDir = 1; // reset on team switch
+  _teamFilter = { txnType: '', proxy: false, cardSearch: '' }; _teamSortField = null; _teamSortDir = 1; // reset on team switch
   const switcher = document.getElementById('roster-switcher');
   if (switcher) {
     switcher.querySelectorAll('.roster-team-btn').forEach(btn => {
@@ -632,7 +646,7 @@ function rosterSetTeamFilter(key, value) {
   }
 }
 function rosterClearTeamFilter() {
-  _teamFilter = { txnType: '', proxy: false };
+  _teamFilter = { txnType: '', proxy: false, cardSearch: '' };
   rosterSetTeamFilter('txnType', ''); // triggers re-render
 }
 function rosterSetAllSort(field) {
@@ -728,6 +742,33 @@ function rosterSearchRender(query) {
 
 window.rosterSearchInput = rosterSearchInput;
 window.rosterSearchClear = rosterSearchClear;
+
+// ---- INLINE CARD SEARCH (filter bars) ----
+
+let _teamSearchTimer = null;
+let _allSearchTimer  = null;
+
+function rosterTeamSearchInput(value) {
+  clearTimeout(_teamSearchTimer);
+  _teamSearchTimer = setTimeout(() => { rosterSetTeamFilter('cardSearch', value); }, 200);
+}
+function rosterTeamSearchClear() {
+  _teamFilter.cardSearch = '';
+  rosterSetTeamFilter('cardSearch', '');
+}
+function rosterAllSearchInput(value) {
+  clearTimeout(_allSearchTimer);
+  _allSearchTimer = setTimeout(() => { _allFilter.cardSearch = value; renderRostersPage(); }, 200);
+}
+function rosterAllSearchClear() {
+  _allFilter.cardSearch = '';
+  renderRostersPage();
+}
+
+window.rosterTeamSearchInput = rosterTeamSearchInput;
+window.rosterTeamSearchClear = rosterTeamSearchClear;
+window.rosterAllSearchInput  = rosterAllSearchInput;
+window.rosterAllSearchClear  = rosterAllSearchClear;
 
 window.rosterViewAllTeams    = rosterViewAllTeams;
 window.rosterSelectTeam      = rosterSelectTeam;
