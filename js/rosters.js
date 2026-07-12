@@ -50,6 +50,14 @@ function renderRostersPage() {
   const bossDecks = _seasonData.bossDecks || [];
 
   container.innerHTML = `
+    <div class="roster-search-bar">
+      <input class="roster-search-input" id="roster-search-input" type="text"
+        placeholder="Search for a card…" autocomplete="off"
+        oninput="rosterSearchInput(this.value)">
+      <button class="roster-search-clear" id="roster-search-clear"
+        style="display:none" onclick="rosterSearchClear()" aria-label="Clear search">✕</button>
+    </div>
+    <div id="roster-search-results"></div>
     ${renderTeamSwitcher(leagueTeams, bossDecks)}
     <div id="roster-content-section">
       ${_currentView === 'byteam' ? renderByTeamView(leagueTeams, bossDecks) : renderAllTeamsView(leagueTeams, bossDecks)}
@@ -645,6 +653,81 @@ function rosterSetTeamSort(field) {
   }
 }
 
+
+// ---- CARD SEARCH ----
+
+let _searchTimer = null;
+let _searchQuery = '';
+
+function rosterSearchInput(value) {
+  _searchQuery = value;
+  const clearBtn = document.getElementById('roster-search-clear');
+  if (clearBtn) clearBtn.style.display = value ? 'block' : 'none';
+  clearTimeout(_searchTimer);
+  _searchTimer = setTimeout(() => rosterSearchRender(_searchQuery), 200);
+}
+
+function rosterSearchClear() {
+  _searchQuery = '';
+  const input = document.getElementById('roster-search-input');
+  if (input) input.value = '';
+  const clearBtn = document.getElementById('roster-search-clear');
+  if (clearBtn) clearBtn.style.display = 'none';
+  const results = document.getElementById('roster-search-results');
+  if (results) results.innerHTML = '';
+}
+
+function rosterSearchRender(query) {
+  const results = document.getElementById('roster-search-results');
+  if (!results) return;
+  const q = query.trim().toLowerCase();
+  if (!q) { results.innerHTML = ''; return; }
+
+  const allDecks = [...(_seasonData.teams || []), ...(_seasonData.bossDecks || [])];
+
+  // Build: cardName → [{teamName, count, txnTypes}]
+  const hits = {};
+  allDecks.forEach(team => {
+    const notes = team.rosterNotes || {};
+    const finalCounts = {};
+    const txnSets = {};
+    const idxCounters = {};
+    (team.roster || []).forEach(card => {
+      if (!card.toLowerCase().includes(q)) return;
+      finalCounts[card] = (finalCounts[card] || 0) + 1;
+      idxCounters[card] = (idxCounters[card] || 0);
+      const note = notes[`${card}|${idxCounters[card]++}`] || {};
+      if (note.txnType) {
+        if (!txnSets[card]) txnSets[card] = new Set();
+        txnSets[card].add(note.txnType);
+      }
+    });
+    Object.entries(finalCounts).forEach(([card, count]) => {
+      if (!hits[card]) hits[card] = [];
+      hits[card].push({ teamName: team.name, count, txnTypes: txnSets[card] ? [...txnSets[card]] : [] });
+    });
+  });
+
+  const cardNames = Object.keys(hits).sort();
+  if (!cardNames.length) {
+    results.innerHTML = `<div class="roster-search-results"><div class="roster-search-empty">No cards found matching "${query}".</div></div>`;
+    return;
+  }
+
+  const rows = cardNames.map(card => {
+    const teams = hits[card];
+    const teamParts = teams.map(({ teamName, count, txnTypes }) => {
+      const txnBadges = txnTypes.map(t => `<span class="roster-search-txn">${t}</span>`).join('');
+      return `<span class="roster-search-team">${teamName} ×${count}${txnBadges}</span>`;
+    }).join('');
+    return `<div class="roster-search-result-row"><span class="roster-search-card">${card}</span>${teamParts}</div>`;
+  }).join('');
+
+  results.innerHTML = `<div class="roster-search-results">${rows}</div>`;
+}
+
+window.rosterSearchInput = rosterSearchInput;
+window.rosterSearchClear = rosterSearchClear;
 
 window.rosterViewAllTeams    = rosterViewAllTeams;
 window.rosterSelectTeam      = rosterSelectTeam;
