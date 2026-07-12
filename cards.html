@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cards — MTG | MVM</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .cards-page-header { margin-bottom: 24px; }
+    .cards-page-title { font-family: var(--font-head); font-size: 24px; color: var(--gold); margin-bottom: 4px; }
+    .cards-page-sub { font-size: 13px; color: var(--text-muted); }
+
+    .cards-control-bar {
+      display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end;
+      margin-bottom: 20px; padding: 14px 16px;
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+    }
+    .cards-control-group { display: flex; flex-direction: column; gap: 4px; }
+    .cards-control-group label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: .04em; }
+    .cards-control-group select,
+    .cards-control-group input[type="text"] {
+      font-size: 12px; background: var(--bg); border: 1px solid var(--border);
+      color: var(--text-primary); border-radius: 4px; padding: 4px 8px;
+    }
+    .cards-control-group select[multiple] { height: 80px; min-width: 130px; }
+
+    .color-pills { display: flex; gap: 4px; flex-wrap: wrap; }
+    .color-pill {
+      width: 26px; height: 26px; border-radius: 50%; border: 2px solid transparent;
+      cursor: pointer; font-size: 11px; font-weight: bold; display: flex; align-items: center; justify-content: center;
+      transition: border-color .15s;
+    }
+    .color-pill.active { border-color: var(--gold); }
+    .color-pill[data-c="W"] { background: #f5f0dc; color: #333; }
+    .color-pill[data-c="U"] { background: #4a7fb5; color: #fff; }
+    .color-pill[data-c="B"] { background: #333; color: #ccc; border-color: #666; }
+    .color-pill[data-c="R"] { background: #c0392b; color: #fff; }
+    .color-pill[data-c="G"] { background: #27ae60; color: #fff; }
+    .color-pill[data-c="C"] { background: #888; color: #fff; }
+    .color-pill.active[data-c="B"] { border-color: var(--gold); }
+
+    .color-mode-toggle {
+      font-size: 11px; background: var(--bg); border: 1px solid var(--border);
+      color: var(--text-muted); border-radius: 4px; padding: 3px 8px; cursor: pointer; margin-top: 2px;
+    }
+    .color-mode-toggle.exact { color: var(--gold); border-color: var(--gold); }
+
+    .range-row { display: flex; gap: 4px; align-items: center; }
+    .range-row input { width: 44px; }
+    .range-row span { font-size: 11px; color: var(--text-muted); }
+
+    .cards-result-bar {
+      font-size: 12px; color: var(--text-muted); margin-bottom: 12px;
+    }
+
+    .cards-table-wrap { overflow-x: auto; }
+    table.cards-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    table.cards-table th {
+      text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--border);
+      color: var(--text-muted); font-size: 11px; text-transform: uppercase;
+      cursor: pointer; user-select: none; white-space: nowrap;
+    }
+    table.cards-table th:hover { color: var(--text-primary); }
+    table.cards-table td { padding: 5px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    table.cards-table tr:last-child td { border-bottom: none; }
+    table.cards-table tr:hover td { background: var(--bg-hover, rgba(255,255,255,.03)); }
+
+    .card-name { font-weight: 600; color: var(--text-primary); }
+    .mana-cost { font-size: 11px; color: var(--text-muted); letter-spacing: .02em; }
+    .card-type { color: var(--text-secondary); }
+    .pt-cell { color: var(--text-muted); white-space: nowrap; }
+    .set-cell { color: var(--text-muted); font-size: 11px; }
+
+    .usage-badge {
+      display: inline-block; font-size: 10px; padding: 1px 6px;
+      border-radius: 10px; background: var(--bg-card); border: 1px solid var(--border);
+      color: var(--text-muted); margin: 1px 2px 1px 0;
+    }
+    .usage-badge.has-count { border-color: var(--gold); color: var(--gold); }
+  </style>
+</head>
+<body data-page="cards">
+
+<div id="site-header"></div>
+
+<div class="container" style="padding-top: 28px">
+  <div class="cards-page-header">
+    <div class="cards-page-title">Card Browser</div>
+    <div class="cards-page-sub" id="cards-sub">Loading…</div>
+  </div>
+
+  <div class="cards-control-bar" id="cards-control-bar">
+    <div style="color:var(--text-muted);font-size:13px">Loading…</div>
+  </div>
+
+  <div class="cards-result-bar" id="cards-result-bar"></div>
+
+  <div class="cards-table-wrap">
+    <table class="cards-table" id="cards-table">
+      <thead>
+        <tr>
+          <th onclick="cardsSetSort('name')">Card <span id="sort-ind-name"></span></th>
+          <th onclick="cardsSetSort('mana_cost')">Mana</th>
+          <th onclick="cardsSetSort('cmc')">CMC <span id="sort-ind-cmc"></span></th>
+          <th onclick="cardsSetSort('type')">Type</th>
+          <th onclick="cardsSetSort('pt')">P/T</th>
+          <th onclick="cardsSetSort('set')">Set</th>
+          <th>Usage</th>
+          <th onclick="cardsSetSort('ratio')">Pwr/Mana <span id="sort-ind-ratio"></span></th>
+        </tr>
+      </thead>
+      <tbody id="cards-tbody">
+        <tr><td colspan="8" style="text-align:center;padding:32px;color:var(--text-muted)">Loading…</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script src="js/theme.js"></script>
+<script src="js/header.js"></script>
+<script src="js/cards.js"></script>
+</body>
+</html>
