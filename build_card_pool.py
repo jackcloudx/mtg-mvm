@@ -28,6 +28,23 @@ HEADERS = {"User-Agent": USER_AGENT, "Accept": "application/json"}
 # The league allows Alpha through Exodus. Exodus released 1998-06-01.
 CUTOFF_DATE = date(1998, 6, 1)
 
+EXCLUDED_SETS = {
+    "Pro Tour Collector Set",
+    "Multiverse Gift Box",
+    "Judge Gift Cards 1998",
+    "Dragon Con",
+    "Celebration Cards",
+    "Exodus Promos",
+    "Stronghold Promos",
+    "Tempest Promos",
+    "Media and Collaboration Promos",
+    "HarperPrism Book Promos",
+    "Astral Cards",
+    "Portal",
+    "Vanguard Series",
+    "World Championship Decks 1997",
+}
+
 POWER_NINE = {
     "Black Lotus",
     "Ancestral Recall",
@@ -122,6 +139,9 @@ def build_card_pool(raw_path: Path) -> list[dict]:
         try:
             released_date = date.fromisoformat(released)
         except ValueError:
+            continue
+
+        if card.get("set_name") in EXCLUDED_SETS:
             continue
 
         existing = earliest.get(oracle_id)

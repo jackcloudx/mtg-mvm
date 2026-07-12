@@ -5353,25 +5353,6 @@
     "power_nine": false
   },
   {
-    "name": "Proposal",
-    "mana_cost": "{W}{W}{W}{W}",
-    "cmc": 4.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Allows Richard to propose marriage to Lily. If the proposal is accepted both players win; mix the cards in play, both libraries, and both graveyards as a shared deck.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Celebration Cards",
-    "earliest_set_code": "pcel",
-    "earliest_release_date": "1993-11-01",
-    "power_nine": false
-  },
-  {
     "name": "Abu Ja'far",
     "mana_cost": "{W}",
     "cmc": 1.0,
@@ -14063,25 +14044,6 @@
     "power_nine": false
   },
   {
-    "name": "Nalathni Dragon",
-    "mana_cost": "{2}{R}{R}",
-    "cmc": 4.0,
-    "type_line": "Creature \u2014 Dragon",
-    "oracle_text": "Flying; banding (Any creatures with banding, and up to one without, can attack in a band. Bands are blocked as a group. If any creatures with banding you control are blocking or being blocked by a creature, you divide that creature's combat damage, not its controller, among any of the creatures it's being blocked by or is blocking.)\n{R}: This creature gets +1/+0 until end of turn. If this ability has been activated four or more times this turn, sacrifice this creature at the beginning of the next end step.",
-    "power": "1",
-    "toughness": "1",
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Dragon Con",
-    "earliest_set_code": "pdrc",
-    "earliest_release_date": "1994-07-15",
-    "power_nine": false
-  },
-  {
     "name": "Amnesia",
     "mana_cost": "{3}{U}{U}{U}",
     "cmc": 6.0,
@@ -16274,21 +16236,6 @@
     "power_nine": false
   },
   {
-    "name": "Arena",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Land",
-    "oracle_text": "{3}, {T}: Tap target creature you control and target creature of an opponent's choice they control. Those creatures fight each other. (Each deals damage equal to its power to the other.)",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "HarperPrism Book Promos",
-    "earliest_set_code": "phpr",
-    "earliest_release_date": "1994-11-01",
-    "power_nine": false
-  },
-  {
     "name": "Armor Thrull",
     "mana_cost": "{2}{B}",
     "cmc": 3.0,
@@ -17680,25 +17627,6 @@
     "power_nine": false
   },
   {
-    "name": "Sewers of Estark",
-    "mana_cost": "{2}{B}{B}",
-    "cmc": 4.0,
-    "type_line": "Instant",
-    "oracle_text": "Choose target creature. If it's attacking, it can't be blocked this turn. If it's blocking, prevent all combat damage that would be dealt this combat by it and each creature it's blocking.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "HarperPrism Book Promos",
-    "earliest_set_code": "phpr",
-    "earliest_release_date": "1994-11-01",
-    "power_nine": false
-  },
-  {
     "name": "Soul Exchange",
     "mana_cost": "{B}{B}",
     "cmc": 2.0,
@@ -18162,59 +18090,6 @@
     "earliest_set": "Fallen Empires",
     "earliest_set_code": "fem",
     "earliest_release_date": "1994-11-01",
-    "power_nine": false
-  },
-  {
-    "name": "Windseeker Centaur",
-    "mana_cost": "{1}{R}{R}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Centaur",
-    "oracle_text": "Vigilance",
-    "power": "2",
-    "toughness": "2",
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "HarperPrism Book Promos",
-    "earliest_set_code": "phpr",
-    "earliest_release_date": "1995-01-01",
-    "power_nine": false
-  },
-  {
-    "name": "Giant Badger",
-    "mana_cost": "{1}{G}{G}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Badger",
-    "oracle_text": "Whenever this creature blocks, it gets +2/+2 until end of turn.",
-    "power": "2",
-    "toughness": "2",
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "HarperPrism Book Promos",
-    "earliest_set_code": "phpr",
-    "earliest_release_date": "1995-03-01",
-    "power_nine": false
-  },
-  {
-    "name": "Mana Crypt",
-    "mana_cost": "{0}",
-    "cmc": 0.0,
-    "type_line": "Artifact",
-    "oracle_text": "At the beginning of your upkeep, flip a coin. If you lose the flip, this artifact deals 3 damage to you.\n{T}: Add {C}{C}.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "HarperPrism Book Promos",
-    "earliest_set_code": "phpr",
-    "earliest_release_date": "1995-05-01",
     "power_nine": false
   },
   {
@@ -26814,40 +26689,6 @@
     "power_nine": false
   },
   {
-    "name": "Shichifukujin Dragon",
-    "mana_cost": "{6}{R}{R}{R}",
-    "cmc": 9.0,
-    "type_line": "Summon Dragon",
-    "oracle_text": "When Shichifukujin Dragon comes into play, put seven +1/+1 counters on it.\n{R}{R}{R}, Sacrifice two +1/+1 counters: Put three +1/+1 counters on Shichifukujin Dragon at end of turn. Play this ability as a sorcery.",
-    "power": "0",
-    "toughness": "0",
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Celebration Cards",
-    "earliest_set_code": "pcel",
-    "earliest_release_date": "1996-01-01",
-    "power_nine": false
-  },
-  {
-    "name": "Blank Card",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Card",
-    "oracle_text": "",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Pro Tour Collector Set",
-    "earliest_set_code": "ptc",
-    "earliest_release_date": "1996-05-01",
-    "power_nine": false
-  },
-  {
     "name": "Aesthir Glider",
     "mana_cost": "{3}",
     "cmc": 3.0,
@@ -29515,30 +29356,22 @@
     "power_nine": false
   },
   {
-    "name": "1996 World Champion",
-    "mana_cost": "{W}{U}{B}{R}{G}",
-    "cmc": 5.0,
-    "type_line": "Summon Legend",
-    "oracle_text": "Cannot be the target of spells or effects. World Champion has power and toughness equal to the life total of target opponent.\n{0}: Discard your hand to search your library for 1996 World Champion and reveal it to all players. Shuffle your library and put 1996 World Champion on top of it. Use this ability only at the beginning of your upkeep, and only if 1996 World Champion is in your library.",
-    "power": "*",
-    "toughness": "*",
+    "name": "Nalathni Dragon",
+    "mana_cost": "{2}{R}{R}",
+    "cmc": 4.0,
+    "type_line": "Creature \u2014 Dragon",
+    "oracle_text": "Flying; banding (Any creatures with banding, and up to one without, can attack in a band. Bands are blocked as a group. If any creatures with banding you control are blocking or being blocked by a creature, you divide that creature's combat damage, not its controller, among any of the creatures it's being blocked by or is blocking.)\n{R}: This creature gets +1/+0 until end of turn. If this ability has been activated four or more times this turn, sacrifice this creature at the beginning of the next end step.",
+    "power": "1",
+    "toughness": "1",
     "colors": [
-      "B",
-      "G",
-      "R",
-      "U",
-      "W"
+      "R"
     ],
     "color_identity": [
-      "B",
-      "G",
-      "R",
-      "U",
-      "W"
+      "R"
     ],
-    "earliest_set": "Celebration Cards",
-    "earliest_set_code": "pcel",
-    "earliest_release_date": "1996-08-14",
+    "earliest_set": "Redemption Program",
+    "earliest_set_code": "pred",
+    "earliest_release_date": "1996-10-01",
     "power_nine": false
   },
   {
@@ -35423,253 +35256,6 @@
     "power_nine": false
   },
   {
-    "name": "Bull Elephant",
-    "mana_cost": "{3}{G}",
-    "cmc": 4.0,
-    "type_line": "Creature \u2014 Elephant",
-    "oracle_text": "When this creature enters, sacrifice it unless you return two Forests you control to their owner's hand.",
-    "power": "4",
-    "toughness": "4",
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Multiverse Gift Box",
-    "earliest_set_code": "mgb",
-    "earliest_release_date": "1996-11-01",
-    "power_nine": false
-  },
-  {
-    "name": "Dark Privilege",
-    "mana_cost": "{1}{B}",
-    "cmc": 2.0,
-    "type_line": "Enchantment \u2014 Aura",
-    "oracle_text": "Enchant creature\nEnchanted creature gets +1/+1.\nSacrifice a creature: Regenerate enchanted creature.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Multiverse Gift Box",
-    "earliest_set_code": "mgb",
-    "earliest_release_date": "1996-11-01",
-    "power_nine": false
-  },
-  {
-    "name": "King Cheetah",
-    "mana_cost": "{3}{G}",
-    "cmc": 4.0,
-    "type_line": "Creature \u2014 Cat",
-    "oracle_text": "Flash",
-    "power": "3",
-    "toughness": "2",
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Multiverse Gift Box",
-    "earliest_set_code": "mgb",
-    "earliest_release_date": "1996-11-01",
-    "power_nine": false
-  },
-  {
-    "name": "Necrosavant",
-    "mana_cost": "{3}{B}{B}{B}",
-    "cmc": 6.0,
-    "type_line": "Creature \u2014 Zombie Giant",
-    "oracle_text": "{3}{B}{B}, Sacrifice a creature: Return this card from your graveyard to the battlefield. Activate only during your upkeep.",
-    "power": "5",
-    "toughness": "5",
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Multiverse Gift Box",
-    "earliest_set_code": "mgb",
-    "earliest_release_date": "1996-11-01",
-    "power_nine": false
-  },
-  {
-    "name": "Ovinomancer",
-    "mana_cost": "{2}{U}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Human Wizard",
-    "oracle_text": "When this creature enters, sacrifice it unless you return three basic lands you control to their owner's hand.\n{T}, Return this creature to its owner's hand: Destroy target creature. It can't be regenerated. That creature's controller creates a 0/1 green Sheep creature token.",
-    "power": "0",
-    "toughness": "1",
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Multiverse Gift Box",
-    "earliest_set_code": "mgb",
-    "earliest_release_date": "1996-11-01",
-    "power_nine": false
-  },
-  {
-    "name": "Peace Talks",
-    "mana_cost": "{1}{W}",
-    "cmc": 2.0,
-    "type_line": "Sorcery",
-    "oracle_text": "This turn and next turn, creatures can't attack, and players and permanents can't be the targets of spells or activated abilities.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Multiverse Gift Box",
-    "earliest_set_code": "mgb",
-    "earliest_release_date": "1996-11-01",
-    "power_nine": false
-  },
-  {
-    "name": "Urborg Mindsucker",
-    "mana_cost": "{2}{B}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Horror",
-    "oracle_text": "{B}, Sacrifice this creature: Target opponent discards a card at random. Activate only as a sorcery.",
-    "power": "2",
-    "toughness": "2",
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Multiverse Gift Box",
-    "earliest_set_code": "mgb",
-    "earliest_release_date": "1996-11-01",
-    "power_nine": false
-  },
-  {
-    "name": "Vampirism",
-    "mana_cost": "{1}{B}",
-    "cmc": 2.0,
-    "type_line": "Enchantment \u2014 Aura",
-    "oracle_text": "Enchant creature\nWhen this Aura enters, draw a card at the beginning of the next turn's upkeep.\nEnchanted creature gets +1/+1 for each other creature you control.\nOther creatures you control get -1/-1.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Multiverse Gift Box",
-    "earliest_set_code": "mgb",
-    "earliest_release_date": "1996-11-01",
-    "power_nine": false
-  },
-  {
-    "name": "Viashino Sandstalker",
-    "mana_cost": "{1}{R}{R}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Lizard Warrior",
-    "oracle_text": "Haste (This creature can attack and {T} as soon as it comes under your control.)\nAt the beginning of the end step, return this creature to its owner's hand. (Return it only if it's on the battlefield.)",
-    "power": "4",
-    "toughness": "2",
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Multiverse Gift Box",
-    "earliest_set_code": "mgb",
-    "earliest_release_date": "1996-11-01",
-    "power_nine": false
-  },
-  {
-    "name": "Wicked Reward",
-    "mana_cost": "{1}{B}",
-    "cmc": 2.0,
-    "type_line": "Instant",
-    "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nTarget creature gets +4/+2 until end of turn.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Multiverse Gift Box",
-    "earliest_set_code": "mgb",
-    "earliest_release_date": "1996-11-01",
-    "power_nine": false
-  },
-  {
-    "name": "Jamuraan Lion",
-    "mana_cost": "{2}{W}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Cat",
-    "oracle_text": "{W}, {T}: Target creature can't block this turn.",
-    "power": "3",
-    "toughness": "1",
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Media and Collaboration Promos",
-    "earliest_set_code": "pmei",
-    "earliest_release_date": "1996-12-01",
-    "power_nine": false
-  },
-  {
-    "name": "Shrieking Drake",
-    "mana_cost": "{U}",
-    "cmc": 1.0,
-    "type_line": "Creature \u2014 Drake",
-    "oracle_text": "Flying\nWhen this creature enters, return a creature you control to its owner's hand.",
-    "power": "1",
-    "toughness": "1",
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Media and Collaboration Promos",
-    "earliest_set_code": "pmei",
-    "earliest_release_date": "1997-02-01",
-    "power_nine": false
-  },
-  {
-    "name": "Talruum Champion",
-    "mana_cost": "{4}{R}",
-    "cmc": 5.0,
-    "type_line": "Creature \u2014 Minotaur",
-    "oracle_text": "First strike\nWhenever this creature blocks or becomes blocked by a creature, that creature loses first strike until end of turn.",
-    "power": "3",
-    "toughness": "3",
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Media and Collaboration Promos",
-    "earliest_set_code": "pmei",
-    "earliest_release_date": "1997-02-01",
-    "power_nine": false
-  },
-  {
     "name": "Aku Djinn",
     "mana_cost": "{3}{B}{B}",
     "cmc": 5.0,
@@ -35875,6 +35461,25 @@
     "power_nine": false
   },
   {
+    "name": "Bull Elephant",
+    "mana_cost": "{3}{G}",
+    "cmc": 4.0,
+    "type_line": "Creature \u2014 Elephant",
+    "oracle_text": "When this creature enters, sacrifice it unless you return two Forests you control to their owner's hand.",
+    "power": "4",
+    "toughness": "4",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "earliest_set": "Visions",
+    "earliest_set_code": "vis",
+    "earliest_release_date": "1997-02-03",
+    "power_nine": false
+  },
+  {
     "name": "Chronatog",
     "mana_cost": "{1}{U}",
     "cmc": 2.0,
@@ -36039,6 +35644,25 @@
     ],
     "color_identity": [
       "W"
+    ],
+    "earliest_set": "Visions",
+    "earliest_set_code": "vis",
+    "earliest_release_date": "1997-02-03",
+    "power_nine": false
+  },
+  {
+    "name": "Dark Privilege",
+    "mana_cost": "{1}{B}",
+    "cmc": 2.0,
+    "type_line": "Enchantment \u2014 Aura",
+    "oracle_text": "Enchant creature\nEnchanted creature gets +1/+1.\nSacrifice a creature: Regenerate enchanted creature.",
+    "power": null,
+    "toughness": null,
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
     ],
     "earliest_set": "Visions",
     "earliest_set_code": "vis",
@@ -36826,6 +36450,25 @@
     "power_nine": false
   },
   {
+    "name": "Jamuraan Lion",
+    "mana_cost": "{2}{W}",
+    "cmc": 3.0,
+    "type_line": "Creature \u2014 Cat",
+    "oracle_text": "{W}, {T}: Target creature can't block this turn.",
+    "power": "3",
+    "toughness": "1",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "earliest_set": "Visions",
+    "earliest_set_code": "vis",
+    "earliest_release_date": "1997-02-03",
+    "power_nine": false
+  },
+  {
     "name": "Juju Bubble",
     "mana_cost": "{1}",
     "cmc": 1.0,
@@ -36925,6 +36568,25 @@
     ],
     "color_identity": [
       "R"
+    ],
+    "earliest_set": "Visions",
+    "earliest_set_code": "vis",
+    "earliest_release_date": "1997-02-03",
+    "power_nine": false
+  },
+  {
+    "name": "King Cheetah",
+    "mana_cost": "{3}{G}",
+    "cmc": 4.0,
+    "type_line": "Creature \u2014 Cat",
+    "oracle_text": "Flash",
+    "power": "3",
+    "toughness": "2",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
     ],
     "earliest_set": "Visions",
     "earliest_set_code": "vis",
@@ -37264,6 +36926,25 @@
     "power_nine": false
   },
   {
+    "name": "Necrosavant",
+    "mana_cost": "{3}{B}{B}{B}",
+    "cmc": 6.0,
+    "type_line": "Creature \u2014 Zombie Giant",
+    "oracle_text": "{3}{B}{B}, Sacrifice a creature: Return this card from your graveyard to the battlefield. Activate only during your upkeep.",
+    "power": "5",
+    "toughness": "5",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "earliest_set": "Visions",
+    "earliest_set_code": "vis",
+    "earliest_release_date": "1997-02-03",
+    "power_nine": false
+  },
+  {
     "name": "Nekrataal",
     "mana_cost": "{2}{B}{B}",
     "cmc": 4.0,
@@ -37302,6 +36983,25 @@
     "power_nine": false
   },
   {
+    "name": "Ovinomancer",
+    "mana_cost": "{2}{U}",
+    "cmc": 3.0,
+    "type_line": "Creature \u2014 Human Wizard",
+    "oracle_text": "When this creature enters, sacrifice it unless you return three basic lands you control to their owner's hand.\n{T}, Return this creature to its owner's hand: Destroy target creature. It can't be regenerated. That creature's controller creates a 0/1 green Sheep creature token.",
+    "power": "0",
+    "toughness": "1",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "earliest_set": "Visions",
+    "earliest_set_code": "vis",
+    "earliest_release_date": "1997-02-03",
+    "power_nine": false
+  },
+  {
     "name": "Panther Warriors",
     "mana_cost": "{4}{G}",
     "cmc": 5.0,
@@ -37326,6 +37026,25 @@
     "cmc": 2.0,
     "type_line": "Enchantment",
     "oracle_text": "You may cast this spell as though it had flash. If you cast it any time a sorcery couldn't have been cast, the controller of the permanent it becomes sacrifices it at the beginning of the next cleanup step.\nCreatures you control get +0/+1.",
+    "power": null,
+    "toughness": null,
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "earliest_set": "Visions",
+    "earliest_set_code": "vis",
+    "earliest_release_date": "1997-02-03",
+    "power_nine": false
+  },
+  {
+    "name": "Peace Talks",
+    "mana_cost": "{1}{W}",
+    "cmc": 2.0,
+    "type_line": "Sorcery",
+    "oracle_text": "This turn and next turn, creatures can't attack, and players and permanents can't be the targets of spells or activated abilities.",
     "power": null,
     "toughness": null,
     "colors": [
@@ -37786,6 +37505,25 @@
     "power_nine": false
   },
   {
+    "name": "Shrieking Drake",
+    "mana_cost": "{U}",
+    "cmc": 1.0,
+    "type_line": "Creature \u2014 Drake",
+    "oracle_text": "Flying\nWhen this creature enters, return a creature you control to its owner's hand.",
+    "power": "1",
+    "toughness": "1",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "earliest_set": "Visions",
+    "earliest_set_code": "vis",
+    "earliest_release_date": "1997-02-03",
+    "power_nine": false
+  },
+  {
     "name": "Simoon",
     "mana_cost": "{R}{G}",
     "cmc": 2.0,
@@ -38038,6 +37776,25 @@
     "oracle_text": "Haste\nFlanking (Whenever a creature without flanking blocks this creature, the blocking creature gets -1/-1 until end of turn.)",
     "power": "2",
     "toughness": "2",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "earliest_set": "Visions",
+    "earliest_set_code": "vis",
+    "earliest_release_date": "1997-02-03",
+    "power_nine": false
+  },
+  {
+    "name": "Talruum Champion",
+    "mana_cost": "{4}{R}",
+    "cmc": 5.0,
+    "type_line": "Creature \u2014 Minotaur",
+    "oracle_text": "First strike\nWhenever this creature blocks or becomes blocked by a creature, that creature loses first strike until end of turn.",
+    "power": "3",
+    "toughness": "3",
     "colors": [
       "R"
     ],
@@ -38322,11 +38079,49 @@
     "power_nine": false
   },
   {
+    "name": "Urborg Mindsucker",
+    "mana_cost": "{2}{B}",
+    "cmc": 3.0,
+    "type_line": "Creature \u2014 Horror",
+    "oracle_text": "{B}, Sacrifice this creature: Target opponent discards a card at random. Activate only as a sorcery.",
+    "power": "2",
+    "toughness": "2",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "earliest_set": "Visions",
+    "earliest_set_code": "vis",
+    "earliest_release_date": "1997-02-03",
+    "power_nine": false
+  },
+  {
     "name": "Vampiric Tutor",
     "mana_cost": "{B}",
     "cmc": 1.0,
     "type_line": "Instant",
     "oracle_text": "Search your library for a card, then shuffle and put that card on top. You lose 2 life.",
+    "power": null,
+    "toughness": null,
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "earliest_set": "Visions",
+    "earliest_set_code": "vis",
+    "earliest_release_date": "1997-02-03",
+    "power_nine": false
+  },
+  {
+    "name": "Vampirism",
+    "mana_cost": "{1}{B}",
+    "cmc": 2.0,
+    "type_line": "Enchantment \u2014 Aura",
+    "oracle_text": "Enchant creature\nWhen this Aura enters, draw a card at the beginning of the next turn's upkeep.\nEnchanted creature gets +1/+1 for each other creature you control.\nOther creatures you control get -1/-1.",
     "power": null,
     "toughness": null,
     "colors": [
@@ -38353,6 +38148,25 @@
     ],
     "color_identity": [
       "U"
+    ],
+    "earliest_set": "Visions",
+    "earliest_set_code": "vis",
+    "earliest_release_date": "1997-02-03",
+    "power_nine": false
+  },
+  {
+    "name": "Viashino Sandstalker",
+    "mana_cost": "{1}{R}{R}",
+    "cmc": 3.0,
+    "type_line": "Creature \u2014 Lizard Warrior",
+    "oracle_text": "Haste (This creature can attack and {T} as soon as it comes under your control.)\nAt the beginning of the end step, return this creature to its owner's hand. (Return it only if it's on the battlefield.)",
+    "power": "4",
+    "toughness": "2",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
     ],
     "earliest_set": "Visions",
     "earliest_set_code": "vis",
@@ -38491,6 +38305,25 @@
     "power_nine": false
   },
   {
+    "name": "Wicked Reward",
+    "mana_cost": "{1}{B}",
+    "cmc": 2.0,
+    "type_line": "Instant",
+    "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nTarget creature gets +4/+2 until end of turn.",
+    "power": null,
+    "toughness": null,
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "earliest_set": "Visions",
+    "earliest_set_code": "vis",
+    "earliest_release_date": "1997-02-03",
+    "power_nine": false
+  },
+  {
     "name": "Wind Shear",
     "mana_cost": "{2}{G}",
     "cmc": 3.0,
@@ -38542,3692 +38375,9 @@
     "color_identity": [
       "G"
     ],
-    "earliest_set": "Astral Cards",
-    "earliest_set_code": "past",
+    "earliest_set": "MicroProse Promos",
+    "earliest_set_code": "pmic",
     "earliest_release_date": "1997-04-01",
-    "power_nine": false
-  },
-  {
-    "name": "Call from the Grave",
-    "mana_cost": "{2}{B}",
-    "cmc": 3.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Put a random creature from a random graveyard into play under your control. Call from the Grave deals to you an amount of damage equal to that creature's casting cost.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Astral Cards",
-    "earliest_set_code": "past",
-    "earliest_release_date": "1997-04-01",
-    "power_nine": false
-  },
-  {
-    "name": "Faerie Dragon",
-    "mana_cost": "{2}{G}{G}",
-    "cmc": 4.0,
-    "type_line": "Summon Dragon",
-    "oracle_text": "Flying\n{1}{G}{G}: Play a random effect.",
-    "power": "1",
-    "toughness": "3",
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Astral Cards",
-    "earliest_set_code": "past",
-    "earliest_release_date": "1997-04-01",
-    "power_nine": false
-  },
-  {
-    "name": "Gem Bazaar",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Land",
-    "oracle_text": "When Gem Bazaar comes into play, choose a random color.\n{T}: Add to your mana pool one mana of the color last chosen. Then choose a random color.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Astral Cards",
-    "earliest_set_code": "past",
-    "earliest_release_date": "1997-04-01",
-    "power_nine": false
-  },
-  {
-    "name": "Goblin Polka Band",
-    "mana_cost": "{R}{R}",
-    "cmc": 2.0,
-    "type_line": "Summon Goblin",
-    "oracle_text": "{2}, {T}, Pay {R} for each target: Tap any number of random target creatures. Goblins tapped in this way do not untap during their controllers' next untap phases.",
-    "power": "1",
-    "toughness": "1",
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Astral Cards",
-    "earliest_set_code": "past",
-    "earliest_release_date": "1997-04-01",
-    "power_nine": false
-  },
-  {
-    "name": "Necropolis of Azar",
-    "mana_cost": "{2}{B}{B}",
-    "cmc": 4.0,
-    "type_line": "Enchantment",
-    "oracle_text": "Whenever a non-black creature is put into any graveyard from play, put a husk counter on Necropolis of Azar.\n{5}, Remove a husk counter from Necropolis of Azar: Put a Spawn of Azar token into play. Treat this token as a black creature with a random power and toughness, each no less than 1 and no greater than 3, that has swampwalk.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Astral Cards",
-    "earliest_set_code": "past",
-    "earliest_release_date": "1997-04-01",
-    "power_nine": false
-  },
-  {
-    "name": "Orcish Catapult",
-    "mana_cost": "{X}{R}{R}",
-    "cmc": 2.0,
-    "type_line": "Instant",
-    "oracle_text": "Randomly distribute X -0/-1 counters among a random number of random target creatures.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Astral Cards",
-    "earliest_set_code": "past",
-    "earliest_release_date": "1997-04-01",
-    "power_nine": false
-  },
-  {
-    "name": "Pandora's Box",
-    "mana_cost": "{5}",
-    "cmc": 5.0,
-    "type_line": "Artifact",
-    "oracle_text": "{3}, {T}: Choose a random summon card from all players' decks. For each player, flip a coin. If the flip ends up heads, put a token creature into play and treat it as though an exact copy of the chosen summon card were just played.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Astral Cards",
-    "earliest_set_code": "past",
-    "earliest_release_date": "1997-04-01",
-    "power_nine": false
-  },
-  {
-    "name": "Power Struggle",
-    "mana_cost": "{2}{U}{U}{U}",
-    "cmc": 5.0,
-    "type_line": "Enchantment",
-    "oracle_text": "During each player's upkeep, that player exchanges control of random target artifact, creature or land he or she controls, for control of random target permanent of the same type that a random opponent controls.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Astral Cards",
-    "earliest_set_code": "past",
-    "earliest_release_date": "1997-04-01",
-    "power_nine": false
-  },
-  {
-    "name": "Prismatic Dragon",
-    "mana_cost": "{2}{W}{W}",
-    "cmc": 4.0,
-    "type_line": "Summon Dragon",
-    "oracle_text": "Flying\nDuring your upkeep, Prismatic Dragon becomes a random color permanently.\n{2}: Prismatic Dragon becomes a random color permanently.",
-    "power": "2",
-    "toughness": "3",
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Astral Cards",
-    "earliest_set_code": "past",
-    "earliest_release_date": "1997-04-01",
-    "power_nine": false
-  },
-  {
-    "name": "Rainbow Knights",
-    "mana_cost": "{W}{W}",
-    "cmc": 2.0,
-    "type_line": "Summon Knights",
-    "oracle_text": "When Rainbow Knights comes into play, it gains protection from a random color permanently.\n{1}: First strike until end of turn.\n{W}{W}: +0/+0, +1/+0 or +2/+0 until end of turn chosen at random.",
-    "power": "2",
-    "toughness": "1",
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Astral Cards",
-    "earliest_set_code": "past",
-    "earliest_release_date": "1997-04-01",
-    "power_nine": false
-  },
-  {
-    "name": "Whimsy",
-    "mana_cost": "{X}{U}{U}",
-    "cmc": 2.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Play X random fast effects.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Astral Cards",
-    "earliest_set_code": "past",
-    "earliest_release_date": "1997-04-01",
-    "power_nine": false
-  },
-  {
-    "name": "Alabaster Dragon",
-    "mana_cost": "{4}{W}{W}",
-    "cmc": 6.0,
-    "type_line": "Creature \u2014 Dragon",
-    "oracle_text": "Flying\nWhen this creature dies, shuffle it into its owner's library.",
-    "power": "4",
-    "toughness": "4",
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Alluring Scent",
-    "mana_cost": "{1}{G}{G}",
-    "cmc": 3.0,
-    "type_line": "Sorcery",
-    "oracle_text": "All creatures able to block target creature this turn do so.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Anaconda",
-    "mana_cost": "{3}{G}",
-    "cmc": 4.0,
-    "type_line": "Creature \u2014 Snake",
-    "oracle_text": "Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)",
-    "power": "3",
-    "toughness": "3",
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Angelic Blessing",
-    "mana_cost": "{2}{W}",
-    "cmc": 3.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Target creature gets +3/+3 and gains flying until end of turn. (It can't be blocked except by creatures with flying or reach.)",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Ardent Militia",
-    "mana_cost": "{4}{W}",
-    "cmc": 5.0,
-    "type_line": "Creature \u2014 Human Soldier",
-    "oracle_text": "Vigilance",
-    "power": "2",
-    "toughness": "5",
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Armored Pegasus",
-    "mana_cost": "{1}{W}",
-    "cmc": 2.0,
-    "type_line": "Creature \u2014 Pegasus",
-    "oracle_text": "Flying",
-    "power": "1",
-    "toughness": "2",
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Arrogant Vampire",
-    "mana_cost": "{3}{B}{B}",
-    "cmc": 5.0,
-    "type_line": "Creature \u2014 Vampire",
-    "oracle_text": "Flying",
-    "power": "4",
-    "toughness": "3",
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Ashnod",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Vanguard",
-    "oracle_text": "Whenever a creature deals damage to you, destroy it.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Vanguard Series",
-    "earliest_set_code": "pvan",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Assassin's Blade",
-    "mana_cost": "{1}{B}",
-    "cmc": 2.0,
-    "type_line": "Instant",
-    "oracle_text": "Cast this spell only during the declare attackers step and only if you've been attacked this step.\nDestroy target nonblack attacking creature.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Balance of Power",
-    "mana_cost": "{3}{U}{U}",
-    "cmc": 5.0,
-    "type_line": "Sorcery",
-    "oracle_text": "If target opponent has more cards in hand than you, draw cards equal to the difference.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Baleful Stare",
-    "mana_cost": "{2}{U}",
-    "cmc": 3.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Target opponent reveals their hand. You draw a card for each Mountain and red card in it.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Barrin",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Vanguard",
-    "oracle_text": "Sacrifice a permanent: Return target creature to its owner's hand.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Vanguard Series",
-    "earliest_set_code": "pvan",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Bee Sting",
-    "mana_cost": "{3}{G}",
-    "cmc": 4.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Bee Sting deals 2 damage to any target.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Blaze",
-    "mana_cost": "{X}{R}",
-    "cmc": 1.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Blaze deals X damage to any target.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Blessed Reversal",
-    "mana_cost": "{1}{W}",
-    "cmc": 2.0,
-    "type_line": "Instant",
-    "oracle_text": "You gain 3 life for each creature attacking you.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Bog Raiders",
-    "mana_cost": "{2}{B}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Zombie",
-    "oracle_text": "Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)",
-    "power": "2",
-    "toughness": "2",
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Boiling Seas",
-    "mana_cost": "{3}{R}",
-    "cmc": 4.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Destroy all Islands.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Border Guard",
-    "mana_cost": "{2}{W}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Human Soldier",
-    "oracle_text": "",
-    "power": "1",
-    "toughness": "4",
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Breath of Life",
-    "mana_cost": "{3}{W}",
-    "cmc": 4.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Return target creature card from your graveyard to the battlefield.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Bull Hippo",
-    "mana_cost": "{3}{G}",
-    "cmc": 4.0,
-    "type_line": "Creature \u2014 Hippo",
-    "oracle_text": "Islandwalk (This creature can't be blocked as long as defending player controls an Island.)",
-    "power": "3",
-    "toughness": "3",
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Burning Cloak",
-    "mana_cost": "{R}",
-    "cmc": 1.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Target creature gets +2/+0 until end of turn. Burning Cloak deals 2 damage to that creature.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Capricious Sorcerer",
-    "mana_cost": "{2}{U}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Human Wizard Sorcerer",
-    "oracle_text": "{T}: This creature deals 1 damage to any target. Activate only during your turn, before attackers are declared.",
-    "power": "1",
-    "toughness": "1",
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Charging Bandits",
-    "mana_cost": "{4}{B}",
-    "cmc": 5.0,
-    "type_line": "Creature \u2014 Human Rogue",
-    "oracle_text": "Whenever this creature attacks, it gets +2/+0 until end of turn.",
-    "power": "3",
-    "toughness": "3",
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Charging Paladin",
-    "mana_cost": "{2}{W}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Human Knight",
-    "oracle_text": "Whenever this creature attacks, it gets +0/+3 until end of turn.",
-    "power": "2",
-    "toughness": "2",
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Charging Rhino",
-    "mana_cost": "{3}{G}{G}",
-    "cmc": 5.0,
-    "type_line": "Creature \u2014 Rhino",
-    "oracle_text": "This creature can't be blocked by more than one creature.",
-    "power": "4",
-    "toughness": "4",
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Cloak of Feathers",
-    "mana_cost": "{U}",
-    "cmc": 1.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Target creature gains flying until end of turn.\nDraw a card.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Cloud Dragon",
-    "mana_cost": "{5}{U}",
-    "cmc": 6.0,
-    "type_line": "Creature \u2014 Illusion Dragon",
-    "oracle_text": "Flying\nThis creature can block only creatures with flying.",
-    "power": "5",
-    "toughness": "4",
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Cloud Pirates",
-    "mana_cost": "{U}",
-    "cmc": 1.0,
-    "type_line": "Creature \u2014 Human Pirate",
-    "oracle_text": "Flying\nThis creature can block only creatures with flying.",
-    "power": "1",
-    "toughness": "1",
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Cloud Spirit",
-    "mana_cost": "{2}{U}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Spirit",
-    "oracle_text": "Flying\nThis creature can block only creatures with flying.",
-    "power": "3",
-    "toughness": "1",
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Command of Unsummoning",
-    "mana_cost": "{2}{U}",
-    "cmc": 3.0,
-    "type_line": "Instant",
-    "oracle_text": "Cast this spell only during the declare attackers step and only if you've been attacked this step.\nReturn one or two target attacking creatures to their owner's hand.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Coral Eel",
-    "mana_cost": "{1}{U}",
-    "cmc": 2.0,
-    "type_line": "Creature \u2014 Fish",
-    "oracle_text": "",
-    "power": "2",
-    "toughness": "1",
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Craven Giant",
-    "mana_cost": "{2}{R}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Giant",
-    "oracle_text": "This creature can't block.",
-    "power": "4",
-    "toughness": "1",
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Craven Knight",
-    "mana_cost": "{1}{B}",
-    "cmc": 2.0,
-    "type_line": "Creature \u2014 Human Knight",
-    "oracle_text": "This creature can't block.",
-    "power": "2",
-    "toughness": "2",
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Crovax",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Vanguard",
-    "oracle_text": "Whenever a creature you control deals damage to a creature or player, you gain 1 life.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Vanguard Series",
-    "earliest_set_code": "pvan",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Cruel Bargain",
-    "mana_cost": "{B}{B}{B}",
-    "cmc": 3.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Draw four cards. You lose half your life, rounded up.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Cruel Fate",
-    "mana_cost": "{4}{U}",
-    "cmc": 5.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Look at the top five cards of target opponent's library. Put one of those cards into that player's graveyard and the rest on top of their library in any order.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Cruel Tutor",
-    "mana_cost": "{2}{B}",
-    "cmc": 3.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Search your library for a card, then shuffle and put that card on top. You lose 2 life.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Deep Wood",
-    "mana_cost": "{1}{G}",
-    "cmc": 2.0,
-    "type_line": "Instant",
-    "oracle_text": "Cast this spell only during the declare attackers step and only if you've been attacked this step.\nPrevent all damage that would be dealt to you this turn by attacking creatures.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Deep-Sea Serpent",
-    "mana_cost": "{4}{U}{U}",
-    "cmc": 6.0,
-    "type_line": "Creature \u2014 Serpent",
-    "oracle_text": "This creature can't attack unless defending player controls an Island.",
-    "power": "5",
-    "toughness": "5",
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Defiant Stand",
-    "mana_cost": "{1}{W}",
-    "cmc": 2.0,
-    "type_line": "Instant",
-    "oracle_text": "Cast this spell only during the declare attackers step and only if you've been attacked this step.\nTarget creature gets +1/+3 until end of turn. Untap that creature.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Desert Drake",
-    "mana_cost": "{3}{R}",
-    "cmc": 4.0,
-    "type_line": "Creature \u2014 Drake",
-    "oracle_text": "Flying",
-    "power": "2",
-    "toughness": "2",
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Devastation",
-    "mana_cost": "{5}{R}{R}",
-    "cmc": 7.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Destroy all creatures and lands.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Devoted Hero",
-    "mana_cost": "{W}",
-    "cmc": 1.0,
-    "type_line": "Creature \u2014 Elf Soldier",
-    "oracle_text": "",
-    "power": "1",
-    "toughness": "2",
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Djinn of the Lamp",
-    "mana_cost": "{5}{U}{U}",
-    "cmc": 7.0,
-    "type_line": "Creature \u2014 Djinn",
-    "oracle_text": "Flying",
-    "power": "5",
-    "toughness": "6",
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Dread Charge",
-    "mana_cost": "{3}{B}",
-    "cmc": 4.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Black creatures you control can't be blocked this turn except by black creatures.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Dread Reaper",
-    "mana_cost": "{3}{B}{B}{B}",
-    "cmc": 6.0,
-    "type_line": "Creature \u2014 Horror",
-    "oracle_text": "Flying\nWhen this creature enters, you lose 5 life.",
-    "power": "6",
-    "toughness": "5",
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "D\u00e9j\u00e0 Vu",
-    "mana_cost": "{2}{U}",
-    "cmc": 3.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Return target sorcery card from your graveyard to your hand.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Ebon Dragon",
-    "mana_cost": "{5}{B}{B}",
-    "cmc": 7.0,
-    "type_line": "Creature \u2014 Dragon",
-    "oracle_text": "Flying\nWhen this creature enters, you may have target opponent discard a card.",
-    "power": "5",
-    "toughness": "4",
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Eladamri",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Vanguard",
-    "oracle_text": "{0}: The next 1 damage that would be dealt to target creature you control is dealt to you instead.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Vanguard Series",
-    "earliest_set_code": "pvan",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Elite Cat Warrior",
-    "mana_cost": "{2}{G}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Cat Warrior",
-    "oracle_text": "Forestwalk (This creature can't be blocked as long as defending player controls a Forest.)",
-    "power": "2",
-    "toughness": "3",
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Endless Cockroaches",
-    "mana_cost": "{1}{B}{B}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Insect",
-    "oracle_text": "When this creature dies, return it to its owner's hand.",
-    "power": "1",
-    "toughness": "1",
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Ertai",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Vanguard",
-    "oracle_text": "Creatures you control have hexproof. (They can't be the targets of spells or abilities your opponents control.)",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Vanguard Series",
-    "earliest_set_code": "pvan",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Exhaustion",
-    "mana_cost": "{2}{U}",
-    "cmc": 3.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Creatures and lands target opponent controls don't untap during their next untap step.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "False Peace",
-    "mana_cost": "{W}",
-    "cmc": 1.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Target player skips all combat phases of their next turn.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Final Strike",
-    "mana_cost": "{2}{B}{B}",
-    "cmc": 4.0,
-    "type_line": "Sorcery",
-    "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nFinal Strike deals damage to target opponent or planeswalker equal to the sacrificed creature's power.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Fire Dragon",
-    "mana_cost": "{6}{R}{R}{R}",
-    "cmc": 9.0,
-    "type_line": "Creature \u2014 Dragon",
-    "oracle_text": "Flying\nWhen this creature enters, it deals damage to target creature equal to the number of Mountains you control.",
-    "power": "6",
-    "toughness": "6",
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Fire Imp",
-    "mana_cost": "{2}{R}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Imp",
-    "oracle_text": "When this creature enters, it deals 2 damage to target creature.",
-    "power": "2",
-    "toughness": "1",
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Fire Snake",
-    "mana_cost": "{4}{R}",
-    "cmc": 5.0,
-    "type_line": "Creature \u2014 Snake",
-    "oracle_text": "When this creature dies, destroy target land.",
-    "power": "3",
-    "toughness": "1",
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Fire Tempest",
-    "mana_cost": "{5}{R}{R}",
-    "cmc": 7.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Fire Tempest deals 6 damage to each creature and each player.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Fleet-Footed Monk",
-    "mana_cost": "{1}{W}",
-    "cmc": 2.0,
-    "type_line": "Creature \u2014 Human Monk",
-    "oracle_text": "This creature can't be blocked by creatures with power 2 or greater.",
-    "power": "1",
-    "toughness": "1",
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Flux",
-    "mana_cost": "{2}{U}",
-    "cmc": 3.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Each player discards any number of cards, then draws that many cards.\nDraw a card.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Foot Soldiers",
-    "mana_cost": "{3}{W}",
-    "cmc": 4.0,
-    "type_line": "Creature \u2014 Human Soldier",
-    "oracle_text": "",
-    "power": "2",
-    "toughness": "4",
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Forked Lightning",
-    "mana_cost": "{3}{R}",
-    "cmc": 4.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Forked Lightning deals 4 damage divided as you choose among one, two, or three target creatures.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Fruition",
-    "mana_cost": "{G}",
-    "cmc": 1.0,
-    "type_line": "Sorcery",
-    "oracle_text": "You gain 1 life for each Forest on the battlefield.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Gerrard",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Vanguard",
-    "oracle_text": "At the beginning of your draw step, draw an additional card.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Vanguard Series",
-    "earliest_set_code": "pvan",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Giant Octopus",
-    "mana_cost": "{3}{U}",
-    "cmc": 4.0,
-    "type_line": "Creature \u2014 Octopus",
-    "oracle_text": "",
-    "power": "3",
-    "toughness": "3",
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Gift of Estates",
-    "mana_cost": "{1}{W}",
-    "cmc": 2.0,
-    "type_line": "Sorcery",
-    "oracle_text": "If an opponent controls more lands than you, search your library for up to three Plains cards, reveal them, put them into your hand, then shuffle.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Gix",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Vanguard",
-    "oracle_text": "{3}: Return target creature card from your graveyard to your hand.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Vanguard Series",
-    "earliest_set_code": "pvan",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Goblin Bully",
-    "mana_cost": "{1}{R}",
-    "cmc": 2.0,
-    "type_line": "Creature \u2014 Goblin",
-    "oracle_text": "",
-    "power": "2",
-    "toughness": "1",
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Gorilla Warrior",
-    "mana_cost": "{2}{G}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Ape Warrior",
-    "oracle_text": "",
-    "power": "3",
-    "toughness": "2",
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Gravedigger",
-    "mana_cost": "{3}{B}",
-    "cmc": 4.0,
-    "type_line": "Creature \u2014 Zombie",
-    "oracle_text": "When this creature enters, you may return target creature card from your graveyard to your hand.",
-    "power": "2",
-    "toughness": "2",
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Greven il-Vec",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Vanguard",
-    "oracle_text": "Whenever a creature you control deals damage to a creature, destroy the other creature. It can't be regenerated.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Vanguard Series",
-    "earliest_set_code": "pvan",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Hand of Death",
-    "mana_cost": "{2}{B}",
-    "cmc": 3.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Destroy target nonblack creature.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Hanna",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Vanguard",
-    "oracle_text": "Spells you cast cost {1} less to cast.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Vanguard Series",
-    "earliest_set_code": "pvan",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Harsh Justice",
-    "mana_cost": "{2}{W}",
-    "cmc": 3.0,
-    "type_line": "Instant",
-    "oracle_text": "Cast this spell only during the declare attackers step and only if you've been attacked this step.\nThis turn, whenever an attacking creature deals combat damage to you, it deals that much damage to its controller.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Highland Giant",
-    "mana_cost": "{2}{R}{R}",
-    "cmc": 4.0,
-    "type_line": "Creature \u2014 Giant",
-    "oracle_text": "",
-    "power": "3",
-    "toughness": "4",
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Horned Turtle",
-    "mana_cost": "{2}{U}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Turtle",
-    "oracle_text": "",
-    "power": "1",
-    "toughness": "4",
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Howling Fury",
-    "mana_cost": "{2}{B}",
-    "cmc": 3.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Target creature gets +4/+0 until end of turn.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Hulking Goblin",
-    "mana_cost": "{1}{R}",
-    "cmc": 2.0,
-    "type_line": "Creature \u2014 Goblin",
-    "oracle_text": "This creature can't block.",
-    "power": "2",
-    "toughness": "2",
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Ingenious Thief",
-    "mana_cost": "{1}{U}",
-    "cmc": 2.0,
-    "type_line": "Creature \u2014 Human Rogue",
-    "oracle_text": "Flying\nWhen this creature enters, look at target player's hand.",
-    "power": "1",
-    "toughness": "1",
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Jungle Lion",
-    "mana_cost": "{G}",
-    "cmc": 1.0,
-    "type_line": "Creature \u2014 Cat",
-    "oracle_text": "This creature can't block.",
-    "power": "2",
-    "toughness": "1",
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Karn",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Vanguard",
-    "oracle_text": "Each noncreature artifact you control is an artifact creature with power and toughness each equal to its mana value.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Vanguard Series",
-    "earliest_set_code": "pvan",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Keen-Eyed Archers",
-    "mana_cost": "{2}{W}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Elf Archer",
-    "oracle_text": "Reach (This creature can block creatures with flying.)",
-    "power": "2",
-    "toughness": "2",
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "King's Assassin",
-    "mana_cost": "{1}{B}{B}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Human Assassin",
-    "oracle_text": "{T}: Destroy target tapped creature. Activate only during your turn, before attackers are declared.",
-    "power": "1",
-    "toughness": "1",
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Knight Errant",
-    "mana_cost": "{1}{W}",
-    "cmc": 2.0,
-    "type_line": "Creature \u2014 Human Knight",
-    "oracle_text": "",
-    "power": "2",
-    "toughness": "2",
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Last Chance",
-    "mana_cost": "{R}{R}",
-    "cmc": 2.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Take an extra turn after this one. At the beginning of that turn's end step, you lose the game.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Lava Axe",
-    "mana_cost": "{4}{R}",
-    "cmc": 5.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Lava Axe deals 5 damage to target player or planeswalker.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Lava Flow",
-    "mana_cost": "{3}{R}{R}",
-    "cmc": 5.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Destroy target creature or land.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Lizard Warrior",
-    "mana_cost": "{3}{R}",
-    "cmc": 4.0,
-    "type_line": "Creature \u2014 Lizard Warrior",
-    "oracle_text": "",
-    "power": "4",
-    "toughness": "2",
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Lyna",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Vanguard",
-    "oracle_text": "Creatures you control have shadow. (They can block and be blocked only by creatures with shadow.)",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Vanguard Series",
-    "earliest_set_code": "pvan",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Maraxus",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Vanguard",
-    "oracle_text": "Creatures you control get +1/+0.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Vanguard Series",
-    "earliest_set_code": "pvan",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Mercenary Knight",
-    "mana_cost": "{2}{B}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Human Mercenary Knight",
-    "oracle_text": "When this creature enters, sacrifice it unless you discard a creature card.",
-    "power": "4",
-    "toughness": "4",
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Mind Knives",
-    "mana_cost": "{1}{B}",
-    "cmc": 2.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Target opponent discards a card at random.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Mind Rot",
-    "mana_cost": "{2}{B}",
-    "cmc": 3.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Target player discards two cards.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Minotaur Warrior",
-    "mana_cost": "{2}{R}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Minotaur Warrior",
-    "oracle_text": "",
-    "power": "2",
-    "toughness": "3",
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Mirri",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Vanguard",
-    "oracle_text": "If a basic land you control is tapped for mana, it produces mana of a color of your choice instead of any other type.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Vanguard Series",
-    "earliest_set_code": "pvan",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Mishra",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Vanguard",
-    "oracle_text": "If a creature you control would deal damage, it deals double that damage instead.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Vanguard Series",
-    "earliest_set_code": "pvan",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Mobilize",
-    "mana_cost": "{G}",
-    "cmc": 1.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Untap all creatures you control.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Monstrous Growth",
-    "mana_cost": "{1}{G}",
-    "cmc": 2.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Target creature gets +4/+4 until end of turn.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Moon Sprite",
-    "mana_cost": "{1}{G}",
-    "cmc": 2.0,
-    "type_line": "Creature \u2014 Faerie",
-    "oracle_text": "Flying",
-    "power": "1",
-    "toughness": "1",
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Muck Rats",
-    "mana_cost": "{B}",
-    "cmc": 1.0,
-    "type_line": "Creature \u2014 Rat",
-    "oracle_text": "",
-    "power": "1",
-    "toughness": "1",
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Multani",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Vanguard",
-    "oracle_text": "Creatures you control get +X/+0, where X is the number of cards in your hand.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Vanguard Series",
-    "earliest_set_code": "pvan",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Mystic Denial",
-    "mana_cost": "{1}{U}{U}",
-    "cmc": 3.0,
-    "type_line": "Instant",
-    "oracle_text": "Counter target creature or sorcery spell.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Natural Spring",
-    "mana_cost": "{3}{G}{G}",
-    "cmc": 5.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Target player gains 8 life.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Nature's Cloak",
-    "mana_cost": "{2}{G}",
-    "cmc": 3.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Green creatures you control gain forestwalk until end of turn. (They can't be blocked as long as defending player controls a Forest.)",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Nature's Ruin",
-    "mana_cost": "{2}{B}",
-    "cmc": 3.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Destroy all green creatures.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Needle Storm",
-    "mana_cost": "{2}{G}",
-    "cmc": 3.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Needle Storm deals 4 damage to each creature with flying.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Noxious Toad",
-    "mana_cost": "{2}{B}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Frog",
-    "oracle_text": "When this creature dies, each opponent discards a card.",
-    "power": "1",
-    "toughness": "1",
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Omen",
-    "mana_cost": "{1}{U}",
-    "cmc": 2.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Look at the top three cards of your library, then put them back in any order. You may shuffle.\nDraw a card.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Oracle",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Vanguard",
-    "oracle_text": "{0}: Untap target attacking creature you control and remove it from combat.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Vanguard Series",
-    "earliest_set_code": "pvan",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Orim",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Vanguard",
-    "oracle_text": "Creatures you control have reach.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Vanguard Series",
-    "earliest_set_code": "pvan",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Owl Familiar",
-    "mana_cost": "{1}{U}",
-    "cmc": 2.0,
-    "type_line": "Creature \u2014 Bird",
-    "oracle_text": "Flying\nWhen this creature enters, draw a card, then discard a card.",
-    "power": "1",
-    "toughness": "1",
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Path of Peace",
-    "mana_cost": "{3}{W}",
-    "cmc": 4.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Destroy target creature. Its owner gains 4 life.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Personal Tutor",
-    "mana_cost": "{U}",
-    "cmc": 1.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Search your library for a sorcery card, reveal it, then shuffle and put that card on top.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Phantom Warrior",
-    "mana_cost": "{1}{U}{U}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Illusion Warrior",
-    "oracle_text": "This creature can't be blocked.",
-    "power": "2",
-    "toughness": "2",
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Pillaging Horde",
-    "mana_cost": "{2}{R}{R}",
-    "cmc": 4.0,
-    "type_line": "Creature \u2014 Human Barbarian",
-    "oracle_text": "When this creature enters, sacrifice it unless you discard a card at random.",
-    "power": "5",
-    "toughness": "5",
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Plant Elemental",
-    "mana_cost": "{1}{G}",
-    "cmc": 2.0,
-    "type_line": "Creature \u2014 Plant Elemental",
-    "oracle_text": "When this creature enters, sacrifice it unless you sacrifice a Forest.",
-    "power": "3",
-    "toughness": "4",
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Primeval Force",
-    "mana_cost": "{2}{G}{G}{G}",
-    "cmc": 5.0,
-    "type_line": "Creature \u2014 Elemental",
-    "oracle_text": "When this creature enters, sacrifice it unless you sacrifice three Forests.",
-    "power": "8",
-    "toughness": "8",
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Raging Cougar",
-    "mana_cost": "{2}{R}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Cat",
-    "oracle_text": "Haste",
-    "power": "2",
-    "toughness": "2",
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Raging Goblin",
-    "mana_cost": "{R}",
-    "cmc": 1.0,
-    "type_line": "Creature \u2014 Goblin Berserker",
-    "oracle_text": "Haste (This creature can attack and {T} as soon as it comes under your control.)",
-    "power": "1",
-    "toughness": "1",
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Raging Minotaur",
-    "mana_cost": "{2}{R}{R}",
-    "cmc": 4.0,
-    "type_line": "Creature \u2014 Minotaur Berserker",
-    "oracle_text": "Haste",
-    "power": "3",
-    "toughness": "3",
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Rain of Salt",
-    "mana_cost": "{4}{R}{R}",
-    "cmc": 6.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Destroy two target lands.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Rain of Tears",
-    "mana_cost": "{1}{B}{B}",
-    "cmc": 3.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Destroy target land.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Redwood Treefolk",
-    "mana_cost": "{4}{G}",
-    "cmc": 5.0,
-    "type_line": "Creature \u2014 Treefolk",
-    "oracle_text": "",
-    "power": "3",
-    "toughness": "6",
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Regal Unicorn",
-    "mana_cost": "{2}{W}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Unicorn",
-    "oracle_text": "",
-    "power": "2",
-    "toughness": "3",
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Renewing Dawn",
-    "mana_cost": "{1}{W}",
-    "cmc": 2.0,
-    "type_line": "Sorcery",
-    "oracle_text": "You gain 2 life for each Mountain target opponent controls.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Rofellos",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Vanguard",
-    "oracle_text": "Whenever a creature you control dies, draw a card.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Vanguard Series",
-    "earliest_set_code": "pvan",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Rowan Treefolk",
-    "mana_cost": "{3}{G}",
-    "cmc": 4.0,
-    "type_line": "Creature \u2014 Treefolk",
-    "oracle_text": "",
-    "power": "3",
-    "toughness": "4",
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Sacred Knight",
-    "mana_cost": "{3}{W}",
-    "cmc": 4.0,
-    "type_line": "Creature \u2014 Human Knight",
-    "oracle_text": "This creature can't be blocked by black and/or red creatures.",
-    "power": "3",
-    "toughness": "2",
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Sacred Nectar",
-    "mana_cost": "{1}{W}",
-    "cmc": 2.0,
-    "type_line": "Sorcery",
-    "oracle_text": "You gain 4 life.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Scorching Spear",
-    "mana_cost": "{R}",
-    "cmc": 1.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Scorching Spear deals 1 damage to any target.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Scorching Winds",
-    "mana_cost": "{R}",
-    "cmc": 1.0,
-    "type_line": "Instant",
-    "oracle_text": "Cast this spell only during the declare attackers step and only if you've been attacked this step.\nScorching Winds deals 1 damage to each attacking creature.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Seasoned Marshal",
-    "mana_cost": "{2}{W}{W}",
-    "cmc": 4.0,
-    "type_line": "Creature \u2014 Human Soldier",
-    "oracle_text": "Whenever this creature attacks, you may tap target creature.",
-    "power": "2",
-    "toughness": "2",
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Selenia",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Vanguard",
-    "oracle_text": "Creatures you control have vigilance.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Vanguard Series",
-    "earliest_set_code": "pvan",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Serpent Assassin",
-    "mana_cost": "{3}{B}{B}",
-    "cmc": 5.0,
-    "type_line": "Creature \u2014 Snake Assassin",
-    "oracle_text": "When this creature enters, you may destroy target nonblack creature.",
-    "power": "2",
-    "toughness": "2",
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Serpent Warrior",
-    "mana_cost": "{2}{B}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Snake Warrior",
-    "oracle_text": "When this creature enters, you lose 3 life.",
-    "power": "3",
-    "toughness": "3",
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Serra",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Vanguard",
-    "oracle_text": "Creatures you control get +0/+2.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Vanguard Series",
-    "earliest_set_code": "pvan",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Sidar Kondo",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Vanguard",
-    "oracle_text": "{3}: Target creature gets +3/+3 until end of turn.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Vanguard Series",
-    "earliest_set_code": "pvan",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Sisay",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Vanguard",
-    "oracle_text": "Whenever you tap a land for mana, add one mana of any type that land produced.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Vanguard Series",
-    "earliest_set_code": "pvan",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Skeletal Crocodile",
-    "mana_cost": "{3}{B}",
-    "cmc": 4.0,
-    "type_line": "Creature \u2014 Crocodile Skeleton",
-    "oracle_text": "",
-    "power": "5",
-    "toughness": "1",
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Skeletal Snake",
-    "mana_cost": "{1}{B}",
-    "cmc": 2.0,
-    "type_line": "Creature \u2014 Snake Skeleton",
-    "oracle_text": "",
-    "power": "2",
-    "toughness": "1",
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Sliver Queen, Brood Mother",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Vanguard",
-    "oracle_text": "{3}: Create a 1/1 colorless Sliver creature token.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Vanguard Series",
-    "earliest_set_code": "pvan",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Snapping Drake",
-    "mana_cost": "{3}{U}",
-    "cmc": 4.0,
-    "type_line": "Creature \u2014 Drake",
-    "oracle_text": "Flying (This creature can't be blocked except by creatures with flying or reach.)",
-    "power": "3",
-    "toughness": "2",
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Sorcerous Sight",
-    "mana_cost": "{U}",
-    "cmc": 1.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Look at target opponent's hand.\nDraw a card.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Soul Shred",
-    "mana_cost": "{3}{B}{B}",
-    "cmc": 5.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Soul Shred deals 3 damage to target nonblack creature. You gain 3 life.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Spined Wurm",
-    "mana_cost": "{4}{G}",
-    "cmc": 5.0,
-    "type_line": "Creature \u2014 Wurm",
-    "oracle_text": "",
-    "power": "5",
-    "toughness": "4",
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Spiritual Guardian",
-    "mana_cost": "{3}{W}{W}",
-    "cmc": 5.0,
-    "type_line": "Creature \u2014 Spirit",
-    "oracle_text": "When this creature enters, you gain 4 life.",
-    "power": "3",
-    "toughness": "4",
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Spotted Griffin",
-    "mana_cost": "{3}{W}",
-    "cmc": 4.0,
-    "type_line": "Creature \u2014 Griffin",
-    "oracle_text": "Flying",
-    "power": "2",
-    "toughness": "3",
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Squee",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Vanguard",
-    "oracle_text": "Your opponents play with their hands revealed.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Vanguard Series",
-    "earliest_set_code": "pvan",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Starke",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Vanguard",
-    "oracle_text": "At the beginning of your draw step, you may draw an additional card. If you do, put a card from your hand on the bottom of your library.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Vanguard Series",
-    "earliest_set_code": "pvan",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Starlight",
-    "mana_cost": "{1}{W}",
-    "cmc": 2.0,
-    "type_line": "Sorcery",
-    "oracle_text": "You gain 3 life for each black creature target opponent controls.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Starlit Angel",
-    "mana_cost": "{3}{W}{W}",
-    "cmc": 5.0,
-    "type_line": "Creature \u2014 Angel",
-    "oracle_text": "Flying",
-    "power": "3",
-    "toughness": "4",
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Steadfastness",
-    "mana_cost": "{1}{W}",
-    "cmc": 2.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Creatures you control get +0/+3 until end of turn.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Stern Marshal",
-    "mana_cost": "{2}{W}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Human Soldier",
-    "oracle_text": "{T}: Target creature gets +2/+2 until end of turn. Activate only during your turn, before attackers are declared.",
-    "power": "2",
-    "toughness": "2",
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Sylvan Tutor",
-    "mana_cost": "{G}",
-    "cmc": 1.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Search your library for a creature card, reveal it, then shuffle and put that card on top.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Symbol of Unsummoning",
-    "mana_cost": "{2}{U}",
-    "cmc": 3.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Return target creature to its owner's hand.\nDraw a card.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Tahngarth",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Vanguard",
-    "oracle_text": "Creatures you control have haste.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Vanguard Series",
-    "earliest_set_code": "pvan",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Takara",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Vanguard",
-    "oracle_text": "Sacrifice a creature: Takara deals 1 damage to any target.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Vanguard Series",
-    "earliest_set_code": "pvan",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Taunt",
-    "mana_cost": "{U}",
-    "cmc": 1.0,
-    "type_line": "Sorcery",
-    "oracle_text": "During target player's next turn, creatures that player controls attack you if able.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Tawnos",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Vanguard",
-    "oracle_text": "You may cast artifact, creature, and enchantment spells as though they had flash.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Vanguard Series",
-    "earliest_set_code": "pvan",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Temporary Truce",
-    "mana_cost": "{1}{W}",
-    "cmc": 2.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Each player may draw up to two cards. For each card less than two a player draws this way, that player gains 2 life.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Theft of Dreams",
-    "mana_cost": "{2}{U}",
-    "cmc": 3.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Draw a card for each tapped creature target opponent controls.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Thing from the Deep",
-    "mana_cost": "{6}{U}{U}{U}",
-    "cmc": 9.0,
-    "type_line": "Creature \u2014 Leviathan",
-    "oracle_text": "Whenever this creature attacks, sacrifice it unless you sacrifice an Island.",
-    "power": "9",
-    "toughness": "9",
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Thundering Wurm",
-    "mana_cost": "{2}{G}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Wurm",
-    "oracle_text": "When this creature enters, sacrifice it unless you discard a land card.",
-    "power": "4",
-    "toughness": "4",
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Thundermare",
-    "mana_cost": "{5}{R}",
-    "cmc": 6.0,
-    "type_line": "Creature \u2014 Elemental Horse",
-    "oracle_text": "Haste (This creature can attack and {T} as soon as it comes under your control.)\nWhen this creature enters, tap all other creatures.",
-    "power": "5",
-    "toughness": "5",
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Tidal Surge",
-    "mana_cost": "{1}{U}",
-    "cmc": 2.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Tap up to three target creatures without flying.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Time Ebb",
-    "mana_cost": "{2}{U}",
-    "cmc": 3.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Put target creature on top of its owner's library.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Titania",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Vanguard",
-    "oracle_text": "You may play an additional land on each of your turns.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Vanguard Series",
-    "earliest_set_code": "pvan",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Touch of Brilliance",
-    "mana_cost": "{3}{U}",
-    "cmc": 4.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Draw two cards.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Treetop Defense",
-    "mana_cost": "{1}{G}",
-    "cmc": 2.0,
-    "type_line": "Instant",
-    "oracle_text": "Cast this spell only during the declare attackers step and only if you've been attacked this step.\nCreatures you control gain reach until end of turn. (They can block creatures with flying.)",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Undying Beast",
-    "mana_cost": "{3}{B}",
-    "cmc": 4.0,
-    "type_line": "Creature \u2014 Beast",
-    "oracle_text": "When this creature dies, put it on top of its owner's library.",
-    "power": "3",
-    "toughness": "2",
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Urza",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Vanguard",
-    "oracle_text": "{3}: Urza deals 1 damage to any target.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Vanguard Series",
-    "earliest_set_code": "pvan",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Valorous Charge",
-    "mana_cost": "{1}{W}{W}",
-    "cmc": 3.0,
-    "type_line": "Sorcery",
-    "oracle_text": "White creatures get +2/+0 until end of turn.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Vampiric Feast",
-    "mana_cost": "{5}{B}{B}",
-    "cmc": 7.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Vampiric Feast deals 4 damage to any target and you gain 4 life.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Vampiric Touch",
-    "mana_cost": "{2}{B}",
-    "cmc": 3.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Vampiric Touch deals 2 damage to target opponent or planeswalker and you gain 2 life.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Venerable Monk",
-    "mana_cost": "{2}{W}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Human Monk Cleric",
-    "oracle_text": "When this creature enters, you gain 2 life.",
-    "power": "2",
-    "toughness": "2",
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Vengeance",
-    "mana_cost": "{3}{W}",
-    "cmc": 4.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Destroy target tapped creature.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Virtue's Ruin",
-    "mana_cost": "{2}{B}",
-    "cmc": 3.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Destroy all white creatures.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Volcanic Hammer",
-    "mana_cost": "{1}{R}",
-    "cmc": 2.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Volcanic Hammer deals 3 damage to any target.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Volrath",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Vanguard",
-    "oracle_text": "Whenever a creature you control is put into your graveyard from the battlefield, you may put it on top of your library.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Vanguard Series",
-    "earliest_set_code": "pvan",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Wall of Granite",
-    "mana_cost": "{2}{R}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Wall",
-    "oracle_text": "Defender (This creature can't attack.)",
-    "power": "0",
-    "toughness": "7",
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Warrior's Charge",
-    "mana_cost": "{2}{W}",
-    "cmc": 3.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Creatures you control get +1/+1 until end of turn.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "W"
-    ],
-    "color_identity": [
-      "W"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Whiptail Wurm",
-    "mana_cost": "{6}{G}",
-    "cmc": 7.0,
-    "type_line": "Creature \u2014 Wurm",
-    "oracle_text": "",
-    "power": "8",
-    "toughness": "5",
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Wicked Pact",
-    "mana_cost": "{1}{B}{B}",
-    "cmc": 3.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Destroy two target nonblack creatures. You lose 5 life.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Willow Dryad",
-    "mana_cost": "{G}",
-    "cmc": 1.0,
-    "type_line": "Creature \u2014 Dryad",
-    "oracle_text": "Forestwalk (This creature can't be blocked as long as defending player controls a Forest.)",
-    "power": "1",
-    "toughness": "1",
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Wind Drake",
-    "mana_cost": "{2}{U}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Drake",
-    "oracle_text": "Flying",
-    "power": "2",
-    "toughness": "2",
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Winter's Grasp",
-    "mana_cost": "{1}{G}{G}",
-    "cmc": 3.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Destroy target land.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Withering Gaze",
-    "mana_cost": "{2}{U}",
-    "cmc": 3.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Target opponent reveals their hand. You draw a card for each Forest and green card in it.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Wood Elves",
-    "mana_cost": "{2}{G}",
-    "cmc": 3.0,
-    "type_line": "Creature \u2014 Elf Scout",
-    "oracle_text": "When this creature enters, search your library for a Forest card, put that card onto the battlefield, then shuffle.",
-    "power": "1",
-    "toughness": "1",
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Portal",
-    "earliest_set_code": "por",
-    "earliest_release_date": "1997-05-01",
-    "power_nine": false
-  },
-  {
-    "name": "Xantcha",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Vanguard",
-    "oracle_text": "Sacrifice a permanent: Regenerate target creature.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "Vanguard Series",
-    "earliest_set_code": "pvan",
-    "earliest_release_date": "1997-05-01",
     "power_nine": false
   },
   {
@@ -42364,6 +38514,25 @@
     "power_nine": false
   },
   {
+    "name": "Alabaster Dragon",
+    "mana_cost": "{4}{W}{W}",
+    "cmc": 6.0,
+    "type_line": "Creature \u2014 Dragon",
+    "oracle_text": "Flying\nWhen this creature dies, shuffle it into its owner's library.",
+    "power": "4",
+    "toughness": "4",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "earliest_set": "Weatherlight",
+    "earliest_set_code": "wth",
+    "earliest_release_date": "1997-06-09",
+    "power_nine": false
+  },
+  {
     "name": "Alms",
     "mana_cost": "{W}",
     "cmc": 1.0,
@@ -42452,6 +38621,25 @@
     ],
     "color_identity": [
       "G"
+    ],
+    "earliest_set": "Weatherlight",
+    "earliest_set_code": "wth",
+    "earliest_release_date": "1997-06-09",
+    "power_nine": false
+  },
+  {
+    "name": "Ardent Militia",
+    "mana_cost": "{4}{W}",
+    "cmc": 5.0,
+    "type_line": "Creature \u2014 Human Soldier",
+    "oracle_text": "Vigilance",
+    "power": "2",
+    "toughness": "5",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
     ],
     "earliest_set": "Weatherlight",
     "earliest_set_code": "wth",
@@ -43367,6 +39555,25 @@
     ],
     "color_identity": [
       "B"
+    ],
+    "earliest_set": "Weatherlight",
+    "earliest_set_code": "wth",
+    "earliest_release_date": "1997-06-09",
+    "power_nine": false
+  },
+  {
+    "name": "Flux",
+    "mana_cost": "{2}{U}",
+    "cmc": 3.0,
+    "type_line": "Sorcery",
+    "oracle_text": "Each player discards any number of cards, then draws that many cards.\nDraw a card.",
+    "power": null,
+    "toughness": null,
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
     ],
     "earliest_set": "Weatherlight",
     "earliest_set_code": "wth",
@@ -44334,6 +40541,25 @@
     "power_nine": false
   },
   {
+    "name": "Phantom Warrior",
+    "mana_cost": "{1}{U}{U}",
+    "cmc": 3.0,
+    "type_line": "Creature \u2014 Illusion Warrior",
+    "oracle_text": "This creature can't be blocked.",
+    "power": "2",
+    "toughness": "2",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "earliest_set": "Weatherlight",
+    "earliest_set_code": "wth",
+    "earliest_release_date": "1997-06-09",
+    "power_nine": false
+  },
+  {
     "name": "Phantom Wings",
     "mana_cost": "{1}{U}",
     "cmc": 2.0,
@@ -44399,6 +40625,25 @@
     ],
     "color_identity": [
       "B"
+    ],
+    "earliest_set": "Weatherlight",
+    "earliest_set_code": "wth",
+    "earliest_release_date": "1997-06-09",
+    "power_nine": false
+  },
+  {
+    "name": "Redwood Treefolk",
+    "mana_cost": "{4}{G}",
+    "cmc": 5.0,
+    "type_line": "Creature \u2014 Treefolk",
+    "oracle_text": "",
+    "power": "3",
+    "toughness": "6",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
     ],
     "earliest_set": "Weatherlight",
     "earliest_set_code": "wth",
@@ -44876,6 +41121,25 @@
     "power_nine": false
   },
   {
+    "name": "Thundermare",
+    "mana_cost": "{5}{R}",
+    "cmc": 6.0,
+    "type_line": "Creature \u2014 Elemental Horse",
+    "oracle_text": "Haste (This creature can attack and {T} as soon as it comes under your control.)\nWhen this creature enters, tap all other creatures.",
+    "power": "5",
+    "toughness": "5",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
+    ],
+    "earliest_set": "Weatherlight",
+    "earliest_set_code": "wth",
+    "earliest_release_date": "1997-06-09",
+    "power_nine": false
+  },
+  {
     "name": "Timid Drake",
     "mana_cost": "{2}{U}",
     "cmc": 3.0,
@@ -45202,179 +41466,6 @@
     "power_nine": false
   },
   {
-    "name": "1997 World Championships Ad",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Card",
-    "oracle_text": "",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "World Championship Decks 1997",
-    "earliest_set_code": "wc97",
-    "earliest_release_date": "1997-08-13",
-    "power_nine": false
-  },
-  {
-    "name": "Jakub \u0160lemr Bio",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Card",
-    "oracle_text": "\u0160lemr, a twenty-year-old computer analyst from Prague in the Czech Republic, said that he wasn't happy with his deck's 3\u20144 performance in the Standard (Type II) portion of the tournament. However, it came through for him in the elimination rounds. A black weenie deck at heart, it dips into all five colors. It also features a number of creatures that have an effect on entering play, like Man-o'-War, Uktabi Orangutan, and Nekrataal.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "World Championship Decks 1997",
-    "earliest_set_code": "wc97",
-    "earliest_release_date": "1997-08-13",
-    "power_nine": false
-  },
-  {
-    "name": "Jakub \u0160lemr Decklist",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Card",
-    "oracle_text": "",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "World Championship Decks 1997",
-    "earliest_set_code": "wc97",
-    "earliest_release_date": "1997-08-13",
-    "power_nine": false
-  },
-  {
-    "name": "Janosch K\u00fchn Bio (1997)",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Card",
-    "oracle_text": "K\u00fchn, a fifteen-year-old high-school student from Hanover, Germany, played a red, white, and blue deck with a balanced mix of speed and control. It uses cards like Incinerate and Swords to Plowshares to deal with opponents' fast creatures, while increasing the mana base with Thawing Glaciers. For late in the game, Disintegrate and Hammer of Bogardan are excellent finishing cards.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "World Championship Decks 1997",
-    "earliest_set_code": "wc97",
-    "earliest_release_date": "1997-08-13",
-    "power_nine": false
-  },
-  {
-    "name": "Janosch K\u00fchn Decklist 1997",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Card",
-    "oracle_text": "",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "World Championship Decks 1997",
-    "earliest_set_code": "wc97",
-    "earliest_release_date": "1997-08-13",
-    "power_nine": false
-  },
-  {
-    "name": "Paul McCabe Bio",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Card",
-    "oracle_text": "McCabe, a nineteen-year-old college student from Toronto, Canada, played a fast red-blue attacking deck. The deck's main strategy is to put the opponent on the defensive, using a large number of inexpensive, efficient creatures such as Suq'Ata Lancer, Cloud Elemental, Ophidian, and Man-o'-War. It also makes good use of several \"pitch\" spells like Force of Will and Pyrokinesis.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "World Championship Decks 1997",
-    "earliest_set_code": "wc97",
-    "earliest_release_date": "1997-08-13",
-    "power_nine": false
-  },
-  {
-    "name": "Paul McCabe Decklist",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Card",
-    "oracle_text": "",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "World Championship Decks 1997",
-    "earliest_set_code": "wc97",
-    "earliest_release_date": "1997-08-13",
-    "power_nine": false
-  },
-  {
-    "name": "Svend Geertsen Bio",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Card",
-    "oracle_text": "Geertsen, a sixteen-year-old high-school student from Copenhagen, Denmark, played a mono-green deck known affectionately as \"Se\u00f1or Stompie.\" Of the eight finalists, Geertsen had the best record in the Standard (Type II) portion of the tournament, going 6\u20140\u20141. This deck is overloaded with fast green creatures, thirty-three in all. The only noncreature cards are Giant Growth, Bounty of the Hunt, and Winter Orb. The deck also exploits the interaction between Rogue Elephant, Harvest Worm, and Heart of Yavimaya.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "World Championship Decks 1997",
-    "earliest_set_code": "wc97",
-    "earliest_release_date": "1997-08-13",
-    "power_nine": false
-  },
-  {
-    "name": "Svend Geertsen Decklist",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Card",
-    "oracle_text": "",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [],
-    "earliest_set": "World Championship Decks 1997",
-    "earliest_set_code": "wc97",
-    "earliest_release_date": "1997-08-13",
-    "power_nine": false
-  },
-  {
-    "name": "Splendid Genesis",
-    "mana_cost": "{G}{G}{G}{G}",
-    "cmc": 4.0,
-    "type_line": "Sorcery",
-    "oracle_text": "Shuffle all cards in the game together and deal them into three decks. The game continues with a new player.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Celebration Cards",
-    "earliest_set_code": "pcel",
-    "earliest_release_date": "1997-09-01",
-    "power_nine": false
-  },
-  {
-    "name": "Dirtcowl Wurm",
-    "mana_cost": "{4}{G}",
-    "cmc": 5.0,
-    "type_line": "Creature \u2014 Wurm",
-    "oracle_text": "Whenever an opponent plays a land, put a +1/+1 counter on this creature.",
-    "power": "3",
-    "toughness": "4",
-    "colors": [
-      "G"
-    ],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Tempest Promos",
-    "earliest_set_code": "ptmp",
-    "earliest_release_date": "1997-10-01",
-    "power_nine": false
-  },
-  {
     "name": "Abandon Hope",
     "mana_cost": "{X}{1}{B}",
     "cmc": 2.0,
@@ -45582,6 +41673,25 @@
     "type_line": "Creature \u2014 Sliver",
     "oracle_text": "All Sliver creatures have \"{2}: This creature gets +0/+1 until end of turn.\"",
     "power": "2",
+    "toughness": "2",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
+    ],
+    "earliest_set": "Tempest",
+    "earliest_set_code": "tmp",
+    "earliest_release_date": "1997-10-14",
+    "power_nine": false
+  },
+  {
+    "name": "Armored Pegasus",
+    "mana_cost": "{1}{W}",
+    "cmc": 2.0,
+    "type_line": "Creature \u2014 Pegasus",
+    "oracle_text": "Flying",
+    "power": "1",
     "toughness": "2",
     "colors": [
       "W"
@@ -45959,6 +42069,25 @@
     ],
     "color_identity": [
       "R"
+    ],
+    "earliest_set": "Tempest",
+    "earliest_set_code": "tmp",
+    "earliest_release_date": "1997-10-14",
+    "power_nine": false
+  },
+  {
+    "name": "Charging Rhino",
+    "mana_cost": "{3}{G}{G}",
+    "cmc": 5.0,
+    "type_line": "Creature \u2014 Rhino",
+    "oracle_text": "This creature can't be blocked by more than one creature.",
+    "power": "4",
+    "toughness": "4",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
     ],
     "earliest_set": "Tempest",
     "earliest_set_code": "tmp",
@@ -46440,6 +42569,25 @@
     ],
     "color_identity": [
       "B"
+    ],
+    "earliest_set": "Tempest",
+    "earliest_set_code": "tmp",
+    "earliest_release_date": "1997-10-14",
+    "power_nine": false
+  },
+  {
+    "name": "Dirtcowl Wurm",
+    "mana_cost": "{4}{G}",
+    "cmc": 5.0,
+    "type_line": "Creature \u2014 Wurm",
+    "oracle_text": "Whenever an opponent plays a land, put a +1/+1 counter on this creature.",
+    "power": "3",
+    "toughness": "4",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
     ],
     "earliest_set": "Tempest",
     "earliest_set_code": "tmp",
@@ -47268,6 +43416,25 @@
     "power_nine": false
   },
   {
+    "name": "Gravedigger",
+    "mana_cost": "{3}{B}",
+    "cmc": 4.0,
+    "type_line": "Creature \u2014 Zombie",
+    "oracle_text": "When this creature enters, you may return target creature card from your graveyard to your hand.",
+    "power": "2",
+    "toughness": "2",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "earliest_set": "Tempest",
+    "earliest_set_code": "tmp",
+    "earliest_release_date": "1997-10-14",
+    "power_nine": false
+  },
+  {
     "name": "Grindstone",
     "mana_cost": "{1}",
     "cmc": 1.0,
@@ -47481,6 +43648,25 @@
     ],
     "color_identity": [
       "G"
+    ],
+    "earliest_set": "Tempest",
+    "earliest_set_code": "tmp",
+    "earliest_release_date": "1997-10-14",
+    "power_nine": false
+  },
+  {
+    "name": "Horned Turtle",
+    "mana_cost": "{2}{U}",
+    "cmc": 3.0,
+    "type_line": "Creature \u2014 Turtle",
+    "oracle_text": "",
+    "power": "1",
+    "toughness": "4",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
     ],
     "earliest_set": "Tempest",
     "earliest_set_code": "tmp",
@@ -48407,11 +44593,49 @@
     "power_nine": false
   },
   {
+    "name": "Natural Spring",
+    "mana_cost": "{3}{G}{G}",
+    "cmc": 5.0,
+    "type_line": "Sorcery",
+    "oracle_text": "Target player gains 8 life.",
+    "power": null,
+    "toughness": null,
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "earliest_set": "Tempest",
+    "earliest_set_code": "tmp",
+    "earliest_release_date": "1997-10-14",
+    "power_nine": false
+  },
+  {
     "name": "Nature's Revolt",
     "mana_cost": "{3}{G}{G}",
     "cmc": 5.0,
     "type_line": "Enchantment",
     "oracle_text": "All lands are 2/2 creatures that are still lands.",
+    "power": null,
+    "toughness": null,
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "earliest_set": "Tempest",
+    "earliest_set_code": "tmp",
+    "earliest_release_date": "1997-10-14",
+    "power_nine": false
+  },
+  {
+    "name": "Needle Storm",
+    "mana_cost": "{2}{G}",
+    "cmc": 3.0,
+    "type_line": "Sorcery",
+    "oracle_text": "Needle Storm deals 4 damage to each creature with flying.",
     "power": null,
     "toughness": null,
     "colors": [
@@ -48812,6 +45036,25 @@
     ],
     "color_identity": [
       "W"
+    ],
+    "earliest_set": "Tempest",
+    "earliest_set_code": "tmp",
+    "earliest_release_date": "1997-10-14",
+    "power_nine": false
+  },
+  {
+    "name": "Rain of Tears",
+    "mana_cost": "{1}{B}{B}",
+    "cmc": 3.0,
+    "type_line": "Sorcery",
+    "oracle_text": "Destroy target land.",
+    "power": null,
+    "toughness": null,
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
     ],
     "earliest_set": "Tempest",
     "earliest_set_code": "tmp",
@@ -50403,6 +46646,25 @@
     "power_nine": false
   },
   {
+    "name": "Time Ebb",
+    "mana_cost": "{2}{U}",
+    "cmc": 3.0,
+    "type_line": "Sorcery",
+    "oracle_text": "Put target creature on top of its owner's library.",
+    "power": null,
+    "toughness": null,
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "earliest_set": "Tempest",
+    "earliest_set_code": "tmp",
+    "earliest_release_date": "1997-10-14",
+    "power_nine": false
+  },
+  {
     "name": "Time Warp",
     "mana_cost": "{3}{U}{U}",
     "cmc": 5.0,
@@ -50791,6 +47053,25 @@
     "power_nine": false
   },
   {
+    "name": "Wind Drake",
+    "mana_cost": "{2}{U}",
+    "cmc": 3.0,
+    "type_line": "Creature \u2014 Drake",
+    "oracle_text": "Flying",
+    "power": "2",
+    "toughness": "2",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "earliest_set": "Tempest",
+    "earliest_set_code": "tmp",
+    "earliest_release_date": "1997-10-14",
+    "power_nine": false
+  },
+  {
     "name": "Winds of Rath",
     "mana_cost": "{3}{W}{W}",
     "cmc": 5.0,
@@ -50822,6 +47103,25 @@
     ],
     "color_identity": [
       "U"
+    ],
+    "earliest_set": "Tempest",
+    "earliest_set_code": "tmp",
+    "earliest_release_date": "1997-10-14",
+    "power_nine": false
+  },
+  {
+    "name": "Winter's Grasp",
+    "mana_cost": "{1}{G}{G}",
+    "cmc": 3.0,
+    "type_line": "Sorcery",
+    "oracle_text": "Destroy target land.",
+    "power": null,
+    "toughness": null,
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
     ],
     "earliest_set": "Tempest",
     "earliest_set_code": "tmp",
@@ -50866,61 +47166,6 @@
     "earliest_set": "Tempest",
     "earliest_set_code": "tmp",
     "earliest_release_date": "1997-10-14",
-    "power_nine": false
-  },
-  {
-    "name": "Gaea's Cradle",
-    "mana_cost": "",
-    "cmc": 0.0,
-    "type_line": "Legendary Land",
-    "oracle_text": "{T}: Add {G} for each creature you control.",
-    "power": null,
-    "toughness": null,
-    "colors": [],
-    "color_identity": [
-      "G"
-    ],
-    "earliest_set": "Judge Gift Cards 1998",
-    "earliest_set_code": "jgp",
-    "earliest_release_date": "1998-01-01",
-    "power_nine": false
-  },
-  {
-    "name": "Stroke of Genius",
-    "mana_cost": "{X}{2}{U}",
-    "cmc": 3.0,
-    "type_line": "Instant",
-    "oracle_text": "Target player draws X cards.",
-    "power": null,
-    "toughness": null,
-    "colors": [
-      "U"
-    ],
-    "color_identity": [
-      "U"
-    ],
-    "earliest_set": "Judge Gift Cards 1998",
-    "earliest_set_code": "jgp",
-    "earliest_release_date": "1998-01-01",
-    "power_nine": false
-  },
-  {
-    "name": "Revenant",
-    "mana_cost": "{4}{B}",
-    "cmc": 5.0,
-    "type_line": "Creature \u2014 Spirit",
-    "oracle_text": "Flying\nRevenant's power and toughness are each equal to the number of creature cards in your graveyard.",
-    "power": "*",
-    "toughness": "*",
-    "colors": [
-      "B"
-    ],
-    "color_identity": [
-      "B"
-    ],
-    "earliest_set": "Stronghold Promos",
-    "earliest_set_code": "psth",
-    "earliest_release_date": "1998-02-01",
     "power_nine": false
   },
   {
@@ -51150,6 +47395,25 @@
     "power_nine": false
   },
   {
+    "name": "Cloud Spirit",
+    "mana_cost": "{2}{U}",
+    "cmc": 3.0,
+    "type_line": "Creature \u2014 Spirit",
+    "oracle_text": "Flying\nThis creature can block only creatures with flying.",
+    "power": "3",
+    "toughness": "1",
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "earliest_set": "Stronghold",
+    "earliest_set_code": "sth",
+    "earliest_release_date": "1998-03-02",
+    "power_nine": false
+  },
+  {
     "name": "Constant Mists",
     "mana_cost": "{1}{G}",
     "cmc": 2.0,
@@ -51257,6 +47521,25 @@
     ],
     "color_identity": [
       "B"
+    ],
+    "earliest_set": "Stronghold",
+    "earliest_set_code": "sth",
+    "earliest_release_date": "1998-03-02",
+    "power_nine": false
+  },
+  {
+    "name": "Craven Giant",
+    "mana_cost": "{2}{R}",
+    "cmc": 3.0,
+    "type_line": "Creature \u2014 Giant",
+    "oracle_text": "This creature can't block.",
+    "power": "4",
+    "toughness": "1",
+    "colors": [
+      "R"
+    ],
+    "color_identity": [
+      "R"
     ],
     "earliest_set": "Stronghold",
     "earliest_set_code": "sth",
@@ -52494,6 +48777,25 @@
     "power_nine": false
   },
   {
+    "name": "Revenant",
+    "mana_cost": "{4}{B}",
+    "cmc": 5.0,
+    "type_line": "Creature \u2014 Spirit",
+    "oracle_text": "Flying\nRevenant's power and toughness are each equal to the number of creature cards in your graveyard.",
+    "power": "*",
+    "toughness": "*",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "earliest_set": "Stronghold",
+    "earliest_set_code": "sth",
+    "earliest_release_date": "1998-03-02",
+    "power_nine": false
+  },
+  {
     "name": "Rolling Stones",
     "mana_cost": "{1}{W}",
     "cmc": 2.0,
@@ -52601,6 +48903,25 @@
     ],
     "color_identity": [
       "R"
+    ],
+    "earliest_set": "Stronghold",
+    "earliest_set_code": "sth",
+    "earliest_release_date": "1998-03-02",
+    "power_nine": false
+  },
+  {
+    "name": "Serpent Warrior",
+    "mana_cost": "{2}{B}",
+    "cmc": 3.0,
+    "type_line": "Creature \u2014 Snake Warrior",
+    "oracle_text": "When this creature enters, you lose 3 life.",
+    "power": "3",
+    "toughness": "3",
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
     ],
     "earliest_set": "Stronghold",
     "earliest_set_code": "sth",
@@ -52994,6 +49315,25 @@
     "power_nine": false
   },
   {
+    "name": "Spined Wurm",
+    "mana_cost": "{4}{G}",
+    "cmc": 5.0,
+    "type_line": "Creature \u2014 Wurm",
+    "oracle_text": "",
+    "power": "5",
+    "toughness": "4",
+    "colors": [
+      "G"
+    ],
+    "color_identity": [
+      "G"
+    ],
+    "earliest_set": "Stronghold",
+    "earliest_set_code": "sth",
+    "earliest_release_date": "1998-03-02",
+    "power_nine": false
+  },
+  {
     "name": "Spirit en-Kor",
     "mana_cost": "{3}{W}",
     "cmc": 4.0,
@@ -53142,6 +49482,25 @@
     "power_nine": false
   },
   {
+    "name": "Tidal Surge",
+    "mana_cost": "{1}{U}",
+    "cmc": 2.0,
+    "type_line": "Sorcery",
+    "oracle_text": "Tap up to three target creatures without flying.",
+    "power": null,
+    "toughness": null,
+    "colors": [
+      "U"
+    ],
+    "color_identity": [
+      "U"
+    ],
+    "earliest_set": "Stronghold",
+    "earliest_set_code": "sth",
+    "earliest_release_date": "1998-03-02",
+    "power_nine": false
+  },
+  {
     "name": "Tidal Warrior",
     "mana_cost": "{U}",
     "cmc": 1.0,
@@ -53192,6 +49551,25 @@
     ],
     "color_identity": [
       "B"
+    ],
+    "earliest_set": "Stronghold",
+    "earliest_set_code": "sth",
+    "earliest_release_date": "1998-03-02",
+    "power_nine": false
+  },
+  {
+    "name": "Venerable Monk",
+    "mana_cost": "{2}{W}",
+    "cmc": 3.0,
+    "type_line": "Creature \u2014 Human Monk Cleric",
+    "oracle_text": "When this creature enters, you gain 2 life.",
+    "power": "2",
+    "toughness": "2",
+    "colors": [
+      "W"
+    ],
+    "color_identity": [
+      "W"
     ],
     "earliest_set": "Stronghold",
     "earliest_set_code": "sth",
@@ -53477,25 +49855,6 @@
     "earliest_set": "Stronghold",
     "earliest_set_code": "sth",
     "earliest_release_date": "1998-03-02",
-    "power_nine": false
-  },
-  {
-    "name": "Monstrous Hound",
-    "mana_cost": "{3}{R}",
-    "cmc": 4.0,
-    "type_line": "Creature \u2014 Dog",
-    "oracle_text": "This creature can't attack unless you control more lands than defending player.\nThis creature can't block unless you control more lands than attacking player.",
-    "power": "4",
-    "toughness": "4",
-    "colors": [
-      "R"
-    ],
-    "color_identity": [
-      "R"
-    ],
-    "earliest_set": "Exodus Promos",
-    "earliest_set_code": "pexo",
-    "earliest_release_date": "1998-06-01",
     "power_nine": false
   }
 ]
