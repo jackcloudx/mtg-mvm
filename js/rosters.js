@@ -50,16 +50,6 @@ function renderRostersPage() {
   const bossDecks = _seasonData.bossDecks || [];
 
   container.innerHTML = `
-    <div class="roster-control-bar">
-      <label class="roster-lands-label">
-        <input type="checkbox" onchange="rosterToggleLands(this.checked)" ${_landsVisible?'checked':''}>
-        Show Lands
-      </label>
-      <label class="roster-lands-label">
-        <input type="checkbox" onchange="rosterToggleLandsOnly(this.checked)" ${_landsOnly?'checked':''}>
-        Only Lands
-      </label>
-    </div>
     ${renderTeamSwitcher(leagueTeams, bossDecks)}
     <div id="roster-content-section">
       ${_currentView === 'byteam' ? renderByTeamView(leagueTeams, bossDecks) : renderAllTeamsView(leagueTeams, bossDecks)}
@@ -80,18 +70,7 @@ function renderTeamSwitcher(leagueTeams, bossDecks) {
 
   return `
     <div class="roster-switcher" id="roster-switcher">
-      <div class="roster-switcher-block">
-        <div class="roster-switcher-row">${allTeamsBtn}</div>
-      </div>
-      <div class="roster-switcher-block">
-        <div class="roster-switcher-label">League Teams</div>
-        <div class="roster-switcher-row">${leagueBtns}</div>
-      </div>
-      ${bossDecks.length ? `
-      <div class="roster-switcher-block">
-        <div class="roster-switcher-label">Boss Decks</div>
-        <div class="roster-switcher-row boss-row">${bossBtns}</div>
-      </div>` : ''}
+      <div class="roster-switcher-row">${allTeamsBtn}${leagueBtns}${bossBtns}</div>
     </div>`;
 }
 
@@ -120,6 +99,14 @@ function renderTeamFilterBar() {
       <label class="roster-lands-label" style="margin-left:4px">
         <input type="checkbox" ${_teamFilter.proxy?'checked':''} onchange="rosterSetTeamFilter('proxy',this.checked)">
         Proxy
+      </label>
+      <label class="roster-lands-label" style="margin-left:4px">
+        <input type="checkbox" onchange="rosterToggleLands(this.checked)" ${_landsVisible?'checked':''}>
+        Show Lands
+      </label>
+      <label class="roster-lands-label">
+        <input type="checkbox" onchange="rosterToggleLandsOnly(this.checked)" ${_landsOnly?'checked':''}>
+        Only Lands
       </label>
       ${hasFilter ? `<button class="roster-filter-clear" onclick="rosterClearTeamFilter()">Clear</button>` : ''}
     </div>`;
@@ -355,6 +342,14 @@ function renderAllTeamsView(leagueTeams, bossDecks) {
       <label class="roster-lands-label" style="margin-left:4px">
         <input type="checkbox" ${_allFilter.proxy?'checked':''} onchange="rosterSetFilter('proxy',this.checked)">
         Proxy
+      </label>
+      <label class="roster-lands-label" style="margin-left:4px">
+        <input type="checkbox" onchange="rosterToggleLands(this.checked)" ${_landsVisible?'checked':''}>
+        Show Lands
+      </label>
+      <label class="roster-lands-label">
+        <input type="checkbox" onchange="rosterToggleLandsOnly(this.checked)" ${_landsOnly?'checked':''}>
+        Only Lands
       </label>
     </div>`;
 
