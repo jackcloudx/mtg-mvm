@@ -84,36 +84,32 @@ async function init() {
       }));
 
     const historicalGames = [];
-    if (teamName === 'Green Boss') {
-      Object.entries(history.seasons).forEach(([sNum, season]) => {
-        (season.games || []).forEach(g => {
-          if (g.winner === 'Boss Fight' || g.loser === 'Boss Fight') {
+    Object.entries(history.seasons).forEach(([sNum, season]) => {
+      (season.games || []).forEach(g => {
+        if (g.winner === teamName || g.loser === teamName) {
+          historicalGames.push({
+            season: parseInt(sNum), match_type: g.match_type, game: g.game,
+            winner: g.winner, loser: g.loser,
+            winner_score: g.winner_score, loser_score: g.loser_score,
+            turns: g.turns, mvp: g.mvp, commentary: '', champion: null,
+            bossWon: g.winner === teamName, source: 'historical'
+          });
+        }
+      });
+      (season.playoff_series || []).forEach(s => {
+        (s.games || []).forEach(g => {
+          if (g.winner === teamName || g.loser === teamName) {
             historicalGames.push({
-              season: parseInt(sNum), match_type: g.match_type, game: g.game,
-              winner: g.winner === 'Boss Fight' ? teamName : g.winner,
-              loser: g.loser === 'Boss Fight' ? teamName : g.loser,
+              season: parseInt(sNum), match_type: 'Playoffs', game: g.game,
+              winner: g.winner, loser: g.loser,
               winner_score: g.winner_score, loser_score: g.loser_score,
               turns: g.turns, mvp: g.mvp, commentary: '', champion: null,
-              bossWon: g.winner === 'Boss Fight', source: 'historical'
+              bossWon: g.winner === teamName, source: 'historical'
             });
           }
         });
-        (season.playoff_series || []).forEach(s => {
-          (s.games || []).forEach(g => {
-            if (g.winner === 'Boss Fight' || g.loser === 'Boss Fight') {
-              historicalGames.push({
-                season: parseInt(sNum), match_type: 'Playoffs', game: g.game,
-                winner: g.winner === 'Boss Fight' ? teamName : g.winner,
-                loser: g.loser === 'Boss Fight' ? teamName : g.loser,
-                winner_score: g.winner_score, loser_score: g.loser_score,
-                turns: g.turns, mvp: g.mvp, commentary: '', champion: null,
-                bossWon: g.winner === 'Boss Fight', source: 'historical'
-              });
-            }
-          });
-        });
       });
-    }
+    });
 
     const buildGameRow = (g) => {
       const opponent = g.bossWon ? g.loser : g.winner;
@@ -147,7 +143,7 @@ async function init() {
         <div class="th-stat"><span class="th-stat-val">${winPct}</span><span class="th-stat-label">Win %</span></div>
       </div>`;
 
-    if (teamName === 'Green Boss') {
+    if (historicalGames.length > 0) {
       const s3Games = historicalGames.filter(g => g.season === 3);
       const s3Regular = s3Games.filter(g => !g.match_type.toLowerCase().includes('playoff'));
       const s3Playoff = s3Games.filter(g => g.match_type.toLowerCase().includes('playoff'));
