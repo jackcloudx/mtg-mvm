@@ -47778,12 +47778,13 @@
       "team": "Green Boss",
       "seasons_played": [
         3,
-        7
+        7,
+        8
       ],
-      "total_w": 11,
+      "total_w": 12,
       "total_l": 10,
-      "total_gp": 21,
-      "win_pct": 0.524,
+      "total_gp": 22,
+      "win_pct": 0.545,
       "championships": 1,
       "championship_seasons": [
         3
