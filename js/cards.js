@@ -250,7 +250,7 @@
         <td><span class="rules-text">${esc(c.oracle_text || '')}</span></td>
         <td class="pt-cell">${c.power != null ? c.power : ''}</td>
         <td class="pt-cell">${c.toughness != null ? c.toughness : ''}</td>
-        <td>${badges || '<span class="usage-badge">—</span>'}</td>
+        <td class="usage-col">${badges || '<span class="usage-badge">—</span>'}</td>
       </tr>`;
     }).join('');
   }

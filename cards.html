@@ -62,16 +62,25 @@
       cursor: pointer; user-select: none; white-space: nowrap;
     }
     table.cards-table th:hover { color: var(--text-primary); }
-    table.cards-table td { padding: 5px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    table.cards-table td { padding: 3px 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
     table.cards-table tr:last-child td { border-bottom: none; }
     table.cards-table tr:hover td { background: var(--bg-hover, rgba(255,255,255,.03)); }
 
-    .card-name { font-weight: 600; color: var(--text-primary); min-width: 120px; }
-    .mana-cost { font-size: 11px; color: var(--text-muted); letter-spacing: .02em; white-space: nowrap; width: 70px; }
-    .card-type { color: var(--text-secondary); white-space: nowrap; }
-    .pt-cell { color: var(--text-muted); white-space: nowrap; width: 36px; text-align: center; }
-    .set-cell { color: var(--text-muted); font-size: 11px; white-space: nowrap; width: 100px; }
-    .rules-col { min-width: 200px; }
+    table.cards-table { table-layout: fixed; }
+    .col-set   { width: 108px; }
+    .col-name  { width: 160px; }
+    .col-cost  { width: 76px; }
+    .col-type  { width: 148px; }
+    /* Rules Text: no width — takes remaining space */
+    .col-pwr   { width: 38px; }
+    .col-tou   { width: 38px; }
+    .col-usage { width: 88px; }
+
+    .set-cell  { color: var(--text-muted); font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .card-name { font-weight: 600; color: var(--text-primary); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .mana-cost { font-size: 11px; color: var(--text-muted); letter-spacing: .02em; overflow: hidden; white-space: nowrap; }
+    .card-type { color: var(--text-secondary); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .pt-cell   { color: var(--text-muted); text-align: center; }
     .rules-text { font-size: 11px; color: var(--text-secondary); line-height: 1.45; white-space: pre-wrap; }
 
     tr:hover td { background: var(--bg-hover, rgba(255,255,255,.03)); }
@@ -124,13 +133,23 @@
 
   <div class="cards-table-wrap">
     <table class="cards-table" id="cards-table">
+      <colgroup>
+        <col class="col-set">
+        <col class="col-name">
+        <col class="col-cost">
+        <col class="col-type">
+        <col><!-- Rules Text: takes remaining space -->
+        <col class="col-pwr">
+        <col class="col-tou">
+        <col class="col-usage">
+      </colgroup>
       <thead>
         <tr>
           <th onclick="cardsSetSort('set')">Set <span id="sort-ind-set"></span></th>
           <th onclick="cardsSetSort('name')">Name <span id="sort-ind-name"></span></th>
           <th onclick="cardsSetSort('cmc')">Cost <span id="sort-ind-cmc"></span></th>
           <th onclick="cardsSetSort('type')">Type</th>
-          <th class="rules-col">Rules Text</th>
+          <th>Rules Text</th>
           <th onclick="cardsSetSort('power')">Pwr <span id="sort-ind-power"></span></th>
           <th onclick="cardsSetSort('toughness')">Tou <span id="sort-ind-toughness"></span></th>
           <th>Usage</th>
