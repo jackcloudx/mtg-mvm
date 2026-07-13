@@ -26658,7 +26658,7 @@
           "division": null,
           "week": 7,
           "winner": "Sliver Lining",
-          "loser": "Boss Fight",
+          "loser": "Green Boss",
           "winner_score": 17,
           "loser_score": -5,
           "winner_turns": 6,
@@ -26672,7 +26672,7 @@
           "match_type": "Playoffs",
           "division": null,
           "week": 7,
-          "winner": "Boss Fight",
+          "winner": "Green Boss",
           "loser": "Sliver Lining",
           "winner_score": null,
           "loser_score": null,
@@ -28867,7 +28867,7 @@
           "round": 7,
           "division": null,
           "team_a": "Sliver Lining",
-          "team_b": "Boss Fight",
+          "team_b": "Green Boss",
           "wins_a": 1,
           "wins_b": 1,
           "series_winner": null,
@@ -28877,7 +28877,7 @@
             {
               "game": 94,
               "winner": "Sliver Lining",
-              "loser": "Boss Fight",
+              "loser": "Green Boss",
               "winner_score": 17,
               "loser_score": -5,
               "turns": 6,
@@ -28885,7 +28885,7 @@
             },
             {
               "game": 96,
-              "winner": "Boss Fight",
+              "winner": "Green Boss",
               "loser": "Sliver Lining",
               "winner_score": null,
               "loser_score": null,
@@ -33830,7 +33830,7 @@
           "game": 94,
           "match_type": "Playoffs",
           "winner": "Sliver Lining",
-          "loser": "Boss Fight",
+          "loser": "Green Boss",
           "commentary": "Slivers. Come out swinging baby! The only way they win this series is (a) with speed or (b) with several Coat of Arms on the battlefield and even that may backfire. LFG!\n\nBoss Fight. Omnath changes the whole game, but tip their hat to the winner in this one.",
           "verified": true
         },
@@ -33839,7 +33839,7 @@
           "week": 7,
           "game": 96,
           "match_type": "Playoffs",
-          "winner": "Boss Fight",
+          "winner": "Green Boss",
           "loser": "Sliver Lining",
           "commentary": "Boss. Destructive in this one to get the W! Elves, Insects and Wurms galore to deal a 31-damage in the final turn. Hornet Queen is an awesome card, and I was on the fence about it early on. I also really enjoyed pairing Living Hive with the Queen. Kindercatch has fantastic artwork. Worldspine Wurm even made it out - much in thanks to the Priest of Titania and the Llanowar Elves. \n\nSlivers. No chance they win a game like this one. Just far too much firepower on the other side of the battlefield. Even a Coat of Arms wouldn\u2019t have helped...it would\u2019ve aided the Boss!!!!!",
           "verified": true
@@ -46887,43 +46887,6 @@
       "top_mvp_card": "Serra Angel",
       "top_mvp_count": 2
     },
-    "Boss Fight": {
-      "team": "Boss Fight",
-      "seasons_played": [
-        3
-      ],
-      "total_w": 9,
-      "total_l": 9,
-      "total_gp": 18,
-      "win_pct": 0.5,
-      "championships": 1,
-      "championship_seasons": [
-        3
-      ],
-      "best_power_score": 30,
-      "best_power_season": 3,
-      "season_records": [
-        {
-          "season": 3,
-          "w": 9,
-          "l": 9,
-          "win_pct": 0.5,
-          "power_score": 30,
-          "is_champion": true,
-          "udpi": 0.06666666667,
-          "team_mvp": "Elvish Mystic",
-          "team_mvp_count": 2
-        }
-      ],
-      "fastest_win_turns": 5,
-      "fastest_win_detail": "Season 3 Playoffs, def. Swamp Things 17.0 to -15.0",
-      "biggest_margin": 34,
-      "biggest_margin_detail": "Season 3 Reg. Season, def. Darwin's Doom 20.0 to -14.0",
-      "fastest_win_count": 1,
-      "avg_power_score": 30,
-      "top_mvp_card": "Elvish Mystic",
-      "top_mvp_count": 2
-    },
     "Swamp Things": {
       "team": "Swamp Things",
       "seasons_played": [
@@ -47814,19 +47777,40 @@
     "Green Boss": {
       "team": "Green Boss",
       "seasons_played": [
+        3,
         7
       ],
-      "total_w": 2,
-      "total_l": 1,
-      "total_gp": 3,
-      "win_pct": 0.667,
-      "championships": 0,
-      "championship_seasons": [],
-      "best_power_score": 0,
-      "avg_power_score": 0,
-      "season_records": [],
-      "top_mvp_card": "Elvish Piper",
-      "top_mvp_count": 1
+      "total_w": 11,
+      "total_l": 10,
+      "total_gp": 21,
+      "win_pct": 0.524,
+      "championships": 1,
+      "championship_seasons": [
+        3
+      ],
+      "best_power_score": 30,
+      "best_power_season": 3,
+      "season_records": [
+        {
+          "season": 3,
+          "w": 9,
+          "l": 9,
+          "win_pct": 0.5,
+          "power_score": 30,
+          "is_champion": true,
+          "udpi": 0.06666666667,
+          "team_mvp": "Elvish Mystic",
+          "team_mvp_count": 2
+        }
+      ],
+      "fastest_win_turns": 5,
+      "fastest_win_detail": "Season 3 Playoffs, def. Swamp Things 17.0 to -15.0",
+      "biggest_margin": 34,
+      "biggest_margin_detail": "Season 3 Reg. Season, def. Darwin's Doom 20.0 to -14.0",
+      "fastest_win_count": 1,
+      "avg_power_score": 15.0,
+      "top_mvp_card": "Elvish Mystic",
+      "top_mvp_count": 2
     },
     "Red Boss": {
       "team": "Red Boss",
@@ -49479,60 +49463,6 @@
       "wins_a": 0,
       "wins_b": 1
     },
-    "Boss Fight|Smashed Potatoes": {
-      "team_a": "Boss Fight",
-      "team_b": "Smashed Potatoes",
-      "wins_a": 2,
-      "wins_b": 3
-    },
-    "Boss Fight|No Lands For You": {
-      "team_a": "Boss Fight",
-      "team_b": "No Lands For You",
-      "wins_a": 0,
-      "wins_b": 2
-    },
-    "Boss Fight|Fire Drilled": {
-      "team_a": "Boss Fight",
-      "team_b": "Fire Drilled",
-      "wins_a": 1,
-      "wins_b": 1
-    },
-    "Boss Fight|El Kamino": {
-      "team_a": "Boss Fight",
-      "team_b": "El Kamino",
-      "wins_a": 0,
-      "wins_b": 2
-    },
-    "Boss Fight|Swamp Things": {
-      "team_a": "Boss Fight",
-      "team_b": "Swamp Things",
-      "wins_a": 3,
-      "wins_b": 2
-    },
-    "Boss Fight|Sliver Lining": {
-      "team_a": "Boss Fight",
-      "team_b": "Sliver Lining",
-      "wins_a": 2,
-      "wins_b": 2
-    },
-    "Boss Fight|Thrull Frottle": {
-      "team_a": "Boss Fight",
-      "team_b": "Thrull Frottle",
-      "wins_a": 2,
-      "wins_b": 0
-    },
-    "Boss Fight|The Doldrums": {
-      "team_a": "Boss Fight",
-      "team_b": "The Doldrums",
-      "wins_a": 2,
-      "wins_b": 0
-    },
-    "Boss Fight|Darwin's Doom": {
-      "team_a": "Boss Fight",
-      "team_b": "Darwin's Doom",
-      "wins_a": 4,
-      "wins_b": 1
-    },
     "Extinction|Smashed Potatoes": {
       "team_a": "Extinction",
       "team_b": "Smashed Potatoes",
@@ -49710,6 +49640,60 @@
     "Folk Music|Smashed Circus": {
       "team_a": "Folk Music",
       "team_b": "Smashed Circus",
+      "wins_a": 4,
+      "wins_b": 1
+    },
+    "Green Boss|Smashed Potatoes": {
+      "team_a": "Green Boss",
+      "team_b": "Smashed Potatoes",
+      "wins_a": 2,
+      "wins_b": 3
+    },
+    "Green Boss|No Lands For You": {
+      "team_a": "Green Boss",
+      "team_b": "No Lands For You",
+      "wins_a": 0,
+      "wins_b": 2
+    },
+    "Green Boss|Fire Drilled": {
+      "team_a": "Green Boss",
+      "team_b": "Fire Drilled",
+      "wins_a": 1,
+      "wins_b": 1
+    },
+    "Green Boss|El Kamino": {
+      "team_a": "Green Boss",
+      "team_b": "El Kamino",
+      "wins_a": 0,
+      "wins_b": 2
+    },
+    "Green Boss|Swamp Things": {
+      "team_a": "Green Boss",
+      "team_b": "Swamp Things",
+      "wins_a": 3,
+      "wins_b": 2
+    },
+    "Green Boss|Sliver Lining": {
+      "team_a": "Green Boss",
+      "team_b": "Sliver Lining",
+      "wins_a": 2,
+      "wins_b": 2
+    },
+    "Green Boss|Thrull Frottle": {
+      "team_a": "Green Boss",
+      "team_b": "Thrull Frottle",
+      "wins_a": 2,
+      "wins_b": 0
+    },
+    "Green Boss|The Doldrums": {
+      "team_a": "Green Boss",
+      "team_b": "The Doldrums",
+      "wins_a": 2,
+      "wins_b": 0
+    },
+    "Green Boss|Darwin's Doom": {
+      "team_a": "Green Boss",
+      "team_b": "Darwin's Doom",
       "wins_a": 4,
       "wins_b": 1
     }
@@ -50106,7 +50090,7 @@
       "seed": 5
     },
     {
-      "team": "Boss Fight",
+      "team": "Green Boss",
       "season": 3,
       "w": 9,
       "l": 9,
