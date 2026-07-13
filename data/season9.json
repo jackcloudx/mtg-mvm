@@ -34,7 +34,7 @@
       "loser_score": -8,
       "turns": 7,
       "mvp": "The Rack",
-      "notes": "Bone Dry. Look at these guys! Win their first ever League contest in, dare I say it, thrilling fashion! There\u2019s a great nostalgic vibe to this crew, watching revised Bad Moon, Will-O-The-Wisp, Demonic Tutor, Mind Twist, a Hyppy and a Dark Ritual do their thing, damn! The Dry heave 2x The Rack + hand discard to crushDnS, and in part thanks to the Furnace of Rath in play. What a great start to their inaugural season. \n\nDnS. Damn, may have misplayed the Furnace of Rath and likely deployed the DD too fast. Tough call, as it felt like Bone Dry would wipe out their hand in any instant."
+      "notes": "Bone Dry. Look at these guys! Win their first ever League contest in, dare I say it, thrilling fashion! There’s a great nostalgic vibe to this crew, watching revised Bad Moon, Will-O-The-Wisp, Demonic Tutor, Mind Twist, a Hyppy and a Dark Ritual do their thing, damn! The Dry heave 2x The Rack + hand discard to crushDnS, and in part thanks to the Furnace of Rath in play. What a great start to their inaugural season. \n\nDnS. Damn, may have misplayed the Furnace of Rath and likely deployed the DD too fast. Tough call, as it felt like Bone Dry would wipe out their hand in any instant."
     },
     {
       "id": "g1782786583179",
@@ -63,6 +63,23 @@
       "loser_hand": null,
       "winner_deploy": null,
       "loser_deploy": null
+    },
+    {
+      "id": "g1783879135230",
+      "week": 1,
+      "winner_id": "trick-or-treat",
+      "loser_id": "womperzoo",
+      "winner_score": 14,
+      "loser_score": -3,
+      "turns": 5,
+      "mvp": "Shivan Dragon",
+      "notes": "Womperzoo. Alright! The Shivan Dragon reigns supreme! They straight up cold-cocked TTFs, putting 2x Shivan in play quickly thanks to Sol Ring + Birds of Paradise. Very fun to see them in action, no contest. \n\nTTFs. Sluggish start, the back-to-back finals hangover in full effect! By the end of the game, they'd had some draw engine (2x Scroll Rack, Transmute Artifact) but it didn't get anywhere. This team needs Braingeyser to really turn up the draw power - even if they discard all-but-one card - has to be a way to \"see\" more cards.",
+      "winner_mana": 5,
+      "loser_mana": 4,
+      "winner_hand": 2,
+      "loser_hand": 3,
+      "winner_deploy": 5,
+      "loser_deploy": 6
     }
   ],
   "teams": [
@@ -587,8 +604,8 @@
         "Demonic Hordes",
         "Demonic Tutor",
         "Hellfire",
-        "Hymn to Tourach",
-        "Hymn to Tourach",
+        "Drain Life",
+        "Drain Life",
         "Order of the Ebon Hand",
         "Order of the Ebon Hand",
         "Order of the Ebon Hand",
@@ -632,7 +649,24 @@
         "Swamp",
         "Swamp"
       ],
-      "transactionHistory": [],
+      "transactionHistory": [
+        {
+          "cardOut": "Hymn to Tourach",
+          "cardIn": "Drain Life",
+          "week": null,
+          "season": 9,
+          "txnType": "Waive",
+          "timestamp": "2026-07-11T12:13:13.991Z"
+        },
+        {
+          "cardOut": "Hymn to Tourach",
+          "cardIn": "Drain Life",
+          "week": null,
+          "season": 9,
+          "txnType": "Waive",
+          "timestamp": "2026-07-11T12:13:16.234Z"
+        }
+      ],
       "rosterNotes": {
         "Black Knight|0": {
           "txnType": "",
@@ -656,22 +690,22 @@
           "week": null
         },
         "Black Vise|0": {
-          "txnType": "Waive",
-          "freeAgent": "Nether Void",
+          "txnType": "",
+          "freeAgent": "",
           "proxy": false,
           "status": "",
           "week": null
         },
         "Black Vise|1": {
-          "txnType": "Waive",
-          "freeAgent": "Dark Ritual",
+          "txnType": "",
+          "freeAgent": "",
           "proxy": false,
           "status": "",
           "week": null
         },
         "Black Vise|2": {
-          "txnType": "Waive",
-          "freeAgent": "Demonic Hordes",
+          "txnType": "",
+          "freeAgent": "",
           "proxy": false,
           "status": "",
           "week": null
@@ -739,23 +773,11 @@
           "status": "",
           "week": null
         },
+        "Drain Life|0": {},
+        "Drain Life|1": {},
         "Hellfire|0": {
           "txnType": "",
           "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Hymn to Tourach|0": {
-          "txnType": "Waive",
-          "freeAgent": "Drain Life",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Hymn to Tourach|1": {
-          "txnType": "Waive",
-          "freeAgent": "Drain Life",
           "proxy": false,
           "status": "",
           "week": null
@@ -1072,8 +1094,7 @@
         "Call of the Wild",
         "Craw Giant",
         "Craw Giant",
-        "Erhnam Djinn",
-        "Erhnam Djinn",
+        "Woolly Spider",
         "Fastbond",
         "Fog",
         "Fog",
@@ -1100,9 +1121,9 @@
         "Forest",
         "Forest",
         "Forest",
-        "Gaea's Touch",
-        "Gaea's Touch",
-        "Gaea's Touch",
+        "Scaled Wurm",
+        "Scaled Wurm",
+        "Mirri, Cat Warrior",
         "Hurricane",
         "Hurricane",
         "Hurricane",
@@ -1118,16 +1139,82 @@
         "Verdant Force",
         "Woolly Spider",
         "Woolly Spider",
+        "Worldly Tutor",
+        "Worldly Tutor",
+        "Yavimaya Ants",
+        "Yavimaya Ants",
+        "Yavimaya Ants",
+        "Yavimaya Ants",
         "Woolly Spider",
         "Worldly Tutor",
-        "Worldly Tutor",
-        "Worldly Tutor",
-        "Yavimaya Ants",
-        "Yavimaya Ants",
-        "Yavimaya Ants",
-        "Yavimaya Ants"
+        "Worldly Tutor"
       ],
-      "transactionHistory": [],
+      "transactionHistory": [
+        {
+          "cardOut": "Erhnam Djinn",
+          "cardIn": "Woolly Spider",
+          "week": null,
+          "season": 9,
+          "txnType": "Waive",
+          "timestamp": "2026-07-11T11:18:57.912Z"
+        },
+        {
+          "cardOut": "Erhnam Djinn",
+          "cardIn": "Woolly Spider",
+          "week": null,
+          "season": 9,
+          "txnType": "Waive",
+          "timestamp": "2026-07-11T11:19:03.279Z"
+        },
+        {
+          "cardOut": "Gaea's Touch",
+          "cardIn": "Scaled Wurm",
+          "week": null,
+          "season": 9,
+          "txnType": "Waive",
+          "timestamp": "2026-07-11T11:19:10.000Z"
+        },
+        {
+          "cardOut": "Gaea's Touch",
+          "cardIn": "Scaled Wurm",
+          "week": null,
+          "season": 9,
+          "txnType": "Waive",
+          "timestamp": "2026-07-11T11:19:15.983Z"
+        },
+        {
+          "cardOut": "Gaea's Touch",
+          "cardIn": "Scaled Wurm",
+          "week": null,
+          "season": 9,
+          "txnType": "Waive",
+          "timestamp": "2026-07-11T11:19:33.718Z"
+        },
+        {
+          "cardOut": "Scaled Wurm",
+          "cardIn": "Force of Nature",
+          "week": null,
+          "season": 9,
+          "txnType": "Waive",
+          "timestamp": "2026-07-11T11:23:09.379Z"
+        },
+        {
+          "cardOut": "Force of Nature",
+          "cardIn": "Gaea's Touch",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-11T17:46:21.500Z"
+        },
+        {
+          "cardOut": "Gaea's Touch",
+          "cardIn": "Mirri, Cat Warrior",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-11T17:49:02.206Z"
+        }
+      ],
       "rosterNotes": {
         "Call of the Wild|0": {
           "txnType": "",
@@ -1171,20 +1258,6 @@
           "status": "",
           "week": null
         },
-        "Erhnam Djinn|0": {
-          "txnType": "Waive",
-          "freeAgent": "River Boa",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Erhnam Djinn|1": {
-          "txnType": "Waive",
-          "freeAgent": "Scaled Wurm",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
         "Fastbond|0": {
           "txnType": "",
           "freeAgent": "",
@@ -1214,8 +1287,8 @@
           "week": null
         },
         "Force of Nature|0": {
-          "txnType": "Waive",
-          "freeAgent": "Woolly Spider",
+          "txnType": "",
+          "freeAgent": "",
           "proxy": false,
           "status": "",
           "week": null
@@ -1367,27 +1440,6 @@
           "status": "",
           "week": null
         },
-        "Gaea's Touch|0": {
-          "txnType": "Waive",
-          "freeAgent": "Scaled Wurm",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Gaea's Touch|1": {
-          "txnType": "",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Gaea's Touch|2": {
-          "txnType": "",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
         "Hurricane|0": {
           "txnType": "",
           "freeAgent": "",
@@ -1409,6 +1461,7 @@
           "status": "",
           "week": null
         },
+        "Mirri, Cat Warrior|0": {},
         "River Boa|0": {
           "txnType": "",
           "freeAgent": "",
@@ -1430,6 +1483,8 @@
           "status": "",
           "week": null
         },
+        "Scaled Wurm|0": {},
+        "Scaled Wurm|1": {},
         "Sol Ring|0": {
           "txnType": "",
           "freeAgent": "",
@@ -1500,6 +1555,7 @@
           "status": "",
           "week": null
         },
+        "Woolly Spider|3": {},
         "Worldly Tutor|0": {
           "txnType": "",
           "freeAgent": "",
@@ -1514,13 +1570,8 @@
           "status": "",
           "week": null
         },
-        "Worldly Tutor|2": {
-          "txnType": "",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
+        "Worldly Tutor|2": {},
+        "Worldly Tutor|3": {},
         "Yavimaya Ants|0": {
           "txnType": "",
           "freeAgent": "",
@@ -1864,15 +1915,15 @@
           "week": null
         },
         "Necromancy|0": {
-          "txnType": "Buy",
-          "freeAgent": "Animate Dead",
+          "txnType": "",
+          "freeAgent": "",
           "proxy": false,
           "status": "",
           "week": null
         },
         "Necromancy|1": {
-          "txnType": "Buy",
-          "freeAgent": "Animate Dead",
+          "txnType": "",
+          "freeAgent": "",
           "proxy": false,
           "status": "",
           "week": null
@@ -2241,15 +2292,15 @@
           "week": null
         },
         "Lightning Bolt|0": {
-          "txnType": "Waive",
-          "freeAgent": "Dark Ritual",
+          "txnType": "",
+          "freeAgent": "",
           "proxy": false,
           "status": "",
           "week": null
         },
         "Lightning Bolt|1": {
-          "txnType": "Waive",
-          "freeAgent": "Shocker",
+          "txnType": "",
+          "freeAgent": "",
           "proxy": false,
           "status": "",
           "week": null
@@ -3046,7 +3097,7 @@
         "Red"
       ],
       "identity": "All-goblin chaos. Unrecognizable after a trip to the build-a-goblin factory.",
-      "oneliner": "Wild, reckless, overpowering \u2014 now with custom cards from Sir Thomas Steven Kern.",
+      "oneliner": "Wild, reckless, overpowering — now with custom cards from Sir Thomas Steven Kern.",
       "roster": [
         "Blood Moon",
         "Blood Moon",
@@ -3056,7 +3107,7 @@
         "Goblin Balloon Brigade",
         "Goblin Balloon Brigade",
         "Goblin Balloon Brigade",
-        "Goblin Bomb",
+        "Goblin Giant",
         "Goblin Grenade",
         "Goblin Grenade",
         "Goblin Grenade",
@@ -3065,21 +3116,21 @@
         "Goblin King",
         "Goblin King",
         "Goblin King",
-        "Goblin Nomad",
-        "Goblin Nomad",
+        "Chain Lightning",
+        "Chain Lightning",
         "Goblin Recruiter",
         "Goblin Recruiter",
         "Goblin Skydivers",
         "Goblin Skydivers",
         "Goblin Warrens",
         "Goblin Charbelcher",
-        "Goblin Wizard",
+        "Chaos Orb",
         "Goblins of the Flarg",
         "Goblins of the Flarg",
         "Luktarg of the Ironclaw",
-        "Mogg Fanatic",
-        "Mogg Fanatic",
-        "Goblin Bombardment",
+        "Goblin Balloon Brigade",
+        "Goblins of the Flarg",
+        "Goblin Giant",
         "Pillage",
         "Pillage",
         "Pillage",
@@ -3109,7 +3160,72 @@
         "Mountain",
         "Mountain"
       ],
-      "transactionHistory": [],
+      "transactionHistory": [
+        {
+          "cardOut": "Goblin Nomad",
+          "cardIn": "Chain Lightning",
+          "week": null,
+          "season": 9,
+          "txnType": "Create",
+          "timestamp": "2026-07-11T11:26:33.171Z"
+        },
+        {
+          "cardOut": "Goblin Nomad",
+          "cardIn": "Chain Lightning",
+          "week": null,
+          "season": 9,
+          "txnType": "Create",
+          "timestamp": "2026-07-11T11:26:37.609Z"
+        },
+        {
+          "cardOut": "Mogg Fanatic",
+          "cardIn": "Mon's Goblin Raiders",
+          "week": null,
+          "season": 9,
+          "txnType": "Waive",
+          "timestamp": "2026-07-11T11:28:38.262Z"
+        },
+        {
+          "cardOut": "Mogg Fanatic",
+          "cardIn": "Goblin Balloon Brigade",
+          "week": null,
+          "season": 9,
+          "txnType": "Waive",
+          "timestamp": "2026-07-11T11:28:45.208Z"
+        },
+        {
+          "cardOut": "Mon's Goblin Raiders",
+          "cardIn": "Goblins of the Flarg",
+          "week": null,
+          "season": 9,
+          "txnType": "Waive",
+          "timestamp": "2026-07-11T17:49:57.914Z"
+        },
+        {
+          "cardOut": "Goblin Bomb",
+          "cardIn": "Goblin Giant",
+          "week": null,
+          "season": 9,
+          "txnType": "Create",
+          "timestamp": "2026-07-11T20:02:12.161Z"
+        },
+        {
+          "cardOut": "Goblin Bombardment",
+          "cardIn": "Goblin Giant",
+          "week": null,
+          "season": 9,
+          "txnType": "Create",
+          "timestamp": "2026-07-11T20:02:12.909Z"
+        },
+        {
+          "cardOut": "Goblin Wizard",
+          "cardIn": "Chaos Orb",
+          "week": null,
+          "season": 9,
+          "txnType": "Create",
+          "timestamp": "2026-07-11T20:02:13.609Z"
+        }
+      ],
       "rosterNotes": {
         "Blood Moon|0": {
           "txnType": "",
@@ -3119,18 +3235,23 @@
           "week": null
         },
         "Blood Moon|1": {
-          "txnType": "Waive",
-          "freeAgent": "Chaos Orb",
+          "txnType": "",
+          "freeAgent": "",
           "proxy": false,
           "status": "",
           "week": null
         },
+        "Chain Lightning|0": {},
+        "Chain Lightning|1": {},
         "Chaos Orb|0": {
           "txnType": "",
           "freeAgent": "",
           "proxy": true,
           "status": "",
           "week": null
+        },
+        "Chaos Orb|1": {
+          "proxy": true
         },
         "Gauntlet of Might|0": {
           "txnType": "",
@@ -3167,26 +3288,19 @@
           "status": "",
           "week": null
         },
-        "Goblin Bomb|0": {
-          "txnType": "Waive",
-          "freeAgent": "Goblin Balloon Brigade",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Goblin Bombardment|0": {
-          "txnType": "Waive",
-          "freeAgent": "Chain Lightning",
-          "proxy": true,
-          "status": "",
-          "week": null
-        },
+        "Goblin Balloon Brigade|3": {},
         "Goblin Charbelcher|0": {
           "txnType": "",
           "freeAgent": "",
           "proxy": true,
           "status": "",
           "week": null
+        },
+        "Goblin Giant|0": {
+          "proxy": true
+        },
+        "Goblin Giant|1": {
+          "proxy": true
         },
         "Goblin Grenade|0": {
           "txnType": "",
@@ -3244,20 +3358,6 @@
           "status": "",
           "week": null
         },
-        "Goblin Nomad|0": {
-          "txnType": "Waive",
-          "freeAgent": "Goblin Goliath / Shivan",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Goblin Nomad|1": {
-          "txnType": "Waive",
-          "freeAgent": "Goblin Goliath / Shivan",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
         "Goblin Recruiter|0": {
           "txnType": "",
           "freeAgent": "",
@@ -3287,15 +3387,8 @@
           "week": null
         },
         "Goblin Warrens|0": {
-          "txnType": "Waive",
-          "freeAgent": "Chain Lightning",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Goblin Wizard|0": {
-          "txnType": "Waive",
-          "freeAgent": "Goblins of the Flarg",
+          "txnType": "",
+          "freeAgent": "",
           "proxy": false,
           "status": "",
           "week": null
@@ -3314,23 +3407,10 @@
           "status": "",
           "week": null
         },
+        "Goblins of the Flarg|2": {},
         "Luktarg of the Ironclaw|0": {
           "txnType": "",
           "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Mogg Fanatic|0": {
-          "txnType": "Waive",
-          "freeAgent": "Goblin Balloon Brigade",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Mogg Fanatic|1": {
-          "txnType": "Waive",
-          "freeAgent": "Goblins of the Flarg",
           "proxy": false,
           "status": "",
           "week": null
@@ -3560,8 +3640,6 @@
         "Crystalline Sliver",
         "Crystalline Sliver",
         "Crystalline Sliver",
-        "Disenchant",
-        "Disenchant",
         "Digger Sliver",
         "Plateau",
         "Heart Sliver",
@@ -3579,21 +3657,18 @@
         "Muscle Sliver",
         "Muscle Sliver",
         "Muscle Sliver",
-        "Taiga",
-        "Taiga",
-        "Taiga",
+        "Savannah",
+        "Savannah",
+        "Savannah",
         "Tropical Island",
         "Tropical Island",
-        "Tundra",
+        "Savannah",
         "Sliver Queen",
-        "Sliver Queen",
-        "Sliver Queen",
-        "Spined Sliver",
-        "Tundra",
+        "Savannah",
         "Digger Sliver",
         "Tree-Jumper Sliver",
         "Tree-Jumper Sliver",
-        "Tundra",
+        "Savannah",
         "Talon Sliver",
         "Talon Sliver",
         "Talon Sliver",
@@ -3606,9 +3681,71 @@
         "Winged Sliver",
         "Winged Sliver",
         "Winged Sliver",
-        "Worldly Tutor"
+        "Sliver King",
+        "Sliver Queen",
+        "Sliver Queen",
+        "Sliver King",
+        "Spined Sliver",
+        "Sol Ring"
       ],
-      "transactionHistory": [],
+      "transactionHistory": [
+        {
+          "cardOut": "Worldly Tutor",
+          "cardIn": "Sliver King",
+          "week": null,
+          "season": 9,
+          "txnType": "Waive",
+          "timestamp": "2026-07-11T11:41:05.349Z"
+        },
+        {
+          "cardOut": "Taiga",
+          "cardIn": "Savannah",
+          "week": null,
+          "season": 9,
+          "txnType": "Trade",
+          "timestamp": "2026-07-11T17:23:00.838Z"
+        },
+        {
+          "cardOut": "Taiga",
+          "cardIn": "Savannah",
+          "week": null,
+          "season": 9,
+          "txnType": "Trade",
+          "timestamp": "2026-07-11T17:23:02.722Z"
+        },
+        {
+          "cardOut": "Taiga",
+          "cardIn": "Savannah",
+          "week": null,
+          "season": 9,
+          "txnType": "Trade",
+          "timestamp": "2026-07-11T17:23:03.297Z"
+        },
+        {
+          "cardOut": "Tundra",
+          "cardIn": "Savannah",
+          "week": null,
+          "season": 9,
+          "txnType": "Trade",
+          "timestamp": "2026-07-11T17:24:33.387Z"
+        },
+        {
+          "cardOut": "Tundra",
+          "cardIn": "Savannah",
+          "week": null,
+          "season": 9,
+          "txnType": "Trade",
+          "timestamp": "2026-07-11T17:24:34.845Z"
+        },
+        {
+          "cardOut": "Tundra",
+          "cardIn": "Savannah",
+          "week": null,
+          "season": 9,
+          "txnType": "Trade",
+          "timestamp": "2026-07-11T17:24:36.195Z"
+        }
+      ],
       "rosterNotes": {
         "Acidic Sliver|0": {
           "txnType": "",
@@ -3712,20 +3849,6 @@
           "txnType": "",
           "freeAgent": "",
           "proxy": true,
-          "status": "",
-          "week": null
-        },
-        "Disenchant|0": {
-          "txnType": "Create",
-          "freeAgent": "Swimmer Sliver",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Disenchant|1": {
-          "txnType": "Create",
-          "freeAgent": "Swimmer Sliver",
-          "proxy": false,
           "status": "",
           "week": null
         },
@@ -3841,55 +3964,29 @@
           "status": "",
           "week": null
         },
+        "Savannah|0": {},
+        "Savannah|1": {},
+        "Savannah|2": {},
+        "Savannah|3": {},
+        "Savannah|4": {},
+        "Savannah|5": {},
+        "Sliver King|0": {
+          "proxy": true
+        },
+        "Sliver King|1": {
+          "proxy": true
+        },
         "Sliver Queen|0": {
-          "txnType": "Create",
-          "freeAgent": "Sliver King",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Sliver Queen|1": {
           "txnType": "",
           "freeAgent": "",
           "proxy": false,
           "status": "",
           "week": null
         },
-        "Sliver Queen|2": {
-          "txnType": "",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Spined Sliver|0": {
-          "txnType": "Create",
-          "freeAgent": "Sliver King",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Taiga|0": {
-          "txnType": "",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Taiga|1": {
-          "txnType": "",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Taiga|2": {
-          "txnType": "",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
+        "Sliver Queen|1": {},
+        "Sliver Queen|2": {},
+        "Sol Ring|0": {},
+        "Spined Sliver|0": {},
         "Talon Sliver|0": {
           "txnType": "",
           "freeAgent": "",
@@ -3933,27 +4030,6 @@
           "week": null
         },
         "Tropical Island|1": {
-          "txnType": "",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Tundra|0": {
-          "txnType": "",
-          "freeAgent": "",
-          "proxy": true,
-          "status": "",
-          "week": null
-        },
-        "Tundra|1": {
-          "txnType": "",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Tundra|2": {
           "txnType": "",
           "freeAgent": "",
           "proxy": false,
@@ -4017,13 +4093,6 @@
           "week": null
         },
         "Winged Sliver|3": {
-          "txnType": "",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Worldly Tutor|0": {
           "txnType": "",
           "freeAgent": "",
           "proxy": false,
@@ -4463,8 +4532,8 @@
           "week": null
         },
         "Tidal Warrior|0": {
-          "txnType": "Waive",
-          "freeAgent": "Vodalian Soldiers",
+          "txnType": "",
+          "freeAgent": "",
           "proxy": false,
           "status": "",
           "week": null
@@ -4477,8 +4546,8 @@
           "week": null
         },
         "Vodalian Knights|0": {
-          "txnType": "Waive",
-          "freeAgent": "Merfolk Assassin",
+          "txnType": "",
+          "freeAgent": "",
           "proxy": false,
           "status": "",
           "week": null
@@ -4560,7 +4629,7 @@
         "Mindless Automaton",
         "Rocket Launcher",
         "Rocket Launcher",
-        "Rocket Launcher",
+        "Sword of the Ages",
         "Sol Ring",
         "Su-Chi",
         "Su-Chi",
@@ -4579,10 +4648,10 @@
         "Mishra's Factory",
         "Mishra's Factory",
         "Mishra's Factory",
-        "Desert",
-        "Desert",
-        "Desert",
-        "Desert",
+        "Ancient Tomb",
+        "Ancient Tomb",
+        "Ancient Tomb",
+        "Ancient Tomb",
         "Ghost Town",
         "Mishra's Workshop",
         "Urza's Mine",
@@ -4598,8 +4667,61 @@
         "Urza's Tower",
         "Urza's Tower"
       ],
-      "transactionHistory": [],
+      "transactionHistory": [
+        {
+          "cardOut": "Rocket Launcher",
+          "cardIn": "Sword of the Ages",
+          "week": null,
+          "season": 9,
+          "txnType": "Create",
+          "timestamp": "2026-07-11T19:56:22.932Z"
+        },
+        {
+          "cardOut": "Desert",
+          "cardIn": "Ancient Tomb",
+          "week": null,
+          "season": 9,
+          "txnType": "Create",
+          "timestamp": "2026-07-11T19:57:45.528Z"
+        },
+        {
+          "cardOut": "Desert",
+          "cardIn": "Ancient Tomb",
+          "week": null,
+          "season": 9,
+          "txnType": "Create",
+          "timestamp": "2026-07-11T19:57:46.036Z"
+        },
+        {
+          "cardOut": "Desert",
+          "cardIn": "Ancient Tomb",
+          "week": null,
+          "season": 9,
+          "txnType": "Create",
+          "timestamp": "2026-07-11T19:57:46.811Z"
+        },
+        {
+          "cardOut": "Desert",
+          "cardIn": "Ancient Tomb",
+          "week": null,
+          "season": 9,
+          "txnType": "Create",
+          "timestamp": "2026-07-11T19:57:47.603Z"
+        }
+      ],
       "rosterNotes": {
+        "Ancient Tomb|0": {
+          "proxy": true
+        },
+        "Ancient Tomb|1": {
+          "proxy": true
+        },
+        "Ancient Tomb|2": {
+          "proxy": true
+        },
+        "Ancient Tomb|3": {
+          "proxy": true
+        },
         "Bronze Horse|0": {
           "txnType": "",
           "freeAgent": "",
@@ -4649,34 +4771,6 @@
           "status": "",
           "week": null
         },
-        "Desert|0": {
-          "txnType": "Waive",
-          "freeAgent": "Ancient Tomb",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Desert|1": {
-          "txnType": "Waive",
-          "freeAgent": "Ancient Tomb",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Desert|2": {
-          "txnType": "Waive",
-          "freeAgent": "Ancient Tomb",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Desert|3": {
-          "txnType": "Waive",
-          "freeAgent": "Ancient Tomb",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
         "Felwar Stone|0": {
           "txnType": "",
           "freeAgent": "",
@@ -4699,8 +4793,8 @@
           "week": null
         },
         "Ghost Town|0": {
-          "txnType": "Waive",
-          "freeAgent": "Ancient Tomb",
+          "txnType": "",
+          "freeAgent": "",
           "proxy": false,
           "status": "",
           "week": null
@@ -4831,13 +4925,6 @@
           "status": "",
           "week": null
         },
-        "Rocket Launcher|2": {
-          "txnType": "Buy",
-          "freeAgent": "Sword of the Ages",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
         "Sol Ring|0": {
           "txnType": "",
           "freeAgent": "",
@@ -4858,6 +4945,9 @@
           "proxy": false,
           "status": "",
           "week": null
+        },
+        "Sword of the Ages|0": {
+          "proxy": true
         },
         "Tetravus|0": {
           "txnType": "",
@@ -5592,10 +5682,10 @@
       "transactionHistory": [],
       "rosterNotes": {
         "Bone Dancer|0": {
-          "txnType": "Buy"
+          "proxy": true
         },
         "Bone Dancer|1": {
-          "txnType": "Buy"
+          "proxy": true
         },
         "Demonic Tutor|0": {
           "txnType": "",
@@ -5608,16 +5698,32 @@
           "proxy": true
         },
         "Elves of Deep Shadow|0": {
-          "txnType": "Buy"
+          "txnType": "",
+          "proxy": true
         },
         "Elves of Deep Shadow|1": {
-          "txnType": "Buy"
+          "txnType": "",
+          "proxy": true
         },
         "Elves of Deep Shadow|2": {
-          "txnType": "Buy"
+          "txnType": "",
+          "proxy": true
         },
         "Elves of Deep Shadow|3": {
-          "txnType": "Buy"
+          "txnType": "",
+          "proxy": true
+        },
+        "Survival of the Fittest|3": {
+          "proxy": true
+        },
+        "Survival of the Fittest|2": {
+          "proxy": true
+        },
+        "Survival of the Fittest|1": {
+          "proxy": true
+        },
+        "Survival of the Fittest|0": {
+          "proxy": true
         }
       }
     },
@@ -5629,7 +5735,7 @@
         "White"
       ],
       "identity": "Knights, Thunder Spirits, and more knights. Mono-white aggro.",
-      "oneliner": "Self-righteous, aggressive, unapologetic \u2014 the same holy beatdown returns for another crusade.",
+      "oneliner": "Self-righteous, aggressive, unapologetic — the same holy beatdown returns for another crusade.",
       "roster": [
         "Balance",
         "Castle",
@@ -6143,8 +6249,8 @@
         "Forest",
         "Forest",
         "Fire Sprites",
-        "Fyndhorn Elder",
-        "Fyndhorn Elder",
+        "Whirling Dervish",
+        "Whirling Dervish",
         "Fyndhorn Elves",
         "Fyndhorn Elves",
         "Heart of Yavimaya",
@@ -6157,10 +6263,10 @@
         "Ice Storm",
         "Ice Storm",
         "Ice Storm",
-        "Kaysa",
-        "Kaysa",
-        "Killer Bees",
-        "Killer Bees",
+        "Whirling Dervish",
+        "Whirling Dervish",
+        "Concordant Crossroads",
+        "Concordant Crossroads",
         "Kudzu",
         "Kudzu",
         "Llanowar Elves",
@@ -6174,9 +6280,9 @@
         "Pendelhaven",
         "Overrun",
         "Overrun",
-        "Scrib Sprites",
-        "Scrib Sprites",
-        "Scrib Sprites",
+        "Concordant Crossroads",
+        "Concordant Crossroads",
+        "Concordant Crossroads",
         "Sol Ring",
         "Thermokarst",
         "Thermokarst",
@@ -6187,8 +6293,86 @@
         "Wyluli Wolf",
         "Wyluli Wolf"
       ],
-      "transactionHistory": [],
+      "transactionHistory": [
+        {
+          "cardOut": "Scrib Sprites",
+          "cardIn": "Concordant Crossroads",
+          "week": null,
+          "season": 9,
+          "txnType": "Waive",
+          "timestamp": "2026-07-11T11:33:33.793Z"
+        },
+        {
+          "cardOut": "Killer Bees",
+          "cardIn": "Concordant Crossroads",
+          "week": null,
+          "season": 9,
+          "txnType": "Create",
+          "timestamp": "2026-07-11T11:33:50.407Z"
+        },
+        {
+          "cardOut": "Killer Bees",
+          "cardIn": "Concordant Crossroads",
+          "week": null,
+          "season": 9,
+          "txnType": "Waive",
+          "timestamp": "2026-07-11T11:34:05.229Z"
+        },
+        {
+          "cardOut": "Scrib Sprites",
+          "cardIn": "Concordant Crossroads",
+          "week": null,
+          "season": 9,
+          "txnType": "Waive",
+          "timestamp": "2026-07-11T11:34:12.172Z"
+        },
+        {
+          "cardOut": "Fyndhorn Elder",
+          "cardIn": "Whirling Dervish",
+          "week": null,
+          "season": 9,
+          "txnType": "Create",
+          "timestamp": "2026-07-11T11:35:25.962Z"
+        },
+        {
+          "cardOut": "Scrib Sprites",
+          "cardIn": "Concordant Crossroads",
+          "week": null,
+          "season": 9,
+          "txnType": "Waive",
+          "timestamp": "2026-07-11T11:35:38.451Z"
+        },
+        {
+          "cardOut": "Fyndhorn Elder",
+          "cardIn": "Whirling Dervish",
+          "week": null,
+          "season": 9,
+          "txnType": "Create",
+          "timestamp": "2026-07-11T20:03:42.471Z"
+        },
+        {
+          "cardOut": "Kaysa",
+          "cardIn": "Whirling Dervish",
+          "week": null,
+          "season": 9,
+          "txnType": "Waive",
+          "timestamp": "2026-07-11T20:03:43.012Z"
+        },
+        {
+          "cardOut": "Kaysa",
+          "cardIn": "Whirling Dervish",
+          "week": null,
+          "season": 9,
+          "txnType": "Waive",
+          "timestamp": "2026-07-11T20:03:44.541Z"
+        }
+      ],
       "rosterNotes": {
+        "Concordant Crossroads|0": {},
+        "Concordant Crossroads|1": {},
+        "Concordant Crossroads|2": {},
+        "Concordant Crossroads|3": {},
+        "Concordant Crossroads|4": {},
         "Elvish Archers|0": {
           "txnType": "",
           "freeAgent": "",
@@ -6308,20 +6492,6 @@
           "status": "",
           "week": null
         },
-        "Fyndhorn Elder|0": {
-          "txnType": "Waive",
-          "freeAgent": "Whirling Dervish",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Fyndhorn Elder|1": {
-          "txnType": "Waive",
-          "freeAgent": "Whirling Dervish",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
         "Fyndhorn Elves|0": {
           "txnType": "",
           "freeAgent": "",
@@ -6402,34 +6572,6 @@
         "Ice Storm|3": {
           "txnType": "",
           "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Kaysa|0": {
-          "txnType": "Waive",
-          "freeAgent": "Concordant Crossroads",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Kaysa|1": {
-          "txnType": "",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Killer Bees|0": {
-          "txnType": "Waive",
-          "freeAgent": "Whirling Dervish",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Killer Bees|1": {
-          "txnType": "Waive",
-          "freeAgent": "Elvish Archers",
           "proxy": false,
           "status": "",
           "week": null
@@ -6525,27 +6667,6 @@
           "status": "",
           "week": null
         },
-        "Scrib Sprites|0": {
-          "txnType": "Waive",
-          "freeAgent": "Concordant Crossroads",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Scrib Sprites|1": {
-          "txnType": "",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Scrib Sprites|2": {
-          "txnType": "",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
         "Sol Ring|0": {
           "txnType": "",
           "freeAgent": "",
@@ -6580,6 +6701,16 @@
           "proxy": false,
           "status": "",
           "week": null
+        },
+        "Whirling Dervish|0": {},
+        "Whirling Dervish|1": {
+          "proxy": true
+        },
+        "Whirling Dervish|2": {
+          "proxy": true
+        },
+        "Whirling Dervish|3": {
+          "proxy": true
         },
         "Wyluli Wolf|0": {
           "txnType": "",
@@ -6620,7 +6751,7 @@
         "Blue"
       ],
       "identity": "Serendib Djinn aggro, Moat as the fallback.",
-      "oneliner": "Four Serendib Djinn hit hard and fast \u2014 Land Tax and Lodestone Bauble keep the lights on, Moat and a reset button are there if the race stalls.",
+      "oneliner": "Four Serendib Djinn hit hard and fast — Land Tax and Lodestone Bauble keep the lights on, Moat and a reset button are there if the race stalls.",
       "roster": [
         "Moat",
         "Moat",
@@ -6635,33 +6766,34 @@
         "Counterspell",
         "Disenchant",
         "Disenchant",
-        "Boomerang",
-        "Boomerang",
-        "Boomerang",
+        "Brainstorm",
+        "Brainstorm",
+        "Unsummon",
         "Wrath of God",
         "Armageddon",
         "Unstable Mutation",
         "Unstable Mutation",
         "Unstable Mutation",
-        "Jayemdae Tome",
-        "Jayemdae Tome",
-        "Sol Ring",
-        "Flying Men",
-        "Flying Men",
-        "Flying Men",
-        "Serendib Efreet",
-        "Serendib Efreet",
-        "Serendib Efreet",
-        "Serendib Djinn",
-        "Serendib Djinn",
-        "Serendib Djinn",
-        "Serendib Djinn",
-        "Ghost Ship",
-        "Air Elemental",
-        "Air Elemental",
         "Mahamoti Djinn",
+        "Land Tax",
+        "Rocket Launcher",
+        "Flying Men",
+        "Flying Men",
+        "Flying Men",
+        "Serendib Efreet",
+        "Serendib Efreet",
+        "Serendib Efreet",
+        "Serendib Djinn",
+        "Serendib Djinn",
+        "Serendib Djinn",
+        "Serendib Djinn",
+        "Unsummon",
+        "Air Elemental",
+        "Air Elemental",
+        "Unstable Mutation",
         "Clone",
         "Clone",
+        "Adarkar Wastes",
         "Island",
         "Island",
         "Island",
@@ -6670,39 +6802,370 @@
         "Island",
         "Island",
         "Island",
-        "Island",
-        "Island",
-        "Island",
-        "Island",
+        "Adarkar Wastes",
         "Plains",
         "Plains",
         "Plains",
         "Plains",
-        "Plains",
-        "Plains",
-        "Plains",
-        "Plains"
+        "Adarkar Wastes",
+        "Adarkar Wastes",
+        "Tundra",
+        "Tundra",
+        "Tundra",
+        "Tundra"
       ],
-      "transactionHistory": [],
+      "transactionHistory": [
+        {
+          "cardOut": "Jayemdae Tome",
+          "cardIn": "Mahamoti Djinn",
+          "week": null,
+          "season": 9,
+          "txnType": "Waive",
+          "timestamp": "2026-07-11T17:30:41.848Z"
+        },
+        {
+          "cardOut": "Jayemdae Tome",
+          "cardIn": "Mahamoti Djinn",
+          "week": null,
+          "season": 9,
+          "txnType": "Waive",
+          "timestamp": "2026-07-11T17:30:43.040Z"
+        },
+        {
+          "cardOut": "Mahamoti Djinn",
+          "cardIn": "Unstable Mutation",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-11T17:31:07.522Z"
+        },
+        {
+          "cardOut": "Ghost Ship",
+          "cardIn": "Unsummon",
+          "week": null,
+          "season": 9,
+          "txnType": "Waive",
+          "timestamp": "2026-07-11T17:31:24.472Z"
+        },
+        {
+          "cardOut": "Boomerang",
+          "cardIn": "Unsummon",
+          "week": null,
+          "season": 9,
+          "txnType": "Waive",
+          "timestamp": "2026-07-11T17:31:37.972Z"
+        },
+        {
+          "cardOut": "Boomerang",
+          "cardIn": "Brainstorm",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-12T00:30:46.647Z"
+        },
+        {
+          "cardOut": "Boomerang",
+          "cardIn": "Brainstorm",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-12T00:30:47.797Z"
+        },
+        {
+          "cardOut": "Armageddon",
+          "cardIn": "Balance",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-12T00:31:06.201Z"
+        },
+        {
+          "cardOut": "Mahamoti Djinn",
+          "cardIn": "Land Tax",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-12T00:40:35.495Z"
+        },
+        {
+          "cardOut": "Island",
+          "cardIn": "Tundra",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-12T01:00:41.165Z"
+        },
+        {
+          "cardOut": "Island",
+          "cardIn": "Tundra",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-12T01:00:41.807Z"
+        },
+        {
+          "cardOut": "Plains",
+          "cardIn": "Tundra",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-12T01:00:42.268Z"
+        },
+        {
+          "cardOut": "Plains",
+          "cardIn": "Tundra",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-12T01:00:42.766Z"
+        },
+        {
+          "cardOut": "Plains",
+          "cardIn": "Tundra",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-12T01:00:43.258Z"
+        },
+        {
+          "cardOut": "Plains",
+          "cardIn": "Tundra",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-12T01:00:43.807Z"
+        },
+        {
+          "cardOut": "Plains",
+          "cardIn": "Tundra",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-12T01:00:44.365Z"
+        },
+        {
+          "cardOut": "Plains",
+          "cardIn": "Tundra",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-12T01:00:52.145Z"
+        },
+        {
+          "cardOut": "Plains",
+          "cardIn": "Tundra",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-12T01:00:52.844Z"
+        },
+        {
+          "cardOut": "Plains",
+          "cardIn": "Tundra",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-12T01:00:54.974Z"
+        },
+        {
+          "cardOut": "Tundra",
+          "cardIn": "Plains",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-12T01:01:05.506Z"
+        },
+        {
+          "cardOut": "Tundra",
+          "cardIn": "Plains",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-12T01:01:09.978Z"
+        },
+        {
+          "cardOut": "Tundra",
+          "cardIn": "Plains",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-12T01:01:11.395Z"
+        },
+        {
+          "cardOut": "Tundra",
+          "cardIn": "Plains",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-12T01:01:14.185Z"
+        },
+        {
+          "cardOut": "Tundra",
+          "cardIn": "Plains",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-12T01:01:15.615Z"
+        },
+        {
+          "cardOut": "Tundra",
+          "cardIn": "Plains",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-12T01:01:19.315Z"
+        },
+        {
+          "cardOut": "Island",
+          "cardIn": "Adarkar Wastes",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-12T01:01:43.794Z"
+        },
+        {
+          "cardOut": "Plains",
+          "cardIn": "Adarkar Wastes",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-12T01:01:56.589Z"
+        },
+        {
+          "cardOut": "Plains",
+          "cardIn": "Adarkar Wastes",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-12T01:01:57.819Z"
+        },
+        {
+          "cardOut": "Island",
+          "cardIn": "Adarkar Wastes",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-12T01:02:02.368Z"
+        },
+        {
+          "cardOut": "Balance",
+          "cardIn": "Armageddon",
+          "week": null,
+          "season": 9,
+          "txnType": "Waive",
+          "timestamp": "2026-07-12T17:02:52.695Z"
+        },
+        {
+          "cardOut": "Sol Ring",
+          "cardIn": "Rocket Launcher",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-12T17:11:17.477Z"
+        }
+      ],
       "rosterNotes": {
-        "Force of Will|0": {
+        "Adarkar Wastes|0": {
           "txnType": "Buy"
+        },
+        "Adarkar Wastes|1": {
+          "txnType": "Buy"
+        },
+        "Adarkar Wastes|2": {
+          "txnType": "Buy"
+        },
+        "Adarkar Wastes|3": {
+          "txnType": "Buy"
+        },
+        "Air Elemental|0": {},
+        "Air Elemental|1": {},
+        "Armageddon|0": {},
+        "Brainstorm|0": {},
+        "Brainstorm|1": {},
+        "Clone|0": {},
+        "Clone|1": {},
+        "Counterspell|0": {},
+        "Counterspell|1": {},
+        "Disenchant|0": {},
+        "Disenchant|1": {},
+        "Flying Men|0": {},
+        "Flying Men|1": {},
+        "Flying Men|2": {},
+        "Force of Will|0": {
+          "txnType": "",
+          "proxy": true
         },
         "Force of Will|1": {
-          "txnType": "Buy"
+          "txnType": "",
+          "proxy": true
         },
-        "Jayemdae Tome|1": {
-          "txnType": "Waive",
-          "freeAgent": "Land Tax"
+        "Island|0": {
+          "freeAgent": ""
         },
-        "Ghost Ship|0": {
-          "txnType": "Waive",
-          "freeAgent": "Unsummon"
+        "Island|1": {},
+        "Island|2": {},
+        "Island|3": {},
+        "Island|4": {},
+        "Island|5": {},
+        "Island|6": {},
+        "Island|7": {},
+        "Land Tax|0": {},
+        "Land Tax|1": {},
+        "Land Tax|2": {},
+        "Lodestone Bauble|0": {},
+        "Lodestone Bauble|1": {},
+        "Mahamoti Djinn|0": {},
+        "Moat|0": {
+          "txnType": "",
+          "proxy": true
         },
-        "Boomerang|2": {
-          "txnType": "Waive",
-          "freeAgent": "Unsummon"
-        }
+        "Moat|1": {
+          "txnType": "",
+          "proxy": true
+        },
+        "Moat|2": {
+          "txnType": "",
+          "proxy": true
+        },
+        "Plains|0": {},
+        "Plains|1": {},
+        "Plains|2": {},
+        "Plains|3": {},
+        "Rocket Launcher|0": {
+          "freeAgent": "Sol Ring"
+        },
+        "Serendib Djinn|0": {
+          "txnType": "",
+          "proxy": true
+        },
+        "Serendib Djinn|1": {
+          "txnType": "",
+          "proxy": true
+        },
+        "Serendib Djinn|2": {
+          "txnType": "",
+          "proxy": true
+        },
+        "Serendib Djinn|3": {
+          "txnType": "",
+          "proxy": true
+        },
+        "Serendib Efreet|0": {},
+        "Serendib Efreet|1": {},
+        "Serendib Efreet|2": {},
+        "Tundra|0": {
+          "freeAgent": ""
+        },
+        "Tundra|1": {},
+        "Tundra|2": {},
+        "Tundra|3": {},
+        "Unstable Mutation|0": {},
+        "Unstable Mutation|1": {},
+        "Unstable Mutation|2": {},
+        "Unstable Mutation|3": {},
+        "Unsummon|0": {},
+        "Unsummon|1": {},
+        "Wrath of God|0": {}
       }
     },
     {
@@ -6713,7 +7176,7 @@
         "TBD"
       ],
       "identity": "Roster and identity to be finalized before Season 9 kickoff.",
-      "oneliner": "New entrant \u2014 details coming soon.",
+      "oneliner": "New entrant — details coming soon.",
       "roster": [
         "Balduvian Horde",
         "Balduvian Horde",
@@ -6728,8 +7191,8 @@
         "Forest",
         "Granite Gargoyles",
         "Granite Gargoyles",
-        "Howling Mine",
-        "Howling Mine",
+        "Incinerate",
+        "Incinerate",
         "Incinerate",
         "Incinerate",
         "Kird Ape",
@@ -6740,23 +7203,23 @@
         "Lightning Bolt",
         "Lightning Bolt",
         "Lightning Bolt",
-        "Llanowar Elves",
-        "Llanowar Elves",
-        "Llanowar Elves",
-        "Llanowar Elves",
+        "Forest",
+        "Forest",
+        "Forest",
+        "Forest",
+        "Karplusan Forest",
+        "Karplusan Forest",
+        "Karplusan Forest",
+        "Karplusan Forest",
         "Mountain",
         "Mountain",
         "Mountain",
         "Mountain",
         "Mountain",
-        "Mountain",
-        "Mountain",
-        "Mountain",
-        "Mountain",
-        "Mountain",
-        "Mountain",
-        "Mountain",
-        "Mountain",
+        "Forest",
+        "Forest",
+        "Taiga",
+        "Taiga",
         "Regrowth",
         "Rolling Thunder",
         "Rolling Thunder",
@@ -6771,12 +7234,149 @@
         "Taiga",
         "Tranquility",
         "Tranquility",
-        "Two-Headed Giant of Foriys",
+        "Balduvian Horde",
         "Wheel of Fortune",
         "Wildfire Emissary",
         "Wildfire Emissary"
       ],
-      "transactionHistory": [],
+      "transactionHistory": [
+        {
+          "cardOut": "Howling Mine",
+          "cardIn": "Wall of Earth",
+          "week": null,
+          "season": 9,
+          "txnType": "Waive",
+          "timestamp": "2026-07-11T16:59:38.372Z"
+        },
+        {
+          "cardOut": "Howling Mine",
+          "cardIn": "Wall of Earth",
+          "week": null,
+          "season": 9,
+          "txnType": "Waive",
+          "timestamp": "2026-07-11T16:59:42.647Z"
+        },
+        {
+          "cardOut": "Llanowar Elves",
+          "cardIn": "Forest",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-11T17:03:11.414Z"
+        },
+        {
+          "cardOut": "Llanowar Elves",
+          "cardIn": "Forest",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-11T17:03:13.129Z"
+        },
+        {
+          "cardOut": "Llanowar Elves",
+          "cardIn": "Forest",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-11T17:03:14.246Z"
+        },
+        {
+          "cardOut": "Llanowar Elves",
+          "cardIn": "Forest",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-11T17:03:15.350Z"
+        },
+        {
+          "cardOut": "Mountain",
+          "cardIn": "Taiga",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-11T17:04:19.943Z"
+        },
+        {
+          "cardOut": "Mountain",
+          "cardIn": "Taiga",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-11T17:04:21.299Z"
+        },
+        {
+          "cardOut": "Mountain",
+          "cardIn": "Forest",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-11T17:04:48.120Z"
+        },
+        {
+          "cardOut": "Mountain",
+          "cardIn": "Forest",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-11T17:04:49.558Z"
+        },
+        {
+          "cardOut": "Mountain",
+          "cardIn": "Karplusan Forest",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-11T17:09:00.351Z"
+        },
+        {
+          "cardOut": "Mountain",
+          "cardIn": "Karplusan Forest",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-11T17:09:01.859Z"
+        },
+        {
+          "cardOut": "Mountain",
+          "cardIn": "Karplusan Forest",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-11T17:09:04.495Z"
+        },
+        {
+          "cardOut": "Mountain",
+          "cardIn": "Karplusan Forest",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-11T17:09:11.733Z"
+        },
+        {
+          "cardOut": "Two-Headed Giant of Foriys",
+          "cardIn": "Balduvian Horde",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-11T17:37:01.204Z"
+        },
+        {
+          "cardOut": "Wall of Earth",
+          "cardIn": "Incinerate",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-11T17:38:50.032Z"
+        },
+        {
+          "cardOut": "Wall of Earth",
+          "cardIn": "Incinerate",
+          "week": null,
+          "season": 9,
+          "txnType": "",
+          "timestamp": "2026-07-11T17:38:51.140Z"
+        }
+      ],
       "rosterNotes": {
         "Balduvian Horde|0": {
           "txnType": "",
@@ -6792,6 +7392,7 @@
           "status": "",
           "week": null
         },
+        "Balduvian Horde|2": {},
         "Birds of Paradise|0": {
           "txnType": "",
           "freeAgent": "",
@@ -6855,6 +7456,12 @@
           "status": "",
           "week": null
         },
+        "Forest|1": {},
+        "Forest|2": {},
+        "Forest|3": {},
+        "Forest|4": {},
+        "Forest|5": {},
+        "Forest|6": {},
         "Granite Gargoyles|0": {
           "txnType": "",
           "freeAgent": "",
@@ -6865,20 +7472,6 @@
         "Granite Gargoyles|1": {
           "txnType": "",
           "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Howling Mine|0": {
-          "txnType": "Waive",
-          "freeAgent": "Giant Growth",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Howling Mine|1": {
-          "txnType": "Waive",
-          "freeAgent": "Giant Growth",
           "proxy": false,
           "status": "",
           "week": null
@@ -6897,6 +7490,12 @@
           "status": "",
           "week": null
         },
+        "Incinerate|2": {},
+        "Incinerate|3": {},
+        "Karplusan Forest|0": {},
+        "Karplusan Forest|1": {},
+        "Karplusan Forest|2": {},
+        "Karplusan Forest|3": {},
         "Kird Ape|0": {
           "txnType": "",
           "freeAgent": "",
@@ -6953,34 +7552,6 @@
           "status": "",
           "week": null
         },
-        "Llanowar Elves|0": {
-          "txnType": "",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Llanowar Elves|1": {
-          "txnType": "",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Llanowar Elves|2": {
-          "txnType": "",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Llanowar Elves|3": {
-          "txnType": "",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
         "Mountain|0": {
           "txnType": "",
           "freeAgent": "",
@@ -7010,62 +7581,6 @@
           "week": null
         },
         "Mountain|4": {
-          "txnType": "",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Mountain|5": {
-          "txnType": "",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Mountain|6": {
-          "txnType": "",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Mountain|7": {
-          "txnType": "",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Mountain|8": {
-          "txnType": "",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Mountain|9": {
-          "txnType": "",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Mountain|10": {
-          "txnType": "",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Mountain|11": {
-          "txnType": "",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Mountain|12": {
           "txnType": "",
           "freeAgent": "",
           "proxy": false,
@@ -7128,24 +7643,18 @@
           "status": "",
           "week": null
         },
-        "Stormbind|0": {
-          "txnType": "Buy",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
+        "Stormbind|0": {},
         "Stormbind|1": {
-          "txnType": "Buy",
+          "txnType": "",
           "freeAgent": "",
-          "proxy": false,
+          "proxy": true,
           "status": "",
           "week": null
         },
         "Taiga|0": {
-          "txnType": "",
+          "txnType": "Create",
           "freeAgent": "",
-          "proxy": false,
+          "proxy": true,
           "status": "",
           "week": null
         },
@@ -7156,6 +7665,8 @@
           "status": "",
           "week": null
         },
+        "Taiga|2": {},
+        "Taiga|3": {},
         "Tranquility|0": {
           "txnType": "",
           "freeAgent": "",
@@ -7170,33 +7681,14 @@
           "status": "",
           "week": null
         },
-        "Two-Headed Giant of Foriys|0": {
-          "txnType": "",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
         "Wheel of Fortune|0": {
-          "txnType": "Buy",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
+          "proxy": true
         },
         "Wildfire Emissary|0": {
-          "txnType": "Buy",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
+          "proxy": true
         },
         "Wildfire Emissary|1": {
-          "txnType": "Buy",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
+          "proxy": true
         }
       }
     }
@@ -7207,14 +7699,14 @@
       "week": 1,
       "home_id": "trick-or-treat",
       "away_id": "womperzoo",
-      "played": false,
-      "winner_id": null,
-      "loser_id": null,
-      "winner_score": null,
-      "loser_score": null,
-      "turns": null,
-      "mvp": null,
-      "notes": null
+      "played": true,
+      "winner_id": "trick-or-treat",
+      "loser_id": "womperzoo",
+      "winner_score": 14,
+      "loser_score": -3,
+      "turns": 5,
+      "mvp": "Shivan Dragon",
+      "notes": "Womperzoo. Alright! The Shivan Dragon reigns supreme! They straight up cold-cocked TTFs, putting 2x Shivan in play quickly thanks to Sol Ring + Birds of Paradise. Very fun to see them in action, no contest. \n\nTTFs. Sluggish start, the back-to-back finals hangover in full effect! By the end of the game, they'd had some draw engine (2x Scroll Rack, Transmute Artifact) but it didn't get anywhere. This team needs Braingeyser to really turn up the draw power - even if they discard all-but-one card - has to be a way to \"see\" more cards."
     },
     {
       "id": "sched-w1-no-lands-for-you-team-16",
@@ -7284,7 +7776,7 @@
       "loser_score": -8,
       "turns": 7,
       "mvp": "The Rack",
-      "notes": "Bone Dry. Look at these guys! Win their first ever League contest in, dare I say it, thrilling fashion! There\u2019s a great nostalgic vibe to this crew, watching revised Bad Moon, Will-O-The-Wisp, Demonic Tutor, Mind Twist, a Hyppy and a Dark Ritual do their thing, damn! The Dry heave 2x The Rack + hand discard to crushDnS, and in part thanks to the Furnace of Rath in play. What a great start to their inaugural season. \n\nDnS. Damn, may have misplayed the Furnace of Rath and likely deployed the DD too fast. Tough call, as it felt like Bone Dry would wipe out their hand in any instant."
+      "notes": "Bone Dry. Look at these guys! Win their first ever League contest in, dare I say it, thrilling fashion! There’s a great nostalgic vibe to this crew, watching revised Bad Moon, Will-O-The-Wisp, Demonic Tutor, Mind Twist, a Hyppy and a Dark Ritual do their thing, damn! The Dry heave 2x The Rack + hand discard to crushDnS, and in part thanks to the Furnace of Rath in play. What a great start to their inaugural season. \n\nDnS. Damn, may have misplayed the Furnace of Rath and likely deployed the DD too fast. Tough call, as it felt like Bone Dry would wipe out their hand in any instant."
     },
     {
       "id": "sched-w1-mean-machine-clockwork",
@@ -11073,10 +11565,8 @@
         "Etali, Primal Storm",
         "Flamekin Harbinger",
         "Flamekin Harbinger",
-        "Geosurge",
-        "Geosurge",
-        "Gobiln Rabblemaster",
-        "Gobiln Rabblemaster",
+        "Bloodthirster",
+        "Avatar of Slaughter",
         "Goblin Instigator",
         "Goblin Instigator",
         "Sol Ring",
@@ -11086,7 +11576,6 @@
         "Inferno of the Star Mounts",
         "Inferno Titan",
         "Geosurge Elemental",
-        "Sol Ring",
         "Kiki-Jiki, Mirror Breaker",
         "Lathliss, Dragon Queen",
         "Manaform Hellkite",
@@ -11116,9 +11605,44 @@
         "Scourge of Kher Ridges",
         "Seething Song",
         "Seething Song",
-        "Shivan Devastator"
+        "Shivan Devastator",
+        "Mountain",
+        "Mountain"
       ],
-      "transactionHistory": [],
+      "transactionHistory": [
+        {
+          "cardOut": "Geosurge",
+          "cardIn": "Bloodthirster",
+          "week": null,
+          "season": 9,
+          "txnType": "Create",
+          "timestamp": "2026-07-11T20:08:33.573Z"
+        },
+        {
+          "cardOut": "Gobiln Rabblemaster",
+          "cardIn": "Avatar of Slaughter",
+          "week": null,
+          "season": 9,
+          "txnType": "Create",
+          "timestamp": "2026-07-11T20:08:34.414Z"
+        },
+        {
+          "cardOut": "Geosurge",
+          "cardIn": "Bloodthirster",
+          "week": null,
+          "season": 9,
+          "txnType": "Create",
+          "timestamp": "2026-07-11T20:08:44.126Z"
+        },
+        {
+          "cardOut": "Gobiln Rabblemaster",
+          "cardIn": "Avatar of Slaughter",
+          "week": null,
+          "season": 9,
+          "txnType": "Create",
+          "timestamp": "2026-07-11T20:09:01.490Z"
+        }
+      ],
       "rosterNotes": {
         "Ancient Hellkite|0": {
           "txnType": "",
@@ -11127,6 +11651,9 @@
           "status": "",
           "week": null
         },
+        "Avatar of Slaughter|0": {
+          "proxy": true
+        },
         "Bearer of the Heavens|0": {
           "txnType": "",
           "freeAgent": "",
@@ -11134,6 +11661,7 @@
           "status": "",
           "week": null
         },
+        "Bloodthirster|0": {},
         "Calamity Bearer|0": {
           "txnType": "",
           "freeAgent": "",
@@ -11232,35 +11760,7 @@
           "status": "",
           "week": null
         },
-        "Geosurge|0": {
-          "txnType": "Waive",
-          "freeAgent": "Bloodthirster",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Geosurge|1": {
-          "txnType": "",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
         "Geosurge Elemental|0": {
-          "txnType": "",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Gobiln Rabblemaster|0": {
-          "txnType": "Waive",
-          "freeAgent": "Avatar of Slaughter",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Gobiln Rabblemaster|1": {
           "txnType": "",
           "freeAgent": "",
           "proxy": false,
@@ -11527,13 +12027,6 @@
           "week": null
         },
         "Sol Ring|0": {
-          "txnType": "",
-          "freeAgent": "",
-          "proxy": false,
-          "status": "",
-          "week": null
-        },
-        "Sol Ring|1": {
           "txnType": "",
           "freeAgent": "",
           "proxy": false,
@@ -12033,7 +12526,7 @@
     },
     {
       "id": "blue-boss",
-      "name": "Blue Boss Fight",
+      "name": "Blue Boss",
       "shortName": "Blue Boss",
       "colors": [
         "Blue"
@@ -12083,7 +12576,7 @@
     },
     {
       "id": "white-boss",
-      "name": "White Boss Fight",
+      "name": "White Boss",
       "shortName": "White Boss",
       "colors": [
         "White"
@@ -12094,7 +12587,7 @@
     },
     {
       "id": "artifact-boss",
-      "name": "Artifact Boss Fight",
+      "name": "Artifact Boss",
       "shortName": "Artifact Boss",
       "colors": [],
       "roster": [],

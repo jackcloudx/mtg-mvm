@@ -276,7 +276,7 @@ function renderRow(r, teamId) {
     <td class="muted">${note.status || ''}${note.week ? ' Wk' + note.week : ''}</td>
     ${isLocal() ? `
     <td class="td-commit" id="commit-${teamId}-${safeKey}" style="white-space:nowrap">
-      ${hasNote ? `<button class="commit-btn"
+      ${(note.txnType || note.freeAgent) ? `<button class="commit-btn"
         data-team="${teamId}" data-key="${key}"
         onclick="rosterCommit(this.dataset.team,this.dataset.key)">Commit</button>` : ''}
       <button class="commit-btn" style="color:var(--red);border-color:var(--red);margin-left:4px"
@@ -309,7 +309,7 @@ function rosterNoteUpdate(teamId, cardKey, field, value) {
   if (isLocal()) {
     const commitCell = document.getElementById(`commit-${teamId}-${safeKey}`);
     if (commitCell) {
-      commitCell.innerHTML = hasNote
+      commitCell.innerHTML = (note.txnType || note.freeAgent)
         ? `<button class="commit-btn"
             data-team="${teamId}" data-key="${cardKey.replace(/"/g, '&quot;')}"
             onclick="rosterCommit(this.dataset.team,this.dataset.key)">Commit</button>`
