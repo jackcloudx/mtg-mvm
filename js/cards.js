@@ -220,11 +220,16 @@
       const pt = (c.power != null && c.toughness != null) ? `${c.power}/${c.toughness}` : '';
       const ratio = (c.cmc > 0 && c.power != null && !isNaN(parseFloat(c.power)))
         ? (parseFloat(c.power) / c.cmc).toFixed(2) : '';
-      const oracleHtml = c.oracle_text
-        ? esc(c.oracle_text).replace(/\n/g, '<br>')
-        : '<span style="color:var(--text-muted)">—</span>';
-      return `<tr class="card-row" onclick="this.classList.toggle('expanded')">
-        <td class="card-name">${esc(c.name)} <span class="card-row-chevron">▸</span></td>
+      const imgUrl = esc(c.image_url || '');
+      const nameCell = imgUrl
+        ? `<span class="card-name-hover" data-img="${imgUrl}"
+              onmouseenter="cardImgShow(this,event)"
+              onmousemove="cardImgMove(event)"
+              onmouseleave="cardImgHide()"
+              onclick="cardImgTap(this)">${esc(c.name)}</span>`
+        : esc(c.name);
+      return `<tr>
+        <td class="card-name">${nameCell}</td>
         <td class="mana-cost">${esc(c.mana_cost || '')}</td>
         <td>${c.cmc != null ? c.cmc : ''}</td>
         <td class="card-type">${esc(c.type_line || '')}</td>
@@ -232,12 +237,6 @@
         <td class="set-cell">${esc(c.earliest_set || '')}</td>
         <td>${badges || '<span class="usage-badge">—</span>'}</td>
         <td style="color:var(--text-muted)">${ratio}</td>
-      </tr><tr class="card-detail">
-        <td colspan="8">
-          <div class="card-detail-body">
-            <div class="card-detail-oracle">${oracleHtml}</div>
-          </div>
-        </td>
       </tr>`;
     }).join('');
   }
@@ -297,6 +296,72 @@
     _sortDir = v === 'ratio' ? -1 : 1;
     renderTable();
   };
+
+  // ---- CARD IMAGE PREVIEW ----
+
+  let _imgEl = null;   // floating hover preview
+  let _tapEl = null;   // tap lightbox overlay
+
+  function _ensureImg() {
+    if (_imgEl) return;
+    _imgEl = document.createElement('img');
+    _imgEl.className = 'card-img-float';
+    _imgEl.style.display = 'none';
+    document.body.appendChild(_imgEl);
+  }
+
+  window.cardImgShow = function(span, e) {
+    _ensureImg();
+    _imgEl.src = span.dataset.img;
+    _imgEl.style.display = 'block';
+    _posImg(e);
+  };
+
+  window.cardImgMove = function(e) {
+    if (_imgEl) _posImg(e);
+  };
+
+  window.cardImgHide = function() {
+    if (_imgEl) _imgEl.style.display = 'none';
+  };
+
+  function _posImg(e) {
+    const W = 223, H = 311, PAD = 14;
+    const vw = window.innerWidth, vh = window.innerHeight;
+    let x = e.clientX + PAD, y = e.clientY + PAD;
+    if (x + W > vw - PAD) x = e.clientX - W - PAD;
+    if (y + H > vh - PAD) y = vh - H - PAD;
+    _imgEl.style.left = (x + window.scrollX) + 'px';
+    _imgEl.style.top  = (y + window.scrollY) + 'px';
+  }
+
+  window.cardImgTap = function(span) {
+    // Hide hover preview so they don't overlap
+    cardImgHide();
+    // Toggle: if same card already open, dismiss
+    if (_tapEl && _tapEl.dataset.src === span.dataset.img) {
+      _tapEl.remove(); _tapEl = null; return;
+    }
+    if (_tapEl) { _tapEl.remove(); _tapEl = null; }
+
+    const overlay = document.createElement('div');
+    overlay.className = 'card-img-overlay';
+    overlay.dataset.src = span.dataset.img;
+
+    const img = document.createElement('img');
+    img.src = span.dataset.img;
+    img.className = 'card-img-overlay-img';
+    overlay.appendChild(img);
+    overlay.onclick = () => { overlay.remove(); _tapEl = null; };
+
+    document.body.appendChild(overlay);
+    _tapEl = overlay;
+  };
+
+  // Close tap overlay on Escape
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && _tapEl) { _tapEl.remove(); _tapEl = null; }
+  });
 
   document.addEventListener('DOMContentLoaded', cardsInit);
 })();

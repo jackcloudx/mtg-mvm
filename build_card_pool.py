@@ -159,6 +159,13 @@ def build_card_pool(raw_path: Path) -> list[dict]:
             continue  # didn't exist yet by Exodus
 
         name = card.get("name", "")
+        # image_uris lives at the top level for single-faced cards; for
+        # double-faced cards it's on card_faces[0]. Prefer the same printing.
+        image_uris = card.get("image_uris") or {}
+        if not image_uris:
+            faces = card.get("card_faces") or []
+            if faces:
+                image_uris = faces[0].get("image_uris") or {}
         pool.append({
             "name": name,
             "mana_cost": card.get("mana_cost", ""),
@@ -173,6 +180,7 @@ def build_card_pool(raw_path: Path) -> list[dict]:
             "earliest_set_code": card.get("set", ""),
             "earliest_release_date": card["_released_date"].isoformat(),
             "power_nine": name in POWER_NINE,
+            "image_url": image_uris.get("normal", ""),
         })
 
     pool.sort(key=lambda c: (c["earliest_release_date"], c["name"]))
