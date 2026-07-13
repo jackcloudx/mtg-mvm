@@ -71,6 +71,22 @@
     .pt-cell { color: var(--text-muted); white-space: nowrap; }
     .set-cell { color: var(--text-muted); font-size: 11px; }
 
+    tr.card-row { cursor: pointer; }
+    tr.card-row:hover td { background: var(--bg-hover, rgba(255,255,255,.03)); }
+    tr.card-row.expanded td { background: rgba(184,151,42,0.05); border-bottom: none; }
+    tr.card-row.expanded { border-color: var(--gold-dim); }
+    .card-row-chevron { font-size: 9px; color: var(--text-muted); margin-left: 4px; transition: transform .15s; display: inline-block; }
+    tr.card-row.expanded .card-row-chevron { transform: rotate(90deg); color: var(--gold); }
+
+    tr.card-detail td { display: none; padding: 0; border-bottom: 1px solid var(--border); }
+    tr.card-row.expanded + tr.card-detail td {
+      display: table-cell;
+      padding: 10px 14px 14px 14px;
+      background: rgba(184,151,42,0.03);
+    }
+    .card-detail-body { font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
+    .card-detail-oracle { white-space: pre-wrap; }
+
     .usage-badge {
       display: inline-block; font-size: 10px; padding: 1px 6px;
       border-radius: 10px; background: var(--bg-card); border: 1px solid var(--border);

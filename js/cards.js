@@ -220,8 +220,11 @@
       const pt = (c.power != null && c.toughness != null) ? `${c.power}/${c.toughness}` : '';
       const ratio = (c.cmc > 0 && c.power != null && !isNaN(parseFloat(c.power)))
         ? (parseFloat(c.power) / c.cmc).toFixed(2) : '';
-      return `<tr>
-        <td class="card-name">${esc(c.name)}</td>
+      const oracleHtml = c.oracle_text
+        ? esc(c.oracle_text).replace(/\n/g, '<br>')
+        : '<span style="color:var(--text-muted)">—</span>';
+      return `<tr class="card-row" onclick="this.classList.toggle('expanded')">
+        <td class="card-name">${esc(c.name)} <span class="card-row-chevron">▸</span></td>
         <td class="mana-cost">${esc(c.mana_cost || '')}</td>
         <td>${c.cmc != null ? c.cmc : ''}</td>
         <td class="card-type">${esc(c.type_line || '')}</td>
@@ -229,6 +232,12 @@
         <td class="set-cell">${esc(c.earliest_set || '')}</td>
         <td>${badges || '<span class="usage-badge">—</span>'}</td>
         <td style="color:var(--text-muted)">${ratio}</td>
+      </tr><tr class="card-detail">
+        <td colspan="8">
+          <div class="card-detail-body">
+            <div class="card-detail-oracle">${oracleHtml}</div>
+          </div>
+        </td>
       </tr>`;
     }).join('');
   }
