@@ -53,7 +53,7 @@ function renderAll() {
   renderThisWeekResults();
   renderSeasonStats();
   renderMeetTeams();
-  renderGameLog();
+  renderSchedule();
   glInjectButton();
 }
 

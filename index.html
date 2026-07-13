@@ -112,12 +112,12 @@
 <div id="page-games" class="page">
   <div class="container">
     <div class="section-header" style="margin-bottom:20px">
-      <span class="section-title" style="font-size:16px;color:var(--text-secondary)">Season 9 — Game Log</span>
       <span style="display:flex;gap:6px;align-items:center">
+        <button id="log-tab-schedule" onclick="switchGameLogTab('schedule')" style="font-size:11px;padding:3px 10px;border-radius:4px;border:1px solid var(--gold);background:var(--gold);color:var(--bg);cursor:pointer">Schedule</button>
+        <button id="log-tab-results" onclick="switchGameLogTab('results')" style="font-size:11px;padding:3px 10px;border-radius:4px;border:1px solid var(--border);background:transparent;color:var(--text-muted);cursor:pointer">Results</button>
         <span id="gl-log-btn-area"></span>
-        <button id="log-tab-results" onclick="switchGameLogTab('results')" style="font-size:11px;padding:3px 10px;border-radius:4px;border:1px solid var(--gold);background:var(--gold);color:var(--bg);cursor:pointer">Results</button>
-        <button id="log-tab-schedule" onclick="switchGameLogTab('schedule')" style="font-size:11px;padding:3px 10px;border-radius:4px;border:1px solid var(--border);background:transparent;color:var(--text-muted);cursor:pointer">Schedule</button>
       </span>
+      <span class="section-title" style="font-size:16px;color:var(--text-secondary)">Season 9 — Game Log</span>
     </div>
     <div id="gl-layout">
       <div id="gl-list-col">
