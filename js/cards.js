@@ -229,7 +229,7 @@
 
     const tbody = document.getElementById('cards-tbody');
     if (!sorted.length) {
-      tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:32px;color:var(--text-muted)">No cards match the current filters.</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;padding:32px;color:var(--text-muted)">No cards match the current filters.</td></tr>';
       return;
     }
 
@@ -247,6 +247,7 @@
         <td class="card-name">${esc(c.name)}</td>
         <td class="mana-cost">${esc(c.mana_cost || '')}</td>
         <td class="card-type">${esc(c.type_line || '')}</td>
+        <td><span class="rules-text">${esc(c.oracle_text || '')}</span></td>
         <td class="pt-cell">${c.power != null ? c.power : ''}</td>
         <td class="pt-cell">${c.toughness != null ? c.toughness : ''}</td>
         <td>${badges || '<span class="usage-badge">—</span>'}</td>

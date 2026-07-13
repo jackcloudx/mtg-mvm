@@ -66,11 +66,13 @@
     table.cards-table tr:last-child td { border-bottom: none; }
     table.cards-table tr:hover td { background: var(--bg-hover, rgba(255,255,255,.03)); }
 
-    .card-name { font-weight: 600; color: var(--text-primary); }
-    .mana-cost { font-size: 11px; color: var(--text-muted); letter-spacing: .02em; }
-    .card-type { color: var(--text-secondary); }
-    .pt-cell { color: var(--text-muted); white-space: nowrap; }
-    .set-cell { color: var(--text-muted); font-size: 11px; }
+    .card-name { font-weight: 600; color: var(--text-primary); min-width: 120px; }
+    .mana-cost { font-size: 11px; color: var(--text-muted); letter-spacing: .02em; white-space: nowrap; width: 70px; }
+    .card-type { color: var(--text-secondary); white-space: nowrap; }
+    .pt-cell { color: var(--text-muted); white-space: nowrap; width: 36px; text-align: center; }
+    .set-cell { color: var(--text-muted); font-size: 11px; white-space: nowrap; width: 100px; }
+    .rules-col { min-width: 200px; }
+    .rules-text { font-size: 11px; color: var(--text-secondary); line-height: 1.45; white-space: pre-wrap; }
 
     tr:hover td { background: var(--bg-hover, rgba(255,255,255,.03)); }
 
@@ -84,9 +86,10 @@
       z-index: 10000; cursor: pointer;
     }
     .card-img-overlay-img {
-      width: 265px;
-      border-radius: 14px;
-      box-shadow: 0 12px 48px rgba(0,0,0,.9);
+      width: 540px;
+      max-width: 90vw;
+      border-radius: 18px;
+      box-shadow: 0 16px 64px rgba(0,0,0,.95);
     }
     .card-img-overlay-close {
       position: absolute; top: 16px; right: 20px;
@@ -127,13 +130,14 @@
           <th onclick="cardsSetSort('name')">Name <span id="sort-ind-name"></span></th>
           <th onclick="cardsSetSort('cmc')">Cost <span id="sort-ind-cmc"></span></th>
           <th onclick="cardsSetSort('type')">Type</th>
-          <th onclick="cardsSetSort('power')">Power <span id="sort-ind-power"></span></th>
-          <th onclick="cardsSetSort('toughness')">Toughness <span id="sort-ind-toughness"></span></th>
+          <th class="rules-col">Rules Text</th>
+          <th onclick="cardsSetSort('power')">Pwr <span id="sort-ind-power"></span></th>
+          <th onclick="cardsSetSort('toughness')">Tou <span id="sort-ind-toughness"></span></th>
           <th>Usage</th>
         </tr>
       </thead>
       <tbody id="cards-tbody">
-        <tr><td colspan="7" style="text-align:center;padding:32px;color:var(--text-muted)">Loading…</td></tr>
+        <tr><td colspan="8" style="text-align:center;padding:32px;color:var(--text-muted)">Loading…</td></tr>
       </tbody>
     </table>
   </div>
