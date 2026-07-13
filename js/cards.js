@@ -28,7 +28,6 @@
     _usageMap = {};
     const allTeams = (season.teams || []).concat(season.bossDecks || []);
     for (const team of allTeams) {
-      const notes = team.rosterNotes || {};
       (team.roster || []).forEach(cardName => {
         if (!cardName) return;
         if (!_usageMap[cardName]) _usageMap[cardName] = {};
@@ -64,7 +63,10 @@
         <div class="color-pills" id="cf-color-pills">
           ${['W','U','B','R','G','C'].map(c => `<div class="color-pill" data-c="${c}" onclick="cardsToggleColor('${c}')">${c}</div>`).join('')}
         </div>
-        <button class="color-mode-toggle" id="cf-color-mode" onclick="cardsToggleColorMode()">Includes</button>
+        <label class="cards-exact-label">
+          <input type="checkbox" id="cf-color-exact" onchange="cardsSetColorExact(this.checked)">
+          Exact match only
+        </label>
       </div>
       <div class="cards-control-group">
         <label>Type</label>
@@ -98,6 +100,7 @@
         <label>Sort</label>
         <select id="cf-sort" onchange="cardsSelectSort()">
           <option value="name">Name A–Z</option>
+          <option value="set">Set</option>
           <option value="cmc">CMC low–high</option>
           <option value="ratio">Pwr/Mana high–low</option>
         </select>
@@ -181,8 +184,26 @@
       if (_sortField === 'name') {
         return _sortDir * (a.name || '').localeCompare(b.name || '');
       }
+      if (_sortField === 'set') {
+        const sd = (a.earliest_release_date || '').localeCompare(b.earliest_release_date || '');
+        return _sortDir * (sd !== 0 ? sd : (a.name || '').localeCompare(b.name || ''));
+      }
       if (_sortField === 'cmc') {
         return _sortDir * ((a.cmc || 0) - (b.cmc || 0));
+      }
+      if (_sortField === 'power') {
+        const pa = parseFloat(a.power ?? ''), pb = parseFloat(b.power ?? '');
+        if (isNaN(pa) && isNaN(pb)) return 0;
+        if (isNaN(pa)) return 1;
+        if (isNaN(pb)) return -1;
+        return _sortDir * (pa - pb);
+      }
+      if (_sortField === 'toughness') {
+        const ta = parseFloat(a.toughness ?? ''), tb = parseFloat(b.toughness ?? '');
+        if (isNaN(ta) && isNaN(tb)) return 0;
+        if (isNaN(ta)) return 1;
+        if (isNaN(tb)) return -1;
+        return _sortDir * (ta - tb);
       }
       if (_sortField === 'ratio') {
         const ra = (a.cmc || 0) > 0 ? parseFloat(a.power || 0) / a.cmc : -Infinity;
@@ -201,14 +222,14 @@
       `${sorted.length.toLocaleString()} of ${_cards.length.toLocaleString()} cards`;
 
     // Update sort indicators
-    ['name','cmc','ratio'].forEach(f => {
+    ['name','cmc','set','power','toughness'].forEach(f => {
       const el = document.getElementById('sort-ind-' + f);
       if (el) el.textContent = _sortField === f ? (_sortDir === 1 ? ' ▲' : ' ▼') : '';
     });
 
     const tbody = document.getElementById('cards-tbody');
     if (!sorted.length) {
-      tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;padding:32px;color:var(--text-muted)">No cards match the current filters.</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:32px;color:var(--text-muted)">No cards match the current filters.</td></tr>';
       return;
     }
 
@@ -217,26 +238,18 @@
       const badges = Object.entries(usage).map(([tid, u]) =>
         `<span class="usage-badge has-count">${esc(u.shortName)} ×${u.count}</span>`
       ).join('');
-      const pt = (c.power != null && c.toughness != null) ? `${c.power}/${c.toughness}` : '';
-      const ratio = (c.cmc > 0 && c.power != null && !isNaN(parseFloat(c.power)))
-        ? (parseFloat(c.power) / c.cmc).toFixed(2) : '';
       const imgUrl = esc(c.image_url || '');
-      const nameCell = imgUrl
-        ? `<span class="card-name-hover" data-img="${imgUrl}"
-              onmouseenter="cardImgShow(this,event)"
-              onmousemove="cardImgMove(event)"
-              onmouseleave="cardImgHide()"
-              onclick="cardImgTap(this)">${esc(c.name)}</span>`
-        : esc(c.name);
-      return `<tr>
-        <td class="card-name">${nameCell}</td>
-        <td class="mana-cost">${esc(c.mana_cost || '')}</td>
-        <td>${c.cmc != null ? c.cmc : ''}</td>
-        <td class="card-type">${esc(c.type_line || '')}</td>
-        <td class="pt-cell">${pt}</td>
+      const rowAttrs = imgUrl
+        ? ` class="card-row" data-img="${imgUrl}" onclick="cardRowClick(this)"`
+        : ` class="card-row" onclick="cardRowClick(this)"`;
+      return `<tr${rowAttrs}>
         <td class="set-cell">${esc(c.earliest_set || '')}</td>
+        <td class="card-name">${esc(c.name)}</td>
+        <td class="mana-cost">${esc(c.mana_cost || '')}</td>
+        <td class="card-type">${esc(c.type_line || '')}</td>
+        <td class="pt-cell">${c.power != null ? c.power : ''}</td>
+        <td class="pt-cell">${c.toughness != null ? c.toughness : ''}</td>
         <td>${badges || '<span class="usage-badge">—</span>'}</td>
-        <td style="color:var(--text-muted)">${ratio}</td>
       </tr>`;
     }).join('');
   }
@@ -270,13 +283,8 @@
     renderTable();
   };
 
-  window.cardsToggleColorMode = function() {
-    _filter.colorMode = _filter.colorMode === 'includes' ? 'exactly' : 'includes';
-    const btn = document.getElementById('cf-color-mode');
-    if (btn) {
-      btn.textContent = _filter.colorMode === 'exactly' ? 'Exactly' : 'Includes';
-      btn.classList.toggle('exact', _filter.colorMode === 'exactly');
-    }
+  window.cardsSetColorExact = function(checked) {
+    _filter.colorMode = checked ? 'exactly' : 'includes';
     renderTable();
   };
 
@@ -284,7 +292,7 @@
     if (_sortField === field) _sortDir *= -1;
     else { _sortField = field; _sortDir = 1; }
     const sortEl = document.getElementById('cf-sort');
-    if (sortEl && (field === 'name' || field === 'cmc' || field === 'ratio')) {
+    if (sortEl && ['name','set','cmc','ratio'].includes(field)) {
       sortEl.value = field;
     }
     renderTable();
@@ -297,68 +305,41 @@
     renderTable();
   };
 
-  // ---- CARD IMAGE PREVIEW ----
+  // ---- CARD IMAGE LIGHTBOX ----
 
-  let _imgEl = null;   // floating hover preview
-  let _tapEl = null;   // tap lightbox overlay
+  let _tapEl = null;
 
-  function _ensureImg() {
-    if (_imgEl) return;
-    _imgEl = document.createElement('img');
-    _imgEl.className = 'card-img-float';
-    _imgEl.style.display = 'none';
-    document.body.appendChild(_imgEl);
-  }
+  window.cardRowClick = function(tr) {
+    const url = tr.dataset.img;
+    if (!url) return;
 
-  window.cardImgShow = function(span, e) {
-    _ensureImg();
-    _imgEl.src = span.dataset.img;
-    _imgEl.style.display = 'block';
-    _posImg(e);
-  };
-
-  window.cardImgMove = function(e) {
-    if (_imgEl) _posImg(e);
-  };
-
-  window.cardImgHide = function() {
-    if (_imgEl) _imgEl.style.display = 'none';
-  };
-
-  function _posImg(e) {
-    const W = 223, H = 311, PAD = 14;
-    const vw = window.innerWidth, vh = window.innerHeight;
-    let x = e.clientX + PAD, y = e.clientY + PAD;
-    if (x + W > vw - PAD) x = e.clientX - W - PAD;
-    if (y + H > vh - PAD) y = vh - H - PAD;
-    _imgEl.style.left = (x + window.scrollX) + 'px';
-    _imgEl.style.top  = (y + window.scrollY) + 'px';
-  }
-
-  window.cardImgTap = function(span) {
-    // Hide hover preview so they don't overlap
-    cardImgHide();
-    // Toggle: if same card already open, dismiss
-    if (_tapEl && _tapEl.dataset.src === span.dataset.img) {
+    // Toggle off if same card already open
+    if (_tapEl && _tapEl.dataset.src === url) {
       _tapEl.remove(); _tapEl = null; return;
     }
     if (_tapEl) { _tapEl.remove(); _tapEl = null; }
 
     const overlay = document.createElement('div');
     overlay.className = 'card-img-overlay';
-    overlay.dataset.src = span.dataset.img;
+    overlay.dataset.src = url;
 
     const img = document.createElement('img');
-    img.src = span.dataset.img;
+    img.src = url;
     img.className = 'card-img-overlay-img';
+
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'card-img-overlay-close';
+    closeBtn.textContent = '✕';
+
     overlay.appendChild(img);
+    overlay.appendChild(closeBtn);
     overlay.onclick = () => { overlay.remove(); _tapEl = null; };
 
     document.body.appendChild(overlay);
     _tapEl = overlay;
   };
 
-  // Close tap overlay on Escape
+  // Close on Escape
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && _tapEl) { _tapEl.remove(); _tapEl = null; }
   });

@@ -39,11 +39,12 @@
     .color-pill[data-c="C"] { background: #888; color: #fff; }
     .color-pill.active[data-c="B"] { border-color: var(--gold); }
 
-    .color-mode-toggle {
-      font-size: 11px; background: var(--bg); border: 1px solid var(--border);
-      color: var(--text-muted); border-radius: 4px; padding: 3px 8px; cursor: pointer; margin-top: 2px;
+    .cards-exact-label {
+      display: flex; align-items: center; gap: 5px; margin-top: 4px;
+      font-size: 11px; color: var(--text-muted); cursor: pointer; user-select: none;
+      text-transform: none; letter-spacing: 0; font-weight: normal;
     }
-    .color-mode-toggle.exact { color: var(--gold); border-color: var(--gold); }
+    .cards-exact-label input[type=checkbox] { accent-color: var(--gold); cursor: pointer; width: auto; }
 
     .range-row { display: flex; gap: 4px; align-items: center; }
     .range-row input { width: 44px; }
@@ -73,26 +74,12 @@
 
     tr:hover td { background: var(--bg-hover, rgba(255,255,255,.03)); }
 
-    .card-name-hover {
-      cursor: pointer;
-      border-bottom: 1px dotted var(--text-muted);
-    }
-    .card-name-hover:hover { color: var(--gold); border-bottom-color: var(--gold); }
+    tr.card-row { cursor: pointer; }
 
-    /* floating hover image */
-    .card-img-float {
-      position: absolute;
-      width: 223px;
-      border-radius: 10px;
-      box-shadow: 0 8px 32px rgba(0,0,0,.6);
-      pointer-events: none;
-      z-index: 9999;
-    }
-
-    /* tap lightbox */
+    /* lightbox overlay */
     .card-img-overlay {
       position: fixed; inset: 0;
-      background: rgba(0,0,0,.7);
+      background: rgba(0,0,0,.75);
       display: flex; align-items: center; justify-content: center;
       z-index: 10000; cursor: pointer;
     }
@@ -101,6 +88,12 @@
       border-radius: 14px;
       box-shadow: 0 12px 48px rgba(0,0,0,.9);
     }
+    .card-img-overlay-close {
+      position: absolute; top: 16px; right: 20px;
+      background: none; border: none; color: rgba(255,255,255,.7);
+      font-size: 28px; cursor: pointer; line-height: 1; padding: 4px 8px;
+    }
+    .card-img-overlay-close:hover { color: #fff; }
 
     .usage-badge {
       display: inline-block; font-size: 10px; padding: 1px 6px;
@@ -130,18 +123,17 @@
     <table class="cards-table" id="cards-table">
       <thead>
         <tr>
-          <th onclick="cardsSetSort('name')">Card <span id="sort-ind-name"></span></th>
-          <th onclick="cardsSetSort('mana_cost')">Mana</th>
-          <th onclick="cardsSetSort('cmc')">CMC <span id="sort-ind-cmc"></span></th>
+          <th onclick="cardsSetSort('set')">Set <span id="sort-ind-set"></span></th>
+          <th onclick="cardsSetSort('name')">Name <span id="sort-ind-name"></span></th>
+          <th onclick="cardsSetSort('cmc')">Cost <span id="sort-ind-cmc"></span></th>
           <th onclick="cardsSetSort('type')">Type</th>
-          <th onclick="cardsSetSort('pt')">P/T</th>
-          <th onclick="cardsSetSort('set')">Set</th>
+          <th onclick="cardsSetSort('power')">Power <span id="sort-ind-power"></span></th>
+          <th onclick="cardsSetSort('toughness')">Toughness <span id="sort-ind-toughness"></span></th>
           <th>Usage</th>
-          <th onclick="cardsSetSort('ratio')">Pwr/Mana <span id="sort-ind-ratio"></span></th>
         </tr>
       </thead>
       <tbody id="cards-tbody">
-        <tr><td colspan="8" style="text-align:center;padding:32px;color:var(--text-muted)">Loading…</td></tr>
+        <tr><td colspan="7" style="text-align:center;padding:32px;color:var(--text-muted)">Loading…</td></tr>
       </tbody>
     </table>
   </div>
