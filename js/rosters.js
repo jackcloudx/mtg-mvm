@@ -3,7 +3,7 @@
 // ============================================
 
 let LAND_FILTER = new Set();
-let _customCards = new Set();
+let _customCards = new Map(); // name → card object (has exception_note if applicable)
 
 const HOME_ADDRESSES = ['localhost', '127.0.0.1', '192.168.4.141'];
 const isLocal = () => HOME_ADDRESSES.includes(window.location.hostname);
@@ -37,7 +37,7 @@ async function rostersInit() {
     const cardPool = await poolRes.json();
     LAND_FILTER = new Set(cardPool.filter(c => c.type_line && c.type_line.includes('Land')).map(c => c.name));
     const customPool = await customRes.json();
-    _customCards = new Set(customPool.map(c => c.name));
+    _customCards = new Map(customPool.map(c => [c.name, c]));
   } catch (e) {
     LAND_FILTER = new Set(['Plains','Island','Swamp','Mountain','Forest']);
   }
@@ -259,17 +259,21 @@ function renderRow(r, teamId) {
 
   const freeAgentVal = (note.freeAgent || '').replace(/"/g, '&quot;');
 
-  const isCustom = _customCards.has(card);
-  const customBadge = isCustom ? ' <span class="custom-badge">Custom</span>' : '';
-  const proxyCell = isCustom
-    ? `<input type="checkbox" checked disabled title="Custom card — always proxied">`
+  const customEntry = _customCards.get(card);
+  const nameTag = customEntry
+    ? (customEntry.exception_note
+        ? ` <span class="exception-badge" title="${customEntry.exception_note.replace(/"/g,'&quot;')}">Exception</span>`
+        : ' <span class="custom-badge">Custom</span>')
+    : '';
+  const proxyCell = customEntry
+    ? `<input type="checkbox" checked disabled title="${customEntry.exception_note ? 'House exception — always proxied' : 'Custom card — always proxied'}">`
     : `<input type="checkbox"
         data-team="${teamId}" data-key="${key}"
         ${note.proxy ? 'checked' : ''}
         onchange="rosterNoteUpdate(this.dataset.team,this.dataset.key,'proxy',this.checked)">`;
 
   return `<tr class="${hasNote ? 'has-note' : ''}" id="row-${teamId}-${safeKey}">
-    <td>${card}${customBadge}</td>
+    <td>${card}${nameTag}</td>
     <td>
       <select data-team="${teamId}" data-key="${key}"
         onchange="rosterNoteUpdate(this.dataset.team,this.dataset.key,'txnType',this.value)">
@@ -423,10 +427,17 @@ function renderAllTeamsView(leagueTeams, bossDecks) {
   const teamCount  = new Set(rows.map(r => r.team.id)).size;
   const tableRows  = rows.map(({ team, card, key, note }) => {
     const hasNote = note.txnType || note.freeAgent || note.proxy;
-    const isCustom = _customCards.has(card);
-    const cardCell = isCustom ? `${card} <span class="custom-badge">Custom</span>` : card;
-    const proxyCell = isCustom
-      ? '<span class="proxy-badge">Proxy</span> <span class="custom-badge">Custom</span>'
+    const customEntry = _customCards.get(card);
+    const nameTag = customEntry
+      ? (customEntry.exception_note
+          ? ` <span class="exception-badge" title="${customEntry.exception_note.replace(/"/g,'&quot;')}">Exception</span>`
+          : ' <span class="custom-badge">Custom</span>')
+      : '';
+    const cardCell = card + nameTag;
+    const proxyCell = customEntry
+      ? (customEntry.exception_note
+          ? '<span class="proxy-badge">Proxy</span> <span class="exception-badge">Exception</span>'
+          : '<span class="proxy-badge">Proxy</span> <span class="custom-badge">Custom</span>')
       : (note.proxy ? '<span class="proxy-badge">Proxy</span>' : '<span class="muted">—</span>');
     return `<tr class="${hasNote ? 'has-note' : ''}">
       <td class="muted">${team.name}</td>

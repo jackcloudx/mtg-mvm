@@ -243,16 +243,20 @@
       const usageBadges = Object.entries(usage).map(([tid, u]) =>
         `<span class="usage-badge has-count">${esc(u.shortName)} ×${u.count}</span>`
       ).join('');
-      const customBadge = c._custom
-        ? '<span class="custom-badge">Custom</span>'
+      const specialBadge = c._custom
+        ? (c.exception_note
+            ? `<span class="exception-badge" title="${esc(c.exception_note)}">Exception</span>`
+            : '<span class="custom-badge">Custom</span>')
         : '';
-      const badges = customBadge + usageBadges || '<span class="usage-badge">—</span>';
+      const badges = specialBadge + usageBadges || '<span class="usage-badge">—</span>';
       const imgUrl = esc(c.image_url || '');
       const rowAttrs = imgUrl
         ? ` class="card-row" data-img="${imgUrl}" onclick="cardRowClick(this)"`
         : ` class="card-row" onclick="cardRowClick(this)"`;
       const setCell = c._custom
-        ? '<span class="custom-badge">Custom</span>'
+        ? (c.exception_note
+            ? `<span class="exception-badge" title="${esc(c.exception_note)}">Exception</span>`
+            : '<span class="custom-badge">Custom</span>')
         : esc(c.earliest_set || '');
       return `<tr${rowAttrs}>
         <td class="set-cell">${setCell}</td>

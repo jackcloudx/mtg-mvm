@@ -50,5 +50,19 @@
     "color_identity": ["G"],
     "created_by": "Jack",
     "illustrator": "Arthur Inte"
+  },
+  {
+    "name": "Goblin Charbelcher",
+    "mana_cost": "{4}",
+    "cmc": 4,
+    "type_line": "Artifact",
+    "oracle_text": "{3}, {T}: Reveal cards from the top of your library until you reveal a land card. Goblin Charbelcher deals damage equal to the number of nonland cards revealed this way to any target. If the revealed land card was a Mountain, Goblin Charbelcher deals double that damage instead. Put the revealed cards on the bottom of your library in any order.",
+    "power": null,
+    "toughness": null,
+    "colors": [],
+    "color_identity": [],
+    "created_by": null,
+    "exception_note": "Real card (Mirrodin, 2003) — outside the Alpha-Exodus window, kept as a deliberate house exception rather than a legality violation.",
+    "illustrator": "Stephen Tappin"
   }
 ]
