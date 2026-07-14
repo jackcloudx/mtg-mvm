@@ -89,6 +89,10 @@ FRANCHISE_ALIASES = {
         {"name": "Smashed Circus", "season": 8, "minWeek": 10},
         {"name": "Smashed Circus", "season": 8, "playoffs": True},
     ],
+    # S7: Icy Hot (wk 1-6) replaced by Peak-a-Boom (wk 7+), merged as "Icy Boom" in standings
+    "Peak-a-Boom": [
+        {"name": "Icy Hot", "season": 7, "maxWeek": 6},
+    ],
 }
 
 # All historical alias names (flat set, any season/week)
@@ -208,12 +212,15 @@ total_mismatches = []
 for team, entry in ALL_TIME.items():
     sumw = sum(sr.get("w", 0) for sr in entry.get("season_records", []))
     suml = sum(sr.get("l", 0) for sr in entry.get("season_records", []))
+    bf = entry.get("boss_fights") or {}
+    sumw += bf.get("w", 0)
+    suml += bf.get("l", 0)
     topw = entry.get("total_w", 0)
     topl = entry.get("total_l", 0)
     if sumw != topw or suml != topl:
         total_mismatches.append(
             team + ": top-level " + str(topw) + "W-" + str(topl) + "L"
-            + " vs season_records sum " + str(sumw) + "W-" + str(suml) + "L"
+            + " vs season_records+boss_fights sum " + str(sumw) + "W-" + str(suml) + "L"
         )
 
 if not total_mismatches:

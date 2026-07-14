@@ -23837,7 +23837,7 @@
       "team_count": 16,
       "standings": [
         {
-          "team": "Peak-a-Boom",
+          "team": "Icy Boom",
           "division": "South",
           "gp": 20,
           "w": 6,
@@ -47253,6 +47253,12 @@
           "udpi": 0.0139,
           "team_mvp": "Propaganda",
           "team_mvp_count": 1
+        },
+        {
+          "season": 7,
+          "w": 0,
+          "l": 0,
+          "mashupLabel": "Icy Boom"
         }
       ],
       "fastest_win_turns": 7,
@@ -47475,7 +47481,8 @@
           "is_champion": false,
           "udpi": 1.807207,
           "team_mvp": "Jade Statue",
-          "team_mvp_count": 1
+          "team_mvp_count": 1,
+          "mashupLabel": "Icy Boom"
         }
       ],
       "fastest_win_turns": 8,
@@ -47811,7 +47818,11 @@
       "fastest_win_count": 1,
       "avg_power_score": 15.0,
       "top_mvp_card": "Elvish Mystic",
-      "top_mvp_count": 2
+      "top_mvp_count": 2,
+      "boss_fights": {
+        "w": 3,
+        "l": 1
+      }
     },
     "Red Boss": {
       "team": "Red Boss",
@@ -47828,7 +47839,11 @@
       "avg_power_score": 0,
       "season_records": [],
       "top_mvp_card": "Illusionary Mask",
-      "top_mvp_count": 1
+      "top_mvp_count": 1,
+      "boss_fights": {
+        "w": 0,
+        "l": 1
+      }
     },
     "Black Boss": {
       "team": "Black Boss",
@@ -47845,7 +47860,11 @@
       "avg_power_score": 0,
       "season_records": [],
       "top_mvp_card": null,
-      "top_mvp_count": 0
+      "top_mvp_count": 0,
+      "boss_fights": {
+        "w": 1,
+        "l": 0
+      }
     },
     "Womperzoo": {
       "team": "Womperzoo",
