@@ -13716,7 +13716,7 @@
           "is_champion": false
         },
         {
-          "team": "Murphy'S Law",
+          "team": "Murphy's Law",
           "power_score": 24.6,
           "is_champion": false
         },
@@ -14059,17 +14059,17 @@
         {
           "round": 3,
           "division": "Premier",
-          "team_a": "Murphy'S Law",
+          "team_a": "Murphy's Law",
           "team_b": "Swamp Things",
           "wins_a": 3,
           "wins_b": 1,
-          "series_winner": "Murphy'S Law",
+          "series_winner": "Murphy's Law",
           "series_loser": "Swamp Things",
           "series_result": "3-1",
           "games": [
             {
               "game": 1,
-              "winner": "Murphy'S Law",
+              "winner": "Murphy's Law",
               "loser": "Swamp Things",
               "winner_score": 16,
               "loser_score": -2,
@@ -14078,7 +14078,7 @@
             },
             {
               "game": 2,
-              "winner": "Murphy'S Law",
+              "winner": "Murphy's Law",
               "loser": "Swamp Things",
               "winner_score": 16,
               "loser_score": -1,
@@ -14088,7 +14088,7 @@
             {
               "game": 3,
               "winner": "Swamp Things",
-              "loser": "Murphy'S Law",
+              "loser": "Murphy's Law",
               "winner_score": 17,
               "loser_score": -22,
               "turns": 6,
@@ -14096,7 +14096,7 @@
             },
             {
               "game": 4,
-              "winner": "Murphy'S Law",
+              "winner": "Murphy's Law",
               "loser": "Swamp Things",
               "winner_score": 13,
               "loser_score": -16,
@@ -14185,17 +14185,17 @@
           "round": 4,
           "division": "Premier",
           "team_a": "No Lands For You",
-          "team_b": "Murphy'S Law",
+          "team_b": "Murphy's Law",
           "wins_a": 4,
           "wins_b": 1,
           "series_winner": "No Lands For You",
-          "series_loser": "Murphy'S Law",
+          "series_loser": "Murphy's Law",
           "series_result": "4-1",
           "games": [
             {
               "game": 1,
               "winner": "No Lands For You",
-              "loser": "Murphy'S Law",
+              "loser": "Murphy's Law",
               "winner_score": 10,
               "loser_score": -1,
               "turns": 11,
@@ -14203,7 +14203,7 @@
             },
             {
               "game": 2,
-              "winner": "Murphy'S Law",
+              "winner": "Murphy's Law",
               "loser": "No Lands For You",
               "winner_score": 11,
               "loser_score": -11,
@@ -14213,7 +14213,7 @@
             {
               "game": 3,
               "winner": "No Lands For You",
-              "loser": "Murphy'S Law",
+              "loser": "Murphy's Law",
               "winner_score": 3,
               "loser_score": -7,
               "turns": 11,
@@ -14222,7 +14222,7 @@
             {
               "game": 4,
               "winner": "No Lands For You",
-              "loser": "Murphy'S Law",
+              "loser": "Murphy's Law",
               "winner_score": 11,
               "loser_score": -3,
               "turns": 12,
@@ -14231,7 +14231,7 @@
             {
               "game": 5,
               "winner": "No Lands For You",
-              "loser": "Murphy'S Law",
+              "loser": "Murphy's Law",
               "winner_score": 22,
               "loser_score": -2,
               "turns": 7,
@@ -48138,9 +48138,9 @@
       "wins_a": 1,
       "wins_b": 1
     },
-    "Frozen Stiffs|Murphy'S Law": {
+    "Frozen Stiffs|Murphy's Law": {
       "team_a": "Frozen Stiffs",
-      "team_b": "Murphy'S Law",
+      "team_b": "Murphy's Law",
       "wins_a": 1,
       "wins_b": 1
     },
@@ -48258,9 +48258,9 @@
       "wins_a": 1,
       "wins_b": 0
     },
-    "Fire Drilled|Murphy'S Law": {
+    "Fire Drilled|Murphy's Law": {
       "team_a": "Fire Drilled",
-      "team_b": "Murphy'S Law",
+      "team_b": "Murphy's Law",
       "wins_a": 2,
       "wins_b": 0
     },
@@ -48750,32 +48750,32 @@
       "wins_a": 1,
       "wins_b": 0
     },
-    "Murphy'S Law|Smashed Potatoes": {
-      "team_a": "Murphy'S Law",
+    "Murphy's Law|Smashed Potatoes": {
+      "team_a": "Murphy's Law",
       "team_b": "Smashed Potatoes",
       "wins_a": 1,
       "wins_b": 1
     },
-    "Murphy'S Law|No Lands For You": {
-      "team_a": "Murphy'S Law",
+    "Murphy's Law|No Lands For You": {
+      "team_a": "Murphy's Law",
       "team_b": "No Lands For You",
       "wins_a": 2,
       "wins_b": 5
     },
-    "Murphy'S Law|The Attritionists": {
-      "team_a": "Murphy'S Law",
+    "Murphy's Law|The Attritionists": {
+      "team_a": "Murphy's Law",
       "team_b": "The Attritionists",
       "wins_a": 2,
       "wins_b": 0
     },
-    "Murphy'S Law|Swamp Things": {
-      "team_a": "Murphy'S Law",
+    "Murphy's Law|Swamp Things": {
+      "team_a": "Murphy's Law",
       "team_b": "Swamp Things",
       "wins_a": 3,
       "wins_b": 3
     },
-    "Murphy'S Law|Sliver Lining": {
-      "team_a": "Murphy'S Law",
+    "Murphy's Law|Sliver Lining": {
+      "team_a": "Murphy's Law",
       "team_b": "Sliver Lining",
       "wins_a": 0,
       "wins_b": 2
@@ -48918,9 +48918,9 @@
       "wins_a": 2,
       "wins_b": 1
     },
-    "Bad Ass Fault|Murphy'S Law": {
+    "Bad Ass Fault|Murphy's Law": {
       "team_a": "Bad Ass Fault",
-      "team_b": "Murphy'S Law",
+      "team_b": "Murphy's Law",
       "wins_a": 2,
       "wins_b": 0
     },
@@ -49170,9 +49170,9 @@
       "wins_a": 1,
       "wins_b": 6
     },
-    "Icy Hot|Murphy'S Law": {
+    "Icy Hot|Murphy's Law": {
       "team_a": "Icy Hot",
-      "team_b": "Murphy'S Law",
+      "team_b": "Murphy's Law",
       "wins_a": 0,
       "wins_b": 2
     },
@@ -49398,9 +49398,9 @@
       "wins_a": 2,
       "wins_b": 0
     },
-    "Darwin's Doom|Murphy'S Law": {
+    "Darwin's Doom|Murphy's Law": {
       "team_a": "Darwin's Doom",
-      "team_b": "Murphy'S Law",
+      "team_b": "Murphy's Law",
       "wins_a": 1,
       "wins_b": 1
     },
