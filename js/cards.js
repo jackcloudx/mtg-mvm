@@ -1,5 +1,6 @@
 (function() {
   let _cards = [];
+  let _customNames = new Set();
   let _usageMap = {}; // card name → [{team, shortName, count}]
   let _sets = [];
 
@@ -17,12 +18,16 @@
   let _rulesTimer = null;
 
   async function cardsInit() {
-    const [poolRes, seasonRes] = await Promise.all([
+    const [poolRes, seasonRes, customRes] = await Promise.all([
       fetch('data/card-pool.json'),
       fetch('data/season9.json'),
+      fetch('data/custom-cards.json'),
     ]);
     _cards = await poolRes.json();
     const season = await seasonRes.json();
+    const customCards = await customRes.json();
+    _customNames = new Set(customCards.map(c => c.name));
+    customCards.forEach(c => { c._custom = true; _cards.push(c); });
 
     // Build usage map from all team rosters
     _usageMap = {};
@@ -235,22 +240,29 @@
 
     tbody.innerHTML = sorted.map(c => {
       const usage = _usageMap[c.name] || {};
-      const badges = Object.entries(usage).map(([tid, u]) =>
+      const usageBadges = Object.entries(usage).map(([tid, u]) =>
         `<span class="usage-badge has-count">${esc(u.shortName)} ×${u.count}</span>`
       ).join('');
+      const customBadge = c._custom
+        ? '<span class="custom-badge">Custom</span>'
+        : '';
+      const badges = customBadge + usageBadges || '<span class="usage-badge">—</span>';
       const imgUrl = esc(c.image_url || '');
       const rowAttrs = imgUrl
         ? ` class="card-row" data-img="${imgUrl}" onclick="cardRowClick(this)"`
         : ` class="card-row" onclick="cardRowClick(this)"`;
+      const setCell = c._custom
+        ? '<span class="custom-badge">Custom</span>'
+        : esc(c.earliest_set || '');
       return `<tr${rowAttrs}>
-        <td class="set-cell">${esc(c.earliest_set || '')}</td>
+        <td class="set-cell">${setCell}</td>
         <td class="card-name">${esc(c.name)}</td>
         <td class="mana-cost">${esc(c.mana_cost || '')}</td>
         <td class="card-type">${esc(c.type_line || '')}</td>
         <td><span class="rules-text">${esc(c.oracle_text || '')}</span></td>
         <td class="pt-cell">${c.power != null ? c.power : ''}</td>
         <td class="pt-cell">${c.toughness != null ? c.toughness : ''}</td>
-        <td class="usage-col">${badges || '<span class="usage-badge">—</span>'}</td>
+        <td class="usage-col">${badges}</td>
       </tr>`;
     }).join('');
   }

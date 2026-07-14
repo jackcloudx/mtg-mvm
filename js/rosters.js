@@ -3,6 +3,7 @@
 // ============================================
 
 let LAND_FILTER = new Set();
+let _customCards = new Set();
 
 const HOME_ADDRESSES = ['localhost', '127.0.0.1', '192.168.4.141'];
 const isLocal = () => HOME_ADDRESSES.includes(window.location.hostname);
@@ -29,9 +30,14 @@ async function rostersInit() {
     _seasonData = await res.json();
   }
   try {
-    const poolRes = await fetch('data/card-pool.json');
+    const [poolRes, customRes] = await Promise.all([
+      fetch('data/card-pool.json'),
+      fetch('data/custom-cards.json'),
+    ]);
     const cardPool = await poolRes.json();
     LAND_FILTER = new Set(cardPool.filter(c => c.type_line && c.type_line.includes('Land')).map(c => c.name));
+    const customPool = await customRes.json();
+    _customCards = new Set(customPool.map(c => c.name));
   } catch (e) {
     LAND_FILTER = new Set(['Plains','Island','Swamp','Mountain','Forest']);
   }
@@ -253,8 +259,17 @@ function renderRow(r, teamId) {
 
   const freeAgentVal = (note.freeAgent || '').replace(/"/g, '&quot;');
 
+  const isCustom = _customCards.has(card);
+  const customBadge = isCustom ? ' <span class="custom-badge">Custom</span>' : '';
+  const proxyCell = isCustom
+    ? `<input type="checkbox" checked disabled title="Custom card — always proxied">`
+    : `<input type="checkbox"
+        data-team="${teamId}" data-key="${key}"
+        ${note.proxy ? 'checked' : ''}
+        onchange="rosterNoteUpdate(this.dataset.team,this.dataset.key,'proxy',this.checked)">`;
+
   return `<tr class="${hasNote ? 'has-note' : ''}" id="row-${teamId}-${safeKey}">
-    <td>${card}</td>
+    <td>${card}${customBadge}</td>
     <td>
       <select data-team="${teamId}" data-key="${key}"
         onchange="rosterNoteUpdate(this.dataset.team,this.dataset.key,'txnType',this.value)">
@@ -268,10 +283,7 @@ function renderRow(r, teamId) {
         oninput="rosterNoteUpdate(this.dataset.team,this.dataset.key,'freeAgent',this.value)">
     </td>
     <td class="td-center">
-      <input type="checkbox"
-        data-team="${teamId}" data-key="${key}"
-        ${note.proxy ? 'checked' : ''}
-        onchange="rosterNoteUpdate(this.dataset.team,this.dataset.key,'proxy',this.checked)">
+      ${proxyCell}
     </td>
     <td class="muted">${note.status || ''}${note.week ? ' Wk' + note.week : ''}</td>
     ${isLocal() ? `
@@ -411,9 +423,14 @@ function renderAllTeamsView(leagueTeams, bossDecks) {
   const teamCount  = new Set(rows.map(r => r.team.id)).size;
   const tableRows  = rows.map(({ team, card, key, note }) => {
     const hasNote = note.txnType || note.freeAgent || note.proxy;
+    const isCustom = _customCards.has(card);
+    const cardCell = isCustom ? `${card} <span class="custom-badge">Custom</span>` : card;
+    const proxyCell = isCustom
+      ? '<span class="proxy-badge">Proxy</span> <span class="custom-badge">Custom</span>'
+      : (note.proxy ? '<span class="proxy-badge">Proxy</span>' : '<span class="muted">—</span>');
     return `<tr class="${hasNote ? 'has-note' : ''}">
       <td class="muted">${team.name}</td>
-      <td>${card}</td>
+      <td>${cardCell}</td>
       <td><select data-team="${team.id}" data-key="${key}"
         onchange="rosterNoteUpdate(this.dataset.team,this.dataset.key,'txnType',this.value)">
         ${['', ...TXN_TYPES].map(t => `<option value="${t}"${note.txnType === t ? ' selected' : ''}>${t || '—'}</option>`).join('')}
@@ -423,7 +440,7 @@ function renderAllTeamsView(leagueTeams, bossDecks) {
         value="${(note.freeAgent || '').replace(/"/g, '&quot;')}" placeholder="card name…"
         oninput="rosterNoteUpdate(this.dataset.team,this.dataset.key,'freeAgent',this.value)">
       </td>
-      <td>${note.proxy ? '<span class="proxy-badge">Proxy</span>' : '<span class="muted">—</span>'}</td>
+      <td>${proxyCell}</td>
     </tr>`;
   }).join('');
 

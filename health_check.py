@@ -25,13 +25,15 @@ def load(path):
         return json.load(f)
 
 try:
-    S9   = load("data/season9.json")
-    HIST = load("data/history.json")
-    POOL = load("data/card-pool.json")
+    S9     = load("data/season9.json")
+    HIST   = load("data/history.json")
+    POOL   = load("data/card-pool.json")
+    CUSTOM = load("data/custom-cards.json")
 except FileNotFoundError as e:
     sys.exit("FATAL: could not load data file -- " + str(e))
 
-POOL_NAMES = {c["name"] for c in POOL}
+POOL_NAMES   = {c["name"] for c in POOL}
+CUSTOM_NAMES = {c["name"] for c in CUSTOM}
 ALL_TIME   = HIST["all_time_teams"]
 SEASONS    = HIST["seasons"]
 H2H        = HIST.get("head_to_head", {})
@@ -177,19 +179,19 @@ boss_nonpool  = []
 for team in S9.get("teams", []):
     seen = set()
     for card in team.get("roster", []):
-        if card not in POOL_NAMES and card not in seen:
+        if card not in POOL_NAMES and card not in CUSTOM_NAMES and card not in seen:
             team_illegal.append(team["name"] + ': "' + card + '"')
             seen.add(card)
 
 for deck in S9.get("bossDecks", []):
     seen = set()
     for card in deck.get("roster", []):
-        if card not in POOL_NAMES and card not in seen:
+        if card not in POOL_NAMES and card not in CUSTOM_NAMES and card not in seen:
             boss_nonpool.append(deck["name"] + ': "' + card + '"')
             seen.add(card)
 
 if not team_illegal and not boss_nonpool:
-    report(PASS, "Card legality -- all roster cards found in card-pool.json")
+    report(PASS, "Card legality -- all roster cards found in card-pool.json or custom-cards.json")
 else:
     for item in team_illegal:
         report(FAIL, "Card legality -- unknown card in player deck: " + item)

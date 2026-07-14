@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Goblin Giant",
+    "mana_cost": "{4}{R}{R}",
+    "cmc": 6,
+    "type_line": "Summon Goblin",
+    "oracle_text": "Trample, {R}: +1/+0 until end of turn",
+    "power": "5",
+    "toughness": "5",
+    "colors": ["R"],
+    "color_identity": ["R"],
+    "created_by": "Jack",
+    "illustrator": "Arthur Inte"
+  },
+  {
+    "name": "Goblin Skydivers",
+    "mana_cost": "{3}{R}",
+    "cmc": 4,
+    "type_line": "Summon Goblin",
+    "oracle_text": "Flying\nSacrifice Goblin Skydivers: Goblin Skydivers deals 4 damage to any target.",
+    "power": "5",
+    "toughness": "2",
+    "colors": ["R"],
+    "color_identity": ["R"],
+    "created_by": "Jack",
+    "illustrator": "Arthur Inte"
+  },
+  {
+    "name": "Luktarg of the Ironclaw",
+    "mana_cost": "{3}{R}{R}{R}",
+    "cmc": 6,
+    "type_line": "Summon Legend",
+    "oracle_text": "The *'s are the number of Goblins you control.",
+    "power": "*",
+    "toughness": "*",
+    "colors": ["R"],
+    "color_identity": ["R"],
+    "created_by": "Jack",
+    "illustrator": "Arthur Inte"
+  },
+  {
+    "name": "Tree-Jumper Sliver",
+    "mana_cost": "{2}{G}",
+    "cmc": 3,
+    "type_line": "Summon Sliver",
+    "oracle_text": "All Slivers gain trample.",
+    "power": "2",
+    "toughness": "2",
+    "colors": ["G"],
+    "color_identity": ["G"],
+    "created_by": "Jack",
+    "illustrator": "Arthur Inte"
+  }
+]
