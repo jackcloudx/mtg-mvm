@@ -115,6 +115,7 @@
     <button class="hist-tab active" onclick="switchHistTab('seasons', this)">Seasons</button>
     <button class="hist-tab" onclick="switchHistTab('alltime', this)">Statistics</button>
     <button class="hist-tab" onclick="switchHistTab('teams', this)">Teams</button>
+    <button class="hist-tab" onclick="switchHistTab('h2h', this)">Head-to-Head</button>
   </div>
 
   <div id="histview-seasons" class="hist-view active">
@@ -146,6 +147,33 @@
   <div id="histview-teams" class="hist-view">
     <div>
       <div class="team-tiles-grid" id="teams-all-grid"></div>
+    </div>
+  </div>
+
+  <div id="histview-h2h" class="hist-view">
+    <div style="display:flex;gap:28px;align-items:flex-start">
+      <!-- Left panel: selectors + summary card, fixed width -->
+      <div style="flex:0 0 380px;min-width:0">
+        <p style="color:var(--text-muted);font-size:13px;margin-bottom:16px">Select two franchises to see their all-time head-to-head record.</p>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:20px">
+          <div style="display:flex;flex-direction:column;gap:4px">
+            <label style="font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em">Team A</label>
+            <select id="h2h-team-a" onchange="renderH2H()" style="font-size:13px;padding:6px 10px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);color:var(--text-primary);width:100%">
+              <option value="">— Select team —</option>
+            </select>
+          </div>
+          <div style="font-family:var(--font-head);font-size:14px;color:var(--text-muted);text-align:center">vs</div>
+          <div style="display:flex;flex-direction:column;gap:4px">
+            <label style="font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em">Team B</label>
+            <select id="h2h-team-b" onchange="renderH2H()" style="font-size:13px;padding:6px 10px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);color:var(--text-primary);width:100%">
+              <option value="">— Select team —</option>
+            </select>
+          </div>
+        </div>
+        <div id="h2h-summary"></div>
+      </div>
+      <!-- Right panel: game log table, expands to fill -->
+      <div style="flex:1;min-width:0" id="h2h-log-panel"></div>
     </div>
   </div>
 
@@ -214,6 +242,7 @@ async function init() {
   renderChampionLegend();
   renderAllTime();
   renderTeamsTab();
+  populateH2HDropdowns();
   const initHash = (window.location.hash || '').replace('#','');
   if (initHash) histNavigate(initHash, false);
 }
@@ -251,6 +280,234 @@ function renderTeamsTab() {
     .map(([t, a]) => [t, a, BOSS.includes(t) ? 'boss' : (a.active ? 'active' : 'retired')])
     .sort((a, b) => a[0].localeCompare(b[0]));
   document.getElementById('teams-all-grid').innerHTML = allTeams.map(([t, a]) => buildTile(t, a)).join('');
+}
+
+function populateH2HDropdowns() {
+  const teams = Object.keys(historyData.all_time_teams || {}).sort();
+  ['h2h-team-a', 'h2h-team-b'].forEach(id => {
+    const sel = document.getElementById(id);
+    const cur = sel.value;
+    sel.innerHTML = '<option value="">— Select team —</option>' +
+      teams.map(t => `<option value="${t}"${t === cur ? ' selected' : ''}>${t}</option>`).join('');
+  });
+}
+
+function renderH2H() {
+  const a = document.getElementById('h2h-team-a').value;
+  const b = document.getElementById('h2h-team-b').value;
+  const summary = document.getElementById('h2h-summary');
+  const logPanel = document.getElementById('h2h-log-panel');
+
+  // Keep dropdowns mutually exclusive
+  ['h2h-team-a', 'h2h-team-b'].forEach(id => {
+    const other = id === 'h2h-team-a' ? b : a;
+    document.getElementById(id).querySelectorAll('option').forEach(o => {
+      o.disabled = !!(o.value && o.value === other);
+    });
+  });
+
+  if (!a || !b) { summary.innerHTML = ''; logPanel.innerHTML = ''; return; }
+
+  // Franchise aliases: teams that played under a different name in certain seasons/weeks.
+  // Each entry: { name, season, minWeek?, maxWeek?, playoffs? }
+  // minWeek/maxWeek apply to regular season; playoffs:true matches playoff_series games only.
+  const FRANCHISE_ALIASES = {
+    'Extinction':            [{ name: 'Glop Artists',   season: 6, maxWeek: 8 }],
+    'Trick or Treat Freaks': [{ name: 'The Anti-Dopes', season: 6, maxWeek: 8 },
+                               { name: 'Mist Monsters', season: 6, playoffs: true },
+                               { name: 'Mist Monsters', season: 7, playoffs: true }],
+    'Overdrawn':             [{ name: 'Over Grenade',   season: 8, maxWeek: 15 }],
+    'Hand Grenade':          [{ name: 'Over Grenade',   season: 8, minWeek: 16 },
+                               { name: 'Over Grenade',   season: 8, playoffs: true }],
+    'The Circus':            [{ name: 'Smashed Circus', season: 8, maxWeek: 9 }],
+    'Smashed Potatoes':      [{ name: 'Smashed Circus', season: 8, minWeek: 10 },
+                               { name: 'Smashed Circus', season: 8, playoffs: true }],
+  };
+
+  // Returns the set of participant names in games[] that belong to this franchise
+  // for the given season/week/context.
+  function aliasNamesFor(team, season, week, isPlayoff) {
+    const names = new Set([team]);
+    for (const al of (FRANCHISE_ALIASES[team] || [])) {
+      if (al.season !== season) continue;
+      if (isPlayoff) {
+        if (al.playoffs) names.add(al.name);
+      } else {
+        if (!al.playoffs &&
+            (al.minWeek == null || week >= al.minWeek) &&
+            (al.maxWeek == null || week <= al.maxWeek)) names.add(al.name);
+      }
+    }
+    return names;
+  }
+
+  // Collect all individual games between these two franchises from the full season data
+  const games = [];
+  const seasons = historyData.seasons || {};
+  for (const [sk, sv] of Object.entries(seasons).sort((x,y) => +x[0] - +y[0])) {
+    const sn = +sk;
+    const commentary = sv.game_commentary || [];
+    // Regular season — playoff games are duplicated in playoff_series, skip them here
+    for (const g of (sv.games || [])) {
+      if (g.match_type !== 'Regular Season') continue;
+      const aN = aliasNamesFor(a, sn, g.week, false);
+      const bN = aliasNamesFor(b, sn, g.week, false);
+      const aWon = aN.has(g.winner) && bN.has(g.loser);
+      const bWon = bN.has(g.winner) && aN.has(g.loser);
+      if (!aWon && !bWon) continue;
+      const note = commentary.find(c => c.week === g.week && c.winner === g.winner && c.loser === g.loser);
+      // If game was played under an alias, note it
+      const playedAs = g.winner !== a && g.winner !== b ? g.winner : (g.loser !== a && g.loser !== b ? g.loser : null);
+      const aliasTag = playedAs ? ` (as ${playedAs})` : '';
+      games.push({ season: sn, label: `S${sk} W${g.week}${aliasTag}`, sortKey: sn * 10000 + g.week,
+        winner: aWon ? a : b, loser: aWon ? b : a,
+        winnerRaw: g.winner, loserRaw: g.loser,
+        ws: g.winner_score, ls: g.loser_score,
+        turns: g.winner_turns ?? g.turns ?? null, mvp: g.mvp, commentary: note?.commentary || null });
+    }
+    // Playoff series
+    for (const ps of (sv.playoff_series || [])) {
+      for (const g of (ps.games || [])) {
+        const aN = aliasNamesFor(a, sn, null, true);
+        const bN = aliasNamesFor(b, sn, null, true);
+        const aWon = aN.has(g.winner) && bN.has(g.loser);
+        const bWon = bN.has(g.winner) && aN.has(g.loser);
+        if (!aWon && !bWon) continue;
+        const note = commentary.find(c => c.match_type === 'Playoffs' && c.game === g.game && c.winner === g.winner && c.loser === g.loser);
+        const playedAs = g.winner !== a && g.winner !== b ? g.winner : (g.loser !== a && g.loser !== b ? g.loser : null);
+        const aliasTag = playedAs ? ` (as ${playedAs})` : '';
+        games.push({ season: sn, label: `S${sk} Playoffs R${ps.round} G${g.game}${aliasTag}`, sortKey: sn * 10000 + 9000 + ps.round * 10 + g.game,
+          winner: aWon ? a : b, loser: aWon ? b : a,
+          winnerRaw: g.winner, loserRaw: g.loser,
+          ws: g.winner_score, ls: g.loser_score,
+          turns: g.turns ?? null, mvp: g.mvp, commentary: note?.commentary || null });
+      }
+    }
+  }
+
+  // Newest-first for display
+  games.sort((x, y) => y.sortKey - x.sortKey);
+
+  if (games.length === 0) {
+    summary.innerHTML = `<div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px 20px;color:var(--text-muted);font-size:14px">No recorded meetings between these two teams.</div>`;
+    logPanel.innerHTML = '';
+    return;
+  }
+
+  // Derive win counts directly from the game log (handles aliased games correctly)
+  const winsA = games.filter(g => g.winner === a).length;
+  const winsB = games.filter(g => g.winner === b).length;
+  const total = winsA + winsB;
+
+  // Extended stats from game log
+  const turnsArr = games.map(g => g.turns).filter(t => t != null);
+  const avgTurns = turnsArr.length ? (turnsArr.reduce((s,t) => s+t, 0) / turnsArr.length).toFixed(1) : null;
+
+  let biggestMargin = null, biggestMarginDetail = null;
+  for (const g of games) {
+    if (g.ws != null && g.ls != null) {
+      const margin = g.ws - g.ls;
+      if (biggestMargin === null || margin > biggestMargin) {
+        biggestMargin = margin;
+        biggestMarginDetail = `${g.label}, ${g.winner} def. ${g.loser} ${g.ws} to ${g.ls}`;
+      }
+    }
+  }
+
+  const mostRecent = games.length ? games[0] : null;
+  const mostRecentStr = mostRecent ? mostRecent.label : null;
+
+  let leadText;
+  if (winsA === winsB) {
+    leadText = `<span style="color:var(--text-secondary)">Series tied ${winsA}–${winsB}</span>`;
+  } else {
+    const leader = winsA > winsB ? a : b;
+    const ahead = Math.max(winsA, winsB);
+    const behind = Math.min(winsA, winsB);
+    leadText = `<strong style="color:var(--gold)">${leader}</strong> <span style="color:var(--text-secondary)">leads ${ahead}–${behind}</span>`;
+  }
+
+  // Note if any games were played under a historical alias name
+  const aliasedNames = [...new Set(games.map(g => g.winnerRaw !== g.winner ? g.winnerRaw : (g.loserRaw !== g.loser ? g.loserRaw : null)).filter(Boolean))];
+  const mashupWarning = aliasedNames.length
+    ? `<div style="font-size:11px;color:var(--text-muted);margin-top:12px;padding:8px 10px;border:1px solid var(--border);border-radius:4px">
+        Some games played under a historical name: ${aliasedNames.join(', ')}. These are included and labeled in the game log.
+       </div>` : '';
+
+  const statsRow = `
+    <div style="display:flex;gap:20px;flex-wrap:wrap;font-size:12px;color:var(--text-muted);margin-top:14px;padding-top:12px;border-top:1px solid var(--border)">
+      ${avgTurns != null ? `<span><strong style="color:var(--text-secondary)">${avgTurns}</strong> avg turns</span>` : ''}
+      ${biggestMargin != null ? `<span><strong style="color:var(--text-secondary)">+${biggestMargin}</strong> biggest margin <span style="font-size:10px">(${biggestMarginDetail})</span></span>` : ''}
+      ${mostRecentStr ? `<span>Most recent: <strong style="color:var(--text-secondary)">${mostRecentStr}</strong></span>` : ''}
+    </div>`;
+
+  // Left panel: summary card
+  summary.innerHTML = `
+    <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px">
+      <div style="font-family:var(--font-head);font-size:18px;margin-bottom:14px">${leadText}</div>
+      <div style="display:flex;gap:24px;margin-bottom:16px">
+        <div style="text-align:center">
+          <div style="font-size:32px;font-family:var(--font-head);color:var(--text-primary)">${winsA}</div>
+          <div style="font-size:11px;color:var(--text-muted);margin-top:2px">${a}</div>
+        </div>
+        <div style="text-align:center;align-self:center">
+          <div style="font-size:12px;color:var(--text-muted)">${total} game${total !== 1 ? 's' : ''}</div>
+        </div>
+        <div style="text-align:center">
+          <div style="font-size:32px;font-family:var(--font-head);color:var(--text-primary)">${winsB}</div>
+          <div style="font-size:11px;color:var(--text-muted);margin-top:2px">${b}</div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:12px;padding-top:12px;border-top:1px solid var(--border)">
+        ${avgTurns != null ? `<div style="display:flex;justify-content:space-between"><span style="color:var(--text-muted)">Avg turns</span><span style="color:var(--text-secondary)">${avgTurns}</span></div>` : ''}
+        ${biggestMargin != null ? `<div style="display:flex;justify-content:space-between;gap:8px"><span style="color:var(--text-muted)">Biggest margin</span><span style="color:var(--text-secondary);text-align:right">+${biggestMargin}</span></div>
+        <div style="font-size:10px;color:var(--text-muted);margin-top:-4px">${biggestMarginDetail}</div>` : ''}
+        ${mostRecentStr ? `<div style="display:flex;justify-content:space-between"><span style="color:var(--text-muted)">Most recent</span><span style="color:var(--text-secondary)">${mostRecentStr}</span></div>` : ''}
+      </div>
+      ${mashupWarning}
+      <div style="display:flex;flex-direction:column;gap:4px;font-size:12px;margin-top:14px;padding-top:12px;border-top:1px solid var(--border)">
+        <a href="team-history.html?team=${encodeURIComponent(a)}" style="color:var(--gold);text-decoration:none">${a} history →</a>
+        <a href="team-history.html?team=${encodeURIComponent(b)}" style="color:var(--gold);text-decoration:none">${b} history →</a>
+      </div>
+    </div>`;
+
+  // Right panel: game log as proper table
+  if (games.length === 0) { logPanel.innerHTML = ''; return; }
+
+  const tableRows = games.map((g, i) => {
+    const score = (g.ws != null && g.ls != null) ? `${g.ws} – ${g.ls}` : '—';
+    const turnsStr = g.turns != null ? `${g.turns}` : '—';
+    const hasNote = !!g.commentary;
+    const noteId = `h2h-note-${i}`;
+    const winnerStyle = `color:var(--text-primary);font-weight:500`;
+    const loserStyle = `color:var(--text-muted)`;
+    return `<tr style="cursor:${hasNote?'pointer':'default'}"${hasNote ? ` onclick="const n=document.getElementById('${noteId}');n.style.display=n.style.display==='none'?'block':'none'"` : ''}>
+      <td style="font-size:11px;color:var(--text-muted);white-space:nowrap">${g.label}${hasNote ? ' <span style="font-size:9px;color:var(--gold-dim)">▾</span>' : ''}</td>
+      <td><span style="${winnerStyle}">${g.winner}</span> <span style="color:var(--text-muted);font-size:11px">def.</span> <span style="${loserStyle}">${g.loser}</span>
+        ${hasNote ? `<div id="${noteId}" style="display:none;font-size:11px;color:var(--text-secondary);line-height:1.55;padding:4px 0 2px">${g.commentary}</div>` : ''}
+      </td>
+      <td class="num" style="font-family:var(--font-mono);color:var(--gold);font-size:12px;white-space:nowrap">${score}</td>
+      <td class="num" style="color:var(--text-muted);font-size:12px">${turnsStr}</td>
+      <td style="color:var(--text-muted);font-size:11px">${g.mvp || '—'}</td>
+    </tr>`;
+  }).join('');
+
+  logPanel.innerHTML = `
+    <div style="font-family:var(--font-head);font-size:13px;color:var(--text-secondary);margin-bottom:10px;text-transform:uppercase;letter-spacing:0.06em">Game Log <span style="font-size:11px;font-family:inherit;color:var(--text-muted);text-transform:none;letter-spacing:0">${games.length} game${games.length!==1?'s':''}</span></div>
+    <div class="at-table-wrap">
+      <table class="at-table" style="font-size:13px">
+        <thead>
+          <tr>
+            <th style="width:130px">Game</th>
+            <th>Matchup</th>
+            <th class="num" style="width:80px">Score</th>
+            <th class="num" style="width:54px">Turns</th>
+            <th style="width:160px">MVP</th>
+          </tr>
+        </thead>
+        <tbody>${tableRows}</tbody>
+      </table>
+    </div>`;
 }
 
 function switchHistTab(view, btn) {
@@ -488,8 +745,16 @@ function showSeason(seasonNum) {
     </div>`;
   }).join('');
 
+  const hasPrev = !!historyData.seasons[seasonNum - 1];
+  const hasNext = !!historyData.seasons[seasonNum + 1];
   const html = `
-    <button class="back-btn" onclick="backToIndex()">← All Seasons</button>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+      <div style="display:flex;gap:8px;align-items:center">
+        <button class="back-btn" onclick="backToIndex()">← All Seasons</button>
+        ${hasPrev ? `<button class="back-btn" onclick="showSeason(${seasonNum - 1})">← Season ${seasonNum - 1}</button>` : ''}
+      </div>
+      ${hasNext ? `<button class="back-btn" onclick="showSeason(${seasonNum + 1})">Season ${seasonNum + 1} →</button>` : ''}
+    </div>
     <div class="season-header-block">
       <div class="season-num">Season ${season.season}</div>
       <div class="season-champ-name">${season.champion || 'Unknown'}${champStanding2 && champStanding2.seed ? ` <span style="font-size:18px;color:var(--text-muted);font-weight:normal">#${champStanding2.seed} seed</span>` : ''}</div>
