@@ -25,8 +25,8 @@ import requests
 USER_AGENT = "MTG-MVM-League/1.0 (local card pool builder)"
 HEADERS = {"User-Agent": USER_AGENT, "Accept": "application/json"}
 
-# The league allows Alpha through Exodus. Exodus released 1998-06-01.
-CUTOFF_DATE = date(1998, 6, 1)
+# The league allows Alpha through Exodus. Exodus released 1998-06-15.
+CUTOFF_DATE = date(1998, 6, 15)
 
 EXCLUDED_SETS = {
     "Pro Tour Collector Set",
