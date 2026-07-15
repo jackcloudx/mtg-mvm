@@ -11,9 +11,14 @@
     .cards-page-sub { font-size: 13px; color: var(--text-muted); }
 
     .cards-control-bar {
-      display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end;
+      display: flex; flex-direction: column; gap: 10px;
       margin-bottom: 20px; padding: 14px 16px;
       background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+    }
+    .cards-filter-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end; }
+    .cards-filter-row2 {
+      display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end;
+      padding-top: 10px; border-top: 1px solid var(--border);
     }
     .cards-control-group { display: flex; flex-direction: column; gap: 4px; }
     .cards-control-group label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: .04em; }
@@ -24,20 +29,15 @@
     }
     .cards-control-group select[multiple] { height: 80px; min-width: 130px; }
 
-    .color-pills { display: flex; gap: 4px; flex-wrap: wrap; }
-    .color-pill {
-      width: 26px; height: 26px; border-radius: 50%; border: 2px solid transparent;
-      cursor: pointer; font-size: 11px; font-weight: bold; display: flex; align-items: center; justify-content: center;
-      transition: border-color .15s;
+    .cf-color-btns { display: flex; gap: 4px; flex-wrap: wrap; }
+    .cf-color-btn {
+      background: var(--bg); border: 1px solid var(--border);
+      color: var(--text-muted); padding: 3px 9px; border-radius: 4px;
+      cursor: pointer; font-size: 11px; font-family: var(--font-body); transition: all 0.15s;
+      white-space: nowrap;
     }
-    .color-pill.active { border-color: var(--gold); }
-    .color-pill[data-c="W"] { background: #f5f0dc; color: #333; }
-    .color-pill[data-c="U"] { background: #4a7fb5; color: #fff; }
-    .color-pill[data-c="B"] { background: #333; color: #ccc; border-color: #666; }
-    .color-pill[data-c="R"] { background: #c0392b; color: #fff; }
-    .color-pill[data-c="G"] { background: #27ae60; color: #fff; }
-    .color-pill[data-c="C"] { background: #888; color: #fff; }
-    .color-pill.active[data-c="B"] { border-color: var(--gold); }
+    .cf-color-btn:hover:not(.active) { border-color: var(--border-accent); color: var(--text-secondary); }
+    .cf-color-btn.active { border-color: var(--gold-dim); color: var(--gold); background: var(--bg-card); }
 
     .cards-exact-label {
       display: flex; align-items: center; gap: 5px; margin-top: 4px;

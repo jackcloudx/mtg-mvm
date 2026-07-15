@@ -58,64 +58,72 @@
 
   function renderControlBar() {
     const bar = document.getElementById('cards-control-bar');
+    const colorDefs = [
+      { c: 'W', label: 'White' }, { c: 'U', label: 'Blue' }, { c: 'B', label: 'Black' },
+      { c: 'R', label: 'Red' },   { c: 'G', label: 'Green' }, { c: 'C', label: 'Colorless' },
+    ];
     bar.innerHTML = `
-      <div class="cards-control-group">
-        <label>Card Name</label>
-        <input type="text" id="cf-name" placeholder="e.g. Djinn" style="width:140px"
-          oninput="cardsNameInput()">
-      </div>
-      <div class="cards-control-group">
-        <label>Set</label>
-        <select id="cf-sets" multiple onchange="cardsFilterChange()">
-          ${_sets.map(s => `<option value="${esc(s)}">${esc(s)}</option>`).join('')}
-        </select>
-      </div>
-      <div class="cards-control-group">
-        <label>Color</label>
-        <div class="color-pills" id="cf-color-pills">
-          ${['W','U','B','R','G','C'].map(c => `<div class="color-pill" data-c="${c}" onclick="cardsToggleColor('${c}')">${c}</div>`).join('')}
+      <div class="cards-filter-row">
+        <div class="cards-control-group">
+          <label>Set</label>
+          <select id="cf-sets" multiple onchange="cardsFilterChange()">
+            ${_sets.map(s => `<option value="${esc(s)}">${esc(s)}</option>`).join('')}
+          </select>
         </div>
-        <label class="cards-exact-label">
-          <input type="checkbox" id="cf-color-exact" onchange="cardsSetColorExact(this.checked)">
-          Exact match only
-        </label>
-      </div>
-      <div class="cards-control-group">
-        <label>Type</label>
-        <select id="cf-type" onchange="cardsFilterChange()">
-          <option value="">All Types</option>
-          ${getTypeOptions()}
-        </select>
-      </div>
-      <div class="cards-control-group">
-        <label>Power</label>
-        <div class="range-row">
-          <input type="text" id="cf-pwr-min" placeholder="min" oninput="cardsFilterChange()">
-          <span>–</span>
-          <input type="text" id="cf-pwr-max" placeholder="max" oninput="cardsFilterChange()">
+        <div class="cards-control-group">
+          <label>Color</label>
+          <div class="cf-color-btns" id="cf-color-pills">
+            ${colorDefs.map(({c, label}) => `<button class="cf-color-btn" data-c="${c}" onclick="cardsToggleColor('${c}')">${label}</button>`).join('')}
+          </div>
+          <label class="cards-exact-label">
+            <input type="checkbox" id="cf-color-exact" onchange="cardsSetColorExact(this.checked)">
+            Exact match only
+          </label>
+        </div>
+        <div class="cards-control-group">
+          <label>Type</label>
+          <select id="cf-type" onchange="cardsFilterChange()">
+            <option value="">All Types</option>
+            ${getTypeOptions()}
+          </select>
+        </div>
+        <div class="cards-control-group">
+          <label>Power</label>
+          <div class="range-row">
+            <input type="text" id="cf-pwr-min" placeholder="min" oninput="cardsFilterChange()">
+            <span>–</span>
+            <input type="text" id="cf-pwr-max" placeholder="max" oninput="cardsFilterChange()">
+          </div>
+        </div>
+        <div class="cards-control-group">
+          <label>Toughness</label>
+          <div class="range-row">
+            <input type="text" id="cf-tou-min" placeholder="min" oninput="cardsFilterChange()">
+            <span>–</span>
+            <input type="text" id="cf-tou-max" placeholder="max" oninput="cardsFilterChange()">
+          </div>
+        </div>
+        <div class="cards-control-group" style="flex:1;min-width:160px">
+          <label>Rules Text</label>
+          <input type="text" id="cf-rules" placeholder="e.g. flying" style="width:100%"
+            oninput="cardsRulesInput()">
         </div>
       </div>
-      <div class="cards-control-group">
-        <label>Toughness</label>
-        <div class="range-row">
-          <input type="text" id="cf-tou-min" placeholder="min" oninput="cardsFilterChange()">
-          <span>–</span>
-          <input type="text" id="cf-tou-max" placeholder="max" oninput="cardsFilterChange()">
+      <div class="cards-filter-row2">
+        <div class="cards-control-group">
+          <label>Card Name</label>
+          <input type="text" id="cf-name" placeholder="e.g. Djinn" style="width:200px"
+            oninput="cardsNameInput()">
         </div>
-      </div>
-      <div class="cards-control-group" style="flex:1;min-width:160px">
-        <label>Rules Text</label>
-        <input type="text" id="cf-rules" placeholder="e.g. flying" style="width:100%"
-          oninput="cardsRulesInput()">
-      </div>
-      <div class="cards-control-group">
-        <label>Sort</label>
-        <select id="cf-sort" onchange="cardsSelectSort()">
-          <option value="name">Name A–Z</option>
-          <option value="set">Set</option>
-          <option value="cmc">CMC low–high</option>
-          <option value="ratio">Pwr/Mana high–low</option>
-        </select>
+        <div class="cards-control-group">
+          <label>Sort</label>
+          <select id="cf-sort" onchange="cardsSelectSort()">
+            <option value="name">Name A–Z</option>
+            <option value="set">Set</option>
+            <option value="cmc">CMC low–high</option>
+            <option value="ratio">Pwr/Mana high–low</option>
+          </select>
+        </div>
       </div>
     `;
   }
@@ -313,7 +321,7 @@
     if (idx === -1) _filter.colors.push(c);
     else _filter.colors.splice(idx, 1);
 
-    document.querySelectorAll('.color-pill').forEach(el => {
+    document.querySelectorAll('.cf-color-btn').forEach(el => {
       el.classList.toggle('active', _filter.colors.includes(el.dataset.c));
     });
     renderTable();
