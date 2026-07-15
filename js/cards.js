@@ -5,6 +5,7 @@
   let _sets = [];
 
   let _filter = {
+    name: '',
     sets: [],
     colors: [],
     colorMode: 'includes', // 'includes' or 'exactly'
@@ -16,6 +17,7 @@
   let _sortField = 'name';
   let _sortDir = 1;
   let _rulesTimer = null;
+  let _nameTimer = null;
 
   async function cardsInit() {
     const [poolRes, seasonRes, customRes] = await Promise.all([
@@ -57,6 +59,11 @@
   function renderControlBar() {
     const bar = document.getElementById('cards-control-bar');
     bar.innerHTML = `
+      <div class="cards-control-group">
+        <label>Card Name</label>
+        <input type="text" id="cf-name" placeholder="e.g. Djinn" style="width:140px"
+          oninput="cardsNameInput()">
+      </div>
       <div class="cards-control-group">
         <label>Set</label>
         <select id="cf-sets" multiple onchange="cardsFilterChange()">
@@ -125,6 +132,7 @@
   }
 
   function readFilters() {
+    _filter.name = (document.getElementById('cf-name') || {}).value || '';
     const setsEl = document.getElementById('cf-sets');
     _filter.sets = setsEl ? Array.from(setsEl.selectedOptions).map(o => o.value) : [];
     const typeEl = document.getElementById('cf-type');
@@ -138,6 +146,9 @@
 
   function applyFilters(cards) {
     return cards.filter(c => {
+      if (_filter.name) {
+        if (!(c.name || '').toLowerCase().includes(_filter.name.toLowerCase())) return false;
+      }
       if (_filter.sets.length && !_filter.sets.includes(c.earliest_set)) return false;
 
       if (_filter.colors.length) {
@@ -279,6 +290,14 @@
   window.cardsFilterChange = function() {
     readFilters();
     renderTable();
+  };
+
+  window.cardsNameInput = function() {
+    clearTimeout(_nameTimer);
+    _nameTimer = setTimeout(() => {
+      readFilters();
+      renderTable();
+    }, 200);
   };
 
   window.cardsRulesInput = function() {
