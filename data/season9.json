@@ -80,6 +80,23 @@
       "loser_hand": 3,
       "winner_deploy": 5,
       "loser_deploy": 6
+    },
+    {
+      "id": "g1784163056732",
+      "week": 1,
+      "winner_id": "no-lands-for-you",
+      "loser_id": "team-16",
+      "winner_score": 15,
+      "loser_score": -1,
+      "turns": 10,
+      "mvp": "Sinkhole",
+      "notes": "NLFY. Put on a clinic in this one, stomping out 4x lands and turning one to stone (read: swamp) via Cyclopean Tomb. Sinkhole gets the MVP, as it gave them the edge early being played on turn-2. Black Knight + Sengir Vampire did the rest. \n\nAngels. Interesting squad, could see the synergy in the opening few turns w/ Serendib Djinn + Flying Men + Unstable Mutation + Land Tax + Moat. They get to put that system to work without the land loss. Pretty fun.",
+      "winner_mana": 7,
+      "loser_mana": 0,
+      "winner_hand": 2,
+      "loser_hand": 7,
+      "winner_deploy": 8,
+      "loser_deploy": 2
     }
   ],
   "teams": [
@@ -7713,14 +7730,14 @@
       "week": 1,
       "home_id": "no-lands-for-you",
       "away_id": "team-16",
-      "played": false,
-      "winner_id": null,
-      "loser_id": null,
-      "winner_score": null,
-      "loser_score": null,
-      "turns": null,
-      "mvp": null,
-      "notes": null
+      "played": true,
+      "winner_id": "no-lands-for-you",
+      "loser_id": "team-16",
+      "winner_score": 15,
+      "loser_score": -1,
+      "turns": 10,
+      "mvp": "Sinkhole",
+      "notes": "NLFY. Put on a clinic in this one, stomping out 4x lands and turning one to stone (read: swamp) via Cyclopean Tomb. Sinkhole gets the MVP, as it gave them the edge early being played on turn-2. Black Knight + Sengir Vampire did the rest. \n\nAngels. Interesting squad, could see the synergy in the opening few turns w/ Serendib Djinn + Flying Men + Unstable Mutation + Land Tax + Moat. They get to put that system to work without the land loss. Pretty fun."
     },
     {
       "id": "sched-w1-darwins-doom-the-emerald-army",
@@ -12532,69 +12549,156 @@
         "Blue"
       ],
       "roster": [
-        "Harbor Serpent",
         "Ancient Silver Dragon",
         "Nezahal, Primal Tide",
-        "Iymrith, Desert Doom",
-        "Thassa, Deep-Dwelling",
-        "Charix, the Raging Isle",
-        "Spawning Kraken",
         "Icebreaker Kraken",
-        "Djinn of Wishes",
-        "Velkhana, Iceborne Wyvern",
-        "Kirin, the Myth",
-        "Kushala Daora",
-        "Icewrought Sentry",
-        "Kraken of the Dark Seas",
-        "Elder Fel-One",
-        "Vaal Hazak, Corpse Dragon",
-        "Voda Sea Scavenger",
         "Jin-Gitaxias, Progress Tyrant",
-        "Consecrated Sphinx",
-        "Stormtide Leviathan",
-        "Inkwell Leviathan",
         "Tromokratis",
         "Hullbreaker Horror",
-        "Sphinx of Uthuin",
         "Frost Titan",
-        "Urza, Lord High Artificer",
+        "Sphinx of Uthuun",
+        "Brinelin, the Moon Kraken",
+        "Cavalier of Gales",
+        "Peregrine Drake",
+        "Glen Elendra Archmage",
+        "Glen Elendra Archmage",
+        "Glen Elendra Archmage",
+        "Glen Elendra Archmage",
+        "Wall of Frost",
+        "Phantasmal Image",
+        "Sea Gate Stormcaller",
+        "Sigiled Starfish",
+        "Sigiled Starfish",
+        "Sea Gate Oracle",
+        "Sea Gate Oracle",
+        "Vendilion Clique",
+        "True-Name Nemesis",
+        "True-Name Nemesis",
+        "Willbender",
+        "Willbender",
+        "Sower of Temptation",
         "Sol Ring",
-        "Mind Stone",
-        "Fellwar Stone",
-        "Coalition Relic",
+        "Worn Powerstone",
         "Show and Tell",
-        "Herald's Horn",
-        "Kindred Discovery",
-        "Obelisk of Urd",
-        "Rhystic Study",
-        "Fact or Fiction",
+        "Show and Tell",
+        "Brainstorm",
+        "Brainstorm",
         "Cyclonic Rift",
-        "Island",
-        "Island",
-        "Island",
-        "Island",
-        "Island",
-        "Island",
-        "Island",
-        "Island",
-        "Island",
-        "Island",
-        "Island",
-        "Island",
-        "Island",
-        "Island",
-        "Island",
-        "Island",
-        "Island",
-        "Island",
-        "Island",
-        "Island",
-        "Island",
-        "Island",
+        "Snow-Covered Island",
+        "Snow-Covered Island",
+        "Snow-Covered Island",
+        "Snow-Covered Island",
+        "Snow-Covered Island",
+        "Snow-Covered Island",
+        "Snow-Covered Island",
+        "Snow-Covered Island",
+        "Snow-Covered Island",
+        "Snow-Covered Island",
+        "Snow-Covered Island",
+        "Snow-Covered Island",
+        "Snow-Covered Island",
+        "Snow-Covered Island",
+        "Snow-Covered Island",
+        "Snow-Covered Island",
+        "Snow-Covered Island",
+        "Snow-Covered Island",
+        "Snow-Covered Island",
+        "Snow-Covered Island",
+        "Snow-Covered Island",
+        "Snow-Covered Island",
+        "Snow-Covered Island",
+        "Snow-Covered Island",
         "Nykthos, Shrine to Nyx"
       ],
-      "rosterNotes": {},
-      "transactionHistory": []
+      "rosterNotes": {
+        "Ancient Silver Dragon|0": {
+          "txnType": "Buy"
+        },
+        "Nezahal, Primal Tide|0": {
+          "txnType": "Buy"
+        },
+        "Icebreaker Kraken|0": {
+          "txnType": "Buy"
+        },
+        "Jin-Gitaxias, Progress Tyrant|0": {
+          "txnType": "Buy"
+        },
+        "Tromokratis|0": {
+          "txnType": "Buy"
+        },
+        "Hullbreaker Horror|0": {
+          "txnType": "Buy"
+        },
+        "Frost Titan|0": {
+          "txnType": "Buy"
+        },
+        "Sphinx of Uthuun|0": {
+          "txnType": "Buy"
+        },
+        "Brinelin, the Moon Kraken|0": {
+          "txnType": "Buy"
+        },
+        "Cavalier of Gales|0": {
+          "txnType": "Buy"
+        },
+        "Peregrine Drake|0": {
+          "txnType": "Buy"
+        },
+        "Glen Elendra Archmage|0": {
+          "txnType": "Buy"
+        },
+        "Glen Elendra Archmage|1": {
+          "txnType": "Buy"
+        },
+        "Glen Elendra Archmage|2": {
+          "txnType": "Buy"
+        },
+        "Glen Elendra Archmage|3": {
+          "txnType": "Buy"
+        },
+        "Wall of Frost|0": {
+          "txnType": "Buy"
+        },
+        "Phantasmal Image|0": {
+          "txnType": "Buy"
+        },
+        "Sea Gate Stormcaller|0": {
+          "txnType": "Buy"
+        },
+        "Sigiled Starfish|0": {
+          "txnType": "Buy"
+        },
+        "Sigiled Starfish|1": {
+          "txnType": "Buy"
+        },
+        "Sea Gate Oracle|0": {
+          "txnType": "Buy"
+        },
+        "Sea Gate Oracle|1": {
+          "txnType": "Buy"
+        },
+        "Vendilion Clique|0": {
+          "txnType": "Buy"
+        },
+        "True-Name Nemesis|0": {
+          "txnType": "Buy"
+        },
+        "True-Name Nemesis|1": {
+          "txnType": "Buy"
+        },
+        "Willbender|0": {
+          "txnType": "Buy"
+        },
+        "Willbender|1": {
+          "txnType": "Buy"
+        },
+        "Sower of Temptation|0": {
+          "txnType": "Buy"
+        }
+      },
+      "transactionHistory": [],
+      "identity": "Kraken and Leviathan-anchored ramp, cheating in giants via Show and Tell, backed by real interaction and disruption.",
+      "oneliner": "The deep doesn't wait for you to be ready \u2014 Palinchron-tier ramp, four counterspells in one card, and Willbender turning your own removal against you."
     },
     {
       "id": "white-boss",
